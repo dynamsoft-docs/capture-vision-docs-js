@@ -42,40 +42,41 @@ The APIs for this class include:
 
 ### Process a Single Image or File
 
-| API Name              | Description                                               |
-| --------------------- | --------------------------------------------------------- |
-| [capture()](#capture) | Process an image or file to derive important information. |
+| API Name                               | Description                                               |
+| -------------------------------------- | --------------------------------------------------------- |
+| [capture()](single-process.md#capture) | Process an image or file to derive important information. |
 
 ### Process multiple images from an Image Source
 
-| API Name                                              | Description                                                           |
-| ----------------------------------------------------- | --------------------------------------------------------------------- |
-| [setInput](#setimagesource)                           | Sets an image source for continous scanning.                          |
-| [addImageSourceStateListener](#onuniqueread)   | .    |
-| [removeImageSourceStateListener](#onimageread) | This event is triggered after the library finishes scanning an image. |
-| [addResultReceiver()](#startscanning)                 | Starts continuous scanning of incoming images.                        |
-| [removeResultReceiver()](#stopscanning)               | Stops continuous scanning.                                            |
-| [addCaptureStateListener()](#pausescanning)           | Pause continuous scanning but keep the video stream.                  |
-| [removeCaptureStateListener()](#resumescanning)       | Resumes continuous scanning.                                          |
-| [startCapturing()](#getscansettings)                  | Returns the current scan settings.                                    |
-| [stopCapturing()](#updatescansettings)                | Changes scan settings with the object passed in.                      |
+| API Name                                                                                | Description                                                                  |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [setInput](consecutive-process.md#setinput)                                             | Sets an image source to provide images for consecutive process.              |
+| [addCaptureStateListener()](consecutive-process.md#addcapturestatelistener)             | Adds an object that listens to the state changes of the capture process.     |
+| [removeCaptureStateListener()](consecutive-process.md#removecapturestatelistener)       | Removes an object which listens to the state changes of the capture process. |
+| [addImageSourceStateListener](consecutive-process.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.            |
+| [removeImageSourceStateListener](consecutive-process.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.        |
+| [addResultReceiver()](consecutive-process.md#addresultreceiver)                         | Adds an object as the receiver of captured results.                          |
+| [removeResultReceiver()](consecutive-process.md#removeresultreceiver)                   | Removes an object which was added as a receiver of captured results.         |
+| [startCapturing()](consecutive-process.md#startcapturing)                               | Starts to process images consecutively.                                      |
+| [stopCapturing()](consecutive-process.md#stopcapturing)                                 | Stops the consecutive process.                                               |
+
 
 ### Change Settings
 
-| API Name                                          | Description                                                                  |
-| ------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [initSettings()](#getruntimesettings)             | Returns the current runtime settings.                                        |
-| [outputSettings](#initruntimesettingswithstring)  | Initializes the Runtime Settings with the settings in the given JSON string. |
-| [getSimplifiedSettings()](#updateruntimesettings) | Updates runtime settings with a given struct or a preset template.           |
-| [updateSettings()](#resetruntimesettings)         | Resets all parameters to default values.                                     |
-| [resetSettings()](#outputruntimesettingstostring) | Return the current RuntimeSettings in the form of a string.                  |
+| API Name                                                     | Description                                                                                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| [initSettings()](settings.md#initsettings)                   | Initializes settings with either a file or a string.                                                          |
+| [outputSettings](settings.md#outputsettings)                 | Outputs a `CaptureVisionTemplate` specified by its name.                                                      |
+| [getSimplifiedSettings()](settings.md#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`.      |
+| [updateSettings()](settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
+| [resetSettings()](settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
 ### Auxiliary
 
-| API Name                                                      | Description                                                       |
-| ------------------------------------------------------------- | ----------------------------------------------------------------- |
+| API Name                                      | Description                                                       |
+| --------------------------------------------- | ----------------------------------------------------------------- |
 | [getIntermediateResultManager](auxiliary.md#) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getVersion](auxiliary.md#getVersion)                         |                                                                   |
+| [getVersion](auxiliary.md#getVersion)         |                                                                   |
 
 ## Interfaces and Enums
 

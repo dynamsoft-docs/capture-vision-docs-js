@@ -5,15 +5,15 @@ description: This page introduces APIs related to the auxiliary APIs of CaptureV
 keywords: capture vision, auxiliary, instance, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-permalink: /programming/javascript/api-reference/cvr/instantiate.html
+permalink: /programming/javascript/api-reference/cvr/auxiliary.html
 ---
 
-# Javascript API Reference - `CaptureVisionRouter` Instantiation
+# Javascript API Reference - Auxiliary Methods
 
-| API Name                                                      | Description                                                       |
-| ------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [getIntermediateResultManager](auxiliary.md#) | Whether to save the original image into a &lt;canvas&gt; element. |
-| [getVersion](auxiliary.md#getVersion)                         |     
+| API Name                                                      | Description                                              |
+| ------------------------------------------------------------- | -------------------------------------------------------- |
+| [getIntermediateResultManager](#getintermediateresultmanager) | Returns an `IntermediateResultManager` object.           |
+| [getVersion](#getversion)                                     | Returns the version of the `CaptureVisionRouter` object. |
 
 ## getIntermediateResultManager
 
