@@ -5,7 +5,7 @@ description: This page introduces APIs related to the instantiation of CaptureVi
 keywords: capture vision, router, instance, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-permalink: /programming/javascript/api-reference/cvr/instantiate.html
+permalink: /programming/javascript/api-reference/capture-vision-router/instantiate.html
 ---
 
 # Javascript API Reference - `CaptureVisionRouter` Instantiation

@@ -5,7 +5,7 @@ description: This page introduces APIs related to Consecutive Process of Dynamso
 keywords: capture vision, Consecutive Process, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-permalink: /programming/javascript/api-reference/cvr/consecutive-process.html
+permalink: /programming/javascript/api-reference/capture-vision-router/consecutive-process.html
 ---
 
 # Javascript API Reference - Consecutive Process

@@ -1,22 +1,22 @@
 ---
 layout: default-layout
 title: API Reference Index - Capture Vision Router JavaScript Edition
-description: This is the index page for Capture Vision Router API Reference
+description: This is the index page of the Capture Vision Router API Reference
 keywords: CaptureVision, Capture, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: API Reference
-permalink: /programming/javascript/api-reference/cvr/
+breadcrumbText: CVR JavaScript CaptureVisionRouter
+permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router.html
 ---
 
-# JavaScript API Reference
+# CaptureVisionRouter Module
 
-The "Capture Vision Router" module is defined in the namespace `Dynamsoft.CVR` which consists of the main class `CaptureVisionRouter` and a few enumerations and interfaces.
+The "CaptureVisionRouter" module is defined in the namespace `Dynamsoft.CVR`. It consists of the main class `CaptureVisionRouter` and a few enumerations and interfaces.
 
-## CaptureVisionRouter
+## CaptureVisionRouter Class
 
-A CaptureVisionRouter instance is what a user uses to interact with image-processing and semantic-processing products in their applications. It accepts an image source and returns processing results which may contain [Captured Results]() or [Intermediate Results](). The following code snippet shows its basic usage:
+A CaptureVisionRouter instance is what a user uses to interact with image-processing and semantic-processing products in their applications. It accepts an image source and returns processing results which may contain [Final results]({{site.architecture}}output.html#final-results?lang=js) or [Intermediate Results]({{site.architecture}}output.html#intermediate-results?lang=js). The following code snippet shows its basic usage:
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();

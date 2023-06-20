@@ -5,7 +5,7 @@ description: This page introduces APIs related to the auxiliary APIs of CaptureV
 keywords: capture vision, auxiliary, instance, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-permalink: /programming/javascript/api-reference/cvr/auxiliary.html
+permalink: /programming/javascript/api-reference/capture-vision-router/auxiliary.html
 ---
 
 # Javascript API Reference - Auxiliary Methods

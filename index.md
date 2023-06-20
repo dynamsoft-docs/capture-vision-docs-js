@@ -1,5 +1,5 @@
 ---
-layout: default-layout
+layout: home-page
 title: Documentaiton for the Web - Dynamsoft Capture Vision
 description: This is the index page for Dynamsoft Capture Vision Documentaiton for the Web
 keywords: CaptureVision, Capture, web, javascript, js, browser
