@@ -5,7 +5,7 @@ description: This page introduces APIs related to "Single Process" with Dynamsof
 keywords: capture vision, caputre, image processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-permalink: /programming/javascript/api-reference/capture-vision-router/single-image.html
+permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
 
 # Javascript API Reference - Single Process
@@ -27,6 +27,7 @@ capture: (imageOrFile: Core.BasicStructures.DSImageData | string | Blob, templat
 ### Parameters
 
 `imageOrFile`: specifies the image or file to be processed. It can be the image itself in the form of `DSImageData`, the path of the image/file or the file itself in the form of `blob`. A file could contain one or multiple images.
+
 `templateName`: specifies a [CaptureVisionTemplate](parameterFile/capture-vision-template.md) to use. If not specified, the default one is used.
 
 ### Return value
@@ -40,6 +41,6 @@ let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let results = await router.catpure("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "Read-Barcodes");
 let count = results.length;
 for(let i = 0; i < count; i++) {
-    
+    //...
 }
 ```

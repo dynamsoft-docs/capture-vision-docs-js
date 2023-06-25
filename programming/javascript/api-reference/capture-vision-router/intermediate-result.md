@@ -1,12 +1,11 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Intermediate Result - Dynamsoft Capture Vision C++ Edition API
-description: This page introduces the method to return an Intermediate Result Manager. An API of the CCaptureVisionRouter class of Dynamsoft Capture Vision C++ Edition.
-keywords: capture vision, intermediate result, instance, api reference, C++
+title: CaptureVisionRouter Settings - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to the Intermediate-result of CaptureVisionRouter of Dynamsoft Capture Vision JavaScript Edition.
+keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
-breadcrumbText: CVR C++ Intermediate Result
-permalink: /programming/cplusplus/api-reference/capture-vision-router/intermediate-result.html
+permalink: /programming/javascript/api-reference/capture-vision-router/intermediate-result.html
 ---
 
 # Intermediate Result
@@ -17,16 +16,26 @@ permalink: /programming/cplusplus/api-reference/capture-vision-router/intermedia
 
 ## GetIntermediateResultManager
 
-Returns an [`CIntermediateResultManager`](../core/intermediate-results/intermediate-result-manager.md) object.
+Returns an object that manages the saving and retrieval of intermediate results.
 
-```cpp
-CIntermediateResultManager* GetIntermediateResultManager();
+### Syntax
+
+```js
+getIntermediateResultManager: () => Promise<Core.IntermediateResult.IntermediateResultManager>;
 ```
 
-**Parameters**
+### Parameters
 
 None.
 
-**Return Value**
+### Return Value
 
-Returns a pointer to the [`CIntermediateResultManager`](../core/intermediate-results/intermediate-result-manager.md) object.
+Returns a promise that resolves with an IntermediateResultManager object.
+
+### Code snippet
+
+```js
+let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const intermediateResultManager = await router.getIntermediateResultManager();
+// Use the intermediateResultManager to save and retrieve intermediate results
+```

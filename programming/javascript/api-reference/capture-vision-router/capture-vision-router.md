@@ -86,9 +86,7 @@ The APIs for this class include:
 
 | API Name                                      | Description |
 | --------------------------------------------- | ----------- |
-| [getVersion](./auxiliary-methods.md#getversion) |
-Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code.
-          |
+| [getVersion](./auxiliary-methods.md#getversion) | Returns the version of the library including the detailed version numbers of the engine and the main JavaScript code. |
 
 ## Interfaces and Enums
 

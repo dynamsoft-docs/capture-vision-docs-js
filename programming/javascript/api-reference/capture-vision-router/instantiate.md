@@ -12,18 +12,74 @@ permalink: /programming/javascript/api-reference/capture-vision-router/instantia
 
 | API Name                            | Description                                                            |
 | ----------------------------------- | ---------------------------------------------------------------------- |
+| [preLoadModule()](#preloadmodule)   | Loads the specified module to speed up the initialization.             |
+| [isModuleLoaded()](#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
 | [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
 | [dispose()](#dispose)               | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed](#disposed)               | Returns whether the `CaptureVisionRouter` object has been disposed of. |
+| [disposed()](#disposed)             | Returns whether the `CaptureVisionRouter` object has been disposed of. |
 
+## preLoadModule
+
+This method is used to load the required modules before using the router.
+
+### Syntax
+
+```js
+preLoadModule: (moduleName: string | Array<string>) => void
+```
+
+### Parameter
+It takes a string or an array of strings representing the module or modules to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
+
+### Return value
+
+None.
+
+### Code Snippet
+
+```js
+Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
+```
+
+## isModuleLoaded
+
+To checks if a specific module is loaded.
+
+### Syntax
+
+```js
+isModuleLoaded: (moduleName: string) => boolean;
+```
+
+### Parameter
+It takes a string representing the module to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
+
+### Return value
+
+A boolean value that indicates whether the required module has been loaded.
+
+### Code Snippet
+
+```js
+if(router.isModuleLoaded("DBR")){
+  // Use the router to perform a DBR job.
+} else {
+  console.log("DBR module is not preloaded.");
+}
+```
 
 ## createInstance
 
 Initializes a new instance of the `CaptureVisionRouter` class.
 
-```typescript
-Dynamsoft.CVR.CaptureVisionRouter.createInstance: () => Promise<CaptureVisionRouter>;
+### Syntax
+
+```js
+createInstance: () => Promise<CaptureVisionRouter>;
 ```
+
+### Parameter
+None
 
 ### Return value
 
@@ -39,9 +95,14 @@ let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
 Releases all resources used by the `CaptureVisionRouter` object.
 
-```typescript
+### Syntax
+
+```js
 dispose: () => void;
 ```
+
+### Parameter
+None
 
 ### Return value
 
@@ -61,9 +122,14 @@ router.dispose();
 
 Returns whether the `CaptureVisionRouter` object has been disposed of.
 
-```typescript
+### Syntax
+
+```js
 disposed: boolean;
 ```
+
+### Parameter
+None
 
 ### Return value
 
@@ -72,7 +138,7 @@ A boolean value that indicates whether the `CaptureVisionRouter` object has been
 ### Code Snippet
 
 ```js
-if(router.router){
+if(router.disposed){
   console.log("The router has been disposed of.");
 } else {
   // Use the router to perform a job.
