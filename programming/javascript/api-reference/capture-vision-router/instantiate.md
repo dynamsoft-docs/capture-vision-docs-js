@@ -31,6 +31,7 @@ preLoadModule: (moduleName: string | Array<string>) => void
 ```
 
 **Parameter**
+
 It takes a string or an array of strings representing the module or modules to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
 
 **Return value**
@@ -54,6 +55,7 @@ isModuleLoaded: (moduleName: string) => boolean;
 ```
 
 **Parameter**
+
 It takes a string representing the module to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
 
 **Return value**
@@ -82,7 +84,7 @@ createInstance: () => Promise<CaptureVisionRouter>;
 
 **Parameter**
 
-None
+None.
 
 **Return value**
 
@@ -105,7 +107,8 @@ dispose: () => void;
 ```
 
 **Parameter**
-None
+
+None.
 
 **Return value**
 
@@ -133,7 +136,7 @@ disposed: boolean;
 
 **Parameter**
 
-None
+None.
 
 **Return value**
 
