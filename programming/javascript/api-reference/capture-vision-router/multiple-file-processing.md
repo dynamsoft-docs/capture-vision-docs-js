@@ -3,7 +3,7 @@ layout: default-layout
 title: CaptureVisionRouter Consecutive Process - Dynamsoft Capture Vision JavaScript Edition API
 description: This page introduces APIs related to Consecutive Process of Dynamsoft Capture Vision JavaScript Edition.
 keywords: capture vision, Consecutive Process, api reference, javascript, js
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
