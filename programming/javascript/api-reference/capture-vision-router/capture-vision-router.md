@@ -5,12 +5,11 @@ description: This is the index page of the Capture Vision Router API Reference
 keywords: CaptureVision, Capture, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router.html
 ---
 
-# CaptureVisionRouter Module
+# Javascript API Reference - CaptureVisionRouter Module
 
 The "CaptureVisionRouter" module is defined in the namespace `Dynamsoft.CVR`. It consists of the main class `CaptureVisionRouter` and a few enumerations and interfaces.
 
@@ -33,7 +32,7 @@ router.startCapturing();
 
 The APIs for this class include:
 
-### Create and Destroy Instances
+## Create and Destroy Instances
 
 | API Name                                          | Description                                                            |
 | ------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -66,7 +65,7 @@ The APIs for this class include:
 | [stopCapturing()](./multiple-file-processing.md#stopcapturing)                                 | Stops the consecutive process.                                               |
 
 
-### Settings
+## Settings
 
 | API Name                                                     | Description                                                                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
@@ -82,7 +81,7 @@ The APIs for this class include:
 | ----------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [getIntermediateResultManager](./intermediate-result.md#getintermediateresultmanager) | Returns an `IntermediateResultManager` object. |
 
-### Auxiliary
+## Auxiliary
 
 | API Name                                      | Description |
 | --------------------------------------------- | ----------- |

@@ -5,10 +5,11 @@ description: This page introduces APIs related to "Single Process" with Dynamsof
 keywords: capture vision, caputre, image processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
 
-# Javascript API Reference - Single Process
+# Javascript API Reference - Single File Processing
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
@@ -18,23 +19,23 @@ permalink: /programming/javascript/api-reference/capture-vision-router/single-fi
 
 Process an image or file to derive important information.
 
-### Syntax
+**Syntax**
 
 ```typescript
 capture: (imageOrFile: Core.BasicStructures.DSImageData | string | Blob, templateName?: string) => Promise<Array<Core.BasicStructures.CapturedResult>>;
 ```
 
-### Parameters
+**Parameters**
 
 `imageOrFile`: specifies the image or file to be processed. It can be the image itself in the form of `DSImageData`, the path of the image/file or the file itself in the form of `blob`. A file could contain one or multiple images.
 
 `templateName`: specifies a [CaptureVisionTemplate](parameterFile/capture-vision-template.md) to use. If not specified, the default one is used.
 
-### Return value
+**Return value**
 
 A promise that resolves to an array of `CapturedResult` objects which are the derived information from each image processed.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();

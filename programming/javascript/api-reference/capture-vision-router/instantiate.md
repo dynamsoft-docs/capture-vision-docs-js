@@ -5,6 +5,7 @@ description: This page introduces APIs related to the instantiation of CaptureVi
 keywords: capture vision, router, instance, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/instantiate.html
 ---
 
@@ -22,20 +23,20 @@ permalink: /programming/javascript/api-reference/capture-vision-router/instantia
 
 This method is used to load the required modules before using the router.
 
-### Syntax
+**Syntax**
 
 ```js
 preLoadModule: (moduleName: string | Array<string>) => void
 ```
 
-### Parameter
+**Parameter**
 It takes a string or an array of strings representing the module or modules to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
 
-### Return value
+**Return value**
 
 None.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
@@ -45,20 +46,20 @@ Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
 
 To checks if a specific module is loaded.
 
-### Syntax
+**Syntax**
 
 ```js
 isModuleLoaded: (moduleName: string) => boolean;
 ```
 
-### Parameter
+**Parameter**
 It takes a string representing the module to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
 
-### Return value
+**Return value**
 
 A boolean value that indicates whether the required module has been loaded.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 if(router.isModuleLoaded("DBR")){
@@ -72,20 +73,21 @@ if(router.isModuleLoaded("DBR")){
 
 Initializes a new instance of the `CaptureVisionRouter` class.
 
-### Syntax
+**Syntax**
 
 ```js
 createInstance: () => Promise<CaptureVisionRouter>;
 ```
 
-### Parameter
+**Parameter**
+
 None
 
-### Return value
+**Return value**
 
 A promise that resolves to the initalized `CaptureVisionRouter` object.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -95,20 +97,20 @@ let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
 Releases all resources used by the `CaptureVisionRouter` object.
 
-### Syntax
+**Syntax**
 
 ```js
 dispose: () => void;
 ```
 
-### Parameter
+**Parameter**
 None
 
-### Return value
+**Return value**
 
 None.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -122,20 +124,21 @@ router.dispose();
 
 Returns whether the `CaptureVisionRouter` object has been disposed of.
 
-### Syntax
+**Syntax**
 
 ```js
 disposed: boolean;
 ```
 
-### Parameter
+**Parameter**
+
 None
 
-### Return value
+**Return value**
 
 A boolean value that indicates whether the `CaptureVisionRouter` object has been disposed of.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 if(router.disposed){

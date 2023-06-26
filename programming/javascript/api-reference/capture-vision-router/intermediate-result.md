@@ -5,34 +5,35 @@ description: This page introduces APIs related to the Intermediate-result of Cap
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/intermediate-result.html
 ---
 
-# Intermediate Result
+# Javascript API Reference - Intermediate Result
 
 | API Name                                                      | Description                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------- |
-| [GetIntermediateResultManager](#getintermediateresultmanager) | Returns an `CIntermediateResultManager` object.           |
+| [GetIntermediateResultManager()](#getintermediateresultmanager) | Returns an `CIntermediateResultManager` object.           |
 
 ## GetIntermediateResultManager
 
 Returns an object that manages the saving and retrieval of intermediate results.
 
-### Syntax
+**Syntax**
 
 ```js
 getIntermediateResultManager: () => Promise<Core.IntermediateResult.IntermediateResultManager>;
 ```
 
-### Parameters
+**Parameters**
 
 None.
 
-### Return Value
+**Return Value**
 
 Returns a promise that resolves with an IntermediateResultManager object.
 
-### Code snippet
+**Code snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();

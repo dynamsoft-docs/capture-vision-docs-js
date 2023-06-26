@@ -5,6 +5,7 @@ description: This page introduces APIs related to the auxiliary APIs of CaptureV
 keywords: capture vision, auxiliary, instance, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/auxiliary-methods.html
 ---
 
@@ -12,27 +13,27 @@ permalink: /programming/javascript/api-reference/capture-vision-router/auxiliary
 
 | API Name                                                      | Description                                              |
 | ------------------------------------------------------------- | -------------------------------------------------------- |
-| [getVersion](#getversion)                                     | Returns the version of the `CaptureVisionRouter` object. |
+| [getVersion()](#getversion)                                     | Returns the version of the `CaptureVisionRouter` object. |
 
 ## getVersion
 
 Returns the version of the CaptureVisionRouter.
 
-### Syntax
+**Syntax**
 
 ```js
 static getVersion: () => string;
 ```
 
-### Parameters
+**Parameters**
 
 None.
 
-### Return Value
+**Return Value**
 
 Returns a string representing the version of the CaptureVisionRouter.
 
-### Code snippet
+**Code snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();

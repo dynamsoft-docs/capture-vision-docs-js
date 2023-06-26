@@ -5,10 +5,11 @@ description: This page introduces APIs related to the Settings of CaptureVisionR
 keywords: capture vision, router, Settings, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/settings.html
 ---
 
-# Javascript API Reference - `CaptureVisionRouter` Instantiation
+# Javascript API Reference - Settings
 
 | API Name                                          | Description                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -23,21 +24,21 @@ permalink: /programming/javascript/api-reference/capture-vision-router/settings.
 
 Initializes the Runtime Settings with the settings in the given JSON string.
 
-### Syntax
+**Syntax**
 
 ```js
 initSettings: (settings: string) => Promise<void>;
 ```
 
-### Parameters
+**Parameters**
 
 `settings`: A JSON string containing the configuration settings for the CaptureVisionRouter.
 
-### Return value
+**Return value**
 
 Returns a promise that resolves when the settings have been successfully initialized.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -53,21 +54,21 @@ await router.initSettings(settings);
 
 Returns the settings of the CaptureVisionRouter as a JSON string.
 
-### Syntax
+**Syntax**
 
 ```js
 outputSettings: (templateName?: string) => Promise<string>;
 ```
 
-### Parameters
+**Parameters**
 
 `templateName (optional)`: The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned.
 
-### Return value
+**Return value**
 
 Returns a promise that resolves with the JSON string representing the settings.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -79,22 +80,22 @@ console.log(settings);
 
 Retrieves the simplified settings for a specific template from the CaptureVisionRouter.
 
-### Syntax
+**Syntax**
 
 ```js
 getSimplifiedSettings: (templateName: string) => Promise<SimplifiedCaptureVisionSettings | null>;
 ```
 
-### parameter
+**parameter**
 
 `templateName`: The name of the template for which to retrieve the simplified settings.
 
-### Return Value
+**Return Value**
 
 Returns a promise that resolves with a SimplifiedCaptureVisionSettings object representing the simplified settings for the specified template.
 > Remarks: If the underlying CaptureSettings is too complicated, we cannot construct a Simplified CaptureSettings in which case it returns null.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -105,22 +106,22 @@ settings = await router.getSimplifiedSettings();
 
 Updates a few key settings of a template with new values.
 
-### Syntax
+**Syntax**
 
 ```js
 updateSettings: (templateName: string, settings: SimplifiedCaptureVisionSettings) => Promise<void>;
 ```
 
-### parameter
+**parameter**
 
 `templateName`: The name of the template to be updated with the provided settings.
 `settings`: The SimplifiedCaptureVisionSettings object containing the new values for the template.
 
-### Return Value
+**Return Value**
 
 Returns a promise that resolves when the template settings have been successfully updated.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -139,21 +140,22 @@ await router.updateSettings('myTemplate',newSettings);
 ## resetSettings
 
 Resets all settings of the CaptureVisionRouter to their default values.
-### Syntax
+
+**Syntax**
 
 ```js
 resetSettings: () => Promise<void>;
 ```
 
-### parameter
+**parameter**
 
 None
 
-### Return Value
+**Return Value**
 
 Returns a promise that resolves when the settings have been successfully reset to their default values.
 
-### Code Snippet
+**Code Snippet**
 
 ```js
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
