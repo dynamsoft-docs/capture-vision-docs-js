@@ -5,6 +5,7 @@ description: This page introduces APIs related to the Intermediate-result of Cap
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/intermediate-result.html
 ---

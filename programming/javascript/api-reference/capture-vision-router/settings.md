@@ -5,6 +5,7 @@ description: This page introduces APIs related to the Settings of CaptureVisionR
 keywords: capture vision, router, Settings, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/settings.html
 ---

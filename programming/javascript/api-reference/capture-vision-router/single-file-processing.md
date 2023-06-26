@@ -5,6 +5,7 @@ description: This page introduces APIs related to "Single Process" with Dynamsof
 keywords: capture vision, caputre, image processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
+noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
