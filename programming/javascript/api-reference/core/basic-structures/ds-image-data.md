@@ -1,188 +1,93 @@
 ---
 layout: default-layout
-title: class CImageData - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CImageData in Dynamsoft Core Module.
-keywords: image data, c++
+title: interface DSImageData - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface DSImageData in Dynamsoft Core Module.
+keywords: image data, JS
 needAutoGenerateSidebar: true
 ---
 
-# CImageData
+# DSImageData
 
-The CImageData class represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
+The DSImageData class represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CImageData 
+```js
+export interface DSImageData {
+                bytes: Uint8Array;
+                width: number;
+                height: number;
+                stride: number;
+                format: Core.BasicStructures.EnumImagePixelFormat;
+                orientation?: number;
+                tag?: ImageTag;
+            } 
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute            | Type |
 |----------------------|-------------|
-| [`CImageData()`](#cimagedata-constructor) | Constructs an empty image data object. |
-| [`CImageData(int _bytesLength, const unsigned char* _bytes, int _width, int _height, int _stride, ImagePixelFormat _format, int _orientation=0, const CImageTag* _tag = NULL)`](#cimagedata-constructor2) | Constructs an image data object with the specified parameters. |
-| [`~CImageData()`](#cimagedata-destructor) | Destructs the image data object and frees the allocated memory. |
-| [`GetBytes`](#getbytes) | Gets the image byte array. |
-| [`GetBytesLength`](#getbyteslength) | Gets the length of the image byte array. |
-| [`GetWidth`](#getwidth) | Gets the width of the image. |
-| [`GetHeight`](#getheight) | Gets the height of the image. |
-| [`GetStride`](#getstride) | Gets the stride of the image. |
-| [`GetImagePixelFormat`](#getimagepixelformat) | Gets the pixel format of the image. |
-| [`GetOrientation`](#getorientation) | Gets the orientation of the image. |
-| [`GetImageTag`](#getimagetag) | Gets the tag of the image. |
-| [`SetImageTag`](#setimagetag) | Sets the tag of the image. |
+| [`bytes`](#bytes) | *Uint8Array* |
+| [`width`](#width) | *number* |
+| [`height`](#height) | *number* |
+| [`stride`](#stride) | *number* |
+| [`format`](#format) | *Core.BasicStructures.EnumImagePixelFormat* |
+| [`orientation`](#orientation) | *number* |
+| [`tag`](#tag) | *ImageTag* |
 
-### CImageData Constructor
-
-Constructs an empty image data object.
-
-```cpp
-CImageData()
-```
-
-### CImageData Constructor2
-
-Constructs an image data object with the specified parameters.
-
-```cpp
-CImageData(int _bytesLength, const unsigned char* _bytes, int _width, int _height, int _stride, ImagePixelFormat _format, int _orientation=0, const CImageTag* _tag = NULL)
-```
-
-**Parameters**
-
-`_bytesLength` The length of the image byte array.
-
-`_bytes` The image byte array.
-
-`_width` The width of the image.
-
-`_height` The height of the image.
-
-`_stride` The stride of the image.
-
-`_format` The pixel format of the image.
-
-`_orientation` The orientation of the image.
-
-`_tag` The tag of the image.
-
-### ~CImageData Destructor
-
-Destructs the image data object and frees the allocated memory.
-
-```cpp
-virtual ~CImageData()
-```
-
-### GetBytes
+### bytes
 
 Gets the image byte array.
 
-```cpp
-const unsigned char* GetBytes() const
+```js
+bytes: Uint8Array;
 ```
 
-**Return value**
-
-Returns a pointer to the image byte array.
-
-### GetBytesLength
-
-Gets the length of the image byte array.
-
-```cpp
-int GetBytesLength() const
-```
-
-**Return value**
-
-Returns the length of the image byte array.
-
-### GetWidth
+### width
 
 Gets the width of the image.
 
-```cpp
-int GetWidth() const
+```js
+width: number;
 ```
 
-**Return value**
-
-Returns the width of the image.
-
-### GetHeight
+### height
 
 Gets the height of the image.
 
-```cpp
-int GetHeight() const
+```js
+height: number;
 ```
 
-**Return value**
-
-Returns the height of the image.
-
-### GetStride
+### stride
 
 Gets the stride of the image.
 
-```cpp
-int GetStride() const
+```js
+stride: number;
 ```
 
-**Return value**
-
-Returns the stride of the image.
-
-### GetImagePixelFormat
+### format
 
 Gets the pixel format of the image.
 
-```cpp
-ImagePixelFormat GetImagePixelFormat() const
+```js
+format: Core.BasicStructures.EnumImagePixelFormat;
 ```
 
-**Return value**
-
-Returns the pixel format of the image.
-
-### GetOrientation
+### orientation
 
 Gets the orientation of the image.
 
-```cpp
-int GetOrientation() const
+```js
+orientation?: number;
 ```
 
-**Return value**
-
-Returns the orientation of the image.
-
-### GetImageTag
+### tag
 
 Gets the tag of the image.
 
-```cpp
-const CImageTag* GetImageTag() const
+```js
+tag?: ImageTag;
 ```
-
-**Return value**
-
-Returns a pointer to the tag of the image.
-
-### SetImageTag
-
-Sets the tag of the image.
-
-```cpp
-void SetImageTag(const CImageTag* _tag)
-```
-
-**Parameters**
-
-`_tag` The tag of the image.

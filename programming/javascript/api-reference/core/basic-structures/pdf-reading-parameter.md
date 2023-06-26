@@ -1,53 +1,41 @@
 ---
 layout: default-layout
-title: class CPDFReadingParameter - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CPDFReadingParameter in Dynamsoft Core Module.
-keywords: pdf reading parameter, c++
+title: interface PDFReadingParameter - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface PDFReadingParameter in Dynamsoft Core Module.
+keywords: pdf reading parameter, JS
 needAutoGenerateSidebar: true
 ---
 
-# CPDFReadingParameter
+# PDFReadingParameter
 
-The CPDFReadingParameter class represents the parameters for reading a PDF file. It contains the mode of PDF reading, the DPI (dots per inch) value, and the tarGetstype.
+The PDFReadingParameter interface represents the parameters for reading a PDF file. It contains the mode of PDF reading, the DPI (dots per inch) value, and the tarGetstype.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CPDFReadingParameter 
+```js
+export interface PDFReadingParameter {
+                mode: EnumPDFReadingMode;
+                dpi: number;
+                type: EnumTargetType;
+            } 
 ```
 
 ## Attributes Summary
   
 | Attribute | Type |
 |---------- | ---- |
-| [`mode`](#mode) | *PDFReadingMode* |
-| [`dpi`](#dpi) | *int* |
-| [`type`](#type) | *TargetType* |
+| [`mode`](#mode) | *EnumPDFReadingMode* |
+| [`dpi`](#dpi) | *number* |
+| [`type`](#type) | *EnumTargetType* |
 
 ### mode
 
 The mode of PDF reading.
 
-```cpp
-PDFReadingMode mode
-```
-
 ### dpi
 
 The DPI (dots per inch) value.
 
-```cpp
-int dpi
-```
-
 ### type
 
-The tarGetstype.
-
-```cpp
-TargetType type
-```
+The targetType.

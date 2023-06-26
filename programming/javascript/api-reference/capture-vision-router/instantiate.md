@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/instantiate.html
 ---
 
-# Javascript API Reference - `CaptureVisionRouter` Instantiation
+# Javascript API Reference - Instantiate
 
 | API Name                            | Description                                                            |
 | ----------------------------------- | ---------------------------------------------------------------------- |

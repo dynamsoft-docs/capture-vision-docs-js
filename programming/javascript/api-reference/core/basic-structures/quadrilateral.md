@@ -1,70 +1,34 @@
 ---
 layout: default-layout
-title: class CQuadrilateral - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CQuadrilateral in Dynamsoft Core Module.
-keywords: quadrilateral, c++
+title: interface Quadrilateral - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface Quadrilateral in Dynamsoft Core Module.
+keywords: quadrilateral, JS
 needAutoGenerateSidebar: true
 ---
 
-# CQuadrilateral
+# Quadrilateral
 
-The CQuadrilateral class represents a quadrilateral shape in 2D space. It contains an array of four CPoint objects, which represent the vertices of the quadrilateral.
+The interface Quadrilateral represents a quadrilateral shape defined by four points. It contains an array of four Point objects.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CQuadrilateral 
+```js
+export interface Quadrilateral {
+                points: [Point, Point, Point, Point];
+            }
 ```
 
 ## Attributes Summary
   
 | Attribute | Type |
 |---------- | ---- |
-| [`points`](#points) | *CPoint* |
+| [`points`](#points) | *Point* |
 
-## Methods Summary
-
-| Method               | Description |
-|----------------------|-------------|
-| [`Contains`](#contains) | Determines whether a point is inside the quadrilateral.|
-| [`GetArea`](#getarea) | Gets the area of the quadrilateral. |
 
 ### points
 
 The point array of the quadrilateral.
 
-```cpp
-CPoint points[4]
+```js
+points: [Point, Point, Point, Point];
 ```
-
-### Contains
-
-Determines whether a point is inside the quadrilateral.
-
-```cpp
-bool Contains(const CPoint* point) const
-```
-
-**Parameters**
-
-`[in] point` The point to test.
-
-**Return value**
-
-Returns true if the point inside the quadrilateral, false otherwise. 
-
-### GetArea
-
-Gets the area of the quadrilateral.
-
-```cpp
-int GetArea() const
-```
-
-**Return value**
-
-Returns the area of the quadrilateral.

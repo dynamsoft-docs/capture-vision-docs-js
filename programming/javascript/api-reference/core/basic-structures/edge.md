@@ -1,44 +1,43 @@
 ---
 layout: default-layout
-title: class CEdge - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CEdge in Dynamsoft Core Module.
-keywords: edge, c++
+title: interface Edge - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface Edge in Dynamsoft Core Module.
+keywords: edge, JS
 needAutoGenerateSidebar: true
 ---
 
-# CEdge
+# Edge
 
-CEdge is a structure composed of two Corner points in an image. A Corner represents a point at which the image's brightness or color sharply changes. Therefore, a CEdge is a line segment connecting two such points that have been identified as Corners.
+Edge is a structure composed of two Corner points in an image. A Corner represents a point at which the image's brightness or color sharply changes. Therefore, a Edge is a line segment connecting two such points that have been identified as Corners.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CEdge 
+```js
+export interface Edge {
+                startCorner: Corner;
+                endCorner: Corner;
+            }
 ```
 
 ## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
-| [`startCorner`](#startcorner) | *CCorner* |
-| [`endCorner`](#endcorner) | *CCorner* |
+| [`startCorner`](#startcorner) | *Corner* |
+| [`endCorner`](#endcorner) | *Corner* |
 
 ### startCorner
 
 The start corner point of the edge.
 
-```cpp
-CCorner startCorner
+```js
+startCorner: Corner;
 ```
 
 ### endCorner
 
 The end corner point of the edge.
 
-```cpp
-CCorner endCorner
+```js
+endCorner: Corner;
 ```
