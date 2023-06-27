@@ -4,6 +4,7 @@ title: interface DSFile - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface DSFile in Dynamsoft Core Module.
 keywords: DSFile, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # DSFile

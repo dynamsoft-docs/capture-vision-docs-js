@@ -1,58 +1,34 @@
 ---
 layout: default-layout
-title: class CContour - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CContour in Dynamsoft Core Module.
-keywords: contour, c++
+title: interface Contour - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface Contour in Dynamsoft Core Module.
+keywords: contour, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CContour
+# Contour
 
-The CContour class represents a contour in 2D space. It contains an array of CPoint objects, which represent the vertices of the contour.
+The Contour class represents a contour in 2D space. It contains an array of Point objects, which represent the vertices of the contour.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CContour 
+```js
+export interface Contour {
+                points: Array<Point>;
+            }
 ```
 
 ## Attributes Summary
   
 | Attribute | Type |
 |---------- | ---- |
-| [`pointsCount`](#pointscount) | *int* |
-| [`points`](#points)| *CPoint\** |
-
-## Methods Summary
-
-| Method               | Description |
-|----------------------|-------------|
-| [`~CContour`](#ccontour-destructor) | The destructor of CContour. |
-
-### pointsCount
-
-The number of points in the contour.
-
-```cpp
-int pointsCount
-```
+| [`points`](#points)| *Array* |
 
 ### points
 
-The point array of the contour. The memory will be released by CContour.
+The point array of the contour.
 
-```cpp
-CPoint* points
-```
-
-### ~CContour Destructor
-
-The destructor of CContour. It releases the memory of the point array.
-
-```cpp
-~CContour()
+```js
+points: Array<Point>;
 ```

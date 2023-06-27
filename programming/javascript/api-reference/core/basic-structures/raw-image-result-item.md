@@ -1,42 +1,35 @@
 ---
 layout: default-layout
-title: class CRawImageResultItem - Dynamsoft Capture Vision C++ Edition API Reference
-description: This page shows the C++ edition of the class CRawImageResultItem in Dynamsoft Capture Vision Router Module.
-keywords: raw image, c++
+title: interface RawImageResultItem - Dynamsoft Capture Vision JS Edition API Reference
+description: This page shows the JS edition of the interface RawImageResultItem in Dynamsoft Capture Vision Router Module.
+keywords: raw image, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: CVR C++ CRawImageResultItem Class
-permalink: /programming/cplusplus/api-reference/core/basic-structures/raw-image-result-item.html
+noTitleIndex: true
 ---
 
-# CRawImageResultItem
+# RawImageResultItem
 
-The `CRawImageResultItem` class represents a captured raw image result item. It is a derived class of `CCapturedResultItem` and provides an interface to get the image data.
+The `RawImageResultItem` interface represents a captured raw image result item. It extends the `CapturedResultItem` interface and adds a property.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CRawImageResultItem ： public CCapturedResultItem
+```js
+export interface RawImageResultItem extends CapturedResultItem {
+                readonly imageData: Core.BasicStructures.DSImageData;
+            }
 ```
 
 ## Methods Summary
 
 | Method                          | Description                                      |
 | ------------------------------- | ------------------------------------------------ |
-| [`GetImageData`](#getimagedata) | Gets the image data for the CRawImageResultItem. |
+| [`imageData`](#imagedata) | Gets the image data for the RawImageResultItem. |
 
-### GetImageData
+### imageData
 
-Gets the image data for the CRawImageResultItem.
+`imageData`: A property of type `Core.BasicStructures.DSImageData` that represents the image data of the raw image result item.
 
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+```js
+readonly imageData: Core.BasicStructures.DSImageData;
 ```
-
-**Return value**
-
-Returns a const pointer to the CImageData object that contains the image data for the CRawImageResultItem.

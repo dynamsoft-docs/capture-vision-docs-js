@@ -4,6 +4,7 @@ title: interface PDFReadingParameter - Dynamsoft Core Module JS Edition API Refe
 description: This page shows the JS edition of the interface PDFReadingParameter in Dynamsoft Core Module.
 keywords: pdf reading parameter, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # PDFReadingParameter

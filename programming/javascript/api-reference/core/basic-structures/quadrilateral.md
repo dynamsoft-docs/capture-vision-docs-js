@@ -4,6 +4,7 @@ title: interface Quadrilateral - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Quadrilateral in Dynamsoft Core Module.
 keywords: quadrilateral, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Quadrilateral

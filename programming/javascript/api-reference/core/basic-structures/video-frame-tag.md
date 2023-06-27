@@ -1,121 +1,104 @@
 ---
 layout: default-layout
-title: class CVideoFrameTag - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CVideoFrameTag in Dynamsoft Core Module.
-keywords: video frame tag, c++
+title: interface VideoFrameTag - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface VideoFrameTag in Dynamsoft Core Module.
+keywords: video frame tag, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CVideoFrameTag
+# VideoFrameTag
 
-The CVideoFrameTag class represents a video frame tag, which is a type of image tag that is used to store additional information about a video frame. It inherits from the CImageTag class and adds additional attributes and methods specific to video frames.
+The `VideoFrameTag` interface extends the `Core.BasicStructures.ImageTag` interface and adds additional properties specific to video frames.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CVideoFrameTag: public CImageTag 
+```js
+export interface VideoFrameTag extends Core.BasicStructures.ImageTag {
+            isCropped: boolean;
+            cropRegion: Core.BasicStructures.DSRect;
+            originalWidth: number; 
+            originalHeight: number; 
+            currentWidth: number; 
+            currentHeight: number;
+            timeSpent: number; 
+            timeStamp: number; 
+        }
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Description |
 |----------------------|-------------|
-| [`GetVideoFrameQuality`](#getvideoframequality) | Gets the quality of the video frame.|
-| [`IsCropped`](#iscropped) | Determines whether the video frame is cropped. |
-| [`GetCropRegion`](#getcropregion) | Gets the crop region of the video frame. |
-| [`GetOriginalWidth`](#getoriginalwidth) | Gets the original width of the video frame. |
-| [`GetOriginalHeight`](#getoriginalheight) | Gets the original height of the video frame. |
-| [`CVideoFrameTag`](#cvideoframetag-constructor) | The constructor of the CVideoFrameTag class. |
-| [`~CVideoFrameTag`](#cvideoframetag-destructor) | The destructor of the CVideoFrameTag class. |
+| [`isCropped`](#iscropped) | Determines whether the video frame is cropped. |
+| [`cropRegion`](#cropRegion) | Gets the crop region of the video frame. |
+| [`originalWidth`](#originalWidth) | Gets the original width of the video frame. |
+| [`originalHeight`](#originalHeight) | Gets the original height of the video frame. |
+| [`currentWidth`](#currentWidth) | Gets the current width of the video frame. |
+| [`currentHeight`](#currentHeight) | Gets the current height of the video frame. |
+| [`timeSpent`](#timeSpent) | The time spent on processing the video frame. |
+| [`timeStamp`](#timeStamp) | The time stamp of the video frame.  |
 
-### GetVideoFrameQuality
-
-Gets the quality of the video frame.
-
-```cpp
-VideoFrameQuality GetVideoFrameQuality() const
-```
-
-**Return value**
-
-Returns the quality of the video frame.
-
-### IsCropped
+### isCropped
 
 Determines whether the video frame is cropped.
 
-```cpp
-bool IsCropped() const
+```js
+isCropped: boolean;
 ```
 
-**Return value**
+### cropRegion
 
-Returns true if the video frame is cropped, false otherwise.
+A Core.BasicStructures.DSRect object representing the crop region of the video frame.
 
-### GetCropRegion
-
-Gets the crop region of the video frame.
-
-```cpp
-const CRect* GetCropRegion() const
+```js
+cropRegion: Core.BasicStructures.DSRect;
 ```
 
-**Return value**
-
-Returns a pointer to a CRect object that represents the crop region of the video frame. It may be NULL.
-
-### GetOriginalWidth
+### originalWidth
 
 Gets the original width of the video frame.
 
-```cpp
-int GetOriginalWidth() const
+```js
+originalWidth: number;
 ```
 
-**Return value**
-
-Returns the original width of the video frame.
-
-### GetOriginalHeight
+### originalHeight
 
 Gets the original height of the video frame.
 
-```cpp
-int GetOriginalHeight() const
+```js
+originalHeight: number;
 ```
 
-**Return value**
+### currentWidth
 
-Returns the original height of the video frame.
+The current width of the video frame after cropping.
 
-### CVideoFrameTag Constructor
-
-The constructor of the CVideoFrameTag class.
-
-```cpp
-CVideoFrameTag(VideoFrameQuality quality, bool isCropped, const CRect* cropRegion, int originalWidth, int originalHidth)
+```js
+currentWidth: number;
 ```
 
-**Parameters**
+### currentHeight
 
-`[in] quality` The quality of the video frame.
+The current height of the video frame after cropping.
 
-`[in] isCropped` A boolean value indicating whether the video frame is cropped.
+```js
+currentHeight: number;
+```
 
-`[in] cropRegion` A pointer to a CRect object that represents the crop region of the video frame.
+### timeSpent
 
-`[in] originalWidth` The original width of the video frame.
+The time spent on processing the video frame.
 
-`[in] originalHeight` The original height of the video frame.
+```js
+timeSpent: number;
+```
 
-### CVideoFrameTag Destructor
+### timeStamp
 
-The destructor of the CVideoFrameTag class.
+The time stamp of the video frame.
 
-```cpp
-virtual ~CVideoFrameTag()
+```js
+timeStamp: number;
 ```

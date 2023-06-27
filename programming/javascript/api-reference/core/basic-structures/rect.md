@@ -1,62 +1,73 @@
 ---
 layout: default-layout
-title: class CRect - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CRect in Dynamsoft Core Module.
-keywords: rect, c++
+title: interface Rect - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface Rect in Dynamsoft Core Module.
+keywords: image data, JS
 needAutoGenerateSidebar: true
 ---
 
-# CRect
+# Rect
 
-The CRect class represents a rectangle in 2D space. It contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
+The interface Rect represents a rectangle in 2D space. It contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CRect 
+```js
+export interface Rect {
+                x: number;
+                y: number;
+                width: number;
+                height: number;
+                isMeasuredInPercentage?: boolean;
+            }
 ```
 
 ## Attributes Summary
 
-| Attribute | Type |
-|---------- | ---- |
-| [`top`](#top) | *int* |
-| [`left`](#left) | *int* |
-| [`right`](#right) | *int* |
-| [`bottom`](#bottom) | *int* |
+| Attribute            | Type |
+|----------------------|-------------|
+| [`x`](#x) | *number* |
+| [`y`](#y) | *number* |
+| [`width`](#width) | *number* |
+| [`height`](#height) | *number* |
+| [`isMeasuredInPercentage`](#isMeasuredInPercentage) | *boolean* |
 
-### top
+### x
 
-The top edge of the rectangle.
+The x coordinate of the upper left corner point of the rectangle.
 
-```cpp
-int top
+```js
+x: number,
 ```
 
-### left
+### y
 
-The left edge of the rectangle.
+The y coordinate of the upper left corner point of the rectangle.
 
-```cpp
-int left
+```js
+y: number,
 ```
 
-### right
+### width
 
-The right edge of the rectangle.
+The width of the rectangle.
 
-```cpp
-int right
+```js
+width: number,
 ```
 
-### bottom
+### height
 
-The bottom edge of the rectangle.
+The height of the rectangle.
 
-```cpp
-int bottom
+```js
+height: number;
+```
+
+### isMeasuredInPercentage
+
+Whether to use a percentage measurement for this Rect.
+
+```js
+isMeasuredInPercentage: boolean;
 ```

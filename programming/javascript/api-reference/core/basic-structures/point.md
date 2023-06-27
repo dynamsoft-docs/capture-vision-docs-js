@@ -4,6 +4,7 @@ title: interface Point - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Point in Dynamsoft Core Module.
 keywords: point, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Point
@@ -30,6 +31,14 @@ export interface Point {
 
 The X coordinates of the Point.
 
+```js
+x: number;
+```
+
 ### y
 
 The Y coordinates of the Point.
+
+```js
+y: number;
+```

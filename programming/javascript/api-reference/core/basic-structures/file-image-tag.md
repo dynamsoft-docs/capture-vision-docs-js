@@ -4,6 +4,7 @@ title: interface FileImageTag - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface FileImageTag in Dynamsoft Core Module.
 keywords: file image tag, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # FileImageTag

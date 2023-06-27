@@ -1,41 +1,73 @@
 ---
 layout: default-layout
-title: class CImageSourceAdapter - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CImageSourceAdapter in Dynamsoft Core Module.
-keywords: image source adapter, c++
+title: class ImageSourceAdapter - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the class ImageSourceAdapter in Dynamsoft Core Module.
+keywords: image source adapter, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CImageSourceAdapter
+# ImageSourceAdapter
 
-The CImageSourceAdapter class provides an interface for fetching and buffering images. It is an abstract class that needs to be implemented by a concrete class to provide actual functionality.
+The `ImageSourceAdapter` is an abstract class that provides an interface for handling image sources and managing image buffers.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
+```js
+export abstract class ImageSourceAdapter {
 
-*Assembly:* DynamsoftCore.dll
+  constructor();
 
-```cpp
-class CImageSourceAdapter 
+  addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
+  
+  abstract hasNextImageToFetch: () => boolean;
+
+  startFetching: () => void;
+
+  stopFetching: () => void;
+  
+  getImage: () => Promise<Core.BasicStructures.DSImageData>;
+    
+  setMaxImageCount: (count: number) => void;
+
+  getMaxImageCount: () => number;
+  
+  setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowProtectionMode) => void;
+
+  getBufferOverflowProtectionMode: () => Core.BasicStructures.EnumBufferOverflowProtectionMode;
+
+  hasImage: (imageId: number) => boolean;
+
+  setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
+
+  getImageCount: () => number;
+
+  isBufferEmpty: () => boolean;
+
+  clearBuffer: () => void;
+
+  setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageType) => void;
+
+  getColourChannelUsageType: () => Core.BasicStructures.EnumColourChannelUsageType;
+}
 ```
 
 ## Methods Summary
 
 | Method | Description |
 |--------|-------------|
-| [`AddImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
-| [`HasNextImageToFetch`](#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
-| [`StartFetching`](#startfetching) | Starts fetching images. |
-| [`StopFetching`](#stopfetching) | Stops fetching images. |
-| [`GetImage`](#getimage) | Returns a buffered image. |
-| [`SetMaxImageCount`](#setmaximagecount) | Sets how many images are allowed to be buffered. |
-| [`GetMaxImageCount`](#getmaximagecount) | Returns how many images can be buffered. |
-| [`SetBufferOverflowProtectionMode`](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
-| [`GetBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode. |
-| [`HasImage`](#hasimage) | Determines whether the image is in the buffer or not. |
-| [`SetNextImageToReturn`](#setnextimagetoreturn) | Sets the next image to return. |
-| [`GetImageCount`](#getimagecount) | Returns the actual count of buffered images. |
+| [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
+| [`hasNextImageToFetch`](#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
+| [`startFetching`](#startfetching) | Starts fetching images. |
+| [`stopFetching`](#stopfetching) | Stops fetching images. |
+| [`getImage`](#getimage) | Returns a buffered image. |
+| [`setMaxImageCount`](#setmaximagecount) | Sets how many images are allowed to be buffered. |
+| [`getMaxImageCount`](#getmaximagecount) | Returns how many images can be buffered. |
+| [`setBufferOverflowProtectionMode`](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
+| [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode. |
+| [`hasImage`](#hasimage) | Determines whether the image is in the buffer or not. |
+| [`setNextImageToReturn`](#setnextimagetoreturn) | Sets the next image to return. |
+| [`getImageCount`](#getimagecount) | Returns the actual count of buffered images. |
 | [`IsBufferEmpty`](#isbufferempty) | Determines whether the buffer is empty. |
 | [`ClearBuffer`](#clearbuffer) | Clears the image buffer. |
 | [`SetColourChannelUsageType`](#setcolourchannelusagetype) | Sets the usage type of a color channel in an image. |
@@ -43,192 +75,183 @@ class CImageSourceAdapter
 
 ---
 
-### AddImageToBuffer
+### addImageToBuffer
 
 Adds an image to the buffer of the adapter.
 
-```cpp
-void AddImageToBuffer(const CImageData* img, bool bClone = true);
+```js
+addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
 ```
 
 **Parameters**
 
-`[in] img` The image to add to the buffer.
+`image` The image to add to the buffer.
 
-`[in] bClone` Whether the image should be cloned before being added to the buffer.
+### hasNextImageToFetch
 
-### HasNextImageToFetch
+An abstract method that needs to be implemented by the user. It checks if there is a next image to fetch.
 
-Determines whether there are more images left to fetch.
-
-```cpp
-virtual bool HasNextImageToFetch() const;
+```js
+abstract hasNextImageToFetch: () => boolean;
 ```
 
 **Return value**
 
-Returns true if there are more images left to fetch, false otherwise. This function must be implemented in the subclass.
+Returns true if there are more images left to fetch, false otherwise. 
 
-### StartFetching
+### startFetching
 
 Starts fetching images.
 
-```cpp
-virtual void StartFetching();
+```js
+startFetching: () => void;
 ```
 
-### StopFetching
+### stopFetching
 
 Stops fetching images.
 
-```cpp
-virtual void StopFetching();
+```js
+stopFetching: () => void;
 ```
 
-### GetImage
+### getImage
 
-Returns a buffered image.
+Retrieves a buffered image as a promise.
 
-```cpp
-virtual CImageData* GetImage(bool removeFromBuffer = true);
+```js
+getImage: () => Promise<Core.BasicStructures.DSImageData>;
 ```
-
-**Parameters**
-
-`[in] removeFromBuffer` Whether the image should be removed from the buffer after it is returned.
 
 **Return value**
 
-Returns a pointer to the image if it exists in the buffer, NULL otherwise.
+Returns the image object as a promise .
 
-### SetMaxImageCount
+### setMaxImageCount
 
 Sets how many images are allowed to be buffered.
 
-```cpp
-void SetMaxImageCount(int count);
+```js
+setMaxImageCount: (count: number) => void;
 ```
 
 **Parameters**
 
-`[in] count` The maximum number of images that can be buffered.
+`count`: The maximum number of images that can be buffered.
 
-### GetMaxImageCount
+### getMaxImageCount
 
 Returns how many images can be buffered.
 
-```cpp
-int GetMaxImageCount() const;
+```js
+getMaxImageCount: () => number;
 ```
 
 **Return value**
 
 Returns the maximum number of images that can be buffered.
 
-### SetBufferOverflowProtectionMode
+### setBufferOverflowProtectionMode
 
 Sets a mode that determines the action to take when there is a new incoming image and the buffer is full.
 
-```cpp
-void SetBufferOverflowProtectionMode(BufferOverflowProtectionMode mode);
+```js
+setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowProtectionMode) => void;
 ```
 
 **Parameters**
 
-`[in] mode` The buffer overflow protection mode to set.
+`mode`: The buffer overflow protection mode to set.
 
-### GetBufferOverflowProtectionMode
+### getBufferOverflowProtectionMode
 
 Returns the current buffer overflow protection mode.
 
-```cpp
-BufferOverflowProtectionMode GetBufferOverflowProtectionMode() const;
+```js
+getBufferOverflowProtectionMode: () => Core.BasicStructures.EnumBufferOverflowProtectionMode;
 ```
 
 **Return value**
 
 Returns the current buffer overflow protection mode.
 
-### HasImage
+### hasImage
 
 Determines whether the image is in the buffer or not.
 
-```cpp
-bool HasImage(int imageId) const;
+```js
+hasImage: (imageId: number) => boolean;
 ```
 
 **Parameters**
 
-`[in] imageId` The ID of the image to check.
+`imageId`: The ID of the image to check.
 
 **Return value**
 
 Returns true if the image is in the buffer, false otherwise.
 
-### SetNextImageToReturn
+### setNextImageToReturn
 
 Sets the next image to return.
 
-```cpp
-bool SetNextImageToReturn(int imageId, bool keepInBuffer = true);
+```js
+setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
 ```
 
 **Parameters**
 
-`[in] imageId` The ID of the next image to return.
+`imageId`: The ID of the next image to return.
 
-`[in] keepInBuffer` Whether the image should be kept in the buffer after it is returned.
+`keepInBuffer`: Whether the image should be kept in the buffer after it is returned.
 
-**Return value**
 
-Returns true if the image is in the buffer and is set as the next image to return, false otherwise.
-
-### GetImageCount
+### getImageCount
 
 Returns the actual count of buffered images.
 
-```cpp
-int GetImageCount() const;
+```js
+getImageCount: () => number;
 ```
 
 **Return value**
 
 Returns the actual count of buffered images.
 
-### IsBufferEmpty
+### isBufferEmpty
 
 Determines whether the buffer is empty.
 
-```cpp
-bool IsBufferEmpty() const;
+```js
+isBufferEmpty: () => boolean;
 ```
 
 **Return value**
 
 Returns true if the buffer is empty, false otherwise.
 
-### ClearBuffer
+### clearBuffer
 
 Clear the image buffer.
 
-```cpp
-void ClearBuffer();
+```js
+clearBuffer: () => void;
 ```
 
-### SetColourChannelUsageType
+### setColourChannelUsageType
 
 Sets the usage type of a color channel in images.
 
-```cpp
-void SetColourChannelUsageType(ColourChannelUsageType type);
+```js
+setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageType) => void;
 ```
 
-### GetColourChannelUsageType
+### getColourChannelUsageType
 
 Gets the usage type of a color channel in images.
 
-```cpp
-ColourChannelUsageType GetColourChannelUsageType() const;
+```js
+getColourChannelUsageType: () => Core.BasicStructures.EnumColourChannelUsageType;
 ```
 
 **Return value**

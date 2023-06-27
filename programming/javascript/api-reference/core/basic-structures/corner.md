@@ -1,62 +1,64 @@
 ---
 layout: default-layout
-title: class CCorner - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CCorner in Dynamsoft Core Module.
-keywords: corner, c++
+title: interface Corner - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the class Corner in Dynamsoft Core Module.
+keywords: corner, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CCorner
+# Corner
 
-CCorner is a structure in an image consisting of two line segments and intersection point. A Corner represents a point at which the image's brightness or color sharply changes.
+Corner is a structure in an image consisting of two line segments and intersection point. A Corner represents a point at which the image's brightness or color sharply changes.
 
 ## Definition
 
-*Namespace:* dynamsoft::basic_structures
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CCorner 
+```js
+export interface Corner {
+                type: EnumCornerType;
+                intersection: Point;
+                line1: LineSegment;
+                Line2: LineSegment;
+            } 
 ```
 
 ## Attributes
   
 | Attribute | Type |
 |---------- | ---- |
-| [`type`](#type) | *CornerType* |
-| [`intersection`](#intersection) | *CPoint* |
-| [`line1`](#line1) | *CLineSegment* |
-| [`line2`](#line2) | *CLineSegment* |
+| [`type`](#type) | *EnumCornerType* |
+| [`intersection`](#intersection) | *Point* |
+| [`line1`](#line1) | *LineSegment* |
+| [`line2`](#line2) | *LineSegment* |
 
 ### type
 
 The type of the corner.
 
-```cpp
-CornerType type
+```js
+type: EnumCornerType;
 ```
 
 ### intersection
 
 The intersection point of the corner.
 
-```cpp
-CPoint intersection
+```js
+intersection: Point;
 ```
 
 ### line1
 
 The first line connected to the corner.
 
-```cpp
-CLineSegment line1
+```js
+line1: LineSegment;
 ```
 
 ### line2
 
 The second line connected to the corner.
 
-```cpp
-CLineSegment line2
+```js
+Line2: LineSegment;
 ```

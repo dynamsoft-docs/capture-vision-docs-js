@@ -4,6 +4,7 @@ title: interface Polygon - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Polygon in Dynamsoft Core Module.
 keywords: Polygon, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # Polygon
