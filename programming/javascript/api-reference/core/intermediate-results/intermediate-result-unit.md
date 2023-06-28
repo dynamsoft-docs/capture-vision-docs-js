@@ -1,201 +1,86 @@
 ---
 layout: default-layout
-title: class CIntermediateResultUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CIntermediateResultUnit in Dynamsoft Core Module.
-keywords: intermediate result, c++
+title: interface IntermediateResultUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface IntermediateResultUnit in Dynamsoft Core Module.
+keywords: intermediate result, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CIntermediateResultUnit
+# IntermediateResultUnit
 
-The CIntermediateResultUnit class represents an intermediate result unit used in image processing. It is an abstract base class with multiple subclasses, each representing a different type of unit such as pre-detected regions, localized barcodes, decoded barcodes, localized text lines, binary image, gray image, etc.
+The IntermediateResultUnit interface represents an intermediate result unit used in image processing.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CIntermediateResultUnit 
+```js
+export interface IntermediateResultUnit {
+                hashId: string;
+                sourceImageHashId: string;
+                sourceImageTag: Core.BasicStructures.ImageTag;
+                localToSourceImageTransformMatrix: Array<{ local: number, source: number }>;
+                unitType: EnumIntermediateResultUnitType;
+            }
 ```
-
 
 ## Methods Summary
 
 | Method               | Description |
 |----------------------|-------------|
-| [`GetHashId`](#gethashid) | Gets the hash ID of the unit.|
-| [`GetSourceImageHashId`](#getsourceimagehashid) | Gets the hash ID of the source image. |
-| [`GetSourceImageTag`](#getsourceimagetag) | Gets the image tag of the source image. |
-| [`GetLocalToSourceImageTransformMatrix`](#getlocaltosourceimagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
-| [`SetLocalToSourceImageTransformMatrix`](#setlocaltosourceimagetransformmatrix) | Sets the transformation matrix from local to source image coordinates. |
-| [`GetType`](#gettype) | Gets the type of the intermediate result unit. |
-| [`Clone`](#clone) | Creates a copy of the intermediate result unit. |
-| [`SetHashId`](#sethashid) | Sets the hash ID of the unit. |
-| [`SetSourceImageHashId`](#setsourceimagehashid) | Sets the hash ID of the source image. |
-| [`SetSourceImageTag`](#setsourceimagetag) | Sets the image tag of the source image. |
-| [`Retain`](#retain) | Increases the reference count of the unit. |
-| [`Release`](#release) | Decreases the reference count of the unit. |
-| [`GetRotationTransformMatrix`](#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image.|
-| [`SetRotationTransformMatrix`](#setrotationtransformmatrix) | Sets the rotation transformation matrix of the original image relative to the rotated image.|
+| [`hashId`](#hashId) | Gets the hash ID of the unit.|
+| [`sourceImageHashId`](#sourceImageHashId) | Gets the hash ID of the source image. |
+| [`sourceImageTag`](#sourceImageTag) | Gets the image tag of the source image. |
+| [`localToSourceImageTransformMatrix`](#localToSourceImageTransformMatrix) | Gets the transformation matrix from local to source image coordinates. |
+| [`unitType`](#unitType) | Gets the type of the intermediate result unit. |
 
-### GetHashId
+### hashId
 
-Gets the hash ID of the intermediate result unit.
+The hash ID of the intermediate result unit.
 
-```cpp
-const char* GetHashId() const
+```js
+hashId: string;
 ```
 
 **Return value**
 
 Returns the hash ID of the unit. 
 
-### GetSourceImageHashId
+### sourceImageHashId
 
-Gets the hash ID of the source image.
+The hash ID of the source image.
 
-```cpp
-const char* GetSourceImageHashId() const
+```js
+sourceImageHashId: string;
 ```
 
 **Return value**
 
 Returns the hash ID of the source image.
 
-### GetSourceImageTag
+### sourceImageTag
 
-Gets the image tag of the source image.
+The image tag of the source image.
 
-```cpp
-const CImageTag* GetSourceImageTag() const
+```js
+sourceImageTag: Core.BasicStructures.ImageTag;
 ```
 
 **Return value**
 
 Returns the image tag of the source image.
 
-### GetLocalToSourceImageTransformMatrix
+### localToSourceImageTransformMatrix
 
-Gets the transformation matrix from local to source image coordinates.
+The transformation matrix from local to source image coordinates.
 
-```cpp
+```js
 virtual void GetLocalToSourceImageTransformMatrix(double matrix[9]) const
 ```
 
-**Parameters**
+### unitType
 
-`[out] matrix` The transformation matrix.
+The type of the intermediate result unit.
 
-### SetLocalToSourceImageTransformMatrix
-
-Sets the transformation matrix from local to source image coordinates.
-
-```cpp
-virtual void SetLocalToSourceImageTransformMatrix(double matrix[9])
+```js
+unitType: EnumIntermediateResultUnitType;
 ```
-
-**Parameters**
-
-`[in] matrix` The transformation matrix.
-
-### GetType
-
-Gets the type of the intermediate result unit.
-
-```cpp
-virtual IntermediateResultUnitType GetType() const = 0
-```
-
-**Return value**
-
-Returns the type of the intermediate result unit.
-
-### Clone
-
-Creates a copy of the intermediate result unit.
-
-```cpp
-virtual CIntermediateResultUnit* Clone() const = 0
-```
-
-**Return value**
-
-Returns a copy of the intermediate result unit.
-
-### SetHashId
-
-Sets the hash ID of the intermediate result unit.
-
-```cpp
-void SetHashId(const char* _hashId)
-```
-
-**Parameters**
-
-`[in] _hashId` The hash ID to set.
-
-### SetSourceImageHashId
-
-Sets the hash ID of the source image.
-
-```cpp
-void SetSourceImageHashId(const char* _sourceImageHashId)
-```
-
-**Parameters**
-
-`[in] _sourceImageHashId` The hash ID to set.
-
-### SetSourceImageTag
-
-Sets the image tag of the source image.
-
-```cpp
-void SetSourceImageTag(const CImageTag* _tag)
-```
-
-**Parameters**
-
-`[in] _tag` The image tag to set.
-
-### Retain
-
-Increases the reference count of the intermediate result unit.
-
-```cpp
-virtual void Retain() = 0
-```
-
-### Release
-
-Decreases the reference count of the intermediate result unit.
-
-```cpp
-virtual void Release() = 0
-```
-
-### GetRotationTransformMatrix
-
-Gets the rotation transformation matrix of the original image relative to the rotated image.
-
-```cpp
-void GetRotationTransformMatrix(double matrix[9]) const;
-```
-
-**Parameters**
-
-`[out] matrix` A double array which represents the rotation transform matrix.
-
-### SetRotationTransformMatrix
-
-Sets the rotation transformation matrix of the original image relative to the rotated image.
-
-```cpp
-void SetRotationTransformMatrix(double matrix[9]);
-```
-
-**Parameters**
-
-`[in] matrix` A double array which represents the rotation transform matrix.

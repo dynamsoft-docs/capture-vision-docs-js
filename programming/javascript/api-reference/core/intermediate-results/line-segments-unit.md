@@ -1,60 +1,34 @@
 ---
 layout: default-layout
-title: class CLineSegmentsUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CLineSegmentsUnit in Dynamsoft Core Module.
-keywords: line segments, c++
+title: interface LineSegmentsUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interfaace LineSegmentsUnit in Dynamsoft Core Module.
+keywords: line segments, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CLineSegmentsUnit
+# LineSegmentsUnit
 
-The CLineSegmentsUnit class represents a collection of line segments in 2D space. It is a derived class of CIntermediateResultUnit.
+The LineSegmentsUnit interface extends the IntermediateResultUnit interface and represents a unit of intermediate result specifically for line segments. It includes additional properties that provide information about the line segments.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CLineSegmentsUnit: public CIntermediateResultUnit 
+```js
+export interface LineSegmentsUnit extends IntermediateResultUnit {
+                lineSegments: Array<Core.BasicStructures.LineSegment>;
+            }
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetCount`](#getcount) | Gets the number of line segments in the collection.|
-| [`GetLineSegment`](#getlinesegment) | Gets the specified line segment from the collection. |
+| [`lineSegments`](#linesegments) | *Array<Core.BasicStructures.LineSegment>* |
 
-### GetCount
-
-Gets the number of line segments in the collection.
-
-```cpp
-virtual int GetCount() const
-```
-
-**Return value**
-
-Returns the number of line segments in the collection.
-
-### GetLineSegment
+### lineSegments
 
 Gets the specified line segment from the collection.
 
-```cpp
-virtual int GetLineSegement(int index, CLineSegment* line) const
+```js
+lineSegments: Array<Core.BasicStructures.LineSegment>;
 ```
-
-**Parameters**
-
-`[in] index` The index of the line segment to retrieve.
-
-`[in, out] line` The CLineSegment object to store the retrieved line segment.
-
-**Return value**
-
-Returns 0 if the operation succeeds, or a negative value if an error occurs.
-
-Note: The caller of this method is responsible for allocating memory for the `line` pointer.

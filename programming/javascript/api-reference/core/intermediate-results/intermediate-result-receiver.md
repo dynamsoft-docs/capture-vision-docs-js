@@ -1,459 +1,487 @@
 ---
 layout: default-layout
-title: class CIntermediateResultReceiver - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CIntermediateResultReceiver in Dynamsoft Core Module.
-keywords: intermediate result receiver, c++
+title: interface IntermediateResultReceiver - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface IntermediateResultReceiver in Dynamsoft Core Module.
+keywords: intermediate result receiver, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CIntermediateResultReceiver
+# IntermediateResultReceiver
 
-The CIntermediateResultReceiver class is responsible for receiving intermediate results of different types. It provides virtual functions for each type of result, which are called when the corresponding result is received.
+The IntermediateResultReceiver interface is responsible for receiving intermediate results of different types. It provides virtual functions for each type of result, which are called when the corresponding result is received.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
+```js
+export interface IntermediateResultReceiver {
+  getObservationParameters: () => ObservationParameters;
+  onTaskResultsReceived?: (pResult: IntermediateResult, info: IntermediateResultExtraInfo) => void;
+  onPredetectedRegionsReceived?: (pResult: PredetectedRegionsUnit, info: IntermediateResultExtraInfo) => void;
+  onLocalizedBarcodesReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
+  onDecodedBarcodesReceived?: (pResult: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
+  onLocalizedTextLinesReceived?: (pResult: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo) => void;
+  onRecognizedTextLinesReceived?: (pResult: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo) => void;
+  onDetectedQuadsReceived?: (pResult: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo) => void;
+  onNormalizedImagesReceived?: (pResult: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo) => void;
+  onColourImageUnitReceived?: (pResult: ColourImageUnit, info: IntermediateResultExtraInfo) => void;
+  onScaledDownColourImageUnitReceived?: (pResult: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo) => void;
+  onGrayscaleImageUnitReceived?: (pResult: GrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
+  onTransformedGrayscaleImageUnitReceived?: (pResult: TransformedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
+  onEnhancedGrayscaleImageUnitReceived?: (pResult: EnhancedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
+  onBinaryImageUnitReceived?: (pResult: BinaryImageUnit, info: IntermediateResultExtraInfo) => void;
+  onTextureDetectionResultUnitReceived?: (pResult: TextureDetectionResultUnit, info: IntermediateResultExtraInfo) => void;
+  onTextureRemovedGrayscaleImageUnitReceived?: (pResult: TextureRemovedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
+  onTextureRemovedBinaryImageUnitReceived?: (pResult: TextureRemovedBinaryImageUnit, info: IntermediateResultExtraInfo) => void;
+  onContoursUnitReceived?: (pResult: ContoursUnit, info: IntermediateResultExtraInfo) => void;
+  onLineSegmentsUnitReceived?: (pResult: LineSegmentsUnit, info: IntermediateResultExtraInfo) => void;
+  onTextZonesUnitReceived?: (pResult: TextZonesUnit, info: IntermediateResultExtraInfo) => void;
+  onTextRemovedBinaryImageUnitReceived?: (pResult: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo) => void;
+  onLongLinesUnitReceived?: (pResult: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo) => void;
+  onCornersUnitReceived?: (pResult: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo) => void;
+  onCandidateQuadEdgesUnitReceived?: (pResult: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo) => void;
+  onCandidateBarcodeZonesUnitReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
+  onScaledUpBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
+  onDeformationResistedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
+  onComplementedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
+}
 
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CIntermediateResultReceiver 
 ```
 
 ## Methods Summary
 
 | Method | Description |
 |--------|-------------|
-| [`GetObservedParameters`](#getobservedparameters) | Gets the types of intermediate result units that have been observed. |
-| [`OnTaskResultsReceived`](#ontaskresultsreceived) | Called when a task result has been received. |
-| [`OnPredetectedRegionsReceived`](#onpredetectedregionsreceived) | Called when predetected regions have been received. |
-| [`OnLocalizedBarcodesReceived`](#onlocalizedbarcodesreceived) | Called when localized barcodes have been received. |
-| [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | Called when decoded barcodes have been received. |
-| [`OnLocalizedTextLinesReceived`](#onlocalizedtextlinesreceived) | Called when localized text lines have been received. |
-| [`OnRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | Called when recognized text lines have been received. |
-| [`OnDetectedQuadsReceived`](#ondetectedquadsreceived) | Called when detected quadrilaterals have been received. |
-| [`OnNormalizedImagesReceived`](#onnormalizedimagesreceived) | Called when normalized images have been received. |
-| [`OnColourImageUnitReceived`](#oncolourimageunitreceived) | Called when colour image units have been received. |
-| [`OnScaledDownColourImageUnitReceived`](#onscaleddowncolourimageunitreceived) | Called when scaled down colour image units have been received. |
-| [`OnGrayscaleImageUnitReceived`](#ongrayscaleimageunitreceived) | Called when grayscale image units have been received. |
-| [`OnTransformedGrayscaleImageUnitReceived`](#ontransformedgrayscaleimageunitreceived) | Called when transformed grayscale image units have been received. |
-| [`OnEnhancedGrayscaleImageUnitReceived`](#onenhancedgrayscaleimageunitreceived) | Called when enhanced grayscale image units have been received. |
-| [`OnBinaryImageUnitReceived`](#onbinaryimageunitreceived) | Called when binary image units have been received. |
-| [`OnTextureDetectionResultUnitReceived`](#ontexturedetectionresultunitreceived) | Called when texture detection result units have been received. |
-| [`OnTextureRemovedGrayscaleImageUnitReceived`](#ontextureremovedgrayscaleimageunitreceived) | Called when texture removed grayscale image units have been received. |
-| [`OnTextureRemovedBinaryImageUnitReceived`](#ontextureremovedbinaryimageunitreceived) | Called when texture removed binary image units have been received. |
-| [`OnContoursUnitReceived`](#oncontoursunitreceived) | Called when contour units have been received. |
-| [`OnLineSegmentsUnitReceived`](#onlinesegmentsunitreceived) | Called when line segment units have been received. |
-| [`OnTextZonesUnitReceived`](#ontextzonesunitreceived) | Called when text zone units have been received. |
-| [`OnTextRemovedBinaryImageUnitReceived`](#ontextremovedbinaryimageunitreceived) | Called when text removed binary image units have been received. |
-| [`OnLongLinesUnitReceived`](#onlonglinesunitreceived) | Called when long line units have been received. |
-| [`OnCornersUnitReceived`](#oncornersunitreceived) | Called when corner units have been received. |
-| [`OnCandidateQuadEdgesUnitReceived`](#oncandidatequadedgesunitreceived) | Called when candidate quadrilateral edge units have been received. |
-| [`OnCandidateBarcodeZonesUnitReceived`](#oncandidatebarcodezonesunitreceived) | Called when candidate barcode zone units have been received. |
-| [`OnScaledUpBarcodeImageUnitReceived`](#onscaledupbarcodeimageunitreceived) | Called when scaled up barcode image units have been received. |
-| [`OnDeformationResistedBarcodeImageUnitReceived`](#ondeformationresistedbarcodeimageunitreceived) | Called when deformation resisted barcode image units have been received. |
-| [`OnComplementedBarcodeImageUnitReceived`](#oncomplementedbarcodeimageunitreceived) | Called when complemented barcode image units have been received. |
+| [`getObservedParameters`](#getobservedparameters) | Gets the types of intermediate result units that have been observed. |
+| [`onTaskResultsReceived`](#ontaskresultsreceived) | Called when a task result has been received. |
+| [`onPredetectedRegionsReceived`](#onpredetectedregionsreceived) | Called when predetected regions have been received. |
+| [`onLocalizedBarcodesReceived`](#onlocalizedbarcodesreceived) | Called when localized barcodes have been received. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | Called when decoded barcodes have been received. |
+| [`onLocalizedTextLinesReceived`](#onlocalizedtextlinesreceived) | Called when localized text lines have been received. |
+| [`onRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | Called when recognized text lines have been received. |
+| [`onDetectedQuadsReceived`](#ondetectedquadsreceived) | Called when detected quadrilaterals have been received. |
+| [`onNormalizedImagesReceived`](#onnormalizedimagesreceived) | Called when normalized images have been received. |
+| [`onColourImageUnitReceived`](#oncolourimageunitreceived) | Called when colour image units have been received. |
+| [`onScaledDownColourImageUnitReceived`](#onscaleddowncolourimageunitreceived) | Called when scaled down colour image units have been received. |
+| [`onGrayscaleImageUnitReceived`](#ongrayscaleimageunitreceived) | Called when grayscale image units have been received. |
+| [`onTransformedGrayscaleImageUnitReceived`](#ontransformedgrayscaleimageunitreceived) | Called when transformed grayscale image units have been received. |
+| [`onEnhancedGrayscaleImageUnitReceived`](#onenhancedgrayscaleimageunitreceived) | Called when enhanced grayscale image units have been received. |
+| [`onBinaryImageUnitReceived`](#onbinaryimageunitreceived) | Called when binary image units have been received. |
+| [`onTextureDetectionResultUnitReceived`](#ontexturedetectionresultunitreceived) | Called when texture detection result units have been received. |
+| [`onTextureRemovedGrayscaleImageUnitReceived`](#ontextureremovedgrayscaleimageunitreceived) | Called when texture removed grayscale image units have been received. |
+| [`onTextureRemovedBinaryImageUnitReceived`](#ontextureremovedbinaryimageunitreceived) | Called when texture removed binary image units have been received. |
+| [`onContoursUnitReceived`](#oncontoursunitreceived) | Called when contour units have been received. |
+| [`onLineSegmentsUnitReceived`](#onlinesegmentsunitreceived) | Called when line segment units have been received. |
+| [`onTextZonesUnitReceived`](#ontextzonesunitreceived) | Called when text zone units have been received. |
+| [`onTextRemovedBinaryImageUnitReceived`](#ontextremovedbinaryimageunitreceived) | Called when text removed binary image units have been received. |
+| [`onLongLinesUnitReceived`](#onlonglinesunitreceived) | Called when long line units have been received. |
+| [`onCornersUnitReceived`](#oncornersunitreceived) | Called when corner units have been received. |
+| [`onCandidateQuadEdgesUnitReceived`](#oncandidatequadedgesunitreceived) | Called when candidate quadrilateral edge units have been received. |
+| [`onCandidateBarcodeZonesUnitReceived`](#oncandidatebarcodezonesunitreceived) | Called when candidate barcode zone units have been received. |
+| [`onScaledUpBarcodeImageUnitReceived`](#onscaledupbarcodeimageunitreceived) | Called when scaled up barcode image units have been received. |
+| [`onDeformationResistedBarcodeImageUnitReceived`](#ondeformationresistedbarcodeimageunitreceived) | Called when deformation resisted barcode image units have been received. |
+| [`onComplementedBarcodeImageUnitReceived`](#oncomplementedbarcodeimageunitreceived) | Called when complemented barcode image units have been received. |
 
-### GetObservedParameters
+### getObservedParameters
 
 Gets the observed parameters of the intermediate result receiver.
 
-```cpp
-CObservedParameters* GetObservedParameters()
+```js
+getObservationParameters: () => ObservationParameters;
 ```
 
 **Return value**
 
 Returns the object of CObservedParameters. The default parameters are to observe all intermediate result unit types and all tasks.
 
-### OnTaskResultsReceived
+### onTaskResultsReceived
 
 Called when a task result has been received.
 
-```cpp
-virtual void OnTaskResultsReceived(const CIntermediateResult *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTaskResultsReceived?: (pResult: IntermediateResult, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CIntermediateResult object that contains several result units.
+`pResult` The IntermediateResult object that contains several result units.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnPredetectedRegionsReceived
+### onPredetectedRegionsReceived
 
 Called when predetected regions have been received.
 
-```cpp
-virtual void OnPredetectedRegionsReceived(CPredetectedRegionsUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onPredetectedRegionsReceived?: (pResult: PredetectedRegionsUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CPredetectedRegionsUnit object that contains the result.
+`pResult` The PredetectedRegionsUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnLocalizedBarcodesReceived
+### onLocalizedBarcodesReceived
 
 Called when localized barcodes have been received.
 
-```cpp
-virtual void OnLocalizedBarcodesReceived(dbr::intermediate_results::CLocalizedBarcodesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onLocalizedBarcodesReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CLocalizedBarcodesUnit object that contains the result.
+`pResult` The LocalizedBarcodesUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnDecodedBarcodesReceived
+### onDecodedBarcodesReceived
 
 Called when decoded barcodes have been received.
 
-```cpp
-virtual void OnDecodedBarcodesReceived(dbr::intermediate_results::CDecodedBarcodesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onDecodedBarcodesReceived?: (pResult: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CDecodedBarcodesUnit object that contains the result.
+`pResult` The DecodedBarcodesUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`[info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnLocalizedTextLinesReceived
+### onLocalizedTextLinesReceived
 
 Called when localized text lines have been received.
 
-```cpp
-virtual void OnLocalizedTextLinesReceived(dlr::intermediate_results::CLocalizedTextLinesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onLocalizedTextLinesReceived?: (pResult: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CLocalizedTextLinesUnit object that contains the result.
+`pResult` The LocalizedTextLinesUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnRecognizedTextLinesReceived
+### onRecognizedTextLinesReceived
 
 Called when recognized text lines have been received.
 
-```cpp
-virtual void OnRecognizedTextLinesReceived(dlr::intermediate_results::CRecognizedTextLinesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onRecognizedTextLinesReceived?: (pResult: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CRecognizedTextLinesUnit object that contains the result.
+`pResult` The RecognizedTextLinesUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnDetectedQuadsReceived
+### onDetectedQuadsReceived
 
 Called when detected quadrilaterals have been received.
 
-```cpp
-virtual void OnDetectedQuadsReceived(ddn::intermediate_results::CDetectedQuadsUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onDetectedQuadsReceived?: (pResult: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CDetectedQuadsUnit object that contains the result.
+`pResult` The DetectedQuadsUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnNormalizedImagesReceived
+### onNormalizedImagesReceived
 
 Called when normalized images have been received.
 
-```cpp
-virtual void OnNormalizedImagesReceived(ddn::intermediate_results::CNormalizedImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onNormalizedImagesReceived?: (pResult: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the CNormalizedImageUnit object that contains the result.
+`pResult` The NormalizedImageUnit object that contains the result.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnColourImageUnitReceived
+### onColourImageUnitReceived
 
 Called when colour image units have been received.
 
-```cpp
-virtual void OnColourImageUnitReceived(CColourImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onColourImageUnitReceived?: (pResult: ColourImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received colour image unit.
+`pResult` The received colour image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnScaledDownColourImageUnitReceived
+### onScaledDownColourImageUnitReceived
 
 Handles the receipt of a scaled-down colour image unit.
 
-```cpp
-virtual void OnScaledDownColourImageUnitReceived(CScaledDownColourImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onScaledDownColourImageUnitReceived?: (pResult: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received scaled-down colour image unit.
+`pResult` The received scaled-down colour image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnGrayscaleImageUnitReceived
+### onGrayscaleImageUnitReceived
 
 Handles the receipt of a grayscale image unit.
 
-```cpp
-virtual void OnGrayscaleImageUnitReceived(CGrayscaleImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onGrayscaleImageUnitReceived?: (pResult: GrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received grayscale image unit.
+`pResult` The received grayscale image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnTransformedGrayscaleImageUnitReceived
+### onTransformedGrayscaleImageUnitReceived
 
 Handles the receipt of a transformed grayscale image unit.
 
-```cpp
-virtual void OnTransformedGrayscaleImageUnitReceived(CTransformedGrayscaleImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTransformedGrayscaleImageUnitReceived?: (pResult: TransformedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received transformed grayscale image unit.
+`pResult` The received transformed grayscale image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnEnhancedGrayscaleImageUnitReceived
+### onEnhancedGrayscaleImageUnitReceived
 
 Handles the receipt of an enhanced grayscale image unit.
 
-```cpp
-virtual void OnEnhancedGrayscaleImageUnitReceived(CEnhancedGrayscaleImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onEnhancedGrayscaleImageUnitReceived?: (pResult: EnhancedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received enhanced grayscale image unit.
+`pResult` The received enhanced grayscale image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnBinaryImageUnitReceived
+### onBinaryImageUnitReceived
 
 Handles the receipt of a binary image unit.
 
-```cpp
-virtual void OnBinaryImageUnitReceived(CBinaryImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onBinaryImageUnitReceived?: (pResult: BinaryImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received binary image unit.
+`pResult` The received binary image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnTextureDetectionResultUnitReceived
+### onTextureDetectionResultUnitReceived
 
 Handles the receipt of a texture detection result unit.
 
-```cpp
-virtual void OnTextureDetectionResultUnitReceived(CTextureDetectionResultUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTextureDetectionResultUnitReceived?: (pResult: TextureDetectionResultUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received texture detection result unit.
+`pResult` The received texture detection result unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnTextureRemovedGrayscaleImageUnitReceived
+### onTextureRemovedGrayscaleImageUnitReceived
 
 Handles the receipt of a texture-removed grayscale image unit.
 
-```cpp
-virtual void OnTextureRemovedGrayscaleImageUnitReceived(CTextureRemovedGrayscaleImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTextureRemovedGrayscaleImageUnitReceived?: (pResult: TextureRemovedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received texture-removed grayscale image unit.
+`pResult` The received texture-removed grayscale image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnTextureRemovedBinaryImageUnitReceived
+### onTextureRemovedBinaryImageUnitReceived
 
 Handles the receipt of a texture-removed binary image unit.
 
-```cpp
-virtual void OnTextureRemovedBinaryImageUnitReceived(CTextureRemovedBinaryImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTextureRemovedBinaryImageUnitReceived?: (pResult: TextureRemovedBinaryImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the received texture-removed binary image unit.
+`pResult` The received texture-removed binary image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnContoursUnitReceived
+### onContoursUnitReceived
 
 Handles the receipt of a contours unit.
 
-```cpp
-virtual void OnContoursUnitReceived(CContoursUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onContoursUnitReceived?: (pResult: ContoursUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the contours unit.
+`pResult` The contours unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnLineSegmentsUnitReceived
+### onLineSegmentsUnitReceived
 
 Called when a line segments unit is received.
 
-```cpp
-virtual void OnLineSegmentsUnitReceived(CLineSegmentsUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onLineSegmentsUnitReceived?: (pResult: LineSegmentsUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the line segments unit.
+`pResult` The line segments unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnTextZonesUnitReceived
+### onTextZonesUnitReceived
 
 Called when a text zones unit is received.
 
-```cpp
-virtual void OnTextZonesUnitReceived(CTextZonesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTextZonesUnitReceived?: (pResult: TextZonesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the text zones unit.
+`pResult` The text zones unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnTextRemovedBinaryImageUnitReceived
+### onTextRemovedBinaryImageUnitReceived
 
 Called when a text removed binary image unit is received.
 
-```cpp
-virtual void OnTextRemovedBinaryImageUnitReceived(CTextRemovedBinaryImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onTextRemovedBinaryImageUnitReceived?: (pResult: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the text removed binary image unit.
+`pResult` The text removed binary image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnLongLinesUnitReceived
+### onLongLinesUnitReceived
 
 Called when a long lines unit is received.
 
-```cpp
-virtual void OnLongLinesUnitReceived(ddn::intermediate_results::CLongLinesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onLongLinesUnitReceived?: (pResult: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the long lines unit.
+`pResult` The long lines unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnCornersUnitReceived
+### onCornersUnitReceived
 
 Called when a corners unit is received.
 
-```cpp
-virtual void OnCornersUnitReceived(ddn::intermediate_results::CCornersUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onCornersUnitReceived?: (pResult: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the corners unit.
+`pResult` The corners unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnCandidateQuadEdgesUnitReceived
+### onCandidateQuadEdgesUnitReceived
 
 Called when a candidate quad edges unit is received.
 
-```cpp
-virtual void OnCandidateQuadEdgesUnitReceived(ddn::intermediate_results::CCandidateQuadEdgesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onCandidateQuadEdgesUnitReceived?: (pResult: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the candidate quad edges unit.
+`pResult` The candidate quad edges unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnCandidateBarcodeZonesUnitReceived
+### onCandidateBarcodeZonesUnitReceived
 
 Called when a candidate barcode zones unit is received.
 
-```cpp
-virtual void OnCandidateBarcodeZonesUnitReceived(dbr::intermediate_results::CCandidateBarcodeZonesUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onCandidateBarcodeZonesUnitReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the candidate barcode zones unit.
+`pResult` The candidate barcode zones unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnScaledUpBarcodeImageUnitReceived
+### onScaledUpBarcodeImageUnitReceived
 
 Called when a scaled up barcode image unit is received.
 
-```cpp
-virtual void OnScaledUpBarcodeImageUnitReceived(dbr::intermediate_results::CScaledUpBarcodeImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onScaledUpBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the scaled up barcode image unit.
+`pResult` The scaled up barcode image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnDeformationResistedBarcodeImageUnitReceived
+### onDeformationResistedBarcodeImageUnitReceived
 
 Called when a deformation resisted barcode image unit is received.
 
-```cpp
-virtual void OnDeformationResistedBarcodeImageUnitReceived(dbr::intermediate_results::CDeformationResistedBarcodeImageUnit *pResult, const IntermediateResultExtraInfo* info)
+```js
+onDeformationResistedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the deformation resisted barcode image unit.
+`pResult` The deformation resisted barcode image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### OnComplementedBarcodeImageUnitReceived
+### onComplementedBarcodeImageUnitReceived
 
 Called when a complemented barcode image unit is received.
 
-```cpp
-virtual void OnComplementedBarcodeImageUnitReceived(dbr::intermediate_results::CComplementedBarcodeImageUnit *pResult，const IntermediateResultExtraInfo* info)
+```js
+onComplementedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
 **Parameters**
 
-`[in] pResult` A pointer to the complemented barcode image unit.
+`pResult` The complemented barcode image unit.
 
-`[in] info` A pointer to the IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.

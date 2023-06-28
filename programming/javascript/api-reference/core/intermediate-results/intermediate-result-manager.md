@@ -1,69 +1,70 @@
 ---
 layout: default-layout
-title: class CIntermediateResultManager - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CIntermediateResultManager in Dynamsoft Core Module.
-keywords: intermediate result manager, c++
+title: interface IntermediateResultManager - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface IntermediateResultManager in Dynamsoft Core Module.
+keywords: intermediate result manager, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CIntermediateResultManager
+# IntermediateResultManager
 
-The CIntermediateResultManager class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
+The IntermediateResultManager interface manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CIntermediateResultManager 
+```js
+export interface IntermediateResultManager {
+                addResultReceiver: (receiver: IntermediateResultReceiver) => void;
+                removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
+                getRawImage: (imageHashId: string) => Promise<Core.BasicStructures.DSImageData>;
+            }
 ```
 
 ## Methods Summary
 
 | Method | Description |
 |--------|-------------|
-| [`AddResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
-| [`RemoveResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
-| [`GetRawImage`](#getrawimage) | Gets the raw image data using an image hash id. |
+| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
+| [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
+| [`getRawImage`](#getrawimage) | Gets the raw image data using an image hash id. |
 
-### AddResultReceiver
+### addResultReceiver
 
 Adds an intermediate result receiver to the manager.
 
-```cpp
-virtual void AddResultReceiver(CIntermediateResultReceiver* receiver)
+```js
+addResultReceiver: (receiver: IntermediateResultReceiver) => void;
 ```
 
 **Parameters**
 
-`[in] receiver` The intermediate result receiver to add.
+`receiver` The intermediate result receiver to add.
 
-### RemoveResultReceiver
+### removeResultReceiver
 
 Removes an intermediate result receiver from the manager.
 
-```cpp
-virtual void RemoveResultReceiver(CIntermediateResultReceiver* receiver)
+```js
+removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
 ```
 
 **Parameters**
 
-`[in] receiver` The intermediate result receiver to remove.
+`receiver` The intermediate result receiver to remove.
 
-### GetRawImage
+### getRawImage
 
 Gets the raw image data using an image hash id.
 
-```cpp
-virtual CImageData* GetRawImage(const char* imageHashId)
+```js
+getRawImage: (imageHashId: string) => Promise<Core.BasicStructures.DSImageData>;
 ```
 
 **Parameters**
 
-`[in] imageHashId` The hash id of the image to retrieve.
+`imageHashId` The hash id of the image to retrieve.
 
 **Return value**
 
-Returns a pointer to the CImageData object containing the raw image data. You don't need to release the memory pointed to by the returned pointer.
+Returns a promise to the DSImageData object containing the raw image data.

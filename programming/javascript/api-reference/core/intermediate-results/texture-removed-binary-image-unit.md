@@ -1,39 +1,34 @@
 ---
 layout: default-layout
-title: class CTextureRemovedBinaryImageUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CTextureRemovedBinaryImageUnit in Dynamsoft Core Module.
-keywords: texture removed binary image, c++
+title: interface TextureRemovedBinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface TextureRemovedBinaryImageUnit in Dynamsoft Core Module.
+keywords: binary image, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CTextureRemovedBinaryImageUnit
+# TextureRemovedBinaryImageUnit
 
-The CTextureRemovedBinaryImageUnit class represents an intermediate result unit that stores binary image data with texture removed.
+The TextureRemovedBinaryImageUnit interface represents a binary image unit after removing texture.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CTextureRemovedBinaryImageUnit : public CIntermediateResultUnit 
+```js
+export interface TextureRemovedBinaryImageUnit extends IntermediateResultUnit {
+                imageData: Core.BasicStructures.DSImageData;
+            } 
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetImageData`](#getimagedata) | Gets the image data of the binary image with texture removed.|
+| [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
 
-### GetImageData
+### imageData
 
-Gets the image data of the binary image with texture removed.
+The texture-removed binary image data stored in the unit.
 
-```cpp
-virtual const CImageData* GetImageData() const
+```js
+imageData: Core.BasicStructures.DSImageData;
 ```
-
-**Return value**
-
-Returns a const pointer to CImageData object that represents the binary image with texture removed. You don't need to release the memory pointed to by the returned pointer.

@@ -1,76 +1,64 @@
 ---
 layout: default-layout
-title: struct IntermediateResultExtraInfo - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the struct IntermediateResultExtraInfo in Dynamsoft Core Module.
-keywords: intermediate result, c++
+title: interface IntermediateResultExtraInfo - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface IntermediateResultExtraInfo in Dynamsoft Core Module.
+keywords: intermediate result, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
 # IntermediateResultExtraInfo
 
-The IntermediateResultExtraInfo structure represents the extra information for generating an intermediate result unit.
+The IntermediateResultExtraInfo structure represents the extra information associated with an intermediate result. It includes properties such as the target ROI definition name, task name, section level result indicator, and section type.
 
 ## Definition
 
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-typedef struct IntermediateResultExtraInfo
-{
-    const char* targetROIDefName;
-    const char* taskName;
-    bool isSectionLevelResult;
-    SectionType sectionType;  
-    char reserved[64];
-}IntermediateResultExtraInfo;
+```js
+export interface IntermediateResultExtraInfo {
+                targetROIDefName: string;
+                taskName: string;
+                isSectionLevelResult: boolean;
+                sectionType: EnumSectionType;
+            };
 ```
 
 ## Attributes Summary
 
 | Attribute                                             | Type                                |
 | ----------------------------------------------------- | ----------------------------------- |
-| [`targetROIDefName`](#targetroidefname)               | *const char\**                      |
-| [`taskName`](#taskname)                               | *const char\**                      |
-| [`isSectionLevelResult`](#issectionlevelresult)       | *bool*                              |
-| [`sectionType`](#sectiontype)                         | *SectionType*                       |
-| [`reserved`](#reserved)                               | *char[64]*                          |
+| [`targetROIDefName`](#targetroidefname)               | *String*                            |
+| [`taskName`](#taskname)                               | *String*                            |
+| [`isSectionLevelResult`](#issectionlevelresult)       | *boolean*                           |
+| [`sectionType`](#sectiontype)                         | *EnumSectionType*                   |
 
 ### targetROIDefName
 
 Specifies the name of the TargetROIDef object that generates the intermediate result.
 
-```cpp
-const char* targetROIDefName
+```js
+targetROIDefName: string;
 ```
 
 ### taskName
 
 Specifies the name of the task that generates the intermediate result.
 
-```cpp
-const char* taskName
+```js
+taskName: string;
 ```
 
 ### isSectionLevelResult
 
-Specifies whether the intermediate result is section-level result.
+Specifies whether the intermediate result is a section-level result.
 
-```cpp
-bool isSectionLevelResult
+```js
+isSectionLevelResult: boolean;
 ```
 
 ### sectionType
 
 Specifies the SectionType that generates the intermediate result.
 
-```cpp
-SectionType sectionType
-```
-
-### reserved
-
-Reserved for future use.
-
-```cpp
-char reserved[64]
+```js
+sectionType: EnumSectionType;
 ```

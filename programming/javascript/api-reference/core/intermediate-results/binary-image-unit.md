@@ -1,39 +1,34 @@
 ---
 layout: default-layout
-title: class CBinaryImageUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CBinaryImageUnit in Dynamsoft Core Module.
-keywords: binary image, c++
+title: interface BinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface BinaryImageUnit in Dynamsoft Core Module.
+keywords: binary image, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CBinaryImageUnit
+# BinaryImageUnit
 
-The CBinaryImageUnit class represents a binary image unit that inherits from CIntermediateResultUnit. It inherits from the CIntermediateResultUnit class and stores binary image data.
+The BinaryImageUnit interface represents a binary image unit.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CBinaryImageUnit : public CIntermediateResultUnit 
+```js
+export interface BinaryImageUnit extends IntermediateResultUnit {
+                imageData: Core.BasicStructures.DSImageData;
+            } 
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetImageData`](#getimagedata) | Gets a pointer to the binary image data. |
+| [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
 
-### GetImageData
+### imageData
 
-Gets a pointer to the binary image data.
+The binary image data stored in the unit.
 
-```cpp
-virtual const CImageData* GetImageData() const
+```js
+imageData: Core.BasicStructures.DSImageData;
 ```
-
-**Return value**
-
-Returns a pointer to the CBinaryImageData object containing the binary image data. You don't need to release the memory pointed to by the returned pointer.

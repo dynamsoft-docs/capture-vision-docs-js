@@ -1,39 +1,34 @@
 ---
 layout: default-layout
-title: class CScaledDownColourImageUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CScaledDownColourImageUnit in Dynamsoft Core Module.
-keywords: scaled down colour image, c++
+title: interface ScaledDownColourImageUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface ScaledDownColourImageUnit in Dynamsoft Core Module.
+keywords: binary image, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CScaledDownColourImageUnit
+# ScaledDownColourImageUnit
 
-The CScaledDownColourImageUnit class represents an intermediate result unit that contains scaled down color image. It is derived from the CIntermediateResultUnit class.
+The ScaledDownColourImageUnit interface represents a colour image unit after scaling.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CScaledDownColourImageUnit : public CIntermediateResultUnit
+```js
+export interface ScaledDownColourImageUnit extends IntermediateResultUnit {
+                imageData: Core.BasicStructures.DSImageData;
+            } 
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetImageData`](#getimagedata) | Gets the image data of the unit.|
+| [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
 
-### GetImageData
+### imageData
 
-Gets the image data of the unit.
+The scaled down colour image data stored in the unit.
 
-```cpp
-virtual const CImageData* GetImageData() const
+```js
+imageData: Core.BasicStructures.DSImageData;
 ```
-
-**Return value**
-
-Returns a pointer to the CImageData object that contains the image data of the unit. You are not required to release the memory pointed to by the returned pointer.

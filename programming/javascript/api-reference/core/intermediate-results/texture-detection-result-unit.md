@@ -1,52 +1,44 @@
 ---
 layout: default-layout
-title: class CTextureDetectionResultUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CTextureDetectionResultUnit in Dynamsoft Core Module.
-keywords: texture detection result, c++
+title: interface TextureDetectionResultUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface TextureDetectionResultUnit in Dynamsoft Core Module.
+keywords: texture detection result, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CTextureDetectionResultUnit
+# TextureDetectionResultUnit
 
-The CTextureDetectionResultUnit class represents an intermediate result unit for texture detection. It is derived from the CIntermediateResultUnit class and contains the x-direction spacing and y-direction spacing of the texture stripes.
+The TextureDetectionResultUnit interface represents an intermediate result unit for texture detection.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CTextureDetectionResultUnit : public CIntermediateResultUnit 
+```js
+export interface TextureDetectionResultUnit extends IntermediateResultUnit {
+                xSpacing: number;
+                ySpacing: number;
+            }
 ```
 
 ## Methods Summary
 
-| Method               | Description |
+| Method               | Type |
 |----------------------|-------------|
-| [`GetXSpacing`](#getxspacing) | Gets x-direction spacing of the texture stripes. |
-| [`GetYSpacing`](#getyspacing) | Gets y-direction spacing of the texture stripes. |
+| [`xSpacing`](#xspacing) | number |
+| [`ySpacing`](#yspacing) | number |
 
-### GetXSpacing
+### xSpacing
 
-Gets x-direction spacing of the texture stripes.
+The x-direction spacing of the texture stripes.
 
-```cpp
-virtual int GetXSpacing() 
+```js
+xSpacing: number;
 ```
 
-**Return value**
+### ySpacing
 
-Returns the x-direction spacing of the texture stripes.
+The y-direction spacing of the texture stripes.
 
-### GetYSpacing
-
-Gets y-direction spacing of the texture stripes.
-
-```cpp
-virtual int GetYSpacing() 
+```js
+ySpacing: number;
 ```
-
-**Return value**
-
-Returns the y-direction spacing of the texture stripes.

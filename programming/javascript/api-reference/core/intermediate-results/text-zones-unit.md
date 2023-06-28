@@ -1,60 +1,34 @@
 ---
 layout: default-layout
-title: class CTextZonesUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CTextZonesUnit in Dynamsoft Core Module.
-keywords: text zones, c++
+title: interface TextZonesUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface TextZonesUnit in Dynamsoft Core Module.
+keywords: text zones, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CTextZonesUnit
+# TextZonesUnit
 
-The CTextZonesUnit class represents a unit that contains text zones. It is derived from CIntermediateResultUnit class and provides methods to retrieve the count and details of text zones.
+The TextZonesUnit interface represents a unit that contains text zones.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CTextZonesUnit : public CIntermediateResultUnit
+```js
+export interface TextZonesUnit extends IntermediateResultUnit {
+                textZones: Array<Core.BasicStructures.Quadrilateral>;
+            }
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetCount`](#getcount) | Gets the number of text zones.|
-| [`GetTextZone`](#gettextzone) | Gets the quadrilateral shape of the text zone at the specified index.|
+| [`textZones`](#textzones) | *Array<Core.BasicStructures.Quadrilateral>* |
 
-### GetCount
+### textZones
 
-Gets the number of text zones in the unit.
+An array of Quadrilateral objects representing the text zones in the unit.
 
-```cpp
-virtual int GetCount() const
+```js
+textZones: Array<Core.BasicStructures.Quadrilateral>;
 ```
-
-**Return value**
-
-Returns the number of text zones in the unit.
-
-### GetTextZone
-
-Gets the quadrilateral shape of the text zone at the specified index.
-
-```cpp
-virtual int GetTextZone(int index, CQuadrilateral* quad) const
-```
-
-**Parameters**
-
-`[in] index` The index of the text zone.
-
-`[in, out] quad` A pointer to a CQuadrilateral object to receive the quadrilateral shape of the text zone.
-
-**Return value**
-
-Returns 0 if the operation succeeds, or a nonzero error code if the operation fails.
-
-Note: The caller of this method is responsible for allocating memory for the `quad` pointer.

@@ -1,67 +1,54 @@
 ---
 layout: default-layout
-title: class CRegionObjectElement - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CRegionObjectElement in Dynamsoft Core Module.
-keywords: region object element, c++
+title: interface RegionObjectElement - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface RegionObjectElement in Dynamsoft Core Module.
+keywords: region object element, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CRegionObjectElement
+# RegionObjectElement
 
-The CRegionObjectElement class represents an element of a region object in 2D space. It is an abstract class that provides the interface for region object elements.
+The RegionObjectElement interface represents an element of a region object in 2D space. It is an abstract interface that provides the interface for region object elements.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CRegionObjectElement 
+```js
+export interface RegionObjectElement {
+                location: Core.BasicStructures.Quadrilateral;
+                referencedElement: RegionObjectElement;
+                type: EnumRegionObjectElementType;
+            }
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetLocation`](#getlocation) | Get the location of the region object element. |
-| [`GetReferencedElement`](#getreferencedelement) | Get a pointer to a referenced region object element. |
-| [`GetElementType`](#getelementtype) | Get the type of the region object element. |
+| [`location`](#location) | *Core.BasicStructures.Quadrilateral* |
+| [`referencedElement`](#referencedelement) | *RegionObjectElement* |
+| [`type`](#type) | *EnumRegionObjectElementType* |
 
-### GetLocation
+### location
 
-Get the location of the region object element.
+The location of the region object element.
 
-```cpp
-CQuadrilateral GetLocation() const
+```js
+location: Core.BasicStructures.Quadrilateral;
 ```
 
-**Return value**
+### referencedElement
 
-Returns a CQuadrilateral object which represents the location of the region object element.
+A referenced region object element.
 
-### GetReferencedElement
-
-Get a pointer to a referenced region object element.
-
-```cpp
-const CRegionObjectElement* GetReferencedElement() const
+```js
+referencedElement: RegionObjectElement;
 ```
 
-**Return value**
-
-Returns a const pointer to a referenced CRegionObjectElement object.
-
-### GetElementType
+### type
 
 Get the type of the region object element.
 
-```cpp
-RegionObjectElementType GetElementType() const
+```js
+type: EnumRegionObjectElementType;
 ```
-
-**Return value**
-
-Returns a RegionObjectElementType enum value which represents the type of the region object element.
-
-

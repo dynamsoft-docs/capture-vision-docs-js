@@ -1,39 +1,34 @@
 ---
 layout: default-layout
-title: class CPredetectedRegionElement - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CPredetectedRegionElement in Dynamsoft Core Module.
-keywords: predetected region element, c++
+title: interface PredetectedRegionElement - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interfaace PredetectedRegionElement in Dynamsoft Core Module.
+keywords: line segments, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CPredetectedRegionElement
+# PredetectedRegionElement
 
-The CPredetectedRegionElement class represents a region element that has been pre-detected in an image. It is a subclass of the CRegionObjectElement.
+The PredetectedRegionElement interface extends the RegionObjectElement interface and represents a predetected region element.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CPredetectedRegionElement : public CRegionObjectElement
+```js
+export interface PredetectedRegionElement extends RegionObjectElement {
+                modeName: string;
+}
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetModeName`](#getmodename) | Gets the name of the detection mode used to detect this region element. |
+| [`modeName`](#modename) | *String* |
 
-### GetModeName
+### modeName
 
-Gets the name of the detection mode used to detect this region element.
+Gets the specified region pre-detection mode name
 
-```cpp
-virtual const char* GetModeName() const;
+```js
+modeName: string;
 ```
-
-**Return value**
-
-Returns the name of the detection mode used to detect this region element.

@@ -1,39 +1,34 @@
 ---
 layout: default-layout
-title: class CEnhancedGrayscaleImageUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CEnhancedGrayscaleImageUnit in Dynamsoft Core Module.
-keywords: enhanced grayscale image, c++
+title: interface EnhancedGrayscaleImageUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface EnhancedGrayscaleImageUnit in Dynamsoft Core Module.
+keywords: binary image, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CEnhancedGrayscaleImageUnit
+# EnhancedGrayscaleImageUnit
 
-The CEnhancedGrayscaleImageUnit class represents an intermediate result unit that contains an enhanced grayscale image data. Gray enhancement methods include gray equalization, gray smoothing, gray sharpening and smoothing.
+The EnhancedGrayscaleImageUnit interface represents a unit that contains an enhanced grayscale image as part of intermediate results.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CEnhancedGrayscaleImageUnit  : public CIntermediateResultUnit
+```js
+export interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
+                imageData: Core.BasicStructures.DSImageData;
+            }
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetImageData`](#getimagedata) | Gets the enhanced grayscale image data.|
+| [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
 
-### GetImageData
+### imageData
 
-Gets the enhanced grayscale image data.
+The data of the enhanced grayscale image stored in the unit.
 
-```cpp
-virtual const CImageData* GetImageData() const
+```js
+imageData: Core.BasicStructures.DSImageData;
 ```
-
-**Return value**
-
-Returns a const pointer to the CImageData object that contains the enhanced grayscale image data. You don't need to release the memory pointed to by the returned pointer.

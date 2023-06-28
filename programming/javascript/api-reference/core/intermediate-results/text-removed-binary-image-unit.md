@@ -1,39 +1,34 @@
 ---
 layout: default-layout
-title: class CTextRemovedBinaryImageUnit - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CTextRemovedBinaryImageUnit in Dynamsoft Core Module.
-keywords: text removed binary image, c++
+title: interface TextRemovedBinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface TextRemovedBinaryImageUnit in Dynamsoft Core Module.
+keywords: binary image, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CTextRemovedBinaryImageUnit
+# TextRemovedBinaryImageUnit
 
-The CTextRemovedBinaryImageUnit class represents an intermediate result unit that contains a binary image with the text removed.
+The TextRemovedBinaryImageUnit interface represents a binary image unit after removing text.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CTextRemovedBinaryImageUnit : public CIntermediateResultUnit 
+```js
+export interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
+                imageData: Core.BasicStructures.DSImageData;
+            } 
 ```
 
-## Methods Summary
+## Attributes Summary
 
-| Method               | Description |
+| Attribute               | Type |
 |----------------------|-------------|
-| [`GetImageData`](#getimagedata) | Gets the binary image data with the text removed. |
+| [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
 
-### GetImageData
+### imageData
 
-Gets the binary image data with the text removed.
+The text-removed binary image data stored in the unit.
 
-```cpp
-virtual const CImageData* GetImageData() const;
+```js
+imageData: Core.BasicStructures.DSImageData;
 ```
-
-**Return value**
-
-Returns a pointer to the CImageData object that contains the binary image data with the text removed. You don't need to release the memory pointed to by the returned pointer.

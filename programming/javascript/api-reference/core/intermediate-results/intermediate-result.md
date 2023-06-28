@@ -1,56 +1,35 @@
 ---
 layout: default-layout
-title: class CIntermediateResult - Dynamsoft Core Module C++ Edition API Reference
-description: This page shows the C++ edition of the class CIntermediateResult in Dynamsoft Core Module.
-keywords: task results, intermediate results, c++
+title: interface IntermediateResult - Dynamsoft Core Module JS Edition API Reference
+description: This page shows the JS edition of the interface IntermediateResult in Dynamsoft Core Module.
+keywords: task results, intermediate results, JS
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# CIntermediateResult
+# IntermediateResult
 
-The CIntermediateResult class represents a container containing a collection of CIntermediateResultUnit objects.
+The IntermediateResult interface represents a container containing a collection of IntermediateResultUnit objects.
 
 ## Definition
 
-*Namespace:* dynamsoft::intermediate_results
-
-*Assembly:* DynamsoftCore.dll
-
-```cpp
-class CIntermediateResult
+```js
+export interface IntermediateResult {
+                intermediateResultUnits: Array<IntermediateResultUnit>;
+            }
 ```
 
-## Methods
+## Attributes Summary
 
-| Method | Description |
+| Attribute | Type |
 |--------|-------------|
-| [`GetCount`](#getcount) | Gets the number of CIntermediateResultUnit objects in the collection. |
-| [`GetIntermediateResultUnit`](#getintermediateresultunit) | Gets a pointer to a specific CIntermediateResultUnit object in the collection. |
+| [`intermediateResultUnits`](#intermediateresultunits) | *Array<IntermediateResultUnit>* |
 
-### GetCount
 
-Gets the number of CIntermediateResultUnit objects in the collection.
+### intermediateResultUnits
 
-```cpp
-virtual int GetCount() const
+An Array containing a collection of IntermediateResultUnit objects.
+
+```js
+intermediateResultUnits: Array<IntermediateResultUnit>;
 ```
-
-**Return value**
-
-Returns the number of CIntermediateResultUnit objects in the collection.
-
-### GetIntermediateResultUnit
-
-Gets a pointer to a specific CIntermediateResultUnit object in the collection.
-
-```cpp
-virtual const CIntermediateResultUnit* GetIntermediateResultUnit(int index) const
-```
-
-**Parameters**
-
-`[in] index` The index of the CIntermediateResultUnit object to retrieve.
-
-**Return value**
-
-Returns a const pointer to the specified CIntermediateResultUnit object in the collection. You don't need to release the memory pointed to by the returned pointer.
