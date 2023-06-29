@@ -3,7 +3,7 @@ layout: default-layout
 title: Interface - LicenseVerificationListener - Dynamsoft Capture Vision JavaScript Edition API
 description: This page introduces the LicenseVerificationListener interface of Dynamsoft Capture Vision JavaScript Edition.
 keywords: LicenseVerificationListener, javascript, interface
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: LicenseVerificationListener
 permalink: /programming/javascript/api-reference/license/license-verification-listener.html
@@ -13,12 +13,24 @@ permalink: /programming/javascript/api-reference/license/license-verification-li
 
 Interface that helps check the license verification callback.
 
-## Attributes
+```js
+export interface LicenseVerificationListener {
+            onLicenseVerified?: (isSuccess: boolean, error: string) => void;
+        }
+```
 
-| Attribute                                 | Type                                          |
+## Method
+
+| Method                                 | Description                                          |
 | ----------------------------------------- | --------------------------------------------- |
-| [`onLicenseVerified`](#onlicenseverified) | *(isSuccess: boolean, error: string) => void* |
+| [`onLicenseVerified`](#onlicenseverified) | A callback function that is invoked after the license verification process is completed. |
 
 ### onLicenseVerified
 
 A callback function that is triggered when license verification finishes.
+
+**Parameters**
+
+`isSuccess`: A boolean value indicating whether the license verification was successful (true) or not (false).
+
+`error`: A string that provides an error message or additional information.
