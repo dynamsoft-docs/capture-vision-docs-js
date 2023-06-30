@@ -23,8 +23,8 @@ The APIs for this class are:
 | Method                                                              | Description                                                            |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | [`getDeviceUUID`](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
-| [`getVersion`](./license-manager.md#getversion)                       | Returns the version of the license module.                             |
-| [`initLicense`](./license-manager.md#getversion)                      | Initializes the license using a license key.                           |
+| [`DYNAMSOFT_LICENSE_VERSION`](./license-manager.md#dynamsoftlicenseversion)                       | Returns the version of the license module.                             |
+| [`initLicense`](./license-manager.md#initlicense)                      | Initializes the license using a license key.                           |
 | [`setDeviceFriendlyName`](./license-manager.md#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
 
 ## LicenseVerificationListener Interface
