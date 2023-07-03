@@ -2,7 +2,7 @@
 layout: default-layout
 title: Index - Dynamsoft Capture Vision JavaScript Edition
 description: The introduction of Dynamsoft Capture Vision JavaScript edition.
-keywords: API reference, index, JavaScript
+keywords: API reference, guide, JavaScript
 needAutoGenerateSidebar: true
 ---
 
