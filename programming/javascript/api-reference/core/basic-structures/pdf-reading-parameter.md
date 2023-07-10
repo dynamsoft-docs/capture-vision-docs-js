@@ -13,7 +13,7 @@ The PDFReadingParameter interface represents the parameters for reading a PDF fi
 
 ## Definition
 
-```js
+```ts
 export interface PDFReadingParameter {
                 mode: EnumPDFReadingMode;
                 dpi: number;

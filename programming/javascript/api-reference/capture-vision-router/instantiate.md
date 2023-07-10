@@ -18,15 +18,15 @@ permalink: /programming/javascript/api-reference/capture-vision-router/instantia
 | [isModuleLoaded()](#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
 | [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
 | [dispose()](#dispose)               | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed()](#disposed)             | Returns whether the `CaptureVisionRouter` object has been disposed of. |
+| [disposed](#disposed)               | Returns whether the `CaptureVisionRouter` object has been disposed of. |
 
 ## preLoadModule
 
-This method is used to load the required modules before using the router.
+Loads the specified module to speed up the initialization.
 
 **Syntax**
 
-```js
+```ts
 preLoadModule: (moduleName: string | Array<string>) => void
 ```
 
@@ -40,17 +40,17 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
 ```
 
 ## isModuleLoaded
 
-To checks if a specific module is loaded.
+Returns whether the specified module has been loaded.
 
 **Syntax**
 
-```js
+```ts
 isModuleLoaded: (moduleName: string) => boolean;
 ```
 
@@ -64,7 +64,7 @@ A boolean value that indicates whether the required module has been loaded.
 
 **Code Snippet**
 
-```js
+```ts
 if(router.isModuleLoaded("DBR")){
   // Use the router to perform a DBR job.
 } else {
@@ -78,7 +78,7 @@ Initializes a new instance of the `CaptureVisionRouter` class.
 
 **Syntax**
 
-```js
+```ts
 createInstance: () => Promise<CaptureVisionRouter>;
 ```
 
@@ -92,7 +92,7 @@ A promise that resolves to the initalized `CaptureVisionRouter` object.
 
 **Code Snippet**
 
-```js
+```ts
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 ```
 
@@ -102,7 +102,7 @@ Releases all resources used by the `CaptureVisionRouter` object.
 
 **Syntax**
 
-```js
+```ts
 dispose: () => void;
 ```
 
@@ -116,7 +116,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 // Use the router to perform a job.
 // ...
@@ -130,7 +130,7 @@ Returns whether the `CaptureVisionRouter` object has been disposed of.
 
 **Syntax**
 
-```js
+```ts
 disposed: boolean;
 ```
 
@@ -144,7 +144,7 @@ A boolean value that indicates whether the `CaptureVisionRouter` object has been
 
 **Code Snippet**
 
-```js
+```ts
 if(router.disposed){
   console.log("The router has been disposed of.");
 } else {

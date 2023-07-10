@@ -13,7 +13,7 @@ The IntermediateResult interface represents a container containing a collection 
 
 ## Definition
 
-```js
+```ts
 export interface IntermediateResult {
                 intermediateResultUnits: Array<IntermediateResultUnit>;
             }
@@ -30,6 +30,6 @@ export interface IntermediateResult {
 
 An Array containing a collection of IntermediateResultUnit objects.
 
-```js
+```ts
 intermediateResultUnits: Array<IntermediateResultUnit>;
 ```

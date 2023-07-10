@@ -13,7 +13,7 @@ The Contour class represents a contour in 2D space. It contains an array of Poin
 
 ## Definition
 
-```js
+```ts
 export interface Contour {
                 points: Array<Point>;
             }
@@ -29,6 +29,6 @@ export interface Contour {
 
 The point array of the contour.
 
-```js
+```ts
 points: Array<Point>;
 ```

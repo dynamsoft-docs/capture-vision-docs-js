@@ -13,7 +13,7 @@ The IntermediateResultExtraInfo structure represents the extra information assoc
 
 ## Definition
 
-```js
+```ts
 export interface IntermediateResultExtraInfo {
                 targetROIDefName: string;
                 taskName: string;
@@ -35,7 +35,7 @@ export interface IntermediateResultExtraInfo {
 
 Specifies the name of the TargetROIDef object that generates the intermediate result.
 
-```js
+```ts
 targetROIDefName: string;
 ```
 
@@ -43,7 +43,7 @@ targetROIDefName: string;
 
 Specifies the name of the task that generates the intermediate result.
 
-```js
+```ts
 taskName: string;
 ```
 
@@ -51,7 +51,7 @@ taskName: string;
 
 Specifies whether the intermediate result is a section-level result.
 
-```js
+```ts
 isSectionLevelResult: boolean;
 ```
 
@@ -59,6 +59,6 @@ isSectionLevelResult: boolean;
 
 Specifies the SectionType that generates the intermediate result.
 
-```js
+```ts
 sectionType: EnumSectionType;
 ```

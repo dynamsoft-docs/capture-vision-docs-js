@@ -13,7 +13,7 @@ The IntermediateResultUnit interface represents an intermediate result unit used
 
 ## Definition
 
-```js
+```ts
 export interface IntermediateResultUnit {
                 hashId: string;
                 sourceImageHashId: string;
@@ -37,7 +37,7 @@ export interface IntermediateResultUnit {
 
 The hash ID of the intermediate result unit.
 
-```js
+```ts
 hashId: string;
 ```
 
@@ -49,7 +49,7 @@ Returns the hash ID of the unit.
 
 The hash ID of the source image.
 
-```js
+```ts
 sourceImageHashId: string;
 ```
 
@@ -61,7 +61,7 @@ Returns the hash ID of the source image.
 
 The image tag of the source image.
 
-```js
+```ts
 sourceImageTag: Core.BasicStructures.ImageTag;
 ```
 
@@ -73,7 +73,7 @@ Returns the image tag of the source image.
 
 The transformation matrix from local to source image coordinates.
 
-```js
+```ts
 virtual void GetLocalToSourceImageTransformMatrix(double matrix[9]) const
 ```
 
@@ -81,6 +81,6 @@ virtual void GetLocalToSourceImageTransformMatrix(double matrix[9]) const
 
 The type of the intermediate result unit.
 
-```js
+```ts
 unitType: EnumIntermediateResultUnitType;
 ```

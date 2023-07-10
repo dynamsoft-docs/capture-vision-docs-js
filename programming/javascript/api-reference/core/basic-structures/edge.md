@@ -13,7 +13,7 @@ Edge is a structure composed of two Corner points in an image. A Corner represen
 
 ## Definition
 
-```js
+```ts
 export interface Edge {
                 startCorner: Corner;
                 endCorner: Corner;
@@ -31,7 +31,7 @@ export interface Edge {
 
 The start corner point of the edge.
 
-```js
+```ts
 startCorner: Corner;
 ```
 
@@ -39,6 +39,6 @@ startCorner: Corner;
 
 The end corner point of the edge.
 
-```js
+```ts
 endCorner: Corner;
 ```

@@ -20,7 +20,7 @@ The `CaptureStateListener` interface represents a listener for capture state cha
 
 **Syntax**
 
-```js
+```ts
 export interface CaptureStateListener {
             onCaptureStateChanged?: (state: EnumCaptureState) => void;
         }
@@ -36,7 +36,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 let csl = {
       onCaptureStateChanged(state) {
         console.log("run CaptureStateListener", state);

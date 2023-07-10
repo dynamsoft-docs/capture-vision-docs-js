@@ -12,7 +12,7 @@ The interface Rect represents a rectangle in 2D space. It contains four integer 
 
 ## Definition
 
-```js
+```ts
 export interface Rect {
                 x: number;
                 y: number;
@@ -36,7 +36,7 @@ export interface Rect {
 
 The x coordinate of the upper left corner point of the rectangle.
 
-```js
+```ts
 x: number,
 ```
 
@@ -44,7 +44,7 @@ x: number,
 
 The y coordinate of the upper left corner point of the rectangle.
 
-```js
+```ts
 y: number,
 ```
 
@@ -52,7 +52,7 @@ y: number,
 
 The width of the rectangle.
 
-```js
+```ts
 width: number,
 ```
 
@@ -60,7 +60,7 @@ width: number,
 
 The height of the rectangle.
 
-```js
+```ts
 height: number;
 ```
 
@@ -68,6 +68,6 @@ height: number;
 
 Whether to use a percentage measurement for this Rect.
 
-```js
+```ts
 isMeasuredInPercentage: boolean;
 ```

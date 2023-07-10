@@ -13,7 +13,7 @@ The interface Quadrilateral represents a quadrilateral shape defined by four poi
 
 ## Definition
 
-```js
+```ts
 export interface Quadrilateral {
                 points: [Point, Point, Point, Point];
             }
@@ -30,6 +30,6 @@ export interface Quadrilateral {
 
 The point array of the quadrilateral.
 
-```js
+```ts
 points: [Point, Point, Point, Point];
 ```

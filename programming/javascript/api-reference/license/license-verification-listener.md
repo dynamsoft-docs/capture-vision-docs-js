@@ -13,7 +13,7 @@ permalink: /programming/javascript/api-reference/license/license-verification-li
 
 Interface that helps check the license verification callback.
 
-```js
+```ts
 export interface LicenseVerificationListener {
             onLicenseVerified?: (isSuccess: boolean, error: string) => void;
         }

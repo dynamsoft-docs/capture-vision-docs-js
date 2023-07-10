@@ -13,7 +13,7 @@ The LicenseManager class provides a set of APIs to manage SDK licensing.
 
 ## Definition
 
-```js
+```ts
 export class LicenseManager {
             static DYNAMSOFT_LICENSE_VERSION: string = "3.0.0";
             static initLicense: (license: string) => Promise<LicenseVerificationListener>;
@@ -35,7 +35,7 @@ export class LicenseManager {
 
 A string represents the version of the license module.
 
-```js
+```ts
 static DYNAMSOFT_LICENSE_VERSION: string = "3.0.0";
 ```
 
@@ -43,7 +43,7 @@ static DYNAMSOFT_LICENSE_VERSION: string = "3.0.0";
 
 It is used to initialize the Dynamsoft license.
 
-```js
+```ts
 static initLicense: (license: string) => Promise<LicenseVerificationListener>;
 ```
 
@@ -59,7 +59,7 @@ Returns a promise that resolves to a `LicenseVerificationListener`. The `License
 
 It is used to set the friendly name for the device.
 
-```js
+```ts
 static setDeviceFriendlyName: (name: string) => void;
 ```
 
@@ -71,7 +71,7 @@ static setDeviceFriendlyName: (name: string) => void;
 
 It is used to get the Universally Unique Identifier (UUID) of the device.
 
-```js
+```ts
 static getDeviceUUID: () => string;
 ```
 

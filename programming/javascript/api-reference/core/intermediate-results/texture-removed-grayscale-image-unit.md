@@ -13,7 +13,7 @@ The TextureRemovedGrayscaleImageUnit interface represents a grayscale image unit
 
 ## Definition
 
-```js
+```ts
 export interface TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit {
                 imageData: Core.BasicStructures.DSImageData;
             } 
@@ -29,6 +29,6 @@ export interface TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit
 
 The texture-removed grayscale image data stored in the unit.
 
-```js
+```ts
 imageData: Core.BasicStructures.DSImageData;
 ```

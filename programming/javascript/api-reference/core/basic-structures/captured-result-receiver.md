@@ -15,7 +15,7 @@ The `CaptureResultReceiver` interface is responsible for receiving captured resu
 
 ## Definition
 
-```js
+```ts
 export interface CapturedResultReceiver {
   onCapturedResultReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
   onRawImageResultReceived?: (pResult: RawImageResultItem) => void;
@@ -43,7 +43,7 @@ export interface CapturedResultReceiver {
 
 Callback function for all captured results. It will be called once for each captured result.
 
-```js
+```ts
 onCapturedResultReceived?: (pResult: Core.BasicStructures.CapturedResult) => void;
 ```
 
@@ -55,7 +55,7 @@ onCapturedResultReceived?: (pResult: Core.BasicStructures.CapturedResult) => voi
 
 Callback function for raw image results. It will be called once for each raw image result.
 
-```js
+```ts
 onRawImageResultReceived?: (pResult: RawImageResultItem) => void;
 ```
 
@@ -67,7 +67,7 @@ onRawImageResultReceived?: (pResult: RawImageResultItem) => void;
 
 Callback function for decoded barcodes results. It will be called once for each decoded barcodes result.
 
-```js
+```ts
 onDecodedBarcodesReceived?: (pResult: DBR.DecodedBarcodesResult) => void;
 ```
 
@@ -79,7 +79,7 @@ onDecodedBarcodesReceived?: (pResult: DBR.DecodedBarcodesResult) => void;
 
 Callback function for recognized text lines results. It will be called once for each recognized text lines result.
 
-```js
+```ts
 onRecognizedTextLinesReceived?: (pResult: DLR.RecognizedTextLinesResult) => void;
 ```
 
@@ -91,7 +91,7 @@ onRecognizedTextLinesReceived?: (pResult: DLR.RecognizedTextLinesResult) => void
 
 Callback function for detected quads results. It will be called once for each detected quads result.
 
-```js
+```ts
 onDetectedQuadsReceived?: (pResult: DDN.DetectedQuadsResult) => void;
 ```
 
@@ -103,7 +103,7 @@ onDetectedQuadsReceived?: (pResult: DDN.DetectedQuadsResult) => void;
 
 Callback function for normalized images results. It will be called once for each normalized images result.
 
-```js
+```ts
 onNormalizedImagesReceived?: (pResult: DDN.NormalizedImagesResult) => void;
 ```
 
@@ -115,7 +115,7 @@ onNormalizedImagesReceived?: (pResult: DDN.NormalizedImagesResult) => void;
 
 Callback function for parsed results. It will be called once for each parsed result.
 
-```js
+```ts
 onParsedResultsReceived?: (pResult: DCP.ParsedResult) => void;
 ```
 

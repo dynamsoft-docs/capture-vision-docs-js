@@ -13,7 +13,7 @@ The PredetectedRegionsUnit interface represents a unit that contains a collectio
 
 ## Definition
 
-```js
+```ts
 export interface PredetectedRegionsUnit extends IntermediateResultUnit {
                 predetectedRegions: Array<PredetectedRegionElement>;
             }
@@ -30,6 +30,6 @@ export interface PredetectedRegionsUnit extends IntermediateResultUnit {
 
  An array of PredetectedRegionElement objects representing the predetected regions contained in the unit.
 
-```js
+```ts
 predetectedRegions: Array<PredetectedRegionElement>;
 ```

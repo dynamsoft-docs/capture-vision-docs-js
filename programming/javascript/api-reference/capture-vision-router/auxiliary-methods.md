@@ -22,7 +22,7 @@ Returns the version of the CaptureVisionRouter.
 
 **Syntax**
 
-```js
+```ts
 static getVersion: () => string;
 ```
 
@@ -36,7 +36,7 @@ Returns a string representing the version of the CaptureVisionRouter.
 
 **Code snippet**
 
-```js
+```ts
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const version = CaptureVisionRouter.getVersion();
 console.log(version);

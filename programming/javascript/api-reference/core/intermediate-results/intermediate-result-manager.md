@@ -13,7 +13,7 @@ The IntermediateResultManager interface manages intermediate results generated d
 
 ## Definition
 
-```js
+```ts
 export interface IntermediateResultManager {
                 addResultReceiver: (receiver: IntermediateResultReceiver) => void;
                 removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
@@ -33,7 +33,7 @@ export interface IntermediateResultManager {
 
 Adds an intermediate result receiver to the manager.
 
-```js
+```ts
 addResultReceiver: (receiver: IntermediateResultReceiver) => void;
 ```
 
@@ -45,7 +45,7 @@ addResultReceiver: (receiver: IntermediateResultReceiver) => void;
 
 Removes an intermediate result receiver from the manager.
 
-```js
+```ts
 removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
 ```
 
@@ -57,7 +57,7 @@ removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
 
 Gets the raw image data using an image hash id.
 
-```js
+```ts
 getRawImage: (imageHashId: string) => Promise<Core.BasicStructures.DSImageData>;
 ```
 

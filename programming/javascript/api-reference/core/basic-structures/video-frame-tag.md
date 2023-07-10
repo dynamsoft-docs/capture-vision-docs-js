@@ -13,7 +13,7 @@ The `VideoFrameTag` interface extends the `Core.BasicStructures.ImageTag` interf
 
 ## Definition
 
-```js
+```ts
 export interface VideoFrameTag extends Core.BasicStructures.ImageTag {
             isCropped: boolean;
             cropRegion: Core.BasicStructures.DSRect;
@@ -43,7 +43,7 @@ export interface VideoFrameTag extends Core.BasicStructures.ImageTag {
 
 Determines whether the video frame is cropped.
 
-```js
+```ts
 isCropped: boolean;
 ```
 
@@ -51,7 +51,7 @@ isCropped: boolean;
 
 A Core.BasicStructures.DSRect object representing the crop region of the video frame.
 
-```js
+```ts
 cropRegion: Core.BasicStructures.DSRect;
 ```
 
@@ -59,7 +59,7 @@ cropRegion: Core.BasicStructures.DSRect;
 
 Gets the original width of the video frame.
 
-```js
+```ts
 originalWidth: number;
 ```
 
@@ -67,7 +67,7 @@ originalWidth: number;
 
 Gets the original height of the video frame.
 
-```js
+```ts
 originalHeight: number;
 ```
 
@@ -75,7 +75,7 @@ originalHeight: number;
 
 The current width of the video frame after cropping.
 
-```js
+```ts
 currentWidth: number;
 ```
 
@@ -83,7 +83,7 @@ currentWidth: number;
 
 The current height of the video frame after cropping.
 
-```js
+```ts
 currentHeight: number;
 ```
 
@@ -91,7 +91,7 @@ currentHeight: number;
 
 The time spent on processing the video frame.
 
-```js
+```ts
 timeSpent: number;
 ```
 
@@ -99,6 +99,6 @@ timeSpent: number;
 
 The time stamp of the video frame.
 
-```js
+```ts
 timeStamp: number;
 ```

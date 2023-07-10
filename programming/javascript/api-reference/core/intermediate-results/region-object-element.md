@@ -13,7 +13,7 @@ The RegionObjectElement interface represents an element of a region object in 2D
 
 ## Definition
 
-```js
+```ts
 export interface RegionObjectElement {
                 location: Core.BasicStructures.Quadrilateral;
                 referencedElement: RegionObjectElement;
@@ -33,7 +33,7 @@ export interface RegionObjectElement {
 
 The location of the region object element.
 
-```js
+```ts
 location: Core.BasicStructures.Quadrilateral;
 ```
 
@@ -41,7 +41,7 @@ location: Core.BasicStructures.Quadrilateral;
 
 A referenced region object element.
 
-```js
+```ts
 referencedElement: RegionObjectElement;
 ```
 
@@ -49,6 +49,6 @@ referencedElement: RegionObjectElement;
 
 Get the type of the region object element.
 
-```js
+```ts
 type: EnumRegionObjectElementType;
 ```

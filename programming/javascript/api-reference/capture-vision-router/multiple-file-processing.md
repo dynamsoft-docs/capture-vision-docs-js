@@ -32,7 +32,7 @@ Sets the input image source for consecutive process.
 
 **Syntax**
 
-```js
+```ts
 setInput: (imageSource: Core.BasicStructures.ImageSourceAdapter) => void;
 ```
 
@@ -46,7 +46,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let view = await Dynamsoft.DCE.CameraView.createInstance();
 dce = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
@@ -59,7 +59,7 @@ Returns the current input image source of the CaptureVisionRouter.
 
 **Syntax**
 
-```js
+```ts
 getInput: () => Core.BasicStructures.ImageSourceAdapter;
 ```
 
@@ -73,7 +73,7 @@ Returns the current image source adapter object representing the input image sou
 
 **Code Snippet**
 
-```js
+```ts
 const imageSource = CaptureVisionRouter.getInput();
 ```
 
@@ -83,7 +83,7 @@ Adds an object that listens to the state changes of the capture process.
 
 **Syntax**
 
-```js
+```ts
 addCaptureStateListener: (listener: CaptureStateListener) => void;
 ```
 
@@ -97,7 +97,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
@@ -113,7 +113,7 @@ Removes an object which listens to the state changes of the capture process.
 
 **Syntax**
 
-```js
+```ts
 removeCaptureStateListener: (listener: CaptureStateListener) => void;
 ```
 
@@ -127,7 +127,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
@@ -143,7 +143,7 @@ Adds an object that listens to state changes of the image source.
 
 **Syntax**
 
-```js
+```ts
 addImageSourceStateListener: (listener: ImageSourceStateListener) => void;
 ```
 
@@ -157,7 +157,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let isasl = {
             onImageSourceStateListener(state) {
@@ -173,7 +173,7 @@ Removes an object which listens to state changes of the image source.
 
 **Syntax**
 
-```js
+```ts
 removeImageSourceStateListener: (listener: ImageSourceStateListener) => void;
 ```
 
@@ -187,7 +187,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let isasl = {
             onImageSourceStateListener(state) {
@@ -203,7 +203,7 @@ Adds an object as the receiver of captured results.
 
 **Syntax**
 
-```js
+```ts
 addResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => void;
 ```
 
@@ -217,7 +217,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
             onCapturedResultReceived(pResult) {
@@ -239,7 +239,7 @@ Removes an object which was added as a receiver of captured results.
 
 **Syntax**
 
-```js
+```ts
 removeResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => void;
 ```
 
@@ -253,7 +253,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
             onCapturedResultReceived(pResult) {
@@ -273,7 +273,7 @@ cvr.removeResultReceiver(crr);
 
 **Syntax**
 
-```js
+```ts
 addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => void;
 ```
 
@@ -287,7 +287,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.addResultReceiver(rf);
 ```
@@ -298,7 +298,7 @@ Starts to process images consecutively.
 
 **Syntax**
 
-```js
+```ts
 startCapturing: (templateName?: string) => void;
 ```
 
@@ -312,7 +312,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.startCapturing();
 ```
@@ -323,7 +323,7 @@ Stops the consecutive process.
 
 **Syntax**
 
-```js
+```ts
 stopCapturing: () => void;
 ```
 
@@ -337,7 +337,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.stopCapturing();
 ```

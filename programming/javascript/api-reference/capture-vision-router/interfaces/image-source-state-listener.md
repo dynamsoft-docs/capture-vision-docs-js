@@ -20,7 +20,7 @@ The `ImageSourceStateListener` interface represents a listener for capture state
 
 **Syntax**
 
-```js
+```ts
 export interface ImageSourceStateListener {
             onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
         }
@@ -36,7 +36,7 @@ None.
 
 **Code Snippet**
 
-```js
+```ts
 let issl = {
       onImageSourceStateListener(state) {
         console.log("run ImageSourceAdapterStatusListener", state);

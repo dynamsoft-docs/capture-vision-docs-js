@@ -13,7 +13,7 @@ The LineSegmentsUnit interface extends the IntermediateResultUnit interface and 
 
 ## Definition
 
-```js
+```ts
 export interface LineSegmentsUnit extends IntermediateResultUnit {
                 lineSegments: Array<Core.BasicStructures.LineSegment>;
             }
@@ -29,6 +29,6 @@ export interface LineSegmentsUnit extends IntermediateResultUnit {
 
 Gets the specified line segment from the collection.
 
-```js
+```ts
 lineSegments: Array<Core.BasicStructures.LineSegment>;
 ```

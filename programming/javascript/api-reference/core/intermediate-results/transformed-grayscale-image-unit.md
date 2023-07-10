@@ -13,7 +13,7 @@ The TransformedGrayscaleImageUnit interface represents a transformed grayscale i
 
 ## Definition
 
-```js
+```ts
 export interface TransformedGrayscaleImageUnit extends IntermediateResultUnit {
                 imageData: Core.BasicStructures.DSImageData;
             } 
@@ -29,6 +29,6 @@ export interface TransformedGrayscaleImageUnit extends IntermediateResultUnit {
 
 The transformed grayscale image data stored in the unit.
 
-```js
+```ts
 imageData: Core.BasicStructures.DSImageData;
 ```

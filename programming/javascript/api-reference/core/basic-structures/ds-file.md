@@ -13,7 +13,7 @@ The DSFile interface extends the File interface in JavaScript and provides an ad
 
 ## Definition
 
-```js
+```ts
 export interface DSFile extends File {
                 download: () => void;
             }
@@ -25,6 +25,6 @@ export interface DSFile extends File {
 
 Downloading a file in memory to the local drive via the browser.
 
-```js
+```ts
 download: () => void;
 ```

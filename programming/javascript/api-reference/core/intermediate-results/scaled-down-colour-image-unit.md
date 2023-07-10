@@ -13,7 +13,7 @@ The ScaledDownColourImageUnit interface represents a colour image unit after sca
 
 ## Definition
 
-```js
+```ts
 export interface ScaledDownColourImageUnit extends IntermediateResultUnit {
                 imageData: Core.BasicStructures.DSImageData;
             } 
@@ -29,6 +29,6 @@ export interface ScaledDownColourImageUnit extends IntermediateResultUnit {
 
 The scaled down colour image data stored in the unit.
 
-```js
+```ts
 imageData: Core.BasicStructures.DSImageData;
 ```

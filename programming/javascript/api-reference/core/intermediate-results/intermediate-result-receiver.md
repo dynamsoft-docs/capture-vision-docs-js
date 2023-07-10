@@ -13,7 +13,7 @@ The IntermediateResultReceiver interface is responsible for receiving intermedia
 
 ## Definition
 
-```js
+```ts
 export interface IntermediateResultReceiver {
   getObservationParameters: () => ObservationParameters;
   onTaskResultsReceived?: (pResult: IntermediateResult, info: IntermediateResultExtraInfo) => void;
@@ -86,7 +86,7 @@ export interface IntermediateResultReceiver {
 
 Gets the observed parameters of the intermediate result receiver.
 
-```js
+```ts
 getObservationParameters: () => ObservationParameters;
 ```
 
@@ -98,7 +98,7 @@ Returns the object of CObservedParameters. The default parameters are to observe
 
 Called when a task result has been received.
 
-```js
+```ts
 onTaskResultsReceived?: (pResult: IntermediateResult, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -112,7 +112,7 @@ onTaskResultsReceived?: (pResult: IntermediateResult, info: IntermediateResultEx
 
 Called when predetected regions have been received.
 
-```js
+```ts
 onPredetectedRegionsReceived?: (pResult: PredetectedRegionsUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -126,7 +126,7 @@ onPredetectedRegionsReceived?: (pResult: PredetectedRegionsUnit, info: Intermedi
 
 Called when localized barcodes have been received.
 
-```js
+```ts
 onLocalizedBarcodesReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -140,7 +140,7 @@ onLocalizedBarcodesReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodes
 
 Called when decoded barcodes have been received.
 
-```js
+```ts
 onDecodedBarcodesReceived?: (pResult: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -154,7 +154,7 @@ onDecodedBarcodesReceived?: (pResult: DBR.IntermediateResult.DecodedBarcodesUnit
 
 Called when localized text lines have been received.
 
-```js
+```ts
 onLocalizedTextLinesReceived?: (pResult: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -168,7 +168,7 @@ onLocalizedTextLinesReceived?: (pResult: DLR.IntermediateResult.LocalizedTextLin
 
 Called when recognized text lines have been received.
 
-```js
+```ts
 onRecognizedTextLinesReceived?: (pResult: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -182,7 +182,7 @@ onRecognizedTextLinesReceived?: (pResult: DLR.IntermediateResult.RecognizedTextL
 
 Called when detected quadrilaterals have been received.
 
-```js
+```ts
 onDetectedQuadsReceived?: (pResult: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -196,7 +196,7 @@ onDetectedQuadsReceived?: (pResult: DDN.IntermediateResult.DetectedQuadsUnit, in
 
 Called when normalized images have been received.
 
-```js
+```ts
 onNormalizedImagesReceived?: (pResult: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -210,7 +210,7 @@ onNormalizedImagesReceived?: (pResult: DDN.IntermediateResult.NormalizedImagesUn
 
 Called when colour image units have been received.
 
-```js
+```ts
 onColourImageUnitReceived?: (pResult: ColourImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -224,7 +224,7 @@ onColourImageUnitReceived?: (pResult: ColourImageUnit, info: IntermediateResultE
 
 Handles the receipt of a scaled-down colour image unit.
 
-```js
+```ts
 onScaledDownColourImageUnitReceived?: (pResult: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -238,7 +238,7 @@ onScaledDownColourImageUnitReceived?: (pResult: ScaledDownColourImageUnit, info:
 
 Handles the receipt of a grayscale image unit.
 
-```js
+```ts
 onGrayscaleImageUnitReceived?: (pResult: GrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -252,7 +252,7 @@ onGrayscaleImageUnitReceived?: (pResult: GrayscaleImageUnit, info: IntermediateR
 
 Handles the receipt of a transformed grayscale image unit.
 
-```js
+```ts
 onTransformedGrayscaleImageUnitReceived?: (pResult: TransformedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -266,7 +266,7 @@ onTransformedGrayscaleImageUnitReceived?: (pResult: TransformedGrayscaleImageUni
 
 Handles the receipt of an enhanced grayscale image unit.
 
-```js
+```ts
 onEnhancedGrayscaleImageUnitReceived?: (pResult: EnhancedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -280,7 +280,7 @@ onEnhancedGrayscaleImageUnitReceived?: (pResult: EnhancedGrayscaleImageUnit, inf
 
 Handles the receipt of a binary image unit.
 
-```js
+```ts
 onBinaryImageUnitReceived?: (pResult: BinaryImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -294,7 +294,7 @@ onBinaryImageUnitReceived?: (pResult: BinaryImageUnit, info: IntermediateResultE
 
 Handles the receipt of a texture detection result unit.
 
-```js
+```ts
 onTextureDetectionResultUnitReceived?: (pResult: TextureDetectionResultUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -308,7 +308,7 @@ onTextureDetectionResultUnitReceived?: (pResult: TextureDetectionResultUnit, inf
 
 Handles the receipt of a texture-removed grayscale image unit.
 
-```js
+```ts
 onTextureRemovedGrayscaleImageUnitReceived?: (pResult: TextureRemovedGrayscaleImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -322,7 +322,7 @@ onTextureRemovedGrayscaleImageUnitReceived?: (pResult: TextureRemovedGrayscaleIm
 
 Handles the receipt of a texture-removed binary image unit.
 
-```js
+```ts
 onTextureRemovedBinaryImageUnitReceived?: (pResult: TextureRemovedBinaryImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -336,7 +336,7 @@ onTextureRemovedBinaryImageUnitReceived?: (pResult: TextureRemovedBinaryImageUni
 
 Handles the receipt of a contours unit.
 
-```js
+```ts
 onContoursUnitReceived?: (pResult: ContoursUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -350,7 +350,7 @@ onContoursUnitReceived?: (pResult: ContoursUnit, info: IntermediateResultExtraIn
 
 Called when a line segments unit is received.
 
-```js
+```ts
 onLineSegmentsUnitReceived?: (pResult: LineSegmentsUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -364,7 +364,7 @@ onLineSegmentsUnitReceived?: (pResult: LineSegmentsUnit, info: IntermediateResul
 
 Called when a text zones unit is received.
 
-```js
+```ts
 onTextZonesUnitReceived?: (pResult: TextZonesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -378,7 +378,7 @@ onTextZonesUnitReceived?: (pResult: TextZonesUnit, info: IntermediateResultExtra
 
 Called when a text removed binary image unit is received.
 
-```js
+```ts
 onTextRemovedBinaryImageUnitReceived?: (pResult: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -392,7 +392,7 @@ onTextRemovedBinaryImageUnitReceived?: (pResult: TextRemovedBinaryImageUnit, inf
 
 Called when a long lines unit is received.
 
-```js
+```ts
 onLongLinesUnitReceived?: (pResult: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -406,7 +406,7 @@ onLongLinesUnitReceived?: (pResult: DDN.IntermediateResult.LongLinesUnit, info: 
 
 Called when a corners unit is received.
 
-```js
+```ts
 onCornersUnitReceived?: (pResult: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -420,7 +420,7 @@ onCornersUnitReceived?: (pResult: DDN.IntermediateResult.CornersUnit, info: Inte
 
 Called when a candidate quad edges unit is received.
 
-```js
+```ts
 onCandidateQuadEdgesUnitReceived?: (pResult: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -434,7 +434,7 @@ onCandidateQuadEdgesUnitReceived?: (pResult: DDN.IntermediateResult.CandidateQua
 
 Called when a candidate barcode zones unit is received.
 
-```js
+```ts
 onCandidateBarcodeZonesUnitReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -448,7 +448,7 @@ onCandidateBarcodeZonesUnitReceived?: (pResult: DBR.IntermediateResult.Localized
 
 Called when a scaled up barcode image unit is received.
 
-```js
+```ts
 onScaledUpBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -462,7 +462,7 @@ onScaledUpBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ScaledUpBa
 
 Called when a deformation resisted barcode image unit is received.
 
-```js
+```ts
 onDeformationResistedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 
@@ -476,7 +476,7 @@ onDeformationResistedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult
 
 Called when a complemented barcode image unit is received.
 
-```js
+```ts
 onComplementedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo) => void;
 ```
 

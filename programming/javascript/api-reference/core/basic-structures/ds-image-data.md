@@ -13,7 +13,7 @@ The DSImageData class represents image data, which contains the image bytes, wid
 
 ## Definition
 
-```js
+```ts
 export interface DSImageData {
                 bytes: Uint8Array;
                 width: number;
@@ -41,7 +41,7 @@ export interface DSImageData {
 
 Gets the image byte array.
 
-```js
+```ts
 bytes: Uint8Array;
 ```
 
@@ -49,7 +49,7 @@ bytes: Uint8Array;
 
 Gets the width of the image.
 
-```js
+```ts
 width: number;
 ```
 
@@ -57,7 +57,7 @@ width: number;
 
 Gets the height of the image.
 
-```js
+```ts
 height: number;
 ```
 
@@ -65,7 +65,7 @@ height: number;
 
 Gets the stride of the image.
 
-```js
+```ts
 stride: number;
 ```
 
@@ -73,7 +73,7 @@ stride: number;
 
 Gets the pixel format of the image.
 
-```js
+```ts
 format: Core.BasicStructures.EnumImagePixelFormat;
 ```
 
@@ -81,7 +81,7 @@ format: Core.BasicStructures.EnumImagePixelFormat;
 
 Gets the orientation of the image.
 
-```js
+```ts
 orientation?: number;
 ```
 
@@ -89,6 +89,6 @@ orientation?: number;
 
 Gets the tag of the image.
 
-```js
+```ts
 tag?: ImageTag;
 ```

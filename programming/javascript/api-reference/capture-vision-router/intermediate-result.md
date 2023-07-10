@@ -22,7 +22,7 @@ Returns an object that manages the saving and retrieval of intermediate results.
 
 **Syntax**
 
-```js
+```ts
 getIntermediateResultManager: () => Promise<Core.IntermediateResult.IntermediateResultManager>;
 ```
 
@@ -36,7 +36,7 @@ Returns a promise that resolves with an IntermediateResultManager object.
 
 **Code snippet**
 
-```js
+```ts
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const intermediateResultManager = await router.getIntermediateResultManager();
 // Use the intermediateResultManager to save and retrieve intermediate results

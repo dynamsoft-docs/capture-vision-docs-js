@@ -13,7 +13,7 @@ The interface ImageTag represents an image tag that can be attached to an image 
 
 ## Definition
 
-```js
+```ts
 export interface ImageTag {
                 imageId: number;
                 type: EnumImageTagType;
@@ -31,7 +31,7 @@ export interface ImageTag {
 
 The imageId attached to the image.
 
-```js
+```ts
 imageId: number;
 ```
 
@@ -39,6 +39,6 @@ imageId: number;
 
 The image tag type (image file or video frame) attached to the image.
 
-```js
+```ts
 type: EnumImageTagType;
 ```

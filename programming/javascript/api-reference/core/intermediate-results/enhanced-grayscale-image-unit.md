@@ -13,7 +13,7 @@ The EnhancedGrayscaleImageUnit interface represents a unit that contains an enha
 
 ## Definition
 
-```js
+```ts
 export interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
                 imageData: Core.BasicStructures.DSImageData;
             }
@@ -29,6 +29,6 @@ export interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
 
 The data of the enhanced grayscale image stored in the unit.
 
-```js
+```ts
 imageData: Core.BasicStructures.DSImageData;
 ```

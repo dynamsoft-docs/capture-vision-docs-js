@@ -12,7 +12,7 @@ noTitleIndex: true
 
 The `SimplifiedCaptureVisionSettings` interface represents a simplified configuration for the Capture Vision Router settings.
 
-```js
+```ts
 export interface SimplifiedCaptureVisionSettings {
             capturedResultItemTypes: Core.BasicStructures.EnumCapturedResultItemType;
             roi: Core.BasicStructures.Quadrilateral;
@@ -40,7 +40,7 @@ export interface SimplifiedCaptureVisionSettings {
 
 Specifies the types of captured items to be processed. It uses the EnumCapturedResultItemType enumeration from the Core.BasicStructures namespace.
 
-```js
+```ts
 capturedResultItemTypes: Core.BasicStructures.EnumCapturedResultItemType;
 ```
 
@@ -48,7 +48,7 @@ capturedResultItemTypes: Core.BasicStructures.EnumCapturedResultItemType;
 
  Represents the region of interest (ROI) as a quadrilateral. It defines the coordinates of the ROI.
 
-```js
+```ts
 roi: Core.BasicStructures.Quadrilateral;
 ```
 
@@ -56,7 +56,7 @@ roi: Core.BasicStructures.Quadrilateral;
 
 Indicates whether the ROI coordinates are measured in percentage values (true) or absolute pixel values (false).
 
-```js
+```ts
 roiMeasuredInPercentage: boolean;
 ```
 
@@ -64,7 +64,7 @@ roiMeasuredInPercentage: boolean;
 
 Specifies the maximum number of parallel tasks allowed during processing.
 
-```js
+```ts
 maxParallelTasks: number;
 ```
 
@@ -72,7 +72,7 @@ maxParallelTasks: number;
 
 Specifies the timeout duration for processing tasks.
 
-```js
+```ts
 timeout: number;
 ```
 
@@ -80,7 +80,7 @@ timeout: number;
 
 Represents the simplified settings for barcode recognition using the SimplifiedBarcodeReaderSettings interface from the DBR namespace.
 
-```js
+```ts
 barcodeSettings: DBR.SimplifiedBarcodeReaderSettings;
 ```
 
@@ -88,6 +88,6 @@ barcodeSettings: DBR.SimplifiedBarcodeReaderSettings;
 
 Represents the simplified settings for label recognition using the SimplifiedLabelRecognizerSettings interface from the DLR namespace.
 
-```js
+```ts
 labelSettings: DLR.SimplifiedLabelRecognizerSettings;
 ```

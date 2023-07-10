@@ -13,7 +13,7 @@ The TextureDetectionResultUnit interface represents an intermediate result unit 
 
 ## Definition
 
-```js
+```ts
 export interface TextureDetectionResultUnit extends IntermediateResultUnit {
                 xSpacing: number;
                 ySpacing: number;
@@ -31,7 +31,7 @@ export interface TextureDetectionResultUnit extends IntermediateResultUnit {
 
 The x-direction spacing of the texture stripes.
 
-```js
+```ts
 xSpacing: number;
 ```
 
@@ -39,6 +39,6 @@ xSpacing: number;
 
 The y-direction spacing of the texture stripes.
 
-```js
+```ts
 ySpacing: number;
 ```

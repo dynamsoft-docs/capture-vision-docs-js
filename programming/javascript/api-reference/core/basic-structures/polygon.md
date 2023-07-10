@@ -13,7 +13,7 @@ The interface Polygon represents a Polygon in 2D space. It contains of an array 
 
 ## Definition
 
-```js
+```ts
 export interface Polygon {
                 points: Array<Core.BasicStructures.Point>;
             }
@@ -29,6 +29,6 @@ export interface Polygon {
 
 An array that stores many points.
 
-```js
+```ts
 points: Array<Core.BasicStructures.Point>;
 ```

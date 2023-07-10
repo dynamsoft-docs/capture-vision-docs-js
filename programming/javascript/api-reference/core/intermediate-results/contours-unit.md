@@ -13,7 +13,7 @@ The ContoursUnit interface represents a unit that contains contours as part of i
 
 ## Definition
 
-```js
+```ts
 export interface ContoursUnit extends IntermediateResultUnit {
                 contours: Array<Core.BasicStructures.Contour>;
             }
@@ -29,6 +29,6 @@ export interface ContoursUnit extends IntermediateResultUnit {
 
 An array of contours stored in the unit.
 
-```js
+```ts
 contours: Array<Core.BasicStructures.Contour>;
 ```

@@ -13,7 +13,7 @@ The Arc class represents image data, which contains the image bytes, width, heig
 
 ## Definition
 
-```js
+```ts
 export interface Arc {
                 x: number;
                 y: number;
@@ -37,7 +37,7 @@ export interface Arc {
 
 The x-coordinate of the center point of the arc.
 
-```js
+```ts
 x: number;
 ```
 
@@ -45,7 +45,7 @@ x: number;
 
 The y-coordinate of the center point of the arc.
 
-```js
+```ts
 y: number;
 ```
 
@@ -53,7 +53,7 @@ y: number;
 
 The radius of the arc.
 
-```js
+```ts
 radius: number;
 ```
 
@@ -61,7 +61,7 @@ radius: number;
 
 The starting angle of the arc in radians.
 
-```js
+```ts
 startAngle: number;
 ```
 
@@ -69,6 +69,6 @@ startAngle: number;
 
 The ending angle of the arc in radians.
 
-```js
+```ts
 endAngle: number;
 ```
