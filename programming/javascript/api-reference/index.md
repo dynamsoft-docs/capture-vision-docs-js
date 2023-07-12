@@ -12,82 +12,84 @@ permalink: /programming/javascript/api-reference/
 
 # JavaScript API Reference
 
-In the Dynamsoft Capture Vision architecture, the following are the basic modules:
+In Dynamsoft Capture Vision architecture, the following are the basic modules:
 
-* Dynamsoft License
-* Capture Vision Router
-* Dynamsoft Core
+* **License**: handles the licensing of the software.
+* **Capture Vision Router**: manages the capturing process.
+* **Core**: provides basic interfaces that facilitate the capturing process.
 
 These docs help you learn and use their APIs in your application.
 
-## Dynamsoft License
+## License Module
 
-- [`LicenseManager`]({{ site.js_api }}license/licese-manager.html)
-- [`LicenseVerificationListener`]({{ site.js_api }}license/license-verification-listener.html)
+- [`LicenseManager`]({{ site.js_api }}license/licese-manager.html) Class
+- [`LicenseVerificationListener`]({{ site.js_api }}license/license-verification-listener.html) Interface
 
-## Capture Vision Router
+## Capture Vision Router Module
 
-- [`CaptureVisionRouter`]({{ site.js_api }}capture-vision-router/capture-vision-router.html)
-- [`CaptureStateListener`]({{ site.js_api }}capture-vision-router/interfaces/capture-state-listener.html)
-- [`ImageSourceStateListener`]({{ site.js_api }}capture-vision-router/interfaces/image-source-state-listener.html)
-- [`SimplifiedCaptureVisionSettings`]({{ site.js_api }}capture-vision-router/interfaces/simplified-capture-vision-settings.html)
+- [`CaptureVisionRouter`]({{ site.js_api }}capture-vision-router/capture-vision-router.html) Class
+- [`CaptureStateListener`]({{ site.js_api }}capture-vision-router/interfaces/capture-state-listener.html) Interface
+- [`ImageSourceStateListener`]({{ site.js_api }}capture-vision-router/interfaces/image-source-state-listener.html) Interface
+- [`SimplifiedCaptureVisionSettings`]({{ site.js_api }}capture-vision-router/interfaces/simplified-capture-vision-settings.html) Interface
 
-## Dynamsoft Core - Input
+## Core Module
 
-- [`ImageSourceAdapter`]({{ site.js_api }}core/basic-structures/image-source-adapter.html)
+### Input
 
-## Dynamsoft Core - BasicStructures
+- [`ImageSourceAdapter`]({{ site.js_api }}core/basic-structures/image-source-adapter.html) Class
 
-- [`Arc`]({{ site.js_api }}core/basic-structures/arc.html)
-- [`Contour`]({{ site.js_api }}core/basic-structures/contour.html)
-- [`Corner`]({{ site.js_api }}core/basic-structures/corner.html)
-- [`DSFile`]({{ site.js_api }}core/basic-structures/ds-file.html)
-- [`DSImageData`]({{ site.js_api }}core/basic-structures.html)
-- [`DSRect`]({{ site.js_api }}core/basic-structures/ds-image-data.html)
-- [`Edge`]({{ site.js_api }}core/basic-structures/edge.html)
-- [`FileImageTag`]({{ site.js_api }}core/basic-structures/file-image-tag.html)
-- [`ImageTag`]({{ site.js_api }}core/basic-structures/image-tag.html)
-- [`LineSegment`]({{ site.js_api }}core/basic-structures/line-segment.html)
-- [`PDFReadingParameter`]({{ site.js_api }}core/basic-structures/pdf-reading-parameter.html)
-- [`Point`]({{ site.js_api }}core/basic-structures/point.html)
-- [`Polygon`]({{ site.js_api }}core/basic-structures/polygon.html)
-- [`Quadrilateral`]({{ site.js_api }}core/basic-structures/quadrilateral.html)
-- [`Rect`]({{ site.js_api }}core/basic-structures/rect.html)
-- [`VideoFrameTag`]({{ site.js_api }}core/basic-structures/video-frame-tag.html)
+### Output
 
+- [`CapturedResultReceiver`]({{ site.js_api }}core/basic-structures/captured-result-receiver.html) Interface
+- [`CapturedResultFilter`]({{ site.js_api }}core/basic-structures/captured-result-filter.html) Interface
+- [`CapturedResult`]({{ site.js_api }}core/basic-structures/captured-result.html) Interface
+- [`CapturedResultItem`]({{ site.js_api }}core/basic-structures/captured-result-item.html) Interface
+- [`RawImageResultItem`]({{ site.js_api }}core/basic-structures/raw-image-result-item.html) Interface
 
-## Dynamsoft Core - IntermediateResults
+### BasicStructures
 
-- [`BinaryImageUnit`]({{ site.js_api }}core/intermediate-results/binary-image-unit.html)
-- [`ColourImageUnit`]({{ site.js_api }}core/intermediate-results/colour-image-unit.html)
-- [`ContoursUnit`]({{ site.js_api }}core/intermediate-results/contours-unit.html)
-- [`EnhancedGrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`GrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`IntermediateResultExtraInfo`]({{ site.js_api }}core/intermediate-results/intermediate-result-extra-info.html)
-- [`IntermediateResultManager`]({{ site.js_api }}core/intermediate-results/intermediate-result-manager.html)
-- [`IntermediateResultReceiver`]({{ site.js_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`IntermediateResultUnit`]({{ site.js_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`IntermediateResult`]({{ site.js_api }}core/intermediate-results/intermediate-result.html)
-- [`LineSegmentsUnit`]({{ site.js_api }}core/intermediate-results/line-segments-unit.html)
-- [`ObservationParameters`]({{ site.js_api }}core/intermediate-results/observation-parameters.html)
-- [`PredetectedRegionElement`]({{ site.js_api }}core/intermediate-results/predetected-region-element.html)
-- [`PredetectedRegionsUnit`]({{ site.js_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`RegionObjectElement`]({{ site.js_api }}core/intermediate-results/region-object-element.html)
-- [`ScaledDownColourImageUnit`]({{ site.js_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`TextRemovedBinaryImageUnit`]({{ site.js_api }}core/intermediate-results/text-removed-binary-image-unit.html)
-- [`TextZonesUnit`]({{ site.js_api }}core/intermediate-results/text-zones-unit.html)
-- [`TextureDetectionResultUnit`]({{ site.js_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`TextureRemovedBinaryImageUnit`]({{ site.js_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`TextureRemovedGrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`TransformedGrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+<!-- - [`Arc`]({{ site.js_api }}core/basic-structures/arc.html) -->
+- [`Contour`]({{ site.js_api }}core/basic-structures/contour.html) Interface
+- [`Corner`]({{ site.js_api }}core/basic-structures/corner.html) Interface
+- [`DSFile`]({{ site.js_api }}core/basic-structures/ds-file.html) Interface
+- [`DSImageData`]({{ site.js_api }}core/basic-structures.html) Interface
+- [`DSRect`]({{ site.js_api }}core/basic-structures/ds-image-data.html) Interface
+- [`Edge`]({{ site.js_api }}core/basic-structures/edge.html) Interface
+- [`FileImageTag`]({{ site.js_api }}core/basic-structures/file-image-tag.html) Interface
+- [`ImageTag`]({{ site.js_api }}core/basic-structures/image-tag.html) Interface
+- [`LineSegment`]({{ site.js_api }}core/basic-structures/line-segment.html) Interface
+- [`PDFReadingParameter`]({{ site.js_api }}core/basic-structures/pdf-reading-parameter.html) Interface
+- [`Point`]({{ site.js_api }}core/basic-structures/point.html) Interface
+- [`Polygon`]({{ site.js_api }}core/basic-structures/polygon.html) Interface
+- [`Quadrilateral`]({{ site.js_api }}core/basic-structures/quadrilateral.html) Interface
+- [`Rect`]({{ site.js_api }}core/basic-structures/rect.html) Interface
+- [`VideoFrameTag`]({{ site.js_api }}core/basic-structures/video-frame-tag.html) Interface
 
-## Dynamsoft Core - FinalResult
+### IntermediateResults
 
-- [`CapturedResult`]({{ site.js_api }}core/basic-structures/captured-result.html)
-- [`CapturedResultFilter`]({{ site.js_api }}core/basic-structures/captured-result-filter.html)
-- [`CapturedResultItem`]({{ site.js_api }}core/basic-structures/captured-result-item.html)
-- [`CapturedResultReceiver`]({{ site.js_api }}core/basic-structures/captured-result-receiver.html)
-- [`RawImageResultItem`]({{ site.js_api }}core/basic-structures/raw-image-result-item.html)
+- [`IntermediateResultManager`]({{ site.js_api }}core/intermediate-results/intermediate-result-manager.html) Class
+- [`BinaryImageUnit`]({{ site.js_api }}core/intermediate-results/binary-image-unit.html) Interface
+- [`ColourImageUnit`]({{ site.js_api }}core/intermediate-results/colour-image-unit.html) Interface
+- [`ContoursUnit`]({{ site.js_api }}core/intermediate-results/contours-unit.html) Interface
+- [`EnhancedGrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/enhanced-grayscale-image-unit.html) Interface
+- [`GrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/grayscale-image-unit.html) Interface
+- [`IntermediateResultExtraInfo`]({{ site.js_api }}core/intermediate-results/intermediate-result-extra-info.html) Interface
+- [`IntermediateResultReceiver`]({{ site.js_api }}core/intermediate-results/intermediate-result-receiver.html) Interface
+- [`IntermediateResultUnit`]({{ site.js_api }}core/intermediate-results/intermediate-result-unit.html) Interface
+- [`IntermediateResult`]({{ site.js_api }}core/intermediate-results/intermediate-result.html) Interface
+- [`LineSegmentsUnit`]({{ site.js_api }}core/intermediate-results/line-segments-unit.html) Interface
+- [`ObservationParameters`]({{ site.js_api }}core/intermediate-results/observation-parameters.html) Interface
+- [`PredetectedRegionElement`]({{ site.js_api }}core/intermediate-results/predetected-region-element.html) Interface
+- [`PredetectedRegionsUnit`]({{ site.js_api }}core/intermediate-results/predetected-regions-unit.html) Interface
+- [`RegionObjectElement`]({{ site.js_api }}core/intermediate-results/region-object-element.html) Interface
+- [`ScaledDownColourImageUnit`]({{ site.js_api }}core/intermediate-results/scaled-down-colour-image-unit.html) Interface
+- [`TextRemovedBinaryImageUnit`]({{ site.js_api }}core/intermediate-results/text-removed-binary-image-unit.html) Interface
+- [`TextZonesUnit`]({{ site.js_api }}core/intermediate-results/text-zones-unit.html) Interface
+- [`TextureDetectionResultUnit`]({{ site.js_api }}core/intermediate-results/texture-detection-result-unit.html) Interface
+- [`TextureRemovedBinaryImageUnit`]({{ site.js_api }}core/intermediate-results/texture-removed-binary-image-unit.html) Interface
+- [`TextureRemovedGrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html) Interface
+- [`TransformedGrayscaleImageUnit`]({{ site.js_api }}core/intermediate-results/transformed-grayscale-image-unit.html) Interface
+
 
 ## Enumerations
 
