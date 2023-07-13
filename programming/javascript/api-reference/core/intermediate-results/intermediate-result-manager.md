@@ -39,7 +39,7 @@ addResultReceiver: (receiver: IntermediateResultReceiver) => void;
 
 **Parameters**
 
-`receiver` The intermediate result receiver to add.
+`receiver`: The intermediate result receiver to add.
 
 ### removeResultReceiver
 
@@ -51,7 +51,7 @@ removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
 
 **Parameters**
 
-`receiver` The intermediate result receiver to remove.
+`receiver`: The intermediate result receiver to remove.
 
 ### getRawImage
 
@@ -63,7 +63,7 @@ getRawImage: (imageHashId: string) => Promise<Core.BasicStructures.DSImageData>;
 
 **Parameters**
 
-`imageHashId` The hash id of the image to retrieve.
+`imageHashId`: The hash id of the image to retrieve.
 
 **Return value**
 

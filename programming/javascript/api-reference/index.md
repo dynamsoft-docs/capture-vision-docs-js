@@ -48,7 +48,7 @@ These docs help you learn and use their APIs in your application.
 
 ### BasicStructures
 
-<!-- - [`Arc`]({{ site.js_api }}core/basic-structures/arc.html) -->
+- [`Arc`]({{ site.js_api }}core/basic-structures/arc.html) Interface
 - [`Contour`]({{ site.js_api }}core/basic-structures/contour.html) Interface
 - [`Corner`]({{ site.js_api }}core/basic-structures/corner.html) Interface
 - [`DSFile`]({{ site.js_api }}core/basic-structures/ds-file.html) Interface

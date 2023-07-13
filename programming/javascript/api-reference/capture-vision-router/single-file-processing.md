@@ -22,7 +22,7 @@ Process an image or file to derive important information.
 
 **Syntax**
 
-```typescript
+```ts
 capture: (imageOrFile: Core.BasicStructures.DSImageData | string | Blob, templateName?: string) => Promise<Array<Core.BasicStructures.CapturedResult>>;
 ```
 
@@ -30,7 +30,7 @@ capture: (imageOrFile: Core.BasicStructures.DSImageData | string | Blob, templat
 
 `imageOrFile`: specifies the image or file to be processed. It can be the image itself in the form of `DSImageData`, the path of the image/file or the file itself in the form of `blob`. A file could contain one or multiple images.
 
-`templateName`: specifies a [CaptureVisionTemplate](parameterFile/capture-vision-template.md) to use. If not specified, the default one is used.
+`templateName`: specifies a [CaptureVisionTemplate]({{site.parameterFile}}capture-vision-template.html) to use. If not specified, the default one is used.
 
 **Return value**
 
@@ -40,7 +40,7 @@ A promise that resolves to an array of `CapturedResult` objects which are the de
 
 ```ts
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let results = await router.catpure("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "Read-Barcodes");
+let results = await router.catpure("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "read-barcodes");
 let count = results.length;
 for(let i = 0; i < count; i++) {
     //...

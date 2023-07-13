@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing.html
 ---
 
-# Javascript API Reference - Consecutive Process
+# Javascript API Reference - Multiple File Processing
 
 | API Name                                                            | Description                                                                  |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------- |

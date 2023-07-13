@@ -85,7 +85,7 @@ addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
 
 **Parameters**
 
-`image` The image to add to the buffer.
+`image`: The image to add to the buffer.
 
 ### hasNextImageToFetch
 

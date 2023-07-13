@@ -18,7 +18,6 @@ export interface ObservationParameters {
                 setObservedResultUnitTypes: (types: number) => void;
                 getObservedResultUnitTypes: () => number;
                 isResultUnitTypeObserved: (type: EnumIntermediateResultUnitType) => boolean;
-
                 addObservedTask: (taskName) => void;
                 removeObservedTask: (taskName: string) => void;
                 isTaskObserved: (ctaskName: string) => boolean;
@@ -46,7 +45,7 @@ setObservedResultUnitTypes: (types: number) => void;
 
 **Parameters**
 
-`types` The observed types of intermediate result units.
+`types`: The observed types of intermediate result units.
 
 ### getObservedResultUnitTypes
 
@@ -82,7 +81,7 @@ addObservedTask: (taskName) => void;
 
 **Parameters**
 
-`taskName` The specified task name.
+`taskName`: The specified task name.
 
 ### removeObservedTask
 
@@ -94,7 +93,7 @@ removeObservedTask: (taskName: string) => void;
 
 **Parameters**
 
-`taskName` The specified task name.
+`taskName`: The specified task name.
 
 ### isTaskObserved
 
@@ -106,7 +105,7 @@ isTaskObserved: (taskName: string) => boolean;
 
 **Parameters**
 
-`taskName` The specified task name.
+`taskName`: The specified task name.
 
 **Return value**
 

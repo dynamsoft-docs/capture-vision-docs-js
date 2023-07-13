@@ -104,9 +104,9 @@ onTaskResultsReceived?: (pResult: IntermediateResult, info: IntermediateResultEx
 
 **Parameters**
 
-`pResult` The IntermediateResult object that contains several result units.
+`pResult`: The IntermediateResult object that contains several result units.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onPredetectedRegionsReceived
 
@@ -118,9 +118,9 @@ onPredetectedRegionsReceived?: (pResult: PredetectedRegionsUnit, info: Intermedi
 
 **Parameters**
 
-`pResult` The PredetectedRegionsUnit object that contains the result.
+`pResult`: The PredetectedRegionsUnit object that contains the result.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onLocalizedBarcodesReceived
 
@@ -132,9 +132,9 @@ onLocalizedBarcodesReceived?: (pResult: DBR.IntermediateResult.LocalizedBarcodes
 
 **Parameters**
 
-`pResult` The LocalizedBarcodesUnit object that contains the result.
+`pResult`: The LocalizedBarcodesUnit object that contains the result.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onDecodedBarcodesReceived
 
@@ -146,9 +146,9 @@ onDecodedBarcodesReceived?: (pResult: DBR.IntermediateResult.DecodedBarcodesUnit
 
 **Parameters**
 
-`pResult` The DecodedBarcodesUnit object that contains the result.
+`pResult`: The DecodedBarcodesUnit object that contains the result.
 
-`[info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onLocalizedTextLinesReceived
 
@@ -160,9 +160,9 @@ onLocalizedTextLinesReceived?: (pResult: DLR.IntermediateResult.LocalizedTextLin
 
 **Parameters**
 
-`pResult` The LocalizedTextLinesUnit object that contains the result.
+`pResult`: The LocalizedTextLinesUnit object that contains the result.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onRecognizedTextLinesReceived
 
@@ -174,9 +174,9 @@ onRecognizedTextLinesReceived?: (pResult: DLR.IntermediateResult.RecognizedTextL
 
 **Parameters**
 
-`pResult` The RecognizedTextLinesUnit object that contains the result.
+`pResult`: The RecognizedTextLinesUnit object that contains the result.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onDetectedQuadsReceived
 
@@ -188,9 +188,9 @@ onDetectedQuadsReceived?: (pResult: DDN.IntermediateResult.DetectedQuadsUnit, in
 
 **Parameters**
 
-`pResult` The DetectedQuadsUnit object that contains the result.
+`pResult`: The DetectedQuadsUnit object that contains the result.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onNormalizedImagesReceived
 
@@ -202,9 +202,9 @@ onNormalizedImagesReceived?: (pResult: DDN.IntermediateResult.NormalizedImagesUn
 
 **Parameters**
 
-`pResult` The NormalizedImageUnit object that contains the result.
+`pResult`: The NormalizedImageUnit object that contains the result.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onColourImageUnitReceived
 
@@ -216,9 +216,9 @@ onColourImageUnitReceived?: (pResult: ColourImageUnit, info: IntermediateResultE
 
 **Parameters**
 
-`pResult` The received colour image unit.
+`pResult`: The received colour image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onScaledDownColourImageUnitReceived
 
@@ -230,9 +230,9 @@ onScaledDownColourImageUnitReceived?: (pResult: ScaledDownColourImageUnit, info:
 
 **Parameters**
 
-`pResult` The received scaled-down colour image unit.
+`pResult`: The received scaled-down colour image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onGrayscaleImageUnitReceived
 
@@ -244,9 +244,9 @@ onGrayscaleImageUnitReceived?: (pResult: GrayscaleImageUnit, info: IntermediateR
 
 **Parameters**
 
-`pResult` The received grayscale image unit.
+`pResult`: The received grayscale image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onTransformedGrayscaleImageUnitReceived
 
@@ -258,9 +258,9 @@ onTransformedGrayscaleImageUnitReceived?: (pResult: TransformedGrayscaleImageUni
 
 **Parameters**
 
-`pResult` The received transformed grayscale image unit.
+`pResult`: The received transformed grayscale image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onEnhancedGrayscaleImageUnitReceived
 
@@ -272,9 +272,9 @@ onEnhancedGrayscaleImageUnitReceived?: (pResult: EnhancedGrayscaleImageUnit, inf
 
 **Parameters**
 
-`pResult` The received enhanced grayscale image unit.
+`pResult`: The received enhanced grayscale image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onBinaryImageUnitReceived
 
@@ -286,9 +286,9 @@ onBinaryImageUnitReceived?: (pResult: BinaryImageUnit, info: IntermediateResultE
 
 **Parameters**
 
-`pResult` The received binary image unit.
+`pResult`: The received binary image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onTextureDetectionResultUnitReceived
 
@@ -300,9 +300,9 @@ onTextureDetectionResultUnitReceived?: (pResult: TextureDetectionResultUnit, inf
 
 **Parameters**
 
-`pResult` The received texture detection result unit.
+`pResult`: The received texture detection result unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onTextureRemovedGrayscaleImageUnitReceived
 
@@ -314,9 +314,9 @@ onTextureRemovedGrayscaleImageUnitReceived?: (pResult: TextureRemovedGrayscaleIm
 
 **Parameters**
 
-`pResult` The received texture-removed grayscale image unit.
+`pResult`: The received texture-removed grayscale image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onTextureRemovedBinaryImageUnitReceived
 
@@ -328,9 +328,9 @@ onTextureRemovedBinaryImageUnitReceived?: (pResult: TextureRemovedBinaryImageUni
 
 **Parameters**
 
-`pResult` The received texture-removed binary image unit.
+`pResult`: The received texture-removed binary image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onContoursUnitReceived
 
@@ -342,9 +342,9 @@ onContoursUnitReceived?: (pResult: ContoursUnit, info: IntermediateResultExtraIn
 
 **Parameters**
 
-`pResult` The contours unit.
+`pResult`: The contours unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onLineSegmentsUnitReceived
 
@@ -356,9 +356,9 @@ onLineSegmentsUnitReceived?: (pResult: LineSegmentsUnit, info: IntermediateResul
 
 **Parameters**
 
-`pResult` The line segments unit.
+`pResult`: The line segments unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onTextZonesUnitReceived
 
@@ -370,9 +370,9 @@ onTextZonesUnitReceived?: (pResult: TextZonesUnit, info: IntermediateResultExtra
 
 **Parameters**
 
-`pResult` The text zones unit.
+`pResult`: The text zones unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onTextRemovedBinaryImageUnitReceived
 
@@ -384,9 +384,9 @@ onTextRemovedBinaryImageUnitReceived?: (pResult: TextRemovedBinaryImageUnit, inf
 
 **Parameters**
 
-`pResult` The text removed binary image unit.
+`pResult`: The text removed binary image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onLongLinesUnitReceived
 
@@ -398,9 +398,9 @@ onLongLinesUnitReceived?: (pResult: DDN.IntermediateResult.LongLinesUnit, info: 
 
 **Parameters**
 
-`pResult` The long lines unit.
+`pResult`: The long lines unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onCornersUnitReceived
 
@@ -412,9 +412,9 @@ onCornersUnitReceived?: (pResult: DDN.IntermediateResult.CornersUnit, info: Inte
 
 **Parameters**
 
-`pResult` The corners unit.
+`pResult`: The corners unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onCandidateQuadEdgesUnitReceived
 
@@ -426,9 +426,9 @@ onCandidateQuadEdgesUnitReceived?: (pResult: DDN.IntermediateResult.CandidateQua
 
 **Parameters**
 
-`pResult` The candidate quad edges unit.
+`pResult`: The candidate quad edges unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onCandidateBarcodeZonesUnitReceived
 
@@ -440,9 +440,9 @@ onCandidateBarcodeZonesUnitReceived?: (pResult: DBR.IntermediateResult.Localized
 
 **Parameters**
 
-`pResult` The candidate barcode zones unit.
+`pResult`: The candidate barcode zones unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onScaledUpBarcodeImageUnitReceived
 
@@ -454,9 +454,9 @@ onScaledUpBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.ScaledUpBa
 
 **Parameters**
 
-`pResult` The scaled up barcode image unit.
+`pResult`: The scaled up barcode image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onDeformationResistedBarcodeImageUnitReceived
 
@@ -468,9 +468,9 @@ onDeformationResistedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult
 
 **Parameters**
 
-`pResult` The deformation resisted barcode image unit.
+`pResult`: The deformation resisted barcode image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
 ### onComplementedBarcodeImageUnitReceived
 
@@ -482,6 +482,6 @@ onComplementedBarcodeImageUnitReceived?: (pResult: DBR.IntermediateResult.Comple
 
 **Parameters**
 
-`pResult` The complemented barcode image unit.
+`pResult`: The complemented barcode image unit.
 
-`info` The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
+`info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
