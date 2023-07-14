@@ -94,6 +94,7 @@ getSimplifiedSettings: (templateName: string) => Promise<SimplifiedCaptureVision
 **Return Value**
 
 Returns a promise that resolves with a SimplifiedCaptureVisionSettings object representing the simplified settings for the specified template.
+
 > Remarks: If the underlying CaptureSettings is too complicated, we cannot construct a Simplified CaptureSettings in which case it returns null.
 
 **Code Snippet**
