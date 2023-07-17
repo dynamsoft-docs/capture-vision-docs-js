@@ -14,10 +14,10 @@ permalink: /programming/javascript/api-reference/capture-vision-router/settings.
 
 | API Name                                          | Description                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [initSettings()](#initsettings)                   | Initializes settings with either a file or a string.                                                          |
-| [outputSettings](#outputsettings)                 | Outputs a `CaptureVisionTemplate` specified by its name.                                                      |
+| [initSettings()](#initsettings)                   | Initializes a specific settings. Settings can either be a JSON string or a url to a JSON file.                |
+| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                      |
 | [getSimplifiedSettings()](#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`.      |
-| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
+| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.         |
 | [resetSettings()](#resetsettings)                 | Resets settings to factory default.                                                                           |
 
 
@@ -32,6 +32,7 @@ initSettings: (settings: string) => Promise<void>;
 ```
 
 **Parameters**
+
 
 `settings`: A JSON string containing the configuration settings for the CaptureVisionRouter.
 
@@ -133,6 +134,7 @@ const newSettings=`{
 }`;
 await router.updateSettings('myTemplate',newSettings);
 ```
+
 > Note: The updateSettings method allows you to update a template's settings with new values. It is specifically designed for fast configuration of the image processing process, with certain limitations:
 
 > 1. There can only be one target region of interest (ROI), typically the input image itself.
@@ -163,4 +165,5 @@ Returns a promise that resolves when the settings have been successfully reset t
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 await router.resetSettings();
 ```
+
 > Note: The resetSettings method allows you to reset all settings of the CaptureVisionRouter instance to their default values. This can be useful when you want to start with a clean slate and remove any custom configurations. It is important to note that the default values may vary depending on the specific edition, such as the JavaScript edition, which may have slightly different defaults compared to other editions like C++.

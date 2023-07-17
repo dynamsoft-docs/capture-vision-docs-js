@@ -14,7 +14,7 @@ permalink: /programming/javascript/api-reference/capture-vision-router/intermedi
 
 | API Name                                                      | Description                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------- |
-| [GetIntermediateResultManager()](#getintermediateresultmanager) | Returns an `CIntermediateResultManager` object.           |
+| [getIntermediateResultManager()](#getintermediateresultmanager) | Returns an `CIntermediateResultManager` object.           |
 
 ## GetIntermediateResultManager
 
