@@ -12,19 +12,19 @@ permalink: /programming/javascript/api-reference/capture-vision-router/multiple-
 
 # Javascript API Reference - Multiple File Processing
 
-| API Name                                                            | Description                                                                  |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [setInput()](#setinput)                                             | Sets an image source to provide images for consecutive process.              |
-| [getInput()](#getinput)                                             | Sets an image source to provide images for consecutive process.              |
-| [addCaptureStateListener()](#addcapturestatelistener)               | Adds an object that listens to the state changes of the capture process.     |
-| [removeCaptureStateListener()](#removecapturestatelistener)         | Removes an object which listens to the state changes of the capture process. |
-| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.            |
-| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.        |
-| [addResultReceiver()](#addresultreceiver)                           | Adds an object as the receiver of captured results.                          |
-| [removeResultReceiver()](#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.         |
-| [addResultFilter()](#addresultfilter)                               | Removes an object which was added as a receiver of captured results.         |
-| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                      |
-| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                               |
+| API Name                                                            | Description                                                                     |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [setInput()](#setinput)                                             | Sets an image source to provide images for consecutive process.                 |
+| [getInput()](#getinput)                                             | Gets an image source to provide images for consecutive process.                 |
+| [addCaptureStateListener()](#addcapturestatelistener)               | Adds an object that listens to the state changes of the capture process.        |
+| [removeCaptureStateListener()](#removecapturestatelistener)         | Removes an object which listens to the state changes of the capture process.    |
+| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.               |
+| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.           |
+| [addResultReceiver()](#addresultreceiver)                           | Adds an object as the receiver of captured results.                             |
+| [removeResultReceiver()](#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.            |
+| [addResultFilter()](#addresultfilter)                               | Adds a result filter to the capture process for filtering non-essential results.|
+| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                         |
+| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                  |
 
 ## setInput
 
@@ -223,11 +223,7 @@ let crr = {
             onCapturedResultReceived(pResult) {
                 console.log(pResult);
             },
-            onRawImageResultReceived(pResult) {
-                console.log(pResult);
-            },
             onDecodedBarcodesReceived(pResult) {
-                console.log(pResult);
             }
         };
 cvr.addResultReceiver(crr);
@@ -259,13 +255,11 @@ let crr = {
             onCapturedResultReceived(pResult) {
                 console.log(pResult);
             },
-            onRawImageResultReceived(pResult) {
-                console.log(pResult);
-            },
             onDecodedBarcodesReceived(pResult) {
                 console.log(pResult);
             }
         };
+cvr.addResultReceiver(crr);
 cvr.removeResultReceiver(crr);
 ```
 
@@ -274,7 +268,7 @@ cvr.removeResultReceiver(crr);
 **Syntax**
 
 ```ts
-addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => void;
+addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => Promise<void>;
 ```
 
 **parameter**
@@ -283,7 +277,7 @@ addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => void;
 
 **Return Value**
 
-None.
+Returns a promise that resolves when the result filter have been successfully added.
 
 **Code Snippet**
 
