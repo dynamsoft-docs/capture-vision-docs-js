@@ -34,6 +34,7 @@ None.
 
 Returns a string representing the version of the CaptureVisionRouter.
 
+
 **Code snippet**
 
 ```ts

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: class LicenseManger - Dynamsoft License Module JS Edition API Reference
-description: This page shows the JS edition of the class LicenseManger in Dynamsoft License Module.
+title: class LicenseManager - Dynamsoft License Module JS Edition API Reference
+description: This page shows the JS edition of the class LicenseManager in Dynamsoft License Module.
 keywords: license manager, JS
 needAutoGenerateSidebar: true
 noTitleIndex: true
