@@ -27,7 +27,7 @@ Initializes the Runtime Settings with the settings in the given JSON string.
 
 **Syntax**
 
-```ts
+```typescript
 initSettings: (settings: string) => Promise<void>;
 ```
 
@@ -40,9 +40,9 @@ initSettings: (settings: string) => Promise<void>;
 
 Returns a promise that resolves when the settings have been successfully initialized.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const settings = `{
   "templateName": "myTemplate",
@@ -58,7 +58,7 @@ Returns the settings of the CaptureVisionRouter as a JSON string.
 
 **Syntax**
 
-```ts
+```typescript
 outputSettings: (templateName?: string) => Promise<string>;
 ```
 
@@ -70,9 +70,9 @@ outputSettings: (templateName?: string) => Promise<string>;
 
 Returns a promise that resolves with the JSON string representing the settings.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const settings = await router.outputSettings();
 console.log(settings);
@@ -84,7 +84,7 @@ Retrieves the simplified settings for a specific template from the CaptureVision
 
 **Syntax**
 
-```ts
+```typescript
 getSimplifiedSettings: (templateName: string) => Promise<SimplifiedCaptureVisionSettings | null>;
 ```
 
@@ -98,9 +98,9 @@ Returns a promise that resolves with a SimplifiedCaptureVisionSettings object re
 
 > Remarks: If the underlying CaptureSettings is too complicated, we cannot construct a Simplified CaptureSettings in which case it returns null.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 settings = await router.getSimplifiedSettings();
 ```
@@ -111,7 +111,7 @@ Updates a few key settings of a template with new values.
 
 **Syntax**
 
-```ts
+```typescript
 updateSettings: (templateName: string, settings: SimplifiedCaptureVisionSettings) => Promise<void>;
 ```
 
@@ -124,9 +124,9 @@ updateSettings: (templateName: string, settings: SimplifiedCaptureVisionSettings
 
 Returns a promise that resolves when the template settings have been successfully updated.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const newSettings=`{
   "templateName": "myTemplate",
@@ -147,7 +147,7 @@ Resets all settings of the CaptureVisionRouter to their default values.
 
 **Syntax**
 
-```ts
+```typescript
 resetSettings: () => Promise<void>;
 ```
 
@@ -159,9 +159,9 @@ None
 
 Returns a promise that resolves when the settings have been successfully reset to their default values.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 await router.resetSettings();
 ```

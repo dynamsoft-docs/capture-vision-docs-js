@@ -13,8 +13,8 @@ Corner is a structure in an image consisting of two line segments and intersecti
 
 ## Definition
 
-```ts
-export interface Corner {
+```typescript
+interface Corner {
                 type: EnumCornerType;
                 intersection: Point;
                 line1: LineSegment;
@@ -35,7 +35,7 @@ export interface Corner {
 
 The type of the corner.
 
-```ts
+```typescript
 type: EnumCornerType;
 ```
 
@@ -43,7 +43,7 @@ type: EnumCornerType;
 
 The intersection point of the corner.
 
-```ts
+```typescript
 intersection: Point;
 ```
 
@@ -51,7 +51,7 @@ intersection: Point;
 
 The first line connected to the corner.
 
-```ts
+```typescript
 line1: LineSegment;
 ```
 
@@ -59,6 +59,6 @@ line1: LineSegment;
 
 The second line connected to the corner.
 
-```ts
+```typescript
 Line2: LineSegment;
 ```

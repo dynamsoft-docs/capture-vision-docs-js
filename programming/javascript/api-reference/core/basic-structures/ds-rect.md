@@ -13,8 +13,8 @@ The interface DSRect represents a rectangle in 2D space. It contains four intege
 
 ## Definition
 
-```ts
-export interface DSRect {
+```typescript
+interface DSRect {
                 left: number;
                 right: number;
                 top: number;
@@ -37,7 +37,7 @@ export interface DSRect {
 
 The left edge of the rectangle.
 
-```ts
+```typescript
 bytes: Uint8Array;
 ```
 
@@ -45,7 +45,7 @@ bytes: Uint8Array;
 
 The right edge of the rectangle.
 
-```ts
+```typescript
 width: number;
 ```
 
@@ -53,7 +53,7 @@ width: number;
 
 The top edge of the rectangle.
 
-```ts
+```typescript
 height: number;
 ```
 
@@ -61,7 +61,7 @@ height: number;
 
 The bottom edge of the rectangle.
 
-```ts
+```typescript
 stride: number;
 ```
 
@@ -69,6 +69,6 @@ stride: number;
 
 Whether to use a percentage measurement for this DSRect.
 
-```ts
+```typescript
 isMeasuredInPercentage: boolean;
 ```

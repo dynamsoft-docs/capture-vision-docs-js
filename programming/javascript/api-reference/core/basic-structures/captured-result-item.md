@@ -13,8 +13,8 @@ The `CapturedResultItem` interface provides a common structure for representing 
 
 ## Definition
 
-```ts
-export interface CapturedResultItem {
+```typescript
+interface CapturedResultItem {
                 readonly type: EnumCapturedResultItemType;
                 readonly referenceItem: CapturedResultItem;
             }
@@ -31,7 +31,7 @@ export interface CapturedResultItem {
 
 A property of type `EnumCapturedResultItemType` that specifies the type of the captured result item.
 
-```ts
+```typescript
 readonly type: EnumCapturedResultItemType;
 ```
 
@@ -39,6 +39,6 @@ readonly type: EnumCapturedResultItemType;
 
 A property of type `CapturedResultItem` that represents a reference to another captured result item.
 
-```ts
+```typescript
 readonly referenceItem: CapturedResultItem;
 ```

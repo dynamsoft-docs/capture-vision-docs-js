@@ -12,8 +12,8 @@ The interface Rect represents a rectangle in 2D space. It contains four integer 
 
 ## Definition
 
-```ts
-export interface Rect {
+```typescript
+interface Rect {
                 x: number;
                 y: number;
                 width: number;
@@ -36,7 +36,7 @@ export interface Rect {
 
 The x coordinate of the upper left corner point of the rectangle.
 
-```ts
+```typescript
 x: number,
 ```
 
@@ -44,7 +44,7 @@ x: number,
 
 The y coordinate of the upper left corner point of the rectangle.
 
-```ts
+```typescript
 y: number,
 ```
 
@@ -52,7 +52,7 @@ y: number,
 
 The width of the rectangle.
 
-```ts
+```typescript
 width: number,
 ```
 
@@ -60,7 +60,7 @@ width: number,
 
 The height of the rectangle.
 
-```ts
+```typescript
 height: number;
 ```
 
@@ -68,6 +68,6 @@ height: number;
 
 Whether to use a percentage measurement for this Rect.
 
-```ts
+```typescript
 isMeasuredInPercentage: boolean;
 ```

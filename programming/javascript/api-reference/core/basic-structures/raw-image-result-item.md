@@ -14,8 +14,8 @@ The `RawImageResultItem` interface represents a captured raw image result item. 
 
 ## Definition
 
-```ts
-export interface RawImageResultItem extends CapturedResultItem {
+```typescript
+interface RawImageResultItem extends CapturedResultItem {
                 readonly imageData: Core.BasicStructures.DSImageData;
             }
 ```
@@ -30,6 +30,6 @@ export interface RawImageResultItem extends CapturedResultItem {
 
 `imageData`: A property of type `Core.BasicStructures.DSImageData` that represents the image data of the raw image result item.
 
-```ts
+```typescript
 readonly imageData: Core.BasicStructures.DSImageData;
 ```

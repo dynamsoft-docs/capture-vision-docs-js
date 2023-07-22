@@ -191,7 +191,7 @@ or
 
 or
 
-  ```ts
+  ```typescript
   import { CaptureVisionRouter } from 'dynamsoft-capture-vision-router';
   ```
 

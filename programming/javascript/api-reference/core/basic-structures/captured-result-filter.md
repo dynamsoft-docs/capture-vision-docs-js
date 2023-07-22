@@ -15,8 +15,8 @@ The `CaptureResultFilter` interface contains several callback functions for diff
 
 ## Definition
 
-```ts
-export interface CapturedResultFilter {
+```typescript
+interface CapturedResultFilter {
   onRawImageResultReceived: (result: Core.BasicStructures.RawImageResultItem) => void;
   onDecodedBarcodesReceived: (result: DBR.DecodedBarcodesResult) => void;
   onRecognizedTextLinesReceived: (result: DLR.RecognizedTextLinesResult) => void;
@@ -41,7 +41,7 @@ export interface CapturedResultFilter {
 
 Callback function for raw image results. It will be called once for each raw image result.
 
-```ts
+```typescript
 onRawImageResultReceived: (result: Core.BasicStructures.RawImageResultItem) => void;
 ```
 
@@ -53,7 +53,7 @@ onRawImageResultReceived: (result: Core.BasicStructures.RawImageResultItem) => v
 
 Callback function for decoded barcodes results. It will be called once for each decoded barcodes result.
 
-```ts
+```typescript
 onDecodedBarcodesReceived: (result: DBR.DecodedBarcodesResult) => void;
 ```
 
@@ -65,7 +65,7 @@ onDecodedBarcodesReceived: (result: DBR.DecodedBarcodesResult) => void;
 
 Callback function for recognized text lines results. It will be called once for each recognized text lines result.
 
-```ts
+```typescript
 onRecognizedTextLinesReceived: (result: DLR.RecognizedTextLinesResult) => void;
 ```
 
@@ -77,7 +77,7 @@ onRecognizedTextLinesReceived: (result: DLR.RecognizedTextLinesResult) => void;
 
 Callback function for detected quads results. It will be called once for each detected quads result.
 
-```ts
+```typescript
 onDetectedQuadsReceived: (result: DDN.DetectedQuadsResult) => void;
 ```
 
@@ -89,7 +89,7 @@ onDetectedQuadsReceived: (result: DDN.DetectedQuadsResult) => void;
 
 Callback function for normalized images results. It will be called once for each normalized images result.
 
-```ts
+```typescript
 onNormalizedImagesReceived: (result: DDN.NormalizedImagesResult) => void;
 ```
 
@@ -101,7 +101,7 @@ onNormalizedImagesReceived: (result: DDN.NormalizedImagesResult) => void;
 
 Callback function for parsed results. It will be called once for each parsed result.
 
-```ts
+```typescript
 onParsedResultsReceived: (result: DCP.ParsedResult) => void;
 ```
 

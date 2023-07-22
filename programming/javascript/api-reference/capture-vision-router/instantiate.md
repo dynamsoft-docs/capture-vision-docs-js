@@ -26,7 +26,7 @@ Loads the specified module to speed up the initialization.
 
 **Syntax**
 
-```ts
+```typescript
 preLoadModule: (moduleName: string | Array<string>) => void
 ```
 
@@ -38,9 +38,9 @@ preLoadModule: (moduleName: string | Array<string>) => void
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
 ```
 
@@ -50,7 +50,7 @@ Returns whether the specified module has been loaded.
 
 **Syntax**
 
-```ts
+```typescript
 isModuleLoaded: (moduleName: string) => boolean;
 ```
 
@@ -62,9 +62,9 @@ isModuleLoaded: (moduleName: string) => boolean;
 
 A boolean value that indicates whether the required module has been loaded.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 if(router.isModuleLoaded("DBR")){
   // Use the router to perform a DBR job.
 } else {
@@ -78,7 +78,7 @@ Initializes a new instance of the `CaptureVisionRouter` class.
 
 **Syntax**
 
-```ts
+```typescript
 createInstance: () => Promise<CaptureVisionRouter>;
 ```
 
@@ -90,9 +90,9 @@ None.
 
 A promise that resolves to the initalized `CaptureVisionRouter` object.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 ```
 
@@ -102,7 +102,7 @@ Releases all resources used by the `CaptureVisionRouter` object.
 
 **Syntax**
 
-```ts
+```typescript
 dispose: () => void;
 ```
 
@@ -114,9 +114,9 @@ None.
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 // Use the router to perform a job.
 // ...
@@ -130,7 +130,7 @@ Returns whether the `CaptureVisionRouter` object has been disposed of.
 
 **Syntax**
 
-```ts
+```typescript
 disposed: boolean;
 ```
 
@@ -142,9 +142,9 @@ None.
 
 A boolean value that indicates whether the `CaptureVisionRouter` object has been disposed of.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 if(router.disposed){
   console.log("The router has been disposed of.");
 } else {

@@ -13,8 +13,8 @@ The TextRemovedBinaryImageUnit interface represents a binary image unit after re
 
 ## Definition
 
-```ts
-export interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
+```typescript
+interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
                 imageData: Core.BasicStructures.DSImageData;
             } 
 ```
@@ -29,6 +29,6 @@ export interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
 
 The text-removed binary image data stored in the unit.
 
-```ts
+```typescript
 imageData: Core.BasicStructures.DSImageData;
 ```

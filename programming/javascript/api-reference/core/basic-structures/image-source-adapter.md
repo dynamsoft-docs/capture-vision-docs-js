@@ -13,8 +13,8 @@ The `ImageSourceAdapter` is an abstract class that provides an interface for han
 
 ## Definition
 
-```ts
-export abstract class ImageSourceAdapter {
+```typescript
+abstract class ImageSourceAdapter {
 
   constructor();
 
@@ -79,7 +79,7 @@ export abstract class ImageSourceAdapter {
 
 Adds an image to the buffer of the adapter.
 
-```ts
+```typescript
 addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
 ```
 
@@ -91,7 +91,7 @@ addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
 
 An abstract method that needs to be implemented by the user. It checks if there is a next image to fetch.
 
-```ts
+```typescript
 abstract hasNextImageToFetch: () => boolean;
 ```
 
@@ -103,7 +103,7 @@ Returns true if there are more images left to fetch, false otherwise.
 
 Starts fetching images.
 
-```ts
+```typescript
 startFetching: () => void;
 ```
 
@@ -111,7 +111,7 @@ startFetching: () => void;
 
 Stops fetching images.
 
-```ts
+```typescript
 stopFetching: () => void;
 ```
 
@@ -119,7 +119,7 @@ stopFetching: () => void;
 
 Retrieves a buffered image as a promise.
 
-```ts
+```typescript
 getImage: () => Promise<Core.BasicStructures.DSImageData>;
 ```
 
@@ -131,7 +131,7 @@ Returns the image object as a promise .
 
 Sets how many images are allowed to be buffered.
 
-```ts
+```typescript
 setMaxImageCount: (count: number) => void;
 ```
 
@@ -143,7 +143,7 @@ setMaxImageCount: (count: number) => void;
 
 Returns how many images can be buffered.
 
-```ts
+```typescript
 getMaxImageCount: () => number;
 ```
 
@@ -155,7 +155,7 @@ Returns the maximum number of images that can be buffered.
 
 Sets a mode that determines the action to take when there is a new incoming image and the buffer is full.
 
-```ts
+```typescript
 setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowProtectionMode) => void;
 ```
 
@@ -167,7 +167,7 @@ setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowP
 
 Returns the current buffer overflow protection mode.
 
-```ts
+```typescript
 getBufferOverflowProtectionMode: () => Core.BasicStructures.EnumBufferOverflowProtectionMode;
 ```
 
@@ -179,7 +179,7 @@ Returns the current buffer overflow protection mode.
 
 Determines whether the image is in the buffer or not.
 
-```ts
+```typescript
 hasImage: (imageId: number) => boolean;
 ```
 
@@ -195,7 +195,7 @@ Returns true if the image is in the buffer, false otherwise.
 
 Sets the next image to return.
 
-```ts
+```typescript
 setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
 ```
 
@@ -210,7 +210,7 @@ setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
 
 Returns the actual count of buffered images.
 
-```ts
+```typescript
 getImageCount: () => number;
 ```
 
@@ -222,7 +222,7 @@ Returns the actual count of buffered images.
 
 Determines whether the buffer is empty.
 
-```ts
+```typescript
 isBufferEmpty: () => boolean;
 ```
 
@@ -234,7 +234,7 @@ Returns true if the buffer is empty, false otherwise.
 
 Clear the image buffer.
 
-```ts
+```typescript
 clearBuffer: () => void;
 ```
 
@@ -242,7 +242,7 @@ clearBuffer: () => void;
 
 Sets the usage type of a color channel in images.
 
-```ts
+```typescript
 setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageType) => void;
 ```
 
@@ -250,7 +250,7 @@ setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageTyp
 
 Gets the usage type of a color channel in images.
 
-```ts
+```typescript
 getColourChannelUsageType: () => Core.BasicStructures.EnumColourChannelUsageType;
 ```
 

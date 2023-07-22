@@ -32,7 +32,7 @@ Sets the input image source for consecutive process.
 
 **Syntax**
 
-```ts
+```typescript
 setInput: (imageSource: Core.BasicStructures.ImageSourceAdapter) => void;
 ```
 
@@ -44,9 +44,9 @@ setInput: (imageSource: Core.BasicStructures.ImageSourceAdapter) => void;
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let view = await Dynamsoft.DCE.CameraView.createInstance();
 dce = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
@@ -59,7 +59,7 @@ Returns the current input image source of the CaptureVisionRouter.
 
 **Syntax**
 
-```ts
+```typescript
 getInput: () => Core.BasicStructures.ImageSourceAdapter;
 ```
 
@@ -71,9 +71,9 @@ None.
 
 Returns the current image source adapter object representing the input image source.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 const imageSource = CaptureVisionRouter.getInput();
 ```
 
@@ -83,7 +83,7 @@ Adds an object that listens to the state changes of the capture process.
 
 **Syntax**
 
-```ts
+```typescript
 addCaptureStateListener: (listener: CaptureStateListener) => void;
 ```
 
@@ -95,9 +95,9 @@ addCaptureStateListener: (listener: CaptureStateListener) => void;
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
@@ -113,7 +113,7 @@ Removes an object which listens to the state changes of the capture process.
 
 **Syntax**
 
-```ts
+```typescript
 removeCaptureStateListener: (listener: CaptureStateListener) => void;
 ```
 
@@ -125,9 +125,9 @@ removeCaptureStateListener: (listener: CaptureStateListener) => void;
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
@@ -143,7 +143,7 @@ Adds an object that listens to state changes of the image source.
 
 **Syntax**
 
-```ts
+```typescript
 addImageSourceStateListener: (listener: ImageSourceStateListener) => void;
 ```
 
@@ -155,9 +155,9 @@ addImageSourceStateListener: (listener: ImageSourceStateListener) => void;
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let isasl = {
             onImageSourceStateListener(state) {
@@ -173,7 +173,7 @@ Removes an object which listens to state changes of the image source.
 
 **Syntax**
 
-```ts
+```typescript
 removeImageSourceStateListener: (listener: ImageSourceStateListener) => void;
 ```
 
@@ -185,9 +185,9 @@ removeImageSourceStateListener: (listener: ImageSourceStateListener) => void;
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let isasl = {
             onImageSourceStateListener(state) {
@@ -203,7 +203,7 @@ Adds an object as the receiver of captured results.
 
 **Syntax**
 
-```ts
+```typescript
 addResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => void;
 ```
 
@@ -215,9 +215,9 @@ addResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => vo
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
             onCapturedResultReceived(pResult) {
@@ -235,7 +235,7 @@ Removes an object which was added as a receiver of captured results.
 
 **Syntax**
 
-```ts
+```typescript
 removeResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => void;
 ```
 
@@ -247,9 +247,9 @@ removeResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) =>
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
             onCapturedResultReceived(pResult) {
@@ -267,7 +267,7 @@ cvr.removeResultReceiver(crr);
 
 **Syntax**
 
-```ts
+```typescript
 addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => Promise<void>;
 ```
 
@@ -279,9 +279,9 @@ addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => Promise<
 
 Returns a promise that resolves when the result filter have been successfully added.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.addResultReceiver(rf);
 ```
@@ -292,7 +292,7 @@ Starts to process images consecutively.
 
 **Syntax**
 
-```ts
+```typescript
 startCapturing: (templateName?: string) => void;
 ```
 
@@ -304,9 +304,9 @@ startCapturing: (templateName?: string) => void;
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.startCapturing();
 ```
@@ -317,7 +317,7 @@ Stops the consecutive process.
 
 **Syntax**
 
-```ts
+```typescript
 stopCapturing: () => void;
 ```
 
@@ -329,9 +329,9 @@ None.
 
 None.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.stopCapturing();
 ```

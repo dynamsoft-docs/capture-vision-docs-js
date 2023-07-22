@@ -13,8 +13,8 @@ The TextZonesUnit interface represents a unit that contains text zones.
 
 ## Definition
 
-```ts
-export interface TextZonesUnit extends IntermediateResultUnit {
+```typescript
+interface TextZonesUnit extends IntermediateResultUnit {
                 textZones: Array<Core.BasicStructures.Quadrilateral>;
             }
 ```
@@ -29,6 +29,6 @@ export interface TextZonesUnit extends IntermediateResultUnit {
 
 An array of Quadrilateral objects representing the text zones in the unit.
 
-```ts
+```typescript
 textZones: Array<Core.BasicStructures.Quadrilateral>;
 ```

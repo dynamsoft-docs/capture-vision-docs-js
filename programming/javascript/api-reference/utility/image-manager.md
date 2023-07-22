@@ -13,8 +13,8 @@ The ImageManager class provides an API for managing images.
 
 ## Definition
 
-```ts
-export class ImageManager {
+```typescript
+class ImageManager {
             saveToFile: (image: Core.BasicStructures.DSImageData, name: string, download?: boolean) => Promise<File>;
         }
 ```
@@ -29,7 +29,7 @@ export class ImageManager {
 
 It is used to save images to files.
 
-```ts
+```typescript
 saveToFile: (image: Core.BasicStructures.DSImageData, name: string, download?: boolean) => Promise<File>;
 ```
 

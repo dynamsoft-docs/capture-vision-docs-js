@@ -13,8 +13,8 @@ The interface FileImageTag represents an image tag that is associated with a fil
 
 ## Definition
 
-```ts
-export interface FileImageTag extends ImageTag {
+```typescript
+interface FileImageTag extends ImageTag {
                 filePath: string;
                 pageNumber: number;
             }
@@ -31,7 +31,7 @@ export interface FileImageTag extends ImageTag {
 
 Gets the file path of the image tag.
 
-```ts
+```typescript
 filePath: string;
 ```
 
@@ -39,6 +39,6 @@ filePath: string;
 
 Gets the page number of the image tag.
 
-```ts
+```typescript
 pageNumber: number;
 ```

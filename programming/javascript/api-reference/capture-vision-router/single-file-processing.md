@@ -22,7 +22,7 @@ Process an image or file to derive important information.
 
 **Syntax**
 
-```ts
+```typescript
 capture: (imageOrFile: Core.BasicStructures.DSImageData | string | Blob, templateName?: string) => Promise<Array<Core.BasicStructures.CapturedResult>>;
 ```
 
@@ -36,9 +36,9 @@ capture: (imageOrFile: Core.BasicStructures.DSImageData | string | Blob, templat
 
 A promise that resolves to an array of `CapturedResult` objects which are the derived information from each image processed.
 
-**Code Snippet**
+**Code snippet**
 
-```ts
+```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let results = await router.catpure("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "read-barcodes");
 let count = results.length;

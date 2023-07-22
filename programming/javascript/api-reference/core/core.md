@@ -20,8 +20,8 @@ The `ImageSourceAdapter` class defines how an image source should be defined for
 
 The APIs for this class are:
 
-| Method                                                                                                        | Description                                                                                               |
-| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Method                                                                                                          | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [`addImageToBuffer`](./basic-structures/image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [`hasNextImageToFetch`](./basic-structures/image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
 | [`startFetching`](./basic-structures/image-source-adapter.md#startfetching)                                     | Starts fetching images.                                                                                   |
@@ -45,8 +45,8 @@ The `IntermediateResultManager` class defines a user can interact with the `Capt
 
 The APIs for this class are:
 
-| Method                                                                                             | Description                                     |
-| -------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| Method                                                                                               | Description                                     |
+| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
 | [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |
 | [`getRawImage`](./intermediate-results/intermediate-result-manager.md#getrawimage)                   | Gets the raw image data using an image hash id. |

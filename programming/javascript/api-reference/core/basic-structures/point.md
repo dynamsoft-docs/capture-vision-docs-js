@@ -13,8 +13,8 @@ The interface Point represents a point in 2D space. It contains of two numbers, 
 
 ## Definition
 
-```ts
-export interface Point {
+```typescript
+interface Point {
                 x: number;
                 y: number;
             }
@@ -31,7 +31,7 @@ export interface Point {
 
 The X coordinates of the Point.
 
-```ts
+```typescript
 x: number;
 ```
 
@@ -39,6 +39,6 @@ x: number;
 
 The Y coordinates of the Point.
 
-```ts
+```typescript
 y: number;
 ```

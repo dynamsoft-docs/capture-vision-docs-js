@@ -13,15 +13,9 @@ permalink: /programming/javascript/api-reference/license/license-verification-li
 
 Interface that helps check the license verification callback.
 
-```ts
-export interface LicenseVerificationListener {
-            onLicenseVerified?: (isSuccess: boolean, error: string) => void;
-        }
-```
-
 ## Method
 
-| Method                                 | Description                                          |
+|                                  | Description                                          |
 | ----------------------------------------- | --------------------------------------------- |
 | [`onLicenseVerified`](#onlicenseverified) | A callback function that is invoked after the license verification process is completed. |
 

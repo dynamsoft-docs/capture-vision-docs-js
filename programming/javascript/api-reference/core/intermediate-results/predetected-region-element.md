@@ -13,8 +13,8 @@ The PredetectedRegionElement interface extends the RegionObjectElement interface
 
 ## Definition
 
-```ts
-export interface PredetectedRegionElement extends RegionObjectElement {
+```typescript
+interface PredetectedRegionElement extends RegionObjectElement {
                 modeName: string;
 }
 ```
@@ -29,6 +29,6 @@ export interface PredetectedRegionElement extends RegionObjectElement {
 
 Gets the specified region pre-detection mode name
 
-```ts
+```typescript
 modeName: string;
 ```

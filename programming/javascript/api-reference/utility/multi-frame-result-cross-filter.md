@@ -13,8 +13,8 @@ The MultiFrameResultCrossFilter class provides APIs for filtering out results th
 
 ## Definition
 
-```ts
-export interface MultiFrameResultCrossFilter extends Core.BasicStructures.CapturedResultFilter {
+```typescript
+interface MultiFrameResultCrossFilter extends Core.BasicStructures.CapturedResultFilter {
             enableResultVerification: (resultItemTypes: number, enabled: boolean) => void;
             isResultVerificationEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
             enableDuplicateFilter: (resultItemTypes: number, enabled: boolean) => void;
@@ -40,7 +40,7 @@ export interface MultiFrameResultCrossFilter extends Core.BasicStructures.Captur
 
 A method that enables or disables result verification for specific result item types.
 
-```ts
+```typescript
 enableResultVerification: (resultItemTypes: number, enabled: boolean) => void;
 ```
 
@@ -57,7 +57,7 @@ None.
 
 A method that checks whether result verification is enabled for a specific result item type.
 
-```ts
+```typescript
 isResultVerificationEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
 ```
 
@@ -73,7 +73,7 @@ Returns a boolean value indicating whether result verification is enabled for th
 
 A method that enables or disables duplicate filtering for specific result item types.
 
-```ts
+```typescript
 enableDuplicateFilter: (resultItemTypes: number, enabled: boolean) => void;
 ```
 
@@ -90,7 +90,7 @@ None.
 
 A method that checks whether duplicate filtering is enabled for a specific result item type.
 
-```ts
+```typescript
 isDuplicateFilterEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
 ```
 
@@ -106,7 +106,7 @@ Returns a boolean value indicating whether duplicate filter is enabled for the s
 
 A method that sets the time duration after which duplicate results should be forgotten for specific result item types.
 
-```ts
+```typescript
 setDuplicateForgetTime: (resultItemTypes: number, time: number) => Promise<void>;
 ```
 
@@ -123,7 +123,7 @@ Returns a Promise that resolves when this operation are complete.
 
 A method that retrieves the time duration after which duplicate results are forgotten for a specific result item type.
 
-```ts
+```typescript
 getDuplicateForgetTime: (type: Core.BasicStructures.EnumCapturedResultItemType) => Promise<number>;
 ```
 
