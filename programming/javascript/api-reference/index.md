@@ -14,7 +14,9 @@ permalink: /programming/javascript/api-reference/
 
 Dynamsoft Capture Vision architecture consists of the following modules:
 
+* [CaptureVisionRouter](capture-vision-router/capture-vision-router-module.md)
 * [License](license/license-module.md)
 * [Core](core/core.md)
-* [CaptureVisionRouter](capture-vision-router/capture-vision-router-module.md)
 * [Utility](utility/utility.md)
+
+The following enumerat
