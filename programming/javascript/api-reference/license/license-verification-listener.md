@@ -15,8 +15,8 @@ Interface that helps check the license verification callback.
 
 ## Method
 
-|                                  | Description                                          |
-| ----------------------------------------- | --------------------------------------------- |
+| API                                       | Description                                                                              |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------- |
 | [`onLicenseVerified`](#onlicenseverified) | A callback function that is invoked after the license verification process is completed. |
 
 ### onLicenseVerified
