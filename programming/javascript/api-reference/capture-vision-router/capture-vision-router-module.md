@@ -18,9 +18,9 @@ The "CaptureVisionRouter" module is defined in the namespace `Dynamsoft.CVR`. It
 
 This class defines common functionality in the `CaptureVisionRouter` module. At present, it has only one method.
 
-| API Name                           | Description                                              |
-| ---------------------------------- | -------------------------------------------------------- |
-| static [getVersion()](#getversion) | Returns the version of the `CaptureVisionRouter` object. |
+| API Name                                                                | Description                                              |
+| ----------------------------------------------------------------------- | -------------------------------------------------------- |
+| static [getVersion()](capture-vision-router-module-class.md#getversion) | Returns the version of the `CaptureVisionRouter` object. |
 
 ## CaptureVisionRouter Class
 
@@ -41,7 +41,7 @@ router.startCapturing();
 
 The APIs for this class include:
 
-## Create and Destroy Instances
+### Create and Destroy Instances
 
 | API Name                                            | Description                                                            |
 | --------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -51,13 +51,13 @@ The APIs for this class include:
 | [preLoadModule()](./instantiate.md#preloadmodule)   | Loads the specified module to speed up the initialization.             |
 | [isModuleLoaded()](./instantiate.md#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
 
-## Single-File Processing
+### Single-File Processing
 
 | API Name                                         | Description                                                 |
 | ------------------------------------------------ | ----------------------------------------------------------- |
 | [capture()](./single-file-processing.md#capture) | Processes an image or file to derive important information. |
 
-## Multiple-File Processing
+### Multiple-File Processing
 
 | API Name                                                                                         | Description                                                                  |
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ The APIs for this class include:
 | [startCapturing()](./multiple-file-processing.md#startcapturing)                                 | Starts to process images consecutively.                                      |
 | [stopCapturing()](./multiple-file-processing.md#stopcapturing)                                   | Stops the consecutive process.                                               |
 
-## Settings
+### Settings
 
 | API Name                                                       | Description                                                                                                   |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -83,13 +83,13 @@ The APIs for this class include:
 | [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
 | [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
-## Intermediate Result
+### Intermediate Result
 
 | API Name                                                                                | Description                                    |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [getIntermediateResultManager()](./intermediate-result.md#getintermediateresultmanager) | Returns an `IntermediateResultManager` object. |
 
-## Interfaces
+### Interfaces
 
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)
@@ -99,28 +99,3 @@ The APIs for this class include:
 * [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
 * [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js)
-
-## getVersion
-
-Returns the version of the CaptureVisionRouter Module.
-
-**Syntax**
-
-```typescript
-static getVersion: () => string;
-```
-
-**Parameters**
-
-None.
-
-**Return Value**
-
-Returns a string representing the version of the `CaptureVisionRouter` module.
-
-**Code snippet**
-
-```javascript
-const version = await Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
-console.log(version);
-```
