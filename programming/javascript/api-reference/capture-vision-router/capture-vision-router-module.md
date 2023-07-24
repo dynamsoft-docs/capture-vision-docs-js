@@ -20,7 +20,7 @@ This class defines common functionality in the `CaptureVisionRouter` module. At 
 
 | API Name                                                                | Description                                              |
 | ----------------------------------------------------------------------- | -------------------------------------------------------- |
-| static [getVersion()](capture-vision-router-module-class.md#getversion) | Returns the version of the `CaptureVisionRouter` object. |
+| static [getVersion()](capture-vision-router-module-class.md#getversion) | Returns the version of the `CaptureVisionRouter` module. |
 
 ## CaptureVisionRouter Class
 

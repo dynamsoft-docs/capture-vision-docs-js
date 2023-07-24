@@ -6,7 +6,7 @@ keywords: capture vision, module, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-breadcrumbText: CaptureVisionRouter Module Class
+breadcrumbText: CaptureVisionRouterModule Class
 permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router-module-class.html
 ---
 

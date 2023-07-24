@@ -6,13 +6,21 @@ keywords: Core, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: CVR JavaScript Core
-permalink: /programming/javascript/api-reference/core/core.html
+breadcrumbText: Core Module
+permalink: /programming/javascript/api-reference/core/core-module.html
 ---
 
 # Core Module
 
 The "Core" module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `ImageSourceAdapter` and `IntermediateResultManager` plus a few enumerations and interfaces.
+
+## CoreModule Class
+
+This class defines common functionality in the `Core` module. At present, it has only one method.
+
+| API Name                                               | Description                                     |
+| ------------------------------------------------------ | ----------------------------------------------- |
+| static [getVersion()](core-module-class.md#getversion) | Returns the version of the `CoreModule` module. |
 
 ## ImageSourceAdapter Class
 
