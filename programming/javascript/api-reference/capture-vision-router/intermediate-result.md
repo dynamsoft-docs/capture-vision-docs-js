@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/intermediate-result.html
 ---
 
-# Javascript API Reference - Intermediate Result
+# CaptureVisionRouterIntermediate Result
 
 | API Name                                                      | Description                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------- |

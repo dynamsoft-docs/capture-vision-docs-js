@@ -8,7 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Javascript API Reference - SimplifiedCaptureVisionSettings
+# CaptureVisionRouterSimplifiedCaptureVisionSettings
 
 The `SimplifiedCaptureVisionSettings` interface represents a simplified configuration for the Capture Vision Router settings.
 
