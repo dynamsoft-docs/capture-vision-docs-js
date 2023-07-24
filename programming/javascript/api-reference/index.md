@@ -12,11 +12,13 @@ permalink: /programming/javascript/api-reference/
 
 # Dnamsoft Capture Vision JavaScript API Reference
 
-Dynamsoft Capture Vision architecture consists of the following modules:
+Dynamsoft Capture Vision consists of four modules:
 
 * [CaptureVisionRouter](capture-vision-router/capture-vision-router-module.md)
 * [License](license/license-module.md)
 * [Core](core/core.md)
 * [Utility](utility/utility.md)
 
-The following enumerat
+There are also quite a few enumerations, check out the full list at:
+
+* [Enumerations](enums-index.md)
