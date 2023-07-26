@@ -16,8 +16,8 @@ Dynamsoft Capture Vision consists of four modules:
 
 * [CaptureVisionRouter](capture-vision-router/capture-vision-router-module.md)
 * [License](license/license-module.md)
-* [Core](core/core.md)
-* [Utility](utility/utility.md)
+* [Core](core/core-module.md)
+* [Utility](utility/utility-module.md)
 
 There are also quite a few enumerations, check out the full list at:
 

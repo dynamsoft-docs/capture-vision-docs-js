@@ -20,7 +20,7 @@ This class defines common functionality in the `CaptureVisionRouter` module. At 
 
 ## getVersion
 
-Returns the version of the CaptureVisionRouter Module.
+Returns the version of the `CaptureVisionRouter` Module.
 
 **Syntax**
 
