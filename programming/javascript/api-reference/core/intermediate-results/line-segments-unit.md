@@ -19,9 +19,9 @@ interface LineSegmentsUnit extends IntermediateResultUnit {
             }
 ```
 
-## Attributes Summary
 
-| Attribute               | Type |
+
+| Properties               | Type |
 |----------------------|-------------|
 | [`lineSegments`](#linesegments) | *Array<Core.BasicStructures.LineSegment>* |
 

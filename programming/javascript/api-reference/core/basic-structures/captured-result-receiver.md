@@ -27,9 +27,8 @@ interface CapturedResultReceiver {
 } 
 ```
 
-## Methods Summary
 
-| Method                                                            | Description                                          |
+| API Name                                                            | Description                                          |
 | ----------------------------------------------------------------- | ---------------------------------------------------- |
 | [`OnCapturedResultReceived`](#oncapturedresultreceived)           | Callback function for all captured results.          |
 | [`OnRawImageResultReceived`](#onrawimageresultreceived)           | Callback function for raw image results.             |

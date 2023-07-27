@@ -25,9 +25,9 @@ interface DSImageData {
             } 
 ```
 
-## Attributes Summary
 
-| Attribute            | Type |
+
+| Properties            | Type |
 |----------------------|-------------|
 | [`bytes`](#bytes) | *Uint8Array* |
 | [`width`](#width) | *number* |

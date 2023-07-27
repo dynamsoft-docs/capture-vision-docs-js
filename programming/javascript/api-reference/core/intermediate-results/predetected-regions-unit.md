@@ -19,9 +19,9 @@ interface PredetectedRegionsUnit extends IntermediateResultUnit {
             }
 ```
 
-## Attributes Summary
 
-| Attribute | Type |
+
+| Properties | Type |
 |--------|-------------|
 | [`predetectedRegions`](#predetectedregions) | *Array<PredetectedRegionElement>* |
 

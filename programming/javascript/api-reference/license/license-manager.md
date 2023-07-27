@@ -34,7 +34,7 @@ Returns a string representing the UUID of the device.
 Initializes the license using a license key. 
 
 ```typescript
-static initLicense: (license: string) => Promise<LicenseVerificationListener>;
+static initLicense: (license: string) => { isSuccess: boolean, error: string };
 ```
 
 **Parameters**
@@ -43,9 +43,12 @@ static initLicense: (license: string) => Promise<LicenseVerificationListener>;
 
 **Return Value**
 
-Returns a promise that resolves to a [`LicenseVerificationListener`](license-verification-listener.md). The `LicenseVerificationListener` is an interface that provides callbacks for license verification status.
+Returns an object which contains the following information:
 
-### setDeviceFriendlyName
+* `isSuccess`: indicates whether the license initialization succeeded.
+* `error`: specifies what went wrong if `isSuccess` is `false`.
+
+## setDeviceFriendlyName
 
 Sets a recognizable name for the device which corresponds to its UUID.
 

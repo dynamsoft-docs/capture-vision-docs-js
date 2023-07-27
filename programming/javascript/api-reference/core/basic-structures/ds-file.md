@@ -19,7 +19,6 @@ interface DSFile extends File {
             }
 ```
 
-## Methods Summary
 
 ### download
 

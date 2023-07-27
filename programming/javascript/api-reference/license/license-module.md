@@ -12,15 +12,22 @@ permalink: /programming/javascript/api-reference/license/license-module.html
 
 # License Module
 
-The License module is defined in the namespace `Dynamsoft.License`. It consists of the classes `LicenseModule`, `LicenseManager` and the interface `LicenseVerificationListener`.
+The License module is defined in the namespace `Dynamsoft.License`. It consists of the classes `LicenseModule` and `LicenseManager`.
 
 ## LicenseModule Class
 
 This class defines common functionality in the `License` module. At present, it has only one method.
 
-| API Name                                                  | Description                                  |
-| --------------------------------------------------------- | -------------------------------------------- |
-| static [getVersion()](license-module-class.md#getversion) | Returns the version of the `License` module. |
+| API Name              | Description                                  |
+| --------------------- | -------------------------------------------- |
+| static `getVersion()` | Returns the version of the `License` module. |
+
+**Code snippet**
+
+```javascript
+const version = await Dynamsoft.License.LicenseModule.getVersion();
+console.log(version);
+```
 
 ## LicenseManager Class
 
@@ -28,14 +35,8 @@ The `LicenseManager` class is responsible for the licensing of all functional mo
 
 The APIs for this class are:
 
-| Method                                                                | Description                                                            |
+| API Name                                                                | Description                                                            |
 | --------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | [`getDeviceUUID`](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
 | [`initLicense`](./license-manager.md#initlicense)                     | Initializes the license using a license key.                           |
 | [`setDeviceFriendlyName`](./license-manager.md#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
-
-## LicenseVerificationListener Interface
-
-This interface defines how license verification result is returned.
-
-* [LicenseVerificationListener](./license-verification-listener.md)

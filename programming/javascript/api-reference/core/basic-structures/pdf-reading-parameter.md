@@ -21,9 +21,9 @@ interface PDFReadingParameter {
             } 
 ```
 
-## Attributes Summary
+
   
-| Attribute | Type |
+| Properties | Type |
 |---------- | ---- |
 | [`mode`](#mode) | *EnumPDFReadingMode* |
 | [`dpi`](#dpi) | *number* |

@@ -19,9 +19,9 @@ interface ContoursUnit extends IntermediateResultUnit {
             }
 ```
 
-## Attributes Summary
 
-| Attribute               | Type |
+
+| Properties               | Type |
 |----------------------|-------------|
 | [`contours`](#contours) | *Array<Core.BasicStructures.Contour>* |
 

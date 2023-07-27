@@ -19,9 +19,9 @@ interface IntermediateResult {
             }
 ```
 
-## Attributes Summary
 
-| Attribute | Type |
+
+| Properties | Type |
 |--------|-------------|
 | [`intermediateResultUnits`](#intermediateresultunits) | *Array<IntermediateResultUnit>* |
 

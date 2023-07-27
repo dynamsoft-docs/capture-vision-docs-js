@@ -19,9 +19,9 @@ interface Contour {
             }
 ```
 
-## Attributes Summary
+
   
-| Attribute | Type |
+| Properties | Type |
 |---------- | ---- |
 | [`points`](#points)| *Array* |
 

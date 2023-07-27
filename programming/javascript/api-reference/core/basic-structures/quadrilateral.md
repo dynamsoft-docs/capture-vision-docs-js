@@ -19,9 +19,9 @@ interface Quadrilateral {
             }
 ```
 
-## Attributes Summary
+
   
-| Attribute | Type |
+| Properties | Type |
 |---------- | ---- |
 | [`points`](#points) | *Point* |
 

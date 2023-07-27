@@ -9,31 +9,30 @@ noTitleIndex: true
 
 # MultiFrameResultCrossFilter
 
-The MultiFrameResultCrossFilter class provides APIs for filtering out results that meet specific requirements.
+The MultiFrameResultCrossFilter interface provides APIs for filtering out results that meet specific requirements.
 
 ## Definition
 
 ```typescript
-interface MultiFrameResultCrossFilter extends Core.BasicStructures.CapturedResultFilter {
-            enableResultVerification: (resultItemTypes: number, enabled: boolean) => void;
-            isResultVerificationEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
-            enableDuplicateFilter: (resultItemTypes: number, enabled: boolean) => void;
-            isDuplicateFilterEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
-            setDuplicateForgetTime: (resultItemTypes: number, time: number) => Promise<void>;
-            getDuplicateForgetTime: (type: Core.BasicStructures.EnumCapturedResultItemType) => Promise<number>;
-        };
+interface MultiFrameResultCrossFilter {
+    enableResultVerification: (resultItemTypes: number, enabled: boolean) => void;
+    isResultVerificationEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
+    enableDuplicateFilter: (resultItemTypes: number, enabled: boolean) => void;
+    isDuplicateFilterEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType) => boolean;
+    setDuplicateForgetTime: (resultItemTypes: number, time: number) => Promise<void>;
+    getDuplicateForgetTime: (type: Core.BasicStructures.EnumCapturedResultItemType) => Promise<number>;
+}
 ```
 
-## Methods Summary
 
-| Method       | Description |
-|----------------------|-------------|
-| [`enableResultVerification`](#enableresultverification)         | Enable result verification feature to improve the accuracy of video streaming recognition results. |
-| [`isResultVerificationEnabled`](#isresultverificationenabled)   | Determines whether the result verification feature is enabled for the specific captured result item type. |
-| [`enableDuplicateFilter`](#enableduplicatefilter)               | Enable duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition. |
-| [`isDuplicateFilterEnabled`](#isduplicatefilterenabled)         | Determines whether the duplicate filter feature is enabled for the specific result item type. |
-| [`setDuplicateForgetTime`](#setduplicateforgettime)             | Sets the duplicate forget time for the specific captured result item types. The same captured result item will be returned only once during the period. |
-| [`getDuplicateForgetTime`](#getduplicateforgettime)             | Gets the duplicate forget time for a specific captured result item type. |
+| API Name                                                      | Description                                                                                                                                             |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`enableResultVerification`](#enableresultverification)       | Enables result verification feature to improve the accuracy of video streaming recognition results.                                                     |
+| [`isResultVerificationEnabled`](#isresultverificationenabled) | Determines whether the result verification feature is enabled for the specific captured result item type.                                               |
+| [`enableDuplicateFilter`](#enableduplicatefilter)             | Enables duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.              |
+| [`isDuplicateFilterEnabled`](#isduplicatefilterenabled)       | Determines whether the duplicate filter feature is enabled for the specific result item type.                                                           |
+| [`setDuplicateForgetTime`](#setduplicateforgettime)           | Sets the duplicate forget time for the specific captured result item types. The same captured result item will be returned only once during the period. |
+| [`getDuplicateForgetTime`](#getduplicateforgettime)           | Gets the duplicate forget time for a specific captured result item type.                                                                                |
 
 
 ### enableResultVerification
@@ -63,7 +62,7 @@ isResultVerificationEnabled: (type: Core.BasicStructures.EnumCapturedResultItemT
 
 **Parameters**
 
-`type`:  The specific captured result item type.
+`type`:  Specifies the captured result item type..
 
 **Return Value**
 
@@ -96,7 +95,7 @@ isDuplicateFilterEnabled: (type: Core.BasicStructures.EnumCapturedResultItemType
 
 **Parameters**
 
-`type`:  The specific captured result item type.
+`type`:  Specifies the captured result item type..
 
 **Return Value**
 
@@ -129,7 +128,7 @@ getDuplicateForgetTime: (type: Core.BasicStructures.EnumCapturedResultItemType) 
 
 **Parameters**
 
-`type`: The specific captured result item type.
+`type`: Specifies the captured result item type..
 
 **Return Value**
 

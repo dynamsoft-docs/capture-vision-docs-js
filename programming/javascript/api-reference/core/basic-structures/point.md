@@ -20,9 +20,9 @@ interface Point {
             }
 ```
 
-## Attributes Summary
 
-| Attribute | Type |
+
+| Properties | Type |
 |---------- | ---- |
 | [`x`](#x) | *Number* |
 | [`y`](#y) | *Number* |

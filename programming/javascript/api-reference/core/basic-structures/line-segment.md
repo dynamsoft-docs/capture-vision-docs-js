@@ -20,9 +20,9 @@ interface LineSegment {
             } 
 ```
 
-## Attributes Summary
 
-| Attribute | Type |
+
+| Properties | Type |
 |---------- | ---- |
 | [`startPoint`](#startPoint) | *Point* |
 | [`endPoint`](#endPoint) | *Point* |

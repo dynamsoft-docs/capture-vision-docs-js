@@ -20,9 +20,9 @@ interface CapturedResultItem {
             }
 ```
 
-## Attributes Summary
 
-| Attribute                         | Type|
+
+| Properties                         | Type|
 |--------------------------------|------------|
 | [`type`](#type)              | *EnumCapturedResultItemType*          |
 | [`referenceItem`](#referenceItem)    | *CapturedResultItem*          |

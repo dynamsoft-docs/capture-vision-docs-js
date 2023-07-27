@@ -24,9 +24,8 @@ interface ObservationParameters {
             }
 ```
 
-## Methods Summary
 
-| Method               | Description |
+| API Name               | Description |
 |----------------------|-------------|
 | [`setObservedResultUnitTypes`](#setobservedresultunittypes) | Sets the types of intermediate result units that have been observed.|
 | [`getObservedResultUnitTypes`](#getobservedresultunittypes) | Gets the types of intermediate result units that have been observed. |

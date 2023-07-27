@@ -23,9 +23,8 @@ interface IntermediateResultUnit {
             }
 ```
 
-## Methods Summary
 
-| Method               | Description |
+| API Name               | Description |
 |----------------------|-------------|
 | [`hashId`](#hashId) | Gets the hash ID of the unit.|
 | [`sourceImageHashId`](#sourceImageHashId) | Gets the hash ID of the source image. |

@@ -12,15 +12,22 @@ permalink: /programming/javascript/api-reference/core/core-module.html
 
 # Core Module
 
-The "Core" module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `ImageSourceAdapter` and `IntermediateResultManager` plus a few enumerations and interfaces.
+The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`, `ImageSourceAdapter` and `IntermediateResultManager` plus a few enumerations and interfaces.
 
 ## CoreModule Class
 
 This class defines common functionality in the `Core` module. At present, it has only one method.
 
-| API Name                                               | Description                                     |
-| ------------------------------------------------------ | ----------------------------------------------- |
-| static [getVersion()](core-module-class.md#getversion) | Returns the version of the `CoreModule` module. |
+| API Name              | Description                               |
+| --------------------- | ----------------------------------------- |
+| static `getVersion()` | Returns the version of the `Core` module. |
+
+**Code snippet**
+
+```javascript
+const version = await Dynamsoft.Core.CoreModule.getVersion();
+console.log(version);
+```
 
 ## ImageSourceAdapter Class
 
@@ -28,7 +35,7 @@ The `ImageSourceAdapter` class defines how an image source should be defined for
 
 The APIs for this class are:
 
-| Method                                                                                                          | Description                                                                                               |
+| API Name                                                                                                          | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [`addImageToBuffer`](./basic-structures/image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [`hasNextImageToFetch`](./basic-structures/image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
@@ -53,7 +60,7 @@ The `IntermediateResultManager` class defines a user can interact with the `Capt
 
 The APIs for this class are:
 
-| Method                                                                                               | Description                                     |
+| API Name                                                                                               | Description                                     |
 | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
 | [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |

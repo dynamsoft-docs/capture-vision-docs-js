@@ -9,21 +9,12 @@ noTitleIndex: true
 
 # ImageManager
 
-The ImageManager class provides an API for managing images.
+The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
-## Definition
 
-```typescript
-class ImageManager {
-            saveToFile: (image: Core.BasicStructures.DSImageData, name: string, download?: boolean) => Promise<File>;
-        }
-```
-
-## Methods Summary
-
-| Method       | Description |
-|----------------------|-------------|
-| [`saveToFile`](#savetofile)           | It is used to get the unique identifier of the device. |
+| API Name                    | Description                          |
+| --------------------------- | ------------------------------------ |
+| [`saveToFile`](#savetofile) | Saved the specified image as a file. |
 
 ### saveToFile
 

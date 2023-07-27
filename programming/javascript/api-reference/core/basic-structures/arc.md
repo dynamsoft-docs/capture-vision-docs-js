@@ -23,9 +23,9 @@ interface Arc {
             } 
 ```
 
-## Attributes Summary
 
-| Attribute            | Type |
+
+| Properties            | Type |
 |----------------------|-------------|
 | [`x`](#x) | *number* |
 | [`y`](#y) | *number* |

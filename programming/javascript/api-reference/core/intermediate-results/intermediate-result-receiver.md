@@ -48,9 +48,8 @@ interface IntermediateResultReceiver {
 
 ```
 
-## Methods Summary
 
-| Method | Description |
+| API Name | Description |
 |--------|-------------|
 | [`getObservedParameters`](#getobservedparameters) | Gets the types of intermediate result units that have been observed. |
 | [`onTaskResultsReceived`](#ontaskresultsreceived) | Called when a task result has been received. |

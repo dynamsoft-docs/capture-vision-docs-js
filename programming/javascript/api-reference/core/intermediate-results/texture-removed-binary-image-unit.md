@@ -19,9 +19,9 @@ interface TextureRemovedBinaryImageUnit extends IntermediateResultUnit {
             } 
 ```
 
-## Attributes Summary
 
-| Attribute               | Type |
+
+| Properties               | Type |
 |----------------------|-------------|
 | [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
 

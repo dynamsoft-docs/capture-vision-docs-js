@@ -19,9 +19,9 @@ interface PredetectedRegionElement extends RegionObjectElement {
 }
 ```
 
-## Attributes Summary
 
-| Attribute               | Type |
+
+| Properties               | Type |
 |----------------------|-------------|
 | [`modeName`](#modename) | *String* |
 

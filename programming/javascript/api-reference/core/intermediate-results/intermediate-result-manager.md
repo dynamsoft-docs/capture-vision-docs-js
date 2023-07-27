@@ -21,9 +21,8 @@ interface IntermediateResultManager {
             }
 ```
 
-## Methods Summary
 
-| Method | Description |
+| API Name | Description |
 |--------|-------------|
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
 | [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |

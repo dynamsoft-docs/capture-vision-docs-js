@@ -26,9 +26,7 @@ interface CapturedResultFilter {
 } 
 ```
 
-## Methods Summary
-
-| Method                                                            | Description                                          |
+| API Name                                                            | Description                                          |
 | ----------------------------------------------------------------- | ---------------------------------------------------- |
 | [`OnRawImageResultReceived`](#onrawimageresultreceived)           | Callback function for raw image results.             |
 | [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |

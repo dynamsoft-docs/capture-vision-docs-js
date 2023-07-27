@@ -14,42 +14,46 @@ The `SimplifiedCaptureVisionSettings` interface represents a simplified configur
 
 ```typescript
 interface SimplifiedCaptureVisionSettings {
-            capturedResultItemTypes: Core.BasicStructures.EnumCapturedResultItemType;
-            roi: Core.BasicStructures.Quadrilateral;
-            roiMeasuredInPercentage: boolean;
-            maxParallelTasks: number;
-            timeout: number;
-            barcodeSettings: DBR.SimplifiedBarcodeReaderSettings;
-            labelSettings: DLR.SimplifiedLabelRecognizerSettings;
-        }
+    capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType;
+    roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
+    roiMeasuredInPercentage: boolean;
+    maxParallelTasks: number;
+    timeout: number;
+    barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
+    labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
+}
 ```
 
-## Attributes Summary
 
-| Attribute                                                     | Type                                                       |
-| ------------------------------------------------------------- | ---------------------------------------------------------- |
-| [capturedResultItemTypes](#capturedresultitemtypes)           | *Core.BasicStructures.EnumCapturedResultItemType*          |
-| [roi](#roi)                                                   | *Core.BasicStructures.Quadrilateral*                       |
-| [roiMeasuredInPercentage](#roimeasuredinpercentage)           | *Boolean*                                                  |
-| [maxParallelTasks](#maxparalleltasks)                         | *Number*                                                   |
-| [timeout](#timeout)                                           | *Number*                                                   |
-| [barcodeSettings](#barcodesettings)                           | *DBR.SimplifiedBarcodeReaderSettings*                      |
-| [labelSettings](#labelsettings)                               | *DLR.SimplifiedLabelRecognizerSettings*                    |
+
+| Properties                                           | Type                                                        |
+| --------------------------------------------------- | ----------------------------------------------------------- |
+| [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType* |
+| [roi](#roi)                                         | *Dynamsoft.Core.BasicStructures.Quadrilateral*              |
+| [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                                   |
+| [maxParallelTasks](#maxparalleltasks)               | *number*                                                    |
+| [timeout](#timeout)                                 | *number*                                                    |
+| [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*             |
+| [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings*           |
 
 ## capturedResultItemTypes
 
 Specifies the types of captured items to be processed. It uses the EnumCapturedResultItemType enumeration from the Core.BasicStructures namespace.
 
 ```typescript
-capturedResultItemTypes: Core.BasicStructures.EnumCapturedResultItemType;
+capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType;
 ```
+
+**See Also**
+
+* [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
 
 ## roi
 
  Represents the region of interest (ROI) as a quadrilateral. It defines the coordinates of the ROI.
 
 ```typescript
-roi: Core.BasicStructures.Quadrilateral;
+roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
 ```
 
 ## roiMeasuredInPercentage
@@ -81,7 +85,7 @@ timeout: number;
 Represents the simplified settings for barcode recognition using the SimplifiedBarcodeReaderSettings interface from the DBR namespace.
 
 ```typescript
-barcodeSettings: DBR.SimplifiedBarcodeReaderSettings;
+barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
 ```
 
 ## labelSettings
@@ -89,5 +93,5 @@ barcodeSettings: DBR.SimplifiedBarcodeReaderSettings;
 Represents the simplified settings for label recognition using the SimplifiedLabelRecognizerSettings interface from the DLR namespace.
 
 ```typescript
-labelSettings: DLR.SimplifiedLabelRecognizerSettings;
+labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
 ```

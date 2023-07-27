@@ -20,9 +20,9 @@ interface FileImageTag extends ImageTag {
             }
 ```
 
-## Attributes Summary
 
-| Attribute               | Type |
+
+| Properties               | Type |
 |----------------------|-------------|
 | [`filePath`](#filePath) | *string* |
 | [`pageNumber`](#pageNumber) | *number* |

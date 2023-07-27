@@ -10,22 +10,27 @@ noTitleIndex: true
 
 # ImageSourceStateListener
 
-| API Name                                                      | Description                                               |
-| ------------------------------------------------------------- | --------------------------------------------------------- |
-| [onImageSourceStateReceived()](#oncapturestatechanged)        | Called when the image source state changes.               |
-
-## onCaptureStateChanged
-
 The `ImageSourceStateListener` interface represents a listener for capture state changes. It defines a callback function `onImageSourceStateReceived` that will be called when the image source state changes.
+
+```typescript
+interface ImageSourceStateListener {
+  onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
+}
+```
+
+| Properties  
+**Syntax**
+
+```typescript
+```
+
+## onImageSourceStateReceived
 
 **Syntax**
 
 ```typescript
-interface ImageSourceStateListener {
-            onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
-        }
+onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
 ```
-
 **Parameters**
 
 `status`: The parameter status represents the received image source state. It is of type `EnumImageSourceState`, which is an enumeration representing different image source states.
@@ -38,8 +43,12 @@ None.
 
 ```javascript
 let issl = {
-      onImageSourceStateListener(state) {
-        console.log("run ImageSourceAdapterStatusListener", state);
-      }
-    }
+  onImageSourceStateListener(state) {
+    console.log("Image Source State: ", state);
+  }
+}
 ```
+
+**See Also**
+
+* [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)

@@ -22,7 +22,7 @@ interface Edge {
 
 ## Attributes
   
-| Attribute | Type |
+| Properties | Type |
 |---------- | ---- |
 | [`startCorner`](#startcorner) | *Corner* |
 | [`endCorner`](#endcorner) | *Corner* |

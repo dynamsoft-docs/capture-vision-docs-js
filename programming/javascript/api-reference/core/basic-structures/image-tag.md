@@ -20,9 +20,7 @@ interface ImageTag {
             }
 ```
 
-## Attributes Summary
-
-| Attribute            | Type |
+| Properties            | Type |
 |----------------------|-------------|
 | [`imageId`](#imageId) | *Number* |
 | [`type`](#type) | *EnumImageTagType* |

@@ -20,9 +20,8 @@ interface RawImageResultItem extends CapturedResultItem {
             }
 ```
 
-## Methods Summary
 
-| Method                          | Description                                      |
+| API Name                          | Description                                      |
 | ------------------------------- | ------------------------------------------------ |
 | [`imageData`](#imagedata) | Gets the image data for the RawImageResultItem. |
 

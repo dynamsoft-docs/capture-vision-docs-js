@@ -12,55 +12,35 @@ permalink: /programming/javascript/api-reference/utility/utility-module.html
 
 # Utility Module
 
-The Utility module is defined in the namespace `Dynamsoft.Utility`. It consists of the classes `ImageManager` and the interface `MultiFrameResultCrossFilter`.
+The `Utility` module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and the interface `MultiFrameResultCrossFilter`.
 
 ## UtilityModule Class
 
 This class defines common functionality in the Utility module. At present, it has only one method.
 
-| API Name                           | Description                                  |
-| ---------------------------------- | -------------------------------------------- |
-| static [getVersion()](#getversion) | Returns the version of the `Utility` module. |
+| API Name              | Description                                  |
+| --------------------- | -------------------------------------------- |
+| static `getVersion()` | Returns the version of the `Utility` module. |
+
+**Code snippet**
+
+```javascript
+const version = await Dynamsoft.Utility.UtilityModule.getVersion();
+console.log(version);
+```
 
 ## ImageManager Class
 
-The `LicenseManager` class is responsible for the licensing of all functional modules in Dynamsoft Capture Vision architecture.
+The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
 The APIs for this class are:
 
-| Method                                                                | Description                                                            |
-| --------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| [`getDeviceUUID`](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
-| [`initLicense`](./license-manager.md#initlicense)                     | Initializes the license using a license key.                           |
-| [`setDeviceFriendlyName`](./license-manager.md#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
+| API Name                                    | Description                          |
+| ------------------------------------------- | ------------------------------------ |
+| [`saveToFile`](image-manager.md#savetofile) | Saved the specified image as a file. |
 
 ## MultiFrameResultCrossFilter Interface
 
 This interface defines how license verification result is returned.
 
-* [LicenseVerificationListener](./license-verification-listener.md)
-
-## getVersion
-
-Returns the version of the Utility Module.
-
-**Syntax**
-
-```typescript
-static getVersion: () => string;
-```
-
-**Parameters**
-
-None.
-
-**Return Value**
-
-Returns a string representing the version of the Utility Module.
-
-**Code snippet**
-
-```javascript
-const version = await Dynamsoft.Utility.LicenseModule.getVersion();
-console.log(version);
-```
+* [MultiFrameResultCrossFilter](./multi-frame-result-cross-filter.md)

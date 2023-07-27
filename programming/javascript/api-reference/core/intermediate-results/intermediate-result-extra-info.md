@@ -22,9 +22,9 @@ interface IntermediateResultExtraInfo {
             };
 ```
 
-## Attributes Summary
 
-| Attribute                                             | Type                                |
+
+| Properties                                             | Type                                |
 | ----------------------------------------------------- | ----------------------------------- |
 | [`targetROIDefName`](#targetroidefname)               | *String*                            |
 | [`taskName`](#taskname)                               | *String*                            |

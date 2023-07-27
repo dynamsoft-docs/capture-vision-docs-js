@@ -24,7 +24,7 @@ interface Corner {
 
 ## Attributes
   
-| Attribute | Type |
+| Properties | Type |
 |---------- | ---- |
 | [`type`](#type) | *EnumCornerType* |
 | [`intersection`](#intersection) | *Point* |

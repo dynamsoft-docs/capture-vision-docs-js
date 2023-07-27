@@ -23,9 +23,9 @@ interface DSRect {
             }
 ```
 
-## Attributes Summary
 
-| Attribute            | Type |
+
+| Properties            | Type |
 |----------------------|-------------|
 | [`left`](#left) | *number* |
 | [`right`](#right) | *number* |

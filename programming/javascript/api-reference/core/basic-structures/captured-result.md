@@ -21,9 +21,9 @@ interface CapturedResult {
             }
 ```
 
-## Attributes Summary
 
-| Attribute            | Type |
+
+| Properties            | Type |
 |----------------------|-------------|
 | [`sourceImageHashId`](#sourceImageHashId) | *String* |
 | [`sourceImageTag`](#sourceImageTag) | *ImageTag* |

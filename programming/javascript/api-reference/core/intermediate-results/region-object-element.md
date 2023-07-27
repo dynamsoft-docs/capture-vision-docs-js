@@ -21,9 +21,9 @@ interface RegionObjectElement {
             }
 ```
 
-## Attributes Summary
 
-| Attribute               | Type |
+
+| Properties               | Type |
 |----------------------|-------------|
 | [`location`](#location) | *Core.BasicStructures.Quadrilateral* |
 | [`referencedElement`](#referencedelement) | *RegionObjectElement* |
