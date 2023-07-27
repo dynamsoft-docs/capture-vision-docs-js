@@ -8,7 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# CaptureVisionRouterImageSourceStateListener
+# ImageSourceStateListener
 
 | API Name                                                      | Description                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------- |
