@@ -18,9 +18,16 @@ The "CaptureVisionRouter" module is defined in the namespace `Dynamsoft.CVR`. It
 
 This class defines common functionality in the `CaptureVisionRouter` module. At present, it has only one method.
 
-| API Name                                                                | Description                                              |
-| ----------------------------------------------------------------------- | -------------------------------------------------------- |
-| static [getVersion()](capture-vision-router-module-class.md#getversion) | Returns the version of the `CaptureVisionRouter` module. |
+| API Name            | Description                                              |
+| ------------------- | -------------------------------------------------------- |
+| static getVersion() | Returns the version of the `CaptureVisionRouter` module. |
+
+**Code snippet**
+
+```javascript
+const version = await Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
+console.log(version);
+```
 
 ## CaptureVisionRouter Class
 
