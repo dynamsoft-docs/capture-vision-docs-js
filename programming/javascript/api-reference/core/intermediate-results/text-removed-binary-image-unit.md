@@ -23,7 +23,7 @@ interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`imageData`](#imageData) | *Core.BasicStructures.DSImageData* |
+| [`imageData`](#imagedata) | *Core.BasicStructures.DSImageData* |
 
 ### imageData
 

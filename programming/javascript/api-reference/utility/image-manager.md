@@ -14,14 +14,14 @@ The `ImageManager` class provides APIs for managing images. At present, it has o
 
 | API Name                    | Description                          |
 | --------------------------- | ------------------------------------ |
-| [`saveToFile`](#savetofile) | Saved the specified image as a file. |
+| [`saveToFile()`](#savetofile) | Saved the specified image as a file. |
 
 ### saveToFile
 
 It is used to save images to files.
 
 ```typescript
-saveToFile: (image: Core.BasicStructures.DSImageData, name: string, download?: boolean) => Promise<File>;
+saveToFile(image: Core.BasicStructures.DSImageData, name: string, download?: boolean): Promise<File>;
 ```
 
 **Parameters**

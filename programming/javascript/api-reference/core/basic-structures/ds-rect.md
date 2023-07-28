@@ -31,7 +31,7 @@ interface DSRect {
 | [`right`](#right) | *number* |
 | [`top`](#top) | *number* |
 | [`bottom`](#bottom) | *number* |
-| [`isMeasuredInPercentage`](#isMeasuredInPercentage) | *boolean* |
+| [`isMeasuredInPercentage`](#ismeasuredinpercentage) | *boolean* |
 
 ### left
 

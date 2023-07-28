@@ -22,7 +22,7 @@ The LicenseManager class provides a set of APIs to manage the licensing for the 
 Returns the unique identifier of the device. 
 
 ```typescript
-static getDeviceUUID: () => string;
+static getDeviceUUID(): string;
 ```
 
 **Return Value**
@@ -34,7 +34,7 @@ Returns a string representing the UUID of the device.
 Initializes the license using a license key. 
 
 ```typescript
-static initLicense: (license: string) => { isSuccess: boolean, error: string };
+static initLicense(license: string): { isSuccess: boolean, error: string };
 ```
 
 **Parameters**
@@ -53,7 +53,7 @@ Returns an object which contains the following information:
 Sets a recognizable name for the device which corresponds to its UUID.
 
 ```typescript
-static setDeviceFriendlyName: (name: string) => void;
+static setDeviceFriendlyName(name: string): void;
 ```
 
 **Parameters**

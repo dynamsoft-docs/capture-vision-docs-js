@@ -23,7 +23,7 @@ Returns an object that manages the saving and retrieval of intermediate results.
 **Syntax**
 
 ```typescript
-getIntermediateResultManager: () => Promise<Core.IntermediateResult.IntermediateResultManager>;
+getIntermediateResultManager(): Promise<Core.IntermediateResult.IntermediateResultManager>;
 ```
 
 **Parameters**

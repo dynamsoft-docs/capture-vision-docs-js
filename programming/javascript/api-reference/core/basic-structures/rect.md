@@ -30,7 +30,7 @@ interface Rect {
 | [`y`](#y) | *number* |
 | [`width`](#width) | *number* |
 | [`height`](#height) | *number* |
-| [`isMeasuredInPercentage`](#isMeasuredInPercentage) | *boolean* |
+| [`isMeasuredInPercentage`](#ismeasuredinpercentage) | *boolean* |
 
 ### x
 

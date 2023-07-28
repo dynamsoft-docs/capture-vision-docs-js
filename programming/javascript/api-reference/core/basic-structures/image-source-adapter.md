@@ -18,59 +18,59 @@ abstract class ImageSourceAdapter {
 
   constructor();
 
-  addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
+  addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
   
-  abstract hasNextImageToFetch: () => boolean;
+  abstract hasNextImageToFetch(): boolean;
 
-  startFetching: () => void;
+  startFetching(): void;
 
-  stopFetching: () => void;
+  stopFetching(): void;
   
-  getImage: () => Promise<Core.BasicStructures.DSImageData>;
+  getImage(): Promise<Core.BasicStructures.DSImageData>;
     
-  setMaxImageCount: (count: number) => void;
+  setMaxImageCount(count: number): void;
 
-  getMaxImageCount: () => number;
+  getMaxImageCount(): number;
   
-  setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowProtectionMode) => void;
+  setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowProtectionMode): void;
 
-  getBufferOverflowProtectionMode: () => Core.BasicStructures.EnumBufferOverflowProtectionMode;
+  getBufferOverflowProtectionMode(): Core.BasicStructures.EnumBufferOverflowProtectionMode;
 
-  hasImage: (imageId: number) => boolean;
+  hasImage(imageId: number): boolean;
 
-  setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
+  setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
 
-  getImageCount: () => number;
+  getImageCount(): number;
 
-  isBufferEmpty: () => boolean;
+  isBufferEmpty(): boolean;
 
-  clearBuffer: () => void;
+  clearBuffer(): void;
 
-  setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageType) => void;
+  setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
 
-  getColourChannelUsageType: () => Core.BasicStructures.EnumColourChannelUsageType;
+  getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
 }
 ```
 
 
 | API Name | Description |
 |--------|-------------|
-| [`addImageToBuffer`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
-| [`hasNextImageToFetch`](#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
-| [`startFetching`](#startfetching) | Starts fetching images. |
-| [`stopFetching`](#stopfetching) | Stops fetching images. |
-| [`getImage`](#getimage) | Returns a buffered image. |
-| [`setMaxImageCount`](#setmaximagecount) | Sets how many images are allowed to be buffered. |
-| [`getMaxImageCount`](#getmaximagecount) | Returns how many images can be buffered. |
-| [`setBufferOverflowProtectionMode`](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
-| [`getBufferOverflowProtectionMode`](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode. |
-| [`hasImage`](#hasimage) | Determines whether the image is in the buffer or not. |
-| [`setNextImageToReturn`](#setnextimagetoreturn) | Sets the next image to return. |
-| [`getImageCount`](#getimagecount) | Returns the actual count of buffered images. |
-| [`IsBufferEmpty`](#isbufferempty) | Determines whether the buffer is empty. |
-| [`ClearBuffer`](#clearbuffer) | Clears the image buffer. |
-| [`SetColourChannelUsageType`](#setcolourchannelusagetype) | Sets the usage type of a color channel in an image. |
-| [`GetColourChannelUsageType`](#getcolourchannelusagetype) | Gets the usage type of a color channel in an image. |
+| [`addImageToBuffer()`](#addimagetobuffer) | Adds an image to the buffer of the adapter. |
+| [`hasNextImageToFetch()`](#hasnextimagetofetch) | Determines whether there are more images left to fetch. |
+| [`startFetching()`](#startfetching) | Starts fetching images. |
+| [`stopFetching()`](#stopfetching) | Stops fetching images. |
+| [`getImage()`](#getimage) | Returns a buffered image. |
+| [`setMaxImageCount()`](#setmaximagecount) | Sets how many images are allowed to be buffered. |
+| [`getMaxImageCount()`](#getmaximagecount) | Returns how many images can be buffered. |
+| [`setBufferOverflowProtectionMode()`](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
+| [`getBufferOverflowProtectionMode()`](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode. |
+| [`hasImage()`](#hasimage) | Determines whether the image is in the buffer or not. |
+| [`setNextImageToReturn()`](#setnextimagetoreturn) | Sets the next image to return. |
+| [`getImageCount()`](#getimagecount) | Returns the actual count of buffered images. |
+| [`IsBufferEmpty()`](#isbufferempty) | Determines whether the buffer is empty. |
+| [`ClearBuffer()`](#clearbuffer) | Clears the image buffer. |
+| [`SetColourChannelUsageType()`](#setcolourchannelusagetype) | Sets the usage type of a color channel in an image. |
+| [`GetColourChannelUsageType()`](#getcolourchannelusagetype) | Gets the usage type of a color channel in an image. |
 
 ---
 
@@ -79,7 +79,7 @@ abstract class ImageSourceAdapter {
 Adds an image to the buffer of the adapter.
 
 ```typescript
-addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
+addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
 ```
 
 **Parameters**
@@ -91,7 +91,7 @@ addImageToBuffer: (image: Core.BasicStructures.DSImageData) => void;
 An abstract method that needs to be implemented by the user. It checks if there is a next image to fetch.
 
 ```typescript
-abstract hasNextImageToFetch: () => boolean;
+abstract hasNextImageToFetch(): boolean;
 ```
 
 **Return value**
@@ -103,7 +103,7 @@ Returns true if there are more images left to fetch, false otherwise.
 Starts fetching images.
 
 ```typescript
-startFetching: () => void;
+startFetching(): void;
 ```
 
 ### stopFetching
@@ -111,7 +111,7 @@ startFetching: () => void;
 Stops fetching images.
 
 ```typescript
-stopFetching: () => void;
+stopFetching(): void;
 ```
 
 ### getImage
@@ -119,7 +119,7 @@ stopFetching: () => void;
 Retrieves a buffered image as a promise.
 
 ```typescript
-getImage: () => Promise<Core.BasicStructures.DSImageData>;
+getImage(): Promise<Core.BasicStructures.DSImageData>;
 ```
 
 **Return value**
@@ -131,7 +131,7 @@ Returns the image object as a promise .
 Sets how many images are allowed to be buffered.
 
 ```typescript
-setMaxImageCount: (count: number) => void;
+setMaxImageCount(count: number): void;
 ```
 
 **Parameters**
@@ -143,7 +143,7 @@ setMaxImageCount: (count: number) => void;
 Returns how many images can be buffered.
 
 ```typescript
-getMaxImageCount: () => number;
+getMaxImageCount(): number;
 ```
 
 **Return value**
@@ -155,7 +155,7 @@ Returns the maximum number of images that can be buffered.
 Sets a mode that determines the action to take when there is a new incoming image and the buffer is full.
 
 ```typescript
-setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowProtectionMode) => void;
+setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowProtectionMode): void;
 ```
 
 **Parameters**
@@ -167,7 +167,7 @@ setBufferOverflowProtectionMode: (mode: Core.BasicStructures.EnumBufferOverflowP
 Returns the current buffer overflow protection mode.
 
 ```typescript
-getBufferOverflowProtectionMode: () => Core.BasicStructures.EnumBufferOverflowProtectionMode;
+getBufferOverflowProtectionMode(): Core.BasicStructures.EnumBufferOverflowProtectionMode;
 ```
 
 **Return value**
@@ -179,7 +179,7 @@ Returns the current buffer overflow protection mode.
 Determines whether the image is in the buffer or not.
 
 ```typescript
-hasImage: (imageId: number) => boolean;
+hasImage(imageId: number): boolean;
 ```
 
 **Parameters**
@@ -195,7 +195,7 @@ Returns true if the image is in the buffer, false otherwise.
 Sets the next image to return.
 
 ```typescript
-setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
+setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
 ```
 
 **Parameters**
@@ -210,7 +210,7 @@ setNextImageToReturn: (imageId: number, keepInBuffer?: boolean) => void;
 Returns the actual count of buffered images.
 
 ```typescript
-getImageCount: () => number;
+getImageCount(): number;
 ```
 
 **Return value**
@@ -222,7 +222,7 @@ Returns the actual count of buffered images.
 Determines whether the buffer is empty.
 
 ```typescript
-isBufferEmpty: () => boolean;
+isBufferEmpty(): boolean;
 ```
 
 **Return value**
@@ -234,7 +234,7 @@ Returns true if the buffer is empty, false otherwise.
 Clear the image buffer.
 
 ```typescript
-clearBuffer: () => void;
+clearBuffer(): void;
 ```
 
 ### setColourChannelUsageType
@@ -242,7 +242,7 @@ clearBuffer: () => void;
 Sets the usage type of a color channel in images.
 
 ```typescript
-setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageType) => void;
+setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
 ```
 
 ### getColourChannelUsageType
@@ -250,7 +250,7 @@ setColourChannelUsageType: (type: Core.BasicStructures.EnumColourChannelUsageTyp
 Gets the usage type of a color channel in images.
 
 ```typescript
-getColourChannelUsageType: () => Core.BasicStructures.EnumColourChannelUsageType;
+getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
 ```
 
 **Return value**

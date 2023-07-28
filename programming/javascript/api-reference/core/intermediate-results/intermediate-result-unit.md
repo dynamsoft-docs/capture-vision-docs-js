@@ -26,11 +26,11 @@ interface IntermediateResultUnit {
 
 | API Name               | Description |
 |----------------------|-------------|
-| [`hashId`](#hashId) | Gets the hash ID of the unit.|
-| [`sourceImageHashId`](#sourceImageHashId) | Gets the hash ID of the source image. |
-| [`sourceImageTag`](#sourceImageTag) | Gets the image tag of the source image. |
-| [`localToSourceImageTransformMatrix`](#localToSourceImageTransformMatrix) | Gets the transformation matrix from local to source image coordinates. |
-| [`unitType`](#unitType) | Gets the type of the intermediate result unit. |
+| [`hashId`](#hashid) | Gets the hash ID of the unit.|
+| [`sourceImageHashId`](#sourceimagehashid) | Gets the hash ID of the source image. |
+| [`sourceImageTag`](#sourceimagetag) | Gets the image tag of the source image. |
+| [`localToSourceImageTransformMatrix`](#localtosourceimagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
+| [`unitType`](#unittype) | Gets the type of the intermediate result unit. |
 
 ### hashId
 

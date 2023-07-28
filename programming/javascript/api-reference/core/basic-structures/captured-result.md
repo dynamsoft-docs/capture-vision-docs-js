@@ -25,8 +25,8 @@ interface CapturedResult {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`sourceImageHashId`](#sourceImageHashId) | *String* |
-| [`sourceImageTag`](#sourceImageTag) | *ImageTag* |
+| [`sourceImageHashId`](#sourceimagehashid) | *String* |
+| [`sourceImageTag`](#sourceimagetag) | *ImageTag* |
 | [`items`](#items) | *Array* |
 
 ### sourceImageHashId

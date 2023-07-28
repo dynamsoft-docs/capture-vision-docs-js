@@ -18,19 +18,12 @@ interface ImageSourceStateListener {
 }
 ```
 
-| Properties  
-**Syntax**
-
-```typescript
-```
-
 ## onImageSourceStateReceived
-
-**Syntax**
 
 ```typescript
 onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
 ```
+
 **Parameters**
 
 `status`: The parameter status represents the received image source state. It is of type `EnumImageSourceState`, which is an enumeration representing different image source states.

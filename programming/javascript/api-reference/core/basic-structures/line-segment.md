@@ -24,8 +24,8 @@ interface LineSegment {
 
 | Properties | Type |
 |---------- | ---- |
-| [`startPoint`](#startPoint) | *Point* |
-| [`endPoint`](#endPoint) | *Point* |
+| [`startPoint`](#startpoint) | *Point* |
+| [`endPoint`](#endpoint) | *Point* |
 
 ### startPoint
 

@@ -28,7 +28,7 @@ Initializes the Runtime Settings with the settings in the given JSON string.
 **Syntax**
 
 ```typescript
-initSettings: (settings: string) => Promise<void>;
+initSettings(settings: string): Promise<void>;
 ```
 
 **Parameters**
@@ -59,7 +59,7 @@ Returns the settings of the CaptureVisionRouter as a JSON string.
 **Syntax**
 
 ```typescript
-outputSettings: (templateName?: string) => Promise<string>;
+outputSettings(templateName?: string): Promise<string>;
 ```
 
 **Parameters**
@@ -85,7 +85,7 @@ Retrieves the simplified settings for a specific template from the CaptureVision
 **Syntax**
 
 ```typescript
-getSimplifiedSettings: (templateName: string) => Promise<SimplifiedCaptureVisionSettings | null>;
+getSimplifiedSettings(templateName: string): Promise<SimplifiedCaptureVisionSettings | null>;
 ```
 
 **parameter**
@@ -112,7 +112,7 @@ Updates a few key settings of a template with new values.
 **Syntax**
 
 ```typescript
-updateSettings: (templateName: string, settings: SimplifiedCaptureVisionSettings) => Promise<void>;
+updateSettings(templateName: string, settings: SimplifiedCaptureVisionSettings): Promise<void>;
 ```
 
 **parameter**
@@ -148,7 +148,7 @@ Resets all settings of the CaptureVisionRouter to their default values.
 **Syntax**
 
 ```typescript
-resetSettings: () => Promise<void>;
+resetSettings(): Promise<void>;
 ```
 
 **parameter**

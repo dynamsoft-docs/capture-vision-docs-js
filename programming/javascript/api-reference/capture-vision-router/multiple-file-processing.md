@@ -33,7 +33,7 @@ Sets the input image source for consecutive process.
 **Syntax**
 
 ```typescript
-setInput: (imageSource: Core.BasicStructures.ImageSourceAdapter) => void;
+setInput(imageSource: Core.BasicStructures.ImageSourceAdapter): void;
 ```
 
 **parameter**
@@ -60,7 +60,7 @@ Returns the current input image source of the CaptureVisionRouter.
 **Syntax**
 
 ```typescript
-getInput: () => Core.BasicStructures.ImageSourceAdapter;
+getInput(): Core.BasicStructures.ImageSourceAdapter;
 ```
 
 **parameter**
@@ -84,7 +84,7 @@ Adds an object that listens to the state changes of the capture process.
 **Syntax**
 
 ```typescript
-addCaptureStateListener: (listener: CaptureStateListener) => void;
+addCaptureStateListener(listener: CaptureStateListener): void;
 ```
 
 **parameter**
@@ -114,7 +114,7 @@ Removes an object which listens to the state changes of the capture process.
 **Syntax**
 
 ```typescript
-removeCaptureStateListener: (listener: CaptureStateListener) => void;
+removeCaptureStateListener(listener: CaptureStateListener): void;
 ```
 
 **parameter**
@@ -144,7 +144,7 @@ Adds an object that listens to state changes of the image source.
 **Syntax**
 
 ```typescript
-addImageSourceStateListener: (listener: ImageSourceStateListener) => void;
+addImageSourceStateListener(listener: ImageSourceStateListener): void;
 ```
 
 **parameter**
@@ -174,7 +174,7 @@ Removes an object which listens to state changes of the image source.
 **Syntax**
 
 ```typescript
-removeImageSourceStateListener: (listener: ImageSourceStateListener) => void;
+removeImageSourceStateListener(listener: ImageSourceStateListener): void;
 ```
 
 **parameter**
@@ -204,7 +204,7 @@ Adds an object as the receiver of captured results.
 **Syntax**
 
 ```typescript
-addResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => void;
+addResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -236,7 +236,7 @@ Removes an object which was added as a receiver of captured results.
 **Syntax**
 
 ```typescript
-removeResultReceiver: (receiver: Core.BasicStructures.CapturedResultReceiver) => void;
+removeResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -268,7 +268,7 @@ cvr.removeResultReceiver(crr);
 **Syntax**
 
 ```typescript
-addResultFilter: (filter: Core.BasicStructures.CapturedResultFilter) => Promise<void>;
+addResultFilter(filter: Core.BasicStructures.CapturedResultFilter): Promise<void>;
 ```
 
 **parameter**
@@ -293,7 +293,7 @@ Starts to process images consecutively.
 **Syntax**
 
 ```typescript
-startCapturing: (templateName?: string) => void;
+startCapturing(templateName?: string): void;
 ```
 
 **parameter**
@@ -318,7 +318,7 @@ Stops the consecutive process.
 **Syntax**
 
 ```typescript
-stopCapturing: () => void;
+stopCapturing(): void;
 ```
 
 **parameter**

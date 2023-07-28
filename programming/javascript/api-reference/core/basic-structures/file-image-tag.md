@@ -24,8 +24,8 @@ interface FileImageTag extends ImageTag {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`filePath`](#filePath) | *string* |
-| [`pageNumber`](#pageNumber) | *number* |
+| [`filePath`](#filepath) | *string* |
+| [`pageNumber`](#pagenumber) | *number* |
 
 ### filePath
 

@@ -24,9 +24,7 @@ interface SimplifiedCaptureVisionSettings {
 }
 ```
 
-
-
-| Properties                                           | Type                                                        |
+| Properties                                          | Type                                                        |
 | --------------------------------------------------- | ----------------------------------------------------------- |
 | [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType* |
 | [roi](#roi)                                         | *Dynamsoft.Core.BasicStructures.Quadrilateral*              |

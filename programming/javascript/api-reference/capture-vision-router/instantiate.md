@@ -27,7 +27,7 @@ Loads the specified module to speed up the initialization.
 **Syntax**
 
 ```typescript
-preLoadModule: (moduleName: string | Array<string>) => void
+preLoadModule(moduleName: string | Array<string>): void
 ```
 
 **Parameter**
@@ -51,7 +51,7 @@ Returns whether the specified module has been loaded.
 **Syntax**
 
 ```typescript
-isModuleLoaded: (moduleName: string) => boolean;
+isModuleLoaded(moduleName: string): boolean;
 ```
 
 **Parameter**
@@ -79,7 +79,7 @@ Initializes a new instance of the `CaptureVisionRouter` class.
 **Syntax**
 
 ```typescript
-createInstance: () => Promise<CaptureVisionRouter>;
+createInstance(): Promise<CaptureVisionRouter>;
 ```
 
 **Parameter**
@@ -88,7 +88,7 @@ None.
 
 **Return value**
 
-A promise that resolves to the initalized `CaptureVisionRouter` object.
+A promise that resolves to the initialized `CaptureVisionRouter` object.
 
 **Code snippet**
 
@@ -103,7 +103,7 @@ Releases all resources used by the `CaptureVisionRouter` object.
 **Syntax**
 
 ```typescript
-dispose: () => void;
+dispose(): void;
 ```
 
 **Parameter**

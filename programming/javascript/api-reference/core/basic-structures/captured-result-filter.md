@@ -17,30 +17,30 @@ The `CaptureResultFilter` interface contains several callback functions for diff
 
 ```typescript
 interface CapturedResultFilter {
-  onRawImageResultReceived: (result: Core.BasicStructures.RawImageResultItem) => void;
-  onDecodedBarcodesReceived: (result: DBR.DecodedBarcodesResult) => void;
-  onRecognizedTextLinesReceived: (result: DLR.RecognizedTextLinesResult) => void;
-  onDetectedQuadsReceived: (result: DDN.DetectedQuadsResult) => void;
-  onNormalizedImagesReceived: (result: DDN.NormalizedImagesResult) => void;
-  onParsedResultsReceived: (result: DCP.ParsedResult) => void;
+  onRawImageResultReceived(result: Core.BasicStructures.RawImageResultItem): void;
+  onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
+  onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
+  onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
+  onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
+  onParsedResultsReceived(result: DCP.ParsedResult): void;
 } 
 ```
 
 | API Name                                                            | Description                                          |
 | ----------------------------------------------------------------- | ---------------------------------------------------- |
-| [`OnRawImageResultReceived`](#onrawimageresultreceived)           | Callback function for raw image results.             |
-| [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
-| [`OnRecognizedTextLinesReceived`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
-| [`OnDetectedQuadsReceived`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
-| [`OnNormalizedImagesReceived`](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
-| [`OnParsedResultsReceived`](#onparsedresultsreceived)             | Callback function for parsed results.                |
+| [`OnRawImageResultReceived()`](#onrawimageresultreceived)           | Callback function for raw image results.             |
+| [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
+| [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
+| [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
+| [`OnNormalizedImagesReceived()`](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
+| [`OnParsedResultsReceived()`](#onparsedresultsreceived)             | Callback function for parsed results.                |
 
 ### OnRawImageResultReceived
 
 Callback function for raw image results. It will be called once for each raw image result.
 
 ```typescript
-onRawImageResultReceived: (result: Core.BasicStructures.RawImageResultItem) => void;
+onRawImageResultReceived(result: Core.BasicStructures.RawImageResultItem): void;
 ```
 
 **Parameters**
@@ -52,7 +52,7 @@ onRawImageResultReceived: (result: Core.BasicStructures.RawImageResultItem) => v
 Callback function for decoded barcodes results. It will be called once for each decoded barcodes result.
 
 ```typescript
-onDecodedBarcodesReceived: (result: DBR.DecodedBarcodesResult) => void;
+onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
 ```
 
 **Parameters**
@@ -64,7 +64,7 @@ onDecodedBarcodesReceived: (result: DBR.DecodedBarcodesResult) => void;
 Callback function for recognized text lines results. It will be called once for each recognized text lines result.
 
 ```typescript
-onRecognizedTextLinesReceived: (result: DLR.RecognizedTextLinesResult) => void;
+onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
 ```
 
 **Parameters**
@@ -76,7 +76,7 @@ onRecognizedTextLinesReceived: (result: DLR.RecognizedTextLinesResult) => void;
 Callback function for detected quads results. It will be called once for each detected quads result.
 
 ```typescript
-onDetectedQuadsReceived: (result: DDN.DetectedQuadsResult) => void;
+onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
 ```
 
 **Parameters**
@@ -88,7 +88,7 @@ onDetectedQuadsReceived: (result: DDN.DetectedQuadsResult) => void;
 Callback function for normalized images results. It will be called once for each normalized images result.
 
 ```typescript
-onNormalizedImagesReceived: (result: DDN.NormalizedImagesResult) => void;
+onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
 ```
 
 **Parameters**
@@ -100,7 +100,7 @@ onNormalizedImagesReceived: (result: DDN.NormalizedImagesResult) => void;
 Callback function for parsed results. It will be called once for each parsed result.
 
 ```typescript
-onParsedResultsReceived: (result: DCP.ParsedResult) => void;
+onParsedResultsReceived(result: DCP.ParsedResult): void;
 ```
 
 **Parameters**
