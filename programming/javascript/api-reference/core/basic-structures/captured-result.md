@@ -15,8 +15,8 @@ The CapturedResult provides access to the source image information and the list 
 
 ```typescript
 interface CapturedResult {
-                readonly sourceImageHashId: string;
-                readonly sourceImageTag: ImageTag;
+                readonly OriginalImageHashId: string;
+                readonly OriginalImageTag: ImageTag;
                 readonly items: Array<CapturedResultItem>;
             }
 ```
@@ -25,24 +25,24 @@ interface CapturedResult {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`sourceImageHashId`](#sourceimagehashid) | *String* |
-| [`sourceImageTag`](#sourceimagetag) | *ImageTag* |
+| [`OriginalImageHashId`](#originalimagehashid) | *String* |
+| [`OriginalImageTag`](#originalimagetag) | *ImageTag* |
 | [`items`](#items) | *Array* |
 
-### sourceImageHashId
+### OriginalImageHashId
 
 A string representing the hash ID of the source image.
 
 ```typescript
-readonly sourceImageHashId: string;
+readonly OriginalImageHashId: string;
 ```
 
-### sourceImageTag
+### OriginalImageTag
 
 An `ImageTag` object representing the tag associated with the source image.
 
 ```typescript
-readonly sourceImageTag: ImageTag;
+readonly OriginalImageTag: ImageTag;
 ```
 
 ### items

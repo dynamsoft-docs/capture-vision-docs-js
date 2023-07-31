@@ -18,7 +18,7 @@ The `CaptureResultReceiver` interface is responsible for receiving captured resu
 ```typescript
 interface CapturedResultReceiver {
   onCapturedResultReceived?(pResult: Core.BasicStructures.CapturedResult): void;
-  onRawImageResultReceived?(pResult: RawImageResultItem): void;
+  onOriginalImageResultReceived?(pResult: OriginalImageResultItem): void;
   onDecodedBarcodesReceived?(pResult: DBR.DecodedBarcodesResult): void;
   onRecognizedTextLinesReceived?(pResult: DLR.RecognizedTextLinesResult):void;
   onDetectedQuadsReceived?(pResult: DDN.DetectedQuadsResult): void;
@@ -31,7 +31,7 @@ interface CapturedResultReceiver {
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
 | [`OnCapturedResultReceived()`](#oncapturedresultreceived)           | Callback function for all captured results.          |
-| [`OnRawImageResultReceived()`](#onrawimageresultreceived)           | Callback function for raw image results.             |
+| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for raw image results.             |
 | [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
 | [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
 | [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
@@ -50,12 +50,12 @@ onCapturedResultReceived(pResult: Core.BasicStructures.CapturedResult): void;
 
 `pResult`: The captured result.
 
-### OnRawImageResultReceived
+### OnOriginalImageResultReceived
 
-Callback function for raw image results. It will be called once for each raw image result.
+Callback function for original image results. It will be called once for each original image result.
 
 ```typescript
-onRawImageResultReceived(pResult: RawImageResultItem): void;
+onOriginalImageResultReceived(pResult: OriginalImageResultItem): void;
 ```
 
 **Parameters**

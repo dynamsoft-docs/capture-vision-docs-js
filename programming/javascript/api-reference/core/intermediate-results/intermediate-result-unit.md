@@ -16,9 +16,9 @@ The IntermediateResultUnit interface represents an intermediate result unit used
 ```typescript
 interface IntermediateResultUnit {
                 hashId: string;
-                sourceImageHashId: string;
-                sourceImageTag: Core.BasicStructures.ImageTag;
-                localToSourceImageTransformMatrix: Array<{ local: number, source: number }>;
+                OriginalImageHashId: string;
+                originalImageTag: Core.BasicStructures.ImageTag;
+                ImageTransformMatrix: Array<{ local: number, source: number }>;
                 unitType: EnumIntermediateResultUnitType;
             }
 ```
@@ -27,9 +27,9 @@ interface IntermediateResultUnit {
 | API Name               | Description |
 |----------------------|-------------|
 | [`hashId`](#hashid) | Gets the hash ID of the unit.|
-| [`sourceImageHashId`](#sourceimagehashid) | Gets the hash ID of the source image. |
-| [`sourceImageTag`](#sourceimagetag) | Gets the image tag of the source image. |
-| [`localToSourceImageTransformMatrix`](#localtosourceimagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
+| [`originalImageHashId`](#originalimagehashid) | Gets the hash ID of the source image. |
+| [`originalImageTag`](#originalimagetag) | Gets the image tag of the source image. |
+| [`ImageTransformMatrix`](#imagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
 | [`unitType`](#unittype) | Gets the type of the intermediate result unit. |
 
 ### hashId
@@ -44,36 +44,36 @@ hashId: string;
 
 Returns the hash ID of the unit. 
 
-### sourceImageHashId
+### originalImageHashId
 
 The hash ID of the source image.
 
 ```typescript
-sourceImageHashId: string;
+OriginalImageHashId: string;
 ```
 
 **Return value**
 
 Returns the hash ID of the source image.
 
-### sourceImageTag
+### originalImageTag
 
 The image tag of the source image.
 
 ```typescript
-sourceImageTag: Core.BasicStructures.ImageTag;
+originalImageTag: Core.BasicStructures.ImageTag;
 ```
 
 **Return value**
 
 Returns the image tag of the source image.
 
-### localToSourceImageTransformMatrix
+### ImageTransformMatrix
 
 The transformation matrix from local to source image coordinates.
 
 ```typescript
-virtual void GetLocalToSourceImageTransformMatrix(double matrix[9]) const
+ImageTransformMatrix: Array<{ local: number, source: number }>;
 ```
 
 ### unitType

@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # PDFReadingParameter
 
-The PDFReadingParameter interface represents the parameters for reading a PDF file. It contains the mode of PDF reading, the DPI (dots per inch) value, and the tarGetstype.
+The PDFReadingParameter interface represents the parameters for reading a PDF file. It contains the mode of PDF reading, the DPI (dots per inch) value, and the target content type.
 
 ## Definition
 
@@ -17,7 +17,7 @@ The PDFReadingParameter interface represents the parameters for reading a PDF fi
 interface PDFReadingParameter {
                 mode: EnumPDFReadingMode;
                 dpi: number;
-                type: EnumTargetType;
+                rasterDataSource: EnumRasterDataSource;
             } 
 ```
 
@@ -27,7 +27,7 @@ interface PDFReadingParameter {
 |---------- | ---- |
 | [`mode`](#mode) | *EnumPDFReadingMode* |
 | [`dpi`](#dpi) | *number* |
-| [`type`](#type) | *EnumTargetType* |
+| [`rasterDataSource`](#rasterdatasource) | *EnumRasterDataSource* |
 
 ### mode
 
@@ -37,6 +37,6 @@ The mode of PDF reading.
 
 The DPI (dots per inch) value.
 
-### type
+### rasterDataSource
 
-The targetType.
+The rasterDataSource.

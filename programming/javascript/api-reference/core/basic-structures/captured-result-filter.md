@@ -17,7 +17,7 @@ The `CaptureResultFilter` interface contains several callback functions for diff
 
 ```typescript
 interface CapturedResultFilter {
-  onRawImageResultReceived(result: Core.BasicStructures.RawImageResultItem): void;
+  onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
   onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
   onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
   onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
@@ -27,25 +27,25 @@ interface CapturedResultFilter {
 ```
 
 | API Name                                                            | Description                                          |
-| ----------------------------------------------------------------- | ---------------------------------------------------- |
-| [`OnRawImageResultReceived()`](#onrawimageresultreceived)           | Callback function for raw image results.             |
+| ------------------------------------------------------------------- | ---------------------------------------------------- |
+| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for raw image results.             |
 | [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
 | [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
 | [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
 | [`OnNormalizedImagesReceived()`](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
 | [`OnParsedResultsReceived()`](#onparsedresultsreceived)             | Callback function for parsed results.                |
 
-### OnRawImageResultReceived
+### OnOriginalImageResultReceived
 
-Callback function for raw image results. It will be called once for each raw image result.
+Callback function for original image results. It will be called once for each original image result.
 
 ```typescript
-onRawImageResultReceived(result: Core.BasicStructures.RawImageResultItem): void;
+onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
 ```
 
 **Parameters**
 
-`result`: The raw image result.
+`result`: The original image result.
 
 ### OnDecodedBarcodesReceived
 

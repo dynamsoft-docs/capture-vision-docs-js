@@ -15,9 +15,9 @@ The IntermediateResultManager interface manages intermediate results generated d
 
 ```typescript
 interface IntermediateResultManager {
-                addResultReceiver: (receiver: IntermediateResultReceiver) => void;
-                removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
-                getRawImage: (imageHashId: string) => Promise<Core.BasicStructures.DSImageData>;
+                addResultReceiver(receiver: IntermediateResultReceiver): void;
+                removeResultReceiver(receiver: IntermediateResultReceiver): void;
+                getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
             }
 ```
 
@@ -26,14 +26,14 @@ interface IntermediateResultManager {
 |--------|-------------|
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
 | [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
-| [`getRawImage`](#getrawimage) | Gets the raw image data using an image hash id. |
+| [`getOriginalImage`](#getoriginalimage) | Gets the raw image data using an image hash id. |
 
 ### addResultReceiver
 
 Adds an intermediate result receiver to the manager.
 
 ```typescript
-addResultReceiver: (receiver: IntermediateResultReceiver) => void;
+addResultReceiver(receiver: IntermediateResultReceiver): void;
 ```
 
 **Parameters**
@@ -45,19 +45,19 @@ addResultReceiver: (receiver: IntermediateResultReceiver) => void;
 Removes an intermediate result receiver from the manager.
 
 ```typescript
-removeResultReceiver: (receiver: IntermediateResultReceiver) => void;
+removeResultReceiver(receiver: IntermediateResultReceiver): void;
 ```
 
 **Parameters**
 
 `receiver`: The intermediate result receiver to remove.
 
-### getRawImage
+### getOriginalImage
 
 Gets the raw image data using an image hash id.
 
 ```typescript
-getRawImage: (imageHashId: string) => Promise<Core.BasicStructures.DSImageData>;
+getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
 ```
 
 **Parameters**

@@ -60,11 +60,11 @@ The `IntermediateResultManager` class defines a user can interact with the `Capt
 
 The APIs for this class are:
 
-| API Name                                                                                               | Description                                     |
+| API Name                                                                                             | Description                                     |
 | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
 | [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |
-| [`getRawImage`](./intermediate-results/intermediate-result-manager.md#getrawimage)                   | Gets the raw image data using an image hash id. |
+| [`getOriginalImage`](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the raw image data using an image hash id. |
 
 ## Interfaces and Enums
 
@@ -92,7 +92,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Point](./basic-structures/point.md)
 * [Polygon](./basic-structures/polygon.md)
 * [Quadrilateral](./basic-structures/quadrilateral.md)
-* [RawImageResultItem](./basic-structures/raw-image-result-item.md)
+* [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
 * [Rect](./basic-structures/rect.md)
 
 The following interfaces facilitate the use of intermediate result functions:
@@ -134,7 +134,7 @@ The following are the basic enumerations often shared by more than one module:
 * [EnumImagePixelFormat]({{ site.enums }}core/image-pixel-format.html?lang=js)
 * [EnumImageTagType]({{ site.enums }}core/image-tag-type.html?lang=js)
 * [EnumPDFReadingMode]({{ site.enums }}core/pdf-reading-mode.html?lang=js)
-* [EnumTargetType]({{ site.enums }}core/target-type.html?lang=js)
+* [EnumRasterDataSource]({{ site.enums }}core/raster-data-source.html?lang=js)
 <!-- * [EnumVideoFrameQuality]({{ site.enums }}core/video-frame-quality.html?lang=js) -->
 
 The following enumerations facilitate the use of intermediate result functions:
