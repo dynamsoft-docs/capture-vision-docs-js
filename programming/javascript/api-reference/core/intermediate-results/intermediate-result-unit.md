@@ -18,8 +18,8 @@ interface IntermediateResultUnit {
                 hashId: string;
                 OriginalImageHashId: string;
                 originalImageTag: Core.BasicStructures.ImageTag;
-                ImageTransformMatrix: Array<{ local: number, source: number }>;
                 unitType: EnumIntermediateResultUnitType;
+                getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
             }
 ```
 
@@ -29,8 +29,8 @@ interface IntermediateResultUnit {
 | [`hashId`](#hashid) | Gets the hash ID of the unit.|
 | [`originalImageHashId`](#originalimagehashid) | Gets the hash ID of the source image. |
 | [`originalImageTag`](#originalimagetag) | Gets the image tag of the source image. |
-| [`ImageTransformMatrix`](#imagetransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
 | [`unitType`](#unittype) | Gets the type of the intermediate result unit. |
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
 
 ### hashId
 
@@ -46,7 +46,7 @@ Returns the hash ID of the unit.
 
 ### originalImageHashId
 
-The hash ID of the source image.
+The hash ID of the original image.
 
 ```typescript
 OriginalImageHashId: string;
@@ -68,14 +68,6 @@ originalImageTag: Core.BasicStructures.ImageTag;
 
 Returns the image tag of the source image.
 
-### ImageTransformMatrix
-
-The transformation matrix from local to source image coordinates.
-
-```typescript
-ImageTransformMatrix: Array<{ local: number, source: number }>;
-```
-
 ### unitType
 
 The type of the intermediate result unit.
@@ -83,3 +75,19 @@ The type of the intermediate result unit.
 ```typescript
 unitType: EnumIntermediateResultUnitType;
 ```
+
+### getTransformMatrix
+
+Get the transformation matrix from local to source image coordinates.
+
+```typescript
+getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>;
+```
+
+**Parameter**
+
+`matrixType`:A specific enumeration type to determine the type of transformation matrix to retrieve.
+
+**Return value**
+
+Return the matrix which is an Array of 9 numbers.
