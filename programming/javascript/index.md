@@ -4,6 +4,7 @@ title: Index - Dynamsoft Capture Vision JavaScript Edition
 description: The introduction of Dynamsoft Capture Vision JavaScript edition.
 keywords: API reference, guide, JavaScript
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 ---
 
 # Dynamsoft Capture Vision JavaScript Edition - Documentation
@@ -12,7 +13,7 @@ Dynamsoft Capture Vision (DCV) is an aggregated SDK for a series of specific fun
 
 The design of DCV empowers developers to effortlessly build conceptual prototypes within hours, while also providing the flexibility for complex customizations to handle more demanding tasks.
 
-> Read more about [Introduction to Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/introduction/).
+> Learn more about [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/introduction/).
 
 These documents discuss the implementation of DCV in JavaScript and are intended to help developers learn and use DCV in web applications that typically run in the browser.
 
@@ -24,7 +25,7 @@ For DCV, no matter which platform or language it is implemented in, a specific t
 
 - `Image Processing`: at this stage, DCV processes the images and derives information from them. This is the essential part of the task and is powered by the cutting-edge algorithms developed by Dynamsoft. To make these algorithms work as efficiently as possible in a web environment such as a browser, they are compiled into [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) modules (files withe the extension `.wasm`). These modules are considered large in size in a web environment, and DCV has the ability to asynchronously preload them into the web page to improve user experience.
 
-- `Output`: this is the last stage of a DCV task, at which the derived information is made available to other business logic. The information comes in the form of various types of results through the [Captured Result Receiver (CRR)](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver) interface. In web applications, real-time interaction is important. Therefore, DCV leverages Dynamsoft CameraEnhancer's UI functionality to display results at runtime and in some cases allow user intervention to get better results.
+- `Output`: this is the last stage of a DCV task, at which the derived information is made available to other business logic. The information comes in the form of various types of results through the [Captured Result Receiver (CRR)](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver) interface. In web applications, real-time interaction is important. Therefore, DCV leverages Dynamsoft Camera Enhancer's UI functionality to display results at runtime and in some cases allow user intervention to get better results.
 
 ## Using the SDK
 
