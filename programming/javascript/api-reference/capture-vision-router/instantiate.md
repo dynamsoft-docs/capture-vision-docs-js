@@ -103,7 +103,7 @@ Releases all resources used by the `CaptureVisionRouter` object.
 **Syntax**
 
 ```typescript
-dispose(): void;
+dispose(): Promise<void>;
 ```
 
 **Parameter**
@@ -112,7 +112,7 @@ None.
 
 **Return value**
 
-None.
+Returns a promise that resolves when the resources have been successfully released.
 
 **Code snippet**
 
