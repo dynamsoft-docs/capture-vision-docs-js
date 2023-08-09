@@ -2,7 +2,7 @@
 layout: default-layout
 title: interface OriginalImageResultItem - Dynamsoft Capture Vision JS Edition API Reference
 description: This page shows the JS edition of the interface OriginalImageResultItem in Dynamsoft Capture Vision Router Module.
-keywords: raw image, JS
+keywords: original image, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -27,7 +27,7 @@ interface OriginalImageResultItem extends CapturedResultItem {
 
 ### imageData
 
-`imageData`: A property of type `Core.BasicStructures.DSImageData` that represents the image data of the raw image result item.
+`imageData`: A property of type `Core.BasicStructures.DSImageData` that represents the image data of the original image result item.
 
 ```typescript
 readonly imageData: Core.BasicStructures.DSImageData;

@@ -11,7 +11,7 @@ breadcrumbText: JS CaptureResultReceiver Interface
 
 # CaptureResultReceiver
 
-The `CaptureResultReceiver` interface is responsible for receiving captured results. It contains several callback functions for different types of results, including raw image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CaptureResultReceiver` interface is responsible for receiving captured results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Definition
 
@@ -31,7 +31,7 @@ interface CapturedResultReceiver {
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
 | [`OnCapturedResultReceived()`](#oncapturedresultreceived)           | Callback function for all captured results.          |
-| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for raw image results.             |
+| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.             |
 | [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
 | [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
 | [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
@@ -60,7 +60,7 @@ onOriginalImageResultReceived(pResult: OriginalImageResultItem): void;
 
 **Parameters**
 
-`pResult`: The raw image result.
+`pResult`: The original image result.
 
 ### OnDecodedBarcodesReceived
 

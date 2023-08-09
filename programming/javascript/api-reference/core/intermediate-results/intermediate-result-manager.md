@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # IntermediateResultManager
 
-The IntermediateResultManager interface manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get raw image data using an image hash id.
+The IntermediateResultManager interface manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
 ## Definition
 
@@ -26,7 +26,7 @@ interface IntermediateResultManager {
 |--------|-------------|
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
 | [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the raw image data using an image hash id. |
+| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
@@ -54,7 +54,7 @@ removeResultReceiver(receiver: IntermediateResultReceiver): void;
 
 ### getOriginalImage
 
-Gets the raw image data using an image hash id.
+Gets the original image data using an image hash id.
 
 ```typescript
 getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
@@ -66,4 +66,4 @@ getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>
 
 **Return value**
 
-Returns a promise to the DSImageData object containing the raw image data.
+Returns a promise to the DSImageData object containing the original image data.

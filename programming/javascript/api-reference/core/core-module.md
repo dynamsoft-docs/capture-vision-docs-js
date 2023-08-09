@@ -64,7 +64,7 @@ The APIs for this class are:
 | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
 | [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |
-| [`getOriginalImage`](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the raw image data using an image hash id. |
+| [`getOriginalImage`](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the original image data using an image hash id. |
 
 ## Interfaces and Enums
 

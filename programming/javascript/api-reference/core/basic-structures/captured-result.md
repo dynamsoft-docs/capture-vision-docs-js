@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # CapturedResult
 
-The CapturedResult provides access to the source image information and the list of captured result items, allowing you to retrieve and process the captured data as needed.
+The CapturedResult provides access to the original image information and the list of captured result items, allowing you to retrieve and process the captured data as needed.
 
 ## Definition
 
@@ -31,7 +31,7 @@ interface CapturedResult {
 
 ### OriginalImageHashId
 
-A string representing the hash ID of the source image.
+A string representing the hash ID of the original image.
 
 ```typescript
 readonly OriginalImageHashId: string;
@@ -39,7 +39,7 @@ readonly OriginalImageHashId: string;
 
 ### OriginalImageTag
 
-An `ImageTag` object representing the tag associated with the source image.
+An `ImageTag` object representing the tag associated with the original image.
 
 ```typescript
 readonly OriginalImageTag: ImageTag;

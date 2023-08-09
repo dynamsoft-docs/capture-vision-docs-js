@@ -27,10 +27,10 @@ interface IntermediateResultUnit {
 | API Name               | Description |
 |----------------------|-------------|
 | [`hashId`](#hashid) | Gets the hash ID of the unit.|
-| [`originalImageHashId`](#originalimagehashid) | Gets the hash ID of the source image. |
-| [`originalImageTag`](#originalimagetag) | Gets the image tag of the source image. |
+| [`originalImageHashId`](#originalimagehashid) | Gets the hash ID of the original image. |
+| [`originalImageTag`](#originalimagetag) | Gets the image tag of the original image. |
 | [`unitType`](#unittype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix from local to source image coordinates. |
+| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix from local to original image coordinates. |
 
 ### hashId
 
@@ -54,11 +54,11 @@ OriginalImageHashId: string;
 
 **Return value**
 
-Returns the hash ID of the source image.
+Returns the hash ID of the original image.
 
 ### originalImageTag
 
-The image tag of the source image.
+The image tag of the original image.
 
 ```typescript
 originalImageTag: Core.BasicStructures.ImageTag;
@@ -66,7 +66,7 @@ originalImageTag: Core.BasicStructures.ImageTag;
 
 **Return value**
 
-Returns the image tag of the source image.
+Returns the image tag of the original image.
 
 ### unitType
 
@@ -78,7 +78,7 @@ unitType: EnumIntermediateResultUnitType;
 
 ### getTransformMatrix
 
-Get the transformation matrix from local to source image coordinates.
+Get the transformation matrix from local to original image coordinates.
 
 ```typescript
 getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>;

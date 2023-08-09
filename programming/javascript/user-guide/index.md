@@ -37,7 +37,7 @@ In this guide, you will learn step by step on how to build a barcode reader, lab
 
 ## Example Usage
 
-Dynamsoft Document Normalizer v2.0 and above is based on Dynamsoft Capture Vision Architecture. Let's take this product as an example. The document capture process consists of two steps
+Dynamsoft Document Normalizer v2.0.10 and above is based on Dynamsoft Capture Vision Architecture. Let's take this product as an example. The document capture process consists of two steps
 
 1. Detect the document boundaries
 2. Normalize the document based on the detected boundaries
@@ -49,10 +49,10 @@ The following sample code demonstrates the process:
 <html lang="en">
 
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@1.0.0/dist/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.0/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@1.0.0/dist/cvr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.10/dist/cvr.js"></script>
 </head>
 <body>
   <h1>Detect And Normalize A Document</h1>
@@ -150,14 +150,14 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.0/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
   ```
 
 - UNPKG
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.0.0/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.0.10/dist/ddn.js"></script>
   <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.0/dist/dce.js"></script>
   ```
 
@@ -172,20 +172,20 @@ To download the SDK:
 - yarn
 
   ```cmd
-  yarn add dynamsoft-document-normalizer@2.0.0
+  yarn add dynamsoft-document-normalizer@2.0.10
   ```
 
 - npm
 
   ```cmd
-  npm install dynamsoft-document-normalizer@2.0.0
+  npm install dynamsoft-document-normalizer@2.0.10
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
   <script src="/dynamsoft-capture-vision-router-js/dist/cvr.js"></script>
-  <script src="/dynamsoft-document-normalizer-js-2.0.0/dist/ddn.js"></script>
+  <script src="/dynamsoft-document-normalizer-js/dist/ddn.js"></script>
   ```
 
 or
