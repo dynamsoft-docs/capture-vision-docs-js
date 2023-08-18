@@ -17,13 +17,13 @@ The `CaptureResultReceiver` interface is responsible for receiving captured resu
 
 ```typescript
 interface CapturedResultReceiver {
-  onCapturedResultReceived?(pResult: Core.BasicStructures.CapturedResult): void;
-  onOriginalImageResultReceived?(pResult: OriginalImageResultItem): void;
-  onDecodedBarcodesReceived?(pResult: DBR.DecodedBarcodesResult): void;
-  onRecognizedTextLinesReceived?(pResult: DLR.RecognizedTextLinesResult):void;
-  onDetectedQuadsReceived?(pResult: DDN.DetectedQuadsResult): void;
-  onNormalizedImagesReceived?(pResult: DDN.NormalizedImagesResult): void;
-  onParsedResultsReceived?(pResult: DCP.ParsedResult): void;
+  onCapturedResultReceived?(result: Core.BasicStructures.CapturedResult): void;
+  onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
+  onDecodedBarcodesReceived?(result: DBR.DecodedBarcodesResult): void;
+  onRecognizedTextLinesReceived?(result: DLR.RecognizedTextLinesResult):void;
+  onDetectedQuadsReceived?(result: DDN.DetectedQuadsResult): void;
+  onNormalizedImagesReceived?(result: DDN.NormalizedImagesResult): void;
+  onParsedResultsReceived?(result: DCP.ParsedResult): void;
 } 
 ```
 
@@ -43,81 +43,81 @@ interface CapturedResultReceiver {
 Callback function for all captured results. It will be called once for each captured result.
 
 ```typescript
-onCapturedResultReceived(pResult: Core.BasicStructures.CapturedResult): void;
+onCapturedResultReceived(result: Core.BasicStructures.CapturedResult): void;
 ```
 
 **Parameters**
 
-`pResult`: The captured result.
+`result`: The captured result.
 
 ### OnOriginalImageResultReceived
 
 Callback function for original image results. It will be called once for each original image result.
 
 ```typescript
-onOriginalImageResultReceived(pResult: OriginalImageResultItem): void;
+onOriginalImageResultReceived(result: OriginalImageResultItem): void;
 ```
 
 **Parameters**
 
-`pResult`: The original image result.
+`result`: The original image result.
 
 ### OnDecodedBarcodesReceived
 
 Callback function for decoded barcodes results. It will be called once for each decoded barcodes result.
 
 ```typescript
-onDecodedBarcodesReceived(pResult: DBR.DecodedBarcodesResult): void;
+onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
 ```
 
 **Parameters**
 
-`pResult`: The decoded barcodes result.
+`result`: The decoded barcodes result.
 
 ### OnRecognizedTextLinesReceived
 
 Callback function for recognized text lines results. It will be called once for each recognized text lines result.
 
 ```typescript
-onRecognizedTextLinesReceived(pResult: DLR.RecognizedTextLinesResult): void;
+onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
 ```
 
 **Parameters**
 
-`pResult`: The recognized text lines result.
+`result`: The recognized text lines result.
 
 ### OnDetectedQuadsReceived
 
 Callback function for detected quads results. It will be called once for each detected quads result.
 
 ```typescript
-onDetectedQuadsReceived(pResult: DDN.DetectedQuadsResult): void;
+onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
 ```
 
 **Parameters**
 
-`pResult`: The detected quads result.
+`result`: The detected quads result.
 
 ### OnNormalizedImagesReceived
 
 Callback function for normalized images results. It will be called once for each normalized images result.
 
 ```typescript
-onNormalizedImagesReceived(pResult: DDN.NormalizedImagesResult): void;
+onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
 ```
 
 **Parameters**
 
-`pResult`: The normalized images result.
+`result`: The normalized images result.
 
 ### OnParsedResultsReceived
 
 Callback function for parsed results. It will be called once for each parsed result.
 
 ```typescript
-onParsedResultsReceived(pResult: DCP.ParsedResult): void;
+onParsedResultsReceived(result: DCP.ParsedResult): void;
 ```
 
 **Parameters**
 
-`pResult`: The parsed result.
+`result`: The parsed result.

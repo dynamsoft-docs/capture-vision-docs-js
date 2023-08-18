@@ -220,10 +220,10 @@ None.
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
-            onCapturedResultReceived(pResult) {
-                console.log(pResult);
+            onCapturedResultReceived(result) {
+                console.log(result);
             },
-            onDecodedBarcodesReceived(pResult) {
+            onDecodedBarcodesReceived(result) {
             }
         };
 cvr.addResultReceiver(crr);
@@ -252,11 +252,11 @@ None.
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
-            onCapturedResultReceived(pResult) {
-                console.log(pResult);
+            onCapturedResultReceived(result) {
+                console.log(result);
             },
-            onDecodedBarcodesReceived(pResult) {
-                console.log(pResult);
+            onDecodedBarcodesReceived(result) {
+                console.log(result);
             }
         };
 cvr.addResultReceiver(crr);

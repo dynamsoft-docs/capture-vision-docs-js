@@ -241,8 +241,8 @@ Define the captured result receiver to accept the detected boundaries, And set i
 
 ```js
 let crr = {
-            async onDetectedQuadsReceived(pResult) {
-                items = pResult.quadsResultItems;
+            async onDetectedQuadsReceived(result) {
+                items = result.quadsResultItems;
             }
         };
 cvr.addResultReceiver(crr);
