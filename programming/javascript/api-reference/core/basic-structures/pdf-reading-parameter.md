@@ -33,10 +33,22 @@ interface PDFReadingParameter {
 
 The mode of PDF reading.
 
+```typescript
+mode: EnumPDFReadingMode;
+```
+
 ### dpi
 
 The DPI (dots per inch) value.
 
+```typescript
+dpi: number;
+```
+
 ### rasterDataSource
 
 The rasterDataSource.
+
+```typescript
+rasterDataSource: EnumRasterDataSource;
+```

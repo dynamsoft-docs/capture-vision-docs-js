@@ -38,7 +38,7 @@ interface DSRect {
 The left edge of the rectangle.
 
 ```typescript
-bytes: Uint8Array;
+left: number;
 ```
 
 ### right
@@ -46,7 +46,7 @@ bytes: Uint8Array;
 The right edge of the rectangle.
 
 ```typescript
-width: number;
+right: number;
 ```
 
 ### top
@@ -54,7 +54,7 @@ width: number;
 The top edge of the rectangle.
 
 ```typescript
-height: number;
+top: number;
 ```
 
 ### bottom
@@ -62,7 +62,7 @@ height: number;
 The bottom edge of the rectangle.
 
 ```typescript
-stride: number;
+bottom: number;
 ```
 
 ### isMeasuredInPercentage

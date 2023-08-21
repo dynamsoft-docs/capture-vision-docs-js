@@ -22,7 +22,7 @@ interface ImageTag {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`imageId`](#imageId) | *Number* |
+| [`imageId`](#imageid) | *Number* |
 | [`type`](#type) | *EnumImageTagType* |
 
 ### imageId

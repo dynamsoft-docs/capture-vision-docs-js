@@ -31,6 +31,14 @@ interface LineSegment {
 
 The start point of the line segment.
 
+```typescript
+startPoint: Point;
+```
+
 ### endPoint
 
 The end point of the line segment.
+
+```typescript
+endPoint: Point;
+```
