@@ -1,13 +1,13 @@
 ---
 layout: home-page
-title: Dynamsoft Capture Vision Documentation
-keywords: Dynamsoft Capture Vision, dlr, documentation
-description: Dynamsoft Capture Vision Documentation Homepage
+title: Documentaiton for the Web - Dynamsoft Capture Vision
+description: This is the index page for Dynamsoft Capture Vision Documentaiton for the Web
+keywords: CaptureVision, Capture, web, javascript, js, browser
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
 ---
 
-# Dynamsoft Capture Vision Documentation
+# Programming Languages for the Web
 
-* [Introduction]({{site.introduction}})
-* [Architecture]({{site.architecture}})
-* [Parameters]({{site.parameter}})
+- [JavaScript](programming/javascript)

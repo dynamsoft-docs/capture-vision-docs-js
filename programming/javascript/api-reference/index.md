@@ -10,51 +10,15 @@ breadcrumbText: API Reference
 permalink: /programming/javascript/api-reference/
 ---
 
-# JavaScript API Reference
+# Dnamsoft Capture Vision JavaScript API Reference
 
-In the Dynamsoft Capture Vision architecture, the following are the basic modules:
+Dynamsoft Capture Vision consists of four modules:
 
-* Dynamsoft License
-* Capture Vision Router
-* Dynamsoft Core
+* [CaptureVisionRouter](capture-vision-router/capture-vision-router-module.md)
+* [License](license/license-module.md)
+* [Core](core/core-module.md)
+* [Utility](utility/utility-module.md)
 
-These docs help you learn and use their APIs in your application.
+There are also quite a few enumerations, check out the full list at:
 
-## Dynamsoft License
-
-### LicenseManager
-
-
-### Interfaces
-
-* [LicenseVerificationListener](license)
-
-## Capture Vision Router
-
-| API Name                                              | Description                                                            |
-| ----------------------------------------------------- | ---------------------------------------------------------------------- |
-| [createInstance()](cvr/instantiate.md#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
-| [dispose()](cvr/instantiate.md#dispose)               | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed](cvr/instantiate.md#disposed)               | Returns whether the `CaptureVisionRouter` object has been disposed of. |
-
-## Dynamsoft Core - BasicStructures
-
-The BasicStructures namespace contains the following interfaces and enumerations:
-
-### Interfaces
-
-
-### Enumerations
-
-
-## Dynamsoft Core - IntermediateResult
-
-The IntermediateResult namespace contains the `IntermediateResultManager` class and quite a few interfaces and enumerations:
-
-### IntermediateResultManager
-
-### Interfaces
-
-
-### Enumerations
-
+* [Enumerations](enums-index.md)
