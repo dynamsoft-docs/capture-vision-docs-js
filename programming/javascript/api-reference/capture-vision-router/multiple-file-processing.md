@@ -16,8 +16,6 @@ permalink: /programming/javascript/api-reference/capture-vision-router/multiple-
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | [setInput()](#setinput)                                             | Sets an image source to provide images for consecutive process.                 |
 | [getInput()](#getinput)                                             | Gets an image source to provide images for consecutive process.                 |
-| [addCaptureStateListener()](#addcapturestatelistener)               | Adds an object that listens to the state changes of the capture process.        |
-| [removeCaptureStateListener()](#removecapturestatelistener)         | Removes an object which listens to the state changes of the capture process.    |
 | [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.               |
 | [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.           |
 | [addResultReceiver()](#addresultreceiver)                           | Adds an object as the receiver of captured results.                             |
@@ -76,7 +74,7 @@ Returns the current image source adapter object representing the input image sou
 ```javascript
 const imageSource = CaptureVisionRouter.getInput();
 ```
-
+<!--
 ## addCaptureStateListener
 
 Adds an object that listens to the state changes of the capture process.
@@ -136,6 +134,7 @@ let csl = {
         }
 cvr.removeCaptureStateListener(csl);
 ```
+-->
 
 ## addImageSourceStateListener
 

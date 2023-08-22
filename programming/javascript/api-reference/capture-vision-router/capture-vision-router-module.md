@@ -70,8 +70,6 @@ The APIs for this class include:
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
 | [setInput()](./multiple-file-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.              |
 | [getInput()](./multiple-file-processing.md#getinput)                                             | Returns the image source object.                                             |
-| [addCaptureStateListener()](./multiple-file-processing.md#addcapturestatelistener)               | Adds an object that listens to the state changes of the capture process.     |
-| [removeCaptureStateListener()](./multiple-file-processing.md#removecapturestatelistener)         | Removes an object which listens to the state changes of the capture process. |
 | [addImageSourceStateListener()](./multiple-file-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.            |
 | [removeImageSourceStateListener()](./multiple-file-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.        |
 | [addResultReceiver()](./multiple-file-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                          |
