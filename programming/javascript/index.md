@@ -31,7 +31,7 @@ For DCV, no matter which platform or language it is implemented in, a specific t
 
 ### Get started
 
-The best way to get started with Dynamsoft Capture Vision JavaScript Edition is to follow the [User Guide](user-guide/index.md) to build your first barcode reading application.
+The best way to get started with Dynamsoft Capture Vision JavaScript Edition is to follow the [User Guide](https://dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html) to build your own application.
 
 ### Check APIs
 
@@ -49,7 +49,7 @@ Obviously, the difference in the use of DCV in different applications lies in th
 
 ## Assumptions
 
-These documents assume you are already familiar with the [Architecture of Dynamsoft Capture Visio](https://www.dynamsoft.com/capture-vision/docs/core/architecture/) and the technologies [HTML](https://developer.mozilla.org/docs/Learn/HTML/Introduction_to_HTML), [CSS](https://developer.mozilla.org/docs/Learn/CSS/First_steps), and [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/A_re-introduction_to_JavaScript).
+These documents assume you are already familiar with the [Architecture of Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/) and the technologies [HTML](https://developer.mozilla.org/docs/Learn/HTML/Introduction_to_HTML), [CSS](https://developer.mozilla.org/docs/Learn/CSS/First_steps), and [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/A_re-introduction_to_JavaScript).
 
 ## Contact Us
 
