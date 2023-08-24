@@ -30,8 +30,8 @@ interface Arc {
 | [`x`](#x) | *number* |
 | [`y`](#y) | *number* |
 | [`radius`](#radius) | *number* |
-| [`startAngle`](#startAngle) | *number* |
-| [`endAngle`](#endAngle) | *number* |
+| [`startAngle`](#startangle) | *number* |
+| [`endAngle`](#endangle) | *number* |
 
 ### x
 

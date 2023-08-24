@@ -46,6 +46,7 @@ enableResultCrossVerification(resultItemTypes: number, enabled: boolean): void;
 **Parameters**
 
 `resultItemTypes`:  The value of the captured result item types.
+
 `enabled`: Set whether to enable result verification.
 
 **Return Value**
@@ -79,6 +80,7 @@ enableResultDeduplication(resultItemTypes: number, enabled: boolean): void;
 **Parameters**
 
 `resultItemTypes`:  The or value of the captured result item types.
+
 `enabled`: Set whether to enable result verification.
 
 **Return Value**
@@ -112,6 +114,7 @@ setDuplicateForgetTime(resultItemTypes: number, time: number): Promise<void>;
 **Parameters**
 
 `resultItemTypes`: The or value of the captured result item types.
+
 `time`: The duplicate forget time measured in milliseconds.
 
 **Return Value**

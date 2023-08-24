@@ -25,7 +25,7 @@ interface CapturedResultItem {
 | Properties                         | Type|
 |--------------------------------|------------|
 | [`type`](#type)              | *EnumCapturedResultItemType*          |
-| [`referenceItem`](#referenceItem)    | *CapturedResultItem*          |
+| [`referenceItem`](#referenceitem)    | *CapturedResultItem*          |
 
 ### type
 

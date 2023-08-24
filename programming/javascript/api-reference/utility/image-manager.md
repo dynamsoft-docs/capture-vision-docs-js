@@ -27,7 +27,9 @@ saveToFile(image: Core.BasicStructures.DSImageData, name: string, download?: boo
 **Parameters**
 
 `image`: An image of type `Core.BasicStructures.DSImageData`.
+
 `name`: A string represents the saved image name.
+
 `download`: An optional download boolean flag represents whether to download the file.
 
 **Return Value**

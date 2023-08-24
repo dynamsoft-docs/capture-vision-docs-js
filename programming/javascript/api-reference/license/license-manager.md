@@ -46,6 +46,7 @@ static initLicense(license: string): { isSuccess: boolean, error: string };
 Returns an object which contains the following information:
 
 * `isSuccess`: indicates whether the license initialization succeeded.
+
 * `error`: specifies what went wrong if `isSuccess` is `false`.
 
 ## setDeviceFriendlyName
