@@ -88,12 +88,13 @@ The APIs for this class include:
 | [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
 | [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
+<!--
 ### Intermediate Result
 
 | API Name                                                                                | Description                                    |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | [getIntermediateResultManager()](./intermediate-result.md#getintermediateresultmanager) | Returns an `IntermediateResultManager` object. |
-
+-->
 ### Interfaces
 
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
