@@ -75,6 +75,7 @@ The APIs for this class include:
 | [addResultReceiver()](./multiple-file-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                          |
 | [removeResultReceiver()](./multiple-file-processing.md#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.         |
 | [addResultFilter()](./multiple-file-processing.md#addresultfilter)                               | Adds an object as the filter of captured results.                            |
+| [removeResultFilter()](./multiple-file-processing.md#removeresultfilter)                         | Removes a result filter for filtering non-essential results.                 |
 | [startCapturing()](./multiple-file-processing.md#startcapturing)                                 | Starts to process images consecutively.                                      |
 | [stopCapturing()](./multiple-file-processing.md#stopcapturing)                                   | Stops the consecutive process.                                               |
 
