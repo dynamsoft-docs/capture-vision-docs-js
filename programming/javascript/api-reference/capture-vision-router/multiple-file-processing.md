@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing.html
 ---
 
-# CaptureVisionRouterMultiple File Processing
+# CaptureVisionRouter Multiple File Processing
 
 | API Name                                                            | Description                                                                     |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -21,6 +21,7 @@ permalink: /programming/javascript/api-reference/capture-vision-router/multiple-
 | [addResultReceiver()](#addresultreceiver)                           | Adds an object as the receiver of captured results.                             |
 | [removeResultReceiver()](#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.            |
 | [addResultFilter()](#addresultfilter)                               | Adds a result filter to the capture process for filtering non-essential results.|
+| [removeResultFilter()](#removeresultfilter)                         | Removes a result filter for filtering non-essential results.                    |
 | [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                         |
 | [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                  |
 
@@ -219,10 +220,8 @@ None.
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
-            onCapturedResultReceived(result) {
-                console.log(result);
-            },
-            onDecodedBarcodesReceived(result) {
+            async onDetectedQuadsReceived(result) {
+                items = result.quadsResultItems;
             }
         };
 cvr.addResultReceiver(crr);
@@ -251,11 +250,8 @@ None.
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let crr = {
-            onCapturedResultReceived(result) {
-                console.log(result);
-            },
-            onDecodedBarcodesReceived(result) {
-                console.log(result);
+            async onDetectedQuadsReceived(result) {
+                items = result.quadsResultItems;
             }
         };
 cvr.addResultReceiver(crr);
@@ -281,8 +277,34 @@ Returns a promise that resolves when the result filter have been successfully ad
 **Code snippet**
 
 ```javascript
+filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.addResultReceiver(rf);
+cvr.addResultReceiver(filter);
+```
+
+## removeResultFilter
+
+**Syntax**
+
+```typescript
+removeResultFilter(filter: Core.BasicStructures.CapturedResultFilter): void;
+```
+
+**parameter**
+
+`filter`: The result filter object to be removed.
+
+**Return Value**
+
+None.
+
+**Code snippet**
+
+```javascript
+filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+cvr.addResultReceiver(filter);
+cvr.removeResultFilter(filter);
 ```
 
 ## startCapturing
@@ -292,12 +314,12 @@ Starts to process images consecutively.
 **Syntax**
 
 ```typescript
-startCapturing(templateName?: string): void;
+startCapturing(templateName?: string): Promise<void>;
 ```
 
 **parameter**
 
-`templateName (optional)`: The name of the template to use for capturing. If not specified, the default template (`EnumPresetTemplate.PT_DEFAULT`) will be used.
+`templateName`(optional): The name of the template to use for capturing. If not specified, the default template (`EnumPresetTemplate.PT_DEFAULT`) will be used.
 
 **Return Value**
 

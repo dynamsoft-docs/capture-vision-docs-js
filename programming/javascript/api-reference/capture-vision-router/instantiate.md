@@ -41,7 +41,7 @@ None.
 **Code snippet**
 
 ```javascript
-Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
+Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]);
 ```
 
 ## isModuleLoaded
@@ -56,7 +56,7 @@ isModuleLoaded(moduleName: string): boolean;
 
 **Parameter**
 
-`moduleNameIt`: It takes a string representing the module to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
+`moduleName`: It takes a string representing the module to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
 
 **Return value**
 
@@ -65,10 +65,10 @@ A boolean value that indicates whether the required module has been loaded.
 **Code snippet**
 
 ```javascript
-if(router.isModuleLoaded("DBR")){
+if(router.isModuleLoaded("DDN")){
   // Use the router to perform a DBR job.
 } else {
-  console.log("DBR module is not preloaded.");
+  console.log("DDN module is not preloaded.");
 }
 ```
 
