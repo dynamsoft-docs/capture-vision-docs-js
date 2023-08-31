@@ -64,7 +64,7 @@ outputSettings(templateName?: string): Promise<string>;
 
 **Parameters**
 
-`templateName (optional)`: The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned.
+`templateName`(optional): The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned.
 
 **Return value**
 
@@ -118,6 +118,7 @@ updateSettings(templateName: string, settings: SimplifiedCaptureVisionSettings):
 **parameter**
 
 `templateName`: The name of the template to be updated with the provided settings.
+
 `settings`: The SimplifiedCaptureVisionSettings object containing the new values for the template.
 
 **Return Value**
@@ -128,11 +129,10 @@ Returns a promise that resolves when the template settings have been successfull
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-const newSettings=`{
-  "templateName": "myTemplate",
-  "ScaleDownThreshold" : 2000
-}`;
-await router.updateSettings('myTemplate',newSettings);
+let newSettings = await cvr.getSimplifiedSettings("normalize-document");
+newSettings.timeout = 5000;
+// Change the timeout of preset templates "normalize-document"
+await cvr.updateSettings("normalize-document", newSettings);
 ```
 
 > Note: The updateSettings method allows you to update a template's settings with new values. It is specifically designed for fast configuration of the image processing process, with certain limitations:

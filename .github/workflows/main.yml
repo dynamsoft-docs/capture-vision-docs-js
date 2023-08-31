@@ -46,6 +46,11 @@ jobs:
           port: 21 
           local-dir: /home/ubuntu/DCVDocJS/_site/
           server-dir: /www.dynamsoft.com/capture-vision/docs/web/        
+
+      - name: Trigger Webhook 
+        run: | 
+          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/capture-vision/docs/web/*\"]" ${{ secrets.WEBHOOK_URL }}
+
           
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}

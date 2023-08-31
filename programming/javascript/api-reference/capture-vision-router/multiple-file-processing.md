@@ -219,12 +219,11 @@ None.
 
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let crr = {
-            async onDetectedQuadsReceived(result) {
-                items = result.quadsResultItems;
-            }
-        };
-cvr.addResultReceiver(crr);
+const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
+resultReceiver.onDetectedQuadsReceived(result) {
+    //* Do something with the result */
+};
+cvr.addResultReceiver(resultReceiver);
 ```
 
 ## removeResultReceiver
@@ -249,13 +248,12 @@ None.
 
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let crr = {
-            async onDetectedQuadsReceived(result) {
-                items = result.quadsResultItems;
-            }
-        };
-cvr.addResultReceiver(crr);
-cvr.removeResultReceiver(crr);
+const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
+resultReceiver.onDetectedQuadsReceived(result) {
+    //* Do something with the result */
+};
+cvr.addResultReceiver(resultReceiver);
+cvr.removeResultReceiver(resultReceiver);
 ```
 
 ## addResultFilter
@@ -281,6 +279,12 @@ filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 cvr.addResultReceiver(filter);
 ```
+
+> In the provided code snippet, the default filter implementation is utilized. This filter can offer cross-validation and de-duplication functionalities. To utilize this filter, it's necessary to include the corresponding package `dynamsoft-utility`.
+
+**See also**
+
+[`MultiFrameResultCrossFilter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
 
 ## removeResultFilter
 
@@ -329,7 +333,7 @@ None.
 
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.startCapturing();
+await cvr.startCapturing();
 ```
 
 ## stopCapturing
