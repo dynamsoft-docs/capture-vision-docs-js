@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
 
-# CaptureVisionRouterSingle File Processing
+# CaptureVisionRouter Single File Processing
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
@@ -40,7 +40,7 @@ A promise that resolves to an array of `CapturedResult` objects which are the de
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let results = await router.catpure("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "detect-document-boundaries");
+let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "detect-document-boundaries");
 let count = results.length;
 for(let i = 0; i < count; i++) {
     //...
