@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/settings.html
 ---
 
-# CaptureVisionRouterSettings
+# CaptureVisionRouter Settings
 
 | API Name                                          | Description                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
