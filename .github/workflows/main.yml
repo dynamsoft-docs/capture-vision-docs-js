@@ -35,7 +35,7 @@ jobs:
           git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./capture-vision-docs-js/* ./DCVDocJS/
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocJS/
-          cd DCVDocJS && bundle exec jekyll build --incremental
+          cd DCVDocJS && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -73,7 +73,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocJS-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocJS-preview/_config.yml
-          cd DCVDocJS-preview && bundle exec jekyll build --incremental
+          cd DCVDocJS-preview && bundle install && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
