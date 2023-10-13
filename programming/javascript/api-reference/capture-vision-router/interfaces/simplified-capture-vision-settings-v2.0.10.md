@@ -6,6 +6,7 @@ keywords: capture vision, router, Intermediate-result, api reference, javascript
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/javascript/api-reference/capture-vision-router/interface/simplified-capture-vision-settings-v2.0.10.html
 ---
 
 # SimplifiedCaptureVisionSettings
@@ -17,10 +18,10 @@ interface SimplifiedCaptureVisionSettings {
     capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType;
     roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
     roiMeasuredInPercentage: boolean;
+    maxParallelTasks: number;
     timeout: number;
     barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
     labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
-    minImageCaptureInterval: number;
 }
 ```
 
@@ -29,10 +30,10 @@ interface SimplifiedCaptureVisionSettings {
 | [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType* |
 | [roi](#roi)                                         | *Dynamsoft.Core.BasicStructures.Quadrilateral*              |
 | [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                                   |
+| [maxParallelTasks](#maxparalleltasks)               | *number*                                                    |
 | [timeout](#timeout)                                 | *number*                                                    |
 | [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*             |
 | [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings*           |
-| [minImageCaptureInterval](#minimagecaptureinterval) | *number*                                                    |
 
 ## capturedResultItemTypes
 
@@ -54,10 +55,6 @@ capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemTy
 roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
 ```
 
-**See Also**
-
-* [Quadrilateral]({{ site.js_api }}core/basic-structures/quadrilateral.html?lang=js)
-
 ## roiMeasuredInPercentage
 
 Indicates whether the ROI coordinates are measured in percentage values (true) or absolute pixel values (false).
@@ -66,9 +63,17 @@ Indicates whether the ROI coordinates are measured in percentage values (true) o
 roiMeasuredInPercentage: boolean;
 ```
 
+## maxParallelTasks
+
+Specifies the maximum number of parallel tasks allowed during processing.
+
+```typescript
+maxParallelTasks: number;
+```
+
 ## timeout
 
-Specifies the timeout duration (in milliseconds) for processing tasks.
+Specifies the timeout duration for processing tasks.
 
 ```typescript
 timeout: number;
@@ -82,22 +87,10 @@ Represents the simplified settings for barcode recognition using the SimplifiedB
 barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
 ```
 
-**See Also**
-
-* [SimplifiedBarcodeReaderSettings]({{ site.dbr_js_api }}simplified-barcode-reader-settings.html?lang=js)
-
 ## labelSettings
 
 Represents the simplified settings for label recognition using the SimplifiedLabelRecognizerSettings interface from the DLR namespace.
 
 ```typescript
 labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
-```
-
-## minImageCaptureInterval
-
-Represents the minimum time interval (in milliseconds) that must elapse before the next image capture operation can be initiated. Setting a larger value for this property will introduce a delay between image captures, while setting a smaller value allows for more frequent captures. It can be used to reduce the computational frequency, which can effectively lower energy consumption.
-
-```typescript
-minImageCaptureInterval: number;
 ```

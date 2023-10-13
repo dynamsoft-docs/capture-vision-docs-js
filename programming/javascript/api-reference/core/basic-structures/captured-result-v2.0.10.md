@@ -5,6 +5,7 @@ description: This page shows the JS edition of the interface CapturedResult in D
 keywords: captured result, JS
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/javascript/api-reference/core/basic-structures/captured-result-v2.0.10.html
 ---
 
 # CapturedResult
@@ -18,8 +19,6 @@ interface CapturedResult {
                 readonly OriginalImageHashId: string;
                 readonly OriginalImageTag: ImageTag;
                 readonly items: Array<CapturedResultItem>;
-                readonly errorCode: number;
-                readonly errorString: string;
             }
 ```
 
@@ -29,9 +28,7 @@ interface CapturedResult {
 |----------------------|-------------|
 | [`OriginalImageHashId`](#originalimagehashid) | *String* |
 | [`OriginalImageTag`](#originalimagetag) | *ImageTag* |
-| [`items`](#items) | *Array/<CapturedResultItem>* |
-| [`errorCode`](#errorcode) | *number* |
-| [`errorString`](#errorstring) | *string* |
+| [`items`](#items) | *Array* |
 
 ### OriginalImageHashId
 
@@ -55,20 +52,4 @@ An array of `CapturedResultItem` objects representing the captured result items.
 
 ```typescript
 readonly items: Array<CapturedResultItem>;
-```
-
-### errorCode
-
-The error code of the capture operation.
-
-```typescript
-readonly errorCode: number;
-```
-
-### errorString
-
-The error message of the capture operation.
-
-```typescript
-readonly errorString: string;
 ```
