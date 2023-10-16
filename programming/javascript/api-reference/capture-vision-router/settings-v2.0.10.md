@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/settings.html
+permalink: /programming/javascript/api-reference/capture-vision-router/settings-v2.0.10.html
 ---
 
 # CaptureVisionRouter Settings
@@ -64,7 +64,7 @@ outputSettings(templateName?: string): Promise<string>;
 
 **Parameters**
 
-`templateName`(optional): The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned; if templateName = "*", export all the loaded templates.
+`templateName`(optional): The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned.
 
 **Return value**
 
@@ -129,10 +129,10 @@ Returns a promise that resolves when the template settings have been successfull
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let newSettings = await cvr.getSimplifiedSettings("ReadSingleBarcode");
+let newSettings = await cvr.getSimplifiedSettings("normalize-document");
 newSettings.timeout = 5000;
-// Change the timeout of preset templates "ReadSingleBarcode"
-await cvr.updateSettings("ReadSingleBarcode", newSettings);
+// Change the timeout of preset templates "normalize-document"
+await cvr.updateSettings("normalize-document", newSettings);
 ```
 
 > Note: The updateSettings method allows you to update a template's settings with new values. It is specifically designed for fast configuration of the image processing process, with certain limitations:

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing.html
+permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing-v2.0.10.html
 ---
 
 # CaptureVisionRouter Multiple File Processing
@@ -323,7 +323,7 @@ startCapturing(templateName?: string): Promise<void>;
 
 **parameter**
 
-`templateName`(optional): The name of the template to use for capturing. If not specified, the default template will be used.
+`templateName`(optional): The name of the template to use for capturing. If not specified, the default template (`EnumPresetTemplate.PT_DEFAULT`) will be used.
 
 **Return Value**
 

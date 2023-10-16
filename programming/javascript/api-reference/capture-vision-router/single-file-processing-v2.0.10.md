@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
+permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing-v2.0.10.html
 ---
 
 # CaptureVisionRouter Single File Processing
@@ -40,7 +40,7 @@ A promise that resolves to an array of `CapturedResult` objects which are the de
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "ReadSingleBarcode");
+let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "detect-document-boundaries");
 let count = results.length;
 for(let i = 0; i < count; i++) {
     //...

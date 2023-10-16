@@ -41,7 +41,7 @@ None.
 **Code snippet**
 
 ```javascript
-Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]);
+Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DBR"]);
 ```
 
 ## isModuleLoaded
@@ -65,10 +65,10 @@ A boolean value that indicates whether the required module has been loaded.
 **Code snippet**
 
 ```javascript
-if(router.isModuleLoaded("DDN")){
+if(router.isModuleLoaded("DBR")){
   // Use the router to perform a DBR job.
 } else {
-  console.log("DDN module is not preloaded.");
+  console.log("DBR module is not preloaded.");
 }
 ```
 
