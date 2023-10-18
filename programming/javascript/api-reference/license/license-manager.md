@@ -13,9 +13,9 @@ The LicenseManager class provides a set of APIs to manage the licensing for the 
 
 | API                                               | Description                                                            |
 | ------------------------------------------------- | ---------------------------------------------------------------------- |
-| [`getDeviceUUID`](#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
-| [`initLicense`](#initlicense)                     | Initializes the license using a license key.                           |
-| [`setDeviceFriendlyName`](#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
+| static [`getDeviceUUID`](#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
+| static [`initLicense`](#initlicense)                     | Initializes the license using a license key.                           |
+| static [`setDeviceFriendlyName`](#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
 
 ## getDeviceUUID
 

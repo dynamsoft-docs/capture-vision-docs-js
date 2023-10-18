@@ -9,12 +9,15 @@ noTitleIndex: true
 
 # MultiFrameResultCrossFilter
 
-The MultiFrameResultCrossFilter interface provides APIs for filtering out results that meet specific requirements.
+The `MultiFrameResultCrossFilter` class provides APIs for filtering out results that meet specific requirements.
 
 ## Definition
 
 ```typescript
-interface MultiFrameResultCrossFilter {
+class MultiFrameResultCrossFilter {
+
+    constructor();
+
     enableResultCrossVerification(resultItemTypes: number, enabled: boolean): void;
     isResultCrossVerificationEnabled(type: Core.BasicStructures.EnumCapturedResultItemType): boolean;
     enableResultDeduplication(resultItemTypes: number, enabled: boolean): void;
@@ -24,15 +27,14 @@ interface MultiFrameResultCrossFilter {
 }
 ```
 
-
-| API Name                                                      | Description                                                                                                                                             |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Name                                                                  | Description                                                                                                                                             |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`enableResultCrossVerification()`](#enableresultcrossverification)       | Enables result verification feature to improve the accuracy of video streaming recognition results.                                                     |
 | [`isResultCrossVerificationEnabled()`](#isresultcrossverificationenabled) | Determines whether the result verification feature is enabled for the specific captured result item type.                                               |
-| [`enableResultDeduplication()`](#enableresultdeduplication)             | Enables duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.              |
-| [`isResultDeduplicationEnabled()`](#isresultdeduplicationenabled)       | Determines whether the duplicate filter feature is enabled for the specific result item type.                                                           |
-| [`setDuplicateForgetTime()`](#setduplicateforgettime)           | Sets the duplicate forget time for the specific captured result item types. The same captured result item will be returned only once during the period. |
-| [`getDuplicateForgetTime()`](#getduplicateforgettime)           | Gets the duplicate forget time for a specific captured result item type.                                                                                |
+| [`enableResultDeduplication()`](#enableresultdeduplication)               | Enables duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.              |
+| [`isResultDeduplicationEnabled()`](#isresultdeduplicationenabled)         | Determines whether the duplicate filter feature is enabled for the specific result item type.                                                           |
+| [`setDuplicateForgetTime()`](#setduplicateforgettime)                     | Sets the duplicate forget time for the specific captured result item types. The same captured result item will be returned only once during the period. |
+| [`getDuplicateForgetTime()`](#getduplicateforgettime)                     | Gets the duplicate forget time for a specific captured result item type.                                                                                |
 
 
 ### enableResultCrossVerification

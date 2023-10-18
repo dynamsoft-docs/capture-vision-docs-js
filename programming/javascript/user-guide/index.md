@@ -17,7 +17,7 @@ In this guide, you will learn step by step on how to build a barcode reader, lab
 
 <span style="font-size:20px">Table of Contents</span>
 
-- [User Guide - JavaScript](#javascript-user-guide)
+- [JavaScript User Guide](#javascript-user-guide)
   - [Example Usage](#example-usage)
     - [About the code](#about-the-code)
     - [Test the code](#test-the-code)
@@ -33,7 +33,7 @@ In this guide, you will learn step by step on how to build a barcode reader, lab
       - [Normalize an image](#normalize-an-image)
   - [API Documentation](#api-documentation)
   - [System Requirements](#system-requirements)
-  - [Release Notes](#release-notes)
+  - [Next Steps](#next-steps)
 
 ## Example Usage
 

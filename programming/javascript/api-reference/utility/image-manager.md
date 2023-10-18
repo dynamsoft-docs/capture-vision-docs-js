@@ -11,14 +11,15 @@ noTitleIndex: true
 
 The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
-
 | API Name                    | Description                          |
 | --------------------------- | ------------------------------------ |
 | [`saveToFile()`](#savetofile) | Saved the specified image as a file. |
 
 ### saveToFile
 
-It is used to save images to files.
+It is used to save an image as a PNG or JPG file. The file format is determined by the extension of the parameter `name`.
+
+> If the file format is not specified, or if the given format is not supported, then the data will be exported as a PNG.
 
 ```typescript
 saveToFile(image: Core.BasicStructures.DSImageData, name: string, download?: boolean): Promise<File>;
