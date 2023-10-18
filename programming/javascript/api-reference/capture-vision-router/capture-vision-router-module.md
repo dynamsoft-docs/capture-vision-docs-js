@@ -16,17 +16,32 @@ The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It c
 
 ## CaptureVisionRouterModule Class
 
-This class defines common functionality in the `CaptureVisionRouter` module. At present, it has only one method.
+This class defines common functionality in the `CaptureVisionRouter` module.
 
-| API Name              | Description                                              |
-| --------------------- | -------------------------------------------------------- |
-| static `getVersion()` | Returns the version of the `CaptureVisionRouter` module. |
+| API Name                                           | Description                                                         |
+| -------------------------------------------------- | ------------------------------------------------------------------- |
+| static [`getVersion()`](#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
+| static [`engineResourcePath`](#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
+
+### getVersion
+
+Returns the version of the `CaptureVisionRouter` module.
 
 **Code snippet**
 
 ```javascript
 const version = await Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
 console.log(version);
+```
+
+### engineResourcePath
+
+Sets or returns the path to find the resources files (.wasm, etc.).
+
+**Code snippet**
+
+```javascript
+Dynamsoft.CVR.CaptureVisionRouterModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/";
 ```
 
 ## CaptureVisionRouter Class
@@ -50,13 +65,15 @@ The APIs for this class include:
 
 ### Create and Destroy Instances
 
-| API Name                                            | Description                                                            |
-| --------------------------------------------------- | ---------------------------------------------------------------------- |
-| [createInstance()](./instantiate.md#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
-| [dispose()](./instantiate.md#dispose)               | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed()](./instantiate.md#disposed)             | Returns whether the `CaptureVisionRouter` object has been disposed of. |
-| [preLoadModule()](./instantiate.md#preloadmodule)   | Loads the specified module to speed up the initialization.             |
-| [isModuleLoaded()](./instantiate.md#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
+| API Name                                                           | Description                                                              |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `static` [detectEnvironment()](./instantiate.md#detectenvironment) | Detect the current environment.                                          |
+| `static` [onWarning](./instantiate.md#onwarning)                   | A callback which is triggered when the runnint environment is not ideal. |
+| `static` [preLoadModule()](./instantiate.md#preloadmodule)         | Loads the specified module to speed up the initialization.               |
+| `static` [isModuleLoaded()](./instantiate.md#ismoduleloaded)       | Returns whether the specified module has been loaded.                    |
+| `static` [createInstance()](./instantiate.md#createinstance)       | Initializes a new instance of the `CaptureVisionRouter` class.           |
+| [dispose()](./instantiate.md#dispose)                              | Releases all resources used by the `CaptureVisionRouter` object.         |
+| [disposed](./instantiate.md#disposed)                              | Returns whether the `CaptureVisionRouter` object has been disposed of.   |
 
 ### Single-File Processing
 
@@ -66,18 +83,18 @@ The APIs for this class include:
 
 ### Multiple-File Processing
 
-| API Name                                                                                         | Description                                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| [setInput()](./multiple-file-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.              |
-| [getInput()](./multiple-file-processing.md#getinput)                                             | Returns the image source object.                                             |
-| [addImageSourceStateListener()](./multiple-file-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.            |
-| [removeImageSourceStateListener()](./multiple-file-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.        |
-| [addResultReceiver()](./multiple-file-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                          |
-| [removeResultReceiver()](./multiple-file-processing.md#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.         |
-| [addResultFilter()](./multiple-file-processing.md#addresultfilter)                               | Adds an object as the filter of captured results.                            |
-| [removeResultFilter()](./multiple-file-processing.md#removeresultfilter)                         | Removes a result filter for filtering non-essential results.                 |
-| [startCapturing()](./multiple-file-processing.md#startcapturing)                                 | Starts to process images consecutively.                                      |
-| [stopCapturing()](./multiple-file-processing.md#stopcapturing)                                   | Stops the consecutive process.                                               |
+| API Name                                                                                         | Description                                                           |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| [setInput()](./multiple-file-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.       |
+| [getInput()](./multiple-file-processing.md#getinput)                                             | Returns the image source object.                                      |
+| [addImageSourceStateListener()](./multiple-file-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.     |
+| [removeImageSourceStateListener()](./multiple-file-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source. |
+| [addResultReceiver()](./multiple-file-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                   |
+| [removeResultReceiver()](./multiple-file-processing.md#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.  |
+| [addResultFilter()](./multiple-file-processing.md#addresultfilter)                               | Adds an object as the filter of captured results.                     |
+| [removeResultFilter()](./multiple-file-processing.md#removeresultfilter)                         | Removes a result filter for filtering non-essential results.          |
+| [startCapturing()](./multiple-file-processing.md#startcapturing)                                 | Starts to process images consecutively.                               |
+| [stopCapturing()](./multiple-file-processing.md#stopcapturing)                                   | Stops the consecutive process.                                        |
 
 ### Settings
 

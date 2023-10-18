@@ -12,13 +12,55 @@ permalink: /programming/javascript/api-reference/capture-vision-router/instantia
 
 # CaptureVisionRouter Instantiate
 
-| API Name                            | Description                                                            |
-| ----------------------------------- | ---------------------------------------------------------------------- |
-| [preLoadModule()](#preloadmodule)   | Loads the specified module to speed up the initialization.             |
-| [isModuleLoaded()](#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
-| [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
-| [dispose()](#dispose)               | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed](#disposed)               | Returns whether the `CaptureVisionRouter` object has been disposed of. |
+| API Name                                           | Description                                                              |
+| -------------------------------------------------- | ------------------------------------------------------------------------ |
+| `static` [detectEnvironment()](#detectenvironment) | Detect the current environment.                                          |
+| `static` [onWarning](d#onwarning)                  | A callback which is triggered when the runnint environment is not ideal. |
+| `static` [preLoadModule()](#preloadmodule)         | Loads the specified module to speed up the initialization.               |
+| `static` [isModuleLoaded()](#ismoduleloaded)       | Returns whether the specified module has been loaded.                    |
+| `static` [createInstance()](#createinstance)       | Initializes a new instance of the `CaptureVisionRouter` class.           |
+| [dispose()](#dispose)                              | Releases all resources used by the `CaptureVisionRouter` object.         |
+| [disposed](#disposed)                              | Returns whether the `CaptureVisionRouter` object has been disposed of.   |
+
+## detectEnvironment
+
+Detect the current device environment.
+
+```typescript
+detectEnvironment(): Promise<any>
+```
+
+### Return Value
+
+`Promise<any>`
+
+**Code snippet**
+
+```javascript
+Dynamsoft.CVR.CaptureVisionRouter.detectEnvironment();
+```
+
+## onWarning
+
+A callback which is triggered when the runnint environment is not ideal.
+
+```typescript
+onWarning: (warning:Warning) =>{};
+```
+
+### Return Value
+
+`Promise<any>`
+
+**Code snippet**
+
+```javascript
+Dynamsoft.CVR.CaptureVisionRouter.onWarning = warning => console.log(warning.message);
+```
+
+### See Also
+
+* [Warning](./interfaces/warning.md)
 
 ## preLoadModule
 
@@ -65,7 +107,7 @@ A boolean value that indicates whether the required module has been loaded.
 **Code snippet**
 
 ```javascript
-if(router.isModuleLoaded("DBR")){
+if(Dynamsoft.CVR.CaptureVisionRouter.isModuleLoaded('dbr')){
   // Use the router to perform a DBR job.
 } else {
   console.log("DBR module is not preloaded.");
