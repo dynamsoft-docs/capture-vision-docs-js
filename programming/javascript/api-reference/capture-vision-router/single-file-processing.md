@@ -10,7 +10,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
 
-# CaptureVisionRouter Single File Processing
+# CaptureVisionRouter Single Image Processing
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
