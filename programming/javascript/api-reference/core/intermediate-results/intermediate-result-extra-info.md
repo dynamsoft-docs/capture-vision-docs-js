@@ -15,11 +15,11 @@ The IntermediateResultExtraInfo structure represents the extra information assoc
 
 ```typescript
 interface IntermediateResultExtraInfo {
-                targetROIDefName: string;
-                taskName: string;
-                isSectionLevelResult: boolean;
-                sectionType: EnumSectionType;
-            };
+    targetROIDefName: string;
+    taskName: string;
+    isSectionLevelResult: boolean;
+    sectionType: EnumSectionType;
+};
 ```
 
 

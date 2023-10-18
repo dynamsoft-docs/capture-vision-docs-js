@@ -15,12 +15,12 @@ The IntermediateResultUnit interface represents an intermediate result unit used
 
 ```typescript
 interface IntermediateResultUnit {
-                hashId: string;
-                OriginalImageHashId: string;
-                originalImageTag: Core.BasicStructures.ImageTag;
-                unitType: EnumIntermediateResultUnitType;
-                getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
-            }
+    hashId: string;
+    OriginalImageHashId: string;
+    originalImageTag: Core.BasicStructures.ImageTag;
+    unitType: EnumIntermediateResultUnitType;
+    getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
+}
 ```
 
 

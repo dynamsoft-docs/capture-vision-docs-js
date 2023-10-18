@@ -15,9 +15,9 @@ The TextureDetectionResultUnit interface represents an intermediate result unit 
 
 ```typescript
 interface TextureDetectionResultUnit extends IntermediateResultUnit {
-                xSpacing: number;
-                ySpacing: number;
-            }
+    xSpacing: number;
+    ySpacing: number;
+}
 ```
 
 

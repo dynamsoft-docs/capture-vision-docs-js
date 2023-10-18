@@ -15,8 +15,8 @@ The EnhancedGrayscaleImageUnit interface represents a unit that contains an enha
 
 ```typescript
 interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
-                imageData: Core.BasicStructures.DSImageData;
-            }
+    imageData: Core.BasicStructures.DSImageData;
+}
 ```
 
 

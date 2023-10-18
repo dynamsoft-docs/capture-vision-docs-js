@@ -15,8 +15,8 @@ The PredetectedRegionsUnit interface represents a unit that contains a collectio
 
 ```typescript
 interface PredetectedRegionsUnit extends IntermediateResultUnit {
-                predetectedRegions: Array<PredetectedRegionElement>;
-            }
+    predetectedRegions: Array<PredetectedRegionElement>;
+}
 ```
 
 

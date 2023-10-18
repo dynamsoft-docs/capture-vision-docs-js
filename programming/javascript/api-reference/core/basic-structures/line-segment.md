@@ -15,9 +15,9 @@ The LineSegment interface represents a line segment in 2D space. It contains two
 
 ```typescript
 interface LineSegment {
-                startPoint: Point;
-                endPoint: Point;
-            } 
+    startPoint: Point;
+    endPoint: Point;
+} 
 ```
 
 

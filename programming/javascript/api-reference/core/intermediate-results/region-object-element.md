@@ -15,10 +15,10 @@ The RegionObjectElement interface represents an element of a region object in 2D
 
 ```typescript
 interface RegionObjectElement {
-                location: Core.BasicStructures.Quadrilateral;
-                referencedElement: RegionObjectElement;
-                type: EnumRegionObjectElementType;
-            }
+    location: Core.BasicStructures.Quadrilateral;
+    referencedElement: RegionObjectElement;
+    type: EnumRegionObjectElementType;
+}
 ```
 
 

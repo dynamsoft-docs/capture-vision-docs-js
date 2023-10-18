@@ -15,8 +15,8 @@ The interface Polygon represents a Polygon in 2D space. It contains of an array 
 
 ```typescript
 interface Polygon {
-                points: Array<Core.BasicStructures.Point>;
-            }
+    points: Array<Core.BasicStructures.Point>;
+}
 ```
 
 

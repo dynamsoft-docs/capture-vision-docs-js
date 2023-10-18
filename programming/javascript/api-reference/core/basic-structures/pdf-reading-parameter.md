@@ -15,10 +15,10 @@ The PDFReadingParameter interface represents the parameters for reading a PDF fi
 
 ```typescript
 interface PDFReadingParameter {
-                mode: EnumPDFReadingMode;
-                dpi: number;
-                rasterDataSource: EnumRasterDataSource;
-            } 
+    mode: EnumPDFReadingMode;
+    dpi: number;
+    rasterDataSource: EnumRasterDataSource;
+} 
 ```
 
 

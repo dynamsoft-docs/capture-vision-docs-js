@@ -15,8 +15,8 @@ The interface Quadrilateral represents a quadrilateral shape defined by four poi
 
 ```typescript
 interface Quadrilateral {
-                points: [Point, Point, Point, Point];
-            }
+    points: [Point, Point, Point, Point];
+}
 ```
 
 

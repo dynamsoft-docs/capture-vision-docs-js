@@ -14,12 +14,12 @@ The interface Rect represents a rectangle in 2D space. It contains four integer 
 
 ```typescript
 interface Rect {
-                x: number;
-                y: number;
-                width: number;
-                height: number;
-                isMeasuredInPercentage?: boolean;
-            }
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    isMeasuredInPercentage?: boolean;
+}
 ```
 
 

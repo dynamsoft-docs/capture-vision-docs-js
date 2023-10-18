@@ -15,23 +15,23 @@ The Arc class represents image data, which contains the image bytes, width, heig
 
 ```typescript
 interface Arc {
-                x: number;
-                y: number;
-                radius: number;
-                startAngle: number;
-                endAngle: number;
-            } 
+    x: number;
+    y: number;
+    radius: number;
+    startAngle: number;
+    endAngle: number;
+} 
 ```
 
 
 
-| Properties            | Type |
-|----------------------|-------------|
-| [`x`](#x) | *number* |
-| [`y`](#y) | *number* |
-| [`radius`](#radius) | *number* |
+| Properties                  | Type     |
+| --------------------------- | -------- |
+| [`x`](#x)                   | *number* |
+| [`y`](#y)                   | *number* |
+| [`radius`](#radius)         | *number* |
 | [`startAngle`](#startangle) | *number* |
-| [`endAngle`](#endangle) | *number* |
+| [`endAngle`](#endangle)     | *number* |
 
 ### x
 

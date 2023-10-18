@@ -15,9 +15,9 @@ The interface Point represents a point in 2D space. It contains of two numbers, 
 
 ```typescript
 interface Point {
-                x: number;
-                y: number;
-            }
+    x: number;
+    y: number;
+}
 ```
 
 

@@ -15,7 +15,7 @@ The PredetectedRegionElement interface extends the RegionObjectElement interface
 
 ```typescript
 interface PredetectedRegionElement extends RegionObjectElement {
-                modeName: string;
+    modeName: string;
 }
 ```
 

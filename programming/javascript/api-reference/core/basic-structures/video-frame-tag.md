@@ -15,15 +15,15 @@ The `VideoFrameTag` interface extends the `Core.BasicStructures.ImageTag` interf
 
 ```typescript
 interface VideoFrameTag extends Core.BasicStructures.ImageTag {
-            isCropped: boolean;
-            cropRegion: Core.BasicStructures.DSRect;
-            originalWidth: number; 
-            originalHeight: number; 
-            currentWidth: number; 
-            currentHeight: number;
-            timeSpent: number; 
-            timeStamp: number; 
-        }
+    isCropped: boolean;
+    cropRegion: Core.BasicStructures.DSRect;
+    originalWidth: number; 
+    originalHeight: number; 
+    currentWidth: number; 
+    currentHeight: number;
+    timeSpent: number; 
+    timeStamp: number; 
+}
 ```
 
 

@@ -15,9 +15,9 @@ The `CapturedResultItem` interface provides a common structure for representing 
 
 ```typescript
 interface CapturedResultItem {
-                readonly type: EnumCapturedResultItemType;
-                readonly referenceItem: CapturedResultItem;
-            }
+    readonly type: EnumCapturedResultItemType;
+    readonly referenceItem: CapturedResultItem;
+}
 ```
 
 

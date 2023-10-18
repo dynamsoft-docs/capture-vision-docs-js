@@ -16,10 +16,10 @@ The CapturedResult provides access to the original image information and the lis
 
 ```typescript
 interface CapturedResult {
-                readonly OriginalImageHashId: string;
-                readonly OriginalImageTag: ImageTag;
-                readonly items: Array<CapturedResultItem>;
-            }
+    readonly OriginalImageHashId: string;
+    readonly OriginalImageTag: ImageTag;
+    readonly items: Array<CapturedResultItem>;
+}
 ```
 
 

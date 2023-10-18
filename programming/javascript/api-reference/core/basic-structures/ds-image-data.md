@@ -15,14 +15,14 @@ The DSImageData class represents image data, which contains the image bytes, wid
 
 ```typescript
 interface DSImageData {
-                bytes: Uint8Array;
-                width: number;
-                height: number;
-                stride: number;
-                format: Core.BasicStructures.EnumImagePixelFormat;
-                orientation?: number;
-                tag?: ImageTag;
-            } 
+    bytes: Uint8Array;
+    width: number;
+    height: number;
+    stride: number;
+    format: Core.BasicStructures.EnumImagePixelFormat;
+    orientation?: number;
+    tag?: ImageTag;
+} 
 ```
 
 

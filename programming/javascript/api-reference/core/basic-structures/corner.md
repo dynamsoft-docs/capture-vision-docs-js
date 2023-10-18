@@ -15,11 +15,11 @@ Corner is a structure in an image consisting of two line segments and intersecti
 
 ```typescript
 interface Corner {
-                type: EnumCornerType;
-                intersection: Point;
-                line1: LineSegment;
-                Line2: LineSegment;
-            } 
+    type: EnumCornerType;
+    intersection: Point;
+    line1: LineSegment;
+    Line2: LineSegment;
+} 
 ```
 
 ## Attributes

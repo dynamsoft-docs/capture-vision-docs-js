@@ -15,9 +15,9 @@ Edge is a structure composed of two Corner points in an image. A Corner represen
 
 ```typescript
 interface Edge {
-                startCorner: Corner;
-                endCorner: Corner;
-            }
+    startCorner: Corner;
+    endCorner: Corner;
+}
 ```
 
 ## Attributes

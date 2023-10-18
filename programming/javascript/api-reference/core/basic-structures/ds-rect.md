@@ -15,12 +15,12 @@ The interface DSRect represents a rectangle in 2D space. It contains four intege
 
 ```typescript
 interface DSRect {
-                left: number;
-                right: number;
-                top: number;
-                bottom: number;
-                isMeasuredInPercentage: boolean;
-            }
+    left: number;
+    right: number;
+    top: number;
+    bottom: number;
+    isMeasuredInPercentage: boolean;
+}
 ```
 
 

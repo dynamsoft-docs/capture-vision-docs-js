@@ -15,8 +15,8 @@ The Contour class represents a contour in 2D space. It contains an array of Poin
 
 ```typescript
 interface Contour {
-                points: Array<Point>;
-            }
+    points: Array<Point>;
+}
 ```
 
 

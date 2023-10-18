@@ -15,8 +15,8 @@ The LineSegmentsUnit interface extends the IntermediateResultUnit interface and 
 
 ```typescript
 interface LineSegmentsUnit extends IntermediateResultUnit {
-                lineSegments: Array<Core.BasicStructures.LineSegment>;
-            }
+    lineSegments: Array<Core.BasicStructures.LineSegment>;
+}
 ```
 
 

@@ -15,9 +15,9 @@ The interface FileImageTag represents an image tag that is associated with a fil
 
 ```typescript
 interface FileImageTag extends ImageTag {
-                filePath: string;
-                pageNumber: number;
-            }
+    filePath: string;
+    pageNumber: number;
+}
 ```
 
 

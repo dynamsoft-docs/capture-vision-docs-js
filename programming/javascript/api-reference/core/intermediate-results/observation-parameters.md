@@ -15,13 +15,13 @@ The `ObservationParameters` interface is used to set filter conditions for the `
 
 ```typescript
 interface ObservationParameters {
-                setObservedResultUnitTypes(types: number): void;
-                getObservedResultUnitTypes(): number;
-                isResultUnitTypeObserved(type: EnumIntermediateResultUnitType): boolean;
-                addObservedTask(taskName): void;
-                removeObservedTask(taskName: string): void;
-                isTaskObserved(ctaskName: string): boolean;
-            }
+    setObservedResultUnitTypes(types: number): void;
+    getObservedResultUnitTypes(): number;
+    isResultUnitTypeObserved(type: EnumIntermediateResultUnitType): boolean;
+    addObservedTask(taskName): void;
+    removeObservedTask(taskName: string): void;
+    isTaskObserved(ctaskName: string): boolean;
+}
 ```
 
 

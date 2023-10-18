@@ -15,8 +15,8 @@ The ColourImageUnit interface represents a colour image unit.
 
 ```typescript
 interface ColourImageUnit extends IntermediateResultUnit {
-                imageData: Core.BasicStructures.DSImageData;
-            }
+    imageData: Core.BasicStructures.DSImageData;
+}
 ```
 
 

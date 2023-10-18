@@ -16,8 +16,8 @@ The `OriginalImageResultItem` interface represents original image result item. I
 
 ```typescript
 interface OriginalImageResultItem extends CapturedResultItem {
-                readonly imageData: Core.BasicStructures.DSImageData;
-            }
+    readonly imageData: Core.BasicStructures.DSImageData;
+}
 ```
 
 

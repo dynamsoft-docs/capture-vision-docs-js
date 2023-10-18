@@ -15,10 +15,10 @@ The IntermediateResultManager interface manages intermediate results generated d
 
 ```typescript
 interface IntermediateResultManager {
-                addResultReceiver(receiver: IntermediateResultReceiver): void;
-                removeResultReceiver(receiver: IntermediateResultReceiver): void;
-                getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
-            }
+    addResultReceiver(receiver: IntermediateResultReceiver): void;
+    removeResultReceiver(receiver: IntermediateResultReceiver): void;
+    getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
+}
 ```
 
 

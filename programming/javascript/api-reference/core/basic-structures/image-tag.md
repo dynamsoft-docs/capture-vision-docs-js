@@ -15,9 +15,9 @@ The interface ImageTag represents an image tag that can be attached to an image 
 
 ```typescript
 interface ImageTag {
-                imageId: number;
-                type: EnumImageTagType;
-            }
+    imageId: number;
+    type: EnumImageTagType;
+}
 ```
 
 | Properties            | Type |

@@ -15,8 +15,8 @@ The BinaryImageUnit interface represents a binary image unit.
 
 ```typescript
 interface BinaryImageUnit extends IntermediateResultUnit {
-                imageData: Core.BasicStructures.DSImageData;
-            } 
+    imageData: Core.BasicStructures.DSImageData;
+} 
 ```
 
 

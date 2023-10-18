@@ -15,8 +15,8 @@ The ContoursUnit interface represents a unit that contains contours as part of i
 
 ```typescript
 interface ContoursUnit extends IntermediateResultUnit {
-                contours: Array<Core.BasicStructures.Contour>;
-            }
+    contours: Array<Core.BasicStructures.Contour>;
+}
 ```
 
 
