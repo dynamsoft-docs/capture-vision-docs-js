@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # ColourImageUnit
 
-The ColourImageUnit interface represents a colour image unit.
+The `ColourImageUnit` interface represents a colour image unit.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface ColourImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

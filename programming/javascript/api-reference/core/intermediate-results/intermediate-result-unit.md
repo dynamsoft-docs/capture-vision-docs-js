@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # IntermediateResultUnit
 
-The IntermediateResultUnit interface represents an intermediate result unit used in image processing.
+The `IntermediateResultUnit` interface represents an intermediate result unit used in image processing.
 
 ## Definition
 
@@ -22,7 +22,6 @@ interface IntermediateResultUnit {
     getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
 }
 ```
-
 
 | API Name               | Description |
 |----------------------|-------------|

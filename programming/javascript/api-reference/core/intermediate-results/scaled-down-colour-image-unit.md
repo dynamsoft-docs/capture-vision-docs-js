@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # ScaledDownColourImageUnit
 
-The ScaledDownColourImageUnit interface represents a colour image unit after scaling.
+The `ScaledDownColourImageUnit` interface represents a colour image unit after scaling.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface ScaledDownColourImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 } 
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

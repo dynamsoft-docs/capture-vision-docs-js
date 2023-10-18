@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # IntermediateResult
 
-The IntermediateResult interface represents a container containing a collection of IntermediateResultUnit objects.
+The `IntermediateResult` interface represents a container containing a collection of IntermediateResultUnit objects.
 
 ## Definition
 
@@ -19,12 +19,9 @@ interface IntermediateResult {
 }
 ```
 
-
-
 | Properties | Type |
 |--------|-------------|
 | [`intermediateResultUnits`](#intermediateresultunits) | *Array<IntermediateResultUnit>* |
-
 
 ### intermediateResultUnits
 

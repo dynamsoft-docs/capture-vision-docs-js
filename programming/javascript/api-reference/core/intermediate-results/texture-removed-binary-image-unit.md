@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TextureRemovedBinaryImageUnit
 
-The TextureRemovedBinaryImageUnit interface represents a binary image unit after removing texture.
+The `TextureRemovedBinaryImageUnit` interface represents a binary image unit after removing texture.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface TextureRemovedBinaryImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 } 
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

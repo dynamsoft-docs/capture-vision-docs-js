@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # BinaryImageUnit
 
-The BinaryImageUnit interface represents a binary image unit.
+The `BinaryImageUnit` interface represents a binary image unit.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface BinaryImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 } 
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

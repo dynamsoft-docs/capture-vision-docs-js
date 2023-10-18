@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # EnhancedGrayscaleImageUnit
 
-The EnhancedGrayscaleImageUnit interface represents a unit that contains an enhanced grayscale image as part of intermediate results.
+The `EnhancedGrayscaleImageUnit` interface represents a unit that contains an enhanced grayscale image as part of intermediate results.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

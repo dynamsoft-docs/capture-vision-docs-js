@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # IntermediateResultManager
 
-The IntermediateResultManager interface manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+The `IntermediateResultManager` interface manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
 ## Definition
 
@@ -20,7 +20,6 @@ interface IntermediateResultManager {
     getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
 }
 ```
-
 
 | API Name | Description |
 |--------|-------------|

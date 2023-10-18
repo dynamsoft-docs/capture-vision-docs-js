@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # GrayscaleImageUnit
 
-The GrayscaleImageUnit interface represents a unit that contains a grayscale image as part of intermediate results.
+The `GrayscaleImageUnit` interface represents a unit that contains a grayscale image as part of intermediate results.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface GrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # PredetectedRegionElement
 
-The PredetectedRegionElement interface extends the RegionObjectElement interface and represents a predetected region element.
+The `PredetectedRegionElement` interface extends the RegionObjectElement interface and represents a predetected region element.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface PredetectedRegionElement extends RegionObjectElement {
     modeName: string;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

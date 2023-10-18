@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # PredetectedRegionsUnit
 
-The PredetectedRegionsUnit interface represents a unit that contains a collection of pre-detected regions. It inherits from the IntermediateResultUnit interface and stores the result of pre-detected regions.
+The `PredetectedRegionsUnit` interface represents a unit that contains a collection of pre-detected regions. It inherits from the IntermediateResultUnit interface and stores the result of pre-detected regions.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface PredetectedRegionsUnit extends IntermediateResultUnit {
     predetectedRegions: Array<PredetectedRegionElement>;
 }
 ```
-
-
 
 | Properties | Type |
 |--------|-------------|

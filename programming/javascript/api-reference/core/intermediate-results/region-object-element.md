@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # RegionObjectElement
 
-The RegionObjectElement interface represents an element of a region object in 2D space. It is an abstract interface that provides the interface for region object elements.
+The `RegionObjectElement` interface represents an element of a region object in 2D space. It is an abstract interface that provides the interface for region object elements.
 
 ## Definition
 
@@ -20,8 +20,6 @@ interface RegionObjectElement {
     type: EnumRegionObjectElementType;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

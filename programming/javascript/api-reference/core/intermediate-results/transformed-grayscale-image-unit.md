@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TransformedGrayscaleImageUnit
 
-The TransformedGrayscaleImageUnit interface represents a transformed grayscale image.
+The `TransformedGrayscaleImageUnit` interface represents a transformed grayscale image.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface TransformedGrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 } 
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

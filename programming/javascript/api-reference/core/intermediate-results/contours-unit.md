@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # ContoursUnit
 
-The ContoursUnit interface represents a unit that contains contours as part of intermediate results.It extends the IntermediateResultUnit interface.
+The `ContoursUnit` interface represents a unit that contains contours as part of intermediate results.It extends the IntermediateResultUnit interface.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface ContoursUnit extends IntermediateResultUnit {
     contours: Array<Core.BasicStructures.Contour>;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

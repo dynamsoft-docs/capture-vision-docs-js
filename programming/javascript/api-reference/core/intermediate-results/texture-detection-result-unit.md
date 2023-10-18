@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TextureDetectionResultUnit
 
-The TextureDetectionResultUnit interface represents an intermediate result unit for texture detection.
+The `TextureDetectionResultUnit` interface represents an intermediate result unit for texture detection.
 
 ## Definition
 
@@ -19,7 +19,6 @@ interface TextureDetectionResultUnit extends IntermediateResultUnit {
     ySpacing: number;
 }
 ```
-
 
 | API Name               | Type |
 |----------------------|-------------|

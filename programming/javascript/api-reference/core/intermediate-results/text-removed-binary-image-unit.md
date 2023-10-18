@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TextRemovedBinaryImageUnit
 
-The TextRemovedBinaryImageUnit interface represents a binary image unit after removing text.
+The `TextRemovedBinaryImageUnit` interface represents a binary image unit after removing text.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 } 
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

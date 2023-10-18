@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TextureRemovedGrayscaleImageUnit
 
-The TextureRemovedGrayscaleImageUnit interface represents a grayscale image unit after removing texture.
+The `TextureRemovedGrayscaleImageUnit` interface represents a grayscale image unit after removing texture.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.BasicStructures.DSImageData;
 } 
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|

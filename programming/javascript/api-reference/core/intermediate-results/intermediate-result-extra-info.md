@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # IntermediateResultExtraInfo
 
-The IntermediateResultExtraInfo structure represents the extra information associated with an intermediate result. It includes properties such as the target ROI definition name, task name, section level result indicator, and section type.
+The `IntermediateResultExtraInfo` structure represents the extra information associated with an intermediate result. It includes properties such as the target ROI definition name, task name, section level result indicator, and section type.
 
 ## Definition
 
@@ -21,8 +21,6 @@ interface IntermediateResultExtraInfo {
     sectionType: EnumSectionType;
 };
 ```
-
-
 
 | Properties                                             | Type                                |
 | ----------------------------------------------------- | ----------------------------------- |

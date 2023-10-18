@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # IntermediateResultReceiver
 
-The IntermediateResultReceiver interface is responsible for receiving intermediate results of different types. It provides virtual functions for each type of result, which are called when the corresponding result is received.
+The `IntermediateResultReceiver` interface is responsible for receiving intermediate results of different types. It provides virtual functions for each type of result, which are called when the corresponding result is received.
 
 ## Definition
 

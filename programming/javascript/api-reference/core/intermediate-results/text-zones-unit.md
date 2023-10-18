@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # TextZonesUnit
 
-The TextZonesUnit interface represents a unit that contains text zones.
+The `TextZonesUnit` interface represents a unit that contains text zones.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface TextZonesUnit extends IntermediateResultUnit {
     textZones: Array<Core.BasicStructures.Quadrilateral>;
 }
 ```
-
-
 
 | Properties               | Type |
 |----------------------|-------------|
