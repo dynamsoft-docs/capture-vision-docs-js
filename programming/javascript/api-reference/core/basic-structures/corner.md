@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Corner
 
-Corner is a structure in an image consisting of two line segments and intersection point. A Corner represents a point at which the image's brightness or color sharply changes.
+The `Corner` interface defines the structure of a "Corner" object which consists of two lines and the intersection point in 2-dimensional space.
 
 ## Definition
 

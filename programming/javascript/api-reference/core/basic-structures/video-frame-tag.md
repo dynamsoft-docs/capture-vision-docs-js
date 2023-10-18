@@ -26,8 +26,6 @@ interface VideoFrameTag extends Core.BasicStructures.ImageTag {
 }
 ```
 
-
-
 | Properties               | Description |
 |----------------------|-------------|
 | [`isCropped`](#iscropped) | Determines whether the video frame is cropped. |

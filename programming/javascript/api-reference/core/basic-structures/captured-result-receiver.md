@@ -11,7 +11,7 @@ breadcrumbText: JS CaptureResultReceiver Interface
 
 # CaptureResultReceiver
 
-The `CaptureResultReceiver` interface is responsible for receiving captured results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CaptureResultReceiver` interface defines the standard way to get captured results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Definition
 

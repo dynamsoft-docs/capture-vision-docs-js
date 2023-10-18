@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # ImageTag
 
-The interface ImageTag represents an image tag that can be attached to an image in a system. It contains information about the image, such as the image ID and the image tag type.
+The `ImageTag` interface defines a structure that stores information about an image returned by an [image source](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html).
 
 ## Definition
 
@@ -20,10 +20,10 @@ interface ImageTag {
 }
 ```
 
-| Properties            | Type |
-|----------------------|-------------|
-| [`imageId`](#imageid) | *Number* |
-| [`type`](#type) | *EnumImageTagType* |
+| Properties            | Type               |
+| --------------------- | ------------------ |
+| [`imageId`](#imageid) | *Number*           |
+| [`type`](#type)       | *EnumImageTagType* |
 
 ### imageId
 

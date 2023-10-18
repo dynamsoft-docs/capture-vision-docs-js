@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # LineSegment
 
-The LineSegment interface represents a line segment in 2D space. It contains two Point objects, which represent the start point and end point of the line.
+The `LineSegment` interface defines a "line" shape in 2-dimensional space.
 
 ## Definition
 
@@ -19,8 +19,6 @@ interface LineSegment {
     endPoint: Point;
 } 
 ```
-
-
 
 | Properties | Type |
 |---------- | ---- |

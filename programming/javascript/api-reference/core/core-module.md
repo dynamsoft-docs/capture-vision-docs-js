@@ -75,7 +75,7 @@ In order to make the code more predictable and readable, the library defines a s
 The following are the basic interfaces often shared by more than one module:
 
 * [Arc](./basic-structures/arc.md)
-* [CapturedResultFilter](./basic-structures/captured-result-filter.md)
+<!-- * [CapturedResultFilter](./basic-structures/captured-result-filter.md) -->
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
 * [CapturedResultReceiver](./basic-structures/captured-result-receiver.md)
 * [CapturedResult](./basic-structures/captured-result.md)

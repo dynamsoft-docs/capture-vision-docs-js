@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Polygon
 
-The interface Polygon represents a Polygon in 2D space. It contains of an array storing Point objects to represent the coordinates of the Polygon.
+The `Polygon` interface defines a shape that represents a polygon in 2-dimensional space.
 
 ## Definition
 
@@ -18,8 +18,6 @@ interface Polygon {
     points: Array<Core.BasicStructures.Point>;
 }
 ```
-
-
 
 | Properties | Type |
 |---------- | ---- |

@@ -8,7 +8,7 @@ needAutoGenerateSidebar: true
 
 # Rect
 
-The interface Rect represents a rectangle in 2D space. It contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
+The `Rect` interface defines a shape that represents a rectangle in 2-dimensional space.
 
 ## Definition
 

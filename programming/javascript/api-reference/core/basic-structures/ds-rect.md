@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # DSRect
 
-The interface DSRect represents a rectangle in 2D space. It contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
+The `DSRect` interface defines the shape of a rectangle in 2D space.
 
 ## Definition
 
@@ -22,8 +22,6 @@ interface DSRect {
     isMeasuredInPercentage: boolean;
 }
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|

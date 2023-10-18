@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Point
 
-The interface Point represents a point in 2D space. It contains of two numbers, which represent the coordinates of the point.
+The `Point` interface defines a shape that represents a point in 2-dimensional space.
 
 ## Definition
 
@@ -19,8 +19,6 @@ interface Point {
     y: number;
 }
 ```
-
-
 
 | Properties | Type |
 |---------- | ---- |

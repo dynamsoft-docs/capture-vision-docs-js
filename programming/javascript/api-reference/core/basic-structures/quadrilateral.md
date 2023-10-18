@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Quadrilateral
 
-The interface Quadrilateral represents a quadrilateral shape defined by four points. It contains an array of four Point objects.
+The `Quadrilateral` interface defines a shape that represents a quadrilateral in 2-dimensional space.
 
 ## Definition
 

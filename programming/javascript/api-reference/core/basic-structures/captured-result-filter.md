@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: interface CaptureResultFilter - Dynamsoft Capture Vision JS Edition API Reference
-description: This page shows the JS edition of the interface CaptureResultFilter in Core Module.
+title: interface CapturedResultFilter - Dynamsoft Capture Vision JS Edition API Reference
+description: This page shows the JS edition of the interface CapturedResultFilter in Core Module.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: JS CaptureResultFilter Interface
+breadcrumbText: JS CapturedResultFilter Interface
 ---
 
-# CaptureResultFilter
+# CapturedResultFilter
 
-The `CaptureResultFilter` interface contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Definition
 

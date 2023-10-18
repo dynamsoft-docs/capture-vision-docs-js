@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # OriginalImageResultItem
 
-The `OriginalImageResultItem` interface represents original image result item. It extends the `CapturedResultItem` interface and adds a property.
+The `OriginalImageResultItem` interface defines the structure of an standard result item that contains the original image.
 
 ## Definition
 

@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # CapturedResult
 
-The CapturedResult provides access to the original image information and the list of captured result items, allowing you to retrieve and process the captured data as needed.
+The `CapturedResult` interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
 ## Definition
 
@@ -22,8 +22,6 @@ interface CapturedResult {
     readonly errorString: string;
 }
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|

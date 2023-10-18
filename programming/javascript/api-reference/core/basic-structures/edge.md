@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Edge
 
-Edge is a structure composed of two Corner points in an image. A Corner represents a point at which the image's brightness or color sharply changes. Therefore, a Edge is a line segment connecting two such points that have been identified as Corners.
+The `Edge` interface defines a shape that is composed of two `Corner` points in 2-dimensional space.
 
 ## Definition
 

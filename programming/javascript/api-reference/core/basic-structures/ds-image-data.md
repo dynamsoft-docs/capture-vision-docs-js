@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # DSImageData
 
-The DSImageData class represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
+The `DSImageData` interface defines the structure of an object that represents an image.
 
 ## Definition
 
@@ -24,8 +24,6 @@ interface DSImageData {
     tag?: ImageTag;
 } 
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|

@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Arc
 
-The Arc class represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
+The `Arc` interface defines the structure of a "arc" shape in 2-dimensional space.
 
 ## Definition
 
@@ -22,8 +22,6 @@ interface Arc {
     endAngle: number;
 } 
 ```
-
-
 
 | Properties                  | Type     |
 | --------------------------- | -------- |
