@@ -18,69 +18,17 @@ jobs:
   # This workflow contains jobs called "Build-Main" and "Build-Preview"
   Build-Main:
     if: ${{ github.ref == 'refs/heads/main' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@main
+    with:
+      doc-repo: capture-vision-docs-js
+      doc-url: capture-vision/docs/web
+    secrets: inherit
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site - Main
-        run: |
-          cd /home/ubuntu
-          [ -d DCVDocJS ] && rm -rf DCVDocJS
-          [ -d capture-vision-docs-js ] && rm -rf capture-vision-docs-js
-          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
-          [ ! -d DCVDocJS ] && mkdir -p DCVDocJS
-          git clone --depth 1 https://github.com/dynamsoft-docs/capture-vision-docs-js.git capture-vision-docs-js
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cp -rfp ./capture-vision-docs-js/* ./DCVDocJS/
-          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocJS/
-          cd DCVDocJS && bundle install && bundle exec jekyll build
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
-          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
-          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
-          port: 21 
-          local-dir: /home/ubuntu/DCVDocJS/_site/
-          server-dir: /www.dynamsoft.com/capture-vision/docs/web/        
-
-      - name: Trigger Webhook 
-        run: | 
-          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/capture-vision/docs/web/*\"]" ${{ secrets.WEBHOOK_URL }}
-
-          
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
+    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-testing.yml@preview
+    with:
+      doc-repo: capture-vision-docs-js
+      doc-url: capture-vision/docs/web
+    secrets: inherit
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site - Preview
-        run: |
-          cd /home/ubuntu
-          [ -d DCVDocJS-preview ] && rm -rf DCVDocJS-preview
-          [ -d capture-vision-docs-js-preview ] && rm -rf capture-vision-docs-js-preview
-          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
-          [ ! -d DCVDocJS-preview ] && mkdir -p DCVDocJS-preview
-          git clone --depth 1 --branch preview https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/capture-vision-docs-js.git capture-vision-docs-js-preview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cp -rfp ./capture-vision-docs-js-preview/* ./DCVDocJS-preview/
-          cp -rfp ./Docs-Template-Repo-Preview/* ./DCVDocJS-preview/
-          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCVDocJS-preview/_config.yml
-          cd DCVDocJS-preview && bundle install && bundle exec jekyll build
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
-          local-dir: /home/ubuntu/DCVDocJS-preview/_site/
-          server-dir: /www.dynamsoft.com/capture-vision/docs/web/       
