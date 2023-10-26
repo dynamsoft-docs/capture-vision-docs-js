@@ -94,6 +94,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Quadrilateral](./basic-structures/quadrilateral.md)
 * [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
 * [Rect](./basic-structures/rect.md)
+* [Warning](./basic-structures/warning.md)
 
 The following interfaces facilitate the use of intermediate result functions:
 
