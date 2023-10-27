@@ -34,6 +34,7 @@ abstract class ImageSourceAdapter {
   clearBuffer(): void;
   setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
   getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
+  setErrorListener(listener: ImageSourceErrorListener): void;
 }
 ```
 
@@ -55,6 +56,7 @@ abstract class ImageSourceAdapter {
 | [`ClearBuffer()`](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
 | [`SetColourChannelUsageType()`](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
 | [`GetColourChannelUsageType()`](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
+| [`setErrorListener()`](#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
 
 ---
 
@@ -240,3 +242,23 @@ getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
 **Return value**
 
 Returns the usage type of a color channel in images.
+
+### setErrorListener
+
+Sets the error listener to receive notifications should errors occur during image acquisition.
+
+**Parameters**
+
+None.
+
+**Code Snippet**
+
+```javascript
+cameraEnhancer.setErrorListener(
+    {
+        onErrorReceived: (errorCode, errorMessage) => {
+            console.log(errorMessage);
+        },
+    }
+);
+```
