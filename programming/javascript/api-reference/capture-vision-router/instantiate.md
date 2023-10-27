@@ -42,7 +42,7 @@ Dynamsoft.CVR.CaptureVisionRouter.detectEnvironment();
 
 ## onWarning
 
-A callback which is triggered when the runnint environment is not ideal.
+A callback which is triggered when the running environment is not ideal.
 
 ```typescript
 onWarning: (warning:Warning) =>{};

@@ -21,7 +21,7 @@ interface TextZonesUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`textZones`](#textzones) | *Array<Core.BasicStructures.Quadrilateral>* |
+| [`textZones`](#textzones) | *Array\<Core.BasicStructures.Quadrilateral>* |
 
 ### textZones
 
