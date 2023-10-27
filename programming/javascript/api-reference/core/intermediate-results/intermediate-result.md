@@ -21,7 +21,7 @@ interface IntermediateResult {
 
 | Properties | Type |
 |--------|-------------|
-| [`intermediateResultUnits`](#intermediateresultunits) | *Array<IntermediateResultUnit>* |
+| [`intermediateResultUnits`](#intermediateresultunits) | *Array\<IntermediateResultUnit>* |
 
 ### intermediateResultUnits
 
