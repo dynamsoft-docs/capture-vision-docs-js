@@ -27,7 +27,7 @@ interface CapturedResult {
 |----------------------|-------------|
 | [`OriginalImageHashId`](#originalimagehashid) | *String* |
 | [`OriginalImageTag`](#originalimagetag) | *ImageTag* |
-| [`items`](#items) | *Array/<CapturedResultItem>* |
+| [`items`](#items) | *Array\<CapturedResultItem>* |
 | [`errorCode`](#errorcode) | *number* |
 | [`errorString`](#errorstring) | *string* |
 
