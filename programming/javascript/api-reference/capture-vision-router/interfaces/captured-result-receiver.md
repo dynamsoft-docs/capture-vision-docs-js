@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: interface CaptureResultReceiver - Dynamsoft Capture Vision JS Edition API Reference
-description: This page shows the JS edition of the interface CaptureResultReceiver in Core Module.
+description: This page shows the JS edition of the interface CaptureResultReceiver in CaptureVisionRouter Module.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -31,7 +31,7 @@ interface CapturedResultReceiver {
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
 | [`OnCapturedResultReceived()`](#oncapturedresultreceived)           | Callback function for all captured results.          |
-| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.             |
+| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.        |
 | [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
 | [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
 | [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: interface IntermediateResultReceiver - Dynamsoft Core Module JS Edition API Reference
-description: This page shows the JS edition of the interface IntermediateResultReceiver in Dynamsoft Core Module.
+title: interface IntermediateResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page shows the JS edition of the interface IntermediateResultReceiver in Dynamsoft CaptureVisionRouter Module.
 keywords: intermediate result receiver, JS
 needAutoGenerateSidebar: true
 noTitleIndex: true

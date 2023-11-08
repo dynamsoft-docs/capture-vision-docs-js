@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: interface CapturedResultFilter - Dynamsoft Capture Vision JS Edition API Reference
-description: This page shows the JS edition of the interface CapturedResultFilter in Core Module.
+description: This page shows the JS edition of the interface CapturedResultFilter in CaptureVisionRouter Module.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

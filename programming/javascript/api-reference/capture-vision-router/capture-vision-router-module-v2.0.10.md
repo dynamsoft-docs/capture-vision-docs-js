@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: CaptureVisionRouter Module
-permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html
+permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router-module-v2.0.10.html
 ---
 
 # CaptureVisionRouter Module
@@ -117,9 +117,6 @@ The APIs for this class include:
 
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)
-* [CapturedResultFilter](./interfaces/captured-result-filter.md)
-* [CapturedResultReceiver](./interfaces/captured-result-receiver.md)
-* [IntermediateResultReceiver](./interfaces/intermediate-result-receiver.md)
 
 ### Enums
 

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Core Module
-permalink: /programming/javascript/api-reference/core/core-module.html
+permalink: /programming/javascript/api-reference/core/core-module-v3.0.10.html
 ---
 
 # Core Module
@@ -77,7 +77,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Arc](./basic-structures/arc.md)
 <!-- * [CapturedResultFilter](./basic-structures/captured-result-filter.md) -->
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
-<!-- * [CapturedResultReceiver](./basic-structures/captured-result-receiver.md)-->
+* [CapturedResultReceiver](./basic-structures/captured-result-receiver.md)
 * [CapturedResult](./basic-structures/captured-result.md)
 * [Contour](./basic-structures/contour.md)
 * [Corner](./basic-structures/corner.md)
@@ -104,7 +104,7 @@ The following interfaces facilitate the use of intermediate result functions:
 * [EnhancedGrayscaleImageUnit](./intermediate-results/enhanced-grayscale-image-unit.md)
 * [GrayscaleImageUnit](./intermediate-results/grayscale-image-unit.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
-<!-- * [IntermediateResultReceiver](./intermediate-results/intermediate-result-receiver.md)-->
+* [IntermediateResultReceiver](./intermediate-results/intermediate-result-receiver.md)
 * [IntermediateResultUnit](./intermediate-results/intermediate-result-unit.md)
 * [IntermediateResult](./intermediate-results/intermediate-result.md)
 * [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)
