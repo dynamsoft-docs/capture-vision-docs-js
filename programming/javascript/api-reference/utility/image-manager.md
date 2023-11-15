@@ -4,12 +4,21 @@ title: class ImageManager - Dynamsoft Utility Module JS Edition API Reference
 description: This page shows the JS edition of the class ImageManager in Dynamsoft Utility Module.
 keywords: image manager, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # ImageManager
 
 The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
+
+## Definition
+
+```typescript
+class ImageManager {
+    saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<File>
+};
+```
 
 | API Name                    | Description                          |
 | --------------------------- | ------------------------------------ |
