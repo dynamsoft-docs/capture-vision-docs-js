@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Contour
 
-The `Contour` interface defines the structure of a contour in 2-dimensional space.. It contains an array of `Point` objects, which represent the vertices of the contour.
+The `Contour` interface defines the structure of a contour in 2-dimensional space. It contains an array of `Point` objects, which represent the vertices of the contour.
 
 ## Definition
 

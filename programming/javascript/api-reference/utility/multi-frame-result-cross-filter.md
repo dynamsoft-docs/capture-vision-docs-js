@@ -63,7 +63,7 @@ isResultCrossVerificationEnabled(type: Core.BasicStructures.EnumCapturedResultIt
 
 **Parameters**
 
-`type`:  Specifies the captured result item type..
+`type`:  Specifies the captured result item type.
 
 **Return Value**
 
@@ -97,7 +97,7 @@ isResultDeduplicationEnabled(type: Core.BasicStructures.EnumCapturedResultItemTy
 
 **Parameters**
 
-`type`:  Specifies the captured result item type..
+`type`:  Specifies the captured result item type.
 
 **Return Value**
 
@@ -131,7 +131,7 @@ getDuplicateForgetTime(type: Core.BasicStructures.EnumCapturedResultItemType): P
 
 **Parameters**
 
-`type`: Specifies the captured result item type..
+`type`: Specifies the captured result item type.
 
 **Return Value**
 
