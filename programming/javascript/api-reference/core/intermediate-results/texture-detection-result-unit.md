@@ -4,6 +4,7 @@ title: interface TextureDetectionResultUnit - Dynamsoft Core Module JS Edition A
 description: This page shows the JS edition of the interface TextureDetectionResultUnit in Dynamsoft Core Module.
 keywords: texture detection result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

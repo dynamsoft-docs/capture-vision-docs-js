@@ -4,6 +4,7 @@ title: interface Quadrilateral - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Quadrilateral in Dynamsoft Core Module.
 keywords: quadrilateral, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -18,8 +19,6 @@ interface Quadrilateral {
     points: [Point, Point, Point, Point];
 }
 ```
-
-
   
 | Properties | Type |
 |---------- | ---- |

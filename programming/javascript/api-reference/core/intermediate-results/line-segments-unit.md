@@ -4,6 +4,7 @@ title: interface LineSegmentsUnit - Dynamsoft Core Module JS Edition API Referen
 description: This page shows the JS edition of the interfaace LineSegmentsUnit in Dynamsoft Core Module.
 keywords: line segments, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

@@ -4,6 +4,7 @@ title: interface IntermediateResultUnit - Dynamsoft Core Module JS Edition API R
 description: This page shows the JS edition of the interface IntermediateResultUnit in Dynamsoft Core Module.
 keywords: intermediate result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

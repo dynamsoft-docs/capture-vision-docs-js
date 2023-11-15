@@ -4,6 +4,7 @@ title: interface IntermediateResultManager - Dynamsoft Core Module JS Edition AP
 description: This page shows the JS edition of the interface IntermediateResultManager in Dynamsoft Core Module.
 keywords: intermediate result manager, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

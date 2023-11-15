@@ -4,6 +4,7 @@ title: interface Corner - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the class Corner in Dynamsoft Core Module.
 keywords: corner, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -21,8 +22,6 @@ interface Corner {
     Line2: LineSegment;
 } 
 ```
-
-## Attributes
   
 | Properties | Type |
 |---------- | ---- |

@@ -4,6 +4,7 @@ title: interface GrayscaleImageUnit - Dynamsoft Core Module JS Edition API Refer
 description: This page shows the JS edition of the interface GrayscaleImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

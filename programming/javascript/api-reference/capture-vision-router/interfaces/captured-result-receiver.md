@@ -27,7 +27,6 @@ interface CapturedResultReceiver {
 } 
 ```
 
-
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
 | [`OnCapturedResultReceived()`](#oncapturedresultreceived)           | Callback function for all captured results.          |

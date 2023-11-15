@@ -12,7 +12,7 @@ permalink: /programming/javascript/api-reference/core/core-module.html
 
 # Core Module
 
-The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`, `ImageSourceAdapter` and `IntermediateResultManager` plus a few enumerations and interfaces.
+The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`and `ImageSourceAdapter` plus a few enumerations and interfaces.
 
 ## CoreModule Class
 
@@ -35,7 +35,7 @@ The `ImageSourceAdapter` class defines how an image source should be defined for
 
 The APIs for this class are:
 
-| API Name                                                                                                          | Description                                                                                               |
+| API Name                                                                                                        | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [`addImageToBuffer`](./basic-structures/image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [`hasNextImageToFetch`](./basic-structures/image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
@@ -53,18 +53,6 @@ The APIs for this class are:
 | [`clearBuffer`](./basic-structures/image-source-adapter.md#clearbuffer)                                         | Clears the image buffer.                                                                                  |
 | [`setColourChannelUsageType`](./basic-structures/image-source-adapter.md#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
 | [`getColourChannelUsageType`](./basic-structures/image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
-
-## IntermediateResultManager Class
-
-The `IntermediateResultManager` class defines a user can interact with the `CaptureVisionRouter` class about intermediate results.
-
-The APIs for this class are:
-
-| API Name                                                                                             | Description                                     |
-| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
-| [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |
-| [`getOriginalImage`](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the original image data using an image hash id. |
 
 ## Interfaces and Enums
 

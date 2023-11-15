@@ -4,6 +4,7 @@ title: interface Contour - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Contour in Dynamsoft Core Module.
 keywords: contour, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

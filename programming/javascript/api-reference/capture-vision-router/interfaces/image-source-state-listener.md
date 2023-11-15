@@ -4,7 +4,7 @@ title: Interface ImageSourceStateListener - Dynamsoft Capture Vision JavaScript 
 description: This page introduces interface related to the ImageSourceStateListener of Dynamsoft Capture Vision JavaScript Edition.
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -12,13 +12,15 @@ noTitleIndex: true
 
 The `ImageSourceStateListener` interface represents a listener for capture state changes. It defines a callback function `onImageSourceStateReceived` that will be called when the image source state changes.
 
+## Definition
+
 ```typescript
 interface ImageSourceStateListener {
   onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
 }
 ```
 
-## onImageSourceStateReceived
+### onImageSourceStateReceived
 
 ```typescript
 onImageSourceStateReceived?: (status: EnumImageSourceState) => void;

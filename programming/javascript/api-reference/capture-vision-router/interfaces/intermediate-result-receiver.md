@@ -4,6 +4,7 @@ title: interface IntermediateResultReceiver - Dynamsoft CaptureVisionRouter Modu
 description: This page shows the JS edition of the interface IntermediateResultReceiver in Dynamsoft CaptureVisionRouter Module.
 keywords: intermediate result receiver, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -47,7 +48,6 @@ interface IntermediateResultReceiver {
 }
 
 ```
-
 
 | API Name | Description |
 |--------|-------------|

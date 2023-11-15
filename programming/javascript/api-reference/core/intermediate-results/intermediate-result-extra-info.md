@@ -4,6 +4,7 @@ title: interface IntermediateResultExtraInfo - Dynamsoft Core Module JS Edition 
 description: This page shows the JS edition of the interface IntermediateResultExtraInfo in Dynamsoft Core Module.
 keywords: intermediate result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

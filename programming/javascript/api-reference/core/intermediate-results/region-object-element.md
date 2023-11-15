@@ -4,6 +4,7 @@ title: interface RegionObjectElement - Dynamsoft Core Module JS Edition API Refe
 description: This page shows the JS edition of the interface RegionObjectElement in Dynamsoft Core Module.
 keywords: region object element, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
