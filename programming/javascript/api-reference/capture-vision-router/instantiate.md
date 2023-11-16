@@ -15,7 +15,7 @@ permalink: /programming/javascript/api-reference/capture-vision-router/instantia
 | API Name                                           | Description                                                              |
 | -------------------------------------------------- | ------------------------------------------------------------------------ |
 | `static` [detectEnvironment()](#detectenvironment) | Detect the current environment.                                          |
-| `static` [onWarning](d#onwarning)                  | A callback which is triggered when the runnint environment is not ideal. |
+| `static` [onWarning](#onwarning)                   | A callback which is triggered when the running environment is not ideal. |
 | `static` [preLoadModule()](#preloadmodule)         | Loads the specified module to speed up the initialization.               |
 | `static` [isModuleLoaded()](#ismoduleloaded)       | Returns whether the specified module has been loaded.                    |
 | `static` [createInstance()](#createinstance)       | Initializes a new instance of the `CaptureVisionRouter` class.           |

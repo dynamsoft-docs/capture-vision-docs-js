@@ -1,46 +1,60 @@
 ---
 layout: default-layout
-title: interface CapturedResultFilter - Dynamsoft Capture Vision JS Edition API Reference
-description: This page shows the JS edition of the interface CapturedResultFilter in Core Module.
+title: interface CaptureResultReceiver - Dynamsoft Capture Vision JS Edition API Reference
+description: This page shows the JS edition of the interface CaptureResultReceiver in CaptureVisionRouter Module.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: JS CapturedResultFilter Interface
+breadcrumbText: JS CaptureResultReceiver Interface
 ---
 
-# CapturedResultFilter
+# CaptureResultReceiver
 
-The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CaptureResultReceiver` interface defines the standard way to get captured results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ## Definition
 
 ```typescript
-interface CapturedResultFilter {
-  onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
-  onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
-  onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
-  onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
-  onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
-  onParsedResultsReceived(result: DCP.ParsedResult): void;
+interface CapturedResultReceiver {
+  onCapturedResultReceived?(result: Core.BasicStructures.CapturedResult): void;
+  onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
+  onDecodedBarcodesReceived?(result: DBR.DecodedBarcodesResult): void;
+  onRecognizedTextLinesReceived?(result: DLR.RecognizedTextLinesResult):void;
+  onDetectedQuadsReceived?(result: DDN.DetectedQuadsResult): void;
+  onNormalizedImagesReceived?(result: DDN.NormalizedImagesResult): void;
+  onParsedResultsReceived?(result: DCP.ParsedResult): void;
 } 
 ```
 
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.             |
+| [`OnCapturedResultReceived()`](#oncapturedresultreceived)           | Callback function for all captured results.          |
+| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.        |
 | [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
 | [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
 | [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
 | [`OnNormalizedImagesReceived()`](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
 | [`OnParsedResultsReceived()`](#onparsedresultsreceived)             | Callback function for parsed results.                |
 
+### OnCapturedResultReceived
+
+Callback function for all captured results. It will be called once for each captured result.
+
+```typescript
+onCapturedResultReceived(result: Core.BasicStructures.CapturedResult): void;
+```
+
+**Parameters**
+
+`result`: The captured result.
+
 ### OnOriginalImageResultReceived
 
 Callback function for original image results. It will be called once for each original image result.
 
 ```typescript
-onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
+onOriginalImageResultReceived(result: OriginalImageResultItem): void;
 ```
 
 **Parameters**

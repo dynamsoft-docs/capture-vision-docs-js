@@ -4,6 +4,7 @@ title: interface BinaryImageUnit - Dynamsoft Core Module JS Edition API Referenc
 description: This page shows the JS edition of the interface BinaryImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

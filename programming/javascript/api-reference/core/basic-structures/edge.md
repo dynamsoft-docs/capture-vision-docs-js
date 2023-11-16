@@ -4,6 +4,7 @@ title: interface Edge - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Edge in Dynamsoft Core Module.
 keywords: edge, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -19,8 +20,6 @@ interface Edge {
     endCorner: Corner;
 }
 ```
-
-## Attributes
   
 | Properties | Type |
 |---------- | ---- |

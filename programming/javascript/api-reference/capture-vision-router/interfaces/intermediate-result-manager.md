@@ -4,6 +4,7 @@ title: interface IntermediateResultManager - Dynamsoft Core Module JS Edition AP
 description: This page shows the JS edition of the interface IntermediateResultManager in Dynamsoft Core Module.
 keywords: intermediate result manager, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -17,7 +18,6 @@ The `IntermediateResultManager` interface manages intermediate results generated
 interface IntermediateResultManager {
     addResultReceiver(receiver: IntermediateResultReceiver): void;
     removeResultReceiver(receiver: IntermediateResultReceiver): void;
-    getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
 }
 ```
 
@@ -25,7 +25,6 @@ interface IntermediateResultManager {
 |--------|-------------|
 | [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
 | [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
-| [`getOriginalImage`](#getoriginalimage) | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
@@ -51,6 +50,7 @@ removeResultReceiver(receiver: IntermediateResultReceiver): void;
 
 `receiver`: The intermediate result receiver to remove.
 
+<!--
 ### getOriginalImage
 
 Gets the original image data using an image hash id.
@@ -66,3 +66,4 @@ getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>
 **Return value**
 
 Returns a promise to the DSImageData object containing the original image data.
+-->

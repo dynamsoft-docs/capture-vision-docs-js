@@ -7,12 +7,12 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Core Module
-permalink: /programming/javascript/api-reference/core/core-module.html
+permalink: /programming/javascript/api-reference/core/core-module-v3.0.10.html
 ---
 
 # Core Module
 
-The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`and `ImageSourceAdapter` plus a few enumerations and interfaces.
+The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`, `ImageSourceAdapter` and `IntermediateResultManager` plus a few enumerations and interfaces.
 
 ## CoreModule Class
 
@@ -35,7 +35,7 @@ The `ImageSourceAdapter` class defines how an image source should be defined for
 
 The APIs for this class are:
 
-| API Name                                                                                                        | Description                                                                                               |
+| API Name                                                                                                          | Description                                                                                               |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [`addImageToBuffer`](./basic-structures/image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [`hasNextImageToFetch`](./basic-structures/image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
@@ -54,6 +54,18 @@ The APIs for this class are:
 | [`setColourChannelUsageType`](./basic-structures/image-source-adapter.md#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
 | [`getColourChannelUsageType`](./basic-structures/image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
 
+## IntermediateResultManager Class
+
+The `IntermediateResultManager` class defines a user can interact with the `CaptureVisionRouter` class about intermediate results.
+
+The APIs for this class are:
+
+| API Name                                                                                             | Description                                     |
+| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
+| [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |
+| [`getOriginalImage`](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the original image data using an image hash id. |
+
 ## Interfaces and Enums
 
 In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations:
@@ -65,7 +77,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Arc](./basic-structures/arc.md)
 <!-- * [CapturedResultFilter](./basic-structures/captured-result-filter.md) -->
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
-<!-- * [CapturedResultReceiver](./basic-structures/captured-result-receiver.md)-->
+* [CapturedResultReceiver](./basic-structures/captured-result-receiver.md)
 * [CapturedResult](./basic-structures/captured-result.md)
 * [Contour](./basic-structures/contour.md)
 * [Corner](./basic-structures/corner.md)
@@ -92,7 +104,7 @@ The following interfaces facilitate the use of intermediate result functions:
 * [EnhancedGrayscaleImageUnit](./intermediate-results/enhanced-grayscale-image-unit.md)
 * [GrayscaleImageUnit](./intermediate-results/grayscale-image-unit.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
-<!-- * [IntermediateResultReceiver](./intermediate-results/intermediate-result-receiver.md)-->
+* [IntermediateResultReceiver](./intermediate-results/intermediate-result-receiver.md)
 * [IntermediateResultUnit](./intermediate-results/intermediate-result-unit.md)
 * [IntermediateResult](./intermediate-results/intermediate-result.md)
 * [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)

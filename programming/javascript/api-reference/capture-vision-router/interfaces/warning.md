@@ -5,6 +5,7 @@ description: This page shows the Warning Interface of Dynamsoft Capture Vision J
 keywords: Warning, CaptureVision, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true
+needGenerateH3Content: true
 breadcrumbText: Warning
 ---
 

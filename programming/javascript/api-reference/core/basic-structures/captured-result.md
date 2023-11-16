@@ -4,6 +4,7 @@ title: interface CapturedResult - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface CapturedResult in Dynamsoft Core Module.
 keywords: captured result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -27,7 +28,7 @@ interface CapturedResult {
 |----------------------|-------------|
 | [`OriginalImageHashId`](#originalimagehashid) | *String* |
 | [`OriginalImageTag`](#originalimagetag) | *ImageTag* |
-| [`items`](#items) | *Array/<CapturedResultItem>* |
+| [`items`](#items) | *Array\<CapturedResultItem>* |
 | [`errorCode`](#errorcode) | *number* |
 | [`errorString`](#errorstring) | *string* |
 

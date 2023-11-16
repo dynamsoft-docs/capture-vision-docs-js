@@ -4,6 +4,7 @@ title: interface TextRemovedBinaryImageUnit - Dynamsoft Core Module JS Edition A
 description: This page shows the JS edition of the interface TextRemovedBinaryImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

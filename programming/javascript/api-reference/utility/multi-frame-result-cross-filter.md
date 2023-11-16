@@ -4,6 +4,7 @@ title: interface MultiFrameResultCrossFilter - Dynamsoft Utility Module JS Editi
 description: This page shows the JS edition of the class MultiFrameResultCrossFilter in Dynamsoft Utility Module.
 keywords: image manager, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -15,9 +16,6 @@ The `MultiFrameResultCrossFilter` class provides APIs for filtering out results 
 
 ```typescript
 class MultiFrameResultCrossFilter {
-
-    constructor();
-
     enableResultCrossVerification(resultItemTypes: number, enabled: boolean): void;
     isResultCrossVerificationEnabled(type: Core.BasicStructures.EnumCapturedResultItemType): boolean;
     enableResultDeduplication(resultItemTypes: number, enabled: boolean): void;
@@ -65,7 +63,7 @@ isResultCrossVerificationEnabled(type: Core.BasicStructures.EnumCapturedResultIt
 
 **Parameters**
 
-`type`:  Specifies the captured result item type..
+`type`:  Specifies the captured result item type.
 
 **Return Value**
 
@@ -99,7 +97,7 @@ isResultDeduplicationEnabled(type: Core.BasicStructures.EnumCapturedResultItemTy
 
 **Parameters**
 
-`type`:  Specifies the captured result item type..
+`type`:  Specifies the captured result item type.
 
 **Return Value**
 
@@ -133,7 +131,7 @@ getDuplicateForgetTime(type: Core.BasicStructures.EnumCapturedResultItemType): P
 
 **Parameters**
 
-`type`: Specifies the captured result item type..
+`type`: Specifies the captured result item type.
 
 **Return Value**
 

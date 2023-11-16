@@ -4,12 +4,13 @@ title: interface Contour - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Contour in Dynamsoft Core Module.
 keywords: contour, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Contour
 
-The `Contour` interface defines the structure of a contour in 2-dimensional space.. It contains an array of `Point` objects, which represent the vertices of the contour.
+The `Contour` interface defines the structure of a contour in 2-dimensional space. It contains an array of `Point` objects, which represent the vertices of the contour.
 
 ## Definition
 

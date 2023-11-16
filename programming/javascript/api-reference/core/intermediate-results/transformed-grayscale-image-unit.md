@@ -4,6 +4,7 @@ title: interface TransformedGrayscaleImageUnit - Dynamsoft Core Module JS Editio
 description: This page shows the JS edition of the interface TransformedGrayscaleImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

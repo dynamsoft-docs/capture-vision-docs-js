@@ -4,6 +4,7 @@ title: class ImageSourceAdapter - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the class ImageSourceAdapter in Dynamsoft Core Module.
 keywords: image source adapter, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
