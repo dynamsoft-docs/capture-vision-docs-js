@@ -4,6 +4,7 @@ title: interface TextureRemovedGrayscaleImageUnit - Dynamsoft Core Module JS Edi
 description: This page shows the JS edition of the interface TextureRemovedGrayscaleImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

@@ -4,6 +4,7 @@ title: interface ScaledDownColourImageUnit - Dynamsoft Core Module JS Edition AP
 description: This page shows the JS edition of the interface ScaledDownColourImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

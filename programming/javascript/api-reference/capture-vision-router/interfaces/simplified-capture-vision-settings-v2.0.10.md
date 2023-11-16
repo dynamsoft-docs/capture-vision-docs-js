@@ -4,7 +4,7 @@ title: Interface SimplifiedCaptureVisionSettings - Dynamsoft Capture Vision Java
 description: This page introduces interface related to the SimplifiedCaptureVisionSettings of Dynamsoft Capture Vision JavaScript Edition.
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
 permalink: /programming/javascript/api-reference/capture-vision-router/interface/simplified-capture-vision-settings-v2.0.10.html
 ---
@@ -12,6 +12,8 @@ permalink: /programming/javascript/api-reference/capture-vision-router/interface
 # SimplifiedCaptureVisionSettings
 
 The `SimplifiedCaptureVisionSettings` interface represents a simplified configuration for the Capture Vision Router settings.
+
+## Definition
 
 ```typescript
 interface SimplifiedCaptureVisionSettings {
@@ -35,7 +37,7 @@ interface SimplifiedCaptureVisionSettings {
 | [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*             |
 | [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings*           |
 
-## capturedResultItemTypes
+### capturedResultItemTypes
 
 Specifies the types of captured items to be processed. It uses the EnumCapturedResultItemType enumeration from the Core.BasicStructures namespace.
 
@@ -55,7 +57,7 @@ capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemTy
 roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
 ```
 
-## roiMeasuredInPercentage
+### roiMeasuredInPercentage
 
 Indicates whether the ROI coordinates are measured in percentage values (true) or absolute pixel values (false).
 
@@ -63,7 +65,7 @@ Indicates whether the ROI coordinates are measured in percentage values (true) o
 roiMeasuredInPercentage: boolean;
 ```
 
-## maxParallelTasks
+### maxParallelTasks
 
 Specifies the maximum number of parallel tasks allowed during processing.
 
@@ -71,7 +73,7 @@ Specifies the maximum number of parallel tasks allowed during processing.
 maxParallelTasks: number;
 ```
 
-## timeout
+### timeout
 
 Specifies the timeout duration for processing tasks.
 
@@ -79,7 +81,7 @@ Specifies the timeout duration for processing tasks.
 timeout: number;
 ```
 
-## barcodeSettings
+### barcodeSettings
 
 Represents the simplified settings for barcode recognition using the SimplifiedBarcodeReaderSettings interface from the DBR namespace.
 
@@ -87,7 +89,7 @@ Represents the simplified settings for barcode recognition using the SimplifiedB
 barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
 ```
 
-## labelSettings
+### labelSettings
 
 Represents the simplified settings for label recognition using the SimplifiedLabelRecognizerSettings interface from the DLR namespace.
 

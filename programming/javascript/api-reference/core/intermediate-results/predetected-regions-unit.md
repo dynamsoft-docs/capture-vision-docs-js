@@ -4,6 +4,7 @@ title: interface PredetectedRegionsUnit - Dynamsoft Core Module JS Edition API R
 description: This page shows the JS edition of the interface PredetectedRegionsUnit in Dynamsoft Core Module.
 keywords: predetected regions, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -21,7 +22,7 @@ interface PredetectedRegionsUnit extends IntermediateResultUnit {
 
 | Properties | Type |
 |--------|-------------|
-| [`predetectedRegions`](#predetectedregions) | *Array<PredetectedRegionElement>* |
+| [`predetectedRegions`](#predetectedregions) | *Array\<PredetectedRegionElement>* |
 
 
 ### predetectedRegions

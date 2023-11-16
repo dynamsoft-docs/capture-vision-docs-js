@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: CaptureVisionRouter Module
-permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html
+permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router-module-v2.0.10.html
 ---
 
 # CaptureVisionRouter Module
@@ -75,13 +75,13 @@ The APIs for this class include:
 | [dispose()](./instantiate.md#dispose)                              | Releases all resources used by the `CaptureVisionRouter` object.         |
 | [disposed](./instantiate.md#disposed)                              | Returns whether the `CaptureVisionRouter` object has been disposed of.   |
 
-### Single-Image Processing
+### Single-File Processing
 
 | API Name                                         | Description                                                 |
 | ------------------------------------------------ | ----------------------------------------------------------- |
 | [capture()](./single-file-processing.md#capture) | Processes an image or file to derive important information. |
 
-### Multiple-Image Processing
+### Multiple-File Processing
 
 | API Name                                                                                         | Description                                                           |
 | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
@@ -106,25 +106,14 @@ The APIs for this class include:
 | [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
 | [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
+<!--
+### Intermediate Result
 
-### Output Handling
-
-The `IntermediateResultManager` class enables the user to communicate with the `CaptureVisionRouter` class regarding intermediate results.
-
-The APIs for this class are:
-
-| API Name                                                                                             | Description                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`addResultReceiver`](./interfaces/intermediate-result-manager.md#addresultreceiver)                 | Adds an intermediate result receiver.                |
-| [`removeResultReceiver`](./interfaces/intermediate-result-manager.md#removeresultreceiver)           | Removes an intermediate result receiver.             |
-
-Those interfaces provide functions for final results filtering，receiving，and intermediate results receiving:
-
-* [CapturedResultFilter](./interfaces/captured-result-filter.md)
-* [CapturedResultReceiver](./interfaces/captured-result-receiver.md)
-* [IntermediateResultReceiver](./interfaces/intermediate-result-receiver.md)
-
-### Other Interfaces
+| API Name                                                                                | Description                                    |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| [getIntermediateResultManager()](./intermediate-result.md#getintermediateresultmanager) | Returns an `IntermediateResultManager` object. |
+-->
+### Interfaces
 
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)

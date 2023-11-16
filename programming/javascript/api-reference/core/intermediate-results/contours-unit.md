@@ -4,6 +4,7 @@ title: interface ContoursUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface ContoursUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -21,7 +22,7 @@ interface ContoursUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`contours`](#contours) | *Array<Core.BasicStructures.Contour>* |
+| [`contours`](#contours) | *Array\<Core.BasicStructures.Contour>* |
 
 ### contours
 

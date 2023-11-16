@@ -4,6 +4,7 @@ title: interface DSRect - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface DSRect in Dynamsoft Core Module.
 keywords: image data, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

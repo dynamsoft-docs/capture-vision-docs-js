@@ -4,6 +4,7 @@ title: interface IntermediateResult - Dynamsoft Core Module JS Edition API Refer
 description: This page shows the JS edition of the interface IntermediateResult in Dynamsoft Core Module.
 keywords: task results, intermediate results, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -21,7 +22,7 @@ interface IntermediateResult {
 
 | Properties | Type |
 |--------|-------------|
-| [`intermediateResultUnits`](#intermediateresultunits) | *Array<IntermediateResultUnit>* |
+| [`intermediateResultUnits`](#intermediateresultunits) | *Array\<IntermediateResultUnit>* |
 
 ### intermediateResultUnits
 

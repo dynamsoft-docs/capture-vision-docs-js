@@ -4,6 +4,7 @@ title: interface EnhancedGrayscaleImageUnit - Dynamsoft Core Module JS Edition A
 description: This page shows the JS edition of the interface EnhancedGrayscaleImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 

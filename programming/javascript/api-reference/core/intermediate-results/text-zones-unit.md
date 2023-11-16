@@ -4,6 +4,7 @@ title: interface TextZonesUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface TextZonesUnit in Dynamsoft Core Module.
 keywords: text zones, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
@@ -21,7 +22,7 @@ interface TextZonesUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`textZones`](#textzones) | *Array<Core.BasicStructures.Quadrilateral>* |
+| [`textZones`](#textzones) | *Array\<Core.BasicStructures.Quadrilateral>* |
 
 ### textZones
 

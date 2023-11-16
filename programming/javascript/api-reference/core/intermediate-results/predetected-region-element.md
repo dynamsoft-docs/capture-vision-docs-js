@@ -4,6 +4,7 @@ title: interface PredetectedRegionElement - Dynamsoft Core Module JS Edition API
 description: This page shows the JS edition of the interfaace PredetectedRegionElement in Dynamsoft Core Module.
 keywords: line segments, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
