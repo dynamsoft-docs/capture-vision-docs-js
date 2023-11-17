@@ -22,7 +22,7 @@ interface Polygon {
 
 | Properties | Type |
 |---------- | ---- |
-| [`points`](#points) | *Array* |
+| [`points`](#points) | *Array\<Core.BasicStructures.Point>* |
 
 ### points
 

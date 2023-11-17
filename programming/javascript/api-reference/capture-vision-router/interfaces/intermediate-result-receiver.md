@@ -16,35 +16,35 @@ The `IntermediateResultReceiver` interface is responsible for receiving intermed
 
 ```typescript
 interface IntermediateResultReceiver {
-  getObservationParameters(): ObservationParameters;
-  onTaskResultsReceived?(result: IntermediateResult, info: IntermediateResultExtraInfo): void;
-  onPredetectedRegionsReceived?(result: PredetectedRegionsUnit, info: IntermediateResultExtraInfo): void;
-  onLocalizedBarcodesReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-  onDecodedBarcodesReceived?(result: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-  onLocalizedTextLinesReceived?(result: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
-  onRecognizedTextLinesReceived?(result: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
-  onDetectedQuadsReceived?(result: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
-  onNormalizedImagesReceived?(result: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
-  onColourImageUnitReceived?(result: ColourImageUnit, info: IntermediateResultExtraInfo): void;
-  onScaledDownColourImageUnitReceived?(result: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo): void;
-  onGrayscaleImageUnitReceived?(result: GrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
-  onTransformedGrayscaleImageUnitReceived?(result: TransformedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
-  onEnhancedGrayscaleImageUnitReceived?(result: EnhancedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
-  onBinaryImageUnitReceived?(result: BinaryImageUnit, info: IntermediateResultExtraInfo): void;
-  onTextureDetectionResultUnitReceived?(result: TextureDetectionResultUnit, info: IntermediateResultExtraInfo): void;
-  onTextureRemovedGrayscaleImageUnitReceived?(result: TextureRemovedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
-  onTextureRemovedBinaryImageUnitReceived?(result: TextureRemovedBinaryImageUnit, info: IntermediateResultExtraInfo): void;
-  onContoursUnitReceived?(result: ContoursUnit, info: IntermediateResultExtraInfo): void;
-  onLineSegmentsUnitReceived?(result: LineSegmentsUnit, info: IntermediateResultExtraInfo): void;
-  onTextZonesUnitReceived?(result: TextZonesUnit, info: IntermediateResultExtraInfo): void;
-  onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo): void;
-  onLongLinesUnitReceived?(result: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo): void;
-  onCornersUnitReceived?(result: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo): void;
-  onCandidateQuadEdgesUnitReceived?(result: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
-  onCandidateBarcodeZonesUnitReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-  onScaledUpBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-  onDeformationResistedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-  onComplementedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    getObservationParameters(): ObservationParameters;
+    onTaskResultsReceived?(result: IntermediateResult, info: IntermediateResultExtraInfo): void;
+    onPredetectedRegionsReceived?(result: PredetectedRegionsUnit, info: IntermediateResultExtraInfo): void;
+    onLocalizedBarcodesReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+    onDecodedBarcodesReceived?(result: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+    onLocalizedTextLinesReceived?(result: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
+    onRecognizedTextLinesReceived?(result: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
+    onDetectedQuadsReceived?(result: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
+    onNormalizedImagesReceived?(result: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
+    onColourImageUnitReceived?(result: ColourImageUnit, info: IntermediateResultExtraInfo): void;
+    onScaledDownColourImageUnitReceived?(result: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo): void;
+    onGrayscaleImageUnitReceived?(result: GrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
+    onTransformedGrayscaleImageUnitReceived?(result: TransformedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
+    onEnhancedGrayscaleImageUnitReceived?(result: EnhancedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
+    onBinaryImageUnitReceived?(result: BinaryImageUnit, info: IntermediateResultExtraInfo): void;
+    onTextureDetectionResultUnitReceived?(result: TextureDetectionResultUnit, info: IntermediateResultExtraInfo): void;
+    onTextureRemovedGrayscaleImageUnitReceived?(result: TextureRemovedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
+    onTextureRemovedBinaryImageUnitReceived?(result: TextureRemovedBinaryImageUnit, info: IntermediateResultExtraInfo): void;
+    onContoursUnitReceived?(result: ContoursUnit, info: IntermediateResultExtraInfo): void;
+    onLineSegmentsUnitReceived?(result: LineSegmentsUnit, info: IntermediateResultExtraInfo): void;
+    onTextZonesUnitReceived?(result: TextZonesUnit, info: IntermediateResultExtraInfo): void;
+    onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo): void;
+    onLongLinesUnitReceived?(result: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo): void;
+    onCornersUnitReceived?(result: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo): void;
+    onCandidateQuadEdgesUnitReceived?(result: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
+    onCandidateBarcodeZonesUnitReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+    onScaledUpBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    onDeformationResistedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    onComplementedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
 }
 
 ```

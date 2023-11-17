@@ -108,9 +108,9 @@ A boolean value that indicates whether the required module has been loaded.
 
 ```javascript
 if(Dynamsoft.CVR.CaptureVisionRouter.isModuleLoaded('dbr')){
-  // Use the router to perform a DBR job.
+    // Use the router to perform a DBR job.
 } else {
-  console.log("DBR module is not preloaded.");
+    console.log("DBR module is not preloaded.");
 }
 ```
 
@@ -188,8 +188,8 @@ A boolean value that indicates whether the `CaptureVisionRouter` object has been
 
 ```javascript
 if(router.disposed){
-  console.log("The router has been disposed of.");
+    console.log("The router has been disposed of.");
 } else {
-  // Use the router to perform a job.
+    // Use the router to perform a job.
 }
 ```

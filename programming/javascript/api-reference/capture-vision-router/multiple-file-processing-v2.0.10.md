@@ -160,10 +160,10 @@ None.
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let isasl = {
-            onImageSourceStateListener(state) {
-                console.log("run ImageSourceAdapterStatusListener", state);
-            }
-        }
+    onImageSourceStateListener(state) {
+        console.log("run ImageSourceAdapterStatusListener", state);
+    }
+}
 cvr.addImageSourceStateListener(isasl);
 ```
 
@@ -190,10 +190,10 @@ None.
 ```javascript
 cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let isasl = {
-            onImageSourceStateListener(state) {
-                console.log("run ImageSourceAdapterStatusListener", state);
-            }
-        }
+    onImageSourceStateListener(state) {
+        console.log("run ImageSourceAdapterStatusListener", state);
+    }
+}
 cvr.removeImageSourceStateListener(isasl);
 ```
 

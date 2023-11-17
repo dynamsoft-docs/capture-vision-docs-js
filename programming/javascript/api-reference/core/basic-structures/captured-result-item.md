@@ -23,10 +23,10 @@ interface CapturedResultItem {
 
 
 
-| Properties                         | Type|
-|--------------------------------|------------|
-| [`type`](#type)              | *EnumCapturedResultItemType*          |
-| [`referenceItem`](#referenceitem)    | *CapturedResultItem*          |
+| Properties                         | Type                          |
+| ---------------------------------- | ----------------------------- |
+| [`type`](#type)                    | *EnumCapturedResultItemType*  |
+| [`referenceItem`](#referenceitem)  | *CapturedResultItem*          |
 
 ### type
 

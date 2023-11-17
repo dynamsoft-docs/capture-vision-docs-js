@@ -17,25 +17,25 @@ noTitleIndex: true
 ```typescript
 abstract class ImageSourceAdapter {
 
-  constructor();
+    constructor();
 
-  addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
-  abstract hasNextImageToFetch(): boolean;
-  startFetching(): void;
-  stopFetching(): void;
-  getImage(): Promise<Core.BasicStructures.DSImageData>;
-  setMaxImageCount(count: number): void;
-  getMaxImageCount(): number;
-  setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowProtectionMode): void;
-  getBufferOverflowProtectionMode(): Core.BasicStructures.EnumBufferOverflowProtectionMode;
-  hasImage(imageId: number): boolean;
-  setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
-  getImageCount(): number;
-  isBufferEmpty(): boolean;
-  clearBuffer(): void;
-  setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
-  getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
-  setErrorListener(listener: ImageSourceErrorListener): void;
+    addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
+    abstract hasNextImageToFetch(): boolean;
+    startFetching(): void;
+    stopFetching(): void;
+    getImage(): Promise<Core.BasicStructures.DSImageData>;
+    setMaxImageCount(count: number): void;
+    getMaxImageCount(): number;
+    setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowProtectionMode): void;
+    getBufferOverflowProtectionMode(): Core.BasicStructures.EnumBufferOverflowProtectionMode;
+    hasImage(imageId: number): boolean;
+    setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
+    getImageCount(): number;
+    isBufferEmpty(): boolean;
+    clearBuffer(): void;
+    setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
+    getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
+    setErrorListener(listener: ImageSourceErrorListener): void;
 }
 ```
 

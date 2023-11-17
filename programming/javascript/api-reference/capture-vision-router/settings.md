@@ -44,11 +44,14 @@ Returns a promise that resolves when the settings have been successfully initial
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-const settings = `{
-  "templateName": "myTemplate",
-  "ScaleDownThreshold" : 2000
-  }
-}`;
+const settings = {
+  "CaptureVisionTemplates": [
+    {
+      "Name": "ReadBarcodes_my_setting",
+      "Timeout": 5000
+    }
+  ],
+};
 await router.initSettings(settings);
 ```
 

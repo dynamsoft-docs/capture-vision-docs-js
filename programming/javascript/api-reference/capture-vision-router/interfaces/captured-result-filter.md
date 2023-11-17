@@ -17,18 +17,18 @@ The `CapturedResultFilter` interface defines the standard way to get processing 
 
 ```typescript
 interface CapturedResultFilter {
-  onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
-  onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
-  onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
-  onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
-  onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
-  onParsedResultsReceived(result: DCP.ParsedResult): void;
+    onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
+    onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
+    onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
+    onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
+    onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
+    onParsedResultsReceived(result: DCP.ParsedResult): void;
 } 
 ```
 
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.             |
+| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.        |
 | [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
 | [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
 | [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |

@@ -17,7 +17,7 @@ The `ImageSourceErrorListener` interface defines the standard way to receive not
 
 ```typescript
 interface ImageSourceErrorListener {
-  onErrorReceived(errorCode: number, errorMessage:string):void;
+    onErrorReceived(errorCode: number, errorMessage:string):void;
 } 
 ```
 

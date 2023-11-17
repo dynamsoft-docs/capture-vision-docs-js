@@ -17,13 +17,13 @@ The `CaptureResultReceiver` interface defines the standard way to get captured r
 
 ```typescript
 interface CapturedResultReceiver {
-  onCapturedResultReceived?(result: Core.BasicStructures.CapturedResult): void;
-  onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
-  onDecodedBarcodesReceived?(result: DBR.DecodedBarcodesResult): void;
-  onRecognizedTextLinesReceived?(result: DLR.RecognizedTextLinesResult):void;
-  onDetectedQuadsReceived?(result: DDN.DetectedQuadsResult): void;
-  onNormalizedImagesReceived?(result: DDN.NormalizedImagesResult): void;
-  onParsedResultsReceived?(result: DCP.ParsedResult): void;
+    onCapturedResultReceived?(result: Core.BasicStructures.CapturedResult): void;
+    onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
+    onDecodedBarcodesReceived?(result: DBR.DecodedBarcodesResult): void;
+    onRecognizedTextLinesReceived?(result: DLR.RecognizedTextLinesResult):void;
+    onDetectedQuadsReceived?(result: DDN.DetectedQuadsResult): void;
+    onNormalizedImagesReceived?(result: DDN.NormalizedImagesResult): void;
+    onParsedResultsReceived?(result: DCP.ParsedResult): void;
 } 
 ```
 

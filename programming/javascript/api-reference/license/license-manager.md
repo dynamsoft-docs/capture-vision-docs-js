@@ -9,6 +9,16 @@ noTitleIndex: true
 
 # LicenseManager
 
+## Definition
+
+```typescript
+class LicenseManager {
+    static getDeviceUUID(): string;
+    static initLicense(license: string): { isSuccess: boolean, error: string };
+    static setDeviceFriendlyName(name: string): void;
+}
+```
+
 The LicenseManager class provides a set of APIs to manage the licensing for the Dynamsoft Capture Vision architecture.
 
 | API                                               | Description                                                            |
@@ -19,7 +29,7 @@ The LicenseManager class provides a set of APIs to manage the licensing for the 
 
 ## getDeviceUUID
 
-Returns the unique identifier of the device. 
+Returns the unique identifier of the device.
 
 ```typescript
 static getDeviceUUID(): string;
