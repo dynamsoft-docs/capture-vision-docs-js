@@ -25,7 +25,7 @@ This class defines common functionality in the Utility module. At present, it ha
 **Code snippet**
 
 ```javascript
-const version = await Dynamsoft.Utility.UtilityModule.getVersion();
+const version = Dynamsoft.Utility.UtilityModule.getVersion();
 console.log(version);
 ```
 

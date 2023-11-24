@@ -9,20 +9,10 @@ noTitleIndex: true
 
 # LicenseManager
 
-## Definition
-
-```typescript
-class LicenseManager {
-    static getDeviceUUID(): string;
-    static initLicense(license: string): { isSuccess: boolean, error: string };
-    static setDeviceFriendlyName(name: string): void;
-}
-```
-
 The LicenseManager class provides a set of APIs to manage the licensing for the Dynamsoft Capture Vision architecture.
 
-| API                                               | Description                                                            |
-| ------------------------------------------------- | ---------------------------------------------------------------------- |
+| API                                                      | Description                                                            |
+| -------------------------------------------------------- | ---------------------------------------------------------------------- |
 | static [`getDeviceUUID`](#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
 | static [`initLicense`](#initlicense)                     | Initializes the license using a license key.                           |
 | static [`setDeviceFriendlyName`](#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
@@ -44,16 +34,17 @@ Returns a string representing the UUID of the device.
 Initializes the license using a license key. 
 
 ```typescript
-static initLicense(license: string): { isSuccess: boolean, error: string };
+static initLicense(license: string, immediately?: boolean): Promise<{ isSuccess: boolean, error: string }>;
 ```
 
 **Parameters**
 
-* `license`: A string representing the license key.
+* `license`: a string representing the license key.
+* `immediately`: specifies whether the initialization happens right away.
 
 **Return Value**
 
-Returns an object which contains the following information:
+A promise that resolves to an object which contains the following information:
 
 * `isSuccess`: indicates whether the license initialization succeeded.
 

@@ -25,7 +25,7 @@ This class defines common functionality in the `Core` module. At present, it has
 **Code snippet**
 
 ```javascript
-const version = await Dynamsoft.Core.CoreModule.getVersion();
+const version = Dynamsoft.Core.CoreModule.getVersion();
 console.log(version);
 ```
 

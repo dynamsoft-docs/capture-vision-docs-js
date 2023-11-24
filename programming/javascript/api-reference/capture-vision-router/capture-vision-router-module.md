@@ -29,7 +29,7 @@ Returns the version of the `CaptureVisionRouter` module.
 **Code snippet**
 
 ```javascript
-const version = await Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
+const version = Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
 console.log(version);
 ```
 

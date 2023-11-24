@@ -25,7 +25,7 @@ This class defines common functionality in the `License` module. At present, it 
 **Code snippet**
 
 ```javascript
-const version = await Dynamsoft.License.LicenseModule.getVersion();
+const version = Dynamsoft.License.LicenseModule.getVersion();
 console.log(version);
 ```
 
@@ -35,8 +35,8 @@ The `LicenseManager` class is responsible for the licensing of all functional mo
 
 The APIs for this class are:
 
-| API Name                                                                | Description                                                            |
-| --------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| [`getDeviceUUID`](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
-| [`initLicense`](./license-manager.md#initlicense)                     | Initializes the license using a license key.                           |
-| [`setDeviceFriendlyName`](./license-manager.md#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
+| API Name                                                                     | Description                                                            |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| static [`getDeviceUUID`](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
+| static [`initLicense`](./license-manager.md#initlicense)                     | Initializes the license using a license key.                           |
+| static [`setDeviceFriendlyName`](./license-manager.md#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
