@@ -6,6 +6,7 @@ keywords: license manager, JS
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
+<!--v3.0.20--Updated on 11/23/2023-->
 
 # LicenseManager
 

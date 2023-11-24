@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 permalink: /programming/javascript/api-reference/core/core-module-class.html
 ---
-<!--v3.0.20-->
+<!--v3.0.20--Updated on 11/23/2023-->
 
 # CoreModule Class
 
@@ -42,25 +42,54 @@ console.log(version);
 
 Returns or sets the paths for finding the .wasm files and other resource files for modules.
 
-> When loading the resource files from jsDelivr or UNPKG, the paths are automatically deteremined based on the referenced JavaScript files for these modules. You only need to specify these paths if 
-> 1. You are using the SDK in a web framework like Angular, React or Vue, or
-> 2. You are using a different CDN, or
-> 3. You are hosting the files yourself.
+When loading the resource files from jsDelivr or UNPKG, the paths are automatically deteremined based on the referenced JavaScript files for these modules. You only need to specify these paths if
+
+1. You are using the SDK in a web framework like Angular, React or Vue, or
+2. You are using a different CDN, or
+3. You are hosting the files yourself.
+
+> If you only specify "rootDirectory", the paths will be automatically matched to that directory.
+> If you specify both "rootDirectory" and individual paths, the individual paths take precedence.
 
 ```typescript
-static engineResourcePaths: any;
+static engineResourcePaths: {
+    "rootDirectory"?: string,
+    "std"?: string, 
+    "dip"?: string,
+    "dnn"?: string,
+    "core"?: string,
+    "license"?: string,
+    "cvr"?: string,
+    "utility"?: string,
+    "dbr"?: string,
+    "dlr"?: string,
+    "ddn"?: string,
+    "dcp"?: string,
+    [moduleName: string]: string
+};
 ```
 
 **Code snippet**
 
 ```javascript
+// To specify all modules:
 Dynamsoft.Core.CoreModule.engineResourcePaths = {
-    "core": "https://[SPECIFY-THE-ROOT-PATH]/dynamsoft-core@3.0.20/dist/",
-    "license": "https://[SPECIFY-THE-ROOT-PATH]/dynamsoft-license@3.0.20/dist/",
-    "cvr": "https://[SPECIFY-THE-ROOT-PATH]/dynamsoft-capture-vision-router@2.0.20/dist/",
-    "dbr": "https://[SPECIFY-THE-ROOT-PATH]/dynamsoft-label-recognizer@3.0.20/dist/",
-    "dbr": "https://[SPECIFY-THE-ROOT-PATH]/dynamsoft-barcode-reader@10.0.20/dist/"
+    "std": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-std@1.0.0/dist/",
+    "dip": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-image-processing@2.0.20/dist/",
+    "dnn": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-dnn@1.0.0/dist/",
+    "core": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-core@3.0.20/dist/",
+    "license": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-license@3.0.20/dist/",
+    "cvr": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-router@2.0.20/dist/",
+    "utility": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-utility@1.0.20/dist/",
+    "dbr": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader@10.0.20/dist/"
+    "dlr": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-label-recognizer@3.0.20/dist/",
+    "ddn": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-document-normalizer@2.0.20/dist/"
+    "dcp": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-code-parser@2.0.20/dist/"
 };
+// To specify only one module
+Dynamsoft.Core.CoreModule.engineResourcePaths.dbr = "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader@10.0.20/dist/";
+// To specify only the root directory
+Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://[SPECIFY-THE-ROOT-DIRECTORY]";
 ```
 
 ## loadWasm

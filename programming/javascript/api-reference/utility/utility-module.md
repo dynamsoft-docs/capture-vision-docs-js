@@ -9,10 +9,11 @@ noTitleIndex: true
 breadcrumbText: Utility Module
 permalink: /programming/javascript/api-reference/utility/utility-module.html
 ---
+<!--v1.0.20--Updated on 11/23/2023-->
 
 # Utility Module
 
-The `Utility` module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and the interface `MultiFrameResultCrossFilter`.
+The `Utility` module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and `MultiFrameResultCrossFilter`.
 
 ## UtilityModule Class
 
@@ -33,14 +34,12 @@ console.log(version);
 
 The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
-The APIs for this class are:
+| API Name                                      | Description                          |
+| --------------------------------------------- | ------------------------------------ |
+| [`saveToFile`](./image-manager.md#savetofile) | Saved the specified image as a file. |
 
-| API Name                                    | Description                          |
-| ------------------------------------------- | ------------------------------------ |
-| [`saveToFile`](image-manager.md#savetofile) | Saved the specified image as a file. |
+## MultiFrameResultCrossFilter Class
 
-## MultiFrameResultCrossFilter Interface
-
-This interface defines how license verification result is returned.
+The `MultiFrameResultCrossFilter` class provides APIs to configure the filtering of results from multiple images which have been processed consecutively. Usually these images are frames from a streaming video.
 
 * [MultiFrameResultCrossFilter](./multi-frame-result-cross-filter.md)
