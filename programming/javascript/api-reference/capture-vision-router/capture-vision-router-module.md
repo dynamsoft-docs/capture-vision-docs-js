@@ -21,7 +21,6 @@ This class defines common functionality in the `CaptureVisionRouter` module.
 | API Name                                           | Description                                                         |
 | -------------------------------------------------- | ------------------------------------------------------------------- |
 | static [`getVersion()`](#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
-| static [`engineResourcePath`](#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
 
 ### getVersion
 

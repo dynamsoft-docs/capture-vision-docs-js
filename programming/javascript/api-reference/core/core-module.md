@@ -9,29 +9,28 @@ noTitleIndex: true
 breadcrumbText: Core Module
 permalink: /programming/javascript/api-reference/core/core-module.html
 ---
+<!--v3.0.20-->
 
 # Core Module
 
 The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`and `ImageSourceAdapter` plus a few enumerations and interfaces.
 
-## CoreModule Class
+# CoreModule Class
 
-This class defines common functionality in the `Core` module. At present, it has only one method.
+This class defines common functionality in the `Core` module.
 
-| API Name              | Description                               |
-| --------------------- | ----------------------------------------- |
-| static `getVersion()` | Returns the version of the `Core` module. |
-
-**Code snippet**
-
-```javascript
-const version = await Dynamsoft.Core.CoreModule.getVersion();
-console.log(version);
-```
+| API Name                                                                   | Description                                                                                 |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| static [`getVersion()`](./core-module-class.md#getversion)                 | Returns the version of the `Core` module.                                                   |
+| static [`engineResourcePaths`](./core-module-class.md#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
+| static [`loadWasm()`](./core-module-class.md#loadwasm)                     | Loads the .wasm files for the specified modules.                                            |
+| static [`loadModel()`](./core-module-class.md#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
+| static [`enableLogging()`](./core-module-class.md#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
+| static [`disableLogging()`](./core-module-class.md#disablelogging)         | Disables logging.                                                                           |
 
 ## ImageSourceAdapter Class
 
-The `ImageSourceAdapter` class defines how an image source should be defined for it to interact with the `CaptureVisionRouter` class. Note that this is an abstract class and can't be directly instantiated.
+The `ImageSourceAdapter` class defines how an image source should be defined in order to interact with the `CaptureVisionRouter` class. Note that this is an abstract class and can't be directly instantiated.
 
 The APIs for this class are:
 
@@ -62,26 +61,32 @@ In order to make the code more predictable and readable, the library defines a s
 
 The following are the basic interfaces often shared by more than one module:
 
+**Basic Shapes**:
+
 * [Arc](./basic-structures/arc.md)
-<!-- * [CapturedResultFilter](./basic-structures/captured-result-filter.md) -->
-* [CapturedResultItem](./basic-structures/captured-result-item.md)
-<!-- * [CapturedResultReceiver](./basic-structures/captured-result-receiver.md)-->
-* [CapturedResult](./basic-structures/captured-result.md)
 * [Contour](./basic-structures/contour.md)
 * [Corner](./basic-structures/corner.md)
-* [DSFile](./basic-structures/ds-file.md)
-* [DSImageData](./basic-structures/ds-image-data.md)
-* [DSRect](./basic-structures/ds-rect.md)
 * [Edge](./basic-structures/edge.md)
-* [FileImageTag](./basic-structures/file-image-tag.md)
-* [ImageTag](./basic-structures/image-tag.md)
 * [LineSegment](./basic-structures/line-segment.md)
-* [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md)
 * [Point](./basic-structures/point.md)
 * [Polygon](./basic-structures/polygon.md)
 * [Quadrilateral](./basic-structures/quadrilateral.md)
-* [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
 * [Rect](./basic-structures/rect.md)
+* [DSRect](./basic-structures/ds-rect.md)
+
+**Basic Results**
+
+* [CapturedResult](./basic-structures/captured-result.md)
+* [CapturedResultItem](./basic-structures/captured-result-item.md)
+* [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
+
+
+* [DSImageData](./basic-structures/ds-image-data.md)
+* [ImageTag](./basic-structures/image-tag.md)
+* [FileImageTag](./basic-structures/file-image-tag.md)
+* [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md)
+
+
 * [Warning](./basic-structures/warning.md)
 
 The following interfaces facilitate the use of intermediate result functions:
@@ -92,7 +97,7 @@ The following interfaces facilitate the use of intermediate result functions:
 * [EnhancedGrayscaleImageUnit](./intermediate-results/enhanced-grayscale-image-unit.md)
 * [GrayscaleImageUnit](./intermediate-results/grayscale-image-unit.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
-<!-- * [IntermediateResultReceiver](./intermediate-results/intermediate-result-receiver.md)-->
+<!-- * [IntermediateResultReceiver](./intermediate-results/intermediate-result-receiver.md) moved to CVR-->
 * [IntermediateResultUnit](./intermediate-results/intermediate-result-unit.md)
 * [IntermediateResult](./intermediate-results/intermediate-result.md)
 * [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)
