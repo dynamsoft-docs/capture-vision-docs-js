@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
+<!--Part-of-Core-v3.0.20--Updated on 11/23/2023-->
 
 # ImageSourceAdapter
 
@@ -16,9 +17,6 @@ noTitleIndex: true
 
 ```typescript
 abstract class ImageSourceAdapter {
-
-    constructor();
-
     addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
     abstract hasNextImageToFetch(): boolean;
     startFetching(): void;
@@ -53,10 +51,10 @@ abstract class ImageSourceAdapter {
 | [`hasImage()`](#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
 | [`setNextImageToReturn()`](#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
 | [`getImageCount()`](#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
-| [`IsBufferEmpty()`](#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
-| [`ClearBuffer()`](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
-| [`SetColourChannelUsageType()`](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
-| [`GetColourChannelUsageType()`](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
+| [`isBufferEmpty()`](#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
+| [`clearBuffer()`](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
+| [`setColourChannelUsageType()`](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
+| [`getColourChannelUsageType()`](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
 | [`setErrorListener()`](#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
 
 ---
