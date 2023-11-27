@@ -1,0 +1,15 @@
+
+# Core Module Changelog
+
+## 2.2.0
+
+* Add instance method pauseCapturing().
+* Add instance method resumeCapturing().
+
+## 2.0.20
+
+* Removed the property CaptureVisionRouterModule.engineResourcePath. Use engineResourcePaths on Core module v3.0.20 instead.
+* Removed the method detectEnvironment(). The same method is now on CoreModule.
+* Removed the property onWarning which is now on the CoreModule
+* Removed the method preLoadModule(), use CoreModule.loadWasm() instead.
+* Removed the method isModuleLoaded(). No substitute.
