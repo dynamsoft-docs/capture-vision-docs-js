@@ -25,10 +25,10 @@ interface Corner {
   
 | Properties | Type |
 |---------- | ---- |
-| [`type`](#type) | *EnumCornerType* |
-| [`intersection`](#intersection) | *Point* |
-| [`line1`](#line1) | *LineSegment* |
-| [`line2`](#line2) | *LineSegment* |
+| [type](#type) | *EnumCornerType* |
+| [intersection](#intersection) | *Point* |
+| [line1](#line1) | *LineSegment* |
+| [line2](#line2) | *LineSegment* |
 
 ### type
 

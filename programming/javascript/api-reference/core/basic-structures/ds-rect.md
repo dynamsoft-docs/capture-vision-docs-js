@@ -26,11 +26,11 @@ interface DSRect {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`left`](#left) | *number* |
-| [`right`](#right) | *number* |
-| [`top`](#top) | *number* |
-| [`bottom`](#bottom) | *number* |
-| [`isMeasuredInPercentage`](#ismeasuredinpercentage) | *boolean* |
+| [left](#left) | *number* |
+| [right](#right) | *number* |
+| [top](#top) | *number* |
+| [bottom](#bottom) | *number* |
+| [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
 
 ### left
 

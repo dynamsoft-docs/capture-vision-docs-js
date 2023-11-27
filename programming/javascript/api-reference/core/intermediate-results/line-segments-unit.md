@@ -22,7 +22,7 @@ interface LineSegmentsUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`lineSegments`](#linesegments) | *Array\<Core.BasicStructures.LineSegment>* |
+| [lineSegments](#linesegments) | *Array\<Core.BasicStructures.LineSegment>* |
 
 ### lineSegments
 

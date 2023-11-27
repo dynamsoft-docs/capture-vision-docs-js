@@ -7,32 +7,35 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing-v2.0.10.html
 ---
 
 # CaptureVisionRouter Multiple Image Processing
 
-| API Name                                                            | Description                                                                     |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [setInput()](#setinput)                                             | Sets an image source to provide images for consecutive process.                 |
-| [getInput()](#getinput)                                             | Gets an image source to provide images for consecutive process.                 |
-| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.               |
-| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source.           |
-| [addResultReceiver()](#addresultreceiver)                           | Adds an object as the receiver of captured results.                             |
-| [removeResultReceiver()](#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.            |
-| [addResultFilter()](#addresultfilter)                               | Adds a result filter to the capture process for filtering non-essential results.|
-| [removeResultFilter()](#removeresultfilter)                         | Removes a result filter for filtering non-essential results.                    |
-| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                         |
-| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                  |
+| API Name                                                            | Description                                                                                |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [setInput()](#setinput)                                             | Sets an image source to provide images for consecutive process.                            |
+| [getInput()](#getinput)                                             | Returns the image source object.                                                           |
+| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an ImageSourceStateListener object that listens to state changes of the image source. |
+| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes the specified ImageSourceStateListener object.                                     |
+| [addResultReceiver()](#addresultreceiver)                           | Adds a CapturedResultReceiver object as the receiver of captured results.                  |
+| [removeResultReceiver()](#removeresultreceiver)                     | Removes the specified CapturedResultReceiver object.                                       |
+| [addResultFilter()](#addresultfilter)                               | Adds a CapturedResultFilter object to filter non-essential results.                        |
+| [removeResultFilter()](#removeresultfilter)                         | Removes the specified CapturedResultFilter object.                                         |
+| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                                    |
+| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                             |
+
+<!-- 
+| [addCaptureStateListener()](#addcapturestatelistener)               | Adds a CaptureStateListener object to listen to the state changes of the capture process.  |
+| [removeCaptureStateListener()](#removecapturestatelistener)         | Removes the specified CaptureStateListener object.                                         | -->
 
 ## setInput
 
-Sets the input image source for consecutive process.
+Sets an image source to provide images for consecutive process.
 
 **Syntax**
 
 ```typescript
-setInput(imageSource: Core.BasicStructures.ImageSourceAdapter): void;
+setInput(imageSource: Core.ImageSourceAdapter): void;
 ```
 
 **parameter**
@@ -54,12 +57,12 @@ cvr.setInput(dce);
 
 ## getInput
 
-Returns the current input image source of the CaptureVisionRouter.
+Returns the image source object.
 
 **Syntax**
 
 ```typescript
-getInput(): Core.BasicStructures.ImageSourceAdapter;
+getInput(): Core.ImageSourceAdapter;
 ```
 
 **parameter**
@@ -139,7 +142,7 @@ cvr.removeCaptureStateListener(csl);
 
 ## addImageSourceStateListener
 
-Adds an object that listens to state changes of the image source.
+Adds an ImageSourceStateListener object that listens to state changes of the image source.
 
 **Syntax**
 
@@ -169,7 +172,7 @@ cvr.addImageSourceStateListener(isasl);
 
 ## removeImageSourceStateListener
 
-Removes an object which listens to state changes of the image source.
+Removes the specified ImageSourceStateListener object.
 
 **Syntax**
 
@@ -199,12 +202,12 @@ cvr.removeImageSourceStateListener(isasl);
 
 ## addResultReceiver
 
-Adds an object as the receiver of captured results.
+Adds a CapturedResultReceiver object as the receiver of captured results.
 
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
+addResultReceiver(receiver: Core.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -228,12 +231,12 @@ cvr.addResultReceiver(resultReceiver);
 
 ## removeResultReceiver
 
-Removes an object which was added as a receiver of captured results.
+Removes the specified CapturedResultReceiver object.
 
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
+removeResultReceiver(receiver: Core.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -258,10 +261,12 @@ cvr.removeResultReceiver(resultReceiver);
 
 ## addResultFilter
 
+Adds a CapturedResultFilter object to filter non-essential results.
+
 **Syntax**
 
 ```typescript
-addResultFilter(filter: Core.BasicStructures.CapturedResultFilter): Promise<void>;
+addResultFilter(filter: Core.CapturedResultFilter): Promise<void>;
 ```
 
 **parameter**
@@ -284,14 +289,16 @@ cvr.addResultReceiver(filter);
 
 **See also**
 
-[`MultiFrameResultCrossFilter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
+[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
 
 ## removeResultFilter
+
+Removes the specified CapturedResultFilter object.
 
 **Syntax**
 
 ```typescript
-removeResultFilter(filter: Core.BasicStructures.CapturedResultFilter): void;
+removeResultFilter(filter: Core.CapturedResultFilter): void;
 ```
 
 **parameter**
@@ -323,7 +330,7 @@ startCapturing(templateName?: string): Promise<void>;
 
 **parameter**
 
-`templateName`(optional): The name of the template to use for capturing. If not specified, the default template (`EnumPresetTemplate.PT_DEFAULT`) will be used.
+`templateName`(optional): The name of the template to use for capturing. If not specified, the default template will be used.
 
 **Return Value**
 

@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Core Module
-permalink: /programming/javascript/api-reference/core/core-module.html
 ---
 <!--v3.0.20--Updated on 11/23/2023-->
 
@@ -17,16 +16,18 @@ The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the
 
 ## CoreModule Class
 
-This class defines common functionality in the `Core` module.
+This class defines common functionality in the Core module.
 
 | API Name                                                                   | Description                                                                                 |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| static [`getVersion()`](./core-module-class.md#getversion)                 | Returns the version of the `Core` module.                                                   |
-| static [`engineResourcePaths`](./core-module-class.md#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
-| static [`loadWasm()`](./core-module-class.md#loadwasm)                     | Loads the .wasm files for the specified modules.                                            |
-| static [`loadModel()`](./core-module-class.md#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
-| static [`enableLogging()`](./core-module-class.md#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
-| static [`disableLogging()`](./core-module-class.md#disablelogging)         | Disables logging.                                                                           |
+| `static` [getVersion()](./core-module-class.md#getversion)                 | Returns the version of the Core module.                                                     |
+| `static` [detectEnvironment()](./core-module-class.md#detectenvironment)   | Detects the current environment.                                                            |
+| `static` [onWarning](./core-module-class.md#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
+| `static` [engineResourcePaths](./core-module-class.md#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
+| `static` [loadWasm()](./core-module-class.md#loadwasm)                     | Loads the .wasm files for the specified modules.                                            |
+| `static` [loadModel()](./core-module-class.md#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
+| `static` [enableLogging()](./core-module-class.md#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
+| `static` [disableLogging()](./core-module-class.md#disablelogging)         | Disables logging.                                                                           |
 
 ## ImageSourceAdapter Class
 
@@ -34,25 +35,25 @@ The `ImageSourceAdapter` class defines how an image source should be defined in 
 
 The APIs for this class are:
 
-| API Name                                                                                         | Description                                                                                               |
-| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| [`addImageToBuffer()`](./image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
-| [`hasNextImageToFetch()`](./image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
-| [`startFetching()`](./image-source-adapter.md#startfetching)                                     | Starts fetching images.                                                                                   |
-| [`stopFetching()`](./image-source-adapter.md#stopfetching)                                       | Stops fetching images.                                                                                    |
-| [`getImage()`](./image-source-adapter.md#getimage)                                               | Returns a buffered image.                                                                                 |
-| [`setMaxImageCount()`](./image-source-adapter.md#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
-| [`getMaxImageCount()`](./image-source-adapter.md#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
-| [`setBufferOverflowProtectionMode()`](./image-source-adapter.md#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
-| [`getBufferOverflowProtectionMode()`](./image-source-adapter.md#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
-| [`hasImage()`](./image-source-adapter.md#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
-| [`setNextImageToReturn()`](./image-source-adapter.md#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
-| [`getImageCount()`](./image-source-adapter.md#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
-| [`isBufferEmpty()`](./image-source-adapter.md#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
-| [`clearBuffer()`](./image-source-adapter.md#clearbuffer)                                         | Clears the image buffer.                                                                                  |
-| [`setColourChannelUsageType()`](./image-source-adapter.md#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
-| [`getColourChannelUsageType()`](./image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
-| [`setErrorListener()`](./image-source-adapter.md#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
+| API Name                                                                                       | Description                                                                                               |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [addImageToBuffer()](./image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
+| [hasNextImageToFetch()](./image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
+| [startFetching()](./image-source-adapter.md#startfetching)                                     | Starts fetching images.                                                                                   |
+| [stopFetching()](./image-source-adapter.md#stopfetching)                                       | Stops fetching images.                                                                                    |
+| [getImage()](./image-source-adapter.md#getimage)                                               | Returns a buffered image.                                                                                 |
+| [setMaxImageCount()](./image-source-adapter.md#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
+| [getMaxImageCount()](./image-source-adapter.md#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
+| [setBufferOverflowProtectionMode()](./image-source-adapter.md#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
+| [getBufferOverflowProtectionMode()](./image-source-adapter.md#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
+| [hasImage()](./image-source-adapter.md#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
+| [setNextImageToReturn()](./image-source-adapter.md#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
+| [getImageCount()](./image-source-adapter.md#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
+| [isBufferEmpty()](./image-source-adapter.md#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
+| [clearBuffer()](./image-source-adapter.md#clearbuffer)                                         | Clears the image buffer.                                                                                  |
+| [setColourChannelUsageType()](./image-source-adapter.md#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
+| [getColourChannelUsageType()](./image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
+| [setErrorListener()](./image-source-adapter.md#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
 
 ## Interfaces and Enums
 
@@ -83,8 +84,8 @@ The following are the basic interfaces often shared by more than one module:
 * [DSImageData](./basic-structures/ds-image-data.md)
 * [ImageTag](./basic-structures/image-tag.md)
 * [FileImageTag](./basic-structures/file-image-tag.md)
-* [Warning](./basic-structures/warning.md)
 * [ImageSourceErrorListener](./basic-structures/image-source-error-listener.md)
+* [Warning](./basic-structures/warning.md)
 <!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 
 **Intermediate Results Related**
@@ -102,11 +103,11 @@ The following are the basic interfaces often shared by more than one module:
 * [BinaryImageUnit](./intermediate-results/binary-image-unit.md)
 * [TextureDetectionResultUnit](./intermediate-results/texture-detection-result-unit.md)
 * [TextureRemovedGrayscaleImageUnit](./intermediate-results/texture-removed-grayscale-image-unit.md)
-* [TextRemovedBinaryImageUnit](./intermediate-results/text-removed-binary-image-unit.md)
+* [TextureRemovedBinaryImageUnit](./intermediate-results/texture-removed-binary-image-unit.md)
 * [ContoursUnit](./intermediate-results/contours-unit.md)
 * [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)
 * [TextZonesUnit](./intermediate-results/text-zones-unit.md)
-* [TextureRemovedBinaryImageUnit](./intermediate-results/texture-removed-binary-image-unit.md)
+* [TextRemovedBinaryImageUnit](./intermediate-results/text-removed-binary-image-unit.md)
 * [ObservationParameters](./intermediate-results/observation-parameters.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
 

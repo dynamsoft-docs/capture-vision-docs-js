@@ -22,7 +22,7 @@ interface ScaledDownColourImageUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`imageData`](#imagedata) | *Core.BasicStructures.DSImageData* |
+| [imageData](#imagedata) | *Core.BasicStructures.DSImageData* |
 
 ### imageData
 

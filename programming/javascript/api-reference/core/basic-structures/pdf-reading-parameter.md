@@ -24,9 +24,9 @@ interface PDFReadingParameter {
   
 | Properties | Type |
 |---------- | ---- |
-| [`mode`](#mode) | *EnumPDFReadingMode* |
-| [`dpi`](#dpi) | *number* |
-| [`rasterDataSource`](#rasterdatasource) | *EnumRasterDataSource* |
+| [mode](#mode) | *EnumPDFReadingMode* |
+| [dpi](#dpi) | *number* |
+| [rasterDataSource](#rasterdatasource) | *EnumRasterDataSource* |
 
 ### mode
 

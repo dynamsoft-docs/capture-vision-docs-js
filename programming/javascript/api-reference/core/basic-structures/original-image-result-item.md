@@ -23,7 +23,7 @@ interface OriginalImageResultItem extends CapturedResultItem {
 
 | API Name                          | Description                                      |
 | ------------------------------- | ------------------------------------------------ |
-| [`imageData`](#imagedata) | Gets the image data for the OriginalImageResultItem. |
+| [imageData](#imagedata) | Gets the image data for the OriginalImageResultItem. |
 
 ### imageData
 

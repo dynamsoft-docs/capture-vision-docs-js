@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # FileImageTag
 
-The `FileImageTag` interface defines a structure that contains extra information about an image that is loaded from a file. It inherits from the [`ImageTag`](./image-tag.md) interface with two added attributes: `filePath` and `pageNumber`.
+The `FileImageTag` interface defines a structure that contains extra information about an image that is loaded from a file. It inherits from the [ImageTag](./image-tag.md) interface with two added attributes: `filePath` and `pageNumber`.
 
 ## Definition
 
@@ -23,8 +23,8 @@ interface FileImageTag extends ImageTag {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`filePath`](#filepath) | *string* |
-| [`pageNumber`](#pagenumber) | *number* |
+| [filePath](#filepath) | *string* |
+| [pageNumber](#pagenumber) | *number* |
 
 ### filePath
 

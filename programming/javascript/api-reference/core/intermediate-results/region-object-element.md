@@ -24,9 +24,9 @@ interface RegionObjectElement {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`location`](#location) | *Core.BasicStructures.Quadrilateral* |
-| [`referencedElement`](#referencedelement) | *RegionObjectElement* |
-| [`type`](#type) | *EnumRegionObjectElementType* |
+| [location](#location) | *Core.BasicStructures.Quadrilateral* |
+| [referencedElement](#referencedelement) | *RegionObjectElement* |
+| [type](#type) | *EnumRegionObjectElementType* |
 
 ### location
 

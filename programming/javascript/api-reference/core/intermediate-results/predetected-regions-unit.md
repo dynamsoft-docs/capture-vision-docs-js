@@ -22,7 +22,7 @@ interface PredetectedRegionsUnit extends IntermediateResultUnit {
 
 | Properties | Type |
 |--------|-------------|
-| [`predetectedRegions`](#predetectedregions) | *Array\<PredetectedRegionElement>* |
+| [predetectedRegions](#predetectedregions) | *Array\<PredetectedRegionElement>* |
 
 
 ### predetectedRegions

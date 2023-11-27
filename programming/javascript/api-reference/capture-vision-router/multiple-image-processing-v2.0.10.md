@@ -1,13 +1,12 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Consecutive Process - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to Consecutive Process of Dynamsoft Capture Vision JavaScript Edition.
+title: CaptureVisionRouter v2.0.10 Consecutive Process - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to Consecutive Process of Dynamsoft Capture Vision JavaScript Edition v2.0.10.
 keywords: capture vision, Consecutive Process, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing.html
 ---
 
 # CaptureVisionRouter Multiple Image Processing
@@ -284,7 +283,7 @@ cvr.addResultReceiver(filter);
 
 **See also**
 
-[`MultiFrameResultCrossFilter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
+[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
 
 ## removeResultFilter
 
@@ -323,7 +322,7 @@ startCapturing(templateName?: string): Promise<void>;
 
 **parameter**
 
-`templateName`(optional): The name of the template to use for capturing. If not specified, the default template will be used.
+`templateName`(optional): The name of the template to use for capturing. If not specified, the default template (`EnumPresetTemplate.PT_DEFAULT`) will be used.
 
 **Return Value**
 

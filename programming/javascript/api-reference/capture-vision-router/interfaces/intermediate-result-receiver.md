@@ -51,35 +51,35 @@ interface IntermediateResultReceiver {
 
 | API Name | Description |
 |--------|-------------|
-| [`getObservedParameters()`](#getobservedparameters) | Gets the types of intermediate result units that have been observed. |
-| [`onTaskResultsReceived()`](#ontaskresultsreceived) | Called when a task result has been received. |
-| [`onPredetectedRegionsReceived()`](#onpredetectedregionsreceived) | Called when predetected regions have been received. |
-| [`onLocalizedBarcodesReceived()`](#onlocalizedbarcodesreceived) | Called when localized barcodes have been received. |
-| [`onDecodedBarcodesReceived()`](#ondecodedbarcodesreceived) | Called when decoded barcodes have been received. |
-| [`onLocalizedTextLinesReceived()`](#onlocalizedtextlinesreceived) | Called when localized text lines have been received. |
-| [`onRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Called when recognized text lines have been received. |
-| [`onDetectedQuadsReceived()`](#ondetectedquadsreceived) | Called when detected quadrilaterals have been received. |
-| [`onNormalizedImagesReceived()`](#onnormalizedimagesreceived) | Called when normalized images have been received. |
-| [`onColourImageUnitReceived()`](#oncolourimageunitreceived) | Called when colour image units have been received. |
-| [`onScaledDownColourImageUnitReceived()`](#onscaleddowncolourimageunitreceived) | Called when scaled down colour image units have been received. |
-| [`onGrayscaleImageUnitReceived()`](#ongrayscaleimageunitreceived) | Called when grayscale image units have been received. |
-| [`onTransformedGrayscaleImageUnitReceived()`](#ontransformedgrayscaleimageunitreceived) | Called when transformed grayscale image units have been received. |
-| [`onEnhancedGrayscaleImageUnitReceived()`](#onenhancedgrayscaleimageunitreceived) | Called when enhanced grayscale image units have been received. |
-| [`onBinaryImageUnitReceived()`](#onbinaryimageunitreceived) | Called when binary image units have been received. |
-| [`onTextureDetectionResultUnitReceived()`](#ontexturedetectionresultunitreceived) | Called when texture detection result units have been received. |
-| [`onTextureRemovedGrayscaleImageUnitReceived()`](#ontextureremovedgrayscaleimageunitreceived) | Called when texture removed grayscale image units have been received. |
-| [`onTextureRemovedBinaryImageUnitReceived()`](#ontextureremovedbinaryimageunitreceived) | Called when texture removed binary image units have been received. |
-| [`onContoursUnitReceived()`](#oncontoursunitreceived) | Called when contour units have been received. |
-| [`onLineSegmentsUnitReceived()`](#onlinesegmentsunitreceived) | Called when line segment units have been received. |
-| [`onTextZonesUnitReceived()`](#ontextzonesunitreceived) | Called when text zone units have been received. |
-| [`onTextRemovedBinaryImageUnitReceived()`](#ontextremovedbinaryimageunitreceived) | Called when text removed binary image units have been received. |
-| [`onLongLinesUnitReceived()`](#onlonglinesunitreceived) | Called when long line units have been received. |
-| [`onCornersUnitReceived()`](#oncornersunitreceived) | Called when corner units have been received. |
-| [`onCandidateQuadEdgesUnitReceived()`](#oncandidatequadedgesunitreceived) | Called when candidate quadrilateral edge units have been received. |
-| [`onCandidateBarcodeZonesUnitReceived()`](#oncandidatebarcodezonesunitreceived) | Called when candidate barcode zone units have been received. |
-| [`onScaledUpBarcodeImageUnitReceived()`](#onscaledupbarcodeimageunitreceived) | Called when scaled up barcode image units have been received. |
-| [`onDeformationResistedBarcodeImageUnitReceived()`](#ondeformationresistedbarcodeimageunitreceived) | Called when deformation resisted barcode image units have been received. |
-| [`onComplementedBarcodeImageUnitReceived()`](#oncomplementedbarcodeimageunitreceived) | Called when complemented barcode image units have been received. |
+| [getObservedParameters()](#getobservedparameters) | Gets the types of intermediate result units that have been observed. |
+| [onTaskResultsReceived()](#ontaskresultsreceived) | Called when a task result has been received. |
+| [onPredetectedRegionsReceived()](#onpredetectedregionsreceived) | Called when predetected regions have been received. |
+| [onLocalizedBarcodesReceived()](#onlocalizedbarcodesreceived) | Called when localized barcodes have been received. |
+| [onDecodedBarcodesReceived()](#ondecodedbarcodesreceived) | Called when decoded barcodes have been received. |
+| [onLocalizedTextLinesReceived()](#onlocalizedtextlinesreceived) | Called when localized text lines have been received. |
+| [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived) | Called when recognized text lines have been received. |
+| [onDetectedQuadsReceived()](#ondetectedquadsreceived) | Called when detected quadrilaterals have been received. |
+| [onNormalizedImagesReceived()](#onnormalizedimagesreceived) | Called when normalized images have been received. |
+| [onColourImageUnitReceived()](#oncolourimageunitreceived) | Called when colour image units have been received. |
+| [onScaledDownColourImageUnitReceived()](#onscaleddowncolourimageunitreceived) | Called when scaled down colour image units have been received. |
+| [onGrayscaleImageUnitReceived()](#ongrayscaleimageunitreceived) | Called when grayscale image units have been received. |
+| [onTransformedGrayscaleImageUnitReceived()](#ontransformedgrayscaleimageunitreceived) | Called when transformed grayscale image units have been received. |
+| [onEnhancedGrayscaleImageUnitReceived()](#onenhancedgrayscaleimageunitreceived) | Called when enhanced grayscale image units have been received. |
+| [onBinaryImageUnitReceived()](#onbinaryimageunitreceived) | Called when binary image units have been received. |
+| [onTextureDetectionResultUnitReceived()](#ontexturedetectionresultunitreceived) | Called when texture detection result units have been received. |
+| [onTextureRemovedGrayscaleImageUnitReceived()](#ontextureremovedgrayscaleimageunitreceived) | Called when texture removed grayscale image units have been received. |
+| [onTextureRemovedBinaryImageUnitReceived()](#ontextureremovedbinaryimageunitreceived) | Called when texture removed binary image units have been received. |
+| [onContoursUnitReceived()](#oncontoursunitreceived) | Called when contour units have been received. |
+| [onLineSegmentsUnitReceived()](#onlinesegmentsunitreceived) | Called when line segment units have been received. |
+| [onTextZonesUnitReceived()](#ontextzonesunitreceived) | Called when text zone units have been received. |
+| [onTextRemovedBinaryImageUnitReceived()](#ontextremovedbinaryimageunitreceived) | Called when text removed binary image units have been received. |
+| [onLongLinesUnitReceived()](#onlonglinesunitreceived) | Called when long line units have been received. |
+| [onCornersUnitReceived()](#oncornersunitreceived) | Called when corner units have been received. |
+| [onCandidateQuadEdgesUnitReceived()](#oncandidatequadedgesunitreceived) | Called when candidate quadrilateral edge units have been received. |
+| [onCandidateBarcodeZonesUnitReceived()](#oncandidatebarcodezonesunitreceived) | Called when candidate barcode zone units have been received. |
+| [onScaledUpBarcodeImageUnitReceived()](#onscaledupbarcodeimageunitreceived) | Called when scaled up barcode image units have been received. |
+| [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Called when deformation resisted barcode image units have been received. |
+| [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived) | Called when complemented barcode image units have been received. |
 
 ### getObservedParameters
 

@@ -26,11 +26,11 @@ interface Rect {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`x`](#x) | *number* |
-| [`y`](#y) | *number* |
-| [`width`](#width) | *number* |
-| [`height`](#height) | *number* |
-| [`isMeasuredInPercentage`](#ismeasuredinpercentage) | *boolean* |
+| [x](#x) | *number* |
+| [y](#y) | *number* |
+| [width](#width) | *number* |
+| [height](#height) | *number* |
+| [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
 
 ### x
 

@@ -23,8 +23,8 @@ interface Point {
 
 | Properties | Type |
 |---------- | ---- |
-| [`x`](#x) | *Number* |
-| [`y`](#y) | *Number* |
+| [x](#x) | *Number* |
+| [y](#y) | *Number* |
 
 ### x
 

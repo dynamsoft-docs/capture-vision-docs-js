@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Module - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to CaptureVisionRouter of Dynamsoft Capture Vision JavaScript Edition as a module.
+title: CaptureVisionRouter Module v2.0.10 - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to CaptureVisionRouter v2.0.10 of Dynamsoft Capture Vision JavaScript Edition as a module.
 keywords: capture vision, module, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -20,8 +20,8 @@ This class defines common functionality in the `CaptureVisionRouter` module.
 
 | API Name                                           | Description                                                         |
 | -------------------------------------------------- | ------------------------------------------------------------------- |
-| static [`getVersion()`](#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
-| static [`engineResourcePath`](#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
+| `static` [getVersion()](#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
+| `static` [engineResourcePath](#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
 
 ### getVersion
 
@@ -79,22 +79,22 @@ The APIs for this class include:
 
 | API Name                                         | Description                                                 |
 | ------------------------------------------------ | ----------------------------------------------------------- |
-| [capture()](./single-file-processing.md#capture) | Processes an image or file to derive important information. |
+| [capture()](./single-image-processing.md#capture) | Processes an image or file to derive important information. |
 
 ### Multiple-File Processing
 
 | API Name                                                                                         | Description                                                           |
 | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
-| [setInput()](./multiple-file-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.       |
-| [getInput()](./multiple-file-processing.md#getinput)                                             | Returns the image source object.                                      |
-| [addImageSourceStateListener()](./multiple-file-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.     |
-| [removeImageSourceStateListener()](./multiple-file-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source. |
-| [addResultReceiver()](./multiple-file-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                   |
-| [removeResultReceiver()](./multiple-file-processing.md#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.  |
-| [addResultFilter()](./multiple-file-processing.md#addresultfilter)                               | Adds an object as the filter of captured results.                     |
-| [removeResultFilter()](./multiple-file-processing.md#removeresultfilter)                         | Removes a result filter for filtering non-essential results.          |
-| [startCapturing()](./multiple-file-processing.md#startcapturing)                                 | Starts to process images consecutively.                               |
-| [stopCapturing()](./multiple-file-processing.md#stopcapturing)                                   | Stops the consecutive process.                                        |
+| [setInput()](./multiple-image-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.       |
+| [getInput()](./multiple-image-processing.md#getinput)                                             | Returns the image source object.                                      |
+| [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.     |
+| [removeImageSourceStateListener()](./multiple-image-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source. |
+| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                   |
+| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.  |
+| [addResultFilter()](./multiple-image-processing.md#addresultfilter)                               | Adds an object as the filter of captured results.                     |
+| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)                         | Removes a result filter for filtering non-essential results.          |
+| [startCapturing()](./multiple-image-processing.md#startcapturing)                                 | Starts to process images consecutively.                               |
+| [stopCapturing()](./multiple-image-processing.md#stopcapturing)                                   | Stops the consecutive process.                                        |
 
 ### Settings
 

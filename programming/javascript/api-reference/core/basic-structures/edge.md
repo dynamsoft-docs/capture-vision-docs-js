@@ -23,8 +23,8 @@ interface Edge {
   
 | Properties | Type |
 |---------- | ---- |
-| [`startCorner`](#startcorner) | *Corner* |
-| [`endCorner`](#endcorner) | *Corner* |
+| [startCorner](#startcorner) | *Corner* |
+| [endCorner](#endcorner) | *Corner* |
 
 ### startCorner
 

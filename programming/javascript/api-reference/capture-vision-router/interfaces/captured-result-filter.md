@@ -28,12 +28,12 @@ interface CapturedResultFilter {
 
 | API Name                                                            | Description                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`OnOriginalImageResultReceived()`](#onoriginalimageresultreceived) | Callback function for original image results.        |
-| [`OnDecodedBarcodesReceived()`](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
-| [`OnRecognizedTextLinesReceived()`](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
-| [`OnDetectedQuadsReceived()`](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
-| [`OnNormalizedImagesReceived()`](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
-| [`OnParsedResultsReceived()`](#onparsedresultsreceived)             | Callback function for parsed results.                |
+| [OnOriginalImageResultReceived()](#onoriginalimageresultreceived) | Callback function for original image results.        |
+| [OnDecodedBarcodesReceived()](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
+| [OnRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
+| [OnDetectedQuadsReceived()](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
+| [OnNormalizedImagesReceived()](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
+| [OnParsedResultsReceived()](#onparsedresultsreceived)             | Callback function for parsed results.                |
 
 ### OnOriginalImageResultReceived
 

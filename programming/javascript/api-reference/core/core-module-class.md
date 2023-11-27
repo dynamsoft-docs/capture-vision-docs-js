@@ -6,26 +6,27 @@ keywords: Core, CoreModule, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/javascript/api-reference/core/core-module-class.html
 ---
 <!--v3.0.20--Updated on 11/23/2023-->
 
 # CoreModule Class
 
-This class defines common functionality in the `Core` module.
+This class defines common functionality in the Core module.
 
 | API Name                                             | Description                                                                                 |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| static [`getVersion()`](#getversion)                 | Returns the version of the `Core` module.                                                   |
-| static [`engineResourcePaths`](#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
-| static [`loadWasm()`](#loadwasm)                     | Loads the WebAssembly (.wasm) files for the specified modules.                              |
-| static [`loadModel()`](#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
-| static [`enableLogging()`](#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
-| static [`disableLogging()`](#disablelogging)         | Disables logging.                                                                           |
+| `static` [getVersion()](#getversion)                 | Returns the version of the Core module.                                                     |
+| `static` [detectEnvironment()](#detectenvironment)   | Detects the current environment.                                                            |
+| `static` [onWarning](#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
+| `static` [engineResourcePaths](#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
+| `static` [loadWasm()](#loadwasm)                     | Loads the WebAssembly (.wasm) files for the specified modules.                              |
+| `static` [loadModel()](#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
+| `static` [enableLogging()](#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
+| `static` [disableLogging()](#disablelogging)         | Disables logging.                                                                           |
 
 ## getVersion
 
-Returns the version of the `Core` module.
+Returns the version of the Core module.
 
 ```typescript
 static getVersion(): string;
@@ -38,11 +39,51 @@ const version = Dynamsoft.Core.CoreModule.getVersion();
 console.log(version);
 ```
 
+## detectEnvironment
+
+Detect the current device environment.
+
+```typescript
+detectEnvironment(): Promise<any>
+```
+
+**Return Value**
+
+`Promise<any>`
+
+**Code snippet**
+
+```javascript
+Dynamsoft.Core.CoreModule.detectEnvironment();
+```
+
+## onWarning
+
+A callback which is triggered when the running environment is not ideal.
+
+```typescript
+onWarning: (warning:Warning) =>{};
+```
+
+**Return Value**
+
+`Promise<any>`
+
+**Code snippet**
+
+```javascript
+Dynamsoft.Core.CoreModule.onWarning = warning => console.log(warning.message);
+```
+
+**See Also**
+
+* [Warning](./basic-structures/warning.md)
+
 ## engineResourcePaths
 
 Returns or sets the paths for finding the .wasm files and other resource files for modules.
 
-When loading the resource files from jsDelivr or UNPKG, the paths are automatically deteremined based on the referenced JavaScript files for these modules. You only need to specify these paths if
+When loading the resource files from jsDelivr or UNPKG, the paths are automatically determined based on the referenced JavaScript files for these modules. You only need to specify these paths if
 
 1. You are using the SDK in a web framework like Angular, React or Vue, or
 2. You are using a different CDN, or

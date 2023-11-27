@@ -7,18 +7,17 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/settings-v2.0.10.html
 ---
 
 # CaptureVisionRouter Settings
 
-| API Name                                          | Description                                                                                                   |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [initSettings()](#initsettings)                   | Initializes a specific settings. Settings can either be a JSON string or a url to a JSON file.                |
-| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                      |
-| [getSimplifiedSettings()](#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`.      |
-| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.         |
-| [resetSettings()](#resetsettings)                 | Resets settings to factory default.                                                                           |
+| API Name                                          | Description                                                                                              |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [initSettings()](#initsettings)                   | Initializes a specific settings. Settings can either be a JSON string or a url to a JSON file.           |
+| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                 |
+| [getSimplifiedSettings()](#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`. |
+| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.    |
+| [resetSettings()](#resetsettings)                 | Resets settings to factory default.                                                                      |
 
 
 ## initSettings

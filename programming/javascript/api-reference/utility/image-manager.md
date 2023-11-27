@@ -22,7 +22,7 @@ class ImageManager {
 
 | API Name                    | Description                          |
 | --------------------------- | ------------------------------------ |
-| [`saveToFile()`](#savetofile) | Saved the specified image as a file. |
+| [saveToFile()](#savetofile) | Saved the specified image as a file. |
 
 ### saveToFile
 

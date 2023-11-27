@@ -23,8 +23,8 @@ interface IntermediateResultManager {
 
 | API Name | Description |
 |--------|-------------|
-| [`addResultReceiver`](#addresultreceiver) | Adds an intermediate result receiver.|
-| [`removeResultReceiver`](#removeresultreceiver) | Removes an intermediate result receiver. |
+| [addResultReceiver](#addresultreceiver) | Adds an intermediate result receiver.|
+| [removeResultReceiver](#removeresultreceiver) | Removes an intermediate result receiver. |
 
 ### addResultReceiver
 

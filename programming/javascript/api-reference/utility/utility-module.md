@@ -7,13 +7,12 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Utility Module
-permalink: /programming/javascript/api-reference/utility/utility-module.html
 ---
 <!--v1.0.20--Updated on 11/23/2023-->
 
 # Utility Module
 
-The `Utility` module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and `MultiFrameResultCrossFilter`.
+The Utility module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and `MultiFrameResultCrossFilter`.
 
 ## UtilityModule Class
 
@@ -21,7 +20,7 @@ This class defines common functionality in the Utility module. At present, it ha
 
 | API Name              | Description                                  |
 | --------------------- | -------------------------------------------- |
-| static `getVersion()` | Returns the version of the `Utility` module. |
+| `static` `getVersion()` | Returns the version of the Utility module. |
 
 **Code snippet**
 
@@ -36,7 +35,7 @@ The `ImageManager` class provides APIs for managing images. At present, it has o
 
 | API Name                                      | Description                          |
 | --------------------------------------------- | ------------------------------------ |
-| [`saveToFile`](./image-manager.md#savetofile) | Saved the specified image as a file. |
+| [saveToFile](./image-manager.md#savetofile) | Saved the specified image as a file. |
 
 ## MultiFrameResultCrossFilter Class
 

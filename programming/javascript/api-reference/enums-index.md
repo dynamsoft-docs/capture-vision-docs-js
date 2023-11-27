@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Enumeration Index
-permalink: /programming/javascript/api-reference/enums-index.html
 ---
 
 # Dynamsoft Capture Vision Enumerations

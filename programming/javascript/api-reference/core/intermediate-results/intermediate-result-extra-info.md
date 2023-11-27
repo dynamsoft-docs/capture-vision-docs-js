@@ -25,10 +25,10 @@ interface IntermediateResultExtraInfo {
 
 | Properties                                             | Type                                |
 | ----------------------------------------------------- | ----------------------------------- |
-| [`targetROIDefName`](#targetroidefname)               | *String*                            |
-| [`taskName`](#taskname)                               | *String*                            |
-| [`isSectionLevelResult`](#issectionlevelresult)       | *boolean*                           |
-| [`sectionType`](#sectiontype)                         | *EnumSectionType*                   |
+| [targetROIDefName](#targetroidefname)               | *String*                            |
+| [taskName](#taskname)                               | *String*                            |
+| [isSectionLevelResult](#issectionlevelresult)       | *boolean*                           |
+| [sectionType](#sectiontype)                         | *EnumSectionType*                   |
 
 ### targetROIDefName
 

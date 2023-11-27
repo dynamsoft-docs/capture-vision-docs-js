@@ -22,7 +22,7 @@ interface ContoursUnit extends IntermediateResultUnit {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`contours`](#contours) | *Array\<Core.BasicStructures.Contour>* |
+| [contours](#contours) | *Array\<Core.BasicStructures.Contour>* |
 
 ### contours
 

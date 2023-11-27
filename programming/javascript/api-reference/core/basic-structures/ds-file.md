@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # DSFile
 
-The `DSFile` interface extends the [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) interface and provides an additional download method for downloading a file in memory to the local drive via the browser.
+The `DSFile` interface extends the [File](https://developer.mozilla.org/en-US/docs/Web/API/File) interface and provides an additional download method for downloading a file in memory to the local drive via the browser.
 
 ## Definition
 

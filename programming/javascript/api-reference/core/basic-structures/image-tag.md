@@ -23,8 +23,8 @@ interface ImageTag {
 
 | Properties            | Type               |
 | --------------------- | ------------------ |
-| [`imageId`](#imageid) | *Number*           |
-| [`type`](#type)       | *EnumImageTagType* |
+| [imageId](#imageid) | *Number*           |
+| [type](#type)       | *EnumImageTagType* |
 
 ### imageId
 

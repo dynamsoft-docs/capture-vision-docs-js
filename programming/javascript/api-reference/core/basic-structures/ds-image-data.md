@@ -28,13 +28,13 @@ interface DSImageData {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`bytes`](#bytes) | *Uint8Array* |
-| [`width`](#width) | *number* |
-| [`height`](#height) | *number* |
-| [`stride`](#stride) | *number* |
-| [`format`](#format) | *Core.BasicStructures.EnumImagePixelFormat* |
-| [`orientation`](#orientation) | *number* |
-| [`tag`](#tag) | *ImageTag* |
+| [bytes](#bytes) | *Uint8Array* |
+| [width](#width) | *number* |
+| [height](#height) | *number* |
+| [stride](#stride) | *number* |
+| [format](#format) | *Core.BasicStructures.EnumImagePixelFormat* |
+| [orientation](#orientation) | *number* |
+| [tag](#tag) | *ImageTag* |
 
 ### bytes
 

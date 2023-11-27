@@ -29,14 +29,14 @@ interface VideoFrameTag extends Core.BasicStructures.ImageTag {
 
 | Properties               | Description |
 |----------------------|-------------|
-| [`isCropped`](#iscropped) | Determines whether the video frame is cropped. |
-| [`cropRegion`](#cropregion) | Gets the crop region of the video frame. |
-| [`originalWidth`](#originalwidth) | Gets the original width of the video frame. |
-| [`originalHeight`](#originalheight) | Gets the original height of the video frame. |
-| [`currentWidth`](#currentwidth) | Gets the current width of the video frame. |
-| [`currentHeight`](#currentheight) | Gets the current height of the video frame. |
-| [`timeSpent`](#timespent) | The time spent on processing the video frame. |
-| [`timeStamp`](#timestamp) | The time stamp of the video frame.  |
+| [isCropped](#iscropped) | Determines whether the video frame is cropped. |
+| [cropRegion](#cropregion) | Gets the crop region of the video frame. |
+| [originalWidth](#originalwidth) | Gets the original width of the video frame. |
+| [originalHeight](#originalheight) | Gets the original height of the video frame. |
+| [currentWidth](#currentwidth) | Gets the current width of the video frame. |
+| [currentHeight](#currentheight) | Gets the current height of the video frame. |
+| [timeSpent](#timespent) | The time spent on processing the video frame. |
+| [timeStamp](#timestamp) | The time stamp of the video frame.  |
 
 ### isCropped
 

@@ -22,7 +22,7 @@ interface Quadrilateral {
   
 | Properties | Type |
 |---------- | ---- |
-| [`points`](#points) | *Point* |
+| [points](#points) | *Point* |
 
 
 ### points

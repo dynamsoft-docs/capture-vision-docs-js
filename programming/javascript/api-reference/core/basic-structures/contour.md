@@ -22,7 +22,7 @@ interface Contour {
   
 | Properties | Type |
 |---------- | ---- |
-| [`points`](#points)| *Array\<Point>* |
+| [points](#points)| *Array\<Point>* |
 
 ### points
 

@@ -26,11 +26,11 @@ interface Arc {
 
 | Properties                  | Type     |
 | --------------------------- | -------- |
-| [`x`](#x)                   | *number* |
-| [`y`](#y)                   | *number* |
-| [`radius`](#radius)         | *number* |
-| [`startAngle`](#startangle) | *number* |
-| [`endAngle`](#endangle)     | *number* |
+| [x](#x)                   | *number* |
+| [y](#y)                   | *number* |
+| [radius](#radius)         | *number* |
+| [startAngle](#startangle) | *number* |
+| [endAngle](#endangle)     | *number* |
 
 ### x
 

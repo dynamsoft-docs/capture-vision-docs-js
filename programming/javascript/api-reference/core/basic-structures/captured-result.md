@@ -26,11 +26,11 @@ interface CapturedResult {
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`OriginalImageHashId`](#originalimagehashid) | *String* |
-| [`OriginalImageTag`](#originalimagetag) | *ImageTag* |
-| [`items`](#items) | *Array\<CapturedResultItem>* |
-| [`errorCode`](#errorcode) | *number* |
-| [`errorString`](#errorstring) | *string* |
+| [OriginalImageHashId](#originalimagehashid) | *String* |
+| [OriginalImageTag](#originalimagetag) | *ImageTag* |
+| [items](#items) | *Array\<CapturedResultItem>* |
+| [errorCode](#errorcode) | *number* |
+| [errorString](#errorstring) | *string* |
 
 ### OriginalImageHashId
 

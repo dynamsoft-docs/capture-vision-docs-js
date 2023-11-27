@@ -22,7 +22,7 @@ interface PredetectedRegionElement extends RegionObjectElement {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [`modeName`](#modename) | *String* |
+| [modeName](#modename) | *String* |
 
 ### modeName
 

@@ -1,13 +1,12 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Single Process - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to "Single Process" with Dynamsoft Capture Vision JavaScript Edition.
+title: CaptureVisionRouter v2.0.10 Single Process - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to "Single Process" with Dynamsoft Capture Vision JavaScript Edition v2.0.10.
 keywords: capture vision, caputre, image processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
 
 # CaptureVisionRouter Single Image Processing
@@ -40,7 +39,7 @@ A promise that resolves to an array of `CapturedResult` objects which are the de
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "ReadSingleBarcode");
+let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "detect-document-boundaries");
 let count = results.length;
 for(let i = 0; i < count; i++) {
     //...

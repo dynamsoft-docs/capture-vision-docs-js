@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: Core Module
-permalink: /programming/javascript/api-reference/core/core-module-v3.0.10.html
 ---
 
 # Core Module
@@ -16,11 +15,11 @@ The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the
 
 ## CoreModule Class
 
-This class defines common functionality in the `Core` module. At present, it has only one method.
+This class defines common functionality in the Core module. At present, it has only one method.
 
-| API Name              | Description                               |
-| --------------------- | ----------------------------------------- |
-| static `getVersion()` | Returns the version of the `Core` module. |
+| API Name              | Description                             |
+| --------------------- | --------------------------------------- |
+| `static` getVersion() | Returns the version of the Core module. |
 
 **Code snippet**
 
@@ -35,24 +34,24 @@ The `ImageSourceAdapter` class defines how an image source should be defined for
 
 The APIs for this class are:
 
-| API Name                                                                                                          | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [`addImageToBuffer`](./basic-structures/image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
-| [`hasNextImageToFetch`](./basic-structures/image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
-| [`startFetching`](./basic-structures/image-source-adapter.md#startfetching)                                     | Starts fetching images.                                                                                   |
-| [`stopFetching`](./basic-structures/image-source-adapter.md#stopfetching)                                       | Stops fetching images.                                                                                    |
-| [`getImage`](./basic-structures/image-source-adapter.md#getimage)                                               | Returns a buffered image.                                                                                 |
-| [`setMaxImageCount`](./basic-structures/image-source-adapter.md#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
-| [`getMaxImageCount`](./basic-structures/image-source-adapter.md#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
-| [`setBufferOverflowProtectionMode`](./basic-structures/image-source-adapter.md#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
-| [`getBufferOverflowProtectionMode`](./basic-structures/image-source-adapter.md#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
-| [`hasImage`](./basic-structures/image-source-adapter.md#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
-| [`setNextImageToReturn`](./basic-structures/image-source-adapter.md#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
-| [`getImageCount`](./basic-structures/image-source-adapter.md#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
-| [`isBufferEmpty`](./basic-structures/image-source-adapter.md#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
-| [`clearBuffer`](./basic-structures/image-source-adapter.md#clearbuffer)                                         | Clears the image buffer.                                                                                  |
-| [`setColourChannelUsageType`](./basic-structures/image-source-adapter.md#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
-| [`getColourChannelUsageType`](./basic-structures/image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
+| API Name                                                                                                      | Description                                                                                               |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [addImageToBuffer](./basic-structures/image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
+| [hasNextImageToFetch](./basic-structures/image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
+| [startFetching](./basic-structures/image-source-adapter.md#startfetching)                                     | Starts fetching images.                                                                                   |
+| [stopFetching](./basic-structures/image-source-adapter.md#stopfetching)                                       | Stops fetching images.                                                                                    |
+| [getImage](./basic-structures/image-source-adapter.md#getimage)                                               | Returns a buffered image.                                                                                 |
+| [setMaxImageCount](./basic-structures/image-source-adapter.md#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
+| [getMaxImageCount](./basic-structures/image-source-adapter.md#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
+| [setBufferOverflowProtectionMode](./basic-structures/image-source-adapter.md#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
+| [getBufferOverflowProtectionMode](./basic-structures/image-source-adapter.md#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
+| [hasImage](./basic-structures/image-source-adapter.md#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
+| [setNextImageToReturn](./basic-structures/image-source-adapter.md#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
+| [getImageCount](./basic-structures/image-source-adapter.md#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
+| [isBufferEmpty](./basic-structures/image-source-adapter.md#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
+| [clearBuffer](./basic-structures/image-source-adapter.md#clearbuffer)                                         | Clears the image buffer.                                                                                  |
+| [setColourChannelUsageType](./basic-structures/image-source-adapter.md#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
+| [getColourChannelUsageType](./basic-structures/image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
 
 ## IntermediateResultManager Class
 
@@ -60,11 +59,11 @@ The `IntermediateResultManager` class defines a user can interact with the `Capt
 
 The APIs for this class are:
 
-| API Name                                                                                             | Description                                     |
-| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [`addResultReceiver`](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.           |
-| [`removeResultReceiver`](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.        |
-| [`getOriginalImage`](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the original image data using an image hash id. |
+| API Name                                                                                           | Description                                          |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| [addResultReceiver](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.                |
+| [removeResultReceiver](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.             |
+| [getOriginalImage](./intermediate-results/intermediate-result-manager.md#getoriginalimage)         | Gets the original image data using an image hash id. |
 
 ## Interfaces and Enums
 

@@ -39,23 +39,23 @@ abstract class ImageSourceAdapter {
 
 | API Name                                                                | Description                                                                                               |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [`addImageToBuffer()`](#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
-| [`hasNextImageToFetch()`](#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
-| [`startFetching()`](#startfetching)                                     | Starts fetching images.                                                                                   |
-| [`stopFetching()`](#stopfetching)                                       | Stops fetching images.                                                                                    |
-| [`getImage()`](#getimage)                                               | Returns a buffered image.                                                                                 |
-| [`setMaxImageCount()`](#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
-| [`getMaxImageCount()`](#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
-| [`setBufferOverflowProtectionMode()`](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
-| [`getBufferOverflowProtectionMode()`](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
-| [`hasImage()`](#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
-| [`setNextImageToReturn()`](#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
-| [`getImageCount()`](#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
-| [`isBufferEmpty()`](#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
-| [`clearBuffer()`](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
-| [`setColourChannelUsageType()`](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
-| [`getColourChannelUsageType()`](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
-| [`setErrorListener()`](#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
+| [addImageToBuffer()](#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
+| [hasNextImageToFetch()](#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
+| [startFetching()](#startfetching)                                     | Starts fetching images.                                                                                   |
+| [stopFetching()](#stopfetching)                                       | Stops fetching images.                                                                                    |
+| [getImage()](#getimage)                                               | Returns a buffered image.                                                                                 |
+| [setMaxImageCount()](#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
+| [getMaxImageCount()](#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
+| [setBufferOverflowProtectionMode()](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
+| [getBufferOverflowProtectionMode()](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
+| [hasImage()](#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
+| [setNextImageToReturn()](#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
+| [getImageCount()](#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
+| [isBufferEmpty()](#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
+| [clearBuffer()](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
+| [setColourChannelUsageType()](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
+| [getColourChannelUsageType()](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
+| [setErrorListener()](#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
 
 ---
 

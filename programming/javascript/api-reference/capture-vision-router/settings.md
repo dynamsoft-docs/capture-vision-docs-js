@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/settings.html
 ---
 
 # CaptureVisionRouter Settings
