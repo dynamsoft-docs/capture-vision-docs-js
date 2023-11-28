@@ -93,4 +93,6 @@ The APIs for this class include:
 ### Enums
 
 * [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
-* [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
+
+<!-- 
+* [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js) -->

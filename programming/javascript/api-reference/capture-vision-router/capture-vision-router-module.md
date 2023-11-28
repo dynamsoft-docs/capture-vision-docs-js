@@ -89,22 +89,21 @@ The APIs for this class are:
 
 ## Interfaces
 
-Those interfaces provide functions for final results filtering，receiving，and intermediate results receiving:
-
 * [CapturedResultFilter](./interfaces/captured-result-filter.md)
 * [CapturedResultReceiver](./interfaces/captured-result-receiver.md)
 * [IntermediateResultReceiver](./interfaces/intermediate-result-receiver.md)
-
-### Other Interfaces
-
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)
+
 <!-- not required at the moment, meant for panorama
   * [CaptureStateListener] -->
 
-### Enums
+## Enums
 
 * [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
+
+<!-- 
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
-<!-- not required at the moment, meant for panorama
+
+not required at the moment, meant for panorama
   * [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js) -->

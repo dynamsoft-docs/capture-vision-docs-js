@@ -74,7 +74,6 @@
 	* resetSettings()
 * Defined the following enums
 	* EnumImageSourceState
-	* EnumPresetTemplate
 
 * Defined the following interfaces
 	* ImageSourceStateListener
