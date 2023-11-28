@@ -49,12 +49,14 @@ detectEnvironment(): Promise<any>
 
 **Return Value**
 
-`Promise<any>`
+A Promise that resolves to an object containing environment support information.
 
 **Code snippet**
 
 ```javascript
-Dynamsoft.Core.CoreModule.detectEnvironment();
+await Dynamsoft.Core.CoreModule.detectEnvironment();
+// example return value:
+// {"wasm":true,"worker":true,"getUserMedia":true,"camera":true,"browser":"Edge","version":119,"OS":"Windows"}
 ```
 
 ## onWarning

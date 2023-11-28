@@ -55,15 +55,11 @@ The APIs for this class are:
 | [getColourChannelUsageType()](./image-source-adapter.md#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
 | [setErrorListener()](./image-source-adapter.md#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
 
-## Interfaces and Enums
-
-In order to make the code more predictable and readable, the library defines a series of supporting interfaces and enumerations:
-
-### Interfaces
+## Interfaces
 
 The following are the basic interfaces often shared by more than one module:
 
-**Basic Shapes**:
+### Basic Shapes
 
 * [Arc](./basic-structures/arc.md)
 * [Contour](./basic-structures/contour.md)
@@ -76,7 +72,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Rect](./basic-structures/rect.md)
 * [DSRect](./basic-structures/ds-rect.md)
 
-**Basic Structures**
+### Basic Structures
 
 * [CapturedResult](./basic-structures/captured-result.md)
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
@@ -88,7 +84,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Warning](./basic-structures/warning.md)
 <!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 
-**Intermediate Results Related**
+### Intermediate Results Related
 
 * [RegionObjectElement](./intermediate-results/region-object-element.md)
 * [PredetectedRegionElement](./intermediate-results/predetected-region-element.md)
@@ -111,7 +107,7 @@ The following are the basic interfaces often shared by more than one module:
 * [ObservationParameters](./intermediate-results/observation-parameters.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
 
-### Enums
+## Enums
 
 The following are the basic enumerations often shared by more than one module:
 
