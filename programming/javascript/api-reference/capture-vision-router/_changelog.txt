@@ -8,13 +8,48 @@
 
 ## 2.0.20
 
-* Removed the property CaptureVisionRouterModule.engineResourcePath. Use engineResourcePaths on Core module v3.0.20 instead.
-* Removed the method detectEnvironment(). The same method is now on CoreModule.
-* Removed the property onWarning which is now on the CoreModule
-* Removed the method preLoadModule(), use CoreModule.loadWasm() instead.
-* Removed the method isModuleLoaded(). No substitute.
+* Removed the static property CaptureVisionRouterModule.engineResourcePath. The substitute is CoreModule.engineResourcePaths (Core module v3.0.20).
+* Removed the static method CaptureVisionRouter.detectEnvironment(). The substitute is CoreModule.detectEnvironment()  (Core module v3.0.20).
+* Removed the static property onWarning. The substitute is CoreModule.onWarning.
+* Removed the static method preLoadModule(). The substitute is CoreModule.loadWasm().
+* Removed the static method isModuleLoaded(). No substitute.
+* Implemented the instance method getIntermediateResultManager().
 
 ## 2.0.10
 
-* First implementation of the CaptureVisionRouter Module in JavaScript
-* Added the following 
+* First implementation of the CaptureVisionRouter Module in JavaScript -- Based on CaptureVisionRouter Module C++ 2.0.10
+* Implemented the following static methods and properties
+	* CaptureVisionRouterModule.getVersion()
+	* CaptureVisionRouterModule.engineResourcePath
+	* CaptureVisionRouter.detectEnvironment()
+	* CaptureVisionRouter.onWarning
+	* CaptureVisionRouter.preLoadModule()
+	* CaptureVisionRouter.isModuleLoaded()
+	* CaptureVisionRouter.createInstance()
+* Implemented the following instance methods and properties on CaptureVisionRouter instances
+	* dispose()
+	* disposed
+	* capture()
+	* setInput()
+	* getInput()
+	* addImageSourceStateListener()
+	* removeImageSourceStateListener()
+	* addResultReceiver()
+	* removeResultReceiver()
+	* addResultFilter()
+	* removeResultFilter()
+	* startCapturing()
+	* stopCapturing()
+	* initSettings()
+	* outputSettings()
+	* getSimplifiedSettings()
+	* updateSettings()
+	* resetSettings()
+* Defined the following enums
+	* EnumImageSourceState
+	* EnumPresetTemplate
+	* EnumCaptureState
+
+* Defined the following interfaces
+	* ImageSourceStateListener
+	* SimplifiedCaptureVisionSettings

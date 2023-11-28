@@ -1,15 +1,108 @@
 
 # Core Module Changelog
 
-## 2.2.0
+## 3.0.20
 
-* Add instance method pauseCapturing().
-* Add instance method resumeCapturing().
+* Added the following static methods and properties
+    * CoreModule.detectEnvironment()
+    * CoreModule.onWarning
+    * CoreModule.engineResourcePaths
+    * CoreModule.loadWasm()
+    * CoreModule.loadModel()
+    * CoreModule.enableLogging()
+    * CoreModule.disableLogging()
+* Added the instance method setErrorListener() to the abstract class ImageSourceAdapter.
+* Removed the class IntermediateResultManager. The substitute is the same class on the CaptureVisionRouter Module.
+* Added the following interface:
+    * ImageSourceErrorListener
+* Removed the interface CapturedResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
+* Removed the interface IntermediateResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
+* Added the following enum
+    * EnumTransformMatrixType
+    
+## 3.0.10
 
-## 2.0.20
+* First implementation of the Core Module in JavaScript -- Based on Core Module C++ 3.0.10.
+* Implemented the following static method:
+    * CoreModule.getVersion()
+* Implemented the abstract class ImageSourceAdapter with the following instance methods:
+    * addImageToBuffer()
+	* hasNextImageToFetch()
+	* startFetching()
+	* stopFetching()
+	* getImage()
+	* setMaxImageCount()
+	* getMaxImageCount()
+	* setBufferOverflowProtectionMode()
+	* getBufferOverflowProtectionMode()
+	* hasImage()
+	* setNextImageToReturn()
+	* getImageCount()
+	* isBufferEmpty()
+	* clearBuffer()
+	* setColourChannelUsageType()
+	* getColourChannelUsageType()
 
-* Removed the property CaptureVisionRouterModule.engineResourcePath. Use engineResourcePaths on Core module v3.0.20 instead.
-* Removed the method detectEnvironment(). The same method is now on CoreModule.
-* Removed the property onWarning which is now on the CoreModule
-* Removed the method preLoadModule(), use CoreModule.loadWasm() instead.
-* Removed the method isModuleLoaded(). No substitute.
+* Implemented the IntermediateResultManager Class with the following instance methods
+	* addResultReceiver
+	* removeResultReceiver
+	* getOriginalImage
+
+* Defined the following interfaces
+	* Arc
+	* Contour
+	* Corner
+	* Edge
+	* LineSegment
+	* Point
+	* Polygon
+	* Quadrilateral
+	* Rect
+	* DSRect
+    
+	* CapturedResult
+	* CapturedResultItem
+	* OriginalImageResultItem
+	* DSImageData
+	* ImageTag
+	* FileImageTag
+	* Warning
+
+	* CapturedResultReceiver
+
+	* RegionObjectElement
+	* PredetectedRegionElement
+	* IntermediateResult
+	* IntermediateResultUnit
+	* ColourImageUnit
+	* ScaledDownColourImageUnit
+	* GrayscaleImageUnit
+	* TransformedGrayscaleImageUnit
+	* EnhancedGrayscaleImageUnit
+	* PredetectedRegionsUnit
+	* BinaryImageUnit
+	* TextureDetectionResultUnit
+	* TextureRemovedGrayscaleImageUnit
+	* TextureRemovedBinaryImageUnit
+	* ContoursUnit
+	* LineSegmentsUnit
+	* TextZonesUnit
+	* TextRemovedBinaryImageUnit
+	* ObservationParameters
+	* IntermediateResultExtraInfo
+
+	* IntermediateResultReceiver
+
+* Defined the following enums
+	* EnumErrorCode
+	* EnumImagePixelFormat
+	* EnumGrayscaleTransformationMode
+	* EnumGrayscaleEnhancementMode
+	* EnumCapturedResultItemType
+	* EnumBufferOverflowProtectionMode
+	* EnumImageTagType
+	* EnumCornerType
+	* EnumSectionType
+	* EnumIntermediateResultUnitType
+	* EnumRegionObjectElementType
+	* EnumColourChannelUsageType

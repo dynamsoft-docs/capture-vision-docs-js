@@ -1,0 +1,23 @@
+
+# Utility Module Changelog
+
+## 1.0.20
+
+* Updated MultiFrameResultCrossFilter to support filtering Barcode results??
+    
+## 1.0.10
+
+* First implementation of the Utility Module in JavaScript -- Based on Utility Module C++ 1.0.10.
+* Implemented the following static method:
+    * UtilityModule.getVersion()
+
+* Implemented the ImageManager class with the following instance method
+	* saveToFile()
+
+* Implemented the MultiFrameResultCrossFilter class with the following instance methods
+    * enableResultCrossVerification
+    * isResultCrossVerificationEnabled
+    * enableResultDeduplication
+    * isResultDeduplicationEnabled
+    * setDuplicateForgetTime
+    * getDuplicateForgetTime

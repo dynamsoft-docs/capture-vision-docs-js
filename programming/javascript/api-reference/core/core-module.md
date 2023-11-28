@@ -119,16 +119,17 @@ The following are the basic enumerations often shared by more than one module:
 * [EnumImagePixelFormat]({{ site.enums }}core/image-pixel-format.html?lang=js)
 * [EnumGrayscaleTransformationMode]({{ site.enums }}core/grayscale-transformation-mode.html?lang=js)
 * [EnumGrayscaleEnhancementMode]({{ site.enums }}core/grayscale-enhancement-mode.html?lang=js)
-<!-- * [EnumPDFReadingMode]({{ site.enums }}core/pdf-reading-mode.html?lang=js) -->
-<!-- * [EnumRasterDataSource]({{ site.enums }}core/raster-data-source.html?lang=js) -->
 * [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
 * [EnumBufferOverflowProtectionMode]({{ site.enums }}core/buffer-overflow-protection-mode.html?lang=js)
 * [EnumImageTagType]({{ site.enums }}core/image-tag-type.html?lang=js)
-<!-- * [EnumVideoFrameQuality]({{ site.enums }}core/video-frame-quality.html?lang=js) -->
 * [EnumCornerType]({{ site.enums }}core/corner-type.html?lang=js)
 * [EnumSectionType]({{ site.enums }}core/section-type.html?lang=js)
 * [EnumIntermediateResultUnitType]({{ site.enums }}core/intermediate-result-unit-type.html?lang=js)
 * [EnumRegionObjectElementType]({{ site.enums }}core/region-object-element-type.html?lang=js)
-<!--* [EnumImageCaptureDistanceMode]({{ site.enums }}core/image-capture-distance-mode.html?lang=js)-->
 * [EnumColourChannelUsageType]({{ site.enums }}core/colour-channel-usage-type.html?lang=js)
 * [EnumTransformMatrixType]({{ site.enums }}core/transform-matrix-type.html?lang=js)
+
+<!-- * [EnumPDFReadingMode]({{ site.enums }}core/pdf-reading-mode.html?lang=js) -->
+<!-- * [EnumRasterDataSource]({{ site.enums }}core/raster-data-source.html?lang=js) -->
+<!-- * [EnumVideoFrameQuality]({{ site.enums }}core/video-frame-quality.html?lang=js) -->
+<!--* [EnumImageCaptureDistanceMode]({{ site.enums }}core/image-capture-distance-mode.html?lang=js)-->
