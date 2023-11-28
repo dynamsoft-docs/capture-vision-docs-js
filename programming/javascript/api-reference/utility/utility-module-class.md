@@ -13,9 +13,9 @@ noTitleIndex: true
 
 This class defines common functionality in the Utility module. At present, it has only one method.
 
-| API Name                | Description                                |
-| ----------------------- | ------------------------------------------ |
-| `static` [getVersion()] | Returns the version of the Utility module. |
+| API Name                             | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| `static` [getVersion()](#getversion) | Returns the version of the Utility module. |
 
 ## getVersion
 

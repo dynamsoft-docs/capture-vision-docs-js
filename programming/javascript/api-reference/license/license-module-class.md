@@ -13,9 +13,9 @@ noTitleIndex: true
 
 This class defines common functionality in the License module. At present, it has only one method.
 
-| API Name              | Description                                |
-| --------------------- | ------------------------------------------ |
-| `static` getVersion() | Returns the version of the License module. |
+| API Name                             | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| `static` [getVersion()](#getversion) | Returns the version of the License module. |
 
 ## getVersion
 
