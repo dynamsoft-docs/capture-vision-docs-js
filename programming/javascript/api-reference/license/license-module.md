@@ -18,16 +18,9 @@ The License module is defined in the namespace `Dynamsoft.License`. It consists 
 
 This class defines common functionality in the License module. At present, it has only one method.
 
-| API Name              | Description                                |
-| --------------------- | ------------------------------------------ |
-| `static` `getVersion()` | Returns the version of the License module. |
-
-**Code snippet**
-
-```javascript
-const version = Dynamsoft.License.LicenseModule.getVersion();
-console.log(version);
-```
+| API Name                                                      | Description                                |
+| ------------------------------------------------------------- | ------------------------------------------ |
+| `static` [getVersion()](./license-module-class.md#getversion) | Returns the version of the License module. |
 
 ## LicenseManager Class
 

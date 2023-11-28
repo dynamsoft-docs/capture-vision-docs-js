@@ -18,23 +18,16 @@ The Utility module is defined in the namespace `Dynamsoft.Utility`. At present, 
 
 This class defines common functionality in the Utility module. At present, it has only one method.
 
-| API Name              | Description                                  |
-| --------------------- | -------------------------------------------- |
-| `static` `getVersion()` | Returns the version of the Utility module. |
-
-**Code snippet**
-
-```javascript
-const version = Dynamsoft.Utility.UtilityModule.getVersion();
-console.log(version);
-```
+| API Name                                                      | Description                                |
+| ------------------------------------------------------------- | ------------------------------------------ |
+| `static` [getVersion()](./utility-module-class.md#getversion) | Returns the version of the Utility module. |
 
 ## ImageManager Class
 
 The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
-| API Name                                      | Description                          |
-| --------------------------------------------- | ------------------------------------ |
+| API Name                                    | Description                          |
+| ------------------------------------------- | ------------------------------------ |
 | [saveToFile](./image-manager.md#savetofile) | Saved the specified image as a file. |
 
 ## MultiFrameResultCrossFilter Class

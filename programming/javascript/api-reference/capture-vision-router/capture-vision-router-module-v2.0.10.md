@@ -18,31 +18,10 @@ The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It c
 
 This class defines common functionality in the `CaptureVisionRouter` module.
 
-| API Name                                           | Description                                                         |
-| -------------------------------------------------- | ------------------------------------------------------------------- |
-| `static` [getVersion()](#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
-| `static` [engineResourcePath](#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
-
-### getVersion
-
-Returns the version of the `CaptureVisionRouter` module.
-
-**Code snippet**
-
-```javascript
-const version = Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
-console.log(version);
-```
-
-### engineResourcePath
-
-Sets or returns the path to find the resources files (.wasm, etc.).
-
-**Code snippet**
-
-```javascript
-Dynamsoft.CVR.CaptureVisionRouterModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/";
-```
+| API Name                                                                                          | Description                                                         |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `static` [getVersion()](./capture-vision-router-module-class-v2.0.10.md#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
+| `static` [engineResourcePath](./capture-vision-router-module-class-v2.0.10.md#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
 
 ## CaptureVisionRouter Class
 
@@ -77,14 +56,14 @@ The APIs for this class include:
 
 ### Single-File Processing
 
-| API Name                                         | Description                                                 |
-| ------------------------------------------------ | ----------------------------------------------------------- |
+| API Name                                          | Description                                                 |
+| ------------------------------------------------- | ----------------------------------------------------------- |
 | [capture()](./single-image-processing.md#capture) | Processes an image or file to derive important information. |
 
 ### Multiple-File Processing
 
-| API Name                                                                                         | Description                                                           |
-| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| API Name                                                                                          | Description                                                           |
+| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | [setInput()](./multiple-image-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.       |
 | [getInput()](./multiple-image-processing.md#getinput)                                             | Returns the image source object.                                      |
 | [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.     |
@@ -106,13 +85,6 @@ The APIs for this class include:
 | [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
 | [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
-<!--
-### Intermediate Result
-
-| API Name                                                                                | Description                                    |
-| --------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| [getIntermediateResultManager()](./intermediate-result.md#getintermediateresultmanager) | Returns an `IntermediateResultManager` object. |
--->
 ### Interfaces
 
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
@@ -122,4 +94,3 @@ The APIs for this class include:
 
 * [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
-<!-- * [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js) -->

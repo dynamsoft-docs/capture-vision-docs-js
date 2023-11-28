@@ -12,14 +12,6 @@ noTitleIndex: true
 
 The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
-## Definition
-
-```typescript
-class ImageManager {
-    saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<File>
-};
-```
-
 | API Name                    | Description                          |
 | --------------------------- | ------------------------------------ |
 | [saveToFile()](#savetofile) | Saved the specified image as a file. |

@@ -12,21 +12,8 @@ noTitleIndex: true
 
 The `MultiFrameResultCrossFilter` class provides APIs for filtering out results that meet specific requirements.
 
-## Definition
-
-```typescript
-class MultiFrameResultCrossFilter {
-    enableResultCrossVerification(resultItemTypes: number, enabled: boolean): void;
-    isResultCrossVerificationEnabled(type: Core.EnumCapturedResultItemType): boolean;
-    enableResultDeduplication(resultItemTypes: number, enabled: boolean): void;
-    isResultDeduplicationEnabled(type: Core.EnumCapturedResultItemType): boolean;
-    setDuplicateForgetTime(resultItemTypes: number, time: number): Promise<void>;
-    getDuplicateForgetTime(type: Core.EnumCapturedResultItemType): Promise<number>;
-}
-```
-
-| API Name                                                                  | Description                                                                                                                                             |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| API Name                                                                | Description                                                                                                                                             |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [enableResultCrossVerification()](#enableresultcrossverification)       | Enables result verification feature to improve the accuracy of video streaming recognition results.                                                     |
 | [isResultCrossVerificationEnabled()](#isresultcrossverificationenabled) | Determines whether the result verification feature is enabled for the specific captured result item type.                                               |
 | [enableResultDeduplication()](#enableresultdeduplication)               | Enables duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.              |
