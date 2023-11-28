@@ -34,4 +34,11 @@ The `ImageManager` class provides APIs for managing images. At present, it has o
 
 The `MultiFrameResultCrossFilter` class provides APIs to configure the filtering of results from multiple images which have been processed consecutively. Usually these images are frames from a streaming video.
 
-* [MultiFrameResultCrossFilter](./multi-frame-result-cross-filter.md)
+| API Name                                                                                                    | Description                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [enableResultCrossVerification()](./multi-frame-result-cross-filter.md#enableresultcrossverification)       | Enables result verification feature to improve the accuracy of video streaming recognition results.                                                     |
+| [isResultCrossVerificationEnabled()](./multi-frame-result-cross-filter.md#isresultcrossverificationenabled) | Determines whether the result verification feature is enabled for the specific captured result item type.                                               |
+| [enableResultDeduplication()](./multi-frame-result-cross-filter.md#enableresultdeduplication)               | Enables duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.              |
+| [isResultDeduplicationEnabled()](./multi-frame-result-cross-filter.md#isresultdeduplicationenabled)         | Determines whether the duplicate filter feature is enabled for the specific result item type.                                                           |
+| [setDuplicateForgetTime()](./multi-frame-result-cross-filter.md#setduplicateforgettime)                     | Sets the duplicate forget time for the specific captured result item types. The same captured result item will be returned only once during the period. |
+| [getDuplicateForgetTime()](./multi-frame-result-cross-filter.md#getduplicateforgettime)                     | Gets the duplicate forget time for a specific captured result item type.                                                                                |

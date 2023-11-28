@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # MultiFrameResultCrossFilter
 
-The `MultiFrameResultCrossFilter` class provides APIs for filtering out results that meet specific requirements.
+The `MultiFrameResultCrossFilter` class provides APIs to configure the filtering of results from multiple images which have been processed consecutively. Usually these images are frames from a streaming video.
 
 | API Name                                                                | Description                                                                                                                                             |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
