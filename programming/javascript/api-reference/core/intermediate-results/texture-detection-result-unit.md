@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface TextureDetectionResultUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface TextureDetectionResultUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface TextureDetectionResultUnit in Dynamsoft Core Module.
 keywords: texture detection result, JS
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface ContoursUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface ContoursUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface ContoursUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true

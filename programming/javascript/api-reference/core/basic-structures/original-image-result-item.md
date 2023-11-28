@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface OriginalImageResultItem - Dynamsoft Capture Vision JS Edition API Reference
+title: Interface OriginalImageResultItem - Dynamsoft Capture Vision JS Edition API Reference
 description: This page shows the JS edition of the interface OriginalImageResultItem in Dynamsoft Capture Vision Router Module.
 keywords: original image, JS
 needAutoGenerateSidebar: true

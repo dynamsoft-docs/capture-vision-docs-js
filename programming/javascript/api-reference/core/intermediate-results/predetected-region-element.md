@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface PredetectedRegionElement - Dynamsoft Core Module JS Edition API Reference
+title: Interface PredetectedRegionElement - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interfaace PredetectedRegionElement in Dynamsoft Core Module.
 keywords: line segments, JS
 needAutoGenerateSidebar: true

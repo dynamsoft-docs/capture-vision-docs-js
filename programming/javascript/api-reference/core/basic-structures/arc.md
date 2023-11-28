@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface Arc - Dynamsoft Core Module JS Edition API Reference
+title: Interface Arc - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Arc in Dynamsoft Core Module.
 keywords: image data, JS
 needAutoGenerateSidebar: true

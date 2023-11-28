@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface LineSegmentsUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface LineSegmentsUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interfaace LineSegmentsUnit in Dynamsoft Core Module.
 keywords: line segments, JS
 needAutoGenerateSidebar: true

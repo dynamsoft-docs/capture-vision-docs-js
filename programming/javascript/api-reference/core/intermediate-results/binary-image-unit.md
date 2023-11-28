@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface BinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface BinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface BinaryImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface TextZonesUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface TextZonesUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface TextZonesUnit in Dynamsoft Core Module.
 keywords: text zones, JS
 needAutoGenerateSidebar: true

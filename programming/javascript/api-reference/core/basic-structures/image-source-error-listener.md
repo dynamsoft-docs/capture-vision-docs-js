@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface ImageSourceErrorListener - Dynamsoft Capture Vision JS Edition API Reference
+title: Interface ImageSourceErrorListener - Dynamsoft Capture Vision JS Edition API Reference
 description: This page shows the JS edition of the interface ImageSourceErrorListener in Core Module.
 keywords: imagesource, error listener, JS
 needAutoGenerateSidebar: true

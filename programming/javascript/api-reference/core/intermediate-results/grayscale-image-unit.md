@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface GrayscaleImageUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface GrayscaleImageUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface GrayscaleImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface Corner - Dynamsoft Core Module JS Edition API Reference
+title: Interface Corner - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the class Corner in Dynamsoft Core Module.
 keywords: corner, JS
 needAutoGenerateSidebar: true

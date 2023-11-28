@@ -1,6 +1,65 @@
 
 # Core Module Changelog
 
+## 3.2.0
+
+* Add the following properties to the interface CapturedResultItem
+    * targetROIDefName
+    * taskName
+* Add the following methods to the interface RegionObjectElement
+    * setLocation() // or just make location writable
+    * clone()
+* Add the following methods to the interface IntermediateResultUnit 
+    * replace()
+* Add setImageData() to the following interfaces // or just make imageData writable
+    * ColourImageUnit
+    * ScaledDownColourImageUnit
+    * GrayscaleImageUnit
+    * TransformedGrayscaleImageUnit
+    * EnhancedGrayscaleImageUnit
+    * BinaryImageUnit
+    * TextRemovedBinaryImageUnit
+    * TextureRemovedGrayscaleImageUnit
+    * TextureRemovedBinaryImageUnit
+ * Add the following methods to the interface PredetectedRegionsUnit
+    * removeAllPredetectedRegions
+    * removePredetectedRegion
+    * addPredetectedRegion
+    * setPredetectedRegion
+ * Add the following methods to the interface TextureDetectionResultUnit
+    * setXSpacing() // or just make it writable
+    * setYSpacing() // or just make it writable
+ * Add the following methods to the interface ContoursUnit
+    * setContours() // or just make contours writable.
+ * Add the following methods to the interface LineSegmentsUnit
+    * removeAllLineSegments() // or just make lineSegments writable.
+    * removeLineSegment()
+    * addLineSegment()
+    * setLineSegment()
+ * Add the following methods to the interface TextZonesUnit
+    * getTextZone()
+    * removeAllTextZones()
+    * removeTextZone()
+    * addTextZone()
+    * setTextZone
+ * Add the following methods to the interface ObservationParameters
+    * setResultUnitTypesOnlyForInput()
+    * getResultUnitTypesOnlyForInput()
+    * isResultUnitTypeOnlyForInput()
+* Add the interface ShortLinesUnit
+* Add the interface TextZone
+* Add the following to EnumIntermediateResultUnitType
+    * IRUT_SHORT_LINES = 1 << 27,
+    * IRUT_ALL = 0xFFFFFFF
+* Add the following Error Codes to EnumErrorCode
+    * EC_IMAGE_SIZE_NOT_MATCH = -10070,
+    * EC_IMAGE_PIXEL_FORMAT_NOT_MATCH = -10071,
+    * EC_SECTION_LEVEL_RESULT_IRREPLACEABLE = -10072,
+* Add the following callback functions to the interface IntermediateResultReceiver
+    * OnShortLinesUnitReceived
+* Add the following to EnumImagePixelFormat
+    * IPF_BINARY_8_INVERTED
+
 ## 3.0.20
 
 * Added the following static methods and properties

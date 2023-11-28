@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface Warning - Dynamsoft Core Module JS Edition API Reference
+title: Interface Warning - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Warning in Dynamsoft Core Module.
 keywords: Warning, api reference, javascript, js
 breadcrumbText: Warning

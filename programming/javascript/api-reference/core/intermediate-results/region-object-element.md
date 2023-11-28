@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface RegionObjectElement - Dynamsoft Core Module JS Edition API Reference
+title: Interface RegionObjectElement - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface RegionObjectElement in Dynamsoft Core Module.
 keywords: region object element, JS
 needAutoGenerateSidebar: true

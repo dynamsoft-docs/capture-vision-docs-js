@@ -5,7 +5,7 @@
 
 * Add instance method pauseCapturing().
 * Add instance method resumeCapturing().
-* Added the property documentSettings in SimplifiedCaptureVisionSettings which defines SimplifiedDocumentNormalizerSettings.
+* Added the property documentSettings of type SimplifiedDocumentNormalizerSettings in SimplifiedCaptureVisionSettings.
 * Add two more callback functions in IntermediateResultReceiver
     * OnShortLinesUnitReceived
     * OnUnitResultReceived

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface MultiFrameResultCrossFilter - Dynamsoft Utility Module JS Edition API Reference
+title: Interface MultiFrameResultCrossFilter - Dynamsoft Utility Module JS Edition API Reference
 description: This page shows the JS edition of the class MultiFrameResultCrossFilter in Dynamsoft Utility Module.
 keywords: image manager, JS
 needAutoGenerateSidebar: true

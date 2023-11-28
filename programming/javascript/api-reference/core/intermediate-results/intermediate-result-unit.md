@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface IntermediateResultUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface IntermediateResultUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface IntermediateResultUnit in Dynamsoft Core Module.
 keywords: intermediate result, JS
 needAutoGenerateSidebar: true

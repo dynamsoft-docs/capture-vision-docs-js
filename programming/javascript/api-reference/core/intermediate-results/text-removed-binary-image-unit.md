@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface TextRemovedBinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface TextRemovedBinaryImageUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface TextRemovedBinaryImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true

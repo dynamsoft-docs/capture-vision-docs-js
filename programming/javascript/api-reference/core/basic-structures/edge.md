@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface Edge - Dynamsoft Core Module JS Edition API Reference
+title: Interface Edge - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Edge in Dynamsoft Core Module.
 keywords: edge, JS
 needAutoGenerateSidebar: true

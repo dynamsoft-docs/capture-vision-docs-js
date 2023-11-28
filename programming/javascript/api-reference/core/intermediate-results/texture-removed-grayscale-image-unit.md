@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface TextureRemovedGrayscaleImageUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface TextureRemovedGrayscaleImageUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface TextureRemovedGrayscaleImageUnit in Dynamsoft Core Module.
 keywords: binary image, JS
 needAutoGenerateSidebar: true

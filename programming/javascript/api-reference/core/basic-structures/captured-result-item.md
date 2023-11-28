@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface CapturedResultItem - Dynamsoft Core Module JS Edition API Reference
+title: Interface CapturedResultItem - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface CapturedResultItem in Dynamsoft Core Module.
 keywords: captured result item, JS
 needAutoGenerateSidebar: true
@@ -17,16 +17,14 @@ The `CapturedResultItem` interface provides a common structure for representing 
 ```typescript
 interface CapturedResultItem {
     readonly type: EnumCapturedResultItemType;
-    readonly referenceItem: CapturedResultItem;
+    readonly referencedItem: CapturedResultItem;
 }
 ```
 
-
-
-| Properties                         | Type                          |
-| ---------------------------------- | ----------------------------- |
-| [type](#type)                    | *EnumCapturedResultItemType*  |
-| [referenceItem](#referenceitem)  | *CapturedResultItem*          |
+| Properties                      | Type                         |
+| ------------------------------- | ---------------------------- |
+| [type](#type)                   | *EnumCapturedResultItemType* |
+| [referencedItem](#referenceditem) | *CapturedResultItem*         |
 
 ### type
 
@@ -36,10 +34,10 @@ A property of type `EnumCapturedResultItemType` that specifies the type of the c
 readonly type: EnumCapturedResultItemType;
 ```
 
-### referenceItem
+### referencedItem
 
 A property of type `CapturedResultItem` that represents a reference to another captured result item.
 
 ```typescript
-readonly referenceItem: CapturedResultItem;
+readonly referencedItem: CapturedResultItem;
 ```

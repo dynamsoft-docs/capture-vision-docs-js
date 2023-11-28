@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: interface ImageTag - Dynamsoft Core Module JS Edition API Reference
+title: Interface ImageTag - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface ImageTag in Dynamsoft Core Module.
 keywords: image tag, JS
 needAutoGenerateSidebar: true
