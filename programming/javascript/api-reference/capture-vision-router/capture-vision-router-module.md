@@ -82,10 +82,10 @@ The `IntermediateResultManager` class enables the user to communicate with the `
 
 The APIs for this class are:
 
-| API Name                                                                                 | Description                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- |
-| [addResultReceiver](./interfaces/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.    |
-| [removeResultReceiver](./interfaces/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver. |
+| API Name                                                                      | Description                              |
+| ----------------------------------------------------------------------------- | ---------------------------------------- |
+| [addResultReceiver](./intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.    |
+| [removeResultReceiver](./intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver. |
 
 ## Interfaces
 
