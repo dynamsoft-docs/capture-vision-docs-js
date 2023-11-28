@@ -17,22 +17,22 @@ noTitleIndex: true
 
 ```typescript
 abstract class ImageSourceAdapter {
-    addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
+    addImageToBuffer(image: Core.DSImageData): void;
     abstract hasNextImageToFetch(): boolean;
     startFetching(): void;
     stopFetching(): void;
-    getImage(): Promise<Core.BasicStructures.DSImageData>;
+    getImage(): Promise<Core.DSImageData>;
     setMaxImageCount(count: number): void;
     getMaxImageCount(): number;
-    setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowProtectionMode): void;
-    getBufferOverflowProtectionMode(): Core.BasicStructures.EnumBufferOverflowProtectionMode;
+    setBufferOverflowProtectionMode(mode: Core.EnumBufferOverflowProtectionMode): void;
+    getBufferOverflowProtectionMode(): Core.EnumBufferOverflowProtectionMode;
     hasImage(imageId: number): boolean;
     setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
     getImageCount(): number;
     isBufferEmpty(): boolean;
     clearBuffer(): void;
-    setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
-    getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
+    setColourChannelUsageType(type: Core.EnumColourChannelUsageType): void;
+    getColourChannelUsageType(): Core.EnumColourChannelUsageType;
 }
 ```
 
@@ -61,7 +61,7 @@ abstract class ImageSourceAdapter {
 Adds an image to the buffer of the adapter.
 
 ```typescript
-addImageToBuffer(image: Core.BasicStructures.DSImageData): void;
+addImageToBuffer(image: Core.DSImageData): void;
 ```
 
 **Parameters**
@@ -101,7 +101,7 @@ stopFetching(): void;
 Retrieves a buffered image as a promise.
 
 ```typescript
-getImage(): Promise<Core.BasicStructures.DSImageData>;
+getImage(): Promise<Core.DSImageData>;
 ```
 
 **Return value**
@@ -137,7 +137,7 @@ Returns the maximum number of images that can be buffered.
 Sets a mode that determines the action to take when there is a new incoming image and the buffer is full.
 
 ```typescript
-setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowProtectionMode): void;
+setBufferOverflowProtectionMode(mode: Core.EnumBufferOverflowProtectionMode): void;
 ```
 
 **Parameters**
@@ -149,7 +149,7 @@ setBufferOverflowProtectionMode(mode: Core.BasicStructures.EnumBufferOverflowPro
 Returns the current buffer overflow protection mode.
 
 ```typescript
-getBufferOverflowProtectionMode(): Core.BasicStructures.EnumBufferOverflowProtectionMode;
+getBufferOverflowProtectionMode(): Core.EnumBufferOverflowProtectionMode;
 ```
 
 **Return value**
@@ -224,7 +224,7 @@ clearBuffer(): void;
 Sets the usage type of a color channel in images.
 
 ```typescript
-setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType): void;
+setColourChannelUsageType(type: Core.EnumColourChannelUsageType): void;
 ```
 
 ### getColourChannelUsageType
@@ -232,7 +232,7 @@ setColourChannelUsageType(type: Core.BasicStructures.EnumColourChannelUsageType)
 Gets the usage type of a color channel in images.
 
 ```typescript
-getColourChannelUsageType(): Core.BasicStructures.EnumColourChannelUsageType;
+getColourChannelUsageType(): Core.EnumColourChannelUsageType;
 ```
 
 **Return value**

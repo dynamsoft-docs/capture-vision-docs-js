@@ -31,7 +31,7 @@ Sets the input image source for consecutive process.
 **Syntax**
 
 ```typescript
-setInput(imageSource: Core.BasicStructures.ImageSourceAdapter): void;
+setInput(imageSource: Core.ImageSourceAdapter): void;
 ```
 
 **parameter**
@@ -58,7 +58,7 @@ Returns the current input image source of the CaptureVisionRouter.
 **Syntax**
 
 ```typescript
-getInput(): Core.BasicStructures.ImageSourceAdapter;
+getInput(): Core.ImageSourceAdapter;
 ```
 
 **parameter**
@@ -203,7 +203,7 @@ Adds an object as the receiver of captured results.
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
+addResultReceiver(receiver: Core.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -232,7 +232,7 @@ Removes an object which was added as a receiver of captured results.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
+removeResultReceiver(receiver: Core.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -260,7 +260,7 @@ cvr.removeResultReceiver(resultReceiver);
 **Syntax**
 
 ```typescript
-addResultFilter(filter: Core.BasicStructures.CapturedResultFilter): Promise<void>;
+addResultFilter(filter: Core.CapturedResultFilter): Promise<void>;
 ```
 
 **parameter**
@@ -290,7 +290,7 @@ cvr.addResultReceiver(filter);
 **Syntax**
 
 ```typescript
-removeResultFilter(filter: Core.BasicStructures.CapturedResultFilter): void;
+removeResultFilter(filter: Core.CapturedResultFilter): void;
 ```
 
 **parameter**

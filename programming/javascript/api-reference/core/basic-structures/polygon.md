@@ -16,18 +16,18 @@ The `Polygon` interface defines a shape that represents a polygon in 2-dimension
 
 ```typescript
 interface Polygon {
-    points: Array<Core.BasicStructures.Point>;
+    points: Array<Core.Point>;
 }
 ```
 
 | Properties | Type |
 |---------- | ---- |
-| [points](#points) | *Array\<Core.BasicStructures.Point>* |
+| [points](#points) | *Array\<Core.Point>* |
 
 ### points
 
 An array that stores many points.
 
 ```typescript
-points: Array<Core.BasicStructures.Point>;
+points: Array<Core.Point>;
 ```

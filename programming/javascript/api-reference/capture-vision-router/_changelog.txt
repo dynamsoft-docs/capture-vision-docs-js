@@ -5,6 +5,10 @@
 
 * Add instance method pauseCapturing().
 * Add instance method resumeCapturing().
+* Added the property documentSettings in SimplifiedCaptureVisionSettings which defines SimplifiedDocumentNormalizerSettings.
+* Add two more callback functions in IntermediateResultReceiver
+    * OnShortLinesUnitReceived
+    * OnUnitResultReceived
 
 ## 2.0.20
 
@@ -14,10 +18,33 @@
 * Removed the static method preLoadModule(). The substitute is CoreModule.loadWasm().
 * Removed the static method isModuleLoaded(). No substitute.
 * Implemented the instance method getIntermediateResultManager().
+* Implemented the class IntermediateResultManager. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
+* Implemented the interface CapturedResultReceiver. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
+* Implemented the interface CapturedResultFilter. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
+* Implemented the interface IntermediateResultReceiver. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
+* Implemented the following preset templates
+    * Default
+    * ReadBarcodes_Default
+    * ReadSingleBarcode
+    * ReadBarcodes_SpeedFirst
+    * ReadBarcodes_ReadRateFirst
+    * ReadBarcodes_Balance
+    * ReadDenseBarcodes
+    * ReadDistantBarcodes
+    * DetectDocumentBoundaries_Default
+    * DetectAndNormalizeDocument_Default
+    * NormalizeDocument_Default
+    * RecognizeTextLines_Default
+    * RecognizeNumbers
+    * RecognizeLetters
+    * RecognizeNumbersAndLetters
+    * RecognizeNumbersAndUppercaseLetters
+    * RecognizeUppercaseLetters
+* Added the property minImageCaptureInterval in SimplifiedCaptureVisionSettings
 
 ## 2.0.10
 
-* First implementation of the CaptureVisionRouter Module in JavaScript -- Based on CaptureVisionRouter Module C++ 2.0.10
+* First implementation of the CaptureVisionRouter module in JavaScript -- Based on CaptureVisionRouter module C++ 2.0.10
 * Implemented the following static methods and properties
 	* CaptureVisionRouterModule.getVersion()
 	* CaptureVisionRouterModule.engineResourcePath
@@ -48,7 +75,6 @@
 * Defined the following enums
 	* EnumImageSourceState
 	* EnumPresetTemplate
-	* EnumCaptureState
 
 * Defined the following interfaces
 	* ImageSourceStateListener

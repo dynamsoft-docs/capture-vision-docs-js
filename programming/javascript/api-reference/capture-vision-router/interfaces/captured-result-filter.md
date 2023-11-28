@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: interface CapturedResultFilter - Dynamsoft Capture Vision JS Edition API Reference
-description: This page shows the JS edition of the interface CapturedResultFilter in CaptureVisionRouter Module.
+title: Interface CapturedResultFilter - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page introduces the CapturedResultFilter interface in Dynamsoft CaptureVisionRouter Module JS Edition.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -17,7 +17,7 @@ The `CapturedResultFilter` interface defines the standard way to get processing 
 
 ```typescript
 interface CapturedResultFilter {
-    onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
+    onOriginalImageResultReceived(result: Core.OriginalImageResultItem): void;
     onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
     onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
     onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
@@ -40,7 +40,7 @@ interface CapturedResultFilter {
 Callback function for original image results. It will be called once for each original image result.
 
 ```typescript
-onOriginalImageResultReceived(result: Core.BasicStructures.OriginalImageResultItem): void;
+onOriginalImageResultReceived(result: Core.OriginalImageResultItem): void;
 ```
 
 **Parameters**

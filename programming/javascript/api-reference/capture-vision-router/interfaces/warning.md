@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface Warning - Dynamsoft Capture Vision JavaScript Edition API
-description: This page shows the Warning Interface of Dynamsoft Capture Vision JavaScript SDK.
+title: Interface Warning - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page introduces the Warning interface in Dynamsoft CaptureVisionRouter Module JS Edition.
 keywords: Warning, CaptureVision, api reference, javascript, js
 needAutoGenerateSidebar: false
 noTitleIndex: true

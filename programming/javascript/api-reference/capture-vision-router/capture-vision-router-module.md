@@ -9,7 +9,7 @@ noTitleIndex: true
 breadcrumbText: CaptureVisionRouter Module
 permalink: /programming/javascript/api-reference/capture-vision-router/capture-vision-router-module.html
 ---
-<!-- 2.0.20 -- Updated on 11/24/2023-->
+<!-- 2.0.20 -- Updated on 11/28/2023-->
 
 # CaptureVisionRouter Module
 
@@ -98,6 +98,8 @@ The APIs for this class are:
 | [addResultReceiver](./interfaces/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.    |
 | [removeResultReceiver](./interfaces/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver. |
 
+## Interfaces
+
 Those interfaces provide functions for final results filtering，receiving，and intermediate results receiving:
 
 * [CapturedResultFilter](./interfaces/captured-result-filter.md)
@@ -108,9 +110,12 @@ Those interfaces provide functions for final results filtering，receiving，and
 
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)
+<!-- not required at the moment, meant for panorama
+  * [CaptureStateListener] -->
 
 ### Enums
 
 * [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
-* [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js)
+<!-- not required at the moment, meant for panorama
+  * [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js) -->

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface SimplifiedCaptureVisionSettings - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces interface related to the SimplifiedCaptureVisionSettings of Dynamsoft Capture Vision JavaScript Edition.
+title: Interface SimplifiedCaptureVisionSettings - Dynamsoft CaptureVisionRouter Module JS Edition API Reference v2.0.20
+description: This page introduces the SimplifiedCaptureVisionSettings interface in Dynamsoft CaptureVisionRouter Module JS Edition v2.0.20.
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -16,8 +16,8 @@ The `SimplifiedCaptureVisionSettings` interface represents a simplified configur
 
 ```typescript
 interface SimplifiedCaptureVisionSettings {
-    capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType;
-    roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
+    capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
+    roi: Dynamsoft.Core.Quadrilateral;
     roiMeasuredInPercentage: boolean;
     timeout: number;
     barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
@@ -28,8 +28,8 @@ interface SimplifiedCaptureVisionSettings {
 
 | Properties                                          | Type                                                        |
 | --------------------------------------------------- | ----------------------------------------------------------- |
-| [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType* |
-| [roi](#roi)                                         | *Dynamsoft.Core.BasicStructures.Quadrilateral*              |
+| [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.EnumCapturedResultItemType* |
+| [roi](#roi)                                         | *Dynamsoft.Core.Quadrilateral*              |
 | [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                                   |
 | [timeout](#timeout)                                 | *number*                                                    |
 | [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*             |
@@ -41,7 +41,7 @@ interface SimplifiedCaptureVisionSettings {
 Specifies the types of captured items to be processed. It uses the EnumCapturedResultItemType enumeration from the Core.BasicStructures namespace.
 
 ```typescript
-capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemType;
+capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
 ```
 
 **See Also**
@@ -53,7 +53,7 @@ capturedResultItemTypes: Dynamsoft.Core.BasicStructures.EnumCapturedResultItemTy
  Represents the region of interest (ROI) as a quadrilateral. It defines the coordinates of the ROI.
 
 ```typescript
-roi: Dynamsoft.Core.BasicStructures.Quadrilateral;
+roi: Dynamsoft.Core.Quadrilateral;
 ```
 
 **See Also**

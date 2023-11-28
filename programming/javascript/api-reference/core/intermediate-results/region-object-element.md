@@ -16,7 +16,7 @@ The `RegionObjectElement` interface represents an element of a region object in 
 
 ```typescript
 interface RegionObjectElement {
-    location: Core.BasicStructures.Quadrilateral;
+    location: Core.Quadrilateral;
     referencedElement: RegionObjectElement;
     type: EnumRegionObjectElementType;
 }
@@ -24,7 +24,7 @@ interface RegionObjectElement {
 
 | Properties               | Type |
 |----------------------|-------------|
-| [location](#location) | *Core.BasicStructures.Quadrilateral* |
+| [location](#location) | *Core.Quadrilateral* |
 | [referencedElement](#referencedelement) | *RegionObjectElement* |
 | [type](#type) | *EnumRegionObjectElementType* |
 
@@ -33,7 +33,7 @@ interface RegionObjectElement {
 The location of the region object element.
 
 ```typescript
-location: Core.BasicStructures.Quadrilateral;
+location: Core.Quadrilateral;
 ```
 
 ### referencedElement

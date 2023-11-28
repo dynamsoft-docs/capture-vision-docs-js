@@ -46,7 +46,7 @@ Dynamsoft.CVR.CaptureVisionRouterModule.engineResourcePath = "https://cdn.jsdeli
 
 ## CaptureVisionRouter Class
 
-The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.architecture}}output.html#final-results?lang=js) or [Intermediate Results]({{site.architecture}}output.html#intermediate-results?lang=js). The following code snippet shows its basic usage:
+The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results of many types. Read [Final results]({{site.architecture}}output.html#final-results?lang=js) for more information. The following code snippet shows its basic usage:
 
 ```typescript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
@@ -122,4 +122,4 @@ The APIs for this class include:
 
 * [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
-* [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js)
+<!-- * [EnumCaptureState]({{ site.enums }}capture-vision-router/capture-state.html?lang=js) -->

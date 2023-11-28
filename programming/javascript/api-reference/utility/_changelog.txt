@@ -3,7 +3,7 @@
 
 ## 1.0.20
 
-* Updated MultiFrameResultCrossFilter to support filtering Barcode results??
+* Updated MultiFrameResultCrossFilter to support filtering the results of the types CRIT_BARCODE and CRIT_TEXT_LINE.
     
 ## 1.0.10
 
@@ -21,3 +21,4 @@
     * isResultDeduplicationEnabled
     * setDuplicateForgetTime
     * getDuplicateForgetTime
+    > In this version, it only supports filtering results of the type CRIT_DETECTED_QUAD.

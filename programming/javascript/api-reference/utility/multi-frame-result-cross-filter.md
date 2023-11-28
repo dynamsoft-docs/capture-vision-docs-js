@@ -17,11 +17,11 @@ The `MultiFrameResultCrossFilter` class provides APIs for filtering out results 
 ```typescript
 class MultiFrameResultCrossFilter {
     enableResultCrossVerification(resultItemTypes: number, enabled: boolean): void;
-    isResultCrossVerificationEnabled(type: Core.BasicStructures.EnumCapturedResultItemType): boolean;
+    isResultCrossVerificationEnabled(type: Core.EnumCapturedResultItemType): boolean;
     enableResultDeduplication(resultItemTypes: number, enabled: boolean): void;
-    isResultDeduplicationEnabled(type: Core.BasicStructures.EnumCapturedResultItemType): boolean;
+    isResultDeduplicationEnabled(type: Core.EnumCapturedResultItemType): boolean;
     setDuplicateForgetTime(resultItemTypes: number, time: number): Promise<void>;
-    getDuplicateForgetTime(type: Core.BasicStructures.EnumCapturedResultItemType): Promise<number>;
+    getDuplicateForgetTime(type: Core.EnumCapturedResultItemType): Promise<number>;
 }
 ```
 
@@ -58,7 +58,7 @@ None.
 A method that checks whether result verification is enabled for a specific result item type.
 
 ```typescript
-isResultCrossVerificationEnabled(type: Core.BasicStructures.EnumCapturedResultItemType): boolean;
+isResultCrossVerificationEnabled(type: Core.EnumCapturedResultItemType): boolean;
 ```
 
 **Parameters**
@@ -92,7 +92,7 @@ None.
 A method that checks whether duplicate filtering is enabled for a specific result item type.
 
 ```typescript
-isResultDeduplicationEnabled(type: Core.BasicStructures.EnumCapturedResultItemType): boolean;
+isResultDeduplicationEnabled(type: Core.EnumCapturedResultItemType): boolean;
 ```
 
 **Parameters**
@@ -126,7 +126,7 @@ Returns a Promise that resolves when this operation are complete.
 A method that retrieves the time duration after which duplicate results are forgotten for a specific result item type.
 
 ```typescript
-getDuplicateForgetTime(type: Core.BasicStructures.EnumCapturedResultItemType): Promise<number>;
+getDuplicateForgetTime(type: Core.EnumCapturedResultItemType): Promise<number>;
 ```
 
 **Parameters**

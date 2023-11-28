@@ -22,7 +22,7 @@ Process an image or file to derive important information.
 **Syntax**
 
 ```typescript
-capture(imageOrFile: Core.BasicStructures.DSImageData | string | Blob | HTMLImageElement | HTMLCanvasElement, templateName?: string): Promise<Array<Core.BasicStructures.CapturedResult>>;
+capture(imageOrFile: Core.DSImageData | string | Blob | HTMLImageElement | HTMLCanvasElement, templateName?: string): Promise<Array<Core.CapturedResult>>;
 ```
 
 **Parameters**

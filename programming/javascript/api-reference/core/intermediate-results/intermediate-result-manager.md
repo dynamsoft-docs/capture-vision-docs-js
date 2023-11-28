@@ -10,21 +10,13 @@ noTitleIndex: true
 
 # IntermediateResultManager
 
-The `IntermediateResultManager` interface manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
-## Definition
-
-```typescript
-interface IntermediateResultManager {
-    addResultReceiver(receiver: IntermediateResultReceiver): void;
-    removeResultReceiver(receiver: IntermediateResultReceiver): void;
-}
-```
-
-| API Name | Description |
-|--------|-------------|
-| [addResultReceiver](#addresultreceiver) | Adds an intermediate result receiver.|
-| [removeResultReceiver](#removeresultreceiver) | Removes an intermediate result receiver. |
+| API Name                                      | Description                                          |
+| --------------------------------------------- | ---------------------------------------------------- |
+| [addResultReceiver](#addresultreceiver)       | Adds an intermediate result receiver.                |
+| [removeResultReceiver](#removeresultreceiver) | Removes an intermediate result receiver.             |
+| [getOriginalImage](#getoriginalimage)         | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
@@ -50,13 +42,12 @@ removeResultReceiver(receiver: IntermediateResultReceiver): void;
 
 `receiver`: The intermediate result receiver to remove.
 
-<!--
 ### getOriginalImage
 
 Gets the original image data using an image hash id.
 
 ```typescript
-getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>;
+getOriginalImage(imageHashId: string): Promise<Core.DSImageData>;
 ```
 
 **Parameters**
@@ -66,4 +57,3 @@ getOriginalImage(imageHashId: string): Promise<Core.BasicStructures.DSImageData>
 **Return value**
 
 Returns a promise to the DSImageData object containing the original image data.
--->

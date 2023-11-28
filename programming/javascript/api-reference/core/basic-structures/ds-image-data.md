@@ -20,7 +20,7 @@ interface DSImageData {
     width: number;
     height: number;
     stride: number;
-    format: Core.BasicStructures.EnumImagePixelFormat;
+    format: Core.EnumImagePixelFormat;
     orientation?: number;
     tag?: ImageTag;
 } 
@@ -32,7 +32,7 @@ interface DSImageData {
 | [width](#width) | *number* |
 | [height](#height) | *number* |
 | [stride](#stride) | *number* |
-| [format](#format) | *Core.BasicStructures.EnumImagePixelFormat* |
+| [format](#format) | *Core.EnumImagePixelFormat* |
 | [orientation](#orientation) | *number* |
 | [tag](#tag) | *ImageTag* |
 
@@ -73,7 +73,7 @@ stride: number;
 Gets the pixel format of the image.
 
 ```typescript
-format: Core.BasicStructures.EnumImagePixelFormat;
+format: Core.EnumImagePixelFormat;
 ```
 
 ### orientation

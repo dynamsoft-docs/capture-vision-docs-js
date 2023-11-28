@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: interface CaptureResultReceiver - Dynamsoft Capture Vision JS Edition API Reference
-description: This page shows the JS edition of the interface CaptureResultReceiver in CaptureVisionRouter Module.
+title: Interface CaptureResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page introduces the CaptureResultReceiver interface in Dynamsoft CaptureVisionRouter Module JS Edition.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -17,7 +17,7 @@ The `CaptureResultReceiver` interface defines the standard way to get captured r
 
 ```typescript
 interface CapturedResultReceiver {
-    onCapturedResultReceived?(result: Core.BasicStructures.CapturedResult): void;
+    onCapturedResultReceived?(result: Core.CapturedResult): void;
     onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
     onDecodedBarcodesReceived?(result: DBR.DecodedBarcodesResult): void;
     onRecognizedTextLinesReceived?(result: DLR.RecognizedTextLinesResult):void;
@@ -42,7 +42,7 @@ interface CapturedResultReceiver {
 Callback function for all captured results. It will be called once for each captured result.
 
 ```typescript
-onCapturedResultReceived(result: Core.BasicStructures.CapturedResult): void;
+onCapturedResultReceived(result: Core.CapturedResult): void;
 ```
 
 **Parameters**

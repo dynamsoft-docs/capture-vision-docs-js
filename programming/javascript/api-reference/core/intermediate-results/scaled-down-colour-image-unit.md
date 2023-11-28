@@ -16,18 +16,18 @@ The `ScaledDownColourImageUnit` interface represents a colour image unit after s
 
 ```typescript
 interface ScaledDownColourImageUnit extends IntermediateResultUnit {
-    imageData: Core.BasicStructures.DSImageData;
+    imageData: Core.DSImageData;
 } 
 ```
 
 | Properties               | Type |
 |----------------------|-------------|
-| [imageData](#imagedata) | *Core.BasicStructures.DSImageData* |
+| [imageData](#imagedata) | *Core.DSImageData* |
 
 ### imageData
 
 The scaled down colour image data stored in the unit.
 
 ```typescript
-imageData: Core.BasicStructures.DSImageData;
+imageData: Core.DSImageData;
 ```

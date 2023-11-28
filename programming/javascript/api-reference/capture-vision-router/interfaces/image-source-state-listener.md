@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface ImageSourceStateListener - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces interface related to the ImageSourceStateListener of Dynamsoft Capture Vision JavaScript Edition.
+title: Interface ImageSourceStateListener - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page introduces the ImageSourceStateListener interface in Dynamsoft CaptureVisionRouter Module JS Edition.
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -18,7 +18,7 @@ The `IntermediateResultUnit` interface represents an intermediate result unit us
 interface IntermediateResultUnit {
     hashId: string;
     OriginalImageHashId: string;
-    originalImageTag: Core.BasicStructures.ImageTag;
+    originalImageTag: Core.ImageTag;
     unitType: EnumIntermediateResultUnitType;
     getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
 }
@@ -61,7 +61,7 @@ Returns the hash ID of the original image.
 The image tag of the original image.
 
 ```typescript
-originalImageTag: Core.BasicStructures.ImageTag;
+originalImageTag: Core.ImageTag;
 ```
 
 **Return value**

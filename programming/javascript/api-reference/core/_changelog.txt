@@ -12,17 +12,17 @@
     * CoreModule.enableLogging()
     * CoreModule.disableLogging()
 * Added the instance method setErrorListener() to the abstract class ImageSourceAdapter.
-* Removed the class IntermediateResultManager. The substitute is the same class on the CaptureVisionRouter Module.
+* Removed the class IntermediateResultManager. The substitute is the same class on the CaptureVisionRouter module.
 * Added the following interface:
     * ImageSourceErrorListener
-* Removed the interface CapturedResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
-* Removed the interface IntermediateResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
+* Removed the interface CapturedResultReceiver. The substitute is the same interface on the CaptureVisionRouter module.
+* Removed the interface IntermediateResultReceiver. The substitute is the same interface on the CaptureVisionRouter module.
 * Added the following enum
     * EnumTransformMatrixType
-    
+
 ## 3.0.10
 
-* First implementation of the Core Module in JavaScript -- Based on Core Module C++ 3.0.10.
+* First implementation of the Core module in JavaScript -- Based on Core module C++ 3.0.10.
 * Implemented the following static method:
     * CoreModule.getVersion()
 * Implemented the abstract class ImageSourceAdapter with the following instance methods:

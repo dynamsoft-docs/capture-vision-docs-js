@@ -16,18 +16,18 @@ The `LineSegmentsUnit` interface extends the IntermediateResultUnit interface an
 
 ```typescript
 interface LineSegmentsUnit extends IntermediateResultUnit {
-    lineSegments: Array<Core.BasicStructures.LineSegment>;
+    lineSegments: Array<Core.LineSegment>;
 }
 ```
 
 | Properties               | Type |
 |----------------------|-------------|
-| [lineSegments](#linesegments) | *Array\<Core.BasicStructures.LineSegment>* |
+| [lineSegments](#linesegments) | *Array\<Core.LineSegment>* |
 
 ### lineSegments
 
 Gets the specified line segment from the collection.
 
 ```typescript
-lineSegments: Array<Core.BasicStructures.LineSegment>;
+lineSegments: Array<Core.LineSegment>;
 ```

@@ -16,7 +16,7 @@ The `OriginalImageResultItem` interface defines the structure of an standard res
 
 ```typescript
 interface OriginalImageResultItem extends CapturedResultItem {
-    readonly imageData: Core.BasicStructures.DSImageData;
+    readonly imageData: Core.DSImageData;
 }
 ```
 
@@ -27,8 +27,8 @@ interface OriginalImageResultItem extends CapturedResultItem {
 
 ### imageData
 
-`imageData`: A property of type `Core.BasicStructures.DSImageData` that represents the image data of the original image result item.
+`imageData`: A property of type `Core.DSImageData` that represents the image data of the original image result item.
 
 ```typescript
-readonly imageData: Core.BasicStructures.DSImageData;
+readonly imageData: Core.DSImageData;
 ```

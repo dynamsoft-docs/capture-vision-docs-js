@@ -31,12 +31,12 @@ It is used to save an image as a PNG or JPG file. The file format is determined 
 > If the file format is not specified, or if the given format is not supported, then the data will be exported as a PNG.
 
 ```typescript
-saveToFile(image: Core.BasicStructures.DSImageData, name: string, download?: boolean): Promise<File>;
+saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<File>;
 ```
 
 **Parameters**
 
-`image`: An image of type `Core.BasicStructures.DSImageData`.
+`image`: An image of type `Core.DSImageData`.
 
 `name`: A string represents the saved image name.
 

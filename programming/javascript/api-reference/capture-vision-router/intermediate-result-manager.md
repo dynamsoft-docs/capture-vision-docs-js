@@ -1,43 +1,59 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Settings - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to the Intermediate-result of CaptureVisionRouter of Dynamsoft Capture Vision JavaScript Edition.
-keywords: capture vision, router, Intermediate-result, api reference, javascript, js
+title: Class IntermediateResultManager - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page introduces the IntermediateResultManager Class in Dynamsoft CaptureVisionRouter Module JS Edition.
+keywords: IntermediateResultManager, JS
 needAutoGenerateSidebar: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/intermediate-result.html
 ---
 
-# CaptureVisionRouter Intermediate Result
+# IntermediateResultManager
 
-| API Name                                                        | Description                                               |
-| --------------------------------------------------------------- | --------------------------------------------------------- |
-| [getIntermediateResultManager()](#getintermediateresultmanager) | Returns an `CIntermediateResultManager` object.           |
+The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
-## GetIntermediateResultManager
+| API Name                                      | Description                                          |
+| --------------------------------------------- | ---------------------------------------------------- |
+| [addResultReceiver](#addresultreceiver)       | Adds an intermediate result receiver.                |
+| [removeResultReceiver](#removeresultreceiver) | Removes an intermediate result receiver.             |
+| [getOriginalImage](#getoriginalimage)         | Gets the original image data using an image hash id. |
 
-Returns an object that manages the saving and retrieval of intermediate results.
+### addResultReceiver
 
-**Syntax**
+Adds an intermediate result receiver to the manager.
 
 ```typescript
-getIntermediateResultManager(): Core.IntermediateResult.IntermediateResultManager;
+addResultReceiver(receiver: IntermediateResultReceiver): void;
 ```
 
 **Parameters**
 
-None.
+`receiver`: The intermediate result receiver to add.
 
-**Return Value**
+### removeResultReceiver
 
-Returns an IntermediateResultManager object.
+Removes an intermediate result receiver from the manager.
 
-**Code snippet**
-
-```javascript
-let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-const intermediateResultManager = router.getIntermediateResultManager();
-// Use the intermediateResultManager to save and retrieve intermediate results
+```typescript
+removeResultReceiver(receiver: IntermediateResultReceiver): void;
 ```
+
+**Parameters**
+
+`receiver`: The intermediate result receiver to remove.
+
+### getOriginalImage
+
+Gets the original image data using an image hash id.
+
+```typescript
+getOriginalImage(imageHashId: string): Promise<Core.DSImageData>;
+```
+
+**Parameters**
+
+`imageHashId`: The hash id of the image to retrieve.
+
+**Return value**
+
+Returns a promise to the DSImageData object containing the original image data.

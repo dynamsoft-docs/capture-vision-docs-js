@@ -10,14 +10,14 @@ noTitleIndex: true
 
 # VideoFrameTag
 
-The `VideoFrameTag` interface extends the `Core.BasicStructures.ImageTag` interface and adds additional properties specific to video frames.
+The `VideoFrameTag` interface extends the `Core.ImageTag` interface and adds additional properties specific to video frames.
 
 ## Definition
 
 ```typescript
-interface VideoFrameTag extends Core.BasicStructures.ImageTag {
+interface VideoFrameTag extends Core.ImageTag {
     isCropped: boolean;
-    cropRegion: Core.BasicStructures.DSRect;
+    cropRegion: Core.DSRect;
     originalWidth: number; 
     originalHeight: number; 
     currentWidth: number; 
@@ -48,10 +48,10 @@ isCropped: boolean;
 
 ### cropRegion
 
-A Core.BasicStructures.DSRect object representing the crop region of the video frame.
+A Core.DSRect object representing the crop region of the video frame.
 
 ```typescript
-cropRegion: Core.BasicStructures.DSRect;
+cropRegion: Core.DSRect;
 ```
 
 ### originalWidth
