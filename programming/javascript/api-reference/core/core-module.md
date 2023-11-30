@@ -84,7 +84,7 @@ The following are the basic interfaces often shared by more than one module:
 * [Warning](./basic-structures/warning.md)
 <!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 
-### Intermediate Results Related
+### Intermediate Results
 
 * [RegionObjectElement](./intermediate-results/region-object-element.md)
 * [PredetectedRegionElement](./intermediate-results/predetected-region-element.md)
