@@ -12,7 +12,7 @@ parameterReference: /capture-vision/docs/core/parameters/reference/
 enums: /capture-vision/docs/core/enums/
 
 js: /capture-vision/docs/web/programming/javascript/
-js_api: /capture-vision/docs/web/programming/javascript/api-reference/
+dcv_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
 dbr_js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
 dlr_js_api: /label-recognition/docs/web/programming/javascript/api-reference/
 ddn_js_api: /document-normalizer/docs/web/programming/javascript/api-reference/

@@ -58,7 +58,7 @@ roi: Dynamsoft.Core.Quadrilateral;
 
 **See Also**
 
-* [Quadrilateral]({{ site.js_api }}core/basic-structures/quadrilateral.html?lang=js)
+* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html?lang=js)
 
 ### roiMeasuredInPercentage
 
