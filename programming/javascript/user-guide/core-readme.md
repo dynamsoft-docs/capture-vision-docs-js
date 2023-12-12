@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Dynamsoft Core Module
 
-The Dynamsoft Core module builds the foundation upon which Dynamsoft SDKs implements their functionality. It consists of basic classes, interfaces and enumerations shared between all Dynamsoft SDKs.
+The Dynamsoft Core module builds the foundation upon which Dynamsoft SDKs implement their functionality. It consists of basic classes, interfaces and enumerations shared by all Dynamsoft SDKs.
 
 Some of the major classes and interfaces include:
 
