@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CaptureVisionRouter v2.0.10 Single Process - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to "Single Process" with Dynamsoft Capture Vision JavaScript Edition v2.0.10.
+description: This page introduces APIs related to Single Process with Dynamsoft Capture Vision JavaScript Edition v2.0.10.
 keywords: capture vision, caputre, image processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
