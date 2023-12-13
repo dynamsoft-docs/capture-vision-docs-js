@@ -34,7 +34,7 @@ Returns a string representing the UUID of the device.
 
 Initializes the license for the application using a license key. This function is overloaded, providing two different usages based on the provided parameters.
 
-1. Without Immediate Initialization
+### Without Immediate Initialization
 
 This signature of `initLicense` passes the license key to the application for initialization at a later stage. It doesn't provide immediate feedback and is suitable for scenarios where immediate confirmation of license initialization is not required.
 
@@ -56,7 +56,7 @@ static initLicense(license: string): void;
 Dynamsoft.License.LicenseManager.initLicense("your-license-key");
 ```
 
-2. With Immediate Initialization
+### With Immediate Initialization
 
 This signature of `initLicense` initializes the license and provides immediate feedback through a promise. This is useful when the application needs to confirm the outcome of the license initialization or handle any messages related to it.
 
@@ -102,3 +102,7 @@ static setDeviceFriendlyName(name: string): void;
 **Parameters**
 
 `name`: A string representing the device which is easier to recognize than its UUID. 
+
+**Return Value**
+
+`void`
