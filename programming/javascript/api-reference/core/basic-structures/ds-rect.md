@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `DSRect` interface defines the shape of a rectangle in 2D space.
 
-## Definition
-
 ```typescript
 interface DSRect {
     left: number;
@@ -32,7 +30,7 @@ interface DSRect {
 | [bottom](#bottom) | *number* |
 | [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
 
-### left
+## left
 
 The left edge of the rectangle.
 
@@ -40,7 +38,7 @@ The left edge of the rectangle.
 left: number;
 ```
 
-### right
+## right
 
 The right edge of the rectangle.
 
@@ -48,7 +46,7 @@ The right edge of the rectangle.
 right: number;
 ```
 
-### top
+## top
 
 The top edge of the rectangle.
 
@@ -56,7 +54,7 @@ The top edge of the rectangle.
 top: number;
 ```
 
-### bottom
+## bottom
 
 The bottom edge of the rectangle.
 
@@ -64,7 +62,7 @@ The bottom edge of the rectangle.
 bottom: number;
 ```
 
-### isMeasuredInPercentage
+## isMeasuredInPercentage
 
 Whether to use a percentage measurement for this DSRect.
 

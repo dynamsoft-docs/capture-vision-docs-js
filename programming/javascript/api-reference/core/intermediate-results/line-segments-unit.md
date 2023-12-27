@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `LineSegmentsUnit` interface extends the IntermediateResultUnit interface and represents a unit of intermediate result specifically for line segments. It includes additional properties that provide information about the line segments.
 
-## Definition
-
 ```typescript
 interface LineSegmentsUnit extends IntermediateResultUnit {
     lineSegments: Array<Core.LineSegment>;
@@ -24,7 +22,7 @@ interface LineSegmentsUnit extends IntermediateResultUnit {
 |----------------------|-------------|
 | [lineSegments](#linesegments) | *Array\<Core.LineSegment>* |
 
-### lineSegments
+## lineSegments
 
 Gets the specified line segment from the collection.
 

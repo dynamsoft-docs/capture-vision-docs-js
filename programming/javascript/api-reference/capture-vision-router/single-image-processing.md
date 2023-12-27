@@ -22,12 +22,12 @@ Process an image or file to derive important information.
 **Syntax**
 
 ```typescript
-capture(imageOrFile: Core.DSImageData | string | Blob | HTMLImageElement | HTMLCanvasElement, templateName?: string): Promise<Array<Core.CapturedResult>>;
+capture(imageOrFile: Blob | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | Core.DSImageData | string, templateName?: string): Promise<Array<Core.CapturedResult>>;
 ```
 
 **Parameters**
 
-`imageOrFile`: specifies the image or file to be processed. It can be the image itself in the form of `DSImageData`, the path of the image/file or the file itself in the form of `blob`, `HTMLImageElement` or `HTMLCanvasElement`.
+`imageOrFile`: specifies the image or file to be processed. It can accept various types of data representing images: `Blob`,`ArrayBuffer`,`Uint8Array`,`Uint8ClampedArray`,`HTMLImageElement`,`HTMLCanvasElement`,`HTMLVideoElement`,`Core.DSImageData`,`string`.
 
 `templateName`: specifies a [CaptureVisionTemplate]({{site.parameterFile}}capture-vision-template.html) to use. If not specified, the default one is used.
 
@@ -40,7 +40,7 @@ A promise that resolves to an array of `CapturedResult` objects which are the de
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "ReadSingleBarcode");
-let count = results.length;
+let count = results.items.length;
 for(let i = 0; i < count; i++) {
     //...
 }

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `VideoFrameTag` interface extends the `Core.ImageTag` interface and adds additional properties specific to video frames.
 
-## Definition
-
 ```typescript
 interface VideoFrameTag extends Core.ImageTag {
     isCropped: boolean;
@@ -38,7 +36,7 @@ interface VideoFrameTag extends Core.ImageTag {
 | [timeSpent](#timespent) | The time spent on processing the video frame. |
 | [timeStamp](#timestamp) | The time stamp of the video frame.  |
 
-### isCropped
+## isCropped
 
 Determines whether the video frame is cropped.
 
@@ -46,7 +44,7 @@ Determines whether the video frame is cropped.
 isCropped: boolean;
 ```
 
-### cropRegion
+## cropRegion
 
 A Core.DSRect object representing the crop region of the video frame.
 
@@ -54,7 +52,7 @@ A Core.DSRect object representing the crop region of the video frame.
 cropRegion: Core.DSRect;
 ```
 
-### originalWidth
+## originalWidth
 
 Gets the original width of the video frame.
 
@@ -62,7 +60,7 @@ Gets the original width of the video frame.
 originalWidth: number;
 ```
 
-### originalHeight
+## originalHeight
 
 Gets the original height of the video frame.
 
@@ -70,7 +68,7 @@ Gets the original height of the video frame.
 originalHeight: number;
 ```
 
-### currentWidth
+## currentWidth
 
 The current width of the video frame after cropping.
 
@@ -78,7 +76,7 @@ The current width of the video frame after cropping.
 currentWidth: number;
 ```
 
-### currentHeight
+## currentHeight
 
 The current height of the video frame after cropping.
 
@@ -86,7 +84,7 @@ The current height of the video frame after cropping.
 currentHeight: number;
 ```
 
-### timeSpent
+## timeSpent
 
 The time spent on processing the video frame.
 
@@ -94,7 +92,7 @@ The time spent on processing the video frame.
 timeSpent: number;
 ```
 
-### timeStamp
+## timeStamp
 
 The time stamp of the video frame.
 

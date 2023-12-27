@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `OriginalImageResultItem` interface defines the structure of an standard result item that contains the original image.
 
-## Definition
-
 ```typescript
 interface OriginalImageResultItem extends CapturedResultItem {
     readonly imageData: Core.DSImageData;
@@ -25,7 +23,7 @@ interface OriginalImageResultItem extends CapturedResultItem {
 | ------------------------------- | ------------------------------------------------ |
 | [imageData](#imagedata) | Gets the image data for the OriginalImageResultItem. |
 
-### imageData
+## imageData
 
 `imageData`: A property of type `Core.DSImageData` that represents the image data of the original image result item.
 

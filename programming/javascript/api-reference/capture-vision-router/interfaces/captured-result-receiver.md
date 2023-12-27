@@ -1,19 +1,17 @@
 ---
 layout: default-layout
-title: Interface CaptureResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
-description: This page introduces the CaptureResultReceiver interface in Dynamsoft CaptureVisionRouter Module JS Edition.
+title: Interface CapturedResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference v2.0.30
+description: This page introduces the CapturedResultReceiver interface in Dynamsoft CaptureVisionRouter Module JS Edition v2.0.30.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-breadcrumbText: JS CaptureResultReceiver Interface
+breadcrumbText: JS CapturedResultReceiver Interface
 ---
 
-# CaptureResultReceiver
+# CapturedResultReceiver
 
-The `CaptureResultReceiver` interface defines the standard way to get captured results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
-
-## Definition
+The `CapturedResultReceiver` interface defines the standard way to get captured results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
 
 ```typescript
 interface CapturedResultReceiver {
@@ -27,17 +25,17 @@ interface CapturedResultReceiver {
 } 
 ```
 
-| API Name                                                            | Description                                          |
-| ------------------------------------------------------------------- | ---------------------------------------------------- |
-| [OnCapturedResultReceived()](#oncapturedresultreceived)           | Callback function for all captured results.          |
-| [OnOriginalImageResultReceived()](#onoriginalimageresultreceived) | Callback function for original image results.        |
-| [OnDecodedBarcodesReceived()](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
-| [OnRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
-| [OnDetectedQuadsReceived()](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
-| [OnNormalizedImagesReceived()](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
-| [OnParsedResultsReceived()](#onparsedresultsreceived)             | Callback function for parsed results.                |
+| API Name                                                          | Description                                          |
+| ----------------------------------------------------------------- | ---------------------------------------------------- |
+| [onCapturedResultReceived()](#oncapturedresultreceived)           | Callback function for all captured results.          |
+| [onOriginalImageResultReceived()](#onoriginalimageresultreceived) | Callback function for original image results.        |
+| [onDecodedBarcodesReceived()](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
+| [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
+| [onDetectedQuadsReceived()](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
+| [onNormalizedImagesReceived()](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
+| [onParsedResultsReceived()](#onparsedresultsreceived)             | Callback function for parsed results.                |
 
-### OnCapturedResultReceived
+## onCapturedResultReceived
 
 Callback function for all captured results. It will be called once for each captured result.
 
@@ -49,7 +47,7 @@ onCapturedResultReceived(result: Core.CapturedResult): void;
 
 `result`: The captured result.
 
-### OnOriginalImageResultReceived
+## onOriginalImageResultReceived
 
 Callback function for original image results. It will be called once for each original image result.
 
@@ -61,7 +59,7 @@ onOriginalImageResultReceived(result: OriginalImageResultItem): void;
 
 `result`: The original image result.
 
-### OnDecodedBarcodesReceived
+## onDecodedBarcodesReceived
 
 Callback function for decoded barcodes results. It will be called once for each decoded barcodes result.
 
@@ -73,7 +71,7 @@ onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
 
 `result`: The decoded barcodes result.
 
-### OnRecognizedTextLinesReceived
+## onRecognizedTextLinesReceived
 
 Callback function for recognized text lines results. It will be called once for each recognized text lines result.
 
@@ -85,7 +83,7 @@ onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
 
 `result`: The recognized text lines result.
 
-### OnDetectedQuadsReceived
+## onDetectedQuadsReceived
 
 Callback function for detected quads results. It will be called once for each detected quads result.
 
@@ -97,7 +95,7 @@ onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
 
 `result`: The detected quads result.
 
-### OnNormalizedImagesReceived
+## onNormalizedImagesReceived
 
 Callback function for normalized images results. It will be called once for each normalized images result.
 
@@ -109,7 +107,7 @@ onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
 
 `result`: The normalized images result.
 
-### OnParsedResultsReceived
+## onParsedResultsReceived
 
 Callback function for parsed results. It will be called once for each parsed result.
 

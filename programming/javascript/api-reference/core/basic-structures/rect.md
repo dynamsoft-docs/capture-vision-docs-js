@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `Rect` interface defines a shape that represents a rectangle in 2-dimensional space.
 
-## Definition
-
 ```typescript
 interface Rect {
     x: number;
@@ -32,7 +30,7 @@ interface Rect {
 | [height](#height) | *number* |
 | [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
 
-### x
+## x
 
 The x coordinate of the upper left corner point of the rectangle.
 
@@ -40,7 +38,7 @@ The x coordinate of the upper left corner point of the rectangle.
 x: number,
 ```
 
-### y
+## y
 
 The y coordinate of the upper left corner point of the rectangle.
 
@@ -48,7 +46,7 @@ The y coordinate of the upper left corner point of the rectangle.
 y: number,
 ```
 
-### width
+## width
 
 The width of the rectangle.
 
@@ -56,7 +54,7 @@ The width of the rectangle.
 width: number,
 ```
 
-### height
+## height
 
 The height of the rectangle.
 
@@ -64,7 +62,7 @@ The height of the rectangle.
 height: number;
 ```
 
-### isMeasuredInPercentage
+## isMeasuredInPercentage
 
 Whether to use a percentage measurement for this Rect.
 

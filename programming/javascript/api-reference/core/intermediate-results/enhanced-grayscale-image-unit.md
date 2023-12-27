@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `EnhancedGrayscaleImageUnit` interface represents a unit that contains an enhanced grayscale image as part of intermediate results.
 
-## Definition
-
 ```typescript
 interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.DSImageData;
@@ -24,7 +22,7 @@ interface EnhancedGrayscaleImageUnit extends IntermediateResultUnit {
 |----------------------|-------------|
 | [imageData](#imagedata) | *Core.DSImageData* |
 
-### imageData
+## imageData
 
 The data of the enhanced grayscale image stored in the unit.
 

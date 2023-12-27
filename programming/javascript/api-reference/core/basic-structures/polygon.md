@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `Polygon` interface defines a shape that represents a polygon in 2-dimensional space.
 
-## Definition
-
 ```typescript
 interface Polygon {
     points: Array<Core.Point>;
@@ -24,7 +22,7 @@ interface Polygon {
 |---------- | ---- |
 | [points](#points) | *Array\<Core.Point>* |
 
-### points
+## points
 
 An array that stores many points.
 

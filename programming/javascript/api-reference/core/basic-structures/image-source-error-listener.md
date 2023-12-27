@@ -13,15 +13,13 @@ breadcrumbText: JS ImageSourceErrorListener Interface
 
 The `ImageSourceErrorListener` interface defines the standard way to receive notifications should errors occur during image acquisition.
 
-## Definition
-
 ```typescript
 interface ImageSourceErrorListener {
     onErrorReceived(errorCode: number, errorMessage:string):void;
 } 
 ```
 
-### onErrorReceived
+## onErrorReceived
 
 Callback function that is triggered when an error occurs during image acquisition.
 

@@ -17,7 +17,7 @@ The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It c
 
 ## CaptureVisionRouterModule Class
 
-This class defines common functionality in the `CaptureVisionRouter` module. At present, there is only one API.
+This class defines common functionality in the `CaptureVisionRouter` module. At present, there is only one API:
 
 | API Name                                                                    | Description                                            |
 | --------------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -25,7 +25,9 @@ This class defines common functionality in the `CaptureVisionRouter` module. At 
 
 ## CaptureVisionRouter Class
 
-The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.architecture}}output.html#final-results?lang=js) or [Intermediate Results]({{site.architecture}}output.html#intermediate-results?lang=js).
+The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.architecture}}output.html#final-results?lang=js){:target="_blank"} or [Intermediate Results]({{site.architecture}}output.html#intermediate-results?lang=js){:target="_blank"}.
+
+The APIs for this class are:
 
 ### Create and Destroy Instances
 
@@ -45,14 +47,14 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 
 | API Name                                                                                          | Description                                                                                |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [setInput()](./multiple-image-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.                            |
+| [setInput()](./multiple-image-processing.md#setinput)                                             | Sets up an image source to provide images for continuous processing.                       |
 | [getInput()](./multiple-image-processing.md#getinput)                                             | Returns the image source object.                                                           |
-| [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an ImageSourceStateListener object that listens to state changes of the image source. |
-| [removeImageSourceStateListener()](./multiple-image-processing.md#removeimagesourcestatelistener) | Removes the specified ImageSourceStateListener object.                                     |
-| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)                           | Adds a CapturedResultReceiver object as the receiver of captured results.                  |
-| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver)                     | Removes the specified CapturedResultReceiver object.                                       |
-| [addResultFilter()](./multiple-image-processing.md#addresultfilter)                               | Adds a CapturedResultFilter object to filter non-essential results.                        |
-| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)                         | Removes the specified CapturedResultFilter object.                                         |
+| [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that listens to state changes of the image source. |
+| [removeImageSourceStateListener()](./multiple-image-processing.md#removeimagesourcestatelistener) | Removes the specified `ImageSourceStateListener` object.                                     |
+| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)                           | Adds a `CapturedResultReceiver` object as the receiver of captured results.                  |
+| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver)                     | Removes the specified `CapturedResultReceiver` object.                                       |
+| [addResultFilter()](./multiple-image-processing.md#addresultfilter)                               | Adds a `CapturedResultFilter` object to filter non-essential results.                        |
+| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)                         | Removes the specified `CapturedResultFilter` object.                                         |
 | [startCapturing()](./multiple-image-processing.md#startcapturing)                                 | Starts to process images consecutively.                                                    |
 | [stopCapturing()](./multiple-image-processing.md#stopcapturing)                                   | Stops the consecutive process.                                                             |
 
@@ -67,7 +69,7 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 | [initSettings()](./settings.md#initsettings)                   | Initializes settings with either a file or a string.                                                          |
 | [outputSettings()](./settings.md#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name to a string.                                          |
 | [getSimplifiedSettings()](./settings.md#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`.      |
-| [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
+| [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object. |
 | [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
 ### Others
@@ -84,12 +86,12 @@ The APIs for this class are:
 
 | API Name                                                                      | Description                              |
 | ----------------------------------------------------------------------------- | ---------------------------------------- |
-| [addResultReceiver](./intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.    |
-| [removeResultReceiver](./intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver. |
+| [addResultReceiver()](./intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.    |
+| [removeResultReceiver()](./intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver. |
 
 ## Interfaces
 
-* [CapturedResultFilter](./interfaces/captured-result-filter.md)
+<!-- * [CapturedResultFilter](./interfaces/captured-result-filter.md) -->
 * [CapturedResultReceiver](./interfaces/captured-result-receiver.md)
 * [IntermediateResultReceiver](./interfaces/intermediate-result-receiver.md)
 * [ImageSourceStateListener](./interfaces/image-source-state-listener.md)

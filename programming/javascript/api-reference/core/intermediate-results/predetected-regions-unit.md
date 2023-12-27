@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `PredetectedRegionsUnit` interface represents a unit that contains a collection of pre-detected regions. It inherits from the IntermediateResultUnit interface and stores the result of pre-detected regions.
 
-## Definition
-
 ```typescript
 interface PredetectedRegionsUnit extends IntermediateResultUnit {
     predetectedRegions: Array<PredetectedRegionElement>;
@@ -25,7 +23,7 @@ interface PredetectedRegionsUnit extends IntermediateResultUnit {
 | [predetectedRegions](#predetectedregions) | *Array\<PredetectedRegionElement>* |
 
 
-### predetectedRegions
+## predetectedRegions
 
  An array of PredetectedRegionElement objects representing the predetected regions contained in the unit.
 

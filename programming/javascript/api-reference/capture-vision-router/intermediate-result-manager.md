@@ -12,11 +12,11 @@ noTitleIndex: true
 
 The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
 
-| API Name                                      | Description                                          |
-| --------------------------------------------- | ---------------------------------------------------- |
-| [addResultReceiver](#addresultreceiver)       | Adds an intermediate result receiver.                |
-| [removeResultReceiver](#removeresultreceiver) | Removes an intermediate result receiver.             |
-| [getOriginalImage](#getoriginalimage)         | Gets the original image data using an image hash id. |
+| API Name                                        | Description                                          |
+| ----------------------------------------------- | ---------------------------------------------------- |
+| [addResultReceiver()](#addresultreceiver)       | Adds an intermediate result receiver.                |
+| [removeResultReceiver()](#removeresultreceiver) | Removes an intermediate result receiver.             |
+| [getOriginalImage()](#getoriginalimage)         | Gets the original image data using an image hash id. |
 
 ### addResultReceiver
 
@@ -47,12 +47,12 @@ removeResultReceiver(receiver: IntermediateResultReceiver): void;
 Gets the original image data using an image hash id.
 
 ```typescript
-getOriginalImage(imageHashId: string): Promise<Core.DSImageData>;
+getOriginalImage(): Promise<Core.DSImageData>;
 ```
 
 **Parameters**
 
-`imageHashId`: The hash id of the image to retrieve.
+None.
 
 **Return value**
 

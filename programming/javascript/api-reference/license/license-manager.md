@@ -66,8 +66,8 @@ static initLicense(license: string, immediately: true): Promise<{message?: strin
 
 **Parameters**
 
-* `license`: The license key to be used for initialization.
-* `immediately`: A boolean flag indicating that the function should return a promise for immediate initialization.
+`license`: The license key to be used for initialization.
+`immediately`: A boolean flag indicating that the function should return a promise for immediate initialization.
 
 **Return Value**
 
@@ -78,7 +78,7 @@ A promise that resolves to an object containing an optional message property if 
 **Code snippet**
 
 ```javascript
-Dynamsoft.License.LicenseManager.initLicense("your-license-key")
+Dynamsoft.License.LicenseManager.initLicense("your-license-key", true)
   .then(result => {
     if (result?.message) {
       console.log("License Message:", result.message);

@@ -13,8 +13,6 @@ permalink: /programming/javascript/api-reference/core/basic-structures/captured-
 
 The `CapturedResult` interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
-## Definition
-
 ```typescript
 interface CapturedResult {
     readonly OriginalImageHashId: string;
@@ -29,7 +27,7 @@ interface CapturedResult {
 | [OriginalImageTag](#originalimagetag) | *ImageTag* |
 | [items](#items) | *Array* |
 
-### OriginalImageHashId
+## OriginalImageHashId
 
 A string representing the hash ID of the original image.
 
@@ -37,7 +35,7 @@ A string representing the hash ID of the original image.
 readonly OriginalImageHashId: string;
 ```
 
-### OriginalImageTag
+## OriginalImageTag
 
 An `ImageTag` object representing the tag associated with the original image.
 
@@ -45,7 +43,7 @@ An `ImageTag` object representing the tag associated with the original image.
 readonly OriginalImageTag: ImageTag;
 ```
 
-### items
+## items
 
 An array of `CapturedResultItem` objects representing the captured result items.
 

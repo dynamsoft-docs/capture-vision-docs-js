@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `IntermediateResultExtraInfo` structure represents the extra information associated with an intermediate result. It includes properties such as the target ROI definition name, task name, section level result indicator, and section type.
 
-## Definition
-
 ```typescript
 interface IntermediateResultExtraInfo {
     targetROIDefName: string;
@@ -30,7 +28,7 @@ interface IntermediateResultExtraInfo {
 | [isSectionLevelResult](#issectionlevelresult)       | *boolean*                           |
 | [sectionType](#sectiontype)                         | *EnumSectionType*                   |
 
-### targetROIDefName
+## targetROIDefName
 
 Specifies the name of the TargetROIDef object that generates the intermediate result.
 
@@ -38,7 +36,7 @@ Specifies the name of the TargetROIDef object that generates the intermediate re
 targetROIDefName: string;
 ```
 
-### taskName
+## taskName
 
 Specifies the name of the task that generates the intermediate result.
 
@@ -46,7 +44,7 @@ Specifies the name of the task that generates the intermediate result.
 taskName: string;
 ```
 
-### isSectionLevelResult
+## isSectionLevelResult
 
 Specifies whether the intermediate result is a section-level result.
 
@@ -54,7 +52,7 @@ Specifies whether the intermediate result is a section-level result.
 isSectionLevelResult: boolean;
 ```
 
-### sectionType
+## sectionType
 
 Specifies the SectionType that generates the intermediate result.
 

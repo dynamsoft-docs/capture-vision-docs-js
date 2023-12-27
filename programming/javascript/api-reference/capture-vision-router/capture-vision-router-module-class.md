@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
-<!-- v2.0.20 -- Updated on 11/28/2023-->
+<!-- v2.0.30 -- Updated on 12/19/2023-->
 
 # CaptureVisionRouterModule Class
 

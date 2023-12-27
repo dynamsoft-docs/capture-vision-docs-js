@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `TextureRemovedGrayscaleImageUnit` interface represents a grayscale image unit after removing texture.
 
-## Definition
-
 ```typescript
 interface TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.DSImageData;
@@ -24,7 +22,7 @@ interface TextureRemovedGrayscaleImageUnit extends IntermediateResultUnit {
 |----------------------|-------------|
 | [imageData](#imagedata) | *Core.DSImageData* |
 
-### imageData
+## imageData
 
 The texture-removed grayscale image data stored in the unit.
 

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `ColourImageUnit` interface represents a colour image unit.
 
-## Definition
-
 ```typescript
 interface ColourImageUnit extends IntermediateResultUnit {
     imageData: Core.DSImageData;
@@ -24,7 +22,7 @@ interface ColourImageUnit extends IntermediateResultUnit {
 |----------------------|-------------|
 | [imageData](#imagedata) | *Core.DSImageData* |
 
-### imageData
+## imageData
 
 The colour image data stored in the unit.
 

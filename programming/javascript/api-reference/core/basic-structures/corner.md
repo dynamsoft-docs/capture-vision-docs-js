@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `Corner` interface defines the structure of a "Corner" object which consists of two lines and the intersection point in 2-dimensional space.
 
-## Definition
-
 ```typescript
 interface Corner {
     type: EnumCornerType;
@@ -30,7 +28,7 @@ interface Corner {
 | [line1](#line1) | *LineSegment* |
 | [line2](#line2) | *LineSegment* |
 
-### type
+## type
 
 The type of the corner.
 
@@ -38,7 +36,7 @@ The type of the corner.
 type: EnumCornerType;
 ```
 
-### intersection
+## intersection
 
 The intersection point of the corner.
 
@@ -46,7 +44,7 @@ The intersection point of the corner.
 intersection: Point;
 ```
 
-### line1
+## line1
 
 The first line connected to the corner.
 
@@ -54,7 +52,7 @@ The first line connected to the corner.
 line1: LineSegment;
 ```
 
-### line2
+## line2
 
 The second line connected to the corner.
 

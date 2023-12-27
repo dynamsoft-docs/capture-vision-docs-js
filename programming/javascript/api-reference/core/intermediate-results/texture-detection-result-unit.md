@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `TextureDetectionResultUnit` interface represents an intermediate result unit for texture detection.
 
-## Definition
-
 ```typescript
 interface TextureDetectionResultUnit extends IntermediateResultUnit {
     xSpacing: number;
@@ -26,7 +24,7 @@ interface TextureDetectionResultUnit extends IntermediateResultUnit {
 | [xSpacing](#xspacing) | number |
 | [ySpacing](#yspacing) | number |
 
-### xSpacing
+## xSpacing
 
 The x-direction spacing of the texture stripes.
 
@@ -34,7 +32,7 @@ The x-direction spacing of the texture stripes.
 xSpacing: number;
 ```
 
-### ySpacing
+## ySpacing
 
 The y-direction spacing of the texture stripes.
 

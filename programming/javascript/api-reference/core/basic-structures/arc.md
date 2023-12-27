@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `Arc` interface defines the structure of a "arc" shape in 2-dimensional space.
 
-## Definition
-
 ```typescript
 interface Arc {
     x: number;
@@ -32,7 +30,7 @@ interface Arc {
 | [startAngle](#startangle) | *number* |
 | [endAngle](#endangle)     | *number* |
 
-### x
+## x
 
 The x-coordinate of the center point of the arc.
 
@@ -40,7 +38,7 @@ The x-coordinate of the center point of the arc.
 x: number;
 ```
 
-### y
+## y
 
 The y-coordinate of the center point of the arc.
 
@@ -48,7 +46,7 @@ The y-coordinate of the center point of the arc.
 y: number;
 ```
 
-### radius
+## radius
 
 The radius of the arc.
 
@@ -56,7 +54,7 @@ The radius of the arc.
 radius: number;
 ```
 
-### startAngle
+## startAngle
 
 The starting angle of the arc in radians.
 
@@ -64,7 +62,7 @@ The starting angle of the arc in radians.
 startAngle: number;
 ```
 
-### endAngle
+## endAngle
 
 The ending angle of the arc in radians.
 

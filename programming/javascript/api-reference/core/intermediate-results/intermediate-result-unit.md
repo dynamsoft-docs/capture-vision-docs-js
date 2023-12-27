@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `IntermediateResultUnit` interface represents an intermediate result unit used in image processing.
 
-## Definition
-
 ```typescript
 interface IntermediateResultUnit {
     hashId: string;
@@ -32,7 +30,7 @@ interface IntermediateResultUnit {
 | [unitType](#unittype) | Gets the type of the intermediate result unit. |
 | [getTransformMatrix](#gettransformmatrix) | Gets the transformation matrix from local to original image coordinates. |
 
-### hashId
+## hashId
 
 The hash ID of the intermediate result unit.
 
@@ -44,7 +42,7 @@ hashId: string;
 
 Returns the hash ID of the unit. 
 
-### originalImageHashId
+## originalImageHashId
 
 The hash ID of the original image.
 
@@ -56,7 +54,7 @@ OriginalImageHashId: string;
 
 Returns the hash ID of the original image.
 
-### originalImageTag
+## originalImageTag
 
 The image tag of the original image.
 
@@ -68,7 +66,7 @@ originalImageTag: Core.ImageTag;
 
 Returns the image tag of the original image.
 
-### unitType
+## unitType
 
 The type of the intermediate result unit.
 
@@ -76,7 +74,7 @@ The type of the intermediate result unit.
 unitType: EnumIntermediateResultUnitType;
 ```
 
-### getTransformMatrix
+## getTransformMatrix
 
 Get the transformation matrix from local to original image coordinates.
 

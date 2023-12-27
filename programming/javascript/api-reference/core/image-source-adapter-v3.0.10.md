@@ -13,8 +13,6 @@ noTitleIndex: true
 
 `ImageSourceAdapter` is an abstract class that defines the standard structure of an image source in the [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/) architecture.
 
-## Definition
-
 ```typescript
 abstract class ImageSourceAdapter {
     addImageToBuffer(image: Core.DSImageData): void;
@@ -56,7 +54,7 @@ abstract class ImageSourceAdapter {
 | [getColourChannelUsageType()](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
 ---
 
-### addImageToBuffer
+## addImageToBuffer
 
 Adds an image to the buffer of the adapter.
 
@@ -68,7 +66,7 @@ addImageToBuffer(image: Core.DSImageData): void;
 
 `image`: The image to add to the buffer.
 
-### hasNextImageToFetch
+## hasNextImageToFetch
 
 An abstract method that needs to be implemented by the user. It checks if there is a next image to fetch.
 
@@ -80,7 +78,7 @@ abstract hasNextImageToFetch(): boolean;
 
 Returns true if there are more images left to fetch, false otherwise. 
 
-### startFetching
+## startFetching
 
 Starts fetching images.
 
@@ -88,7 +86,7 @@ Starts fetching images.
 startFetching(): void;
 ```
 
-### stopFetching
+## stopFetching
 
 Stops fetching images.
 
@@ -96,7 +94,7 @@ Stops fetching images.
 stopFetching(): void;
 ```
 
-### getImage
+## getImage
 
 Retrieves a buffered image as a promise.
 
@@ -108,7 +106,7 @@ getImage(): Promise<Core.DSImageData>;
 
 Returns the image object as a promise .
 
-### setMaxImageCount
+## setMaxImageCount
 
 Sets how many images are allowed to be buffered.
 
@@ -120,7 +118,7 @@ setMaxImageCount(count: number): void;
 
 `count`: The maximum number of images that can be buffered.
 
-### getMaxImageCount
+## getMaxImageCount
 
 Returns how many images can be buffered.
 
@@ -132,7 +130,7 @@ getMaxImageCount(): number;
 
 Returns the maximum number of images that can be buffered.
 
-### setBufferOverflowProtectionMode
+## setBufferOverflowProtectionMode
 
 Sets a mode that determines the action to take when there is a new incoming image and the buffer is full.
 
@@ -144,7 +142,7 @@ setBufferOverflowProtectionMode(mode: Core.EnumBufferOverflowProtectionMode): vo
 
 `mode`: The buffer overflow protection mode to set.
 
-### getBufferOverflowProtectionMode
+## getBufferOverflowProtectionMode
 
 Returns the current buffer overflow protection mode.
 
@@ -156,7 +154,7 @@ getBufferOverflowProtectionMode(): Core.EnumBufferOverflowProtectionMode;
 
 Returns the current buffer overflow protection mode.
 
-### hasImage
+## hasImage
 
 Determines whether the image is in the buffer or not.
 
@@ -172,7 +170,7 @@ hasImage(imageId: number): boolean;
 
 Returns true if the image is in the buffer, false otherwise.
 
-### setNextImageToReturn
+## setNextImageToReturn
 
 Sets the next image to return.
 
@@ -187,7 +185,7 @@ setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
 `keepInBuffer`: Whether the image should be kept in the buffer after it is returned.
 
 
-### getImageCount
+## getImageCount
 
 Returns the actual count of buffered images.
 
@@ -199,7 +197,7 @@ getImageCount(): number;
 
 Returns the actual count of buffered images.
 
-### isBufferEmpty
+## isBufferEmpty
 
 Determines whether the buffer is empty.
 
@@ -211,7 +209,7 @@ isBufferEmpty(): boolean;
 
 Returns true if the buffer is empty, false otherwise.
 
-### clearBuffer
+## clearBuffer
 
 Clear the image buffer.
 
@@ -219,7 +217,7 @@ Clear the image buffer.
 clearBuffer(): void;
 ```
 
-### setColourChannelUsageType
+## setColourChannelUsageType
 
 Sets the usage type of a color channel in images.
 
@@ -227,7 +225,7 @@ Sets the usage type of a color channel in images.
 setColourChannelUsageType(type: Core.EnumColourChannelUsageType): void;
 ```
 
-### getColourChannelUsageType
+## getColourChannelUsageType
 
 Gets the usage type of a color channel in images.
 

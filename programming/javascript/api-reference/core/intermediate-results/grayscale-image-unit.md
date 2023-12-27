@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `GrayscaleImageUnit` interface represents a unit that contains a grayscale image as part of intermediate results.
 
-## Definition
-
 ```typescript
 interface GrayscaleImageUnit extends IntermediateResultUnit {
     imageData: Core.DSImageData;
@@ -24,7 +22,7 @@ interface GrayscaleImageUnit extends IntermediateResultUnit {
 |----------------------|-------------|
 | [imageData](#imagedata) | *Core.DSImageData* |
 
-### imageData
+## imageData
 
 The data of the enhanced grayscale image stored in the unit.
 

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `FileImageTag` interface defines a structure that contains extra information about an image that is loaded from a file. It inherits from the [ImageTag](./image-tag.md) interface with two added attributes: `filePath` and `pageNumber`.
 
-## Definition
-
 ```typescript
 interface FileImageTag extends ImageTag {
     filePath: string;
@@ -26,7 +24,7 @@ interface FileImageTag extends ImageTag {
 | [filePath](#filepath) | *string* |
 | [pageNumber](#pagenumber) | *number* |
 
-### filePath
+## filePath
 
 Gets the file path of the image tag.
 
@@ -34,7 +32,7 @@ Gets the file path of the image tag.
 filePath: string;
 ```
 
-### pageNumber
+## pageNumber
 
 Gets the page number of the image tag.
 

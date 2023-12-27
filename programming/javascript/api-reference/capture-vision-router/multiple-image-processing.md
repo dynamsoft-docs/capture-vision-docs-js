@@ -13,14 +13,14 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 | API Name                                                            | Description                                                                                |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [setInput()](#setinput)                                             | Sets an image source to provide images for consecutive process.                            |
+| [setInput()](#setinput)                                             | Sets up an image source to provide images for continuous processing.                            |
 | [getInput()](#getinput)                                             | Returns the image source object.                                                           |
-| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an ImageSourceStateListener object that listens to state changes of the image source. |
-| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes the specified ImageSourceStateListener object.                                     |
-| [addResultReceiver()](#addresultreceiver)                           | Adds a CapturedResultReceiver object as the receiver of captured results.                  |
-| [removeResultReceiver()](#removeresultreceiver)                     | Removes the specified CapturedResultReceiver object.                                       |
-| [addResultFilter()](#addresultfilter)                               | Adds a CapturedResultFilter object to filter non-essential results.                        |
-| [removeResultFilter()](#removeresultfilter)                         | Removes the specified CapturedResultFilter object.                                         |
+| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that listens to state changes of the image source. |
+| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes the specified `ImageSourceStateListener` object.                                     |
+| [addResultReceiver()](#addresultreceiver)                           | Adds a `CapturedResultReceiver` object as the receiver of captured results.                  |
+| [removeResultReceiver()](#removeresultreceiver)                     | Removes the specified `CapturedResultReceiver` object.                                       |
+| [addResultFilter()](#addresultfilter)                               | Adds a `CapturedResultFilter` object to filter non-essential results.                        |
+| [removeResultFilter()](#removeresultfilter)                         | Removes the specified `CapturedResultFilter` object.                                         |
 | [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                                    |
 | [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                             |
 
@@ -30,7 +30,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 ## setInput
 
-Sets an image source to provide images for consecutive process.
+Sets up an image source to provide images for continuous processing.
 
 **Syntax**
 
@@ -142,7 +142,7 @@ cvr.removeCaptureStateListener(csl);
 
 ## addImageSourceStateListener
 
-Adds an ImageSourceStateListener object that listens to state changes of the image source.
+Adds an `ImageSourceStateListener` object that listens to state changes of the image source.
 
 **Syntax**
 
@@ -172,7 +172,7 @@ cvr.addImageSourceStateListener(isasl);
 
 ## removeImageSourceStateListener
 
-Removes the specified ImageSourceStateListener object.
+Removes the specified `ImageSourceStateListener` object.
 
 **Syntax**
 
@@ -202,7 +202,7 @@ cvr.removeImageSourceStateListener(isasl);
 
 ## addResultReceiver
 
-Adds a CapturedResultReceiver object as the receiver of captured results.
+Adds a `CapturedResultReceiver` object as the receiver of captured results.
 
 **Syntax**
 
@@ -231,7 +231,7 @@ cvr.addResultReceiver(resultReceiver);
 
 ## removeResultReceiver
 
-Removes the specified CapturedResultReceiver object.
+Removes the specified `CapturedResultReceiver` object.
 
 **Syntax**
 
@@ -261,7 +261,7 @@ cvr.removeResultReceiver(resultReceiver);
 
 ## addResultFilter
 
-Adds a CapturedResultFilter object to filter non-essential results.
+Adds a `CapturedResultFilter` object to filter non-essential results.
 
 **Syntax**
 
@@ -293,7 +293,7 @@ cvr.addResultReceiver(filter);
 
 ## removeResultFilter
 
-Removes the specified CapturedResultFilter object.
+Removes the specified `CapturedResultFilter` object.
 
 **Syntax**
 
@@ -334,7 +334,7 @@ startCapturing(templateName?: string): Promise<void>;
 
 **Return Value**
 
-None.
+Returns a promise that resolves to void.
 
 **Code snippet**
 

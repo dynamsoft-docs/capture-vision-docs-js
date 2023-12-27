@@ -20,7 +20,6 @@ This class defines common functionality in the Core module.
 | `static` [onWarning](#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
 | `static` [engineResourcePaths](#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
 | `static` [loadWasm()](#loadwasm)                     | Loads the WebAssembly (.wasm) files for the specified modules.                              |
-| `static` [loadModel()](#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
 | `static` [enableLogging()](#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
 | `static` [disableLogging()](#disablelogging)         | Disables logging.                                                                           |
 
@@ -108,7 +107,7 @@ static engineResourcePaths: {
     "dlr"?: string,
     "ddn"?: string,
     "dcp"?: string,
-    [moduleName: string]: string
+    [moduleName: string]: string|undefined
 };
 ```
 
@@ -150,25 +149,7 @@ static loadWasm(moduleNames: Array<string>): Promise<void>;
 **Code snippet**
 
 ```javascript
-await Dynamsoft.Core.CoreModule.loadWasm(["core", "license", "cvr", "dbr"]);
-```
-
-## loadModel
-
-Loads the model (.data) files for recognizing text.
-
-```typescript
-static loadModel: (modelPath: string | Array<string>) => void;
-```
-
-**Parameters**
-
-`modelPath`: specifies the path(s) for one or multiple model files. If specifying only the name of a model, the method will try loading the file from the path specified for the "dlr" module in `Dynamsoft.Core.CoreModule.engineResourcePaths`. For example, if the path for the "dlr" module is "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.0.20/dist/", then calling `Dynamsoft.Core.CoreModule.loadModel("NumberLetter")` will load the file "NumberLetter.data" from "https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.0.20/dist/NumberLetter/NumberLetter.data".
-
-**Code snippet**
-
-```javascript
-await Dynamsoft.Core.CoreModule.loadModel("NumberLetter");
+await Dynamsoft.Core.CoreModule.loadWasm(["cvr", "dbr"]);
 ```
 
 ## enableLogging

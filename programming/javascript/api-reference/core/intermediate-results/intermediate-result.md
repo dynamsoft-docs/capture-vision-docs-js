@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `IntermediateResult` interface represents a container containing a collection of IntermediateResultUnit objects.
 
-## Definition
-
 ```typescript
 interface IntermediateResult {
     intermediateResultUnits: Array<IntermediateResultUnit>;
@@ -24,7 +22,7 @@ interface IntermediateResult {
 |--------|-------------|
 | [intermediateResultUnits](#intermediateresultunits) | *Array\<IntermediateResultUnit>* |
 
-### intermediateResultUnits
+## intermediateResultUnits
 
 An Array containing a collection of IntermediateResultUnit objects.
 

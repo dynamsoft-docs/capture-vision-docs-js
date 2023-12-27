@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `PDFReadingParameter` interface defines the structure of an object that is used to configure the PDF reading process.
 
-## Definition
-
 ```typescript
 interface PDFReadingParameter {
     mode: EnumPDFReadingMode;
@@ -28,7 +26,7 @@ interface PDFReadingParameter {
 | [dpi](#dpi) | *number* |
 | [rasterDataSource](#rasterdatasource) | *EnumRasterDataSource* |
 
-### mode
+## mode
 
 The mode of PDF reading.
 
@@ -36,7 +34,7 @@ The mode of PDF reading.
 mode: EnumPDFReadingMode;
 ```
 
-### dpi
+## dpi
 
 The DPI (dots per inch) value.
 
@@ -44,7 +42,7 @@ The DPI (dots per inch) value.
 dpi: number;
 ```
 
-### rasterDataSource
+## rasterDataSource
 
 The rasterDataSource.
 

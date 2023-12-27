@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `LineSegment` interface defines a "line" shape in 2-dimensional space.
 
-## Definition
-
 ```typescript
 interface LineSegment {
     startPoint: Point;
@@ -26,7 +24,7 @@ interface LineSegment {
 | [startPoint](#startpoint) | *Point* |
 | [endPoint](#endpoint) | *Point* |
 
-### startPoint
+## startPoint
 
 The start point of the line segment.
 
@@ -34,7 +32,7 @@ The start point of the line segment.
 startPoint: Point;
 ```
 
-### endPoint
+## endPoint
 
 The end point of the line segment.
 

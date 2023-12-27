@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `Quadrilateral` interface defines a shape that represents a quadrilateral in 2-dimensional space.
 
-## Definition
-
 ```typescript
 interface Quadrilateral {
     points: [Point, Point, Point, Point];
@@ -25,7 +23,7 @@ interface Quadrilateral {
 | [points](#points) | *Point* |
 
 
-### points
+## points
 
 The point array of the quadrilateral.
 

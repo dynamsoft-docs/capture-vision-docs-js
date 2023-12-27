@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `CapturedResult` interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
-## Definition
-
 ```typescript
 interface CapturedResult {
     readonly OriginalImageHashId: string;
@@ -32,7 +30,7 @@ interface CapturedResult {
 | [errorCode](#errorcode) | *number* |
 | [errorString](#errorstring) | *string* |
 
-### OriginalImageHashId
+## OriginalImageHashId
 
 A string representing the hash ID of the original image.
 
@@ -40,7 +38,7 @@ A string representing the hash ID of the original image.
 readonly OriginalImageHashId: string;
 ```
 
-### OriginalImageTag
+## OriginalImageTag
 
 An `ImageTag` object representing the tag associated with the original image.
 
@@ -48,7 +46,7 @@ An `ImageTag` object representing the tag associated with the original image.
 readonly OriginalImageTag: ImageTag;
 ```
 
-### items
+## items
 
 An array of `CapturedResultItem` objects representing the captured result items.
 
@@ -56,7 +54,7 @@ An array of `CapturedResultItem` objects representing the captured result items.
 readonly items: Array<CapturedResultItem>;
 ```
 
-### errorCode
+## errorCode
 
 The error code of the capture operation.
 
@@ -64,7 +62,7 @@ The error code of the capture operation.
 readonly errorCode: number;
 ```
 
-### errorString
+## errorString
 
 The error message of the capture operation.
 

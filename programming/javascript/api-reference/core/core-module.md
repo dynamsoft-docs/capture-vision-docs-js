@@ -25,7 +25,6 @@ This class defines common functionality in the Core module.
 | `static` [onWarning](./core-module-class.md#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
 | `static` [engineResourcePaths](./core-module-class.md#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
 | `static` [loadWasm()](./core-module-class.md#loadwasm)                     | Loads the .wasm files for the specified modules.                                            |
-| `static` [loadModel()](./core-module-class.md#loadmodel)                   | Loads the model (.data) files for recognizing text.                                         |
 | `static` [enableLogging()](./core-module-class.md#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
 | `static` [disableLogging()](./core-module-class.md#disablelogging)         | Disables logging.                                                                           |
 

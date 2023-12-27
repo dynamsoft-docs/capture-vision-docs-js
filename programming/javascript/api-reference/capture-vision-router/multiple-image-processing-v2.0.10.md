@@ -326,7 +326,7 @@ startCapturing(templateName?: string): Promise<void>;
 
 **Return Value**
 
-None.
+Returns a promise that resolves to void.
 
 **Code snippet**
 

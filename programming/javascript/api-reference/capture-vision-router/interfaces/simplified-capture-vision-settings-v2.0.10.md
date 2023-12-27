@@ -13,8 +13,6 @@ permalink: /programming/javascript/api-reference/capture-vision-router/interface
 
 The `SimplifiedCaptureVisionSettings` interface represents a simplified configuration for the Capture Vision Router settings.
 
-## Definition
-
 ```typescript
 interface SimplifiedCaptureVisionSettings {
     capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
@@ -37,7 +35,7 @@ interface SimplifiedCaptureVisionSettings {
 
 <!-- | [maxParallelTasks](#maxparalleltasks)               | *number*                                                    | -->
 
-### capturedResultItemTypes
+## capturedResultItemTypes
 
 Specifies the types of captured items to be processed. It uses the EnumCapturedResultItemType enumeration from the Core.BasicStructures namespace.
 
@@ -57,7 +55,7 @@ capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
 roi: Dynamsoft.Core.Quadrilateral;
 ```
 
-### roiMeasuredInPercentage
+## roiMeasuredInPercentage
 
 Indicates whether the ROI coordinates are measured in percentage values (true) or absolute pixel values (false).
 
@@ -65,7 +63,7 @@ Indicates whether the ROI coordinates are measured in percentage values (true) o
 roiMeasuredInPercentage: boolean;
 ```
 
-<!-- ### maxParallelTasks
+<!-- ## maxParallelTasks
 
 Specifies the maximum number of parallel tasks allowed during processing.
 
@@ -73,7 +71,7 @@ Specifies the maximum number of parallel tasks allowed during processing.
 maxParallelTasks: number;
 ``` -->
 
-### timeout
+## timeout
 
 Specifies the timeout duration for processing tasks.
 
@@ -81,7 +79,7 @@ Specifies the timeout duration for processing tasks.
 timeout: number;
 ```
 
-### barcodeSettings
+## barcodeSettings
 
 Represents the simplified settings for barcode recognition using the SimplifiedBarcodeReaderSettings interface from the DBR namespace.
 
@@ -89,7 +87,7 @@ Represents the simplified settings for barcode recognition using the SimplifiedB
 barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
 ```
 
-### labelSettings
+## labelSettings
 
 Represents the simplified settings for label recognition using the SimplifiedLabelRecognizerSettings interface from the DLR namespace.
 

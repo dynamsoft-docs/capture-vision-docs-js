@@ -10,6 +10,11 @@
     * OnShortLinesUnitReceived
     * OnUnitResultReceived
 
+## 2.0.30
+
+* Internally, CVR C++ provides the following API to find out about required model files and specifications for DLR/DCP.
+	`ParseRequiredResources `
+
 ## 2.0.20
 
 * Removed the static property CaptureVisionRouterModule.engineResourcePath. The substitute is CoreModule.engineResourcePaths (Core module v3.0.20).

@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `DSImageData` interface defines the structure of an object that represents an image.
 
-## Definition
-
 ```typescript
 interface DSImageData {
     bytes: Uint8Array;
@@ -36,7 +34,7 @@ interface DSImageData {
 | [orientation](#orientation) | *number* |
 | [tag](#tag) | *ImageTag* |
 
-### bytes
+## bytes
 
 Gets the image byte array.
 
@@ -44,7 +42,7 @@ Gets the image byte array.
 bytes: Uint8Array;
 ```
 
-### width
+## width
 
 Gets the width of the image.
 
@@ -52,7 +50,7 @@ Gets the width of the image.
 width: number;
 ```
 
-### height
+## height
 
 Gets the height of the image.
 
@@ -60,7 +58,7 @@ Gets the height of the image.
 height: number;
 ```
 
-### stride
+## stride
 
 Gets the stride of the image.
 
@@ -68,7 +66,7 @@ Gets the stride of the image.
 stride: number;
 ```
 
-### format
+## format
 
 Gets the pixel format of the image.
 
@@ -76,7 +74,7 @@ Gets the pixel format of the image.
 format: Core.EnumImagePixelFormat;
 ```
 
-### orientation
+## orientation
 
 Gets the orientation of the image.
 
@@ -84,7 +82,7 @@ Gets the orientation of the image.
 orientation?: number;
 ```
 
-### tag
+## tag
 
 Gets the tag of the image.
 

@@ -13,8 +13,6 @@ noTitleIndex: true
 
 `ImageSourceAdapter` is an abstract class that defines the standard structure of an image source in the [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/) architecture.
 
-## Definition
-
 ```typescript
 abstract class ImageSourceAdapter {
     addImageToBuffer(image: Core.DSImageData): void;

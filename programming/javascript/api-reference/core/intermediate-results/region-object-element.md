@@ -12,8 +12,6 @@ noTitleIndex: true
 
 The `RegionObjectElement` interface represents an element of a region object in 2D space. It is an abstract interface that provides the interface for region object elements.
 
-## Definition
-
 ```typescript
 interface RegionObjectElement {
     location: Core.Quadrilateral;
@@ -28,7 +26,7 @@ interface RegionObjectElement {
 | [referencedElement](#referencedelement) | *RegionObjectElement* |
 | [type](#type) | *EnumRegionObjectElementType* |
 
-### location
+## location
 
 The location of the region object element.
 
@@ -36,7 +34,7 @@ The location of the region object element.
 location: Core.Quadrilateral;
 ```
 
-### referencedElement
+## referencedElement
 
 A referenced region object element.
 
@@ -44,7 +42,7 @@ A referenced region object element.
 referencedElement: RegionObjectElement;
 ```
 
-### type
+## type
 
 Get the type of the region object element.
 

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface IntermediateResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
-description: This page introduces the IntermediateResultReceiver interface in Dynamsoft CaptureVisionRouter Module JS Edition.
+title: Interface IntermediateResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference v2.0.30
+description: This page introduces the IntermediateResultReceiver interface in Dynamsoft CaptureVisionRouter Module JS Edition v2.0.30.
 keywords: intermediate result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -11,8 +11,6 @@ noTitleIndex: true
 # IntermediateResultReceiver
 
 The `IntermediateResultReceiver` interface is responsible for receiving intermediate results of different types. It provides virtual functions for each type of result, which are called when the corresponding result is received.
-
-## Definition
 
 ```typescript
 interface IntermediateResultReceiver {
@@ -81,7 +79,7 @@ interface IntermediateResultReceiver {
 | [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Called when deformation resisted barcode image units have been received. |
 | [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived) | Called when complemented barcode image units have been received. |
 
-### getObservedParameters
+## getObservedParameters
 
 Gets the observed parameters of the intermediate result receiver.
 
@@ -93,7 +91,7 @@ getObservationParameters(): ObservationParameters;
 
 Returns the object of CObservedParameters. The default parameters are to observe all intermediate result unit types and all tasks.
 
-### onTaskResultsReceived
+## onTaskResultsReceived
 
 Called when a task result has been received.
 
@@ -107,7 +105,7 @@ onTaskResultsReceived?(result: IntermediateResult, info: IntermediateResultExtra
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onPredetectedRegionsReceived
+## onPredetectedRegionsReceived
 
 Called when predetected regions have been received.
 
@@ -121,7 +119,7 @@ onPredetectedRegionsReceived?(result: PredetectedRegionsUnit, info: Intermediate
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onLocalizedBarcodesReceived
+## onLocalizedBarcodesReceived
 
 Called when localized barcodes have been received.
 
@@ -135,7 +133,7 @@ onLocalizedBarcodesReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUni
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onDecodedBarcodesReceived
+## onDecodedBarcodesReceived
 
 Called when decoded barcodes have been received.
 
@@ -149,7 +147,7 @@ onDecodedBarcodesReceived?(result: DBR.IntermediateResult.DecodedBarcodesUnit, i
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onLocalizedTextLinesReceived
+## onLocalizedTextLinesReceived
 
 Called when localized text lines have been received.
 
@@ -163,7 +161,7 @@ onLocalizedTextLinesReceived?(result: DLR.IntermediateResult.LocalizedTextLinesU
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onRecognizedTextLinesReceived
+## onRecognizedTextLinesReceived
 
 Called when recognized text lines have been received.
 
@@ -177,7 +175,7 @@ onRecognizedTextLinesReceived?(result: DLR.IntermediateResult.RecognizedTextLine
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onDetectedQuadsReceived
+## onDetectedQuadsReceived
 
 Called when detected quadrilaterals have been received.
 
@@ -191,7 +189,7 @@ onDetectedQuadsReceived?(result: DDN.IntermediateResult.DetectedQuadsUnit, info:
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onNormalizedImagesReceived
+## onNormalizedImagesReceived
 
 Called when normalized images have been received.
 
@@ -205,7 +203,7 @@ onNormalizedImagesReceived?(result: DDN.IntermediateResult.NormalizedImagesUnit,
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onColourImageUnitReceived
+## onColourImageUnitReceived
 
 Called when colour image units have been received.
 
@@ -219,7 +217,7 @@ onColourImageUnitReceived?(result: ColourImageUnit, info: IntermediateResultExtr
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onScaledDownColourImageUnitReceived
+## onScaledDownColourImageUnitReceived
 
 Handles the receipt of a scaled-down colour image unit.
 
@@ -233,7 +231,7 @@ onScaledDownColourImageUnitReceived?(result: ScaledDownColourImageUnit, info: In
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onGrayscaleImageUnitReceived
+## onGrayscaleImageUnitReceived
 
 Handles the receipt of a grayscale image unit.
 
@@ -247,7 +245,7 @@ onGrayscaleImageUnitReceived?(result: GrayscaleImageUnit, info: IntermediateResu
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onTransformedGrayscaleImageUnitReceived
+## onTransformedGrayscaleImageUnitReceived
 
 Handles the receipt of a transformed grayscale image unit.
 
@@ -261,7 +259,7 @@ onTransformedGrayscaleImageUnitReceived?(result: TransformedGrayscaleImageUnit, 
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onEnhancedGrayscaleImageUnitReceived
+## onEnhancedGrayscaleImageUnitReceived
 
 Handles the receipt of an enhanced grayscale image unit.
 
@@ -275,7 +273,7 @@ onEnhancedGrayscaleImageUnitReceived?(result: EnhancedGrayscaleImageUnit, info: 
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onBinaryImageUnitReceived
+## onBinaryImageUnitReceived
 
 Handles the receipt of a binary image unit.
 
@@ -289,7 +287,7 @@ onBinaryImageUnitReceived?(result: BinaryImageUnit, info: IntermediateResultExtr
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onTextureDetectionResultUnitReceived
+## onTextureDetectionResultUnitReceived
 
 Handles the receipt of a texture detection result unit.
 
@@ -303,7 +301,7 @@ onTextureDetectionResultUnitReceived?(result: TextureDetectionResultUnit, info: 
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onTextureRemovedGrayscaleImageUnitReceived
+## onTextureRemovedGrayscaleImageUnitReceived
 
 Handles the receipt of a texture-removed grayscale image unit.
 
@@ -317,7 +315,7 @@ onTextureRemovedGrayscaleImageUnitReceived?(result: TextureRemovedGrayscaleImage
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onTextureRemovedBinaryImageUnitReceived
+## onTextureRemovedBinaryImageUnitReceived
 
 Handles the receipt of a texture-removed binary image unit.
 
@@ -331,7 +329,7 @@ onTextureRemovedBinaryImageUnitReceived?(result: TextureRemovedBinaryImageUnit, 
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onContoursUnitReceived
+## onContoursUnitReceived
 
 Handles the receipt of a contours unit.
 
@@ -345,7 +343,7 @@ onContoursUnitReceived?(result: ContoursUnit, info: IntermediateResultExtraInfo)
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onLineSegmentsUnitReceived
+## onLineSegmentsUnitReceived
 
 Called when a line segments unit is received.
 
@@ -359,7 +357,7 @@ onLineSegmentsUnitReceived?(result: LineSegmentsUnit, info: IntermediateResultEx
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onTextZonesUnitReceived
+## onTextZonesUnitReceived
 
 Called when a text zones unit is received.
 
@@ -373,7 +371,7 @@ onTextZonesUnitReceived?(result: TextZonesUnit, info: IntermediateResultExtraInf
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onTextRemovedBinaryImageUnitReceived
+## onTextRemovedBinaryImageUnitReceived
 
 Called when a text removed binary image unit is received.
 
@@ -387,7 +385,7 @@ onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: 
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onLongLinesUnitReceived
+## onLongLinesUnitReceived
 
 Called when a long lines unit is received.
 
@@ -401,7 +399,7 @@ onLongLinesUnitReceived?(result: DDN.IntermediateResult.LongLinesUnit, info: Int
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onCornersUnitReceived
+## onCornersUnitReceived
 
 Called when a corners unit is received.
 
@@ -415,7 +413,7 @@ onCornersUnitReceived?(result: DDN.IntermediateResult.CornersUnit, info: Interme
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onCandidateQuadEdgesUnitReceived
+## onCandidateQuadEdgesUnitReceived
 
 Called when a candidate quad edges unit is received.
 
@@ -429,7 +427,7 @@ onCandidateQuadEdgesUnitReceived?(result: DDN.IntermediateResult.CandidateQuadEd
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onCandidateBarcodeZonesUnitReceived
+## onCandidateBarcodeZonesUnitReceived
 
 Called when a candidate barcode zones unit is received.
 
@@ -443,7 +441,7 @@ onCandidateBarcodeZonesUnitReceived?(result: DBR.IntermediateResult.LocalizedBar
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onScaledUpBarcodeImageUnitReceived
+## onScaledUpBarcodeImageUnitReceived
 
 Called when a scaled up barcode image unit is received.
 
@@ -457,7 +455,7 @@ onScaledUpBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ScaledUpBarco
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onDeformationResistedBarcodeImageUnitReceived
+## onDeformationResistedBarcodeImageUnitReceived
 
 Called when a deformation resisted barcode image unit is received.
 
@@ -471,7 +469,7 @@ onDeformationResistedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.De
 
 `info`: The IntermediateResultExtraInfo object that contains the extra info of intermediate result.
 
-### onComplementedBarcodeImageUnitReceived
+## onComplementedBarcodeImageUnitReceived
 
 Called when a complemented barcode image unit is received.
 

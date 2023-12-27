@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface CapturedResultFilter - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
-description: This page introduces the CapturedResultFilter interface in Dynamsoft CaptureVisionRouter Module JS Edition.
+title: Interface CapturedResultFilter - Dynamsoft CaptureVisionRouter Module JS Edition API Reference v2.0.30
+description: This page introduces the CapturedResultFilter interface in Dynamsoft CaptureVisionRouter Module JS Edition v2.0.30.
 keywords: captured result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -12,8 +12,6 @@ breadcrumbText: JS CapturedResultFilter Interface
 # CapturedResultFilter
 
 The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
-
-## Definition
 
 ```typescript
 interface CapturedResultFilter {
@@ -35,7 +33,7 @@ interface CapturedResultFilter {
 | [OnNormalizedImagesReceived()](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
 | [OnParsedResultsReceived()](#onparsedresultsreceived)             | Callback function for parsed results.                |
 
-### OnOriginalImageResultReceived
+## OnOriginalImageResultReceived
 
 Callback function for original image results. It will be called once for each original image result.
 
@@ -47,7 +45,7 @@ onOriginalImageResultReceived(result: Core.OriginalImageResultItem): void;
 
 `result`: The original image result.
 
-### OnDecodedBarcodesReceived
+## OnDecodedBarcodesReceived
 
 Callback function for decoded barcodes results. It will be called once for each decoded barcodes result.
 
@@ -59,7 +57,7 @@ onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
 
 `result`: The decoded barcodes result.
 
-### OnRecognizedTextLinesReceived
+## OnRecognizedTextLinesReceived
 
 Callback function for recognized text lines results. It will be called once for each recognized text lines result.
 
@@ -71,7 +69,7 @@ onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
 
 `result`: The recognized text lines result.
 
-### OnDetectedQuadsReceived
+## OnDetectedQuadsReceived
 
 Callback function for detected quads results. It will be called once for each detected quads result.
 
@@ -83,7 +81,7 @@ onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
 
 `result`: The detected quads result.
 
-### OnNormalizedImagesReceived
+## OnNormalizedImagesReceived
 
 Callback function for normalized images results. It will be called once for each normalized images result.
 
@@ -95,7 +93,7 @@ onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
 
 `result`: The normalized images result.
 
-### OnParsedResultsReceived
+## OnParsedResultsReceived
 
 Callback function for parsed results. It will be called once for each parsed result.
 
