@@ -131,10 +131,10 @@ Returns a promise that resolves when the template settings have been successfull
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let newSettings = await cvr.getSimplifiedSettings("normalize-document");
+let newSettings = await router.getSimplifiedSettings("normalize-document");
 newSettings.timeout = 5000;
 // Change the timeout of preset templates "normalize-document"
-await cvr.updateSettings("normalize-document", newSettings);
+await router.updateSettings("normalize-document", newSettings);
 ```
 
 > Note: The updateSettings method allows you to update a template's settings with new values. It is specifically designed for fast configuration of the image processing process, with certain limitations:

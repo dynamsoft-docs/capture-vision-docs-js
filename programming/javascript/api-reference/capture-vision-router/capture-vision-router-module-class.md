@@ -28,6 +28,6 @@ static getVersion(): string;
 **Code snippet**
 
 ```javascript
-const version = Dynamsoft.CaptureVisionRouter.CaptureVisionRouterModule.getVersion();
+const version = Dynamsoft.CVR.CaptureVisionRouterModule.getVersion();
 console.log(version);
 ```

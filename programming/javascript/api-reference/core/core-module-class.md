@@ -20,6 +20,7 @@ This class defines common functionality in the Core module.
 | `static` [onWarning](#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
 | `static` [engineResourcePaths](#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
 | `static` [loadWasm()](#loadwasm)                     | Loads the WebAssembly (.wasm) files for the specified modules.                              |
+| `static` [isModuleLoaded()](#ismoduleloaded)         | Returns whether the WebAssembly (.wasm) file for the specified modules has been loaded.     |
 | `static` [enableLogging()](#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
 | `static` [disableLogging()](#disablelogging)         | Disables logging.                                                                           |
 
@@ -136,10 +137,10 @@ Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://[SPECIFY-
 
 ## loadWasm
 
-Loads the .wasm files for the specified modules.
+Loads the .wasm file(s) for the specified module(s).
 
 ```typescript
-static loadWasm(moduleNames: Array<string>): Promise<void>;
+static loadWasm(moduleNames: Array<string> | string): Promise<void>;
 ```
 
 **Parameters**
@@ -149,7 +150,29 @@ static loadWasm(moduleNames: Array<string>): Promise<void>;
 **Code snippet**
 
 ```javascript
+await Dynamsoft.Core.CoreModule.loadWasm("cvr");
+```
+
+```javascript
 await Dynamsoft.Core.CoreModule.loadWasm(["cvr", "dbr"]);
+```
+
+## isModuleLoaded
+
+Returns whether the WebAssembly (.wasm) file for the specified modules has been loaded.     |
+
+```typescript
+static isModuleLoaded(moduleName: string): boolean;
+```
+
+**Parameters**
+
+`moduleName`: specifies a module.
+
+**Code snippet**
+
+```javascript
+Dynamsoft.Core.CoreModule.isModuleLoaded("cvr");
 ```
 
 ## enableLogging

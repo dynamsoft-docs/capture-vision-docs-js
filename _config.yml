@@ -2,6 +2,7 @@ repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-js/blob/mai
 repository: dynamsoft-docs/capture-vision-docs-js
 docFullPath: https://www.dynamsoft.com/capture-vision/docs/web/
 firstLevelUrl: /capture-vision/docs/web/
+docRootName: "Dynamsoft Capture Vision JS Edition" 
 docHomePage: /capture-vision/docs/core/introduction/
 
 introduction: /capture-vision/docs/core/introduction/

@@ -14,15 +14,14 @@ The `IntermediateResultReceiver` interface is responsible for receiving intermed
 
 ```typescript
 interface IntermediateResultReceiver {
-    getObservationParameters(): ObservationParameters;
     onTaskResultsReceived?(result: IntermediateResult, info: IntermediateResultExtraInfo): void;
     onPredetectedRegionsReceived?(result: PredetectedRegionsUnit, info: IntermediateResultExtraInfo): void;
-    onLocalizedBarcodesReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-    onDecodedBarcodesReceived?(result: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-    onLocalizedTextLinesReceived?(result: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
-    onRecognizedTextLinesReceived?(result: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
-    onDetectedQuadsReceived?(result: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
-    onNormalizedImagesReceived?(result: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
+    onLocalizedBarcodesReceived?(result: LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+    onDecodedBarcodesReceived?(result: DecodedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+    onLocalizedTextLinesReceived?(result: LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
+    onRecognizedTextLinesReceived?(result: RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
+    onDetectedQuadsReceived?(result: DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
+    onNormalizedImagesReceived?(result: NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
     onColourImageUnitReceived?(result: ColourImageUnit, info: IntermediateResultExtraInfo): void;
     onScaledDownColourImageUnitReceived?(result: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo): void;
     onGrayscaleImageUnitReceived?(result: GrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
@@ -36,13 +35,13 @@ interface IntermediateResultReceiver {
     onLineSegmentsUnitReceived?(result: LineSegmentsUnit, info: IntermediateResultExtraInfo): void;
     onTextZonesUnitReceived?(result: TextZonesUnit, info: IntermediateResultExtraInfo): void;
     onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo): void;
-    onLongLinesUnitReceived?(result: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo): void;
-    onCornersUnitReceived?(result: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo): void;
-    onCandidateQuadEdgesUnitReceived?(result: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
-    onCandidateBarcodeZonesUnitReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-    onScaledUpBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-    onDeformationResistedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-    onComplementedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    onLongLinesUnitReceived?(result: LongLinesUnit, info: IntermediateResultExtraInfo): void;
+    onCornersUnitReceived?(result: CornersUnit, info: IntermediateResultExtraInfo): void;
+    onCandidateQuadEdgesUnitReceived?(result: CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
+    onCandidateBarcodeZonesUnitReceived?(result: LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+    onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    onDeformationResistedBarcodeImageUnitReceived?(result: DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
 }
 
 ```
@@ -79,18 +78,6 @@ interface IntermediateResultReceiver {
 | [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Called when deformation resisted barcode image units have been received. |
 | [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived) | Called when complemented barcode image units have been received. |
 
-## getObservedParameters
-
-Gets the observed parameters of the intermediate result receiver.
-
-```typescript
-getObservationParameters(): ObservationParameters;
-```
-
-**Return value**
-
-Returns the object of CObservedParameters. The default parameters are to observe all intermediate result unit types and all tasks.
-
 ## onTaskResultsReceived
 
 Called when a task result has been received.
@@ -124,7 +111,7 @@ onPredetectedRegionsReceived?(result: PredetectedRegionsUnit, info: Intermediate
 Called when localized barcodes have been received.
 
 ```typescript
-onLocalizedBarcodesReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+onLocalizedBarcodesReceived?(result: LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -138,7 +125,7 @@ onLocalizedBarcodesReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUni
 Called when decoded barcodes have been received.
 
 ```typescript
-onDecodedBarcodesReceived?(result: DBR.IntermediateResult.DecodedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+onDecodedBarcodesReceived?(result: DecodedBarcodesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -152,7 +139,7 @@ onDecodedBarcodesReceived?(result: DBR.IntermediateResult.DecodedBarcodesUnit, i
 Called when localized text lines have been received.
 
 ```typescript
-onLocalizedTextLinesReceived?(result: DLR.IntermediateResult.LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
+onLocalizedTextLinesReceived?(result: LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -166,7 +153,7 @@ onLocalizedTextLinesReceived?(result: DLR.IntermediateResult.LocalizedTextLinesU
 Called when recognized text lines have been received.
 
 ```typescript
-onRecognizedTextLinesReceived?(result: DLR.IntermediateResult.RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
+onRecognizedTextLinesReceived?(result: RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -180,7 +167,7 @@ onRecognizedTextLinesReceived?(result: DLR.IntermediateResult.RecognizedTextLine
 Called when detected quadrilaterals have been received.
 
 ```typescript
-onDetectedQuadsReceived?(result: DDN.IntermediateResult.DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
+onDetectedQuadsReceived?(result: DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -194,7 +181,7 @@ onDetectedQuadsReceived?(result: DDN.IntermediateResult.DetectedQuadsUnit, info:
 Called when normalized images have been received.
 
 ```typescript
-onNormalizedImagesReceived?(result: DDN.IntermediateResult.NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
+onNormalizedImagesReceived?(result: NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -390,7 +377,7 @@ onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: 
 Called when a long lines unit is received.
 
 ```typescript
-onLongLinesUnitReceived?(result: DDN.IntermediateResult.LongLinesUnit, info: IntermediateResultExtraInfo): void;
+onLongLinesUnitReceived?(result: LongLinesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -404,7 +391,7 @@ onLongLinesUnitReceived?(result: DDN.IntermediateResult.LongLinesUnit, info: Int
 Called when a corners unit is received.
 
 ```typescript
-onCornersUnitReceived?(result: DDN.IntermediateResult.CornersUnit, info: IntermediateResultExtraInfo): void;
+onCornersUnitReceived?(result: CornersUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -418,7 +405,7 @@ onCornersUnitReceived?(result: DDN.IntermediateResult.CornersUnit, info: Interme
 Called when a candidate quad edges unit is received.
 
 ```typescript
-onCandidateQuadEdgesUnitReceived?(result: DDN.IntermediateResult.CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
+onCandidateQuadEdgesUnitReceived?(result: CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -432,7 +419,7 @@ onCandidateQuadEdgesUnitReceived?(result: DDN.IntermediateResult.CandidateQuadEd
 Called when a candidate barcode zones unit is received.
 
 ```typescript
-onCandidateBarcodeZonesUnitReceived?(result: DBR.IntermediateResult.LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
+onCandidateBarcodeZonesUnitReceived?(result: LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -446,7 +433,7 @@ onCandidateBarcodeZonesUnitReceived?(result: DBR.IntermediateResult.LocalizedBar
 Called when a scaled up barcode image unit is received.
 
 ```typescript
-onScaledUpBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -460,7 +447,7 @@ onScaledUpBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ScaledUpBarco
 Called when a deformation resisted barcode image unit is received.
 
 ```typescript
-onDeformationResistedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+onDeformationResistedBarcodeImageUnitReceived?(result: DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -474,7 +461,7 @@ onDeformationResistedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.De
 Called when a complemented barcode image unit is received.
 
 ```typescript
-onComplementedBarcodeImageUnitReceived?(result: DBR.IntermediateResult.ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**

@@ -49,10 +49,10 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let view = await Dynamsoft.DCE.CameraView.createInstance();
-dce = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-cvr.setInput(dce);
+cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+router.setInput(dce);
 ```
 
 ## getInput
@@ -100,13 +100,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
                 console.log("run CaptureStateListener", state);
             }
         }
-cvr.addCaptureStateListener(csl);
+router.addCaptureStateListener(csl);
 ```
 
 ## removeCaptureStateListener
@@ -130,13 +130,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
                 console.log("run CaptureStateListener", state);
             }
         }
-cvr.removeCaptureStateListener(csl);
+router.removeCaptureStateListener(csl);
 ```
 -->
 
@@ -161,13 +161,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let isasl = {
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+let listener = {
     onImageSourceStateListener(state) {
         console.log("run ImageSourceAdapterStatusListener", state);
     }
 }
-cvr.addImageSourceStateListener(isasl);
+router.addImageSourceStateListener(listener);
 ```
 
 ## removeImageSourceStateListener
@@ -191,13 +191,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let isasl = {
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+let listener = {
     onImageSourceStateListener(state) {
         console.log("run ImageSourceAdapterStatusListener", state);
     }
 }
-cvr.removeImageSourceStateListener(isasl);
+router.removeImageSourceStateListener(listener);
 ```
 
 ## addResultReceiver
@@ -221,12 +221,12 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDetectedQuadsReceived(result) {
     //* Do something with the result */
 };
-cvr.addResultReceiver(resultReceiver);
+router.addResultReceiver(resultReceiver);
 ```
 
 ## removeResultReceiver
@@ -250,13 +250,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDetectedQuadsReceived(result) {
     //* Do something with the result */
 };
-cvr.addResultReceiver(resultReceiver);
-cvr.removeResultReceiver(resultReceiver);
+router.addResultReceiver(resultReceiver);
+router.removeResultReceiver(resultReceiver);
 ```
 
 ## addResultFilter
@@ -281,8 +281,8 @@ Returns a promise that resolves when the result filter have been successfully ad
 
 ```javascript
 filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.addResultReceiver(filter);
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.addResultReceiver(filter);
 ```
 
 > In the provided code snippet, the default filter implementation is utilized. This filter can offer cross-validation and de-duplication functionalities. To utilize this filter, it's necessary to include the corresponding package `dynamsoft-utility`.
@@ -313,9 +313,9 @@ None.
 
 ```javascript
 filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.addResultReceiver(filter);
-cvr.removeResultFilter(filter);
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.addResultReceiver(filter);
+router.removeResultFilter(filter);
 ```
 
 ## startCapturing
@@ -339,8 +339,8 @@ Returns a promise that resolves to void.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-await cvr.startCapturing();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+await router.startCapturing();
 ```
 
 ## stopCapturing
@@ -364,6 +364,6 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.stopCapturing();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.stopCapturing();
 ```

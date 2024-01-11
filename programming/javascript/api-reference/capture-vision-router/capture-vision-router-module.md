@@ -72,7 +72,7 @@ The APIs for this class are:
 | [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object. |
 | [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
 
-### Others
+### Intermediate Result
 
 | API Name                                                                                | Description                                    |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------- |

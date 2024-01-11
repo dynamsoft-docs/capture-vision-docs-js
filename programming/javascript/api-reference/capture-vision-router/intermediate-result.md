@@ -14,7 +14,7 @@ permalink: /programming/javascript/api-reference/capture-vision-router/intermedi
 
 | API Name                                                        | Description                                               |
 | --------------------------------------------------------------- | --------------------------------------------------------- |
-| [getIntermediateResultManager()](#getintermediateresultmanager) | Returns an `CIntermediateResultManager` object.           |
+| [getIntermediateResultManager()](#getintermediateresultmanager) | Returns an `IntermediateResultManager` object.           |
 
 ## GetIntermediateResultManager
 
@@ -23,7 +23,7 @@ Returns an object that manages the saving and retrieval of intermediate results.
 **Syntax**
 
 ```typescript
-getIntermediateResultManager(): Core.IntermediateResult.IntermediateResultManager;
+getIntermediateResultManager(): Dynamsoft.CVR.IntermediateResultManager;
 ```
 
 **Parameters**

@@ -23,7 +23,7 @@ The LicenseManager class provides a set of APIs to manage the licensing for the 
 Returns the unique identifier of the device.
 
 ```typescript
-static getDeviceUUID(): string;
+static getDeviceUUID(): Promise<string>;
 ```
 
 **Return Value**
@@ -93,7 +93,9 @@ Dynamsoft.License.LicenseManager.initLicense("your-license-key", true)
 
 ## setDeviceFriendlyName
 
-Sets a recognizable name for the device which corresponds to its UUID.
+Sets a recognizable name for the device which corresponds to its UUID. 
+
+> Please be aware that this method must be called before `Dynamsoft.CVR.CaptureVisionRouter.createInstance()` or `Dynamsoft.Core.CoreModule.loadWasm()` or `Dynamsoft.DCP.CodeParser.createInstance()` to take effect.
 
 ```typescript
 static setDeviceFriendlyName(name: string): void;
