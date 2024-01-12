@@ -31,7 +31,10 @@ For DCV, no matter which platform or language it is implemented in, a specific t
 
 ### Get started
 
-The best way to get started with Dynamsoft Capture Vision JavaScript Edition is to follow the [User Guide](https://dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html) to build your own application.
+The best way to get started with Dynamsoft Capture Vision JavaScript Edition is to follow the User Guide of an SDK with specific function to build your own application.
+
+* [User Guide for Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/programming/javascript/user-guide/index.html)
+* [User Guide for Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/index.html)
 
 ### Check APIs
 

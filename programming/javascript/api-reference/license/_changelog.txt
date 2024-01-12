@@ -1,0 +1,32 @@
+
+# License Module Changelog
+
+## 3.0.20
+
+* Added the following static methods and properties
+    * CoreModule.detectEnvironment()
+    * CoreModule.onWarning
+    * CoreModule.engineResourcePaths
+    * CoreModule.loadWasm()
+    * CoreModule.loadModel()
+    * CoreModule.enableLogging()
+    * CoreModule.disableLogging()
+* Added the instance method setErrorListener() to the abstract class ImageSourceAdapter.
+* Removed the class IntermediateResultManager. The substitute is the same class on the CaptureVisionRouter Module.
+* Added the following interface:
+    * ImageSourceErrorListener
+* Removed the interface CapturedResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
+* Removed the interface IntermediateResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
+* Added the following enum
+    * EnumTransformMatrixType
+    
+## 3.0.10
+
+* First implementation of the License Module in JavaScript -- Based on License Module C++ 3.0.10.
+* Implemented the following static method:
+    * LicenseModule.getVersion()
+
+* Implemented the LicenseManager Class with the following staic methods
+	* LicenseManager.getDeviceUUID()
+	* LicenseManager.initLicense()
+	* LicenseManager.setDeviceFriendlyName()

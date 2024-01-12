@@ -1,16 +1,15 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Single Process - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to "Single Process" with Dynamsoft Capture Vision JavaScript Edition.
+title: CaptureVisionRouter v2.0.10 Single Process - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to Single Process with Dynamsoft Capture Vision JavaScript Edition v2.0.10.
 keywords: capture vision, caputre, image processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/single-file-processing.html
 ---
 
-# CaptureVisionRouter Single File Processing
+# CaptureVisionRouter Single Image Processing
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
@@ -23,7 +22,7 @@ Process an image or file to derive important information.
 **Syntax**
 
 ```typescript
-capture(imageOrFile: Core.BasicStructures.DSImageData | string | Blob | HTMLImageElement | HTMLCanvasElement, templateName?: string): Promise<Array<Core.BasicStructures.CapturedResult>>;
+capture(imageOrFile: Core.DSImageData | string | Blob | HTMLImageElement | HTMLCanvasElement, templateName?: string): Promise<Array<Core.CapturedResult>>;
 ```
 
 **Parameters**

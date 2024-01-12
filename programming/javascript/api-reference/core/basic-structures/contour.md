@@ -1,31 +1,28 @@
 ---
 layout: default-layout
-title: interface Contour - Dynamsoft Core Module JS Edition API Reference
+title: Interface Contour - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Contour in Dynamsoft Core Module.
 keywords: contour, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Contour
 
-The Contour class represents a contour in 2D space. It contains an array of Point objects, which represent the vertices of the contour.
-
-## Definition
+The `Contour` interface defines the structure of a contour in 2-dimensional space. It contains an array of `Point` objects, which represent the vertices of the contour.
 
 ```typescript
 interface Contour {
-                points: Array<Point>;
-            }
+    points: Array<Point>;
+}
 ```
-
-
   
 | Properties | Type |
 |---------- | ---- |
-| [`points`](#points)| *Array* |
+| [points](#points)| *Array\<Point>* |
 
-### points
+## points
 
 The point array of the contour.
 

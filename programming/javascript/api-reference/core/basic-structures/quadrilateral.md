@@ -1,32 +1,29 @@
 ---
 layout: default-layout
-title: interface Quadrilateral - Dynamsoft Core Module JS Edition API Reference
+title: Interface Quadrilateral - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Quadrilateral in Dynamsoft Core Module.
 keywords: quadrilateral, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Quadrilateral
 
-The interface Quadrilateral represents a quadrilateral shape defined by four points. It contains an array of four Point objects.
-
-## Definition
+The `Quadrilateral` interface defines a shape that represents a quadrilateral in 2-dimensional space.
 
 ```typescript
 interface Quadrilateral {
-                points: [Point, Point, Point, Point];
-            }
+    points: [Point, Point, Point, Point];
+}
 ```
-
-
   
 | Properties | Type |
 |---------- | ---- |
-| [`points`](#points) | *Point* |
+| [points](#points) | *Point* |
 
 
-### points
+## points
 
 The point array of the quadrilateral.
 

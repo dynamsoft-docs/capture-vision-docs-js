@@ -1,32 +1,28 @@
 ---
 layout: default-layout
-title: interface IntermediateResult - Dynamsoft Core Module JS Edition API Reference
+title: Interface IntermediateResult - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface IntermediateResult in Dynamsoft Core Module.
 keywords: task results, intermediate results, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # IntermediateResult
 
-The IntermediateResult interface represents a container containing a collection of IntermediateResultUnit objects.
-
-## Definition
+The `IntermediateResult` interface represents a container containing a collection of IntermediateResultUnit objects.
 
 ```typescript
 interface IntermediateResult {
-                intermediateResultUnits: Array<IntermediateResultUnit>;
-            }
+    intermediateResultUnits: Array<IntermediateResultUnit>;
+}
 ```
-
-
 
 | Properties | Type |
 |--------|-------------|
-| [`intermediateResultUnits`](#intermediateresultunits) | *Array<IntermediateResultUnit>* |
+| [intermediateResultUnits](#intermediateresultunits) | *Array\<IntermediateResultUnit>* |
 
-
-### intermediateResultUnits
+## intermediateResultUnits
 
 An Array containing a collection of IntermediateResultUnit objects.
 

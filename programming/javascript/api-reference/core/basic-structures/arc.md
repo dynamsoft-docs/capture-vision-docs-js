@@ -1,39 +1,36 @@
 ---
 layout: default-layout
-title: interface Arc - Dynamsoft Core Module JS Edition API Reference
+title: Interface Arc - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Arc in Dynamsoft Core Module.
 keywords: image data, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Arc
 
-The Arc class represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
-
-## Definition
+The `Arc` interface defines the structure of a "arc" shape in 2-dimensional space.
 
 ```typescript
 interface Arc {
-                x: number;
-                y: number;
-                radius: number;
-                startAngle: number;
-                endAngle: number;
-            } 
+    x: number;
+    y: number;
+    radius: number;
+    startAngle: number;
+    endAngle: number;
+} 
 ```
 
+| Properties                  | Type     |
+| --------------------------- | -------- |
+| [x](#x)                   | *number* |
+| [y](#y)                   | *number* |
+| [radius](#radius)         | *number* |
+| [startAngle](#startangle) | *number* |
+| [endAngle](#endangle)     | *number* |
 
-
-| Properties            | Type |
-|----------------------|-------------|
-| [`x`](#x) | *number* |
-| [`y`](#y) | *number* |
-| [`radius`](#radius) | *number* |
-| [`startAngle`](#startangle) | *number* |
-| [`endAngle`](#endangle) | *number* |
-
-### x
+## x
 
 The x-coordinate of the center point of the arc.
 
@@ -41,7 +38,7 @@ The x-coordinate of the center point of the arc.
 x: number;
 ```
 
-### y
+## y
 
 The y-coordinate of the center point of the arc.
 
@@ -49,7 +46,7 @@ The y-coordinate of the center point of the arc.
 y: number;
 ```
 
-### radius
+## radius
 
 The radius of the arc.
 
@@ -57,7 +54,7 @@ The radius of the arc.
 radius: number;
 ```
 
-### startAngle
+## startAngle
 
 The starting angle of the arc in radians.
 
@@ -65,7 +62,7 @@ The starting angle of the arc in radians.
 startAngle: number;
 ```
 
-### endAngle
+## endAngle
 
 The ending angle of the arc in radians.
 

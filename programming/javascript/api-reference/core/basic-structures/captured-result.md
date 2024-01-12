@@ -1,35 +1,36 @@
 ---
 layout: default-layout
-title: interface CapturedResult - Dynamsoft Core Module JS Edition API Reference
+title: Interface CapturedResult - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface CapturedResult in Dynamsoft Core Module.
 keywords: captured result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # CapturedResult
 
-The CapturedResult provides access to the original image information and the list of captured result items, allowing you to retrieve and process the captured data as needed.
-
-## Definition
+The `CapturedResult` interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
 ```typescript
 interface CapturedResult {
-                readonly OriginalImageHashId: string;
-                readonly OriginalImageTag: ImageTag;
-                readonly items: Array<CapturedResultItem>;
-            }
+    readonly OriginalImageHashId: string;
+    readonly OriginalImageTag: ImageTag;
+    readonly items: Array<CapturedResultItem>;
+    readonly errorCode: number;
+    readonly errorString: string;
+}
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`OriginalImageHashId`](#originalimagehashid) | *String* |
-| [`OriginalImageTag`](#originalimagetag) | *ImageTag* |
-| [`items`](#items) | *Array* |
+| [OriginalImageHashId](#originalimagehashid) | *String* |
+| [OriginalImageTag](#originalimagetag) | *ImageTag* |
+| [items](#items) | *Array\<CapturedResultItem>* |
+| [errorCode](#errorcode) | *number* |
+| [errorString](#errorstring) | *string* |
 
-### OriginalImageHashId
+## OriginalImageHashId
 
 A string representing the hash ID of the original image.
 
@@ -37,7 +38,7 @@ A string representing the hash ID of the original image.
 readonly OriginalImageHashId: string;
 ```
 
-### OriginalImageTag
+## OriginalImageTag
 
 An `ImageTag` object representing the tag associated with the original image.
 
@@ -45,10 +46,26 @@ An `ImageTag` object representing the tag associated with the original image.
 readonly OriginalImageTag: ImageTag;
 ```
 
-### items
+## items
 
 An array of `CapturedResultItem` objects representing the captured result items.
 
 ```typescript
 readonly items: Array<CapturedResultItem>;
+```
+
+## errorCode
+
+The error code of the capture operation.
+
+```typescript
+readonly errorCode: number;
+```
+
+## errorString
+
+The error message of the capture operation.
+
+```typescript
+readonly errorString: string;
 ```

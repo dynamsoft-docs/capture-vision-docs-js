@@ -1,37 +1,34 @@
 ---
 layout: default-layout
-title: interface Corner - Dynamsoft Core Module JS Edition API Reference
+title: Interface Corner - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the class Corner in Dynamsoft Core Module.
 keywords: corner, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Corner
 
-Corner is a structure in an image consisting of two line segments and intersection point. A Corner represents a point at which the image's brightness or color sharply changes.
-
-## Definition
+The `Corner` interface defines the structure of a "Corner" object which consists of two lines and the intersection point in 2-dimensional space.
 
 ```typescript
 interface Corner {
-                type: EnumCornerType;
-                intersection: Point;
-                line1: LineSegment;
-                Line2: LineSegment;
-            } 
+    type: EnumCornerType;
+    intersection: Point;
+    line1: LineSegment;
+    Line2: LineSegment;
+} 
 ```
-
-## Attributes
   
 | Properties | Type |
 |---------- | ---- |
-| [`type`](#type) | *EnumCornerType* |
-| [`intersection`](#intersection) | *Point* |
-| [`line1`](#line1) | *LineSegment* |
-| [`line2`](#line2) | *LineSegment* |
+| [type](#type) | *EnumCornerType* |
+| [intersection](#intersection) | *Point* |
+| [line1](#line1) | *LineSegment* |
+| [line2](#line2) | *LineSegment* |
 
-### type
+## type
 
 The type of the corner.
 
@@ -39,7 +36,7 @@ The type of the corner.
 type: EnumCornerType;
 ```
 
-### intersection
+## intersection
 
 The intersection point of the corner.
 
@@ -47,7 +44,7 @@ The intersection point of the corner.
 intersection: Point;
 ```
 
-### line1
+## line1
 
 The first line connected to the corner.
 
@@ -55,7 +52,7 @@ The first line connected to the corner.
 line1: LineSegment;
 ```
 
-### line2
+## line2
 
 The second line connected to the corner.
 

@@ -1,33 +1,30 @@
 ---
 layout: default-layout
-title: interface Point - Dynamsoft Core Module JS Edition API Reference
+title: Interface Point - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Point in Dynamsoft Core Module.
 keywords: point, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # Point
 
-The interface Point represents a point in 2D space. It contains of two numbers, which represent the coordinates of the point.
-
-## Definition
+The `Point` interface defines a shape that represents a point in 2-dimensional space.
 
 ```typescript
 interface Point {
-                x: number;
-                y: number;
-            }
+    x: number;
+    y: number;
+}
 ```
-
-
 
 | Properties | Type |
 |---------- | ---- |
-| [`x`](#x) | *Number* |
-| [`y`](#y) | *Number* |
+| [x](#x) | *Number* |
+| [y](#y) | *Number* |
 
-### x
+## x
 
 The X coordinates of the Point.
 
@@ -35,7 +32,7 @@ The X coordinates of the Point.
 x: number;
 ```
 
-### y
+## y
 
 The Y coordinates of the Point.
 

@@ -1,0 +1,47 @@
+---
+layout: default-layout
+title: CaptureVisionRouter Single Process - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to Single Process with Dynamsoft Capture Vision JavaScript Edition.
+keywords: capture vision, caputre, image processing, api reference, javascript, js
+needAutoGenerateSidebar: true
+needGenerateH3Content: false
+noTitleIndex: true
+breadcrumbText: CVR JavaScript CaptureVisionRouter
+---
+
+# CaptureVisionRouter Single Image Processing
+
+| API Name              | Description                                               |
+| --------------------- | --------------------------------------------------------- |
+| [capture()](#capture) | Process an image or file to derive important information. |
+
+## capture
+
+Process an image or file to derive important information.
+
+**Syntax**
+
+```typescript
+capture(imageOrFile: Blob | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | Core.DSImageData | string, templateName?: string): Promise<Array<Core.CapturedResult>>;
+```
+
+**Parameters**
+
+`imageOrFile`: specifies the image or file to be processed. It can accept various types of data representing images: `Blob`,`ArrayBuffer`,`Uint8Array`,`Uint8ClampedArray`,`HTMLImageElement`,`HTMLCanvasElement`,`HTMLVideoElement`,`Core.DSImageData`,`string`.
+
+`templateName`: specifies a [CaptureVisionTemplate]({{site.parameterFile}}capture-vision-template.html) to use. If not specified, the default one is used.
+
+**Return value**
+
+A promise that resolves to an array of `CapturedResult` objects which are the derived information from each image processed.
+
+**Code snippet**
+
+```javascript
+let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+let results = await router.capture("blob:https://demo.dynamsoft.com/afb84bd2-e8cb-4b96-92b6-36dc89783692", "ReadSingleBarcode");
+let count = results.items.length;
+for(let i = 0; i < count; i++) {
+    //...
+}
+```

@@ -7,70 +7,15 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/instantiate.html
 ---
 
 # CaptureVisionRouter Instantiate
 
-| API Name                            | Description                                                            |
-| ----------------------------------- | ---------------------------------------------------------------------- |
-| [preLoadModule()](#preloadmodule)   | Loads the specified module to speed up the initialization.             |
-| [isModuleLoaded()](#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
-| [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
-| [dispose()](#dispose)               | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed](#disposed)               | Returns whether the `CaptureVisionRouter` object has been disposed of. |
-
-## preLoadModule
-
-Loads the specified module to speed up the initialization.
-
-**Syntax**
-
-```typescript
-preLoadModule(moduleName: string | Array<string>): void
-```
-
-**Parameter**
-
-`moduleNameIt`: It takes a string or an array of strings representing the module or modules to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
-
-**Return value**
-
-None.
-
-**Code snippet**
-
-```javascript
-Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]);
-```
-
-## isModuleLoaded
-
-Returns whether the specified module has been loaded.
-
-**Syntax**
-
-```typescript
-isModuleLoaded(moduleName: string): boolean;
-```
-
-**Parameter**
-
-`moduleName`: It takes a string representing the module to preload. Valid values for moduleName are 'DBR' (Dynamsoft Barcode Reader), 'DLR' (Dynamsoft Label Recognizer), 'DDN' (Dynamsoft Document Normalizer), and 'DCP' (Dynamsoft Code Parser).
-
-**Return value**
-
-A boolean value that indicates whether the required module has been loaded.
-
-**Code snippet**
-
-```javascript
-if(router.isModuleLoaded("DDN")){
-  // Use the router to perform a DBR job.
-} else {
-  console.log("DDN module is not preloaded.");
-}
-```
+| API Name                                     | Description                                                            |
+| -------------------------------------------- | ---------------------------------------------------------------------- |
+| `static` [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
+| [dispose()](#dispose)                        | Releases all resources used by the `CaptureVisionRouter` object.       |
+| [disposed](#disposed)                        | Returns whether the `CaptureVisionRouter` object has been disposed of. |
 
 ## createInstance
 
@@ -146,8 +91,8 @@ A boolean value that indicates whether the `CaptureVisionRouter` object has been
 
 ```javascript
 if(router.disposed){
-  console.log("The router has been disposed of.");
+    console.log("The router has been disposed of.");
 } else {
-  // Use the router to perform a job.
+    // Use the router to perform a job.
 }
 ```

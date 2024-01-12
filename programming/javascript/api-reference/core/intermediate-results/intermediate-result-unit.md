@@ -1,38 +1,36 @@
 ---
 layout: default-layout
-title: interface IntermediateResultUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface IntermediateResultUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface IntermediateResultUnit in Dynamsoft Core Module.
 keywords: intermediate result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # IntermediateResultUnit
 
-The IntermediateResultUnit interface represents an intermediate result unit used in image processing.
-
-## Definition
+The `IntermediateResultUnit` interface represents an intermediate result unit used in image processing.
 
 ```typescript
 interface IntermediateResultUnit {
-                hashId: string;
-                OriginalImageHashId: string;
-                originalImageTag: Core.BasicStructures.ImageTag;
-                unitType: EnumIntermediateResultUnitType;
-                getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
-            }
+    hashId: string;
+    OriginalImageHashId: string;
+    originalImageTag: Core.ImageTag;
+    unitType: EnumIntermediateResultUnitType;
+    getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
+}
 ```
-
 
 | API Name               | Description |
 |----------------------|-------------|
-| [`hashId`](#hashid) | Gets the hash ID of the unit.|
-| [`originalImageHashId`](#originalimagehashid) | Gets the hash ID of the original image. |
-| [`originalImageTag`](#originalimagetag) | Gets the image tag of the original image. |
-| [`unitType`](#unittype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`](#gettransformmatrix) | Gets the transformation matrix from local to original image coordinates. |
+| [hashId](#hashid) | Gets the hash ID of the unit.|
+| [originalImageHashId](#originalimagehashid) | Gets the hash ID of the original image. |
+| [originalImageTag](#originalimagetag) | Gets the image tag of the original image. |
+| [unitType](#unittype) | Gets the type of the intermediate result unit. |
+| [getTransformMatrix](#gettransformmatrix) | Gets the transformation matrix from local to original image coordinates. |
 
-### hashId
+## hashId
 
 The hash ID of the intermediate result unit.
 
@@ -44,7 +42,7 @@ hashId: string;
 
 Returns the hash ID of the unit. 
 
-### originalImageHashId
+## originalImageHashId
 
 The hash ID of the original image.
 
@@ -56,19 +54,19 @@ OriginalImageHashId: string;
 
 Returns the hash ID of the original image.
 
-### originalImageTag
+## originalImageTag
 
 The image tag of the original image.
 
 ```typescript
-originalImageTag: Core.BasicStructures.ImageTag;
+originalImageTag: Core.ImageTag;
 ```
 
 **Return value**
 
 Returns the image tag of the original image.
 
-### unitType
+## unitType
 
 The type of the intermediate result unit.
 
@@ -76,7 +74,7 @@ The type of the intermediate result unit.
 unitType: EnumIntermediateResultUnitType;
 ```
 
-### getTransformMatrix
+## getTransformMatrix
 
 Get the transformation matrix from local to original image coordinates.
 

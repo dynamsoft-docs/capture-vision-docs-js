@@ -1,38 +1,36 @@
 ---
 layout: default-layout
-title: interface Rect - Dynamsoft Core Module JS Edition API Reference
+title: Interface Rect - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface Rect in Dynamsoft Core Module.
 keywords: image data, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
 ---
 
 # Rect
 
-The interface Rect represents a rectangle in 2D space. It contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
-
-## Definition
+The `Rect` interface defines a shape that represents a rectangle in 2-dimensional space.
 
 ```typescript
 interface Rect {
-                x: number;
-                y: number;
-                width: number;
-                height: number;
-                isMeasuredInPercentage?: boolean;
-            }
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    isMeasuredInPercentage?: boolean;
+}
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`x`](#x) | *number* |
-| [`y`](#y) | *number* |
-| [`width`](#width) | *number* |
-| [`height`](#height) | *number* |
-| [`isMeasuredInPercentage`](#ismeasuredinpercentage) | *boolean* |
+| [x](#x) | *number* |
+| [y](#y) | *number* |
+| [width](#width) | *number* |
+| [height](#height) | *number* |
+| [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
 
-### x
+## x
 
 The x coordinate of the upper left corner point of the rectangle.
 
@@ -40,7 +38,7 @@ The x coordinate of the upper left corner point of the rectangle.
 x: number,
 ```
 
-### y
+## y
 
 The y coordinate of the upper left corner point of the rectangle.
 
@@ -48,7 +46,7 @@ The y coordinate of the upper left corner point of the rectangle.
 y: number,
 ```
 
-### width
+## width
 
 The width of the rectangle.
 
@@ -56,7 +54,7 @@ The width of the rectangle.
 width: number,
 ```
 
-### height
+## height
 
 The height of the rectangle.
 
@@ -64,7 +62,7 @@ The height of the rectangle.
 height: number;
 ```
 
-### isMeasuredInPercentage
+## isMeasuredInPercentage
 
 Whether to use a percentage measurement for this Rect.
 

@@ -1,31 +1,30 @@
 ---
 layout: default-layout
-title: interface ImageTag - Dynamsoft Core Module JS Edition API Reference
+title: Interface ImageTag - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface ImageTag in Dynamsoft Core Module.
 keywords: image tag, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # ImageTag
 
-The interface ImageTag represents an image tag that can be attached to an image in a system. It contains information about the image, such as the image ID and the image tag type.
-
-## Definition
+The `ImageTag` interface defines a structure that stores information about an image returned by an [image source](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html).
 
 ```typescript
 interface ImageTag {
-                imageId: number;
-                type: EnumImageTagType;
-            }
+    imageId: number;
+    type: EnumImageTagType;
+}
 ```
 
-| Properties            | Type |
-|----------------------|-------------|
-| [`imageId`](#imageid) | *Number* |
-| [`type`](#type) | *EnumImageTagType* |
+| Properties            | Type               |
+| --------------------- | ------------------ |
+| [imageId](#imageid) | *Number*           |
+| [type](#type)       | *EnumImageTagType* |
 
-### imageId
+## imageId
 
 The imageId attached to the image.
 
@@ -33,7 +32,7 @@ The imageId attached to the image.
 imageId: number;
 ```
 
-### type
+## type
 
 The image tag type (image file or video frame) attached to the image.
 

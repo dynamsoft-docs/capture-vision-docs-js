@@ -7,18 +7,17 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/settings.html
 ---
 
 # CaptureVisionRouter Settings
 
-| API Name                                          | Description                                                                                                   |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [initSettings()](#initsettings)                   | Initializes a specific settings. Settings can either be a JSON string or a url to a JSON file.                |
-| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                      |
-| [getSimplifiedSettings()](#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`.      |
-| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.         |
-| [resetSettings()](#resetsettings)                 | Resets settings to factory default.                                                                           |
+| API Name                                          | Description                                                                                              |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [initSettings()](#initsettings)                   | Initializes a specific settings. Settings can either be a JSON string or a url to a JSON file.           |
+| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                 |
+| [getSimplifiedSettings()](#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`. |
+| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.    |
+| [resetSettings()](#resetsettings)                 | Resets settings to factory default.                                                                      |
 
 
 ## initSettings
@@ -44,11 +43,14 @@ Returns a promise that resolves when the settings have been successfully initial
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-const settings = `{
-  "templateName": "myTemplate",
-  "ScaleDownThreshold" : 2000
-  }
-}`;
+const settings = {
+  "CaptureVisionTemplates": [
+    {
+      "Name": "ReadBarcodes_my_setting",
+      "Timeout": 5000
+    }
+  ],
+};
 await router.initSettings(settings);
 ```
 
@@ -59,12 +61,12 @@ Returns the settings of the CaptureVisionRouter as a JSON string.
 **Syntax**
 
 ```typescript
-outputSettings(templateName?: string): Promise<string>;
+outputSettings(templateName: string): Promise<string>;
 ```
 
 **Parameters**
 
-`templateName`(optional): The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned.
+`templateName`: The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned; if templateName = "*", export all the loaded templates.
 
 **Return value**
 
@@ -85,7 +87,7 @@ Retrieves the simplified settings for a specific template from the CaptureVision
 **Syntax**
 
 ```typescript
-getSimplifiedSettings(templateName: string): Promise<SimplifiedCaptureVisionSettings | null>;
+getSimplifiedSettings(templateName: string): Promise<SimplifiedCaptureVisionSettings>;
 ```
 
 **parameter**
@@ -96,7 +98,7 @@ getSimplifiedSettings(templateName: string): Promise<SimplifiedCaptureVisionSett
 
 Returns a promise that resolves with a SimplifiedCaptureVisionSettings object representing the simplified settings for the specified template.
 
-> Remarks: If the underlying CaptureSettings is too complicated, we cannot construct a Simplified CaptureSettings in which case it returns null.
+> Remarks: If the underlying CaptureSettings is too complicated, we cannot construct a Simplified CaptureSettings in which case it returns an error.
 
 **Code snippet**
 
@@ -107,7 +109,7 @@ settings = await router.getSimplifiedSettings();
 
 ## updateSettings
 
-Updates a few key settings of a template with new values.
+Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.
 
 **Syntax**
 
@@ -129,10 +131,10 @@ Returns a promise that resolves when the template settings have been successfull
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let newSettings = await cvr.getSimplifiedSettings("normalize-document");
+let newSettings = await router.getSimplifiedSettings("ReadSingleBarcode");
 newSettings.timeout = 5000;
-// Change the timeout of preset templates "normalize-document"
-await cvr.updateSettings("normalize-document", newSettings);
+// Change the timeout of preset templates "ReadSingleBarcode"
+await router.updateSettings("ReadSingleBarcode", newSettings);
 ```
 
 > Note: The updateSettings method allows you to update a template's settings with new values. It is specifically designed for fast configuration of the image processing process, with certain limitations:

@@ -1,32 +1,30 @@
 ---
 layout: default-layout
-title: interface TextureDetectionResultUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface TextureDetectionResultUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface TextureDetectionResultUnit in Dynamsoft Core Module.
 keywords: texture detection result, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # TextureDetectionResultUnit
 
-The TextureDetectionResultUnit interface represents an intermediate result unit for texture detection.
-
-## Definition
+The `TextureDetectionResultUnit` interface represents an intermediate result unit for texture detection.
 
 ```typescript
 interface TextureDetectionResultUnit extends IntermediateResultUnit {
-                xSpacing: number;
-                ySpacing: number;
-            }
+    xSpacing: number;
+    ySpacing: number;
+}
 ```
-
 
 | API Name               | Type |
 |----------------------|-------------|
-| [`xSpacing`](#xspacing) | number |
-| [`ySpacing`](#yspacing) | number |
+| [xSpacing](#xspacing) | number |
+| [ySpacing](#yspacing) | number |
 
-### xSpacing
+## xSpacing
 
 The x-direction spacing of the texture stripes.
 
@@ -34,7 +32,7 @@ The x-direction spacing of the texture stripes.
 xSpacing: number;
 ```
 
-### ySpacing
+## ySpacing
 
 The y-direction spacing of the texture stripes.
 

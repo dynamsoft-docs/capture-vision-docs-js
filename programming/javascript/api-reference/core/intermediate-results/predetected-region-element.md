@@ -1,31 +1,28 @@
 ---
 layout: default-layout
-title: interface PredetectedRegionElement - Dynamsoft Core Module JS Edition API Reference
+title: Interface PredetectedRegionElement - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interfaace PredetectedRegionElement in Dynamsoft Core Module.
 keywords: line segments, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # PredetectedRegionElement
 
-The PredetectedRegionElement interface extends the RegionObjectElement interface and represents a predetected region element.
-
-## Definition
+The `PredetectedRegionElement` interface extends the RegionObjectElement interface and represents a predetected region element.
 
 ```typescript
 interface PredetectedRegionElement extends RegionObjectElement {
-                modeName: string;
+    modeName: string;
 }
 ```
 
-
-
 | Properties               | Type |
 |----------------------|-------------|
-| [`modeName`](#modename) | *String* |
+| [modeName](#modename) | *String* |
 
-### modeName
+## modeName
 
 Gets the specified region pre-detection mode name
 

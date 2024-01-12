@@ -1,16 +1,15 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Consecutive Process - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to Consecutive Process of Dynamsoft Capture Vision JavaScript Edition.
+title: CaptureVisionRouter v2.0.10 Consecutive Process - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to Consecutive Process of Dynamsoft Capture Vision JavaScript Edition v2.0.10.
 keywords: capture vision, Consecutive Process, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
-permalink: /programming/javascript/api-reference/capture-vision-router/multiple-file-processing.html
 ---
 
-# CaptureVisionRouter Multiple File Processing
+# CaptureVisionRouter Multiple Image Processing
 
 | API Name                                                            | Description                                                                     |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
@@ -32,7 +31,7 @@ Sets the input image source for consecutive process.
 **Syntax**
 
 ```typescript
-setInput(imageSource: Core.BasicStructures.ImageSourceAdapter): void;
+setInput(imageSource: Core.ImageSourceAdapter): void;
 ```
 
 **parameter**
@@ -46,10 +45,10 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let view = await Dynamsoft.DCE.CameraView.createInstance();
-dce = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-cvr.setInput(dce);
+cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
+router.setInput(cameraEnhancer);
 ```
 
 ## getInput
@@ -59,7 +58,7 @@ Returns the current input image source of the CaptureVisionRouter.
 **Syntax**
 
 ```typescript
-getInput(): Core.BasicStructures.ImageSourceAdapter;
+getInput(): Core.ImageSourceAdapter;
 ```
 
 **parameter**
@@ -97,13 +96,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
                 console.log("run CaptureStateListener", state);
             }
         }
-cvr.addCaptureStateListener(csl);
+router.addCaptureStateListener(csl);
 ```
 
 ## removeCaptureStateListener
@@ -127,13 +126,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let csl = {
             onCaptureStateChanged(state) {
                 console.log("run CaptureStateListener", state);
             }
         }
-cvr.removeCaptureStateListener(csl);
+router.removeCaptureStateListener(csl);
 ```
 -->
 
@@ -158,14 +157,18 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let isasl = {
-            onImageSourceStateListener(state) {
-                console.log("run ImageSourceAdapterStatusListener", state);
-            }
-        }
-cvr.addImageSourceStateListener(isasl);
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+let listener = {
+    onImageSourceStateListener(state) {
+        console.log("run ImageSourceAdapterStatusListener", state);
+    }
+}
+router.addImageSourceStateListener(listener);
 ```
+
+**See Also**
+
+* [ImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
 
 ## removeImageSourceStateListener
 
@@ -188,13 +191,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let isasl = {
-            onImageSourceStateListener(state) {
-                console.log("run ImageSourceAdapterStatusListener", state);
-            }
-        }
-cvr.removeImageSourceStateListener(isasl);
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+let listener = {
+    onImageSourceStateListener(state) {
+        console.log("run ImageSourceAdapterStatusListener", state);
+    }
+}
+router.removeImageSourceStateListener(listener);
 ```
 
 ## addResultReceiver
@@ -204,7 +207,7 @@ Adds an object as the receiver of captured results.
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
+addResultReceiver(receiver: Core.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -218,12 +221,12 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDetectedQuadsReceived(result) {
     //* Do something with the result */
 };
-cvr.addResultReceiver(resultReceiver);
+router.addResultReceiver(resultReceiver);
 ```
 
 ## removeResultReceiver
@@ -233,7 +236,7 @@ Removes an object which was added as a receiver of captured results.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: Core.BasicStructures.CapturedResultReceiver): void;
+removeResultReceiver(receiver: Core.CapturedResultReceiver): void;
 ```
 
 **parameter**
@@ -247,13 +250,13 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onDetectedQuadsReceived(result) {
     //* Do something with the result */
 };
-cvr.addResultReceiver(resultReceiver);
-cvr.removeResultReceiver(resultReceiver);
+router.addResultReceiver(resultReceiver);
+router.removeResultReceiver(resultReceiver);
 ```
 
 ## addResultFilter
@@ -261,7 +264,7 @@ cvr.removeResultReceiver(resultReceiver);
 **Syntax**
 
 ```typescript
-addResultFilter(filter: Core.BasicStructures.CapturedResultFilter): Promise<void>;
+addResultFilter(filter: Core.CapturedResultFilter): Promise<void>;
 ```
 
 **parameter**
@@ -276,22 +279,22 @@ Returns a promise that resolves when the result filter have been successfully ad
 
 ```javascript
 filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.addResultReceiver(filter);
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.addResultReceiver(filter);
 ```
 
 > In the provided code snippet, the default filter implementation is utilized. This filter can offer cross-validation and de-duplication functionalities. To utilize this filter, it's necessary to include the corresponding package `dynamsoft-utility`.
 
 **See also**
 
-[`MultiFrameResultCrossFilter`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
+[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
 
 ## removeResultFilter
 
 **Syntax**
 
 ```typescript
-removeResultFilter(filter: Core.BasicStructures.CapturedResultFilter): void;
+removeResultFilter(filter: Core.CapturedResultFilter): void;
 ```
 
 **parameter**
@@ -306,9 +309,9 @@ None.
 
 ```javascript
 filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.addResultReceiver(filter);
-cvr.removeResultFilter(filter);
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.addResultReceiver(filter);
+router.removeResultFilter(filter);
 ```
 
 ## startCapturing
@@ -327,13 +330,13 @@ startCapturing(templateName?: string): Promise<void>;
 
 **Return Value**
 
-None.
+Returns a promise that resolves to void.
 
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-await cvr.startCapturing();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+await router.startCapturing();
 ```
 
 ## stopCapturing
@@ -357,6 +360,6 @@ None.
 **Code snippet**
 
 ```javascript
-cvr = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-cvr.stopCapturing();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+router.stopCapturing();
 ```

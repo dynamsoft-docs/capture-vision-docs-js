@@ -1,39 +1,36 @@
 ---
 layout: default-layout
-title: interface DSRect - Dynamsoft Core Module JS Edition API Reference
+title: Interface DSRect - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface DSRect in Dynamsoft Core Module.
 keywords: image data, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # DSRect
 
-The interface DSRect represents a rectangle in 2D space. It contains four integer values that specify the top, left, right, and bottom edges of the rectangle.
-
-## Definition
+The `DSRect` interface defines the shape of a rectangle in 2D space.
 
 ```typescript
 interface DSRect {
-                left: number;
-                right: number;
-                top: number;
-                bottom: number;
-                isMeasuredInPercentage: boolean;
-            }
+    left: number;
+    right: number;
+    top: number;
+    bottom: number;
+    isMeasuredInPercentage: boolean;
+}
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`left`](#left) | *number* |
-| [`right`](#right) | *number* |
-| [`top`](#top) | *number* |
-| [`bottom`](#bottom) | *number* |
-| [`isMeasuredInPercentage`](#ismeasuredinpercentage) | *boolean* |
+| [left](#left) | *number* |
+| [right](#right) | *number* |
+| [top](#top) | *number* |
+| [bottom](#bottom) | *number* |
+| [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
 
-### left
+## left
 
 The left edge of the rectangle.
 
@@ -41,7 +38,7 @@ The left edge of the rectangle.
 left: number;
 ```
 
-### right
+## right
 
 The right edge of the rectangle.
 
@@ -49,7 +46,7 @@ The right edge of the rectangle.
 right: number;
 ```
 
-### top
+## top
 
 The top edge of the rectangle.
 
@@ -57,7 +54,7 @@ The top edge of the rectangle.
 top: number;
 ```
 
-### bottom
+## bottom
 
 The bottom edge of the rectangle.
 
@@ -65,7 +62,7 @@ The bottom edge of the rectangle.
 bottom: number;
 ```
 
-### isMeasuredInPercentage
+## isMeasuredInPercentage
 
 Whether to use a percentage measurement for this DSRect.
 

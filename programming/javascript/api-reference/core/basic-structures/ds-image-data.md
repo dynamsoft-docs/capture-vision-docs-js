@@ -1,43 +1,40 @@
 ---
 layout: default-layout
-title: interface DSImageData - Dynamsoft Core Module JS Edition API Reference
+title: Interface DSImageData - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface DSImageData in Dynamsoft Core Module.
 keywords: image data, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # DSImageData
 
-The DSImageData class represents image data, which contains the image bytes, width, height, stride, pixel format, orientation and a tag.
-
-## Definition
+The `DSImageData` interface defines the structure of an object that represents an image.
 
 ```typescript
 interface DSImageData {
-                bytes: Uint8Array;
-                width: number;
-                height: number;
-                stride: number;
-                format: Core.BasicStructures.EnumImagePixelFormat;
-                orientation?: number;
-                tag?: ImageTag;
-            } 
+    bytes: Uint8Array;
+    width: number;
+    height: number;
+    stride: number;
+    format: Core.EnumImagePixelFormat;
+    orientation?: number;
+    tag?: ImageTag;
+} 
 ```
-
-
 
 | Properties            | Type |
 |----------------------|-------------|
-| [`bytes`](#bytes) | *Uint8Array* |
-| [`width`](#width) | *number* |
-| [`height`](#height) | *number* |
-| [`stride`](#stride) | *number* |
-| [`format`](#format) | *Core.BasicStructures.EnumImagePixelFormat* |
-| [`orientation`](#orientation) | *number* |
-| [`tag`](#tag) | *ImageTag* |
+| [bytes](#bytes) | *Uint8Array* |
+| [width](#width) | *number* |
+| [height](#height) | *number* |
+| [stride](#stride) | *number* |
+| [format](#format) | *Core.EnumImagePixelFormat* |
+| [orientation](#orientation) | *number* |
+| [tag](#tag) | *ImageTag* |
 
-### bytes
+## bytes
 
 Gets the image byte array.
 
@@ -45,7 +42,7 @@ Gets the image byte array.
 bytes: Uint8Array;
 ```
 
-### width
+## width
 
 Gets the width of the image.
 
@@ -53,7 +50,7 @@ Gets the width of the image.
 width: number;
 ```
 
-### height
+## height
 
 Gets the height of the image.
 
@@ -61,7 +58,7 @@ Gets the height of the image.
 height: number;
 ```
 
-### stride
+## stride
 
 Gets the stride of the image.
 
@@ -69,15 +66,15 @@ Gets the stride of the image.
 stride: number;
 ```
 
-### format
+## format
 
 Gets the pixel format of the image.
 
 ```typescript
-format: Core.BasicStructures.EnumImagePixelFormat;
+format: Core.EnumImagePixelFormat;
 ```
 
-### orientation
+## orientation
 
 Gets the orientation of the image.
 
@@ -85,7 +82,7 @@ Gets the orientation of the image.
 orientation?: number;
 ```
 
-### tag
+## tag
 
 Gets the tag of the image.
 

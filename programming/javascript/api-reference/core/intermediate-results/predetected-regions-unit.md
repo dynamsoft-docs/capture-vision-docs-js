@@ -1,32 +1,29 @@
 ---
 layout: default-layout
-title: interface PredetectedRegionsUnit - Dynamsoft Core Module JS Edition API Reference
+title: Interface PredetectedRegionsUnit - Dynamsoft Core Module JS Edition API Reference
 description: This page shows the JS edition of the interface PredetectedRegionsUnit in Dynamsoft Core Module.
 keywords: predetected regions, JS
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 ---
 
 # PredetectedRegionsUnit
 
-The PredetectedRegionsUnit interface represents a unit that contains a collection of pre-detected regions. It inherits from the IntermediateResultUnit interface and stores the result of pre-detected regions.
-
-## Definition
+The `PredetectedRegionsUnit` interface represents a unit that contains a collection of pre-detected regions. It inherits from the IntermediateResultUnit interface and stores the result of pre-detected regions.
 
 ```typescript
 interface PredetectedRegionsUnit extends IntermediateResultUnit {
-                predetectedRegions: Array<PredetectedRegionElement>;
-            }
+    predetectedRegions: Array<PredetectedRegionElement>;
+}
 ```
-
-
 
 | Properties | Type |
 |--------|-------------|
-| [`predetectedRegions`](#predetectedregions) | *Array<PredetectedRegionElement>* |
+| [predetectedRegions](#predetectedregions) | *Array\<PredetectedRegionElement>* |
 
 
-### predetectedRegions
+## predetectedRegions
 
  An array of PredetectedRegionElement objects representing the predetected regions contained in the unit.
 
