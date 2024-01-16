@@ -10,7 +10,7 @@ breadcrumbText: Core Module
 ---
 <!--v3.0.20--Updated on 11/23/2023-->
 
-# Core Module
+# DynamsoftCore Module
 
 The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`and `ImageSourceAdapter` plus a few interfaces and enumerations.
 

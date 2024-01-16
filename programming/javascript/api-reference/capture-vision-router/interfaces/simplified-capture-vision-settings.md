@@ -24,19 +24,19 @@ interface SimplifiedCaptureVisionSettings {
 }
 ```
 
-| Properties                                          | Type                                                        |
-| --------------------------------------------------- | ----------------------------------------------------------- |
-| [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.EnumCapturedResultItemType* |
-| [roi](#roi)                                         | *Dynamsoft.Core.Quadrilateral*              |
-| [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                                   |
-| [timeout](#timeout)                                 | *number*                                                    |
-| [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*             |
-| [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings*           |
-| [minImageCaptureInterval](#minimagecaptureinterval) | *number*                                                    |
+| Properties                                          | Type                                              |
+| --------------------------------------------------- | ------------------------------------------------- |
+| [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.EnumCapturedResultItemType*       |
+| [roi](#roi)                                         | *Dynamsoft.Core.Quadrilateral*                    |
+| [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                         |
+| [timeout](#timeout)                                 | *number*                                          |
+| [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*   |
+| [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings* |
+| [minImageCaptureInterval](#minimagecaptureinterval) | *number*                                          |
 
 ## capturedResultItemTypes
 
-Specifies the types of captured items to be processed. It uses the EnumCapturedResultItemType enumeration from the Core.BasicStructures namespace.
+Defines the types of items that are expected to be obtained through the capture process.
 
 ```typescript
 capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
@@ -48,7 +48,7 @@ capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
 
 ## roi
 
- Represents the region of interest (ROI) as a quadrilateral. It defines the coordinates of the ROI.
+Specifies the specific area (known as region of interest, or roi) within the images that will be targeted by the capture process.
 
 ```typescript
 roi: Dynamsoft.Core.Quadrilateral;
@@ -60,7 +60,7 @@ roi: Dynamsoft.Core.Quadrilateral;
 
 ## roiMeasuredInPercentage
 
-Indicates whether the ROI coordinates are measured in percentage values (true) or absolute pixel values (false).
+Specifies if the coordinates of the region of interest (roi) are represented as percentage values (true) or as absolute pixel values (false).
 
 ```typescript
 roiMeasuredInPercentage: boolean;
@@ -68,7 +68,7 @@ roiMeasuredInPercentage: boolean;
 
 ## timeout
 
-Specifies the timeout duration (in milliseconds) for processing tasks.
+Defines the maximum duration (in milliseconds) permitted for processing each individual image.
 
 ```typescript
 timeout: number;
@@ -76,7 +76,7 @@ timeout: number;
 
 ## barcodeSettings
 
-Represents the simplified settings for barcode recognition using the SimplifiedBarcodeReaderSettings interface from the DBR namespace.
+Specifies the basic configuration for barcode scanning as defined by the `SimplifiedBarcodeReaderSettings` interface.
 
 ```typescript
 barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
@@ -88,7 +88,7 @@ barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
 
 ## labelSettings
 
-Represents the simplified settings for label recognition using the SimplifiedLabelRecognizerSettings interface from the DLR namespace.
+Specifies the basic configuration for label recognition as defined by the `SimplifiedLabelRecognizerSettings` interface.
 
 ```typescript
 labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
@@ -96,7 +96,14 @@ labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
 
 ## minImageCaptureInterval
 
-Represents the minimum time interval (in milliseconds) that must elapse before the next image capture operation can be initiated. Setting a larger value for this property will introduce a delay between image captures, while setting a smaller value allows for more frequent captures. It can be used to reduce the computational frequency, which can effectively lower energy consumption.
+Defines the minimum time interval in milliseconds that controls the time gap between consecutive image captures. It's a crucial parameter for managing the balance between capture frequency and computational load. Here's how it works:
+
+1. **Adjustable Time Interval**: The value of `minImageCaptureInterval` dictates the minimum duration that should pass before another image capture can occur. A higher value means less frequent captures, leading to reduced computational demands and energy usage. Conversely, a lower value allows for more rapid image capturing.
+
+2. **Special Values and Their Functions**:
+
+    * -1: Setting this value indicates that the image source should wait until the `CaptureVisionRouter` object has completely processed the current image before capturing the next one. This ensures there's a processing break between two successive images.
+    * 0 (Default Setting): This value signifies that the image source should prepare the next image for capture immediately. As soon as the `CaptureVisionRouter` finishes processing an image, it can straightaway start with the next, ensuring no delay in processing.
 
 ```typescript
 minImageCaptureInterval: number;

@@ -11,18 +11,18 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Multiple Image Processing
 
-| API Name                                                            | Description                                                                                |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [setInput()](#setinput)                                             | Sets up an image source to provide images for continuous processing.                            |
-| [getInput()](#getinput)                                             | Returns the image source object.                                                           |
+| API Name                                                            | Description                                                                                  |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [setInput()](#setinput)                                             | Sets up an image source to provide images for continuous processing.                         |
+| [getInput()](#getinput)                                             | Returns the image source object.                                                             |
 | [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that listens to state changes of the image source. |
 | [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes the specified `ImageSourceStateListener` object.                                     |
 | [addResultReceiver()](#addresultreceiver)                           | Adds a `CapturedResultReceiver` object as the receiver of captured results.                  |
 | [removeResultReceiver()](#removeresultreceiver)                     | Removes the specified `CapturedResultReceiver` object.                                       |
 | [addResultFilter()](#addresultfilter)                               | Adds a `CapturedResultFilter` object to filter non-essential results.                        |
 | [removeResultFilter()](#removeresultfilter)                         | Removes the specified `CapturedResultFilter` object.                                         |
-| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                                    |
-| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                             |
+| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                                      |
+| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                               |
 
 <!-- 
 | [addCaptureStateListener()](#addcapturestatelistener)               | Adds a CaptureStateListener object to listen to the state changes of the capture process.  |
@@ -330,7 +330,7 @@ startCapturing(templateName?: string): Promise<void>;
 
 **parameter**
 
-`templateName`(optional): The name of the template to use for capturing. If not specified, the default template will be used.
+`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, "Default" is used. There are two types of CaptureVisionTemplates: the [built-in ones](./built-in-templates.md) which come with the SDK and the custom ones that get initialized when the user calls [initSettings](./settings.md#initsettings). Please be aware that the [built-in CaptureVisionTemplates](./built-in-templates.md) will be overwritten should the user calls [initSettings](./settings.md#initsettings) and pass his own settings.
 
 **Return Value**
 

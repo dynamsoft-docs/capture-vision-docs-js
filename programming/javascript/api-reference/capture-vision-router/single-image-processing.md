@@ -29,7 +29,7 @@ capture(imageOrFile: Blob | ArrayBuffer | Uint8Array | Uint8ClampedArray | HTMLI
 
 `imageOrFile`: specifies the image or file to be processed. It can accept various types of data representing images: `Blob`,`ArrayBuffer`,`Uint8Array`,`Uint8ClampedArray`,`HTMLImageElement`,`HTMLCanvasElement`,`HTMLVideoElement`,`Core.DSImageData`,`string`.
 
-`templateName`: specifies a [CaptureVisionTemplate]({{site.parameterFile}}capture-vision-template.html) to use. If not specified, the default one is used.
+`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, "Default" is used. There are two types of CaptureVisionTemplates: the [built-in ones](./built-in-templates.md) which come with the SDK and the custom ones that get initialized when the user calls [initSettings](./settings.md#initsettings). Please be aware that the [built-in CaptureVisionTemplates](./built-in-templates.md) will be overwritten should the user calls [initSettings](./settings.md#initsettings) and pass his own settings.
 
 **Return value**
 
