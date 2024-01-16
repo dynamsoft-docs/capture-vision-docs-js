@@ -22,7 +22,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 ## initSettings
 
-Initializes the Runtime Settings with the settings in the given JSON string.
+Initializes the Runtime Settings with the settings in the given JSON string which contains one or multiple CaptureVisionTemplates.
 
 **Syntax**
 
@@ -31,7 +31,6 @@ initSettings(settings: string): Promise<void>;
 ```
 
 **Parameters**
-
 
 `settings`: A JSON string containing the configuration settings for the CaptureVisionRouter.
 

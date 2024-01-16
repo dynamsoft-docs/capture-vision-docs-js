@@ -10,7 +10,7 @@ breadcrumbText: License Module
 ---
 <!--v3.0.20--Updated on 11/23/2023-->
 
-# License Module
+# DynamsoftLicense Module
 
 The License module is defined in the namespace `Dynamsoft.License`. It consists of the classes `LicenseModule` and `LicenseManager`.
 

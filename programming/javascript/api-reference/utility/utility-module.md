@@ -10,7 +10,7 @@ breadcrumbText: Utility Module
 ---
 <!--v1.0.20--Updated on 11/23/2023-->
 
-# Utility Module
+# DynamsoftUtility Module
 
 The Utility module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and `MultiFrameResultCrossFilter`.
 

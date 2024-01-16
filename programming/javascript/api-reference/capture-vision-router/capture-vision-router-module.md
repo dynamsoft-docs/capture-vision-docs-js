@@ -11,7 +11,7 @@ permalink: /programming/javascript/api-reference/capture-vision-router/capture-v
 ---
 <!-- 2.0.20 -- Updated on 11/28/2023-->
 
-# CaptureVisionRouter Module
+# DynamsoftCaptureVisionRouter Module
 
 The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It consists of the classes `CaptureVisionRouterModule`, `CaptureVisionRouter`, `CapturedResultReceiver`, `IntermediateResultReceiver`, `IntermediateResultManager` and a few interfaces and enumerations.
 
