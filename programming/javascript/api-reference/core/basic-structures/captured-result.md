@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # CapturedResult
 
-The `CapturedResult` interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
+The [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
 ```typescript
 interface CapturedResult {
