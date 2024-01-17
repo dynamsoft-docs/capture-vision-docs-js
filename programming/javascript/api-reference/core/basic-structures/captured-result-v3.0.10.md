@@ -21,11 +21,11 @@ interface CapturedResult {
 }
 ```
 
-| Properties            | Type |
-|----------------------|-------------|
-| [OriginalImageHashId](#originalimagehashid) | *String* |
-| [OriginalImageTag](#originalimagetag) | *ImageTag* |
-| [items](#items) | *Array* |
+| Properties                                  | Type       |
+| ------------------------------------------- | ---------- |
+| [OriginalImageHashId](#originalimagehashid) | *String*   |
+| [OriginalImageTag](#originalimagetag)       | *ImageTag* |
+| [items](#items)                             | *Array*    |
 
 ## OriginalImageHashId
 
@@ -45,7 +45,7 @@ readonly OriginalImageTag: ImageTag;
 
 ## items
 
-An array of `CapturedResultItem` objects representing the captured result items.
+An array of [CapturedResultItem](./captured-result-item.md) objects representing the captured result items.
 
 ```typescript
 readonly items: Array<CapturedResultItem>;
