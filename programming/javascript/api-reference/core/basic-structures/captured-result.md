@@ -12,6 +12,15 @@ noTitleIndex: true
 
 The [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
+> NOTE: 
+> 
+> Depending on the functional module that generated the result item, the interface may vary:
+> 
+> * dynamsoft-barcode-reader: DecodedBarcodesResult
+> * dynamsoft-label-recognizer: RecognizedTextLinesResult
+> * dynamsoft-document-normalizer: [DetectedQuadsResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-result.html) or [NormalizedImagesResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-result.html)
+> * dynamsoft-code-parser: ParsedResult
+
 ```typescript
 interface CapturedResult {
     readonly OriginalImageHashId: string;
@@ -22,13 +31,13 @@ interface CapturedResult {
 }
 ```
 
-| Properties            | Type |
-|----------------------|-------------|
-| [OriginalImageHashId](#originalimagehashid) | *String* |
-| [OriginalImageTag](#originalimagetag) | *ImageTag* |
-| [items](#items) | *Array\<CapturedResultItem>* |
-| [errorCode](#errorcode) | *number* |
-| [errorString](#errorstring) | *string* |
+| Properties                                  | Type                         |
+| ------------------------------------------- | ---------------------------- |
+| [OriginalImageHashId](#originalimagehashid) | *String*                     |
+| [OriginalImageTag](#originalimagetag)       | *ImageTag*                   |
+| [items](#items)                             | *Array\<CapturedResultItem>* |
+| [errorCode](#errorcode)                     | *number*                     |
+| [errorString](#errorstring)                 | *string*                     |
 
 ## OriginalImageHashId
 
@@ -48,7 +57,7 @@ readonly OriginalImageTag: ImageTag;
 
 ## items
 
-An array of `CapturedResultItem` objects representing the captured result items.
+An array of [CapturedResultItem](./captured-result-item.md) objects representing the captured result items.
 
 ```typescript
 readonly items: Array<CapturedResultItem>;

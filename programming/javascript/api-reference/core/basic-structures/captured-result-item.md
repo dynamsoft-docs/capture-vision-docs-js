@@ -12,6 +12,15 @@ noTitleIndex: true
 
 The `CapturedResultItem` interface provides a common structure for representing different types of captured results. Each specific captured result item type will have its own implementation and additional properties specific to that type.
 
+> NOTE: 
+> 
+> Depending on the functional module that generated the result item, the interface may vary:
+> 
+> * dynamsoft-barcode-reader: BarcodeResultItem
+> * dynamsoft-label-recognizer: TextLineResultItem
+> * dynamsoft-document-normalizer: [DetectedQuadResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quad-result-item.html) or [NormalizedImageResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-image-result-item.html)
+> * dynamsoft-code-parser: ParsedResultItem
+
 ```typescript
 interface CapturedResultItem {
     readonly type: EnumCapturedResultItemType;
@@ -26,7 +35,7 @@ interface CapturedResultItem {
 
 ## type
 
-A property of type `EnumCapturedResultItemType` that specifies the type of the captured result item.
+A property of type [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js) that specifies the type of the captured result item.
 
 ```typescript
 readonly type: EnumCapturedResultItemType;
