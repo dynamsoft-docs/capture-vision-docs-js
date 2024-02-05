@@ -5,7 +5,6 @@
 
 * Added the following static methods and properties
     * CoreModule.detectEnvironment()
-    * CoreModule.onWarning
     * CoreModule.engineResourcePaths
     * CoreModule.loadWasm()
     * CoreModule.loadModel()

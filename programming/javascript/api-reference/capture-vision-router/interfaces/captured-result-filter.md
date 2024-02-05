@@ -9,29 +9,28 @@ noTitleIndex: true
 breadcrumbText: JS CapturedResultFilter Interface
 ---
 
+<!--No need for public access, hidden in doc-->
+
 # CapturedResultFilter
 
-The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results, etc.
 
 ```typescript
-interface CapturedResultFilter {
-    onOriginalImageResultReceived(result: Core.OriginalImageResultItem): void;
-    onDecodedBarcodesReceived(result: DBR.DecodedBarcodesResult): void;
-    onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
-    onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
-    onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
-    onParsedResultsReceived(result: DCP.ParsedResult): void;
+class CapturedResultReceiver {
+    onCapturedResultReceived?(result: CapturedResult): void;
+    onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
+    onDecodedBarcodesReceived?(result: DecodedBarcodesResult): void;
+    onRecognizedTextLinesReceived?(result: RecognizedTextLinesResult):void;
+    onDetectedQuadsReceived?(result: DetectedQuadsResult): void;
+    onNormalizedImagesReceived?(result: NormalizedImagesResult): void;
+    onParsedResultsReceived?(result: ParsedResult): void;
 } 
 ```
 
-| API Name                                                            | Description                                          |
-| ------------------------------------------------------------------- | ---------------------------------------------------- |
-| [OnOriginalImageResultReceived()](#onoriginalimageresultreceived) | Callback function for original image results.        |
-| [OnDecodedBarcodesReceived()](#ondecodedbarcodesreceived)         | Callback function for decoded barcodes results.      |
-| [OnRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived) | Callback function for recognized text lines results. |
-| [OnDetectedQuadsReceived()](#ondetectedquadsreceived)             | Callback function for detected quads results.        |
-| [OnNormalizedImagesReceived()](#onnormalizedimagesreceived)       | Callback function for normalized images results.     |
-| [OnParsedResultsReceived()](#onparsedresultsreceived)             | Callback function for parsed results.                |
+
+
+The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+
 
 ## OnOriginalImageResultReceived
 

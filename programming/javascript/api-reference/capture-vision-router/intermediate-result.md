@@ -12,18 +12,18 @@ permalink: /programming/javascript/api-reference/capture-vision-router/intermedi
 
 # CaptureVisionRouter Intermediate Result
 
-| API Name                                                        | Description                                               |
-| --------------------------------------------------------------- | --------------------------------------------------------- |
-| [getIntermediateResultManager()](#getintermediateresultmanager) | Returns an `IntermediateResultManager` object.           |
+| Name                                                            | Description                                                                                |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [getIntermediateResultManager()](#getintermediateresultmanager) | Returns an object, of type `IntermediateResultManager`, that manages intermediate results. |
 
-## GetIntermediateResultManager
+## getIntermediateResultManager
 
-Returns an object that manages the saving and retrieval of intermediate results.
+Returns an object, of type `IntermediateResultManager`, that manages intermediate results.
 
 **Syntax**
 
 ```typescript
-getIntermediateResultManager(): Dynamsoft.CVR.IntermediateResultManager;
+getIntermediateResultManager(): IntermediateResultManager;
 ```
 
 **Parameters**
@@ -32,12 +32,15 @@ None.
 
 **Return Value**
 
-Returns an IntermediateResultManager object.
+The `IntermediateResultManager` object.
 
 **Code snippet**
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const intermediateResultManager = router.getIntermediateResultManager();
-// Use the intermediateResultManager to save and retrieve intermediate results
 ```
+
+**See Also**
+
+[IntermediateResultManager](./intermediate-result-manager.md#intermediateresultmanager)

@@ -12,15 +12,15 @@ noTitleIndex: true
 
 The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
-| API Name                    | Description                          |
-| --------------------------- | ------------------------------------ |
-| [saveToFile()](#savetofile) | Saved the specified image as a file. |
+| Name                        | Description                                            |
+| --------------------------- | ------------------------------------------------------ |
+| [saveToFile()](#savetofile) | Saves the specified image in either PNG or JPG format. |
 
 ### saveToFile
 
-It is used to save an image as a PNG or JPG file. The file format is determined by the extension of the parameter `name`.
+This method saves an image in either PNG or JPG format. The desired file format is inferred from the file extension provided in the 'name' parameter.
 
-> If the file format is not specified, or if the given format is not supported, then the data will be exported as a PNG.
+> Should the specified file format be omitted or unsupported, the data will default to being exported in PNG format.
 
 ```typescript
 saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<File>;
@@ -28,12 +28,12 @@ saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<F
 
 **Parameters**
 
-`image`: An image of type `Core.DSImageData`.
+`image`: The image to be saved, of type Core.DSImageData.
 
-`name`: A string represents the saved image name.
+`name`: The name of the file, as a string, under which the image will be saved.
 
-`download`: An optional download boolean flag represents whether to download the file.
+`download`: An optional boolean flag that, when set to true, triggers the download of the file.
 
 **Return Value**
 
-Returns a Promise that resolves to a File object representing the saved image file.
+A Promise that resolves to the saved File object.

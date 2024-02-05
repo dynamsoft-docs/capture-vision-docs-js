@@ -18,7 +18,6 @@ interface SimplifiedCaptureVisionSettings {
     capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
     roi: Dynamsoft.Core.Quadrilateral;
     roiMeasuredInPercentage: boolean;
-    timeout: number;
     barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
     labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
 }
@@ -29,7 +28,6 @@ interface SimplifiedCaptureVisionSettings {
 | [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.EnumCapturedResultItemType* |
 | [roi](#roi)                                         | *Dynamsoft.Core.Quadrilateral*              |
 | [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                                   |
-| [timeout](#timeout)                                 | *number*                                                    |
 | [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*             |
 | [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings*           |
 
@@ -71,13 +69,13 @@ Specifies the maximum number of parallel tasks allowed during processing.
 maxParallelTasks: number;
 ``` -->
 
-## timeout
+<!-- ## timeout
 
 Specifies the timeout duration for processing tasks.
 
 ```typescript
 timeout: number;
-```
+``` -->
 
 ## barcodeSettings
 

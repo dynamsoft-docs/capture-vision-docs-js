@@ -35,7 +35,7 @@ abstract class ImageSourceAdapter {
 }
 ```
 
-| API Name                                                                | Description                                                                                               |
+| Name                                                               | Description                                                                                               |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [addImageToBuffer()](#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [hasNextImageToFetch()](#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |

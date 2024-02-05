@@ -13,11 +13,10 @@ noTitleIndex: true
 
 This class defines common functionality in the Core module.
 
-| API Name                                             | Description                                                                                 |
+| Name                                            | Description                                                                                 |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `static` [getVersion()](#getversion)                 | Returns the version of the Core module.                                                     |
 | `static` [detectEnvironment()](#detectenvironment)   | Detects the current environment.                                                            |
-| `static` [onWarning](#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
 | `static` [engineResourcePaths](#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
 | `static` [loadWasm()](#loadwasm)                     | Loads the WebAssembly (.wasm) files for the specified modules.                              |
 | `static` [isModuleLoaded()](#ismoduleloaded)         | Returns whether the WebAssembly (.wasm) file for the specified modules has been loaded.     |
@@ -58,28 +57,6 @@ await Dynamsoft.Core.CoreModule.detectEnvironment();
 // example return value:
 // {"wasm":true,"worker":true,"getUserMedia":true,"camera":true,"browser":"Edge","version":119,"OS":"Windows"}
 ```
-
-## onWarning
-
-A callback which is triggered when the running environment is not ideal.
-
-```typescript
-onWarning: (warning:Warning) =>{};
-```
-
-**Return Value**
-
-`Promise<any>`
-
-**Code snippet**
-
-```javascript
-Dynamsoft.Core.CoreModule.onWarning = warning => console.log(warning.message);
-```
-
-**See Also**
-
-* [Warning](./basic-structures/warning.md)
 
 ## engineResourcePaths
 

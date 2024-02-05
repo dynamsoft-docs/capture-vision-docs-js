@@ -18,7 +18,7 @@ The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It c
 
 This class defines common functionality in the `CaptureVisionRouter` module.
 
-| API Name                                                                                          | Description                                                         |
+| Name                                                                                              | Description                                                         |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `static` [getVersion()](./capture-vision-router-module-class-v2.0.10.md#getversion)               | Returns the version of the `CaptureVisionRouter` module.            |
 | `static` [engineResourcePath](./capture-vision-router-module-class-v2.0.10.md#engineresourcepath) | Sets or returns the path to find the resources files (.wasm, etc.). |
@@ -44,10 +44,9 @@ The APIs for this class include:
 
 ### Create and Destroy Instances
 
-| API Name                                                           | Description                                                              |
+| Name                                                               | Description                                                              |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | `static` [detectEnvironment()](./instantiate.md#detectenvironment) | Detect the current environment.                                          |
-| `static` [onWarning](./instantiate.md#onwarning)                   | A callback which is triggered when the running environment is not ideal. |
 | `static` [preLoadModule()](./instantiate.md#preloadmodule)         | Loads the specified module to speed up the initialization.               |
 | `static` [isModuleLoaded()](./instantiate.md#ismoduleloaded)       | Returns whether the specified module has been loaded.                    |
 | `static` [createInstance()](./instantiate.md#createinstance)       | Initializes a new instance of the `CaptureVisionRouter` class.           |
@@ -56,38 +55,39 @@ The APIs for this class include:
 
 ### Single-File Processing
 
-| API Name                                          | Description                                                 |
-| ------------------------------------------------- | ----------------------------------------------------------- |
-| [capture()](./single-image-processing.md#capture) | Processes an image or file to derive important information. |
+| Name                                              | Description                                                                                   |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [capture()](./single-image-processing.md#capture) | Processes a single image or a file containing a single image to derive important information. |
 
 ### Multiple-File Processing
 
-| API Name                                                                                          | Description                                                           |
-| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [setInput()](./multiple-image-processing.md#setinput)                                             | Sets an image source to provide images for consecutive process.       |
-| [getInput()](./multiple-image-processing.md#getinput)                                             | Returns the image source object.                                      |
-| [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.     |
-| [removeImageSourceStateListener()](./multiple-image-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source. |
-| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)                           | Adds an object as the receiver of captured results.                   |
-| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver)                     | Removes an object which was added as a receiver of captured results.  |
-| [addResultFilter()](./multiple-image-processing.md#addresultfilter)                               | Adds an object as the filter of captured results.                     |
-| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)                         | Removes a result filter for filtering non-essential results.          |
-| [startCapturing()](./multiple-image-processing.md#startcapturing)                                 | Starts to process images consecutively.                               |
-| [stopCapturing()](./multiple-image-processing.md#stopcapturing)                                   | Stops the consecutive process.                                        |
+| Name                                                                          | Description                                                          |
+| ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [setInput()](./multiple-image-processing.md#setinput)                         | Sets an image source to provide images for consecutive process.      |
+| [getInput()](./multiple-image-processing.md#getinput)                         | Returns the image source object.                                     |
+| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)       | Adds an object as the receiver of captured results.                  |
+| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver) | Removes an object which was added as a receiver of captured results. |
+| [addResultFilter()](./multiple-image-processing.md#addresultfilter)           | Adds an object as the filter of captured results.                    |
+| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)     | Removes a result filter for filtering non-essential results.         |
+| [startCapturing()](./multiple-image-processing.md#startcapturing)             | Initiates a capturing process based on a specified template.                              |
+| [stopCapturing()](./multiple-image-processing.md#stopcapturing)               | Stops the capturing process.                                       |
+
+<!-- | [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an object that listens to state changes of the image source.     |
+| [removeImageSourceStateListener()](./multiple-image-processing.md#removeimagesourcestatelistener) | Removes an object which listens to state changes of the image source. | -->
 
 ### Settings
 
-| API Name                                                       | Description                                                                                                   |
+| Name                                                           | Description                                                                                                   |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | [initSettings()](./settings.md#initsettings)                   | Initializes settings with either a file or a string.                                                          |
 | [outputSettings()](./settings.md#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name to a string.                                          |
 | [getSimplifiedSettings()](./settings.md#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`.      |
 | [updateSettings()](./settings.md#updatesettings)               | Updates a specified `CaptureVisionTemplate` with updated an updated `SimplifiedCaptureVisionSettings` object. |
-| [resetSettings()](./settings.md#resetsettings)                 | Resets settings to factory default.                                                                           |
+| [resetSettings()](./settings.md#resetsettings)                 | Restores all runtime settings to their original default values.                                                                           |
 
 ### Interfaces
 
-* [ImageSourceStateListener](./interfaces/image-source-state-listener.md)
+<!-- * [ImageSourceStateListener](./interfaces/image-source-state-listener.md) -->
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)
 
 ### Enums

@@ -12,17 +12,16 @@ breadcrumbText: Core Module
 
 # DynamsoftCore Module
 
-The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule`and `ImageSourceAdapter` plus a few interfaces and enumerations.
+The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the classes `CoreModule` and `ImageSourceAdapter` plus a few interfaces and enumerations.
 
 ## CoreModule Class
 
 This class defines common functionality in the Core module.
 
-| API Name                                                                   | Description                                                                                 |
+| Name                                                                       | Description                                                                                 |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `static` [getVersion()](./core-module-class.md#getversion)                 | Returns the version of the Core module.                                                     |
 | `static` [detectEnvironment()](./core-module-class.md#detectenvironment)   | Detects the current environment.                                                            |
-| `static` [onWarning](./core-module-class.md#onwarning)                     | A callback which is triggered when the running environment is not ideal.                    |
 | `static` [engineResourcePaths](./core-module-class.md#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
 | `static` [loadWasm()](./core-module-class.md#loadwasm)                     | Loads the .wasm files for the specified modules.                                            |
 | `static` [enableLogging()](./core-module-class.md#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
@@ -34,7 +33,7 @@ The `ImageSourceAdapter` class defines how an image source should be defined in 
 
 The APIs for this class are:
 
-| API Name                                                                                       | Description                                                                                               |
+| Name                                                                                           | Description                                                                                               |
 | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [addImageToBuffer()](./image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [hasNextImageToFetch()](./image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
@@ -80,7 +79,6 @@ The following are the basic interfaces often shared by more than one module:
 * [ImageTag](./basic-structures/image-tag.md)
 * [FileImageTag](./basic-structures/file-image-tag.md)
 * [ImageSourceErrorListener](./basic-structures/image-source-error-listener.md)
-* [Warning](./basic-structures/warning.md)
 <!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 
 ### Intermediate Results

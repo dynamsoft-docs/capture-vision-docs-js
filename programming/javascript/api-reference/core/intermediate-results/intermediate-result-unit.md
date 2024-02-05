@@ -22,7 +22,7 @@ interface IntermediateResultUnit {
 }
 ```
 
-| API Name               | Description |
+| Name              | Description |
 |----------------------|-------------|
 | [hashId](#hashid) | Gets the hash ID of the unit.|
 | [originalImageHashId](#originalimagehashid) | Gets the hash ID of the original image. |

@@ -12,11 +12,11 @@ noTitleIndex: true
 
 The LicenseManager class provides a set of APIs to manage the licensing for the Dynamsoft Capture Vision architecture.
 
-| API                                                      | Description                                                            |
-| -------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `static` [getDeviceUUID](#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
-| `static` [initLicense](#initlicense)                     | Initializes the license for the application using a license key.       |
-| `static` [setDeviceFriendlyName](#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
+| API                                                      | Description                                                             |
+| -------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `static` [getDeviceUUID](#getdeviceuuid)                 | Returns the unique identifier of the device.                            |
+| `static` [initLicense](#initlicense)                     | Initializes the license for the application using a license key.        |
+| `static` [setDeviceFriendlyName](#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |
 
 ## getDeviceUUID
 
@@ -28,7 +28,7 @@ static getDeviceUUID(): Promise<string>;
 
 **Return Value**
 
-Returns a string representing the UUID of the device.
+A promise which, upon resolution, yields a string corresponding to the device's UUID.
 
 ## initLicense
 
@@ -67,13 +67,13 @@ static initLicense(license: string, immediately: true): Promise<{message?: strin
 **Parameters**
 
 `license`: The license key to be used for initialization.
-`immediately`: A boolean flag indicating that the function should return a promise for immediate initialization.
+`immediately`: A boolean flag that determines if the function should immediately execute the license initialization or not.
 
 **Return Value**
 
 `Promise<{message?: string} | undefined>`
 
-A promise that resolves to an object containing an optional message property if there are any messages or notifications related to the license initialization. If there are no messages or if the initialization is successful without any noteworthy conditions, the promise may resolve to undefined.
+A promise that, upon resolution, yields an object which may include a 'message' property. This property exists if there are messages or notifications pertinent to the license initialization process. In scenarios where no messages exist or if the initialization concludes successfully without any significant conditions, the promise might resolve to 'undefined'.
 
 **Code snippet**
 
@@ -93,7 +93,7 @@ Dynamsoft.License.LicenseManager.initLicense("your-license-key", true)
 
 ## setDeviceFriendlyName
 
-Sets a recognizable name for the device which corresponds to its UUID. 
+Assigns a distinctive name to the device, correlating it with its UUID.
 
 > Please be aware that this method must be called before `Dynamsoft.CVR.CaptureVisionRouter.createInstance()` or `Dynamsoft.Core.CoreModule.loadWasm()` or `Dynamsoft.DCP.CodeParser.createInstance()` to take effect.
 

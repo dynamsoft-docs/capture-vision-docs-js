@@ -9,7 +9,10 @@
 * Add two more callback functions in IntermediateResultReceiver
     * OnShortLinesUnitReceived
     * OnUnitResultReceived
-
+* Implemented the following instance methods and properties on CaptureVisionRouter instances
+	* addImageSourceStateListener()
+	* removeImageSourceStateListener()
+	
 ## 2.0.30
 
 * Internally, CVR C++ provides the following API to find out about required model files and specifications for DLR/DCP.
@@ -19,14 +22,13 @@
 
 * Removed the static property CaptureVisionRouterModule.engineResourcePath. The substitute is CoreModule.engineResourcePaths (Core module v3.0.20).
 * Removed the static method CaptureVisionRouter.detectEnvironment(). The substitute is CoreModule.detectEnvironment()  (Core module v3.0.20).
-* Removed the static property onWarning. The substitute is CoreModule.onWarning.
 * Removed the static method preLoadModule(). The substitute is CoreModule.loadWasm().
 * Removed the static method isModuleLoaded(). No substitute.
 * Implemented the instance method getIntermediateResultManager().
 * Implemented the class IntermediateResultManager. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
-* Implemented the interface CapturedResultReceiver. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
+* Implemented the class CapturedResultReceiver. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
 * Implemented the interface CapturedResultFilter. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
-* Implemented the interface IntermediateResultReceiver. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
+* Implemented the class IntermediateResultReceiver. It used to be implemented on the Core module. (Done on v2.2.0 in C++)
 * Implemented the following preset templates
     * Default
     * ReadBarcodes_Default
@@ -54,7 +56,6 @@
 	* CaptureVisionRouterModule.getVersion()
 	* CaptureVisionRouterModule.engineResourcePath
 	* CaptureVisionRouter.detectEnvironment()
-	* CaptureVisionRouter.onWarning
 	* CaptureVisionRouter.preLoadModule()
 	* CaptureVisionRouter.isModuleLoaded()
 	* CaptureVisionRouter.createInstance()
@@ -64,8 +65,6 @@
 	* capture()
 	* setInput()
 	* getInput()
-	* addImageSourceStateListener()
-	* removeImageSourceStateListener()
 	* addResultReceiver()
 	* removeResultReceiver()
 	* addResultFilter()

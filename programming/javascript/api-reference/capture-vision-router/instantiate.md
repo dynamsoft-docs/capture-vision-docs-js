@@ -11,11 +11,11 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Instantiate
 
-| API Name                                     | Description                                                            |
-| -------------------------------------------- | ---------------------------------------------------------------------- |
-| `static` [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.         |
-| [dispose()](#dispose)                        | Releases all resources used by the `CaptureVisionRouter` object.       |
-| [disposed](#disposed)                        | Returns whether the `CaptureVisionRouter` object has been disposed of. |
+| Name                                         | Description                                                              |
+| -------------------------------------------- | ------------------------------------------------------------------------ |
+| `static` [createInstance()](#createinstance) | Initializes a new instance of the `CaptureVisionRouter` class.           |
+| [dispose()](#dispose)                        | Releases all resources used by the `CaptureVisionRouter` instance.       |
+| [disposed](#disposed)                        | Returns whether the `CaptureVisionRouter` instance has been disposed of. |
 
 ## createInstance
 
@@ -33,7 +33,7 @@ None.
 
 **Return value**
 
-A promise that resolves to the initialized `CaptureVisionRouter` object.
+A promise that resolves to the initialized `CaptureVisionRouter` instance.
 
 **Code snippet**
 
@@ -43,7 +43,7 @@ let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 
 ## dispose
 
-Releases all resources used by the `CaptureVisionRouter` object.
+Releases all resources used by the `CaptureVisionRouter` instance.
 
 **Syntax**
 
@@ -57,7 +57,7 @@ None.
 
 **Return value**
 
-Returns a promise that resolves when the resources have been successfully released.
+A promise that resolves when the resources have been successfully released.
 
 **Code snippet**
 
@@ -71,7 +71,7 @@ router.dispose();
 
 ## disposed
 
-Returns whether the `CaptureVisionRouter` object has been disposed of.
+Returns whether the `CaptureVisionRouter` instance has been disposed of.
 
 **Syntax**
 
@@ -85,7 +85,7 @@ None.
 
 **Return value**
 
-A boolean value that indicates whether the `CaptureVisionRouter` object has been disposed of.
+Boolean indicating whether the `CaptureVisionRouter` instance has been disposed of.
 
 **Code snippet**
 

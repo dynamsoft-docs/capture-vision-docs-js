@@ -10,101 +10,84 @@ noTitleIndex: true
 
 # SimplifiedCaptureVisionSettings
 
-The `SimplifiedCaptureVisionSettings` interface represents a simplified configuration for the Capture Vision Router settings.
+The `SimplifiedCaptureVisionSettings` interface provides a standardized way to adjust a select set of settings for a given `CaptureVisionTemplate`.
 
 ```typescript
 interface SimplifiedCaptureVisionSettings {
-    capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
-    roi: Dynamsoft.Core.Quadrilateral;
-    roiMeasuredInPercentage: boolean;
-    timeout: number;
-    barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
-    labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
+    barcodeSettings: SimplifiedBarcodeReaderSettings;
+    capturedResultItemTypes: EnumCapturedResultItemType;
+    labelSettings: SimplifiedLabelRecognizerSettings;
     minImageCaptureInterval: number;
+    roi: Quadrilateral;
+    roiMeasuredInPercentage: boolean;
 }
-```
-
-| Properties                                          | Type                                              |
-| --------------------------------------------------- | ------------------------------------------------- |
-| [capturedResultItemTypes](#capturedresultitemtypes) | *Dynamsoft.Core.EnumCapturedResultItemType*       |
-| [roi](#roi)                                         | *Dynamsoft.Core.Quadrilateral*                    |
-| [roiMeasuredInPercentage](#roimeasuredinpercentage) | *boolean*                                         |
-| [timeout](#timeout)                                 | *number*                                          |
-| [barcodeSettings](#barcodesettings)                 | *Dynamsoft.DBR.SimplifiedBarcodeReaderSettings*   |
-| [labelSettings](#labelsettings)                     | *Dynamsoft.DLR.SimplifiedLabelRecognizerSettings* |
-| [minImageCaptureInterval](#minimagecaptureinterval) | *number*                                          |
-
-## capturedResultItemTypes
-
-Defines the types of items that are expected to be obtained through the capture process.
-
-```typescript
-capturedResultItemTypes: Dynamsoft.Core.EnumCapturedResultItemType;
-```
-
-**See Also**
-
-* [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
-
-## roi
-
-Specifies the specific area (known as region of interest, or roi) within the images that will be targeted by the capture process.
-
-```typescript
-roi: Dynamsoft.Core.Quadrilateral;
-```
-
-**See Also**
-
-* [Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html?lang=js)
-
-## roiMeasuredInPercentage
-
-Specifies if the coordinates of the region of interest (roi) are represented as percentage values (true) or as absolute pixel values (false).
-
-```typescript
-roiMeasuredInPercentage: boolean;
-```
-
-## timeout
-
-Defines the maximum duration (in milliseconds) permitted for processing each individual image.
-
-```typescript
-timeout: number;
 ```
 
 ## barcodeSettings
 
-Specifies the basic configuration for barcode scanning as defined by the `SimplifiedBarcodeReaderSettings` interface.
+Specifies the basic settings for the barcode reader module. It is of type `SimplifiedBarcodeReaderSettings`.
 
 ```typescript
-barcodeSettings: Dynamsoft.DBR.SimplifiedBarcodeReaderSettings;
+barcodeSettings: SimplifiedBarcodeReaderSettings;
 ```
 
 **See Also**
 
-* [SimplifiedBarcodeReaderSettings]({{ site.dbr_js_api }}simplified-barcode-reader-settings.html?lang=js)
+[SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html)
+
+## capturedResultItemTypes
+
+Specifies the types of result items that are expected to be returned. It is of type `EnumCapturedResultItemType`.
+
+```typescript
+capturedResultItemTypes: EnumCapturedResultItemType;
+```
+
+**See Also**
+
+[EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
 
 ## labelSettings
 
-Specifies the basic configuration for label recognition as defined by the `SimplifiedLabelRecognizerSettings` interface.
+Specifies the basic settings for the label recognizer module. It is of type `SimplifiedLabelRecognizerSettings`.
 
 ```typescript
 labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
 ```
 
+**See Also**
+
+[SimplifiedLabelRecognizerSettings](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/simplified-label-recognizer-settings.html?lang=js)
+
 ## minImageCaptureInterval
 
-Defines the minimum time interval in milliseconds that controls the time gap between consecutive image captures. It's a crucial parameter for managing the balance between capture frequency and computational load. Here's how it works:
+Specifies the shortest time span, in milliseconds, that must elapse between two successive image captures. Opting for a higher interval decreases capture frequency, which can lower the system's processing load and conserve energy. On the other hand, a smaller interval value increases the frequency of image captures, enhancing the system's responsiveness.
 
-1. **Adjustable Time Interval**: The value of `minImageCaptureInterval` dictates the minimum duration that should pass before another image capture can occur. A higher value means less frequent captures, leading to reduced computational demands and energy usage. Conversely, a lower value allows for more rapid image capturing.
-
-2. **Special Values and Their Functions**:
-
-    * -1: Setting this value indicates that the image source should wait until the `CaptureVisionRouter` object has completely processed the current image before capturing the next one. This ensures there's a processing break between two successive images.
-    * 0 (Default Setting): This value signifies that the image source should prepare the next image for capture immediately. As soon as the `CaptureVisionRouter` finishes processing an image, it can straightaway start with the next, ensuring no delay in processing.
+> Handling of Special Values:
+> -1: This value ensures the image source waits until processing of the current image is complete before starting to acquire the next one. This approach ensures there is a deliberate pause between processing consecutive images.
+> 0 (The default setting): Adopting this value means the image source queues up the next image for immediate availability once processing of the current image is finished, facilitating continuous, uninterrupted image processing.
 
 ```typescript
 minImageCaptureInterval: number;
 ```
+
+## roi
+
+Designates the region of interest (ROI) within an image, limiting the image processing activities exclusively to this specified area. It is of type `Quadrilateral`.
+
+```typescript
+roi: Quadrilateral;
+```
+
+**See Also**
+
+[Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html?lang=js)
+
+## roiMeasuredInPercentage
+
+Determines if the coordinates for the region of interest (ROI) are expressed in percentage terms (true) or as exact pixel measurements (false).
+
+```typescript
+roiMeasuredInPercentage: boolean;
+```
+

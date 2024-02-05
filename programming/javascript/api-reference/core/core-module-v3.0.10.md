@@ -17,7 +17,7 @@ The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the
 
 This class defines common functionality in the Core module. At present, it has only one method.
 
-| API Name              | Description                             |
+| Name             | Description                             |
 | --------------------- | --------------------------------------- |
 | `static` getVersion() | Returns the version of the Core module. |
 
@@ -34,7 +34,7 @@ The `ImageSourceAdapter` class defines how an image source should be defined for
 
 The APIs for this class are:
 
-| API Name                                                                                                      | Description                                                                                               |
+| Name                                                                                                     | Description                                                                                               |
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [addImageToBuffer](./image-source-adapter.md#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
 | [hasNextImageToFetch](./image-source-adapter.md#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
@@ -59,7 +59,7 @@ The `IntermediateResultManager` class defines a user can interact with the `Capt
 
 The APIs for this class are:
 
-| API Name                                                                                           | Description                                          |
+| Name                                                                                          | Description                                          |
 | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | [addResultReceiver](./intermediate-results/intermediate-result-manager.md#addresultreceiver)       | Adds an intermediate result receiver.                |
 | [removeResultReceiver](./intermediate-results/intermediate-result-manager.md#removeresultreceiver) | Removes an intermediate result receiver.             |
@@ -90,8 +90,6 @@ The following are the basic interfaces often shared by more than one module:
 * [Quadrilateral](./basic-structures/quadrilateral.md)
 * [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
 * [Rect](./basic-structures/rect.md)
-* [Warning](./basic-structures/warning.md)
-<!-- * [CapturedResultFilter](./basic-structures/captured-result-filter.md) -->
 <!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 <!-- * [DSFile](./basic-structures/ds-file.md) -->
 

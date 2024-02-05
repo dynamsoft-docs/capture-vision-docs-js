@@ -10,116 +10,140 @@ noTitleIndex: true
 
 # MultiFrameResultCrossFilter
 
-The `MultiFrameResultCrossFilter` class provides APIs to configure the filtering of results from multiple images which have been processed consecutively. Usually these images are frames from a streaming video.
+The `MultiFrameResultCrossFilter` class offers a set of API functions designed for managing and filtering results from multiple image frames, typically used in consecutive frames of a streaming video.
 
-| API Name                                                                | Description                                                                                                                                             |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [enableResultCrossVerification()](#enableresultcrossverification)       | Enables result verification feature to improve the accuracy of video streaming recognition results.                                                     |
-| [isResultCrossVerificationEnabled()](#isresultcrossverificationenabled) | Determines whether the result verification feature is enabled for the specific captured result item type.                                               |
-| [enableResultDeduplication()](#enableresultdeduplication)               | Enables duplicate filter feature to filter out the duplicate results in the period of duplicateForgetTime for video streaming recognition.              |
-| [isResultDeduplicationEnabled()](#isresultdeduplicationenabled)         | Determines whether the duplicate filter feature is enabled for the specific result item type.                                                           |
-| [setDuplicateForgetTime()](#setduplicateforgettime)                     | Sets the duplicate forget time for the specific captured result item types. The same captured result item will be returned only once during the period. |
-| [getDuplicateForgetTime()](#getduplicateforgettime)                     | Gets the duplicate forget time for a specific captured result item type.                                                                                |
+| Name                                                                    | Description                                                                                  |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [enableResultCrossVerification()](#enableresultcrossverification)       | Enables or disables the verification of specific result item types.                          |
+| [isResultCrossVerificationEnabled()](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type.                               |
+| [enableResultDeduplication()](#enableresultdeduplication)               | Enables or disables the deduplication process for specific result item types.                |
+| [isResultDeduplicationEnabled()](#isresultdeduplicationenabled)         | Checks if deduplication is active for a given result item type.                              |
+| [setDuplicateForgetTime()](#setduplicateforgettime)                     | Sets the interval during which duplicates are disregarded for specific result item types.    |
+| [getDuplicateForgetTime()](#getduplicateforgettime)                     | Retrieves the interval during which duplicates are disregarded for a given result item type. |
 
 
 ### enableResultCrossVerification
 
-A method that enables or disables result verification for specific result item types.
+Enables or disables the verification of specific result item types.
 
 ```typescript
-enableResultCrossVerification(resultItemTypes: number, enabled: boolean): void;
+enableResultCrossVerification(resultItemTypes: EnumCapturedResultItemType, enabled: boolean): void;
 ```
 
 **Parameters**
 
-`resultItemTypes`:  The value of the captured result item types.
+`resultItemTypes`: Specifies the result item types.
 
-`enabled`: Set whether to enable result verification.
+`enabled`: Boolean to toggle verification on or off.
 
 **Return Value**
 
 None.
+
+**See Also**
+
+[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
 
 ### isResultCrossVerificationEnabled
 
-A method that checks whether result verification is enabled for a specific result item type.
+Checks if verification is active for a given result item type.
 
 ```typescript
-isResultCrossVerificationEnabled(type: Core.EnumCapturedResultItemType): boolean;
+isResultCrossVerificationEnabled(resultItemType: EnumCapturedResultItemType): boolean;
 ```
 
 **Parameters**
 
-`type`:  Specifies the captured result item type.
+`resultItemType`:  Specifies the result item type in question.
 
 **Return Value**
 
-Returns a boolean value indicating whether result verification is enabled for the specific captured result item type.
+Boolean indicating the status of verification for the specified type.
+
+**See Also**
+
+[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
 
 ### enableResultDeduplication
 
-A method that enables or disables duplicate filtering for specific result item types.
+Enables or disables the deduplication process for specific result item types.
 
 ```typescript
-enableResultDeduplication(resultItemTypes: number, enabled: boolean): void;
+enableResultDeduplication(resultItemTypes: EnumCapturedResultItemType, enabled: boolean): void;
 ```
 
 **Parameters**
 
-`resultItemTypes`:  The or value of the captured result item types.
+`resultItemTypes`: Specifies the result item types.
 
-`enabled`: Set whether to enable result verification.
+`enabled`: Boolean to toggle deduplication on or off.
 
 **Return Value**
 
 None.
 
+**See Also**
+
+[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+
 ### isResultDeduplicationEnabled
 
-A method that checks whether duplicate filtering is enabled for a specific result item type.
+Checks if deduplication is active for a given result item type.
 
 ```typescript
-isResultDeduplicationEnabled(type: Core.EnumCapturedResultItemType): boolean;
+isResultDeduplicationEnabled(resultItemType: EnumCapturedResultItemType): boolean;
 ```
 
 **Parameters**
 
-`type`:  Specifies the captured result item type.
+`resultItemType`:  Specifies the result item type in question.
 
 **Return Value**
 
-Returns a boolean value indicating whether duplicate filter is enabled for the specific result item type.
+Boolean indicating the deduplication status for the specified type.
+
+**See Also**
+
+[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
 
 ### setDuplicateForgetTime
 
-A method that sets the time duration after which duplicate results should be forgotten for specific result item types.
+Sets the interval during which duplicates are disregarded for specific result item types.
 
 ```typescript
-setDuplicateForgetTime(resultItemTypes: number, time: number): Promise<void>;
+setDuplicateForgetTime(resultItemTypes: EnumCapturedResultItemType, time: number): void;
 ```
 
 **Parameters**
 
-`resultItemTypes`: The or value of the captured result item types.
+`resultItemTypes`: Specifies the result item types.
 
-`time`: The duplicate forget time measured in milliseconds.
+`time`: Time in milliseconds during which duplicates are disregarded. The maximum time allowed is 10,000 milliseconds or 10 seconds.
 
 **Return Value**
 
-Returns a Promise that resolves when this operation are complete.
+None.
+
+**See Also**
+
+[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
 
 ### getDuplicateForgetTime
 
-A method that retrieves the time duration after which duplicate results are forgotten for a specific result item type.
+Retrieves the interval during which duplicates are disregarded for a given result item type.
 
 ```typescript
-getDuplicateForgetTime(type: Core.EnumCapturedResultItemType): Promise<number>;
+getDuplicateForgetTime(resultItemType: EnumCapturedResultItemType): number;
 ```
 
 **Parameters**
 
-`type`: Specifies the captured result item type.
+`resultItemType`: Specifies the result item type in question.
 
 **Return Value**
 
-Returns the duplicate forget time for the specific captured result item type.
+The set interval for the specified item type.
+
+**See Also**
+
+[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)

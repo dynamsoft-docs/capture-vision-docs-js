@@ -19,7 +19,7 @@ interface TextureDetectionResultUnit extends IntermediateResultUnit {
 }
 ```
 
-| API Name               | Type |
+| Name              | Type |
 |----------------------|-------------|
 | [xSpacing](#xspacing) | number |
 | [ySpacing](#yspacing) | number |
