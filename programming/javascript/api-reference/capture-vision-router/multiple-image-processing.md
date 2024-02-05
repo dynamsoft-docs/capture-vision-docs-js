@@ -11,19 +11,20 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Multiple Image Processing
 
-| API Name                                                            | Description                                                                                  |
-| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [setInput()](#setinput)                                             | Sets up an image source to provide images for continuous processing.                         |
-| [getInput()](#getinput)                                             | Returns the image source object.                                                             |
-| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that listens to state changes of the image source. |
-| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes the specified `ImageSourceStateListener` object.                                     |
-| [addResultReceiver()](#addresultreceiver)                           | Adds a `CapturedResultReceiver` object as the receiver of captured results.                  |
-| [removeResultReceiver()](#removeresultreceiver)                     | Removes the specified `CapturedResultReceiver` object.                                       |
-| [addResultFilter()](#addresultfilter)                               | Adds a `CapturedResultFilter` object to filter non-essential results.                        |
-| [removeResultFilter()](#removeresultfilter)                         | Removes the specified `CapturedResultFilter` object.                                         |
-| [startCapturing()](#startcapturing)                                 | Starts to process images consecutively.                                                      |
-| [stopCapturing()](#stopcapturing)                                   | Stops the consecutive process.                                                               |
+| Name                                            | Description                                                                  |
+| ----------------------------------------------- | ---------------------------------------------------------------------------- |
+| [setInput()](#setinput)                         | Sets up an image source to provide images for continuous processing.         |
+| [getInput()](#getinput)                         | Returns the image source object.                                             |
+| [addResultReceiver()](#addresultreceiver)       | Adds a `CapturedResultReceiver` object as the receiver of captured results.  |
+| [removeResultReceiver()](#removeresultreceiver) | Removes the specified `CapturedResultReceiver` object.                       |
+| [addResultFilter()](#addresultfilter)           | Adds a `MultiFrameResultCrossFilter` object to filter non-essential results. |
+| [removeResultFilter()](#removeresultfilter)     | Removes the specified `MultiFrameResultCrossFilter` object.                  |
+| [startCapturing()](#startcapturing)             | Initiates a capturing process based on a specified template.                 |
+| [stopCapturing()](#stopcapturing)               | Stops the capturing process.                                               |
 
+<!-- 
+| [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that monitors changes in the state of an image source. |
+| [removeImageSourceStateListener()](#removeimagesourcestatelistener) | Removes the specified `ImageSourceStateListener` object.                                     | -->
 <!-- 
 | [addCaptureStateListener()](#addcapturestatelistener)               | Adds a CaptureStateListener object to listen to the state changes of the capture process.  |
 | [removeCaptureStateListener()](#removecapturestatelistener)         | Removes the specified CaptureStateListener object.                                         | -->
@@ -35,12 +36,12 @@ Sets up an image source to provide images for continuous processing.
 **Syntax**
 
 ```typescript
-setInput(imageSource: Core.ImageSourceAdapter): void;
+setInput(imageSource: ImageSourceAdapter): void;
 ```
 
-**parameter**
+**Parameters**
 
-`imageSource`: The image source adapter object representing the input image source.
+`imageSource`: The image source which is compliant with the `ImageSourceAdapter` interface.
 
 **Return Value**
 
@@ -52,8 +53,12 @@ None.
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let view = await Dynamsoft.DCE.CameraView.createInstance();
 cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance(view);
-router.setInput(dce);
+router.setInput(cameraEnhancer);
 ```
+
+**See Also**
+
+[ImageSourceAdapter](../core/image-source-adapter.md)
 
 ## getInput
 
@@ -62,22 +67,23 @@ Returns the image source object.
 **Syntax**
 
 ```typescript
-getInput(): Core.ImageSourceAdapter;
+getInput(): ImageSourceAdapter;
 ```
 
-**parameter**
+**Parameters**
 
 None.
 
 **Return Value**
 
-Returns the current image source adapter object representing the input image source.
+Returns the current image source.
 
 **Code snippet**
 
 ```javascript
 const imageSource = CaptureVisionRouter.getInput();
 ```
+
 <!--
 ## addCaptureStateListener
 
@@ -89,7 +95,7 @@ Adds an object that listens to the state changes of the capture process.
 addCaptureStateListener(listener: CaptureStateListener): void;
 ```
 
-**parameter**
+**Parameters**
 
 `listener`: The capture state listener object to be added.
 
@@ -119,7 +125,7 @@ Removes an object which listens to the state changes of the capture process.
 removeCaptureStateListener(listener: CaptureStateListener): void;
 ```
 
-**parameter**
+**Parameters**
 
 `listener`: The capture state listener object to be added.
 
@@ -139,10 +145,10 @@ let csl = {
 router.removeCaptureStateListener(csl);
 ```
 -->
-
+<!-- 
 ## addImageSourceStateListener
 
-Adds an `ImageSourceStateListener` object that listens to state changes of the image source.
+Adds an `ImageSourceStateListener` object that monitors changes in the state of an image source.
 
 **Syntax**
 
@@ -150,9 +156,9 @@ Adds an `ImageSourceStateListener` object that listens to state changes of the i
 addImageSourceStateListener(listener: ImageSourceStateListener): void;
 ```
 
-**parameter**
+**Parameters**
 
-`listener`: The image source state listener object to be added.
+`listener`: The listener object, of type `ImageSourceStateListener`.
 
 **Return Value**
 
@@ -163,7 +169,7 @@ None.
 ```javascript
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let listener = {
-    onImageSourceStateListener(state) {
+    onImageSourceStateReceived(state) {
         console.log("run ImageSourceAdapterStatusListener", state);
     }
 }
@@ -177,28 +183,28 @@ Removes the specified `ImageSourceStateListener` object.
 **Syntax**
 
 ```typescript
-removeImageSourceStateListener(listener: ImageSourceStateListener): void;
+removeImageSourceStateListener(listener: ImageSourceStateListener): boolean;
 ```
 
-**parameter**
+**Parameters**
 
-`listener`: The image source state listener object to be added.
+`listener`: The listener object, of type `ImageSourceStateListener`.
 
 **Return Value**
 
-None.
+Boolean indicating whether the operation succeeded.
 
 **Code snippet**
 
 ```javascript
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 let listener = {
-    onImageSourceStateListener(state) {
+    onImageSourceStateReceived(state) {
         console.log("run ImageSourceAdapterStatusListener", state);
     }
 }
 router.removeImageSourceStateListener(listener);
-```
+``` -->
 
 ## addResultReceiver
 
@@ -207,12 +213,12 @@ Adds a `CapturedResultReceiver` object as the receiver of captured results.
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: Core.CapturedResultReceiver): void;
+addResultReceiver(receiver: CapturedResultReceiver): void;
 ```
 
-**parameter**
+**Parameters**
 
-`receiver`: The result receiver object to be added.
+`receiver`: The receiver object, of type `CapturedResultReceiver`.
 
 **Return Value**
 
@@ -223,8 +229,8 @@ None.
 ```javascript
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-resultReceiver.onDetectedQuadsReceived(result) {
-    //* Do something with the result */
+resultReceiver.onCapturedResultReceived = (result) => {
+    /* Do something with the result */
 };
 router.addResultReceiver(resultReceiver);
 ```
@@ -236,12 +242,12 @@ Removes the specified `CapturedResultReceiver` object.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: Core.CapturedResultReceiver): void;
+removeResultReceiver(receiver: CapturedResultReceiver): void;
 ```
 
-**parameter**
+**Parameters**
 
-`receiver`: The result receiver object to be added.
+`receiver`: The receiver object, of type `CapturedResultReceiver`.
 
 **Return Value**
 
@@ -252,37 +258,38 @@ None.
 ```javascript
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
-resultReceiver.onDetectedQuadsReceived(result) {
-    //* Do something with the result */
+resultReceiver.onCapturedResultReceived = (result) => {
+    /* Do something with the result */
 };
 router.addResultReceiver(resultReceiver);
+//...
 router.removeResultReceiver(resultReceiver);
 ```
 
 ## addResultFilter
 
-Adds a `CapturedResultFilter` object to filter non-essential results.
+Adds a `MultiFrameResultCrossFilter` object to filter non-essential results.
 
 **Syntax**
 
 ```typescript
-addResultFilter(filter: Core.CapturedResultFilter): Promise<void>;
+addResultFilter(filter: MultiFrameResultCrossFilter): Promise<void>;
 ```
 
-**parameter**
+**Parameters**
 
-`filter`: The result filter object to be added.
+`filter`: The filter object, of type `MultiFrameResultCrossFilter`.
 
 **Return Value**
 
-Returns a promise that resolves when the result filter have been successfully added.
+A promise that resolves when the operation has successfully completed. It does not provide any value upon resolution.
 
 **Code snippet**
 
 ```javascript
 filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-router.addResultReceiver(filter);
+router.addResultFilter(filter);
 ```
 
 > In the provided code snippet, the default filter implementation is utilized. This filter can offer cross-validation and de-duplication functionalities. To utilize this filter, it's necessary to include the corresponding package `dynamsoft-utility`.
@@ -293,34 +300,35 @@ router.addResultReceiver(filter);
 
 ## removeResultFilter
 
-Removes the specified `CapturedResultFilter` object.
+Removes the specified `MultiFrameResultCrossFilter` object.
 
 **Syntax**
 
 ```typescript
-removeResultFilter(filter: Core.CapturedResultFilter): void;
+removeResultFilter(filter: MultiFrameResultCrossFilter): : Promise<void>;
 ```
 
-**parameter**
+**Parameters**
 
-`filter`: The result filter object to be removed.
+`filter`: The filter object, of type `MultiFrameResultCrossFilter`.
 
 **Return Value**
 
-None.
+A promise that resolves when the operation has successfully completed. It does not provide any value upon resolution.
 
 **Code snippet**
 
 ```javascript
 filter = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-router.addResultReceiver(filter);
+router.addResultFilter(filter);
+// ...
 router.removeResultFilter(filter);
 ```
 
 ## startCapturing
 
-Starts to process images consecutively.
+Initiates a capturing process based on a specified template. This process is repeated for each image fetched from the source.
 
 **Syntax**
 
@@ -328,24 +336,24 @@ Starts to process images consecutively.
 startCapturing(templateName?: string): Promise<void>;
 ```
 
-**parameter**
+**Parameters**
 
 `templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, "Default" is used. There are two types of CaptureVisionTemplates: the [built-in ones](./built-in-templates.md) which come with the SDK and the custom ones that get initialized when the user calls [initSettings](./settings.md#initsettings). Please be aware that the [built-in CaptureVisionTemplates](./built-in-templates.md) will be overwritten should the user calls [initSettings](./settings.md#initsettings) and pass his own settings.
 
 **Return Value**
 
-Returns a promise that resolves to void.
+A promise that resolves when the capturing process has successfully started. It does not provide any value upon resolution.
 
 **Code snippet**
 
 ```javascript
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-await router.startCapturing();
+await router.startCapturing("ReadSingleBarcode");
 ```
 
 ## stopCapturing
 
-Stops the consecutive process.
+Stops the capturing process.
 
 **Syntax**
 
@@ -353,7 +361,7 @@ Stops the consecutive process.
 stopCapturing(): void;
 ```
 
-**parameter**
+**Parameters**
 
 None.
 
@@ -365,5 +373,7 @@ None.
 
 ```javascript
 router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+await router.startCapturing("ReadSingleBarcode");
+// ...
 router.stopCapturing();
 ```

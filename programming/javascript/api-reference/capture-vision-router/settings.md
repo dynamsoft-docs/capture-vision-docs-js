@@ -11,32 +11,33 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Settings
 
-| API Name                                          | Description                                                                                              |
-| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [initSettings()](#initsettings)                   | Initializes a specific settings. Settings can either be a JSON string or a url to a JSON file.           |
-| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                 |
-| [getSimplifiedSettings()](#getsimplifiedsettings) | Returns a `SimplifiedCaptureVisionSettings` object for manipulating a specified `CaptureVisionTemplate`. |
-| [updateSettings()](#updatesettings)               | Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.    |
-| [resetSettings()](#resetsettings)                 | Resets settings to factory default.                                                                      |
+| Name                                              | Description                                                                                                                                                            |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [initSettings()](#initsettings)                   | Configures runtime settings using a provided JSON string, an object, or a URL pointing to an object, which contains settings for one or more `CaptureVisionTemplates`. |
+| [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                                                                               |
+| [outputSettingsToFile](#outputsettingstofile)     | Generates a Blob object or initiates a JSON file download containing the settings for the specified `CaptureVisionTemplate`.                                           |
+| [getSimplifiedSettings()](#getsimplifiedsettings) | Retrieves a JSON object that contains simplified settings for the specified `CaptureVisionTemplate`.                                                                   |
+| [updateSettings()](#updatesettings)               | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.                                                                |
+| [resetSettings()](#resetsettings)                 | Restores all runtime settings to their original default values.                                                                                                        |
 
 
 ## initSettings
 
-Initializes the Runtime Settings with the settings in the given JSON string which contains one or multiple CaptureVisionTemplates.
+Configures runtime settings using a provided JSON string, an object, or a URL pointing to an object, which contains settings for one or more `CaptureVisionTemplates`.
 
 **Syntax**
 
 ```typescript
-initSettings(settings: string): Promise<void>;
+initSettings(settings: string | object): Promise<any>;
 ```
 
 **Parameters**
 
-`settings`: A JSON string containing the configuration settings for the CaptureVisionRouter.
+`settings`: A JSON string, an object, or a URL pointing to an object that contains settings for one or more `CaptureVisionTemplates`.
 
 **Return value**
 
-Returns a promise that resolves when the settings have been successfully initialized.
+A promise that resolves when the operation has completed. It provides an object that describes the result.
 
 **Code snippet**
 
@@ -45,17 +46,32 @@ let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const settings = {
   "CaptureVisionTemplates": [
     {
-      "Name": "ReadBarcodes_my_setting",
-      "Timeout": 5000
+      "Name": "ReadSingleBarcode",
+      "ImageROIProcessingNameArray": ["roi-read-single-barcode"]
     }
   ],
+  "TargetROIDefOptions": [
+    {
+      "Name": "roi-read-single-barcode",
+      "TaskSettingNameArray": ["task-read-single-barcode"]
+    }
+  ],
+  "BarcodeReaderTaskSettingOptions": [
+    {
+      "Name": "task-read-single-barcode"
+    }
+  ]
 };
 await router.initSettings(settings);
 ```
 
+**See Also**
+
+[Structure of a Parameter Template File](https://www.dynamsoft.com/capture-vision/docs/core/parameters/file/index.html#structure-of-a-parameter-template-file)
+
 ## outputSettings
 
-Returns the settings of the CaptureVisionRouter as a JSON string.
+Returns an object that contains settings for the specified `CaptureVisionTemplate`.
 
 **Syntax**
 
@@ -65,23 +81,53 @@ outputSettings(templateName: string): Promise<string>;
 
 **Parameters**
 
-`templateName`: The name of the template for which to output the settings. If not specified, the settings currently in effect will be returned; if templateName = "*", export all the loaded templates.
+`templateName`: specifies a `CaptureVisionTemplate` by its name. If passed "*", the returned object will contain all templates.
 
 **Return value**
 
-Returns a promise that resolves with the JSON string representing the settings.
+A promise that resolves to the object that contains settings for the specified template or all templates.
 
 **Code snippet**
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-const settings = await router.outputSettings();
+const settings = await router.outputSettings("ReadSingleBarcode");
+console.log(settings);
+```
+
+## outputSettingsToFile
+
+Generates a Blob object or initiates a JSON file download containing the settings for the specified `CaptureVisionTemplate`.
+
+**Syntax**
+
+```typescript
+outputSettingsToFile(templateName: string, fileName?: string, download?: boolean): Promise<Blob>;
+```
+
+**Parameters**
+
+`templateName`: specifies a `CaptureVisionTemplate` by its name. If passed "*", the returned object will contain all templates.
+
+`fileName`: specifies the name of the file.
+
+`download`: boolean that specifies whether to initiates a JSON file download.
+
+**Return value**
+
+A promise that resolves to the Blob object that contains settings for the specified template or all templates.
+
+**Code snippet**
+
+```javascript
+let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const settings = await router.outputSettingsToFile("ReadSingleBarcode", "read-single-file", true);
 console.log(settings);
 ```
 
 ## getSimplifiedSettings
 
-Retrieves the simplified settings for a specific template from the CaptureVisionRouter.
+Retrieves a JSON object that contains simplified settings for the specified `CaptureVisionTemplate`.
 
 **Syntax**
 
@@ -89,15 +135,15 @@ Retrieves the simplified settings for a specific template from the CaptureVision
 getSimplifiedSettings(templateName: string): Promise<SimplifiedCaptureVisionSettings>;
 ```
 
-**parameter**
+**Parameters**
 
-`templateName`: The name of the template for which to retrieve the simplified settings.
+`templateName`: specifies a `CaptureVisionTemplate` by its name.
 
 **Return Value**
 
-Returns a promise that resolves with a SimplifiedCaptureVisionSettings object representing the simplified settings for the specified template.
+A promise that resolves to a JSON object, of type `SimplifiedCaptureVisionSettings`, which represents the simplified settings for the specified template.
 
-> Remarks: If the underlying CaptureSettings is too complicated, we cannot construct a Simplified CaptureSettings in which case it returns an error.
+> Remarks: If the settings of the specified template are too complex, we cannot create a SimplifiedCaptureVisionSettings, and as a result, it will return an error.
 
 **Code snippet**
 
@@ -108,57 +154,51 @@ settings = await router.getSimplifiedSettings();
 
 ## updateSettings
 
-Updates a specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.
+Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.
 
 **Syntax**
 
 ```typescript
-updateSettings(templateName: string, settings: SimplifiedCaptureVisionSettings): Promise<void>;
+updateSettings(templateName: string, settings: SimplifiedCaptureVisionSettings): Promise<any>;
 ```
 
-**parameter**
+**Parameters**
 
-`templateName`: The name of the template to be updated with the provided settings.
+`templateName`: specifies a `CaptureVisionTemplate` by its name.
 
-`settings`: The SimplifiedCaptureVisionSettings object containing the new values for the template.
+`settings`: the `SimplifiedCaptureVisionSettings` object that contains updated settings.
 
-**Return Value**
+**Return value**
 
-Returns a promise that resolves when the template settings have been successfully updated.
+A promise that resolves when the operation has completed. It provides an object that describes the result.
 
 **Code snippet**
 
 ```javascript
-let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let newSettings = await router.getSimplifiedSettings("ReadSingleBarcode");
-newSettings.timeout = 5000;
-// Change the timeout of preset templates "ReadSingleBarcode"
-await router.updateSettings("ReadSingleBarcode", newSettings);
+let settings = await router.getSimplifiedSettings("ReadSingleBarcode");
+settings.barcodeSettings.barcodeFormatIds =
+  Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+await router.updateSettings("ReadSingleBarcode", settings);
+await router.startCapturing("ReadSingleBarcode");
 ```
-
-> Note: The updateSettings method allows you to update a template's settings with new values. It is specifically designed for fast configuration of the image processing process, with certain limitations:
-
-> 1. There can only be one target region of interest (ROI), typically the input image itself.
-> 2. For the ROI, the SDK processes it only once.
-> 3. The processes within the template are independent and do not rely on each other.
 
 ## resetSettings
 
-Resets all settings of the CaptureVisionRouter to their default values.
+Restores all runtime settings to their original default values.
 
 **Syntax**
 
 ```typescript
-resetSettings(): Promise<void>;
+resetSettings(): Promise<any>;
 ```
 
-**parameter**
+**Parameters**
 
 None
 
 **Return Value**
 
-Returns a promise that resolves when the settings have been successfully reset to their default values.
+A promise that resolves when the operation has completed. It provides an object that describes the result.
 
 **Code snippet**
 
@@ -166,5 +206,3 @@ Returns a promise that resolves when the settings have been successfully reset t
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 await router.resetSettings();
 ```
-
-> Note: The resetSettings method allows you to reset all settings of the CaptureVisionRouter instance to their default values. This can be useful when you want to start with a clean slate and remove any custom configurations. It is important to note that the default values may vary depending on the specific edition, such as the JavaScript edition, which may have slightly different defaults compared to other editions like C++.

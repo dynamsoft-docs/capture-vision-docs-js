@@ -10,23 +10,25 @@ noTitleIndex: true
 
 # ImageSourceStateListener
 
-The `ImageSourceStateListener` interface represents a listener for capture state changes. It defines a callback function `onImageSourceStateReceived` that will be called when the image source state changes.
+The `ImageSourceStateListener` interface provides a standardized way for monitoring changes in the state of an image source. Utilizing an event-driven design, it features the event `onImageSourceStateReceived`, which is triggered whenever there is a change in the image source's state.
 
 ```typescript
 interface ImageSourceStateListener {
-    onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
+    onImageSourceStateReceived?: (state: EnumImageSourceState) => void;
 }
 ```
 
 ## onImageSourceStateReceived
 
+Event triggered whenever there is a change in the image source's state.
+
 ```typescript
-onImageSourceStateReceived?: (status: EnumImageSourceState) => void;
+onImageSourceStateReceived?: (state: EnumImageSourceState) => void;
 ```
 
 **Parameters**
 
-`status`: The parameter status represents the received image source state. It is of type `EnumImageSourceState`, which is an enumeration representing different image source states.
+`state`: This parameter indicates the current state of the image source, using the `EnumImageSourceState` type. This enumeration defines various possible states of an image source.
 
 **Return Value**
 
@@ -35,11 +37,13 @@ None.
 **Code snippet**
 
 ```javascript
-let issl = {
-    onImageSourceStateListener(state) {
+let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+let imageSourceStateListener = {
+    onImageSourceStateReceived(state) {
         console.log("Image Source State: ", state);
     }
 }
+router.
 ```
 
 **See Also**

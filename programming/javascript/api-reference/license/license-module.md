@@ -18,7 +18,7 @@ The License module is defined in the namespace `Dynamsoft.License`. It consists 
 
 This class defines common functionality in the License module. At present, it has only one method.
 
-| API Name                                                      | Description                                |
+| Name                                                     | Description                                |
 | ------------------------------------------------------------- | ------------------------------------------ |
 | `static` [getVersion()](./license-module-class.md#getversion) | Returns the version of the License module. |
 
@@ -28,8 +28,8 @@ The `LicenseManager` class is responsible for the licensing of all functional mo
 
 The APIs for this class are:
 
-| API Name                                                                     | Description                                                            |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `static` [getDeviceUUID](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                           |
-| `static` [initLicense](./license-manager.md#initlicense)                     | Initializes the license using a license key.                           |
-| `static` [setDeviceFriendlyName](./license-manager.md#setdevicefriendlyname) | Sets a recognizable name for the device which corresponds to its UUID. |
+| API                                                                          | Description                                                             |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `static` [getDeviceUUID](./license-manager.md#getdeviceuuid)                 | Returns the unique identifier of the device.                            |
+| `static` [initLicense](./license-manager.md#initlicense)                     | Initializes the license for the application using a license key.        |
+| `static` [setDeviceFriendlyName](./license-manager.md#setdevicefriendlyname) | Assigns a distinctive name to the device, correlating it with its UUID. |

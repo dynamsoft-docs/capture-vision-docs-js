@@ -11,9 +11,9 @@ noTitleIndex: true
 
 # CaptureVisionRouterModule Class
 
-This class defines common functionality in the CaptureVisionRouter module. At present, it has only one method.
+The `CaptureVisionRouterModule` class defines common functionality in the `CaptureVisionRouter` module.
 
-| API Name                             | Description                                            |
+| Name                                 | Description                                            |
 | ------------------------------------ | ------------------------------------------------------ |
 | `static` [getVersion()](#getversion) | Returns the version of the CaptureVisionRouter module. |
 

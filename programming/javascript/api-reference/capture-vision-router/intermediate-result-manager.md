@@ -10,17 +10,19 @@ noTitleIndex: true
 
 # IntermediateResultManager
 
-The `IntermediateResultManager` class manages intermediate results generated during data capturing. It provides methods to add and remove intermediate result receivers, as well as to get original image data using an image hash id.
+The `IntermediateResultManager` class is responsible for handling intermediate results obtained during the process of an image. It offers methods to both register and deregister receivers of these intermediate results, as well as to retrieve the original image data.
 
-| API Name                                        | Description                                          |
-| ----------------------------------------------- | ---------------------------------------------------- |
-| [addResultReceiver()](#addresultreceiver)       | Adds an intermediate result receiver.                |
-| [removeResultReceiver()](#removeresultreceiver) | Removes an intermediate result receiver.             |
-| [getOriginalImage()](#getoriginalimage)         | Gets the original image data using an image hash id. |
+| Name                                            | Description                                                                         |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [addResultReceiver()](#addresultreceiver)       | Adds a `IntermediateResultReceiver` object as the receiver of intermediate results. |
+| [removeResultReceiver()](#removeresultreceiver) | Removes the specified `IntermediateResultReceiver` object.                          |
+| [getOriginalImage()](#getoriginalimage)         | Retrieves the original image data.                                                  |
 
-### addResultReceiver
+## addResultReceiver
 
-Adds an intermediate result receiver to the manager.
+Adds a `IntermediateResultReceiver` object as the receiver of intermediate results.
+
+**Syntax**
 
 ```typescript
 addResultReceiver(receiver: IntermediateResultReceiver): void;
@@ -28,11 +30,33 @@ addResultReceiver(receiver: IntermediateResultReceiver): void;
 
 **Parameters**
 
-`receiver`: The intermediate result receiver to add.
+`receiver`: the receiver object, of type `IntermediateResultReceiver`.
 
-### removeResultReceiver
+**Return Value**
 
-Removes an intermediate result receiver from the manager.
+None.
+
+**Code snippet**
+
+```javascript
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const intermediateResultReceiver = new Dynamsoft.CVR.IntermediateResultReceiver();
+intermediateResultReceiver.onDecodedBarcodesReceived = (result, info) => {
+    /* Do something with the result */
+};
+const intermediateResultManager = router.getIntermediateResultManager();
+intermediateResultManager.addResultReceiver(intermediateResultReceiver);
+```
+
+**See Also**
+
+[IntermediateResultReceiver](../capture-vision-router/intermediate-result-receiver.md)
+
+## removeResultReceiver
+
+Removes the specified `IntermediateResultReceiver` object.
+
+**Syntax**
 
 ```typescript
 removeResultReceiver(receiver: IntermediateResultReceiver): void;
@@ -40,14 +64,36 @@ removeResultReceiver(receiver: IntermediateResultReceiver): void;
 
 **Parameters**
 
-`receiver`: The intermediate result receiver to remove.
+`receiver`: the receiver object, of type `IntermediateResultReceiver`.
+
+**Return Value**
+
+None.
+
+**Code snippet**
+
+```javascript
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const intermediateResultReceiver = new Dynamsoft.CVR.IntermediateResultReceiver();
+intermediateResultReceiver.onDecodedBarcodesReceived = (result, info) => {
+    /* Do something with the result */
+};
+const intermediateResultManager = router.getIntermediateResultManager();
+intermediateResultManager.addResultReceiver(intermediateResultReceiver);
+// ...
+intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
+```
+
+**See Also**
+
+[IntermediateResultReceiver](../capture-vision-router/intermediate-result-receiver.md)
 
 ### getOriginalImage
 
-Gets the original image data using an image hash id.
+Retrieves the original image data.
 
 ```typescript
-getOriginalImage(): Promise<Core.DSImageData>;
+getOriginalImage(): Promise<DSImageData>;
 ```
 
 **Parameters**
@@ -56,4 +102,8 @@ None.
 
 **Return value**
 
-Returns a promise to the DSImageData object containing the original image data.
+A promise that resolves when the operation has successfully completed. It provides the original image upon resolution.
+
+**See Also**
+
+[DSImageData](../core/basic-structures/ds-image-data.md)

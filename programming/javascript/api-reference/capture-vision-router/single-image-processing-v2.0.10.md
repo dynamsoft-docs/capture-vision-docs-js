@@ -11,13 +11,13 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Single Image Processing
 
-| API Name              | Description                                               |
+| Name             | Description                                               |
 | --------------------- | --------------------------------------------------------- |
-| [capture()](#capture) | Process an image or file to derive important information. |
+| [capture()](#capture) | Process a single image or a file containing a single image to derive important information. |
 
 ## capture
 
-Process an image or file to derive important information.
+Process a single image or a file containing a single image to derive important information.
 
 **Syntax**
 

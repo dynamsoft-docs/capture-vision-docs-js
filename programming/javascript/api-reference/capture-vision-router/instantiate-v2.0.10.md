@@ -11,7 +11,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Instantiate
 
-| API Name                                     | Description                                                            |
+| Name                                    | Description                                                            |
 | -------------------------------------------- | ---------------------------------------------------------------------- |
 | `static` [preLoadModule()](#preloadmodule)   | Loads the specified module to speed up the initialization.             |
 | `static` [isModuleLoaded()](#ismoduleloaded) | Returns whether the specified module has been loaded.                  |
@@ -36,28 +36,6 @@ detectEnvironment(): Promise<any>
 ```javascript
 Dynamsoft.CVR.CaptureVisionRouter.detectEnvironment();
 ```
-
-## onWarning
-
-A callback which is triggered when the running environment is not ideal.
-
-```typescript
-onWarning: (warning:Warning) =>{};
-```
-
-**Return Value**
-
-`Promise<any>`
-
-**Code snippet**
-
-```javascript
-Dynamsoft.CVR.CaptureVisionRouter.onWarning = warning => console.log(warning.message);
-```
-
-**See Also**
-
-* [Warning](./interfaces/warning.md)
 
 ## preLoadModule
 
