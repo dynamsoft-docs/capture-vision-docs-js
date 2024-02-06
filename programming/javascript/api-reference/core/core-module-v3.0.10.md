@@ -82,7 +82,6 @@ The following are the basic interfaces often shared by more than one module:
 * [DSImageData](./basic-structures/ds-image-data.md)
 * [DSRect](./basic-structures/ds-rect.md)
 * [Edge](./basic-structures/edge.md)
-* [FileImageTag](./basic-structures/file-image-tag.md)
 * [ImageTag](./basic-structures/image-tag.md)
 * [LineSegment](./basic-structures/line-segment.md)
 * [Point](./basic-structures/point.md)
@@ -90,7 +89,10 @@ The following are the basic interfaces often shared by more than one module:
 * [Quadrilateral](./basic-structures/quadrilateral.md)
 * [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
 * [Rect](./basic-structures/rect.md)
-<!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
+<!--
+
+* [FileImageTag](./basic-structures/file-image-tag.md)
+ * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 <!-- * [DSFile](./basic-structures/ds-file.md) -->
 
 The following interfaces facilitate the use of intermediate result functions:
@@ -132,8 +134,6 @@ The following are the basic enumerations often shared by more than one module:
 * [EnumImageTagType]({{ site.enums }}core/image-tag-type.html?lang=js)
 <!-- * [EnumPDFReadingMode]({{ site.enums }}core/pdf-reading-mode.html?lang=js)
 * [EnumRasterDataSource]({{ site.enums }}core/raster-data-source.html?lang=js) -->
-<!-- * [EnumVideoFrameQuality]({{ site.enums }}core/video-frame-quality.html?lang=js) -->
-
 <!--* [EnumImageCaptureDistanceMode]({{ site.enums }}core/image-capture-distance-mode.html?lang=js)-->
 
 The following enumerations facilitate the use of intermediate result functions:

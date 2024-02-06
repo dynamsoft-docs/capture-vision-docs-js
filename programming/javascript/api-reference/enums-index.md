@@ -33,6 +33,5 @@ breadcrumbText: Enumeration Index
 * [SectionType]({{ site.enums }}core/section-type.html?lang=js)
 * [TargetType]({{ site.enums }}core/target-type.html?lang=js)
 * [ValidationStatus]({{ site.enums }}code-parser/validation-status.html?lang=js)
-* [VideoFrameQuality]({{ site.enums }}core/video-frame-quality.html?lang=js)
 * [ColourChannelUsageType]({{ site.enums }}core/colour-channel-usage-type.html?lang=js)
 

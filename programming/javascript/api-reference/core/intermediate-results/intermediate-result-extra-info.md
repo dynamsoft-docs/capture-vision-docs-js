@@ -10,52 +10,32 @@ noTitleIndex: true
 
 # IntermediateResultExtraInfo
 
-The `IntermediateResultExtraInfo` structure represents the extra information associated with an intermediate result. It includes properties such as the target ROI definition name, task name, section level result indicator, and section type.
+The `IntermediateResultExtraInfo` interface represents the extra information associated with an intermediate result. It includes properties such as the target ROI definition name, task name, section level result indicator, and section type.
 
 ```typescript
 interface IntermediateResultExtraInfo {
-    targetROIDefName: string;
-    taskName: string;
     isSectionLevelResult: boolean;
     sectionType: EnumSectionType;
+    targetROIDefName: string;
+    taskName: string;
 };
 ```
-
-| Properties                                             | Type                                |
-| ----------------------------------------------------- | ----------------------------------- |
-| [targetROIDefName](#targetroidefname)               | *String*                            |
-| [taskName](#taskname)                               | *String*                            |
-| [isSectionLevelResult](#issectionlevelresult)       | *boolean*                           |
-| [sectionType](#sectiontype)                         | *EnumSectionType*                   |
-
-## targetROIDefName
-
-Specifies the name of the TargetROIDef object that generates the intermediate result.
-
-```typescript
-targetROIDefName: string;
-```
-
-## taskName
-
-Specifies the name of the task that generates the intermediate result.
-
-```typescript
-taskName: string;
-```
-
 ## isSectionLevelResult
 
-Specifies whether the intermediate result is a section-level result.
-
-```typescript
-isSectionLevelResult: boolean;
-```
+Indicates whether the result is at the section level.
 
 ## sectionType
 
-Specifies the SectionType that generates the intermediate result.
+The type of section, if applicable, as defined by an enumeration.
 
-```typescript
-sectionType: EnumSectionType;
-```
+**See Also**
+
+[EnumSectionType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/section-type.html?lang=js)
+
+## targetROIDefName
+
+The name of the target Region Of Interest (ROI) definition.
+
+## taskName
+
+The name of the processing task to which this result belongs.

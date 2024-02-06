@@ -10,22 +10,14 @@ noTitleIndex: true
 
 # TextureRemovedBinaryImageUnit
 
-The `TextureRemovedBinaryImageUnit` interface represents a binary image unit after removing texture.
+The `TextureRemovedBinaryImageUnit` interface extends the `IntermediateResultUnit` interface and represents a texture-removed binary image unit.
 
 ```typescript
 interface TextureRemovedBinaryImageUnit extends IntermediateResultUnit {
-    imageData: Core.DSImageData;
+    imageData: DSImageData;
 } 
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
-
 ## imageData
 
-The texture-removed binary image data stored in the unit.
-
-```typescript
-imageData: Core.DSImageData;
-```
+The image data for the texture-removed binary image.

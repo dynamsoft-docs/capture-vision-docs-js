@@ -10,22 +10,14 @@ noTitleIndex: true
 
 # Contour
 
-The `Contour` interface defines the structure of a contour in 2-dimensional space. It contains an array of `Point` objects, which represent the vertices of the contour.
+The `Contour` interface represents a contour made up of multiple points.
 
 ```typescript
 interface Contour {
     points: Array<Point>;
 }
 ```
-  
-| Properties | Type |
-|---------- | ---- |
-| [points](#points)| *Array\<Point>* |
 
 ## points
 
-The point array of the contour.
-
-```typescript
-points: Array<Point>;
-```
+An array of [`Point`](./point.md) objects defining the vertices of the contour.

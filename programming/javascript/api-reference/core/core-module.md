@@ -18,14 +18,13 @@ The Core module is defined in the namespace `Dynamsoft.Core`. It consists of the
 
 This class defines common functionality in the Core module.
 
-| Name                                                                       | Description                                                                                 |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `static` [getVersion()](./core-module-class.md#getversion)                 | Returns the version of the Core module.                                                     |
-| `static` [detectEnvironment()](./core-module-class.md#detectenvironment)   | Detects the current environment.                                                            |
-| `static` [engineResourcePaths](./core-module-class.md#engineresourcepaths) | Returns or sets the paths for finding the .wasm files and other resource files for modules. |
-| `static` [loadWasm()](./core-module-class.md#loadwasm)                     | Loads the .wasm files for the specified modules.                                            |
-| `static` [enableLogging()](./core-module-class.md#enablelogging)           | Enables logging to print internal logs to the browser console for debugging.                |
-| `static` [disableLogging()](./core-module-class.md#disablelogging)         | Disables logging.                                                                           |
+| Name                                                                       | Description                                                                                       |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `static` [detectEnvironment()](./core-module-class.md#detectenvironment)   | Detects and returns information about the current runtime environment.                            |
+| `static` [engineResourcePaths](./core-module-class.md#engineresourcepaths) | Configures the paths where the .wasm files and other necessary resources for modules are located. |
+| `static` [getVersion()](./core-module-class.md#getversion)                 | Returns the version of the Core module.                                                           |
+| `static` [isModuleLoaded()](./core-module-class.md#ismoduleloaded)         | Returns whether the WebAssembly (.wasm) file for the specified module is successfully loaded.     |
+| `static` [loadWasm()](./core-module-class.md#loadwasm)                     | Initiates the loading process for the .wasm file(s) corresponding to the specified module(s).     |
 
 ## ImageSourceAdapter Class
 
@@ -62,67 +61,68 @@ The following are the basic interfaces often shared by more than one module:
 * [Arc](./basic-structures/arc.md)
 * [Contour](./basic-structures/contour.md)
 * [Corner](./basic-structures/corner.md)
+* [DSRect](./basic-structures/ds-rect.md)
 * [Edge](./basic-structures/edge.md)
 * [LineSegment](./basic-structures/line-segment.md)
 * [Point](./basic-structures/point.md)
 * [Polygon](./basic-structures/polygon.md)
 * [Quadrilateral](./basic-structures/quadrilateral.md)
 * [Rect](./basic-structures/rect.md)
-* [DSRect](./basic-structures/ds-rect.md)
 
 ### Basic Structures
 
 * [CapturedResult](./basic-structures/captured-result.md)
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
-* [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
+* [DSFile](./basic-structures/ds-file.md)
 * [DSImageData](./basic-structures/ds-image-data.md)
-* [ImageTag](./basic-structures/image-tag.md)
-* [FileImageTag](./basic-structures/file-image-tag.md)
 * [ImageSourceErrorListener](./basic-structures/image-source-error-listener.md)
-<!-- * [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
+* [ImageTag](./basic-structures/image-tag.md)
+* [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
+
+<!--
+* [FileImageTag](./basic-structures/file-image-tag.md)
+* [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 
 ### Intermediate Results
 
-* [RegionObjectElement](./intermediate-results/region-object-element.md)
-* [PredetectedRegionElement](./intermediate-results/predetected-region-element.md)
-* [IntermediateResult](./intermediate-results/intermediate-result.md)
-* [IntermediateResultUnit](./intermediate-results/intermediate-result-unit.md)
-* [ColourImageUnit](./intermediate-results/colour-image-unit.md)
-* [ScaledDownColourImageUnit](./intermediate-results/scaled-down-colour-image-unit.md)
-* [GrayscaleImageUnit](./intermediate-results/grayscale-image-unit.md)
-* [TransformedGrayscaleImageUnit](./intermediate-results/transformed-grayscale-image-unit.md)
-* [EnhancedGrayscaleImageUnit](./intermediate-results/enhanced-grayscale-image-unit.md)
-* [PredetectedRegionsUnit](./intermediate-results/predetected-regions-unit.md)
 * [BinaryImageUnit](./intermediate-results/binary-image-unit.md)
-* [TextureDetectionResultUnit](./intermediate-results/texture-detection-result-unit.md)
-* [TextureRemovedGrayscaleImageUnit](./intermediate-results/texture-removed-grayscale-image-unit.md)
-* [TextureRemovedBinaryImageUnit](./intermediate-results/texture-removed-binary-image-unit.md)
+* [ColourImageUnit](./intermediate-results/colour-image-unit.md)
 * [ContoursUnit](./intermediate-results/contours-unit.md)
-* [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)
-* [TextZonesUnit](./intermediate-results/text-zones-unit.md)
-* [TextRemovedBinaryImageUnit](./intermediate-results/text-removed-binary-image-unit.md)
-* [ObservationParameters](./intermediate-results/observation-parameters.md)
+* [EnhancedGrayscaleImageUnit](./intermediate-results/enhanced-grayscale-image-unit.md)
+* [GrayscaleImageUnit](./intermediate-results/grayscale-image-unit.md)
+* [IntermediateResult](./intermediate-results/intermediate-result.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
+* [IntermediateResultUnit](./intermediate-results/intermediate-result-unit.md)
+* [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)
+* [PredetectedRegionElement](./intermediate-results/predetected-region-element.md)
+* [PredetectedRegionsUnit](./intermediate-results/predetected-regions-unit.md)
+* [RegionObjectElement](./intermediate-results/region-object-element.md)
+* [ScaledDownColourImageUnit](./intermediate-results/scaled-down-colour-image-unit.md)
+* [TextRemovedBinaryImageUnit](./intermediate-results/text-removed-binary-image-unit.md)
+* [TextureDetectionResultUnit](./intermediate-results/texture-detection-result-unit.md)
+* [TextureRemovedBinaryImageUnit](./intermediate-results/texture-removed-binary-image-unit.md)
+* [TextureRemovedGrayscaleImageUnit](./intermediate-results/texture-removed-grayscale-image-unit.md)
+* [TextZonesUnit](./intermediate-results/text-zones-unit.md)
+* [TransformedGrayscaleImageUnit](./intermediate-results/transformed-grayscale-image-unit.md)
 
 ## Enums
 
 The following are the basic enumerations often shared by more than one module:
 
-* [EnumErrorCode]({{ site.enums }}core/error-code.html?lang=js)
-* [EnumImagePixelFormat]({{ site.enums }}core/image-pixel-format.html?lang=js)
-* [EnumGrayscaleTransformationMode]({{ site.enums }}core/grayscale-transformation-mode.html?lang=js)
-* [EnumGrayscaleEnhancementMode]({{ site.enums }}core/grayscale-enhancement-mode.html?lang=js)
-* [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
 * [EnumBufferOverflowProtectionMode]({{ site.enums }}core/buffer-overflow-protection-mode.html?lang=js)
-* [EnumImageTagType]({{ site.enums }}core/image-tag-type.html?lang=js)
+* [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
+* [EnumColourChannelUsageType]({{ site.enums }}core/colour-channel-usage-type.html?lang=js)
 * [EnumCornerType]({{ site.enums }}core/corner-type.html?lang=js)
-* [EnumSectionType]({{ site.enums }}core/section-type.html?lang=js)
+* [EnumErrorCode]({{ site.enums }}core/error-code.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.enums }}core/grayscale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleTransformationMode]({{ site.enums }}core/grayscale-transformation-mode.html?lang=js)
+* [EnumImagePixelFormat]({{ site.enums }}core/image-pixel-format.html?lang=js)
+* [EnumImageTagType]({{ site.enums }}core/image-tag-type.html?lang=js)
 * [EnumIntermediateResultUnitType]({{ site.enums }}core/intermediate-result-unit-type.html?lang=js)
 * [EnumRegionObjectElementType]({{ site.enums }}core/region-object-element-type.html?lang=js)
-* [EnumColourChannelUsageType]({{ site.enums }}core/colour-channel-usage-type.html?lang=js)
+* [EnumSectionType]({{ site.enums }}core/section-type.html?lang=js)
 * [EnumTransformMatrixType]({{ site.enums }}core/transform-matrix-type.html?lang=js)
 
 <!-- * [EnumPDFReadingMode]({{ site.enums }}core/pdf-reading-mode.html?lang=js) -->
 <!-- * [EnumRasterDataSource]({{ site.enums }}core/raster-data-source.html?lang=js) -->
-<!-- * [EnumVideoFrameQuality]({{ site.enums }}core/video-frame-quality.html?lang=js) -->
 <!--* [EnumImageCaptureDistanceMode]({{ site.enums }}core/image-capture-distance-mode.html?lang=js)-->

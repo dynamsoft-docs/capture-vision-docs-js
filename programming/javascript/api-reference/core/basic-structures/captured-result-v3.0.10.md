@@ -15,32 +15,32 @@ The [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.
 
 ```typescript
 interface CapturedResult {
-    readonly OriginalImageHashId: string;
-    readonly OriginalImageTag: ImageTag;
+    readonly originalImageHashId: string;
+    readonly originalImageTag: ImageTag;
     readonly items: Array<CapturedResultItem>;
 }
 ```
 
 | Properties                                  | Type       |
 | ------------------------------------------- | ---------- |
-| [OriginalImageHashId](#originalimagehashid) | *String*   |
-| [OriginalImageTag](#originalimagetag)       | *ImageTag* |
+| [originalImageHashId](#originalimagehashid) | *String*   |
+| [originalImageTag](#originalimagetag)       | *ImageTag* |
 | [items](#items)                             | *Array*    |
 
-## OriginalImageHashId
+## originalImageHashId
 
 A string representing the hash ID of the original image.
 
 ```typescript
-readonly OriginalImageHashId: string;
+readonly originalImageHashId: string;
 ```
 
-## OriginalImageTag
+## originalImageTag
 
 An `ImageTag` object representing the tag associated with the original image.
 
 ```typescript
-readonly OriginalImageTag: ImageTag;
+readonly originalImageTag: ImageTag;
 ```
 
 ## items

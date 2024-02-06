@@ -36,4 +36,4 @@ saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<F
 
 **Return Value**
 
-A Promise that resolves to the saved File object.
+A Promise that resolves with the saved File object.

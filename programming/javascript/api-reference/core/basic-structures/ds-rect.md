@@ -10,7 +10,9 @@ noTitleIndex: true
 
 # DSRect
 
-The `DSRect` interface defines the shape of a rectangle in 2D space.
+The `DSRect` interface represents a rectangle, similar to [CRect](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/api-reference/core/basic-structures/rect.html) in C++, with an added feature for measurement in percentages.
+
+> If measured in percentage, the value range for left/right/top/bottom is 0~1.
 
 ```typescript
 interface DSRect {
@@ -22,50 +24,22 @@ interface DSRect {
 }
 ```
 
-| Properties            | Type |
-|----------------------|-------------|
-| [left](#left) | *number* |
-| [right](#right) | *number* |
-| [top](#top) | *number* |
-| [bottom](#bottom) | *number* |
-| [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
-
 ## left
 
-The left edge of the rectangle.
-
-```typescript
-left: number;
-```
+The left coordinate of the rectangle.
 
 ## right
 
-The right edge of the rectangle.
-
-```typescript
-right: number;
-```
+The right coordinate of the rectangle.
 
 ## top
 
-The top edge of the rectangle.
-
-```typescript
-top: number;
-```
+The top coordinate of the rectangle.
 
 ## bottom
 
-The bottom edge of the rectangle.
-
-```typescript
-bottom: number;
-```
+The bottom coordinate of the rectangle.
 
 ## isMeasuredInPercentage
 
-Whether to use a percentage measurement for this DSRect.
-
-```typescript
-isMeasuredInPercentage: boolean;
-```
+Indicates if the rectangle's measurements are in percentages.

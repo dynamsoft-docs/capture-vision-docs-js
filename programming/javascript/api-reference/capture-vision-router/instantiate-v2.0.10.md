@@ -105,7 +105,7 @@ None.
 
 **Return value**
 
-A promise that resolves to the initialized `CaptureVisionRouter` object.
+A promise that resolves with the initialized `CaptureVisionRouter` object.
 
 **Code snippet**
 

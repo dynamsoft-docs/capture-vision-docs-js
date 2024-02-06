@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # PredetectedRegionElement
 
-The `PredetectedRegionElement` interface extends the RegionObjectElement interface and represents a predetected region element.
+The `PredetectedRegionElement` interface extends the `RegionObjectElement` interface and represents a pre-detected region element in an image.
 
 ```typescript
 interface PredetectedRegionElement extends RegionObjectElement {
@@ -18,14 +18,6 @@ interface PredetectedRegionElement extends RegionObjectElement {
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [modeName](#modename) | *String* |
-
 ## modeName
 
-Gets the specified region pre-detection mode name
-
-```typescript
-modeName: string;
-```
+Gets the name of the detection mode used to detect this region element.

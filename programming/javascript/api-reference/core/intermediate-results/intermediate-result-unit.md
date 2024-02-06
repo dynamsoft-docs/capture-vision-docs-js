@@ -10,73 +10,41 @@ noTitleIndex: true
 
 # IntermediateResultUnit
 
-The `IntermediateResultUnit` interface represents an intermediate result unit used in image processing.
+The `IntermediateResultUnit` interface represents the base structure for units of intermediate results in image processing. This interface acts as a base and contains common properties and methods shared by all intermediate result units.
 
 ```typescript
 interface IntermediateResultUnit {
     hashId: string;
-    OriginalImageHashId: string;
+    originalImageHashId: string;
     originalImageTag: Core.ImageTag;
     unitType: EnumIntermediateResultUnitType;
     getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
 }
 ```
 
-| Name              | Description |
-|----------------------|-------------|
-| [hashId](#hashid) | Gets the hash ID of the unit.|
-| [originalImageHashId](#originalimagehashid) | Gets the hash ID of the original image. |
-| [originalImageTag](#originalimagetag) | Gets the image tag of the original image. |
-| [unitType](#unittype) | Gets the type of the intermediate result unit. |
-| [getTransformMatrix](#gettransformmatrix) | Gets the transformation matrix from local to original image coordinates. |
-
 ## hashId
 
-The hash ID of the intermediate result unit.
-
-```typescript
-hashId: string;
-```
-
-**Return value**
-
-Returns the hash ID of the unit. 
+A unique identifier for the intermediate result unit.
 
 ## originalImageHashId
 
-The hash ID of the original image.
-
-```typescript
-OriginalImageHashId: string;
-```
-
-**Return value**
-
-Returns the hash ID of the original image.
+The hash ID of the original image associated with this unit.
 
 ## originalImageTag
 
-The image tag of the original image.
-
-```typescript
-originalImageTag: Core.ImageTag;
-```
-
-**Return value**
-
-Returns the image tag of the original image.
+The tag associated with the original image.
 
 ## unitType
 
-The type of the intermediate result unit.
+The type of the intermediate result unit, defined by the enumeration `EnumIntermediateResultUnitType`.
 
-```typescript
-unitType: EnumIntermediateResultUnitType;
-```
+**See Also**
+
+[EnumIntermediateResultUnitType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/intermediate-result-unit-type.html?lang=js)
 
 ## getTransformMatrix
 
-Get the transformation matrix from local to original image coordinates.
+Gets the transformation matrix associated with the unit, based on the specified matrix type.
 
 ```typescript
 getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>;
@@ -84,8 +52,12 @@ getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>;
 
 **Parameter**
 
-`matrixType`:A specific enumeration type to determine the type of transformation matrix to retrieve.
+`matrixType`: The type of transformation matrix to retrieve.
 
 **Return value**
 
-Return the matrix which is an Array of 9 numbers.
+An array of 9 numbers representing the transformation matrix.
+
+**See Also**
+
+[EnumTransformMatrixType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/transform-matrix-type.html?lang=js)

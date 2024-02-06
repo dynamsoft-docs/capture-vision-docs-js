@@ -11,24 +11,28 @@ breadcrumbText: JS ImageSourceErrorListener Interface
 
 # ImageSourceErrorListener
 
-The `ImageSourceErrorListener` interface defines the standard way to receive notifications should errors occur during image acquisition.
+The `ImageSourceErrorListener` interface defines the standard way to receive notifications from an image source should errors occur during image acquisition.
 
 ```typescript
 interface ImageSourceErrorListener {
-    onErrorReceived(errorCode: number, errorMessage:string):void;
+    onErrorReceived(errorCode: EnumErrorCode, errorMessage:string):void;
 } 
 ```
 
 ## onErrorReceived
 
-Callback function that is triggered when an error occurs during image acquisition.
+Event triggered when an error is received from the image source.
 
 ```typescript
-onErrorReceived(errorCode: number, errorMessage:string):void;
+onErrorReceived(errorCode: EnumErrorCode, errorMessage:string):void;
 ```
 
 **Parameters**
 
-`errorCode`: The error code.
+`errorCode`: An enumeration value of type `EnumErrorCode` indicating the type of error.
 
-`errorMessage`: The error message.
+`errorMessage`: A string containing the error message providing additional information about the error.
+
+**See Also**
+
+[EnumErrorCode](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/error-code.html?lang=js)

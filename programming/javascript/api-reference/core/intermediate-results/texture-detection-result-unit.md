@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # TextureDetectionResultUnit
 
-The `TextureDetectionResultUnit` interface represents an intermediate result unit for texture detection.
+The `TextureDetectionResultUnit` interface extends the `IntermediateResultUnit` interface and represents a texture-detection result unit. This interface captures the results of texture analysis, specifically the spacing of texture patterns in both the x and y directions.
 
 ```typescript
 interface TextureDetectionResultUnit extends IntermediateResultUnit {
@@ -19,23 +19,10 @@ interface TextureDetectionResultUnit extends IntermediateResultUnit {
 }
 ```
 
-| Name              | Type |
-|----------------------|-------------|
-| [xSpacing](#xspacing) | number |
-| [ySpacing](#yspacing) | number |
-
 ## xSpacing
 
-The x-direction spacing of the texture stripes.
-
-```typescript
-xSpacing: number;
-```
+This value represents the detected horizontal distance in pixels between consecutive texture patterns, providing an indication of the texture's density and orientation within the image.
 
 ## ySpacing
 
-The y-direction spacing of the texture stripes.
-
-```typescript
-ySpacing: number;
-```
+The spacing between texture stripes in the y-direction. Similar to `xSpacing`, this value measures the vertical distance between texture patterns. It offers insights into the vertical density and alignment of the texture within the image, contributing to the understanding of the texture's characteristics and spatial distribution.

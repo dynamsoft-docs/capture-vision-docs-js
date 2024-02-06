@@ -10,22 +10,14 @@ noTitleIndex: true
 
 # TextRemovedBinaryImageUnit
 
-The `TextRemovedBinaryImageUnit` interface represents a binary image unit after removing text.
+The `TextRemovedBinaryImageUnit` interface extends the `IntermediateResultUnit` interface and represents a text-removed binary image unit.
 
 ```typescript
 interface TextRemovedBinaryImageUnit extends IntermediateResultUnit {
-    imageData: Core.DSImageData;
+    imageData: DSImageData;
 } 
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
-
 ## imageData
 
-The text-removed binary image data stored in the unit.
-
-```typescript
-imageData: Core.DSImageData;
-```
+The image data for the text-removed binary image.

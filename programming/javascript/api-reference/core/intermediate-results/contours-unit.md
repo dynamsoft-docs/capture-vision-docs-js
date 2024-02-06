@@ -10,21 +10,17 @@ noTitleIndex: true
 
 # ContoursUnit
 
-The `ContoursUnit` interface represents a unit that contains contours as part of intermediate results.It extends the IntermediateResultUnit interface.
+The `ContoursUnit` interface extends the `IntermediateResultUnit` interface and represents a unit of contours, which are collections of points that define the shape of an object in an image.
 
 ```typescript
 interface ContoursUnit extends IntermediateResultUnit {
-    contours: Array<Core.Contour>;
+    contours: Array<Contour>;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [contours](#contours) | *Array\<Core.Contour>* |
-
 ## contours
 
-An array of contours stored in the unit.
+An array of `Contour` objects, each representing a series of points that outline a shape within the image.
 
 ```typescript
 contours: Array<Core.Contour>;

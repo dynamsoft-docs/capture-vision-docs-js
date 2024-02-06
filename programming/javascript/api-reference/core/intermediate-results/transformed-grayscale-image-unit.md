@@ -10,22 +10,14 @@ noTitleIndex: true
 
 # TransformedGrayscaleImageUnit
 
-The `TransformedGrayscaleImageUnit` interface represents a transformed grayscale image.
+The `TransformedGrayscaleImageUnit` interface extends the `IntermediateResultUnit` interface and represents a transformed grayscale image unit.
 
 ```typescript
 interface TransformedGrayscaleImageUnit extends IntermediateResultUnit {
-    imageData: Core.DSImageData;
+    imageData: DSImageData;
 } 
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
-
 ## imageData
 
-The transformed grayscale image data stored in the unit.
-
-```typescript
-imageData: Core.DSImageData;
-```
+The image data for the transformed grayscale image.

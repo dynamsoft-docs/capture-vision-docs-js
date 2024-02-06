@@ -10,7 +10,9 @@ noTitleIndex: true
 
 # Rect
 
-The `Rect` interface defines a shape that represents a rectangle in 2-dimensional space.
+The `Rect` interface extends the `IntermediateResultUnit` interface and represents a rectangle in a 2D space, providing a JavaScript equivalent of [DSRect](./ds-rect.md).
+
+> If measured in percentage, the value range for x/y/width/height is 0~1.
 
 ```typescript
 interface Rect {
@@ -22,50 +24,22 @@ interface Rect {
 }
 ```
 
-| Properties            | Type |
-|----------------------|-------------|
-| [x](#x) | *number* |
-| [y](#y) | *number* |
-| [width](#width) | *number* |
-| [height](#height) | *number* |
-| [isMeasuredInPercentage](#ismeasuredinpercentage) | *boolean* |
-
 ## x
 
-The x coordinate of the upper left corner point of the rectangle.
-
-```typescript
-x: number,
-```
+The x-coordinate of the rectangle's top-left corner.
 
 ## y
 
-The y coordinate of the upper left corner point of the rectangle.
-
-```typescript
-y: number,
-```
+The y-coordinate of the rectangle's top-left corner.
 
 ## width
 
 The width of the rectangle.
 
-```typescript
-width: number,
-```
-
 ## height
 
 The height of the rectangle.
 
-```typescript
-height: number;
-```
-
 ## isMeasuredInPercentage
 
-Whether to use a percentage measurement for this Rect.
-
-```typescript
-isMeasuredInPercentage: boolean;
-```
+Optional. Indicates if the rectangle's measurements are in percentages.
