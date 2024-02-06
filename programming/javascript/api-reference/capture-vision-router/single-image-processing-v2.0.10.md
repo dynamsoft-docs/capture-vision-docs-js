@@ -33,7 +33,7 @@ capture(imageOrFile: Core.DSImageData | string | Blob | HTMLImageElement | HTMLC
 
 **Return value**
 
-A promise that resolves to an array of [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) objects which are the derived information from each image processed.
+A promise that resolves with an array of [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) objects which are the derived information from each image processed.
 
 **Code snippet**
 

@@ -33,7 +33,7 @@ capture(imageOrFile: Blob | HTMLImageElement | HTMLCanvasElement | HTMLVideoElem
 
 **Return value**
 
-A promise that resolves to a [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) object which contains the derived information from the image processed.
+A promise that resolves with a [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) object which contains the derived information from the image processed.
 
 **Code snippet**
 

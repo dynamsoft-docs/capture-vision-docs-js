@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # ImageTag
 
-The `ImageTag` interface defines a structure that stores information about an image returned by an [image source](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html).
+The `ImageTag` interface represents a tag associated with an image, providing metadata such as the image ID and type.
 
 ```typescript
 interface ImageTag {
@@ -19,23 +19,12 @@ interface ImageTag {
 }
 ```
 
-| Properties            | Type               |
-| --------------------- | ------------------ |
-| [imageId](#imageid) | *Number*           |
-| [type](#type)       | *EnumImageTagType* |
-
 ## imageId
 
-The imageId attached to the image.
-
-```typescript
-imageId: number;
-```
+The unique identifier of the image.
 
 ## type
 
-The image tag type (image file or video frame) attached to the image.
+The type of the image.
 
-```typescript
-type: EnumImageTagType;
-```
+[EnumImageTagType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/image-tag-type.html?lang=js)

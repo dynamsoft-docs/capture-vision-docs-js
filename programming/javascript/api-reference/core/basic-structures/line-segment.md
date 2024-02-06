@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # LineSegment
 
-The `LineSegment` interface defines a "line" shape in 2-dimensional space.
+The `LineSegment` interface represents a line segment defined by two [Points](./point.md).
 
 ```typescript
 interface LineSegment {
@@ -19,23 +19,10 @@ interface LineSegment {
 } 
 ```
 
-| Properties | Type |
-|---------- | ---- |
-| [startPoint](#startpoint) | *Point* |
-| [endPoint](#endpoint) | *Point* |
-
 ## startPoint
 
-The start point of the line segment.
-
-```typescript
-startPoint: Point;
-```
+The starting point of the line segment.
 
 ## endPoint
 
-The end point of the line segment.
-
-```typescript
-endPoint: Point;
-```
+The ending point of the line segment.

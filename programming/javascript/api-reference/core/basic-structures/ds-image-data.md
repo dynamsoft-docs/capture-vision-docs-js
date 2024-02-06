@@ -13,79 +13,48 @@ noTitleIndex: true
 The `DSImageData` interface defines the structure of an object that represents an image.
 
 ```typescript
-interface DSImageData {
+export interface DSImageData {
     bytes: Uint8Array;
-    width: number;
-    height: number;
-    stride: number;
     format: Core.EnumImagePixelFormat;
-    orientation?: number;
-    tag?: ImageTag;
-} 
+    height: number;
+    imageTag?: ImageTag;
+    stride: number;
+    width: number;
+}
 ```
-
-| Properties            | Type |
-|----------------------|-------------|
-| [bytes](#bytes) | *Uint8Array* |
-| [width](#width) | *number* |
-| [height](#height) | *number* |
-| [stride](#stride) | *number* |
-| [format](#format) | *Core.EnumImagePixelFormat* |
-| [orientation](#orientation) | *number* |
-| [tag](#tag) | *ImageTag* |
 
 ## bytes
 
-Gets the image byte array.
+The raw bytes of the image, of type Uint8Array.
 
-```typescript
-bytes: Uint8Array;
-```
+**See Also**
 
-## width
-
-Gets the width of the image.
-
-```typescript
-width: number;
-```
-
-## height
-
-Gets the height of the image.
-
-```typescript
-height: number;
-```
-
-## stride
-
-Gets the stride of the image.
-
-```typescript
-stride: number;
-```
+[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
 
 ## format
 
-Gets the pixel format of the image.
+The pixel format of the image.
 
-```typescript
-format: Core.EnumImagePixelFormat;
-```
+**See Also**
 
-## orientation
+[EnumImagePixelFormat](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/image-pixel-format.html?lang=js)
 
-Gets the orientation of the image.
+## height
 
-```typescript
-orientation?: number;
-```
+The height of the image in pixels.
 
-## tag
+## imageTag
 
-Gets the tag of the image.
+An optional tag associated with the image data.
 
-```typescript
-tag?: ImageTag;
-```
+**See Also**
+
+[ImageTag](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/basic-structures/image-tag.html?lang=js)
+
+## stride
+
+The stride (or row width) of the image in bytes.
+
+## width
+
+The width of the image in pixels.

@@ -33,7 +33,7 @@ None.
 
 **Return value**
 
-A promise that resolves to the initialized `CaptureVisionRouter` instance.
+A promise that resolves with the initialized `CaptureVisionRouter` instance.
 
 **Code snippet**
 

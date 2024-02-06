@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Edge
 
-The `Edge` interface defines a shape that is composed of two `Corner` points in 2-dimensional space.
+The `Edge` interface represents an edge defined by two [Corners](./corner.md).
 
 ```typescript
 interface Edge {
@@ -18,24 +18,11 @@ interface Edge {
     endCorner: Corner;
 }
 ```
-  
-| Properties | Type |
-|---------- | ---- |
-| [startCorner](#startcorner) | *Corner* |
-| [endCorner](#endcorner) | *Corner* |
 
 ## startCorner
 
-The start corner point of the edge.
-
-```typescript
-startCorner: Corner;
-```
+The starting corner of the edge.
 
 ## endCorner
 
-The end corner point of the edge.
-
-```typescript
-endCorner: Corner;
-```
+The ending corner of the edge.

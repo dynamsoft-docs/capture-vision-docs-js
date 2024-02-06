@@ -10,22 +10,18 @@ noTitleIndex: true
 
 # TextZonesUnit
 
-The `TextZonesUnit` interface represents a unit that contains text zones.
+The `TextZonesUnit` interface extends the `IntermediateResultUnit` interface and represents a unit of text zones identified during the processing of an image. This interface is used to encapsulate the locations of detected text areas within an image, providing a structured representation of where text is located.
 
 ```typescript
 interface TextZonesUnit extends IntermediateResultUnit {
-    textZones: Array<Core.Quadrilateral>;
+    textZones: Array<Quadrilateral>;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [textZones](#textzones) | *Array\<Core.Quadrilateral>* |
-
 ## textZones
 
-An array of Quadrilateral objects representing the text zones in the unit.
+An array of `Quadrilateral` objects, each representing the geometric boundaries of a detected text zone within the image.
 
-```typescript
-textZones: Array<Core.Quadrilateral>;
-```
+**See Also**
+
+[Quadrilateral](../basic-structures/quadrilateral.md)

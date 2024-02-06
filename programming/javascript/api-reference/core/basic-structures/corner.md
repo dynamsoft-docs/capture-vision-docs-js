@@ -10,52 +10,29 @@ noTitleIndex: true
 
 # Corner
 
-The `Corner` interface defines the structure of a "Corner" object which consists of two lines and the intersection point in 2-dimensional space.
+The `Corner` interface represents a corner, typically where two line segments meet.
 
 ```typescript
 interface Corner {
     type: EnumCornerType;
     intersection: Point;
     line1: LineSegment;
-    Line2: LineSegment;
+    line2: LineSegment;
 } 
 ```
-  
-| Properties | Type |
-|---------- | ---- |
-| [type](#type) | *EnumCornerType* |
-| [intersection](#intersection) | *Point* |
-| [line1](#line1) | *LineSegment* |
-| [line2](#line2) | *LineSegment* |
 
 ## type
 
-The type of the corner.
-
-```typescript
-type: EnumCornerType;
-```
+The type of the corner, represented by the enumeration [EnumCornerType]({{ site.enums }}core/corner-type.html?lang=js).
 
 ## intersection
 
-The intersection point of the corner.
-
-```typescript
-intersection: Point;
-```
+The point of intersection of the two lines forming the corner.
 
 ## line1
 
-The first line connected to the corner.
-
-```typescript
-line1: LineSegment;
-```
+The first line segment forming the corner.
 
 ## line2
 
 The second line connected to the corner.
-
-```typescript
-Line2: LineSegment;
-```

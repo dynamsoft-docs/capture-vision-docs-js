@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Point
 
-The `Point` interface defines a shape that represents a point in 2-dimensional space.
+The `Point` interface represents a point in a 2D space.
 
 ```typescript
 interface Point {
@@ -19,23 +19,10 @@ interface Point {
 }
 ```
 
-| Properties | Type |
-|---------- | ---- |
-| [x](#x) | *Number* |
-| [y](#y) | *Number* |
-
 ## x
 
-The X coordinates of the Point.
-
-```typescript
-x: number;
-```
+The x-coordinate of the point.
 
 ## y
 
-The Y coordinates of the Point.
-
-```typescript
-y: number;
-```
+The y-coordinate of the point.

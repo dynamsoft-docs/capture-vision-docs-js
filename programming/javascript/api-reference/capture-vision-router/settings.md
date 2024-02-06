@@ -85,7 +85,7 @@ outputSettings(templateName: string): Promise<string>;
 
 **Return value**
 
-A promise that resolves to the object that contains settings for the specified template or all templates.
+A promise that resolves with the object that contains settings for the specified template or all templates.
 
 **Code snippet**
 
@@ -115,7 +115,7 @@ outputSettingsToFile(templateName: string, fileName?: string, download?: boolean
 
 **Return value**
 
-A promise that resolves to the Blob object that contains settings for the specified template or all templates.
+A promise that resolves with the Blob object that contains settings for the specified template or all templates.
 
 **Code snippet**
 
@@ -141,7 +141,7 @@ getSimplifiedSettings(templateName: string): Promise<SimplifiedCaptureVisionSett
 
 **Return Value**
 
-A promise that resolves to a JSON object, of type `SimplifiedCaptureVisionSettings`, which represents the simplified settings for the specified template.
+A promise that resolves with a JSON object, of type `SimplifiedCaptureVisionSettings`, which represents the simplified settings for the specified template.
 
 > Remarks: If the settings of the specified template are too complex, we cannot create a SimplifiedCaptureVisionSettings, and as a result, it will return an error.
 

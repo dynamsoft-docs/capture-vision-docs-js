@@ -10,42 +10,32 @@ noTitleIndex: true
 
 # RegionObjectElement
 
-The `RegionObjectElement` interface represents an element of a region object in 2D space. It is an abstract interface that provides the interface for region object elements.
+The `RegionObjectElement` interface represents a basic element of a region object, including its type, location and reference to another element.
 
 ```typescript
 interface RegionObjectElement {
-    location: Core.Quadrilateral;
+    elementType: EnumRegionObjectElementType;
+    location: Quadrilateral;
     referencedElement: RegionObjectElement;
-    type: EnumRegionObjectElementType;
 }
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [location](#location) | *Core.Quadrilateral* |
-| [referencedElement](#referencedelement) | *RegionObjectElement* |
-| [type](#type) | *EnumRegionObjectElementType* |
+## elementType
+
+The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`.
+
+**See Also**
+
+[EnumRegionObjectElementType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/region-object-element-type.html?lang=js)        
 
 ## location
 
-The location of the region object element.
+The location of the region object, represented as a quadrilateral.
 
-```typescript
-location: Core.Quadrilateral;
-```
+**See Also**
+
+[Quadrilateral](../basic-structures/quadrilateral.md)
 
 ## referencedElement
 
-A referenced region object element.
-
-```typescript
-referencedElement: RegionObjectElement;
-```
-
-## type
-
-Get the type of the region object element.
-
-```typescript
-type: EnumRegionObjectElementType;
-```
+A reference to another `RegionObjectElement`.

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # IntermediateResult
 
-The `IntermediateResult` interface represents a container containing a collection of IntermediateResultUnit objects.
+The `IntermediateResult` interface represents the collection of all intermediate result units produced during image processing.
 
 ```typescript
 interface IntermediateResult {
@@ -18,14 +18,10 @@ interface IntermediateResult {
 }
 ```
 
-| Properties | Type |
-|--------|-------------|
-| [intermediateResultUnits](#intermediateresultunits) | *Array\<IntermediateResultUnit>* |
-
 ## intermediateResultUnits
 
-An Array containing a collection of IntermediateResultUnit objects.
+An array of `IntermediateResultUnit` objects, each representing a different type of intermediate result.
 
-```typescript
-intermediateResultUnits: Array<IntermediateResultUnit>;
-```
+**See Also**
+
+[IntermediateResultUnit](./intermediate-result-unit.md)

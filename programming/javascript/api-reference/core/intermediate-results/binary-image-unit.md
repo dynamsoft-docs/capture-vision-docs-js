@@ -10,22 +10,14 @@ noTitleIndex: true
 
 # BinaryImageUnit
 
-The `BinaryImageUnit` interface represents a binary image unit.
+The `BinaryImageUnit` interface extends the `IntermediateResultUnit` interface and represents a binary image unit.
 
 ```typescript
 interface BinaryImageUnit extends IntermediateResultUnit {
-    imageData: Core.DSImageData;
+    imageData: DSImageData;
 } 
 ```
 
-| Properties               | Type |
-|----------------------|-------------|
-| [imageData](#imagedata) | *Core.DSImageData* |
-
 ## imageData
 
-The binary image data stored in the unit.
-
-```typescript
-imageData: Core.DSImageData;
-```
+The image data for the binary image.

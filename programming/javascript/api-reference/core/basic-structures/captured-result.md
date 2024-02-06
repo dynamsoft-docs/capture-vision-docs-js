@@ -16,65 +16,37 @@ The [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.
 > 
 > Depending on the functional module that generated the result item, the interface may vary:
 > 
-> * dynamsoft-barcode-reader: DecodedBarcodesResult
-> * dynamsoft-label-recognizer: RecognizedTextLinesResult
+> * dynamsoft-barcode-reader: [DecodedBarcodesResult](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/decoded-barcodes-result.html)
+> * dynamsoft-label-recognizer: [RecognizedTextLinesResult](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/recognized-textlines-result.html)
 > * dynamsoft-document-normalizer: [DetectedQuadsResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-result.html) or [NormalizedImagesResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-result.html)
-> * dynamsoft-code-parser: ParsedResult
+> * dynamsoft-code-parser: [ParsedResult](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/api-reference/interfaces/parsed-result.html)
 
 ```typescript
 interface CapturedResult {
-    readonly OriginalImageHashId: string;
-    readonly OriginalImageTag: ImageTag;
+    readonly originalImageHashId: string;
+    readonly originalImageTag: ImageTag;
     readonly items: Array<CapturedResultItem>;
     readonly errorCode: number;
     readonly errorString: string;
 }
 ```
 
-| Properties                                  | Type                         |
-| ------------------------------------------- | ---------------------------- |
-| [OriginalImageHashId](#originalimagehashid) | *String*                     |
-| [OriginalImageTag](#originalimagetag)       | *ImageTag*                   |
-| [items](#items)                             | *Array\<CapturedResultItem>* |
-| [errorCode](#errorcode)                     | *number*                     |
-| [errorString](#errorstring)                 | *string*                     |
+## originalImageHashId
 
-## OriginalImageHashId
+The hash ID of the original image.
 
-A string representing the hash ID of the original image.
+## originalImageTag
 
-```typescript
-readonly OriginalImageHashId: string;
-```
-
-## OriginalImageTag
-
-An `ImageTag` object representing the tag associated with the original image.
-
-```typescript
-readonly OriginalImageTag: ImageTag;
-```
+The tag associated with the original image.
 
 ## items
 
 An array of [CapturedResultItem](./captured-result-item.md) objects representing the captured result items.
 
-```typescript
-readonly items: Array<CapturedResultItem>;
-```
-
 ## errorCode
 
-The error code of the capture operation.
-
-```typescript
-readonly errorCode: number;
-```
+Error code associated with the capture result.
 
 ## errorString
 
-The error message of the capture operation.
-
-```typescript
-readonly errorString: string;
-```
+Error string providing details about the error.
