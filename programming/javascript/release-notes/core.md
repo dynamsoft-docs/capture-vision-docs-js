@@ -25,7 +25,7 @@ Updated the internal DLS JS version, optimized license error messages, and enhan
 
 ### Changed
 
-Updated the recognition model package name, which DLR depends on. The name changed from `dcm` (Dynamsoft Character Model) to 'dlrData' (Dynamsoft Label Recognizer Data).
+Updated the `engineResourcePath` referenced by `dcm` (Dynamsoft Character Model) and introduced an automatic path exploration feature based on the engine paths.
 
 ## 3.0.30 (01/11/2024)
 

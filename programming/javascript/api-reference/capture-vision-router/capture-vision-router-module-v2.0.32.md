@@ -138,7 +138,6 @@ The `IntermediateResultReceiver` class is designed as a standardized way for ret
 
 ## Interfaces
 
-* [CapturedResult](./interfaces/intermediate-result.md)
 * [CapturedResultReceiver](./interfaces/captured-result-receiver.md)
 * [IntermediateResultReceiver](./interfaces/intermediate-result-receiver.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)

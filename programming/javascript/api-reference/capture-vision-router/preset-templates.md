@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Built-in CaptureVisionTemplates - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces the built-in CaptureVisionTemplates
+title: Preset CaptureVisionTemplates - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces the Preset CaptureVisionTemplates
 keywords: CaptureVisionTemplates, router, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Built-in CaptureVisionTemplates
+# Preset CaptureVisionTemplates
 
-The following shows the built-in CaptureVisionTemplates
+The following shows the preset CaptureVisionTemplates
 
 | Template Name                           | Function Description                                                             | Available with                 |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------ |

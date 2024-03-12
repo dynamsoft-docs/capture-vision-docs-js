@@ -12,7 +12,7 @@ noTitleIndex: true
 
 The `Rect` interface extends the `IntermediateResultUnit` interface and represents a rectangle in a 2D space, providing a JavaScript equivalent of [DSRect](./ds-rect.md).
 
-> If measured in percentage, the value range for x/y/width/height is 0~1.
+> If measured in percentage, the value range for x/y/width/height is 0~100.
 
 ```typescript
 interface Rect {

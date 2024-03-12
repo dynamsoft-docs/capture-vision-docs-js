@@ -14,7 +14,6 @@ The `IntermediateResultReceiver` class is designed as a standardized way for ret
 
 ```typescript
 class IntermediateResultReceiver {
-    getObservationParameters(): Core.ObservationParameters;
     onTaskResultsReceived?(result: IntermediateResult, info: IntermediateResultExtraInfo): void;
     onPredetectedRegionsReceived?(result: PredetectedRegionsUnit, info: IntermediateResultExtraInfo): void;
     onLocalizedBarcodesReceived?(result: LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
@@ -36,7 +35,6 @@ class IntermediateResultReceiver {
     onLineSegmentsUnitReceived?(result: LineSegmentsUnit, info: IntermediateResultExtraInfo): void;
     onTextZonesUnitReceived?(result: TextZonesUnit, info: IntermediateResultExtraInfo): void;
     onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: IntermediateResultExtraInfo): void;
-    onShortLinesUnitReceived?(result: Core.ShortLinesUnit, info: Core.IntermediateResultExtraInfo): void;
     onLongLinesUnitReceived?(result: LongLinesUnit, info: IntermediateResultExtraInfo): void;
     onCornersUnitReceived?(result: CornersUnit, info: IntermediateResultExtraInfo): void;
     onCandidateQuadEdgesUnitReceived?(result: CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
@@ -49,7 +47,6 @@ class IntermediateResultReceiver {
 
 | Name                                                                                              | Description                                                                 |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [getObservationParameters()](#getobservationparameters)                                           | Gets the observed parameters of the intermediate result receiver.           |
 | [onTaskResultsReceived()](#ontaskresultsreceived)                                                 | Event triggered when task results are received.                             |
 | [onPredetectedRegionsReceived()](#onpredetectedregionsreceived)                                   | Event triggered when pre-detected regions are received.                     |
 | [onLocalizedBarcodesReceived()](#onlocalizedbarcodesreceived)                                     | Event triggered when localized barcodes are received.                       |
@@ -71,7 +68,6 @@ class IntermediateResultReceiver {
 | [onLineSegmentsUnitReceived()](#onlinesegmentsunitreceived)                                       | Event triggered when a line segments unit is received.                      |
 | [onTextZonesUnitReceived()](#ontextzonesunitreceived)                                             | Event triggered when a text zones unit is received.                         |
 | [onTextRemovedBinaryImageUnitReceived()](#ontextremovedbinaryimageunitreceived)                   | Event triggered when a text-removed binary image unit is received.          |
-| [onShortLinesUnitReceived()](#onshortlinesunitreceived)                                           | Event triggered when a short lines unit is received.                        |
 | [onLongLinesUnitReceived()](#onlonglinesunitreceived)                                             | Event triggered when a long lines unit is received.                         |
 | [onCornersUnitReceived()](#oncornersunitreceived)                                                 | Event triggered when a corners unit is received.                            |
 | [onCandidateQuadEdgesUnitReceived()](#oncandidatequadedgesunitreceived)                           | Event triggered when a candidate quad edges unit are detected.              |
@@ -79,22 +75,6 @@ class IntermediateResultReceiver {
 | [onScaledUpBarcodeImageUnitReceived()](#onscaledupbarcodeimageunitreceived)                       | Event triggered when a scaled-up barcode image unit is received.            |
 | [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Event triggered when a deformation-resisted barcode image unit is received. |
 | [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived)               | Event triggered when a complemented barcode image unit is received.         |
-
-## getObservationParameters
-
-Gets the observed parameters of the intermediate result receiver. Allowing for configuration of intermediate result observation.
-
-```typescript
-getObservationParameters(): ObservationParameters;
-```
-
-**Return Value**
-
-The observed parameters, of type `ObservationParameters`. The default parameters are to observe all intermediate result unit types and all tasks.
-
-**See Also**
-
-[ObservationParameters](../core/intermediate-results/observation-parameters.md)
 
 ## onTaskResultsReceived
 
@@ -515,26 +495,6 @@ onTextRemovedBinaryImageUnitReceived?(result: TextRemovedBinaryImageUnit, info: 
 **See Also**
 
 [TextRemovedBinaryImageUnit](../core/intermediate-results/text-removed-binary-image-unit.md)
-
-[IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
-
-## onShortLinesUnitReceived
-
-Event triggered when a short lines unit is received.
-
-```typescript
-onShortLinesUnitReceived?(result: ShortLinesUnit, info: IntermediateResultExtraInfo): void;
-```
-
-**Parameters**
-
-`result`: The result unit that contains the short lines, of type `ShortLinesUnit`.
-
-`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
-
-**See Also**
-
-[ShortLinesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/short-lines-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 

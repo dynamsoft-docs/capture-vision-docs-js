@@ -6,7 +6,7 @@ keywords: captured result, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/javascript/api-reference/core/basic-structures/captured-result-v2.0.10.html
+permalink: /programming/javascript/api-reference/core/basic-structures/captured-result-v3.0.10.html
 ---
 
 # CapturedResult

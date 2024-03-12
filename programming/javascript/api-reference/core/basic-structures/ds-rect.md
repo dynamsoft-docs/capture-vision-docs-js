@@ -12,7 +12,7 @@ noTitleIndex: true
 
 The `DSRect` interface represents a rectangle, similar to [CRect](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/api-reference/core/basic-structures/rect.html) in C++, with an added feature for measurement in percentages.
 
-> If measured in percentage, the value range for left/right/top/bottom is 0~1.
+> If measured in percentage, the value range for left/right/top/bottom is 0~100.
 
 ```typescript
 interface DSRect {

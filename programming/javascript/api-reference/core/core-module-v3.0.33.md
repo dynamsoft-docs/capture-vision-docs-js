@@ -70,7 +70,7 @@ The following are the basic interfaces often shared by more than one module:
 
 ### Basic Structures
 
-<!--* [CapturedResult](./basic-structures/captured-result.md)-->
+* [CapturedResult](./basic-structures/captured-result.md)
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
 * [DSFile](./basic-structures/ds-file.md)
 * [DSImageData](./basic-structures/ds-image-data.md)
