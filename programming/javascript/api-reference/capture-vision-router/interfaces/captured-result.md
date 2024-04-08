@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface CapturedResult - Dynamsoft Core Module JS Edition API Reference
-description: This page shows the JS edition of the interface CapturedResult in Dynamsoft Core Module.
+title: Interface CapturedResult - Dynamsoft Capture Vision Router Module JS Edition API Reference
+description: This page shows the JS edition of the interface CapturedResult in Dynamsoft Capture Vision Router Module.
 keywords: captured result, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

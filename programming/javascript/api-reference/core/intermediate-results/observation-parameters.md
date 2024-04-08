@@ -67,7 +67,7 @@ isResultUnitTypeObserved(type: EnumIntermediateResultUnitType): boolean;
 
 **Return value**
 
-Returns a boolean value indicating whether the specified result unit type was observed. -->
+Returns a boolean value indicating whether the specified result unit type was observed.
 
 ## addObservedTask
 

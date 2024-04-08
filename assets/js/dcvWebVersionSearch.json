@@ -3,7 +3,7 @@
     "version": "2.2.10",
     "matchList": {
       "js": {
-        "dcvRepoJS": [
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.2.10"
@@ -82,7 +82,7 @@
     "version": "2.0.30",
     "matchList": {
       "js": {
-        "dcvRepoJS": [
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.0.20"
@@ -161,7 +161,7 @@
     "version": "2.0.20",
     "matchList": {
       "js": {
-        "dcvRepoJS": [
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.0.20"
@@ -240,7 +240,7 @@
     "version": "2.0.10",
     "matchList": {
       "javascript": {
-        "dcvRepoJS": [
+        "dcvRepoWeb": [
           {
             "path": "/programming/javascript/api-reference/utility",
             "version": "1.0.10"

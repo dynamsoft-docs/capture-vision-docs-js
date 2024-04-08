@@ -16,7 +16,6 @@ The `SimplifiedCaptureVisionSettings` interface provides a standardized way to a
 interface SimplifiedCaptureVisionSettings {
     barcodeSettings: SimplifiedBarcodeReaderSettings;
     capturedResultItemTypes: EnumCapturedResultItemType;
-    documentSettings: SimplifiedDocumentNormalizerSettings;
     labelSettings: SimplifiedLabelRecognizerSettings;
     minImageCaptureInterval: number;
     roi: Quadrilateral;
@@ -47,18 +46,6 @@ capturedResultItemTypes: EnumCapturedResultItemType;
 **See Also**
 
 [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
-
-# documentSettings
-
-Specifies the basic settings for the document normalizer module. It is of type `SimplifiedDocumentNormalizerSettings`.
-
-```typescript
-documentSettings: SimplifiedDocumentNormalizerSettings;
-```
-
-**See Also**
-
-[SimplifiedDocumentNormalizerSettings](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/simplified-document-normalizer-settings.html)
 
 ## labelSettings
 
