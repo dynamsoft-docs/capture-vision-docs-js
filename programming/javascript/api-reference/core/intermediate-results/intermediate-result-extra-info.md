@@ -20,6 +20,7 @@ interface IntermediateResultExtraInfo {
     taskName: string;
 };
 ```
+
 ## isSectionLevelResult
 
 Indicates whether the result is at the section level.

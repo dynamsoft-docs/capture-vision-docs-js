@@ -14,14 +14,14 @@ The `TextZonesUnit` interface extends the `IntermediateResultUnit` interface and
 
 ```typescript
 interface TextZonesUnit extends IntermediateResultUnit {
-    textZones: Array<TextZone>;
+    textZones: Array<Quadrilateral>;
 }
 ```
 
 ## textZones
 
-An array of `TextZone` objects, each representing the geometric boundaries of a detected text zone within the image.
+An array of `Quadrilateral` objects, each representing the geometric boundaries of a detected text zone within the image.
 
 **See Also**
 
-[TextZone](../basic-structures/text-zone.md)
+[Quadrilateral](../basic-structures/quadrilateral.md)

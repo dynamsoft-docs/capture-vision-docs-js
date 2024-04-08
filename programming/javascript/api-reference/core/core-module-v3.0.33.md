@@ -70,14 +70,13 @@ The following are the basic interfaces often shared by more than one module:
 
 ### Basic Structures
 
-<!--* [CapturedResult](./basic-structures/captured-result.md)-->
+* [CapturedResult](./basic-structures/captured-result.md)
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
 * [DSFile](./basic-structures/ds-file.md)
 * [DSImageData](./basic-structures/ds-image-data.md)
 * [ImageSourceErrorListener](./basic-structures/image-source-error-listener.md)
 * [ImageTag](./basic-structures/image-tag.md)
 * [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
-* [TextZone](./intermediate-results/text-zone.md)
 
 <!--
 * [FileImageTag](./basic-structures/file-image-tag.md)
@@ -93,7 +92,6 @@ The following are the basic interfaces often shared by more than one module:
 * [IntermediateResult](./intermediate-results/intermediate-result.md)
 * [IntermediateResultExtraInfo](./intermediate-results/intermediate-result-extra-info.md)
 * [IntermediateResultUnit](./intermediate-results/intermediate-result-unit.md)
-* [ObservationParameters](./intermediate-results/observation-parameters.md)
 * [LineSegmentsUnit](./intermediate-results/line-segments-unit.md)
 * [PredetectedRegionElement](./intermediate-results/predetected-region-element.md)
 * [PredetectedRegionsUnit](./intermediate-results/predetected-regions-unit.md)

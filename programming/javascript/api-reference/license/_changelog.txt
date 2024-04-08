@@ -16,8 +16,6 @@
     * ImageSourceErrorListener
 * Removed the interface CapturedResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
 * Removed the interface IntermediateResultReceiver. The substitute is the same interface on the CaptureVisionRouter Module.
-* Added the following enum
-    * EnumTransformMatrixType
     
 ## 3.0.10
 

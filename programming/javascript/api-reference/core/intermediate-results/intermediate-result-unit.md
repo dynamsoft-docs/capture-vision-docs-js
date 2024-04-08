@@ -18,9 +18,12 @@ interface IntermediateResultUnit {
     originalImageHashId: string;
     originalImageTag: Core.ImageTag;
     unitType: EnumIntermediateResultUnitType;
-    getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
 }
 ```
+
+<!-- 
+    getTransformMatrix(matrixType: EnumTransformMatrixType): Array<number>
+    -->
 
 ## hashId
 
@@ -42,7 +45,7 @@ The type of the intermediate result unit, defined by the enumeration `EnumInterm
 
 [EnumIntermediateResultUnitType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/intermediate-result-unit-type.html?lang=js)
 
-## getTransformMatrix
+<!-- ## getTransformMatrix
 
 Gets the transformation matrix associated with the unit, based on the specified matrix type.
 
@@ -60,4 +63,4 @@ An array of 9 numbers representing the transformation matrix.
 
 **See Also**
 
-[EnumTransformMatrixType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/transform-matrix-type.html?lang=js)
+[EnumTransformMatrixType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/transform-matrix-type.html?lang=js) -->

@@ -148,6 +148,10 @@ Returns the version of the Core module.
 static getVersion(): string;
 ```
 
+**Return Value**
+
+A string type representing the version.
+
 **Code snippet**
 
 ```javascript

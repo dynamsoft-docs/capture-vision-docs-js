@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface MultiFrameResultCrossFilter - Dynamsoft Utility Module JS Edition API Reference
-description: This page shows the JS edition of the class MultiFrameResultCrossFilter in Dynamsoft Utility Module.
+title: Interface MultiFrameResultCrossFilter - Dynamsoft Utility Module JS Edition API Reference v1.0.20
+description: This page shows the JS edition of the class MultiFrameResultCrossFilter in Dynamsoft Utility Module v1.0.20.
 keywords: image manager, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -20,11 +20,6 @@ The `MultiFrameResultCrossFilter` class offers a set of API functions designed f
 | [isResultDeduplicationEnabled()](#isresultdeduplicationenabled)         | Checks if deduplication is active for a given result item type.                              |
 | [setDuplicateForgetTime()](#setduplicateforgettime)                     | Sets the interval during which duplicates are disregarded for specific result item types.    |
 | [getDuplicateForgetTime()](#getduplicateforgettime)                     | Retrieves the interval during which duplicates are disregarded for a given result item type. |
-| [onOriginalImageResultReceived()](#onoriginalimageresultreceived)       | Event triggered when the original images are received.                                       |
-| [onDecodedBarcodesReceived()](#ondecodedbarcodesreceived)               | Event triggered when the decoded barcodes are received.                                      |
-| [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived)       | Event triggered when the recognized text lines are received.                                 |
-| [onDetectedQuadsReceived()](#ondetectedquadsreceived)                   | Event triggered when the detected quadrilaterals are received.                               |
-| [onNormalizedImagesReceived()](#onnormalizedimagesreceived)             | Event triggered when the normalized images are received.                                     |
 
 
 ### enableResultCrossVerification
@@ -32,7 +27,7 @@ The `MultiFrameResultCrossFilter` class offers a set of API functions designed f
 Enables or disables the verification of specific result item types.
 
 ```typescript
-enableResultCrossVerification(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image", enabled: boolean): void;
+enableResultCrossVerification(resultItemTypes: EnumCapturedResultItemType, enabled: boolean): void;
 ```
 
 **Parameters**
@@ -54,7 +49,7 @@ None.
 Checks if verification is active for a given result item type.
 
 ```typescript
-isResultCrossVerificationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image"): boolean;
+isResultCrossVerificationEnabled(resultItemType: EnumCapturedResultItemType): boolean;
 ```
 
 **Parameters**
@@ -74,7 +69,7 @@ Boolean indicating the status of verification for the specified type.
 Enables or disables the deduplication process for specific result item types.
 
 ```typescript
-enableResultDeduplication(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image", enabled: boolean): void;
+enableResultDeduplication(resultItemTypes: EnumCapturedResultItemType, enabled: boolean): void;
 ```
 
 **Parameters**
@@ -96,7 +91,7 @@ None.
 Checks if deduplication is active for a given result item type.
 
 ```typescript
-isResultDeduplicationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image"): boolean;
+isResultDeduplicationEnabled(resultItemType: EnumCapturedResultItemType): boolean;
 ```
 
 **Parameters**
@@ -116,7 +111,7 @@ Boolean indicating the deduplication status for the specified type.
 Sets the interval during which duplicates are disregarded for specific result item types.
 
 ```typescript
-setDuplicateForgetTime(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image", time: number): void;
+setDuplicateForgetTime(resultItemTypes: EnumCapturedResultItemType, time: number): void;
 ```
 
 **Parameters**
@@ -138,7 +133,7 @@ None.
 Retrieves the interval during which duplicates are disregarded for a given result item type.
 
 ```typescript
-getDuplicateForgetTime(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image"): number;
+getDuplicateForgetTime(resultItemType: EnumCapturedResultItemType): number;
 ```
 
 **Parameters**
@@ -152,83 +147,3 @@ The set interval for the specified item type.
 **See Also**
 
 [EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
-
-### onOriginalImageResultReceived
-
-Event triggered when the original images are received.
-
-```typescript
-onOriginalImageResultReceived?: (result: Core.OriginalImageResultItem) => void;
-```
-
-**Parameters**
-
-`result`: The result item that contains the original image, of type `OriginalImageResultItem`.
-
-**Return Value**
-
-None.
-
-### onDecodedBarcodesReceived
-
-Event triggered when the decoded barcodes are received.
-
-```typescript
-onDecodedBarcodesReceived?: (result: any) => void;
-```
-
-**Parameters**
-
-`result`: The result item that contains the decoded barcodes, of type `any`.
-
-**Return Value**
-
-None.
-
-### onRecognizedTextLinesReceived
-
-Event triggered when the recognized text lines are received.
-
-```typescript
-onRecognizedTextLinesReceived?: (result: any) => void;
-```
-
-**Parameters**
-
-`result`: The result item that contains the recognized text lines, of type `any`.
-
-**Return Value**
-
-None.
-
-### onDetectedQuadsReceived
-
-Event triggered when the detected quadrilaterals are received.
-
-```typescript
-onDetectedQuadsReceived?: (result: any) => void;
-```
-
-**Parameters**
-
-`result`: The result item that contains the detected quadrilaterals, of type `any`.
-
-**Return Value**
-
-None.
-
-### onNormalizedImagesReceived
-
-Event triggered when the normalized images are received.
-
-```typescript
-onNormalizedImagesReceived?: (result: any) => void;
-```
-
-**Parameters**
-
-`result`: The result item that contains the normalized images, of type `any`.
-
-**Return Value**
-
-None.

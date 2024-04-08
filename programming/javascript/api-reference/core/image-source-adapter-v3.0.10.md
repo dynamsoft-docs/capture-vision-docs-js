@@ -7,32 +7,10 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
-<!--Part-of-Core-v3.0.10--Updated on 11/23/2023-->
 
 # ImageSourceAdapter
 
 `ImageSourceAdapter` is an abstract class that defines the standard structure of an image source in the [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/) architecture.
-
-```typescript
-abstract class ImageSourceAdapter {
-    addImageToBuffer(image: Core.DSImageData): void;
-    abstract hasNextImageToFetch(): boolean;
-    startFetching(): void;
-    stopFetching(): void;
-    getImage(): Promise<Core.DSImageData>;
-    setMaxImageCount(count: number): void;
-    getMaxImageCount(): number;
-    setBufferOverflowProtectionMode(mode: Core.EnumBufferOverflowProtectionMode): void;
-    getBufferOverflowProtectionMode(): Core.EnumBufferOverflowProtectionMode;
-    hasImage(imageId: number): boolean;
-    setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
-    getImageCount(): number;
-    isBufferEmpty(): boolean;
-    clearBuffer(): void;
-    setColourChannelUsageType(type: Core.EnumColourChannelUsageType): void;
-    getColourChannelUsageType(): Core.EnumColourChannelUsageType;
-}
-```
 
 | Name                                                               | Description                                                                                               |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |

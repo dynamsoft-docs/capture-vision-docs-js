@@ -25,6 +25,10 @@ Returns the version of the License module.
 static getVersion(): string;
 ```
 
+**Return Value**
+
+a string type representing the version.
+
 **Code snippet**
 
 ```javascript

@@ -24,9 +24,7 @@ The `CapturedResultItem` interface provides a common structure for representing 
 ```typescript
 interface CapturedResultItem {
     readonly type: EnumCapturedResultItemType;
-    readonly referencedItem: CapturedResultItem | null;
-    readonly targetROIDefName: string;
-    readonly taskName: string;
+    readonly referencedItem: CapturedResultItem;
 }
 ```
 
@@ -41,11 +39,3 @@ The type of the captured result item, indicating what kind of data it represents
 ## referencedItem
 
 A property of type `CapturedResultItem` that represents a reference to another captured result item.
-
-## targetROIDefName
-
-The name of the target ROI definition which includes a task that generated the result.
-
-## taskName
-
-The name of the task that generated the result.

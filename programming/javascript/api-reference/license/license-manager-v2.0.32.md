@@ -34,8 +34,34 @@ A promise which, upon resolution, yields a string corresponding to the device's 
 
 Initializes the license for the application using a license key. This function is overloaded, providing two different usages based on the provided parameters.
 
+### Without Immediate Initialization
+
+This signature of `initLicense` passes the license key to the application for initialization at a later stage. It doesn't provide immediate feedback and is suitable for scenarios where immediate confirmation of license initialization is not required.
+
 ```typescript
-static initLicense(license: string, immediately?: boolean): void | Promise<void>;
+static initLicense(license: string): void;
+```
+
+**Parameters**
+
+`license`: The license key to be used for initialization.
+
+**Return Value**
+
+`void`
+
+**Code snippet**
+
+```javascript
+Dynamsoft.License.LicenseManager.initLicense("your-license-key");
+```
+
+### With Immediate Initialization
+
+This signature of `initLicense` initializes the license and provides immediate feedback through a promise. This is useful when the application needs to confirm the outcome of the license initialization or handle any messages related to it.
+
+```typescript
+static initLicense(license: string, immediately: true): Promise<{message?: string} | undefined>;
 ```
 
 **Parameters**
@@ -46,11 +72,9 @@ static initLicense(license: string, immediately?: boolean): void | Promise<void>
 
 **Return Value**
 
-`void`
+`Promise<{message?: string} | undefined>`
 
-* When `immediately` is undefined or false, this signature of `initLicense` passes the license key to the application for initialization at a later stage. It doesn't provide immediate feedback and is suitable for scenarios where immediate confirmation of license initialization is not required.
-
-* When `immediately` is true, this returns a promise that resolves when the operation finishes. It does not provide any value upon resolution. Please note that it may raise up license related exceptions.
+A promise that, upon resolution, yields an object which may include a 'message' property. This property exists if there are messages or notifications pertinent to the license initialization process. In scenarios where no messages exist or if the initialization concludes successfully without any significant conditions, the promise might resolve to 'undefined'.
 
 **Code snippet**
 

@@ -7,159 +7,154 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
-<!--Part-of-Core-v3.0.20--Updated on 11/23/2023-->
 
 # ImageSourceAdapter
 
-`ImageSourceAdapter` is an abstract class that defines the standard structure of an image source in the [Dynamsoft Capture Vision](https://www.dynamsoft.com/capture-vision/docs/core/architecture/) architecture.
+The `ImageSourceAdapter` class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. Implementations must provide specific mechanisms for image retrieval and handling.
+
+| Name                                                                  | Description                                                                                             |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [addImageToBuffer()](#addimagetobuffer)                               | Adds an image to the internal buffer.                                                                   |
+| [clearBuffer()](#clearbuffer)                                         | Clears all images from the buffer, resetting the state for new image fetching.                          |
+| [getBufferOverflowProtectionMode()](#getbufferoverflowprotectionmode) | Returns the current mode for handling buffer overflow situations.                                       |
+| [getColourChannelUsageType()](#getcolourchannelusagetype)             | Retrieves the current usage type for color channels in images.                                          |
+| [getImage()](#getimage)                                               | Returns a buffered image.                                                                               |
+| [getImageCount()](#getimagecount)                                     | Retrieves the current number of images in the buffer.                                                   |
+| [getMaxImageCount()](#getmaximagecount)                               | Returns the maximum number of images that can be buffered at any time.                                  |
+| [hasImage()](#hasimage)                                               | Checks if an image with the specified ID is present in the buffer.                                      |
+| [hasNextImageToFetch()](#hasnextimagetofetch)                         | Determines whether there are more images available to fetch.                                            |
+| [isBufferEmpty()](#isbufferempty)                                     | Determines whether the buffer is currently empty.                                                       |
+| [setErrorListener()](#seterrorlistener)                               | Sets an error listener to receive notifications about errors that occur during image source operations. |
+| [setBufferOverflowProtectionMode()](#setbufferoverflowprotectionmode) | Sets the behavior for handling new incoming images when the buffer is full.                             |
+| [setColourChannelUsageType()](#setcolourchannelusagetype)             | Sets the usage type for color channels in images.                                                       |
+| [setMaxImageCount()](#setmaximagecount)                               | Sets the maximum number of images the buffer can hold.                                                  |
+| [setNextImageToReturn()](#setnextimagetoreturn)                       | Sets the processing priority of a specific image, affecting the order in which images are returned.     |
+| [startFetching()](#startfetching)                                     | Starts the process of fetching images.                                                                  |
+| [stopFetching()](#stopfetching)                                       | Stops the process of fetching images.                                                                   |
+
+## addImageToBuffer
+
+Adds an image to the internal buffer.
 
 ```typescript
-abstract class ImageSourceAdapter {
-    addImageToBuffer(image: Core.DSImageData): void;
-    abstract hasNextImageToFetch(): boolean;
-    startFetching(): void;
-    stopFetching(): void;
-    getImage(): Promise<Core.DSImageData>;
-    setMaxImageCount(count: number): void;
-    getMaxImageCount(): number;
-    setBufferOverflowProtectionMode(mode: Core.EnumBufferOverflowProtectionMode): void;
-    getBufferOverflowProtectionMode(): Core.EnumBufferOverflowProtectionMode;
-    hasImage(imageId: number): boolean;
-    setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
-    getImageCount(): number;
-    isBufferEmpty(): boolean;
-    clearBuffer(): void;
-    setColourChannelUsageType(type: Core.EnumColourChannelUsageType): void;
-    getColourChannelUsageType(): Core.EnumColourChannelUsageType;
-    setErrorListener(listener: ImageSourceErrorListener): void;
-}
-```
-
-| Name                                                               | Description                                                                                               |
-| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [addImageToBuffer()](#addimagetobuffer)                               | Adds an image to the buffer of the adapter.                                                               |
-| [hasNextImageToFetch()](#hasnextimagetofetch)                         | Determines whether there are more images left to fetch.                                                   |
-| [startFetching()](#startfetching)                                     | Starts fetching images.                                                                                   |
-| [stopFetching()](#stopfetching)                                       | Stops fetching images.                                                                                    |
-| [getImage()](#getimage)                                               | Returns a buffered image.                                                                                 |
-| [setMaxImageCount()](#setmaximagecount)                               | Sets how many images are allowed to be buffered.                                                          |
-| [getMaxImageCount()](#getmaximagecount)                               | Returns how many images can be buffered.                                                                  |
-| [setBufferOverflowProtectionMode()](#setbufferoverflowprotectionmode) | Sets a mode that determines the action to take when there is a new incoming image and the buffer is full. |
-| [getBufferOverflowProtectionMode()](#getbufferoverflowprotectionmode) | Returns the current buffer overflow protection mode.                                                      |
-| [hasImage()](#hasimage)                                               | Determines whether the image is in the buffer or not.                                                     |
-| [setNextImageToReturn()](#setnextimagetoreturn)                       | Sets the next image to return.                                                                            |
-| [getImageCount()](#getimagecount)                                     | Returns the actual count of buffered images.                                                              |
-| [isBufferEmpty()](#isbufferempty)                                     | Determines whether the buffer is empty.                                                                   |
-| [clearBuffer()](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
-| [setColourChannelUsageType()](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
-| [getColourChannelUsageType()](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
-| [setErrorListener()](#seterrorlistener)                               | Sets the error listener to receive notifications should errors occur during image acquisition.            |
-
----
-
-### addImageToBuffer
-
-Adds an image to the buffer of the adapter.
-
-```typescript
-addImageToBuffer(image: Core.DSImageData): void;
+addImageToBuffer(image: DSImageData): void;
 ```
 
 **Parameters**
 
 `image`: The image to add to the buffer.
 
-### hasNextImageToFetch
-
-An abstract method that needs to be implemented by the user. It checks if there is a next image to fetch.
-
-```typescript
-abstract hasNextImageToFetch(): boolean;
-```
-
 **Return value**
 
-Returns true if there are more images left to fetch, false otherwise. 
+None.
 
-### startFetching
+## clearBuffer
 
-Starts fetching images.
-
-```typescript
-startFetching(): void;
-```
-
-### stopFetching
-
-Stops fetching images.
+Clears all images from the buffer, resetting the state for new image fetching.
 
 ```typescript
-stopFetching(): void;
-```
-
-### getImage
-
-Retrieves a buffered image as a promise.
-
-```typescript
-getImage(): Promise<Core.DSImageData>;
-```
-
-**Return value**
-
-Returns the image object as a promise .
-
-### setMaxImageCount
-
-Sets how many images are allowed to be buffered.
-
-```typescript
-setMaxImageCount(count: number): void;
+clearBuffer(): void;
 ```
 
 **Parameters**
 
-`count`: The maximum number of images that can be buffered.
+None.
 
-### getMaxImageCount
+**Return value**
 
-Returns how many images can be buffered.
+None.
+
+## getBufferOverflowProtectionMode
+
+Returns the current mode for handling buffer overflow situations.
+
+```typescript
+getBufferOverflowProtectionMode(): EnumBufferOverflowProtectionMode;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The current buffer overflow protection mode.
+
+**See Also**
+
+[EnumBufferOverflowProtectionMode](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/buffer-overflow-protection-mode.html?lang=js)
+
+## getColourChannelUsageType
+
+Retrieves the current usage type for color channels in images.
+
+```typescript
+getColourChannelUsageType(): EnumColourChannelUsageType;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The current usage type for color channels in images.
+
+**See Also**
+
+[EnumColourChannelUsageType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/colour-channel-usage-type.html?lang=js)
+
+## getImage
+
+Returns a buffered image.
+
+```typescript
+getImage(): Promise<DSImageData>;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+A promise that resolves with an instance of `DSImageData`.
+
+## getImageCount
+
+Retrieves the current number of images in the buffer.
+
+```typescript
+getImageCount(): number;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+The actual count of buffered images.
+
+## getMaxImageCount
+
+Returns the maximum number of images that can be buffered at any time.
 
 ```typescript
 getMaxImageCount(): number;
 ```
 
-**Return value**
-
-Returns the maximum number of images that can be buffered.
-
-### setBufferOverflowProtectionMode
-
-Sets a mode that determines the action to take when there is a new incoming image and the buffer is full.
-
-```typescript
-setBufferOverflowProtectionMode(mode: Core.EnumBufferOverflowProtectionMode): void;
-```
-
 **Parameters**
 
-`mode`: The buffer overflow protection mode to set.
-
-### getBufferOverflowProtectionMode
-
-Returns the current buffer overflow protection mode.
-
-```typescript
-getBufferOverflowProtectionMode(): Core.EnumBufferOverflowProtectionMode;
-```
+None.
 
 **Return value**
 
-Returns the current buffer overflow protection mode.
+The maximum number of images that can be buffered.
 
-### hasImage
+## hasImage
 
-Determines whether the image is in the buffer or not.
+Checks if an image with the specified ID is present in the buffer.
 
 ```typescript
 hasImage(imageId: number): boolean;
@@ -171,11 +166,128 @@ hasImage(imageId: number): boolean;
 
 **Return value**
 
-Returns true if the image is in the buffer, false otherwise.
+True if the image is in the buffer, false otherwise.
 
-### setNextImageToReturn
+## hasNextImageToFetch
 
-Sets the next image to return.
+Determines whether there are more images available to fetch. This is an abstract method that needs to be implemented by the user.
+   
+```typescript
+abstract hasNextImageToFetch(): boolean;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+True if there are more images left to fetch, false otherwise.
+
+## isBufferEmpty
+
+Determines whether the buffer is currently empty.
+
+```typescript
+isBufferEmpty(): boolean;
+```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+True if the buffer is empty, false otherwise.
+
+## setErrorListener
+
+Sets an error listener to receive notifications about errors that occur during image source operations. Implementing classes should invoke the listener's onErrorReceived method with relevant error details when
+```typescript
+setErrorListener: (listener: ImageSourceErrorListener) => void;
+```
+
+**Parameters**
+
+`listener`: an instance of `ImageSourceErrorListener` or its derived class to handle error notifications.
+
+**Return value**
+
+None.
+
+**Code Snippet**
+
+```javascript
+cameraEnhancer.setErrorListener({
+    onErrorReceived: (errorCode, errorMessage) => {
+        console.log(errorMessage);
+    },
+});
+```
+
+**See Also**
+
+[ImageSourceErrorListener](./basic-structures/![alt](https://))
+
+## setBufferOverflowProtectionMode
+
+Sets the behavior for handling new incoming images when the buffer is full.
+
+```typescript
+setBufferOverflowProtectionMode(mode: EnumBufferOverflowProtectionMode): void;
+```
+
+**Parameters**
+
+`mode`: One of the modes defined in `EnumBufferOverflowProtectionMode`, specifying how to handle buffer overflow.
+
+**Return value**
+
+None.
+
+**See Also**
+
+[EnumBufferOverflowProtectionMode](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/buffer-overflow-protection-mode.html?lang=js)
+
+## setColourChannelUsageType
+
+Sets the usage type for color channels in images.
+
+```typescript
+setColourChannelUsageType(type: EnumColourChannelUsageType): void;
+```
+
+**Parameters**
+
+`type`: one of the types defined in `EnumColourChannelUsageType`, specifying how color channels should be used.
+
+**Return value**
+
+None.
+
+**See Also**
+
+[EnumColourChannelUsageType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/colour-channel-usage-type.html?lang=js)
+
+## setMaxImageCount
+
+Sets the maximum number of images the buffer can hold.
+
+```typescript
+setMaxImageCount(count: number): void;
+```
+
+**Parameters**
+
+`count`: The maximum number of images that can be buffered.
+
+**Return value**
+
+None.
+
+## setNextImageToReturn
+
+Sets the processing priority of a specific image, affecting the order in which images are returned.
 
 ```typescript
 setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
@@ -185,77 +297,40 @@ setNextImageToReturn(imageId: number, keepInBuffer?: boolean): void;
 
 `imageId`: The ID of the next image to return.
 
-`keepInBuffer`: Whether the image should be kept in the buffer after it is returned.
-
-
-### getImageCount
-
-Returns the actual count of buffered images.
-
-```typescript
-getImageCount(): number;
-```
+`keepInBuffer`: Optional. Whether the image should be kept in the buffer after it is returned.
 
 **Return value**
 
-Returns the actual count of buffered images.
+None.
 
-### isBufferEmpty
+## startFetching
 
-Determines whether the buffer is empty.
-
-```typescript
-isBufferEmpty(): boolean;
-```
-
-**Return value**
-
-Returns true if the buffer is empty, false otherwise.
-
-### clearBuffer
-
-Clear the image buffer.
+Starts the process of fetching images.
 
 ```typescript
-clearBuffer(): void;
+startFetching(): void;
 ```
-
-### setColourChannelUsageType
-
-Sets the usage type of a color channel in images.
-
-```typescript
-setColourChannelUsageType(type: Core.EnumColourChannelUsageType): void;
-```
-
-### getColourChannelUsageType
-
-Gets the usage type of a color channel in images.
-
-```typescript
-getColourChannelUsageType(): Core.EnumColourChannelUsageType;
-```
-
-**Return value**
-
-Returns the usage type of a color channel in images.
-
-### setErrorListener
-
-Sets the error listener to receive notifications should errors occur during image acquisition.
 
 **Parameters**
 
 None.
 
-**Code Snippet**
+**Return value**
 
-```javascript
-cameraEnhancer.setErrorListener(
-    {
-        onErrorReceived: (errorCode, errorMessage) => {
-            console.log(errorMessage);
-        },
-    }
-);
+None.
+
+## stopFetching
+
+Stops the process of fetching images.
+
+```typescript
+stopFetching(): void;
 ```
+
+**Parameters**
+
+None.
+
+**Return value**
+
+None.
