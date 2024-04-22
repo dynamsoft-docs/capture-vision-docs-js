@@ -1,4 +1,3 @@
-
 ---
 layout: default-layout
 title: How can I prevent my browser from freezing or showing a grey screen when I switch between apps and return to it?

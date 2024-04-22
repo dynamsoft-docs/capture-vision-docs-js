@@ -1,4 +1,3 @@
-
 ---
 layout: default-layout
 title: Why am I encountering errors like "r.taskSet.intermediateResultUnits is not iterable" when using frameworks like React or Angular with Dynamsoft packages?
