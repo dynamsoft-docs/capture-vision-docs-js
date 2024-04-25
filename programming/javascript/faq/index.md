@@ -4,7 +4,8 @@ title: JavaScript - Dynamsoft Capture Vision FAQ
 keywords: faq, javascript, dcv
 description: Dynamsoft Capture Vision FAQ - JavaScript
 needAutoGenerateSidebar: false
-noTitleIndex: true
+permalink: /faq/index.html
+
 ---
 
 # FAQ - JavaScript
