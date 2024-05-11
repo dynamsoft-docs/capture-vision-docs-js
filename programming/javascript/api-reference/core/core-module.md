@@ -78,6 +78,7 @@ The following are the basic interfaces often shared by more than one module:
 * [ImageTag](./basic-structures/image-tag.md)
 * [OriginalImageResultItem](./basic-structures/original-image-result-item.md)
 * [TextZone](./intermediate-results/text-zone.md)
+* [Warning](./basic-structures/warning.md)
 
 <!--
 * [FileImageTag](./basic-structures/file-image-tag.md)

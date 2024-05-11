@@ -10,4 +10,4 @@ noTitleIndex: true
 
 # Dynamsoft Core Module
 
-The Dynamsoft Core module builds the foundation upon which Dynamsoft SDKs implement their functionality. It consists of basic classes, interfaces and enumerations shared by all Dynamsoft SDKs compliant with the [DCV (Dynamsoft Capture Vision) architecture](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html). 
+The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the [DCV (Dynamsoft Capture Vision) architecture](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html). It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs.

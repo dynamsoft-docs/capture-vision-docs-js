@@ -48,7 +48,7 @@ As with other implementations of DCV, in JavaScript, all that needs to be done t
 2. Define and bind to the instance an image source and a result receiver
 3. Choose a task to be carried out by specifying a template
 
-Obviously, the difference in the use of DCV in different applications lies in the choice of template. Dynamsoft provides some popular built-in templates and will add more options over time. However, you may want to understand an existing template, try to adjust it or even define your own template. To learn more, you can read about [CaptureVisionTemplate](https://www.dynamsoft.com/capture-vision/docs/core/parameters/file/index.html).
+Obviously, the difference in the use of DCV in different applications lies in the choice of template. Dynamsoft provides some popular preset templates and will add more options over time. However, you may want to understand an existing template, try to adjust it or even define your own template. To learn more, you can read about [CaptureVisionTemplate](https://www.dynamsoft.com/capture-vision/docs/core/parameters/file/index.html).
 
 ## Assumptions
 
