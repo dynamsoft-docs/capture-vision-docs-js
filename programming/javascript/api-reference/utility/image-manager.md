@@ -10,11 +10,12 @@ noTitleIndex: true
 
 # ImageManager
 
-The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
+The `ImageManager` class provides APIs for managing images.
 
-| Name                        | Description                                            |
-| --------------------------- | ------------------------------------------------------ |
-| [saveToFile()](#savetofile) | Saves the specified image in either PNG or JPG format. |
+| Name                        | Description                                                    |
+| --------------------------- | -------------------------------------------------------------- |
+| [saveToFile()](#savetofile) | Saves the specified image in either PNG or JPG format.         |
+| [drawOnImage()](#drawonimage) | Draws various shapes on an image, and save it in PNG format. |
 
 ### saveToFile
 
@@ -37,3 +38,35 @@ saveToFile(image: Core.DSImageData, name: string, download?: boolean): Promise<F
 **Return Value**
 
 A Promise that resolves with the saved File object.
+
+### drawOnImage
+
+This method draws various shapes on an image, and save it in PNG format.
+
+```typescript
+drawOnimage(image: Blob | string,
+             drawingItem: Array<Core.Quadrilateral> | Core.Quadrilateral | Array<Core.LineSegment> | Core.LineSegment | Array<Core.Contour> | Core.Contour | Array<Core.Corner> | Core.Corner | Array<Core.Edge> | Core.Edge, 
+             type: "quads" | "lines" | "contours" | "edges",
+             color: number,
+             thickness: number,
+             download?: boolean
+            ): Promise<File>;
+```
+
+**Parameters**
+
+`image`: The image to be saved, of type Core.DSImageData.
+
+`drawingItem`: An array of different shapes to draw on the image.
+
+`type`: The type of drawing shapes.
+
+`color`: The color to use for drawing. Defaults to 0xFFFF0000 (red).
+
+`thickness`: The thickness of the lines to draw. Defaults to 1.
+
+`download`: An optional boolean flag that, when set to true, triggers the download of the file.
+
+**Return Value**
+
+A promise that resolves with the saved File object.

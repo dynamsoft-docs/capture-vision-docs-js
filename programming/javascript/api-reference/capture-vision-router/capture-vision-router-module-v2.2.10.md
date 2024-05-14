@@ -136,16 +136,6 @@ The `IntermediateResultReceiver` class is designed as a standardized way for ret
 | [onDeformationResistedBarcodeImageUnitReceived()](./intermediate-result-receiver.md#ondeformationresistedbarcodeimageunitreceived) | Event triggered when a deformation-resisted barcode image unit is received. |
 | [onComplementedBarcodeImageUnitReceived()](./intermediate-result-receiver.md#oncomplementedbarcodeimageunitreceived)               | Event triggered when a complemented barcode image unit is received.         |
 
-## BufferedItemsManager Class
-
-The `BufferedItemsManager` class is responsible for storing sample data generated during the recognition of confusable characters. Users can obtain these images and reuse them for more precise recognition in the future.
-
-| Name                                                                            | Description                                                                         |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [getMaxBufferedItems()](./buffered-items-manager.md#getmaxbuffereditems)                  | Gets the buffered recognized character items.                                       |
-| [setMaxBufferedItems()](./buffered-items-manager.md#setmaxbuffereditems)                  | Sets the maximum number of buffered items.                                          |
-| [getBufferedCharacterItemSet()](./buffered-items-manager.md#getbufferedcharacteritemset)  | Gets the buffered recognized character items.                                       |
-
 ## Interfaces
 
 * [CapturedResult](./interfaces/intermediate-result.md)

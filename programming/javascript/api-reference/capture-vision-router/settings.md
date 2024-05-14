@@ -149,7 +149,7 @@ A promise that resolves with a JSON object, of type `SimplifiedCaptureVisionSett
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-settings = await router.getSimplifiedSettings();
+settings = await router.getSimplifiedSettings("ReadSingleBarcode");
 ```
 
 ## updateSettings

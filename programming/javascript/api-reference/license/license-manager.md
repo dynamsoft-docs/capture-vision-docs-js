@@ -80,7 +80,7 @@ static setDeviceFriendlyName(name: string): void;
 
 **Parameters**
 
-`name`: A string representing the device which is easier to recognize than its UUID. 
+`name`: A string representing the device which is easier to recognize than its UUID. The maximum length of the string is 255 characters. The null character "\0" is not allowed.
 
 **Return Value**
 
