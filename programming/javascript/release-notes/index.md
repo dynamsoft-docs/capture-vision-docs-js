@@ -53,6 +53,8 @@ noTitleIndex: true
 
 ## DynamsoftUtility
 
+<!-- - [1.2.11 (//2024)](utility.md#1211-2024)-->
+- [1.2.10 (04/03/2024)](utility.md#1210-04032024)
 - [1.0.21 (01/19/2024)](utility.md#1021-01192024)
 - [1.0.20 (01/11/2024)](utility.md#1020-01112024)
 - [1.0.10 (08/24/2023)](utility.md#1010-08102023)
@@ -61,3 +63,11 @@ noTitleIndex: true
 
 - [2.0.20 (01/19/2024)](dcp.md#2020-01192024)
 
+## DynamsoftLabelRecognizerData
+
+- [1.0.10 (04/30/2024)](dlrData.md#1010-04302024)
+- [1.0.0 (02/02/2024)](dlrData.md#100-02022024)
+
+## DynamsoftNeuralNetwork
+
+- [2.2.10 (04/30/2024)](dnn.md#2210-04302024)

@@ -193,7 +193,7 @@ static loadWasm(moduleNames: Array<string> | string): Promise<void>;
 
 **Parameters**
 
-`moduleNames`: specifies one or multiple modules.
+`moduleNames`: specifies one or multiple modules. Supported module names are "cvr", "core", "license", "std", "dip", "dbr", "dlr", "ddn".
 
 **Return Value**
 
@@ -203,10 +203,6 @@ A promise that resolves when the resources have been successfully released. It d
 
 ```javascript
 await Dynamsoft.Core.CoreModule.loadWasm("cvr");
-```
-
-```javascript
-await Dynamsoft.Core.CoreModule.loadWasm(["cvr", "dbr"]);
 ```
 
 <!-- 

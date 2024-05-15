@@ -48,7 +48,7 @@ capturedResultItemTypes: EnumCapturedResultItemType;
 
 [EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
 
-# documentSettings
+## documentSettings
 
 Specifies the basic settings for the document normalizer module. It is of type `SimplifiedDocumentNormalizerSettings`.
 
@@ -105,4 +105,3 @@ Determines if the coordinates for the region of interest (ROI) are expressed in 
 ```typescript
 roiMeasuredInPercentage: boolean;
 ```
-

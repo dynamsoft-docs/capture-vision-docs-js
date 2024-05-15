@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLicense Module
 
+## 3.2.21 (05/14/2024)
+
+### Changed
+
+- Fix wrong path for type definition file in package.json.
+
 ## 3.0.40 (02/01/2024)
 
 ### Changed

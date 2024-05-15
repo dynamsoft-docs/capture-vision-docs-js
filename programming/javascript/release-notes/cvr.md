@@ -9,6 +9,10 @@ noTitleIndex: true
 
 # Release Notes - CaptureVisionRouter Module
 
+<!-- ## 2.2.30 (/2024)
+
+- Fix the data misalignment issue with point coordinates (x y) compare with C++. -->
+
 ## 2.0.32 (02/01/2024)
 
 ### Fixed
