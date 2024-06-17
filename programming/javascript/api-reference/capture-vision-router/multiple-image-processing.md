@@ -338,7 +338,11 @@ startCapturing(templateName?: string): Promise<void>;
 
 **Parameters**
 
-`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, "Default" is used. There are two types of CaptureVisionTemplates: the [preset ones](./preset-templates.md) which come with the SDK and the custom ones that get initialized when the user calls [initSettings](./settings.md#initsettings). Please be aware that the [preset CaptureVisionTemplates](./preset-templates.md) will be overwritten should the user calls [initSettings](./settings.md#initsettings) and pass his own settings.
+`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, "Default" is used. 
+
+There are two types of CaptureVisionTemplates: the [preset ones](./preset-templates.md) which come with the SDK and the custom ones that get initialized when the user calls [initSettings](./settings.md#initsettings). 
+
+Please be aware that the [preset CaptureVisionTemplates](./preset-templates.md) will be overwritten should the user calls [initSettings](./settings.md#initsettings) and pass his own settings.
 
 **Return Value**
 
