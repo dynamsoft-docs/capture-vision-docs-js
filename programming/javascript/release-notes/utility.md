@@ -8,12 +8,12 @@ noTitleIndex: true
 ---
 
 # Release Notes - DynamsoftUtility Module
-<!-- 
-## 1.2.11 (//2024)
+
+## 1.2.11 (05/20/2024)
 
 ### New
 
-- Add method drawOnImage() for displaying intermediate results on images. -->
+- Add method `drawOnImage` for displaying intermediate results on images.
 
 ## 1.2.10 (04/03/2024)
 

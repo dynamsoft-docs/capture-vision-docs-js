@@ -49,7 +49,7 @@ The captured result, an instance of `CapturedResult`.
 
 **See Also**
 
-[CapturedResult](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/basic-structures/captured-result.html)
+[CapturedResult](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/captured-result.html?product=dbr&lang=javascript)
 
 ## onOriginalImageResultReceived
 
