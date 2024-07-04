@@ -1,10 +1,28 @@
-<!-- 2.0.30 updated on 12/19/2023-->
-<li class="category">DEVELOPMENT</li>
-<li>
-  <a href="{{ site.dcv_js_api }}index.html" class="otherLinkColour"
+<li lang="javascript" class="category">DEVELOPMENT</li>
+<li lang="javascript">
+  <a style="cursor: pointer; color: #3c3c3c">User Guide</a>
+  <ul lang="javascript">
+    <li lang="javascript">
+      <a
+        href="{{ site.js }}user-guide/index.html"
+        style="cursor: pointer; color: #3c3c3c"
+        >Get Started</a
+      >
+    </li>
+    <li lang="javascript">
+      <a
+        href="{{ site.js }}user-guide/passport-mrz-scanner.html"
+        style="cursor: pointer; color: #3c3c3c"
+        >Passport MRZ Scanner</a
+      >
+    </li>
+  </ul>
+</li>
+<li lang="javascript">
+  <a href="{{ site.js_api }}index.html" class="otherLinkColour"
     >API Reference</a
   >
-  <ul>
+  <ul lang="javascript">
     <!-- CVR -->
     <li>
       <a
@@ -48,7 +66,7 @@
               <a
                 href="{{ site.dcv_js_api }}capture-vision-router/preset-templates.html"
                 class="otherLinkColour"
-                >Preset Template</a
+                >Preset Templates</a
               >
             </li>
             <li>
@@ -105,6 +123,13 @@
             </li> -->
             <li>
               <a
+                href="{{ site.dcv_js_api }}capture-vision-router/interfaces/captured-result.html"
+                class="otherLinkColour"
+                >CapturedResult</a
+              >
+            </li>
+            <li>
+              <a
                 href="{{ site.dcv_js_api }}capture-vision-router/interfaces/simplified-capture-vision-settings.html"
                 class="otherLinkColour"
                 >SimplifiedCaptureVisionSettings</a
@@ -120,6 +145,672 @@
                 href="{{ site.enums }}core/image-source-state.html?lang=js"
                 class="otherLinkColour"
                 >EnumImageSourceState</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <!-- DBR -->
+    <li lang="javascript">
+      <a
+        href="{{ site.js_api }}barcode-reader-module.html"
+        class="otherLinkColour"
+        >DynamsoftBarcodeReader</a
+      >
+      <ul>
+        <li>
+          <a
+            href="{{ site.js_api }}barcode-reader-module-class.html"
+            class="otherLinkColour"
+            >BarcodeReaderModule</a
+          >
+        </li>
+        <li>
+          <a class="otherLinkColour">Interfaces</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/aztec-details.html"
+                class="otherLinkColour"
+                >AztecDetails</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/barcode-details.html"
+                class="otherLinkColour"
+                >BarcodeDetails</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/barcode-result-item.html"
+                class="otherLinkColour"
+                >BarcodeResultItem</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/candidate-barcode-zone.html"
+                class="otherLinkColour"
+                >CandidateBarcodeZone</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/candidate-barcode-zones-unit.html"
+                class="otherLinkColour"
+                >CandidateBarcodeZonesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/complemented-barcode-image-unit.html"
+                class="otherLinkColour"
+                >ComplementedBarcodeImageUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/datamatrix-details.html"
+                class="otherLinkColour"
+                >DataMatrixDetails</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/decoded-barcode-element.html"
+                class="otherLinkColour"
+                >DecodedBarcodeElement</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/decoded-barcodes-result.html"
+                class="otherLinkColour"
+                >DecodedBarcodesResult</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/decoded-barcodes-unit.html"
+                class="otherLinkColour"
+                >DecodedBarcodesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/deformation-resisted-barcode.html"
+                class="otherLinkColour"
+                >DeformationResistedBarcode</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/deformation-resisted-barcode-image-unit.html"
+                class="otherLinkColour"
+                >DeformationResistedBarcodeImageUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/extended-barcode-result.html"
+                class="otherLinkColour"
+                >ExtendedBarcodeResult</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/localized-barcode-element.html"
+                class="otherLinkColour"
+                >LocalizedBarcodeElement</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/localized-barcodes-unit.html"
+                class="otherLinkColour"
+                >LocalizedBarcodesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/oned-code-details.html"
+                class="otherLinkColour"
+                >OneDCodeDetails</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/pdf417-details.html"
+                class="otherLinkColour"
+                >PDF417Details</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/qr-code-details.html"
+                class="otherLinkColour"
+                >QRCodeDetails</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/scaled-up-barcode-image-unit.html"
+                class="otherLinkColour"
+                >ScaledUpBarcodeImageUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.js_api }}interfaces/simplified-barcode-reader-settings.html"
+                class="otherLinkColour"
+                >SimplifiedBarcodeReaderSettings</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Enums</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=js"
+                class="otherLinkColour"
+                >EnumBarcodeFormat</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=js"
+                class="otherLinkColour"
+                >EnumDeblurMode</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=js"
+                class="otherLinkColour"
+                >EnumExtendedBarcodeResultType</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=js"
+                class="otherLinkColour"
+                >EnumLocalizationMode</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=js"
+                class="otherLinkColour"
+                >EnumQRCodeErrorCorrectionLevel</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <!-- DLR -->
+    <li lang="javascript">
+      <a
+        href="{{ site.dlr_js_api }}label-recognizer-module.html"
+        class="otherLinkColour"
+        >DynamsoftLabelRecognizer</a
+      >
+      <ul>
+        <li>
+          <a
+            href="{{ site.dlr_js_api }}label-recognizer-module-class.html"
+            class="otherLinkColour"
+            >LabelRecognizerModule</a
+          >
+        </li>
+        <li>
+          <a class="otherLinkColour">Interfaces</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/simplified-label-recognizer-settings.html"
+                class="otherLinkColour"
+                >SimplifiedLabelRecognizerSettings</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/buffered-character-item.html"
+                class="otherLinkColour"
+                >BufferedCharacterItem</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/buffered-character-item-set.html"
+                class="otherLinkColour"
+                >BufferedCharacterItemSet</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/character-cluster.html"
+                class="otherLinkColour"
+                >CharacterCluster</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/character-result.html"
+                class="otherLinkColour"
+                >CharacterResult</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/localized-textline-element.html"
+                class="otherLinkColour"
+                >LocalizedTextLineElement</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/recognized-textline-element.html"
+                class="otherLinkColour"
+                >RecognizedTextLineElement</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/localized-textlines-unit.html"
+                class="otherLinkColour"
+                >LocalizedTextLinesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/recognized-textlines-unit.html"
+                class="otherLinkColour"
+                >RecognizedTextLinesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/textline-result-item.html"
+                class="otherLinkColour"
+                >TextLineResultItem</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dlr_js_api }}interfaces/recognized-textlines-result.html"
+                class="otherLinkColour"
+                >RecognizedTextLinesResult</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <!-- DDN -->
+    <li lang="javascript">
+      <a
+        href="{{ site.ddn_js_api }}document-normalizer-module.html"
+        class="otherLinkColour"
+        >DynamsoftDocumentNormalizer</a
+      >
+      <ul>
+        <li>
+          <a
+            href="{{ site.ddn_js_api }}document-normalizer-module-class.html"
+            class="otherLinkColour"
+            >DocumentNormalizerModule</a
+          >
+        </li>
+        <li>
+          <a class="otherLinkColour">Interfaces</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/candidate-quad-edges-unit.html"
+                class="otherLinkColour"
+                >CandidateQuadEdgesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/corners-unit.html"
+                class="otherLinkColour"
+                >CornersUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/detected-quad-element.html"
+                class="otherLinkColour"
+                >DetectedQuadElement</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/detected-quad-result-item.html"
+                class="otherLinkColour"
+                >DetectedQuadResultItem</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/detected-quads-result.html"
+                class="otherLinkColour"
+                >DetectedQuadsResult</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/detected-quads-unit.html"
+                class="otherLinkColour"
+                >DetectedQuadsUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/long-lines-unit.html"
+                class="otherLinkColour"
+                >LongLinesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/normalized-image-element.html"
+                class="otherLinkColour"
+                >NormalizedImageElement</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/normalized-image-result-item.html"
+                class="otherLinkColour"
+                >NormalizedImageResultItem</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/normalized-images-result.html"
+                class="otherLinkColour"
+                >NormalizedImagesResult</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/normalized-images-unit.html"
+                class="otherLinkColour"
+                >NormalizedImagesUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.ddn_js_api }}interfaces/simplified-document-normalizer-settings.html"
+                class="otherLinkColour"
+                >SimplifiedDocumentNormalizerSettings</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Enums</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.enums }}document-normalizer/image-colour-mode.html?lang=js"
+                class="otherLinkColour"
+                >EnumImageColourMode</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <!-- DCE -->
+    <li>
+      <a href="{{ site.dce_js_api }}index.html" class="otherLinkColour"
+        >DynamsoftCameraEnhancer</a
+      >
+      <ul>
+        <li>
+          <a class="otherLinkColour">CameraEnhancer</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}instantiate.html"
+                class="otherLinkColour"
+                >Instantiate</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}camera-control.html"
+                class="otherLinkColour"
+                >Camera Control</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}acquisition.html"
+                class="otherLinkColour"
+                >Frame Acquisition</a
+              >
+            </li>
+            <li>
+              <a href="{{ site.dce_js_api }}ui.html" class="otherLinkColour"
+                >UI</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}auxiliary.html"
+                class="otherLinkColour"
+                >Auxiliary</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">View Classes</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}cameraview.html"
+                class="otherLinkColour"
+                >CameraView</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}imageeditorview.html"
+                class="otherLinkColour"
+                >ImageEditorView</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="otherLinkColour">Auxiliary Classes</a>
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}cameraenhancermodule.html"
+                class="otherLinkColour"
+                >CameraEnhancerModule</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}drawingitem.html"
+                class="otherLinkColour"
+                >DrawingItem</a
+              >
+              <ul>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}imagedrawingitem.html"
+                    class="otherLinkColour"
+                    >ImageDrawingItem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}linedrawingitem.html"
+                    class="otherLinkColour"
+                    >LineDrawingItem</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}quaddrawingitem.html"
+                    class="otherLinkColour"
+                    >QuadDrawingItem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}rectdrawingitem.html"
+                    class="otherLinkColour"
+                    >RectDrawingItem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="{{ site.dce_js_api }}textdrawingitem.html"
+                    class="otherLinkColour"
+                    >TextDrawingItem</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}drawinglayer.html"
+                class="otherLinkColour"
+                >DrawingLayer</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}drawingstylemanager.html"
+                class="otherLinkColour"
+                >DrawingStyleManager</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}feedback.html"
+                class="otherLinkColour"
+                >Feedback</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="{{ site.dce_js_api }}interface/index.html"
+            class="otherLinkColour"
+            >Interfaces</a
+          >
+          <ul>
+            <!--
+                    <li>
+                        <a href="{{ site.dce_js_api }}interface/cameratestresponse.html" class="otherLinkColour">CameraTestResponse</a>
+                    </li>
+                -->
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/dceframe.html"
+                class="otherLinkColour"
+                >DCEFrame</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/drawingitemevent.html"
+                class="otherLinkColour"
+                >DrawingItemEvent</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/drawingstyle.html"
+                class="otherLinkColour"
+                >DrawingStyle</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/note.html"
+                class="otherLinkColour"
+                >Note</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/playcallbackinfo.html"
+                class="otherLinkColour"
+                >PlayCallbackInfo</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/resolution.html"
+                class="otherLinkColour"
+                >Resolution</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/tipconfig.html"
+                class="otherLinkColour"
+                >TipConfig</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/videodeviceinfo.html"
+                class="otherLinkColour"
+                >VideoDeviceInfo</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}interface/videoframetag.html"
+                class="otherLinkColour"
+                >VideoFrameTag</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="{{ site.dce_js_api }}enum/index.html" class="otherLinkColour"
+            >Enumerations</a
+          >
+          <ul>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}enum/enumdrawingitemmediatype.html"
+                class="otherLinkColour"
+                >EnumDrawingItemMediaType</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}enum/enumdrawingitemstate.html"
+                class="otherLinkColour"
+                >EnumDrawingItemState</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dce_js_api }}enum/enumenhancedfeatures.html"
+                class="otherLinkColour"
+                >EnumEnhancedFeatures</a
               >
             </li>
           </ul>
@@ -230,13 +921,6 @@
                 href="{{ site.dcv_js_api }}core/intermediate-results/colour-image-unit.html"
                 class="otherLinkColour"
                 >ColourImageUnit</a
-              >
-            </li>
-            <li>
-              <a
-                href="{{ site.dcv_js_api }}core/basic-structures/captured-result.html"
-                class="otherLinkColour"
-                >CapturedResult</a
               >
             </li>
             <li>
@@ -358,13 +1042,13 @@
                 >LineSegment</a
               >
             </li>
-            <!-- <li>
+            <li>
               <a
                 href="{{ site.dcv_js_api }}core/intermediate-results/observation-parameters.html"
                 class="otherLinkColour"
                 >ObservationParameters</a
               >
-            </li> -->
+            </li>
             <li>
               <a
                 href="{{ site.dcv_js_api }}core/basic-structures/original-image-result-item.html"
@@ -437,13 +1121,6 @@
             </li>
             <li>
               <a
-                href="{{ site.dcv_js_api }}core/intermediate-results/text-zones-unit.html"
-                class="otherLinkColour"
-                >TextZonesUnit</a
-              >
-            </li>
-            <li>
-              <a
                 href="{{ site.dcv_js_api }}core/intermediate-results/texture-detection-result-unit.html"
                 class="otherLinkColour"
                 >TextureDetectionResultUnit</a
@@ -461,6 +1138,20 @@
                 href="{{ site.dcv_js_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html"
                 class="otherLinkColour"
                 >TextureRemovedGrayscaleImageUnit</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dcv_js_api }}core/basic-structures/text-zone.html"
+                class="otherLinkColour"
+                >TextZone</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ site.dcv_js_api }}core/intermediate-results/text-zones-unit.html"
+                class="otherLinkColour"
+                >TextZonesUnit</a
               >
             </li>
             <li>
@@ -574,16 +1265,16 @@
 </li>
 <li lang="javascript" class="category">USEFUL RESOURCES</li>
 <li lang="javascript"><a href="{{ site.js }}release-notes/" class="otherLinkColour">Release Notes</a>
-    <ul lang="javascript">
-        <li lang="javascript"><a href="{{ site.js }}release-notes/core.html" class="otherLinkColour">DynamsoftCore</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/cvr.html" class="otherLinkColour">DynamsoftCaptureVisionRouter</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/dbr.html" class="otherLinkColour">DynamsoftBarcodeReader</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/dce.html" class="otherLinkColour">DynamsoftCameraEnhancer</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/dcp.html" class="otherLinkColour">DynamsoftCodeParser</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/ddn.html" class="otherLinkColour">DynamsoftDocumentNormalizer</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/dip.html" class="otherLinkColour">DynamsoftImageProcessing</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/dlr.html" class="otherLinkColour">DynamsoftLabelRecognizer</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/license.html" class="otherLinkColour">DynamsoftLicense</a></li>
-        <li lang="javascript"><a href="{{ site.js }}release-notes/utility.html" class="otherLinkColour">DynamsoftUtility</a></li>
-    </ul>
+  <ul lang="javascript">
+      <li lang="javascript"><a href="{{ site.js }}release-notes/core.html" class="otherLinkColour">DynamsoftCore</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/cvr.html" class="otherLinkColour">DynamsoftCaptureVisionRouter</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/dbr.html" class="otherLinkColour">DynamsoftBarcodeReader</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/dce.html" class="otherLinkColour">DynamsoftCameraEnhancer</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/dcp.html" class="otherLinkColour">DynamsoftCodeParser</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/ddn.html" class="otherLinkColour">DynamsoftDocumentNormalizer</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/dip.html" class="otherLinkColour">DynamsoftImageProcessing</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/dlr.html" class="otherLinkColour">DynamsoftLabelRecognizer</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/license.html" class="otherLinkColour">DynamsoftLicense</a></li>
+      <li lang="javascript"><a href="{{ site.js }}release-notes/utility.html" class="otherLinkColour">DynamsoftUtility</a></li>
+  </ul>
 </li>
