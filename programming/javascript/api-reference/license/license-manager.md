@@ -51,7 +51,6 @@ static initLicense(license: string, immediately?: boolean): void | Promise<void>
 * When `immediately` is undefined or false, this signature of `initLicense` passes the license key to the application for initialization at a later stage. It doesn't provide immediate feedback and is suitable for scenarios where immediate confirmation of license initialization is not required.
 
 * When `immediately` is true, this returns a promise that resolves when the operation finishes. It does not provide any value upon resolution. Please note that it may raise up license related exceptions.
-  Note - The engineResourcePaths should be set before invoking the init function with true as a parameter. 
 
 **Code snippet**
 

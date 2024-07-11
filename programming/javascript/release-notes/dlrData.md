@@ -9,11 +9,17 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftLabelRecognizerData Module
 
+## 1.0.11 (05/15/2024)
+
+### Changed
+
+- Updated model resources to be fully consistent with the c++ version.
+
 ## 1.0.10 (04/30/2024)
 
-### Changes
+### Changed
 
-Remove the "-" symbol from the model output list, updated .data files to be consistent with other editions.
+- Removed the "-" symbol from the model output list, updated .data files to be consistent with other editions.
 
 ## 1.0.0 (02/02/2024)
 

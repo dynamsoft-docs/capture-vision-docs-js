@@ -202,7 +202,8 @@ True if the buffer is empty, false otherwise.
 
 ## setErrorListener
 
-Sets an error listener to receive notifications about errors that occur during image source operations. Implementing classes should invoke the listener's onErrorReceived method with relevant error details when
+Sets an error listener to receive notifications about errors that occur during image source operations. Implementing classes should invoke the listener's onErrorReceived method with relevant error details when error occur.
+
 ```typescript
 setErrorListener: (listener: ImageSourceErrorListener) => void;
 ```
@@ -227,7 +228,7 @@ cameraEnhancer.setErrorListener({
 
 **See Also**
 
-[ImageSourceErrorListener](./basic-structures/![alt](https://))
+[ImageSourceErrorListener](./basic-structures/image-source-error-listener.html)
 
 ## setBufferOverflowProtectionMode
 

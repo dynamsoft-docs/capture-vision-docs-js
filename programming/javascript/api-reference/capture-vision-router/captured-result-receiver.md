@@ -65,7 +65,7 @@ onOriginalImageResultReceived(result: OriginalImageResultItem): void;
 
 **See Also**
 
-[OriginalImageResultItem](../../core/basic-structures/original-image-result-item.md)
+[OriginalImageResultItem](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/basic-structures/original-image-result-item.html?product=dbr&lang=javascript)
 
 ## onDecodedBarcodesReceived
 
