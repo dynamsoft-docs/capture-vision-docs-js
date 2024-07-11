@@ -9,6 +9,17 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftDocumentNormalizer Module
 
+## 2.2.10 (04/11/2024)
+
+## New
+
+- Added `SimplifiedDocumentNormalizerSettings` to configure basic settings of document processing.
+- Added a new enumeration `ImageColourMode` to specify the colour mode of the normalized image.
+
+## Changed
+
+- Changed the property name from `quadsResultItems` to `detectedQuadResultItems` in interface `DetectedQuadsResult`.
+
 ## 2.0.21 (01/19/2024)
 
 ### Changed

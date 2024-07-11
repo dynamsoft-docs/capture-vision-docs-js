@@ -9,6 +9,30 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCameraEnhancer Module
 
+## 4.0.3 (05/20/2024)
+
+### Fixed
+
+* Fixed an issue on iOS 17 where reopening the camera after leaving the browser might fail.
+
+## 4.0.2 (04/11/2024)
+
+### New
+
+* Implemented a visual magnifier to facilitate adjustment of corner points.
+
+### Changed
+
+* Enhanced "beep" quality by allowing multiple soundtracks now.
+* Renamed the method `getDrawingStyles()` to `getAllDrawingStyles()` under class `DrawingStyleManager` for clarity.
+* Move `DrawingItem` subtypes, such as `LineDrawingItem`, up to directly under the namespace DCE.
+
+### Fixed
+
+* Fixed a bug where changing `singleFrameMode` would get drawing layers removed.
+* Fixed a bug where an unnecessary button to appear on iOS devices when invoking the `takePhoto()` method.
+* Fixed a bug specific to iOS 17, where reopening the camera after leaving the browser could result in failure.
+
 ## 4.0.1 (01/11/2024)
 
 ### Added

@@ -9,6 +9,11 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftBarcodeReader Module
 
+## 10.2.10 (04/11/2024)
+
+- Update interfaces `CandidateBarcodeZonesUnit` and `CandidateBarcodeZone` to store the information of a single candidate barcode zone.
+- Update interface `LocalizedBarcodesUnit` and `DeformationResistedBarcodeImageUnit` to store the deformation-resisted barcode information.
+
 ## 10.0.21 (02/05/2024)
 
 Introduced `dbr.bundle.js` to include packages that are required on running Dynamsoft Barcode Reader to reduce the complexity of the code.

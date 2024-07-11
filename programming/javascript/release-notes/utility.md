@@ -9,17 +9,21 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftUtility Module
 
-## 1.2.11 (05/20/2024)
+## 1.2.11 (05/15/2024)
 
 ### New
 
 - Add method `drawOnImage` for displaying intermediate results on images.
 
-## 1.2.10 (04/03/2024)
+## 1.2.10 (04/11/2024)
 
 ### New
 
 Updated the utility algorithm to v1.2.10, see[Utility C++ v1.2.10](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/release-notes/utility.html#1210-03012024) for more details.
+
+### Changed
+
+- Improve `MultiFrameResultCrossFilter` to allow `resultItemType` to receive string type parameters.
 
 ## 1.0.21 (01/19/2024)
 

@@ -9,9 +9,25 @@ noTitleIndex: true
 
 # Release Notes - CaptureVisionRouter Module
 
-<!-- ## 2.2.30 (/2024)
+## 2.2.30 (05/15/2024)
 
-- Fix the data misalignment issue with point coordinates (x y) compare with C++. -->
+### Changed
+
+- Updated the capture vision router algorithm to v2.2.30, see[CaptureVisionRouter C++ v2.2.30](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/release-notes/cvr.html#2230-0513) for more details.
+  - Update class CaptureVisionRouter, add new method `getBufferedItemsManager()`.
+  - Added a new class `BufferedItemsManager` to manage the buffered character items.
+
+### Fixed
+
+- Fixed the data misalignment issue with point coordinates (x y), compare with C++ version.
+
+## 2.2.10 (04/11/2024)
+
+- Updated the capture vision router algorithm to v2.2.10, see[CaptureVisionRouter C++ v2.2.10](https://www.dynamsoft.com/capture-vision/docs/server/programming/cplusplus/release-notes/cvr.html#2210-0301) for more details.
+- Move the interface `CapturedResult` from Core to CVR.
+- Update `SimplifiedCaptureVisionSettings` to support `SimplifiedDocumentNormalizerSettings`.
+- Update `IntermediateResultReceiver` to add call back function `onShortLinesUnitReceived()` and method `getObservationParameters`.
+- Small fixes and tweaks.
 
 ## 2.0.32 (02/01/2024)
 

@@ -9,6 +9,6 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftNeuralNetwork Module
 
-## 2.2.10 (04/30/2024)
+## 2.2.10 (05/15/2024)
 
 The first version of `DynamsoftNeuralNetwork` JavaScript edition that integrate with `DynamsoftCaptureVision (DCV)` architecture.
