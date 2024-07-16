@@ -140,15 +140,15 @@ The `IntermediateResultReceiver` class is designed as a standardized way for ret
 
 The `BufferedItemsManager` class is responsible for storing sample data generated during the recognition of confusable characters. Users can obtain these images and reuse them for more precise recognition in the future.
 
-| Name                                                                            | Description                                                                         |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [getMaxBufferedItems()](./buffered-items-manager.md#getmaxbuffereditems)                  | Gets the buffered recognized character items.                                       |
-| [setMaxBufferedItems()](./buffered-items-manager.md#setmaxbuffereditems)                  | Sets the maximum number of buffered items.                                          |
-| [getBufferedCharacterItemSet()](./buffered-items-manager.md#getbufferedcharacteritemset)  | Gets the buffered recognized character items.                                       |
+| Name                                                                                     | Description                                   |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------- |
+| [getMaxBufferedItems()](./buffered-items-manager.md#getmaxbuffereditems)                 | Gets the buffered recognized character items. |
+| [setMaxBufferedItems()](./buffered-items-manager.md#setmaxbuffereditems)                 | Sets the maximum number of buffered items.    |
+| [getBufferedCharacterItemSet()](./buffered-items-manager.md#getbufferedcharacteritemset) | Gets the buffered recognized character items. |
 
 ## Interfaces
 
-* [CapturedResult](./interfaces/intermediate-result.md)
+* [CapturedResult](./interfaces/captured-result.md)
 * [SimplifiedCaptureVisionSettings](./interfaces/simplified-capture-vision-settings.md)
 
 <!-- has bug, ignore for now * [ImageSourceStateListener](./interfaces/image-source-state-listener.md) -->
