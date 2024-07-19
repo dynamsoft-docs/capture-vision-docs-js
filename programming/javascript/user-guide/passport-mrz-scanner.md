@@ -39,11 +39,11 @@ This guide will walk you through the step-by-step process of how to creating a s
 
 ## About the solution
 
-With Passport MRZ Scanner you can use your camera to scan the MRZ code of a passport. It will extract all data like firstname, lastname, passport number, nationality, date of birth, expiration date and personal numer from the MRZ string, and converts the encoded string into human-readable fields.
+With Passport MRZ Scanner you can use your camera to scan the MRZ code of a passport. It will extract all data like firstname, lastname, passport number, nationality, date of birth, expiration date and personal number from the MRZ string, and converts the encoded string into human-readable fields.
 
 ### Web demo
 
-The web demo is available at [https://Dynamsoft.github.io/passport-MRZ-scanner-javascript/index.html](https://Dynamsoft.github.io/passport-MRZ-scanner-javascript/index.html) (nothing will be uploaded).
+The web demo is available at [https://demo.dynamsoft.com/solutions/passport-scanner/index.html]( https://demo.dynamsoft.com/solutions/passport-scanner/index.html) (nothing will be uploaded).
 
 ### Run this Solution
 
@@ -153,54 +153,6 @@ The simplest way to include the SDKs is to use either the [jsDelivr](https://jsd
   <script src="https://unpkg.com/dynamsoft-camera-enhancer@4.0.3/dist/dce.js"></script>
   ```
 
-<!-- #### Host the SDK yourself (optional)
-
-Besides using the CDN, you can also download the SDK and host its files on your own website / server before including it in your application.
-
-To download the SDK:
-
-* yarn
-
-  ```cmd
-  yarn add dynamsoft-core@3.2.30 -E
-  yarn add dynamsoft-camera-enhancer@4.0.3 -E
-  yarn add dynamsoft-capture-vision-router@2.2.30 -E
-  yarn add dynamsoft-code-parser@2.2.10 -E
-  yarn add dynamsoft-label-recognizer@3.2.30 -E
-  yarn add dynamsoft-license@3.2.21 -E
-  yarn add dynamsoft-utility@1.2.20 -E
-  yarn add dynamsoft-capture-vision-std@1.2.10 -E
-  yarn add dynamsoft-image-processing@2.2.30 -E
-  yarn add dynamsoft-capture-vision-dnn@1.0.20 -E
-  yarn add dynamsoft-label-recognizer-data@1.0.11 -E
-  ```
-
-* npm
-
-  ```cmd
-  npm i dynamsoft-core@3.2.30 -E
-  npm i dynamsoft-camera-enhancer@4.0.3 -E
-  npm i dynamsoft-capture-vision-router@2.2.30 -E
-  npm i dynamsoft-code-parser@2.2.10 -E
-  npm i dynamsoft-label-recognizer@3.2.30 -E
-  npm i dynamsoft-license@3.2.21 -E
-  npm i dynamsoft-utility@1.2.20 -E
-  npm i dynamsoft-capture-vision-std@1.2.10 -E
-  npm i dynamsoft-image-processing@2.2.30 -E
-  npm i dynamsoft-capture-vision-dnn@1.0.20 -E
-  npm i dynamsoft-label-recognizer-data@1.0.11 -E
-  ```
-
-Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
-
-  ```html
-  ...
-  <script src="/node_modules/dynamsoft-label-recognizer/dist/dlr.js"></script>
-  <script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
-  <script src="/node_modules/dynamsoft-code-parser/dist/dcp.js"></script>
-  ...
-  ``` -->
-
 *Note*:
 
 * Certain legacy web application servers may lack support for the `application/wasm` mimetype for .wasm files. To address this, you have two options:
@@ -224,13 +176,13 @@ Before using the SDK, you need to configure a few things in [`init.js`](https://
 
 #### Specify the license
 
-To enable the SDK’s functionality, you must provide a valid license. Use the function `initLicense` to set your license key.
+To enable the SDK's functionality, you must provide a valid license. Use the function `initLicense` to set your license key.
 
 ```javascript
 Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```
 
-The key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a 30-day free trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=docs&package=javascript" target="_blank">Request a Trial License</a> link.
+The key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" serves as a test license valid for 24 hours, applicable to any newly authorized browser. To test the SDK further, you can request a 30-day free trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=cvs&utm_source=docs&package=js" target="_blank">Request a Trial License</a> link.
 
 #### Load resources in advance
 
