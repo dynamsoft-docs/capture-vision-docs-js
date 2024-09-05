@@ -191,8 +191,7 @@ await cvRouter.startCapturing("ReadPassport");
 
 #### Handle the captured result
 
-The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js){
-:target="_blank"} interface. The `CapturedResultReceiver` object is registered to `cvRouter` using the `addResultReceiver()` method.
+The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js){:target="_blank"} interface. The `CapturedResultReceiver` object is registered to `cvRouter` using the `addResultReceiver()` method.
 
 ```javascript
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
