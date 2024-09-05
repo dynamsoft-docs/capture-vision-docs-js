@@ -43,15 +43,15 @@ The web demo is available at [https://demo.dynamsoft.com/solutions/mrz-scanner/i
 
 ### Run this Solution
 
-1. Clone the repository to a working directory or download the code as a ZIP file:
+**1. Clone the repository to a working directory or download the code as a ZIP file**
 
 ```sh
 git clone https://github.com/Dynamsoft/mrz-scanner-javascript
 ```
 
-2. Deploy the files to a directory hosted on an HTTPS server.
+**2. Deploy the files to a directory hosted on an HTTPS server**
 
-3. Open the "index.html" file in your browser.
+**3. Open the "index.html" file in your browser**
 
 > Basic Requirements
 >
@@ -192,7 +192,7 @@ await cvRouter.startCapturing("ReadPassport");
 #### Handle the captured result
 
 The processing results are returned through the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver?lang=js){
-="_blank"} interface. The `CapturedResultReceiver` object is registered to `cvRouter` using the `addResultReceiver()` method.
+:target="_blank"} interface. The `CapturedResultReceiver` object is registered to `cvRouter` using the `addResultReceiver()` method.
 
 ```javascript
 const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
