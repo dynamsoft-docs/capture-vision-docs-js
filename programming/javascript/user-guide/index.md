@@ -21,4 +21,4 @@ The best way to begin with Dynamsoft Capture Vision JavaScript Edition is to fol
 
 We also provide guides for specific use cases that typically require more than one SDK.
 
-- [User Guide for Passport MRZ Scanner](./passport-mrz-scanner.html)
+- [User Guide for MRZ Scanner](./mrz-scanner.html)
