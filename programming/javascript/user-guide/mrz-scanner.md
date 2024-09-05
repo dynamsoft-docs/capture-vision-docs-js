@@ -46,7 +46,7 @@ The web demo is available at [https://demo.dynamsoft.com/solutions/mrz-scanner/i
 1. Clone the repository to a working directory or download the code as a ZIP file:
 
 ```sh
-git clone https://github.com/Dynamsoft/MRZ-scanner-javascript
+git clone https://github.com/Dynamsoft/mrz-scanner-javascript
 ```
 
 2. Deploy the files to a directory hosted on an HTTPS server.
@@ -103,7 +103,7 @@ In this section, we’ll walk through the key steps needed to build a web page t
 
 ### Include the SDK
 
-The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. This project uses `jsDelivr` in [`index.html`](https://github.com/Dynamsoft/MRZ-scanner-javascript/blob/main/index.html).
+The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. This project uses `jsDelivr` in [`index.html`](https://github.com/Dynamsoft/mrz-scanner-javascript/blob/main/index.html).
 
 * jsDelivr
 
@@ -121,7 +121,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
 ### Set up the solution
 
-Before using the SDK, you need to configure a few things in [`init.js`](https://github.com/Dynamsoft/MRZ-scanner-javascript/blob/main/js/init.js).
+Before using the SDK, you need to configure a few things in [`init.js`](https://github.com/Dynamsoft/mrz-scanner-javascript/blob/main/js/init.js).
 
 #### Specify the license
 
@@ -157,7 +157,7 @@ Dynamsoft.DLR.LabelRecognizerModule.loadRecognitionData("MRZ");
 
 #### Create an CaptureVisionRouter instance and initialize the settings
 
-The `Dynamsoft.CVR.CaptureVisionRouter.createInstance()` method creates a `CaptureVisionRouter` object, `cvRouter`, which controls the entire process. First, a [template file](https://github.com/Dynamsoft/MRZ-scanner-javascript/blob/main/template.json) is loaded, where specific image processing workflows, such as "ReadPassport", "ReadId", and "ReadPassportAndId", are defined.
+The `Dynamsoft.CVR.CaptureVisionRouter.createInstance()` method creates a `CaptureVisionRouter` object, `cvRouter`, which controls the entire process. First, a [template file](https://github.com/Dynamsoft/mrz-scanner-javascript/blob/main/template.json) is loaded, where specific image processing workflows, such as "ReadPassport", "ReadId", and "ReadPassportAndId", are defined.
 
 > If you'd like to understand the template file, refer to the [Overview of DCV parameters](https://www.dynamsoft.com/capture-vision/docs/core/parameters/file/index.html).
 
@@ -300,5 +300,5 @@ Apart from the browsers, the operating systems may impose some limitations of th
 
 Now that you have got the SDK integrated, you can choose to move forward in the following directions
 
-1. Check out the [source code for this solution on github](https://github.com/Dynamsoft/MRZ-scanner-javascript).
+1. Check out the [source code for this solution on github](https://github.com/Dynamsoft/mrz-scanner-javascript).
 2. Check out the [Dynamsoft developer blog](https://www.dynamsoft.com/codepool/tag/mrz/).
