@@ -14,8 +14,8 @@ The `ObservationParameters` interface is used to set filter conditions for the `
 
 ```typescript
 interface ObservationParameters {
-    getObservedResultUnitTypes(): BigInt;
-    setObservedResultUnitTypes(types: BigInt): void;
+    getObservedResultUnitTypes(): number;
+    setObservedResultUnitTypes(types: number): void;
     isResultUnitTypeObserved(type: EnumIntermediateResultUnitType): boolean;
     addObservedTask(taskName): void;
     removeObservedTask(taskName: string): void;
@@ -38,7 +38,7 @@ interface ObservationParameters {
 Gets the types of intermediate result units that have been observed.
 
 ```typescript
-getObservedResultUnitTypes(): BigInt;
+getObservedResultUnitTypes(): number;
 ```
 
 **Return value**
@@ -50,7 +50,7 @@ The observed types of intermediate result units.
 Sets the types of intermediate result units that have been observed.
 
 ```typescript
-setObservedResultUnitTypes(types: BigInt): void;
+setObservedResultUnitTypes(types: number): void;
 ```
 
 **Parameters**
