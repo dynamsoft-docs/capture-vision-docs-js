@@ -10,4 +10,4 @@ noTitleIndex: true
 
 # Dynamsoft Label Recognizer Module
 
-The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. To learn more, please refer to [Label Recognizer for Your Website - User Guide](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/user-guide/index.html).
+The Dynamsoft Label Recognizer module identifies and recognizes text labels such as passport MRZs, ID cards, and VIN numbers. To learn more, please refer to [Dynamsoft Capture Vision architecture](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/).
