@@ -14,7 +14,7 @@ The following shows the preset CaptureVisionTemplates
 
 | Template Name                           | Function Description                                                             | Available with                 |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------ |
-| **ReadBarcodes_Default**                | Scans multiple barcodes by default setting.                                      | dynamsoft-barcode-reader       |
+| **ReadBarcodes_Default**                | Scans a single barcode.                                                          | dynamsoft-barcode-reader       |
 | **ReadSingleBarcode**                   | Quickly scans a single barcode.                                                  | dynamsoft-barcode-reader       |
 | **ReadBarcodes_SpeedFirst**             | Prioritizes speed in scanning multiple barcodes.                                 | dynamsoft-barcode-reader       |
 | **ReadBarcodes_ReadRateFirst**          | Maximizes the number of barcodes read.                                           | dynamsoft-barcode-reader       |

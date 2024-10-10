@@ -9,7 +9,137 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
-## 2.2.3000 (00/00/2024)
+## 2.4.2000 (10/10/2024)
+
+### Highlights
+
+- Improved the read rate and the speed of the following barcode formats:
+  - EAN13
+  - DotCode
+- Added support for decoding add-on codes (also known as Extension Codes) for UPC-A, UPC-E, EAN-8 and EAN-13 codes.
+
+### DynamsoftCaptureVisionRouter
+
+#### Improved
+
+- Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to an licensing issue.
+
+#### New
+
+- Added internal logics for usage count.
+- Added a new callback function `OnRawTextLinesReceived` to the class `IntermediateResultReceiver`.
+- Add `EnumPresetTemplate` for all preset template names
+
+### DynamsoftCore
+
+#### Improved
+
+- Updated the path auto-filling mechanism to reduce non-essential path definitions.
+
+#### New
+
+- Added new error codes
+  - -10076: The license is initialized successfully but detected invalid content in your key.
+  - -30063: [Barcode Reader] No license found.
+  - -40103: [Label Recognizer] No license found.
+  - -50058: [Document Normalizer] No license found.
+  - -90012: [Code Parser] No license found.
+- Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the `EnumIntermediateResultUnitType`.
+
+### DynamsoftLicense
+
+#### Improved
+
+- Updated the error message of `initLicense` method. The methods will returns more detailed messages when failed to initialized the license. Warnings will be available if license initialization is successful but a part of the license key is invalid.
+- Updated the duplicate license error handling mechanism. After successfully creating an instance, setting the same license again will no longer cause exception.
+
+#### New
+
+- Add a new charge way, `TimeSliceCount`.
+
+### DynamsoftImageProcessing
+
+#### Fixed
+
+- Fixed a crash bug caused by the usage of RegEx.
+- Small fixes and tweaks.
+
+### DynamsoftUtility
+
+#### Fixed
+
+- Fixed a bug where `CaptureVisionRouter.startCapturing` would erroneously halt the fetching process when its status was running, leading to an unnecessary stop and restart of the fetching operation.
+
+### DynamsoftBarcodeReader
+
+#### Improved
+
+- Improved the read rate and the speed of the following barcode formats:
+  - EAN13
+  - DotCode
+
+#### New
+
+- Added internal logics for usage count.
+- Added support for decoding add-on barcodes.
+- Added new properties to the `QRCodeDetails` class
+  - `dataMaskPattern`
+  - `codewords`
+
+#### Changed
+
+- Updated the Enumeration number of `EnumBarcodeFormat.BF_ALL` to 0xFFFFFFFEFFFFFFFF.
+- Updated the internal logic of licensing error message reporting.
+
+#### Fixed
+
+- Fixed a bug that might cause `GS1_DATABAR_EXPANDED_STACKED` barcode unread.
+
+### DynamsoftLabelRecognizer
+
+#### New
+
+- Added internal logics for usage count.
+- Added a new parameter CharSet to the `CharacterModel` object to include or exclude characters for recognition.
+- Added a new algorithm stage `IRUT_RAW_TEXT_LINES`.  Corresponding APIs are added to obtain the intermediate result of this stage.
+  - Interface `RawTextLinesUnit`
+  - Interface `RawTextLine`
+  - Enumeration `RawTextLineStatus`
+- Added a property `rawText` to the interface `RecognizedTextLineELement`.
+- Added a property `rawText` to the interface `TextLineResultItem`.
+
+### DynamsoftNocumentNormalizer
+
+#### New
+
+- Added a new parameter `MinDocumentAreaRatio` to define the minimum targeting document area. The parameter is available via both the parameter template and the `SimplifiedDocumentNormalizerSettings`.
+- Added a new parameter `ExpectedDocumentsCount` to define the expected document count for detection. The parameter is available via both the parameter template and the `SimplifiedDocumentNormalizerSettings`.
+
+#### Changes
+
+- Updated internal logics to to use the latest version of `DynamsoftCore` module.
+
+#### Fixed
+
+- Small fixes and tweaks.
+
+### DynamsoftCodeParser
+
+#### Fixed
+
+- Fixed a bug where the South African Driver's license might be parsed incorrectly.
+
+#### Changed
+
+- Updated the internal logic of licensing error message reporting.
+
+### DynamsoftCameraEnhancer
+
+#### New
+
+- A new preset UI template has been added, which is available for use and modification.
+
+## 2.2.3000 (07/21/2024)
 
 ### DynamsoftCaptureVisionRouter
 

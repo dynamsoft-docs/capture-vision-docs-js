@@ -108,13 +108,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.4.2000/dist/dcv.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.2.3000/dist/dcv.bundle.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-capture-vision-bundle@2.4.2000/dist/dcv.bundle.js"></script>
+  <script src="https://unpkg.com/dynamsoft-capture-vision-bundle@2.2.3000/dist/dcv.bundle.js"></script>
   ```
 
 > Besides using the public CDN, you can also download the SDK from the npm and host its files on your own server or a commercial CDN before including it in your application. Please see [Host the SDK yourself](#host-the-sdk-yourself)
@@ -210,9 +210,9 @@ You can download the SDK from npm and host it yourself.
 > Note that you need to get two other assisting packages.
 
 ```cmd
-npm i dynamsoft-capture-vision-bundle@2.4.2000 -E
-npm i dynamsoft-capture-vision-std@1.4.10 -E
-npm i dynamsoft-image-processing@2.4.20 -E
+npm i dynamsoft-capture-vision-bundle@2.2.3000 -E
+npm i dynamsoft-capture-vision-std@1.2.10 -E
+npm i dynamsoft-image-processing@2.2.30 -E
 ```
 
 The resources are located at the path node_modules/<pkg>, without @<version>, so the script in your page would be like:
@@ -224,18 +224,19 @@ Since @<version> is missing, you need to specify the location of the "engine" fi
 ```javascript
 //The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
 Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
-  "std":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
-  "core":"https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  "dip":"https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  "license":"https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.20/dist/",
-  "cvr":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
-  "dce":"https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/",
-  "dbr":"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
-  "dlr":"https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.4.20/dist/",
-  "dcp":"https://cdn.jsdelivr.net/npm/dynamsoft-code-parser@2.4.22/dist/",
-  "ddn":"https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.4.20/dist/",
+  "std":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.2.10/dist/",
+  "core":"https://cdn.jsdelivr.net/npm/dynamsoft-core@3.2.30/dist/",
+  "dip":"https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.2.30/dist/",
+  "license":"https://cdn.jsdelivr.net/npm/dynamsoft-license@3.2.21/dist/",
+  "cvr":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.2.30/dist/",
+  "dce":"https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.0.3/dist/",
+  "dbr":"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.2.10/dist/",
+  "dlr":"https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.2.30/dist/",
+  "dcp":"https://cdn.jsdelivr.net/npm/dynamsoft-code-parser@2.2.10/dist/",
+  "ddn":"https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.2.10/dist/",
   "dlrData":"https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/",
   "dnn":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-dnn@1.0.20/dist/",
+  "utility":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.2.3000/dist/"
 });
 ```
 
@@ -286,7 +287,7 @@ The following table is a list of supported browsers based on the above requireme
   | Browser Name |     Version      |
   | :----------: | :--------------: |
   |    Chrome    | v78+<sup>1</sup> |
-  |   Firefox    | v68+<sup>1</sup> |
+  |   Firefox    | v63+<sup>1</sup> |
   |     Edge     |       v79+       |
   |    Safari    |       v14+       |
 
