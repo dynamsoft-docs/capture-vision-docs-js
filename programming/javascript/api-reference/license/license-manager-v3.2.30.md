@@ -35,27 +35,27 @@ A promise which, upon resolution, yields a string corresponding to the device's 
 Initializes the license for the application using a license key. This function is overloaded, providing two different usages based on the provided parameters.
 
 ```typescript
-static initLicense(license: string, options?: {executeNow: boolean}): void | Promise<void>;
+static initLicense(license: string, immediately?: boolean): void | Promise<void>;
 ```
 
 **Parameters**
 
 `license`: The license key to be used for initialization.
 
-`options`: This is an object with a single property executeNow, which is a boolean indicates the function should immediately execute the license initialization or not.
+`immediately`: A boolean flag that determines if the function should immediately execute the license initialization or not.
 
 **Return Value**
 
 `void`
 
-* When `options` is undefined or false, this signature of `initLicense` passes the license key to the application for initialization at a later stage. It doesn't provide immediate feedback and is suitable for scenarios where immediate confirmation of license initialization is not required.
+* When `immediately` is undefined or false, this signature of `initLicense` passes the license key to the application for initialization at a later stage. It doesn't provide immediate feedback and is suitable for scenarios where immediate confirmation of license initialization is not required.
 
-* When `options` is set to `{executeNow: true}`, this returns a promise that resolves when the operation finishes. It does not provide any value upon resolution. Please note that it may raise up license related exceptions.
+* When `immediately` is true, this returns a promise that resolves when the operation finishes. It does not provide any value upon resolution. Please note that it may raise up license related exceptions.
 
 **Code snippet**
 
 ```javascript
-Dynamsoft.License.LicenseManager.initLicense("your-license-key", {executeNow: true})
+Dynamsoft.License.LicenseManager.initLicense("your-license-key", true)
   .then(result => {
     if (result?.message) {
       console.log("License Message:", result.message);
@@ -73,6 +73,8 @@ Dynamsoft.License.LicenseManager.initLicense("your-license-key", {executeNow: tr
 Assigns a distinctive name to the device, correlating it with its UUID.
 
 > Please be aware that this method must be called before `Dynamsoft.CVR.CaptureVisionRouter.createInstance()` or `Dynamsoft.Core.CoreModule.loadWasm()` or `Dynamsoft.DCP.CodeParser.createInstance()` to take effect.
+>
+> The length of the name string has an upper limit of 255 characters and will be automatically truncated without error if the limit is exceeded.
 
 ```typescript
 static setDeviceFriendlyName(name: string): void;
@@ -80,7 +82,7 @@ static setDeviceFriendlyName(name: string): void;
 
 **Parameters**
 
-`name`: A string representing the device which is easier to recognize than its UUID. The maximum length of the string is 255 characters and the null character "\0" is not allowed.
+`name`: A string representing the device which is easier to recognize than its UUID. The maximum length of the string is 255 characters. The null character "\0" is not allowed.
 
 **Return Value**
 

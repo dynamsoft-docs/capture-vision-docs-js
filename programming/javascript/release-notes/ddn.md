@@ -11,12 +11,12 @@ noTitleIndex: true
 
 ## 2.2.10 (04/11/2024)
 
-## New
+### New
 
 - Added `SimplifiedDocumentNormalizerSettings` to configure basic settings of document processing.
 - Added a new enumeration `ImageColourMode` to specify the colour mode of the normalized image.
 
-## Changed
+### Changed
 
 - Changed the property name from `quadsResultItems` to `detectedQuadResultItems` in interface `DetectedQuadsResult`.
 

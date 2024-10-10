@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Class IntermediateResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
-description: This page introduces the IntermediateResultReceiver Class in Dynamsoft CaptureVisionRouter Module JS Edition.
+title: Class IntermediateResultReceiver - Dynamsoft CaptureVisionRouter Module JS Edition API Reference v2.2.10
+description: This page introduces the IntermediateResultReceiver Class in Dynamsoft CaptureVisionRouter Module JS Edition v2.2.10.
 keywords: intermediate result receiver, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -44,7 +44,6 @@ class IntermediateResultReceiver {
     onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
     onDeformationResistedBarcodeImageUnitReceived?(result: DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
     onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-    onRawTextLinesReceived?(result: RawTextLinesUnit, info: Core.IntermediateResultExtraInfo): void;
 }
 ```
 
@@ -80,7 +79,6 @@ class IntermediateResultReceiver {
 | [onScaledUpBarcodeImageUnitReceived()](#onscaledupbarcodeimageunitreceived)                       | Event triggered when a scaled-up barcode image unit is received.            |
 | [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Event triggered when a deformation-resisted barcode image unit is received. |
 | [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived)               | Event triggered when a complemented barcode image unit is received.         |
-| [onRawTextLinesReceived()](#onrawtextlinesreceived)                                               | Event triggered when a raw text line unit is received.                      |
 
 ## getObservationParameters
 
@@ -677,25 +675,5 @@ onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, in
 **See Also**
 
 [ComplementedBarcodeImageUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/complemented-barcode-image-unit.html)
-
-[IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
-
-## onRawTextLinesReceived
-
-Called when a raw text line unit is received.
-
-```typescript
-onRawTextLinesReceived?(result: RawTextLinesUnit, info: Core.IntermediateResultExtraInfo): void;
-```
-
-**Parameters**
-
-`result`: The result unit that contains the raw text line, of type `RawTextLinesUnit`.
-
-`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
-
-**See Also**
-
-[RawTextLinesUnit](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/raw-textlines-unit.html?lang=js)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)

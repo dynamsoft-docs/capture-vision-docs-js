@@ -3,27 +3,28 @@ repository: dynamsoft-docs/capture-vision-docs-js
 docFullPath: https://www.dynamsoft.com/capture-vision/docs/web/
 firstLevelUrl: /capture-vision/docs/web/
 docRootName: "Dynamsoft Capture Vision JS Edition" 
-docHomePage: /capture-vision/docs/core/introduction/
+docHomePage: /capture-vision/docs/web/programming/javascript/
 
-introduction: /capture-vision/docs/core/introduction/
-architecture: /capture-vision/docs/core/architecture/
-parameter: /capture-vision/docs/core/parameters/
-parameterFile: /capture-vision/docs/core/parameters/file/
-parameterReference: /capture-vision/docs/core/parameters/reference/
-enums: /capture-vision/docs/core/enums/
+dcvb_introduction: /capture-vision/docs/core/introduction/
+dcvb_architecture: /capture-vision/docs/core/architecture/
+dcvb_parameter: /capture-vision/docs/core/parameters/
+dcvb_parameterFile: /capture-vision/docs/core/parameters/file/
+dcvb_parameterReference: /capture-vision/docs/core/parameters/reference/
+dcvb_enums: /capture-vision/docs/core/enums/
 
-js: /capture-vision/docs/web/programming/javascript/
-dcv_js: /capture-vision/docs/web/programming/javascript/
+dcvb_js: /capture-vision/docs/web/programming/javascript/
+dcvb_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
 dbr_js: /barcode-reader/docs/web/programming/javascript/
 dlr_js: /label-recognition/docs/web/programming/javascript/
 ddn_js: /document-normalizer/docs/web/programming/javascript/
 dcp_js: /code-parser/docs/web/programming/javascript/
-dcv_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
+dce_js: /camera-enhancer/docs/web/programming/javascript/
 dbr_js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
 dlr_js_api: /label-recognition/docs/web/programming/javascript/api-reference/
 ddn_js_api: /document-normalizer/docs/web/programming/javascript/api-reference/
 dcp_js_api: /code-parser/docs/web/programming/javascript/api-reference/
 dce_js_api: /camera-enhancer/docs/web/programming/javascript/api-reference/
+code_types: /code-parser/docs/core/code-types/
 
 assets: /capture-vision/docs/web/assets/
 edit_icon: /capture-vision/docs/web/assets/img-icon/edit-icon.png

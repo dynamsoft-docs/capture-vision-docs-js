@@ -2,7 +2,7 @@
 layout: default-layout
 title: Readme - Dynamsoft Barcode Reader Module
 description: The Dynamsoft Barcode Reader module is equipped with industry-leading algorithms for exceptional speed, accuracy and read rates in barcode reading. 
-keywords: dynamsoft, dynamsoft-barcode-reader, webassembly, sdk, javascript, typescript
+keywords: barcode, qr-code, 1d barcode, 2d barcode, ean, upc, datamatrix, pdf-417, webassembly, sdk, camera, filter, recognition, dynamsoft, dynamsoft-barcode-reader, sdk, javascript, typescript
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

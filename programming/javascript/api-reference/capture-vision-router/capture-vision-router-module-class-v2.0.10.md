@@ -41,3 +41,4 @@ Sets or returns the path to find the resources files (.wasm, etc.).
 
 ```javascript
 Dynamsoft.CVR.CaptureVisionRouterModule.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.30/dist/";
+```
