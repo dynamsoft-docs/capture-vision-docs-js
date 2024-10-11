@@ -29,7 +29,7 @@ capture(imageOrFile: Blob | HTMLImageElement | HTMLCanvasElement | HTMLVideoElem
 
 `imageOrFile`: specifies the image or file to be processed. The following data types are accepted: `Blob`, `HTMLImageElement`, `HTMLCanvasElement`, `HTMLVideoElement`, `DSImageData`, `string`.
 
-`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, "Default" is used. 
+`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, the preset template named 'Default' will be used.
 
 There are two types of CaptureVisionTemplates: the [preset ones](./preset-templates.md) which come with the SDK and the custom ones that get initialized when the user calls [initSettings](./settings.md#initsettings). 
 
