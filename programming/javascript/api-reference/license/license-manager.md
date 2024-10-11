@@ -35,14 +35,14 @@ A promise which, upon resolution, yields a string corresponding to the device's 
 Initializes the license for the application using a license key. This function is overloaded, providing two different usages based on the provided parameters.
 
 ```typescript
-static initLicense(license: string, options?: {executeNow: boolean}): void | Promise<void>;
+static initLicense(license: string, options?: {executeNow: boolean} | boolean): void | Promise<void>;
 ```
 
 **Parameters**
 
 `license`: The license key to be used for initialization.
 
-`options`: This is an object with a single property executeNow, which is a boolean indicates the function should immediately execute the license initialization or not.
+`options`: It can be one of two types, a boolean or an object with a single property, executeNow, which is a boolean. If options is `true` or `{ executeNow: true }`, the license initialization action will be executed immediately.
 
 **Return Value**
 
