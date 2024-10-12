@@ -11,6 +11,7 @@ dcvb_parameter: /capture-vision/docs/core/parameters/
 dcvb_parameterFile: /capture-vision/docs/core/parameters/file/
 dcvb_parameterReference: /capture-vision/docs/core/parameters/reference/
 dcvb_enums: /capture-vision/docs/core/enums/
+license_activation: /capture-vision/docs/core/license/
 
 dcvb_js: /capture-vision/docs/web/programming/javascript/
 dcvb_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
