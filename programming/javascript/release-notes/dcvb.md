@@ -9,13 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
-## 2.4.2001 (10/11/2024)
-
-### Fixed
-
-- Fixed the issue where the rootPath definition in `engineResourcePaths` failed to function correctly in certain scenarios.
-
-## 2.4.2000 (10/10/2024)
+## 2.4.2100 (10/17/2024)
 
 ### Highlights
 
