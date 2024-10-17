@@ -74,10 +74,6 @@ For resources loaded from popular CDNs like jsDelivr or UNPKG, the paths are aut
 ```typescript
 static engineResourcePaths: {
     /**
-     * Specifies the root directory in which all the modules are located
-     */ 
-    "rootDirectory"?: string;
-    /**
      * Specifies the resource path for the dynamsoft-capture-vision-std module.
      */
     "std"?: string;
@@ -127,8 +123,6 @@ static engineResourcePaths: {
 **Code snippet**
 
 ```javascript
-// To specify the path for rootDirectory
-Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 // To specify the paths for multiple modules:
 Dynamsoft.Core.CoreModule.engineResourcePaths = {
     "std": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-std@1.0.0/dist/",

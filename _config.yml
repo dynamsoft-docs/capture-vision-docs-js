@@ -7,9 +7,8 @@ docHomePage: /capture-vision/docs/web/programming/javascript/
 
 dcvb_introduction: /capture-vision/docs/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
-dcvb_parameter: /capture-vision/docs/core/parameters/
+dcvb_parameters: /capture-vision/docs/core/parameters/reference/
 dcvb_parameterFile: /capture-vision/docs/core/parameters/file/
-dcvb_parameterReference: /capture-vision/docs/core/parameters/reference/
 dcvb_enums: /capture-vision/docs/core/enums/
 license_activation: /capture-vision/docs/core/license/
 

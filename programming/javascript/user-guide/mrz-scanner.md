@@ -108,13 +108,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.4.2000/dist/dcv.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.4.2100/dist/dcv.bundle.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-capture-vision-bundle@2.4.2000/dist/dcv.bundle.js"></script>
+  <script src="https://unpkg.com/dynamsoft-capture-vision-bundle@2.4.2100/dist/dcv.bundle.js"></script>
   ```
 
 > Besides using the public CDN, you can also download the SDK from the npm and host its files on your own server or a commercial CDN before including it in your application. Please see [Host the SDK yourself](#host-the-sdk-yourself)
@@ -210,7 +210,7 @@ You can download the SDK from npm and host it yourself.
 > Note that you need to get two other assisting packages.
 
 ```cmd
-npm i dynamsoft-capture-vision-bundle@2.4.2000 -E
+npm i dynamsoft-capture-vision-bundle@2.4.2100 -E
 npm i dynamsoft-capture-vision-std@1.4.10 -E
 npm i dynamsoft-image-processing@2.4.20 -E
 ```
@@ -227,8 +227,8 @@ Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
   "std":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
   "core":"https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
   "dip":"https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  "license":"https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.20/dist/",
-  "cvr":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.20/dist/",
+  "license":"https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.21/dist/",
+  "cvr":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.21/dist/",
   "dce":"https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/",
   "dbr":"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
   "dlr":"https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.4.20/dist/",
