@@ -16,6 +16,10 @@ This guide walks you through the process of creating a simple MRZ scanner soluti
 
 - [MRZ Scanner Solution for Your Website - User Guide](#mrz-scanner-solution-for-your-website---user-guide)
   - [About the solution](#about-the-solution)
+    - [Supported Machine-Readable Travel Document Types](#supported-machine-readable-travel-document-types)
+      - [ID (TD1 Size)](#id-td1-size)
+      - [ID (TD2 Size)](#id-td2-size)
+      - [Passport (TD3 Size)](#passport-td3-size)
     - [Web demo](#web-demo)
     - [Run this Solution](#run-this-solution)
     - [Project structure](#project-structure)
@@ -36,6 +40,38 @@ This guide walks you through the process of creating a simple MRZ scanner soluti
 ## About the solution
 
 With the MRZ Scanner, you can use your camera to scan the MRZ code from a passport or ID. The scanner extracts data such as first name, last name, document number, nationality, date of birth, expiration date, and personal number from the MRZ string, converting it into human-readable fields.
+
+### Supported Machine-Readable Travel Document Types
+
+The Machine Readable Travel Documents (MRTD) standard specified by the International Civil Aviation Organization (ICAO) defines how to encode information for optical character recognition on official travel documents.
+
+Currently, the solution supports three types of MRTD:
+
+> Note: If you need support for other types of MRTDs, our SDK can be easily customized. Please contact support@dynamsoft.com.
+
+#### ID (TD1 Size)
+
+The MRZ (Machine Readable Zone) in TD1 format consists of 3 lines, each containing 30 characters.
+
+<div>
+   <img src="{{ site.dcvb_root }}programming/assets/td1-id.png" alt="Example of MRZ in TD1 format" width="60%" />
+</div>
+
+#### ID (TD2 Size)
+
+The MRZ (Machine Readable Zone) in TD2 format  consists of 2 lines, with each line containing 36 characters.
+
+<div>
+   <img src="{{ site.dcvb_root }}programming/assets/td2-id.png" alt="Example of MRZ in TD2 format" width="72%" />
+</div>
+
+#### Passport (TD3 Size)
+
+The MRZ (Machine Readable Zone) in TD3 format consists of 2 lines, with each line containing 44 characters.
+
+<div>
+   <img src="{{ site.dcvb_root }}programming/assets/td3-passport.png" alt="Example of MRZ in TD2 format" width="88%" />
+</div>
 
 ### Web demo
 
@@ -108,13 +144,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.4.2100/dist/dcv.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-bundle@2.4.2200/dist/dcv.bundle.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-capture-vision-bundle@2.4.2100/dist/dcv.bundle.js"></script>
+  <script src="https://unpkg.com/dynamsoft-capture-vision-bundle@2.4.2200/dist/dcv.bundle.js"></script>
   ```
 
 > Besides using the public CDN, you can also download the SDK from the npm and host its files on your own server or a commercial CDN before including it in your application. Please see [Host the SDK yourself](#host-the-sdk-yourself)
@@ -210,7 +246,7 @@ You can download the SDK from npm and host it yourself.
 > Note that you need to get two other assisting packages.
 
 ```cmd
-npm i dynamsoft-capture-vision-bundle@2.4.2100 -E
+npm i dynamsoft-capture-vision-bundle@2.4.2200 -E
 npm i dynamsoft-capture-vision-std@1.4.10 -E
 npm i dynamsoft-image-processing@2.4.20 -E
 ```
@@ -222,21 +258,8 @@ The resources are located at the path node_modules/<pkg>, without @<version>, so
 Since @<version> is missing, you need to specify the location of the "engine" files:
 
 ```javascript
-//The following code uses the jsDelivr CDN, feel free to change it to your own location of these files
-Object.assign(Dynamsoft.Core.CoreModule.engineResourcePaths, {
-  "std":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-std@1.4.10/dist/",
-  "core":"https://cdn.jsdelivr.net/npm/dynamsoft-core@3.4.20/dist/",
-  "dip":"https://cdn.jsdelivr.net/npm/dynamsoft-image-processing@2.4.20/dist/",
-  "license":"https://cdn.jsdelivr.net/npm/dynamsoft-license@3.4.21/dist/",
-  "cvr":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.4.21/dist/",
-  "dce":"https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@4.1.0/dist/",
-  "dbr":"https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader@10.4.20/dist/",
-  "dlr":"https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer@3.4.20/dist/",
-  "dcp":"https://cdn.jsdelivr.net/npm/dynamsoft-code-parser@2.4.22/dist/",
-  "ddn":"https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.4.20/dist/",
-  "dlrData":"https://cdn.jsdelivr.net/npm/dynamsoft-label-recognizer-data@1.0.11/dist/",
-  "dnn":"https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-dnn@1.0.20/dist/",
-});
+//The following code uses the jsDelivr CDN as an example, feel free to change it to your own location of these files
+Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 ```
 
 *Note*:

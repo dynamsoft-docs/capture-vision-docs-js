@@ -11,7 +11,7 @@ ignore: true
 
 # CapturedResult
 
-The [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) interface describes the basic structure of a result object returned by Dynamsoft Capture Vision Router.
+The `CapturedResult` interface describes the basic structure of a result object returned by Dynamsoft Capture Vision Router.
 
 > NOTE: 
 > 
