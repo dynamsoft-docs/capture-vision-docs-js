@@ -37,7 +37,7 @@ Please be aware that the [preset CaptureVisionTemplates](./preset-templates.md) 
 
 **Return value**
 
-A promise that resolves with a [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) object which contains the derived information from the image processed.
+A promise that resolves with a [CapturedResult]({{ site.dcv_js_api }}interfaces/captured-result.html) object which contains the derived information from the image processed.
 
 **Code snippet**
 
