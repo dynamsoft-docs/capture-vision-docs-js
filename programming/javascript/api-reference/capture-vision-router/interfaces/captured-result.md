@@ -54,7 +54,7 @@ The tag associated with the original image.
 
 ## items
 
-An array of [CapturedResultItem]({{ site.dcv_js_api }}core/basic-structures/captured-result-item.html) objects representing the captured result items.
+An array of [CapturedResultItem]({{ site.dcvb_js_api }}core/basic-structures/captured-result-item.html) objects representing the captured result items.
 
 ## detectedQuadResultItems
 
