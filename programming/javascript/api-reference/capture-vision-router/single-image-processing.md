@@ -27,7 +27,11 @@ capture(imageOrFile: Blob | HTMLImageElement | HTMLCanvasElement | HTMLVideoElem
 
 **Parameters**
 
-`imageOrFile`: specifies the image or file to be processed. The following data types are accepted: `Blob`, `HTMLImageElement`, `HTMLCanvasElement`, `HTMLVideoElement`, `DSImageData`, `string`.
+`imageOrFile`: specifies the image or file to be processed.
+
+  >The following data types are accepted: `Blob`, `HTMLImageElement`, `HTMLCanvasElement`, `HTMLVideoElement`, `DSImageData`, `string`.
+  >
+  >The supported image formats include: `.jpg`,`.jpeg`,`.icon`,`.gif`,`.svg`,`.webp`,`.png`,`.bmp`.
 
 `templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, the preset template named 'Default' will be used.
 
