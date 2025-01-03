@@ -17,7 +17,7 @@ The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It c
 
 ## CaptureVisionRouter Class
 
-The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.architecture}}output.html#final-results?lang=js){:target="_blank"} or [Intermediate Results]({{site.architecture}}output.html#intermediate-results?lang=js){:target="_blank"}.
+The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.dcvb_architecture}}output.html#final-results?lang=js){:target="_blank"} or [Intermediate Results]({{site.dcvb_architecture}}output.html#intermediate-results?lang=js){:target="_blank"}.
 
 ### Create and Destroy Instances
 
@@ -60,6 +60,7 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 | [outputSettings()](./settings.md#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name to a string.                                                         |
 | [outputSettingsToFile](./settings.md#outputsettingstofile)     | Generates a Blob object or initiates a JSON file download containing the settings for the specified `CaptureVisionTemplate`. |
 | [getSimplifiedSettings()](./settings.md#getsimplifiedsettings) | Retrieves a JSON object that contains simplified settings for the specified `CaptureVisionTemplate`.                         |
+| [getTemplateNames()](./settings.md#gettemplatenames)           | Retrieves the names of all the currently available templates.                         |
 | [updateSettings()](./settings.md#updatesettings)               | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.                      |
 | [resetSettings()](./settings.md#resetsettings)                 | Restores all runtime settings to their original default values.                                                              |
 
@@ -160,7 +161,7 @@ The `BufferedItemsManager` class is responsible for storing sample data generate
 
 ## Enums
 
-* [EnumImageSourceState]({{ site.enums }}core/image-source-state.html?lang=js)
+* [EnumImageSourceState]({{ site.dcvb_enums }}core/image-source-state.html?lang=js)
 
 <!-- 
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
