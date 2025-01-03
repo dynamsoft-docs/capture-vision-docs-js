@@ -17,7 +17,7 @@ The CaptureVisionRouter module is defined in the namespace `Dynamsoft.CVR`. It c
 
 ## CaptureVisionRouter Class
 
-The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.architecture}}output.html#final-results?lang=js){:target="_blank"} or [Intermediate Results]({{site.architecture}}output.html#intermediate-results?lang=js){:target="_blank"}.
+The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results which may contain [Final results]({{site.dcvb_architecture}}output.html#final-results?lang=js){:target="_blank"} or [Intermediate Results]({{site.dcvb_architecture}}output.html#intermediate-results?lang=js){:target="_blank"}.
 
 ### Create and Destroy Instances
 

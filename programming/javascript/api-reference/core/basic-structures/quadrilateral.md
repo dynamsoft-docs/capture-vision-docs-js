@@ -15,9 +15,14 @@ The `Quadrilateral` interface represents a quadrilateral defined by four [Points
 ```typescript
 interface Quadrilateral {
     points: [Point, Point, Point, Point];
+    area?: number;
 }
 ```
 
 ## points
 
 An array of four `Point` objects defining the vertices of the quadrilateral.
+
+## area
+
+The area of the quadrilateral.

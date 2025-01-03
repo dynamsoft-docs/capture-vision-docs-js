@@ -30,7 +30,6 @@ noTitleIndex: true
 | [clearBuffer()](#clearbuffer)                                         | Clears the image buffer.                                                                                  |
 | [setColourChannelUsageType()](#setcolourchannelusagetype)             | Sets the usage type of a color channel in an image.                                                       |
 | [getColourChannelUsageType()](#getcolourchannelusagetype)             | Gets the usage type of a color channel in an image.                                                       |
----
 
 ## addImageToBuffer
 

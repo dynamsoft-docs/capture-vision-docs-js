@@ -44,8 +44,7 @@ class IntermediateResultReceiver {
     onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
     onDeformationResistedBarcodeImageUnitReceived?(result: DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
     onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-    onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraInfo): void;
-    onLogicLinesReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo): void;
+    onRawTextLinesReceived?(result: RawTextLinesUnit, info: Core.IntermediateResultExtraInfo): void;
 }
 ```
 
@@ -82,7 +81,6 @@ class IntermediateResultReceiver {
 | [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Event triggered when a deformation-resisted barcode image unit is received. |
 | [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived)               | Event triggered when a complemented barcode image unit is received.         |
 | [onRawTextLinesReceived()](#onrawtextlinesreceived)                                               | Event triggered when a raw text line unit is received.                      |
-| [onLogicLinesReceived()](#onlogiclinesreceived)                                                   | Event triggered when a logic line unit is received.                      |
 
 ## getObservationParameters
 
@@ -687,7 +685,7 @@ onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, in
 Called when a raw text line unit is received.
 
 ```typescript
-onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraInfo): void;
+onRawTextLinesReceived?(result: RawTextLinesUnit, info: Core.IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -699,25 +697,5 @@ onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraI
 **See Also**
 
 [RawTextLinesUnit](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/raw-textlines-unit.html?lang=js)
-
-[IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
-
-## onLogicLinesReceived
-
-Called when a logic line unit is received.
-
-```typescript
-onLogicLinesReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo): void;
-```
-
-**Parameters**
-
-`result`: The result unit that contains the logic line, of type `LogicLinesUnit`.
-
-`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
-
-**See Also**
-
-[LogicLinesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/logic-lines-unit.html?lang=js)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)

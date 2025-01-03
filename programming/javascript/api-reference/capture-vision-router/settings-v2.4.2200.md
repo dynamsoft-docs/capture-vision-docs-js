@@ -17,7 +17,6 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 | [outputSettings()](#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name.                                                                                                               |
 | [outputSettingsToFile](#outputsettingstofile)     | Generates a Blob object or initiates a JSON file download containing the settings for the specified `CaptureVisionTemplate`.                                           |
 | [getSimplifiedSettings()](#getsimplifiedsettings) | Retrieves a JSON object that contains simplified settings for the specified `CaptureVisionTemplate`.                                                                   |
-| [getTemplateNames()](#gettemplatenames)           | Retrieves the names of all the currently available templates.                         |
 | [updateSettings()](#updatesettings)               | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.                                                                |
 | [resetSettings()](#resetsettings)                 | Restores all runtime settings to their original default values.                                                                                                        |
 
@@ -151,27 +150,6 @@ A promise that resolves with a JSON object, of type `SimplifiedCaptureVisionSett
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 settings = await router.getSimplifiedSettings("ReadSingleBarcode");
-```
-
-## getTemplateNames
-
-Retrieves the names of all the currently available templates.
-
-**Syntax**
-
-```typescript
-getTemplateNames(): Promise<Array<string>>;;
-```
-
-**Return Value**
-
-A promise that resolves with an array of string, which represents the names of currently available templates
-
-**Code snippet**
-
-```javascript
-let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-let template_names = await router.getTemplateNames();
 ```
 
 ## updateSettings

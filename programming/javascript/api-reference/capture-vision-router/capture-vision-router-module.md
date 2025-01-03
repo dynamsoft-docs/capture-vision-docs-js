@@ -60,6 +60,7 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 | [outputSettings()](./settings.md#outputsettings)               | Outputs a `CaptureVisionTemplate` specified by its name to a string.                                                         |
 | [outputSettingsToFile](./settings.md#outputsettingstofile)     | Generates a Blob object or initiates a JSON file download containing the settings for the specified `CaptureVisionTemplate`. |
 | [getSimplifiedSettings()](./settings.md#getsimplifiedsettings) | Retrieves a JSON object that contains simplified settings for the specified `CaptureVisionTemplate`.                         |
+| [getTemplateNames()](./settings.md#gettemplatenames)           | Retrieves the names of all the currently available templates.                         |
 | [updateSettings()](./settings.md#updatesettings)               | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.                      |
 | [resetSettings()](./settings.md#resetsettings)                 | Restores all runtime settings to their original default values.                                                              |
 

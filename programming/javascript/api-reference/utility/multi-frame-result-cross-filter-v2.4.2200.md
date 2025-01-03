@@ -14,65 +14,18 @@ The `MultiFrameResultCrossFilter` class offers a set of API functions designed f
 
 | Name                                                                    | Description                                                                                  |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [enableLatestOverlapping()](#enablelatestoverlapping)                   | Enables or disables the to-the-latest overlapping feature of one or multiple specific result item types. This feature can increase the read-rate performance when decoding multiple barcodes under the video streaming. |
-| [isLatestOverlappingEnabled()](#islatestoverlappingenabled)             | Checks if to-the-latest overlapping is active for a given result item type.                  |
 | [enableResultCrossVerification()](#enableresultcrossverification)       | Enables or disables the verification of specific result item types.                          |
 | [isResultCrossVerificationEnabled()](#isresultcrossverificationenabled) | Checks if verification is active for a given result item type.                               |
 | [enableResultDeduplication()](#enableresultdeduplication)               | Enables or disables the deduplication process for specific result item types.                |
 | [isResultDeduplicationEnabled()](#isresultdeduplicationenabled)         | Checks if deduplication is active for a given result item type.                              |
 | [setDuplicateForgetTime()](#setduplicateforgettime)                     | Sets the interval during which duplicates are disregarded for specific result item types.    |
 | [getDuplicateForgetTime()](#getduplicateforgettime)                     | Retrieves the interval during which duplicates are disregarded for a given result item type. |
-| [setMaxOverlappingFrames()](#setmaxoverlappingframes)                   | Set the maximum overlapping frames count for a given result item type.                       |
-| [getMaxOverlappingFrames()](#getmaxoverlappingframes)                   | Get the maximum overlapping frames count for a given result item type.                       |
 | [onOriginalImageResultReceived()](#onoriginalimageresultreceived)       | Event triggered when the original images are received.                                       |
 | [onDecodedBarcodesReceived()](#ondecodedbarcodesreceived)               | Event triggered when the decoded barcodes are received.                                      |
 | [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived)       | Event triggered when the recognized text lines are received.                                 |
 | [onDetectedQuadsReceived()](#ondetectedquadsreceived)                   | Event triggered when the detected quadrilaterals are received.                               |
 | [onNormalizedImagesReceived()](#onnormalizedimagesreceived)             | Event triggered when the normalized images are received.                                     |
 
-### enableLatestOverlapping
-
-Enables or disables the latest overlapping of specific result item types.
-
-> Please note that this feature is currently only available for barcodes reading.
-
-```typescript
-enableLatestOverlapping(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image", enabled: boolean): void;
-```
-
-**Parameters**
-
-`resultItemTypes`: Specifies the result item types.
-
-`enabled`: Boolean to toggle the latest overlapping on or off.
-
-**Return Value**
-
-None.
-
-**See Also**
-
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
-
-### isLatestOverlappingEnabled
-
-Checks if latest overlapping is active for a given result item type.
-
-```typescript
-isLatestOverlappingEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image"): boolean;
-```
-
-**Parameters**
-
-`resultItemType`:  Specifies the result item type in question.
-
-**Return Value**
-
-Boolean indicating the status of the latest overlapping for the specified type.
-
-**See Also**
-
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
 
 ### enableResultCrossVerification
 
@@ -195,48 +148,6 @@ getDuplicateForgetTime(resultItemType: Core.EnumCapturedResultItemType | "barcod
 **Return Value**
 
 The set interval for the specified item type.
-
-**See Also**
-
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
-
-### setMaxOverlappingFrames
-
-Set the maximum overlapping frames count for a given result item type.
-
-```typescript
-setMaxOverlappingFrames(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image", maxOverlappingFrames: number): void;
-```
-
-**Parameters**
-
-`resultItemTypes`: Specifies the result item types.
-
-`maxOverlappingFrames`: The maximum overlapping frame count for the overlapping.
-
-**Return Value**
-
-None.
-
-**See Also**
-
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
-
-### getMaxOverlappingFrames
-
-Get the maximum overlapping frames count for a given result item type.
-
-```typescript
-getMaxOverlappingFrames(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "normalized_image"): number;
-```
-
-**Parameters**
-
-`resultItemType`: Specifies the result item type in question.
-
-**Return Value**
-
-The maximum overlapping frame count for the overlapping.
 
 **See Also**
 

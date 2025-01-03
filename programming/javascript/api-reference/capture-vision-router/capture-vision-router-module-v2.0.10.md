@@ -25,7 +25,7 @@ This class defines common functionality in the `CaptureVisionRouter` module.
 
 ## CaptureVisionRouter Class
 
-The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results of many types. Read [Final results]({{site.architecture}}output.html#final-results?lang=js) for more information. The following code snippet shows its basic usage:
+The `CaptureVisionRouter` class defines how a user interacts with image-processing and semantic-processing products in their applications. A `CaptureVisionRouter` instance accepts and processes images from an image source and returns processing results of many types. Read [Final results]({{site.dcvb_architecture}}output.html#final-results?lang=js) for more information. The following code snippet shows its basic usage:
 
 ```typescript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();

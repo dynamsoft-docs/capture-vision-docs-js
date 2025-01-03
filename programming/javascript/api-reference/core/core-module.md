@@ -80,9 +80,8 @@ The following are the basic interfaces often shared by more than one module:
 * [TextZone](./intermediate-results/text-zone.md)
 * [Warning](./basic-structures/warning.md)
 
-<!--
-* [FileImageTag](./basic-structures/file-image-tag.md)
-* [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
+<!--* [FileImageTag](./basic-structures/file-image-tag.md)-->
+<!--* [PDFReadingParameter](./basic-structures/pdf-reading-parameter.md) -->
 
 ### Intermediate Results
 
@@ -127,4 +126,4 @@ The following are the basic enumerations often shared by more than one module:
 <!-- * [EnumTransformMatrixType]({{ site.enums }}core/transform-matrix-type.html?lang=js) -->
 <!-- * [EnumPDFReadingMode]({{ site.enums }}core/pdf-reading-mode.html?lang=js) -->
 <!-- * [EnumRasterDataSource]({{ site.enums }}core/raster-data-source.html?lang=js) -->
-<!--* [EnumImageCaptureDistanceMode]({{ site.enums }}core/image-capture-distance-mode.html?lang=js)-->
+<!-- * [EnumImageCaptureDistanceMode]({{ site.enums }}core/image-capture-distance-mode.html?lang=js)-->
