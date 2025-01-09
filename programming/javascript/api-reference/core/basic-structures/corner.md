@@ -23,7 +23,7 @@ interface Corner {
 
 ## type
 
-The type of the corner, represented by the enumeration [EnumCornerType]({{ site.enums }}core/corner-type.html?lang=js).
+The type of the corner, represented by the enumeration [EnumCornerType]({{ site.dcvb_enums }}core/corner-type.html?lang=js).
 
 ## intersection
 
