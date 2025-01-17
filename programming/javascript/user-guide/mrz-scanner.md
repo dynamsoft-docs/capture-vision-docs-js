@@ -251,11 +251,14 @@ npm i dynamsoft-capture-vision-std@1.4.10 -E
 npm i dynamsoft-image-processing@2.4.20 -E
 ```
 
-The resources are located at the path node_modules/<pkg>, without @<version>, so the script in your page would be like:
+The resources are located at the path `node_modules/<pkg>`, without `@<version>`. You must copy "dynamsoft-xxx" packages elsewhere and add `@<version>`. The `<version>` can be obtained from `package.json` of each package. You can typically include SDK like this:
 
-<script src="node_modules/dynamsoft-capture-vision-bundle/dist/dcv.bundle.js"></script>
+```html
+<script src="path/to/dynamsoft-capture-vision-bundle/dist/dcv.bundle.js"></script>
+```
 
-Since @<version> is missing, you need to specify the location of the "engine" files:
+Another thing to do is to specify the `engineResourcePaths` so that the SDK can correctly locate the resources.
+  > Since "node_modules" is reserved for Node.js dependencies, and in our case the package is used only as static resources, we recommend either renaming the "node_modules" folder or moving the "dynamsoft-" packages to a dedicated folder for static resources in your project to facilitate self-hosting.
 
 ```javascript
 //The following code uses the jsDelivr CDN as an example, feel free to change it to your own location of these files
