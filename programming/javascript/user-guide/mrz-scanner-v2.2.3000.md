@@ -217,7 +217,9 @@ npm i dynamsoft-image-processing@2.2.30 -E
 
 The resources are located at the path node_modules/<pkg>, without @<version>, so the script in your page would be like:
 
+```html
 <script src="node_modules/dynamsoft-capture-vision-bundle/dist/dcv.bundle.js"></script>
+```
 
 Since @<version> is missing, you need to specify the location of the "engine" files:
 
