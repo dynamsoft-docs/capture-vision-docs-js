@@ -46,7 +46,7 @@ capturedResultItemTypes: EnumCapturedResultItemType;
 
 **See Also**
 
-[EnumCapturedResultItemType]({{ site.enums }}core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
 
 ## documentSettings
 
@@ -96,7 +96,7 @@ roi: Quadrilateral;
 
 **See Also**
 
-[Quadrilateral]({{ site.dcv_js_api }}core/basic-structures/quadrilateral.html?lang=js)
+[Quadrilateral]({{ site.dcvb_js_api }}core/basic-structures/quadrilateral.html?lang=js)
 
 ## roiMeasuredInPercentage
 
