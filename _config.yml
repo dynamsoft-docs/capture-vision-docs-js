@@ -4,6 +4,8 @@ docFullPath: https://www.dynamsoft.com/capture-vision/docs/web/
 firstLevelUrl: /capture-vision/docs/web/
 docRootName: "Dynamsoft Capture Vision JS Edition" 
 docHomePage: /capture-vision/docs/web/programming/javascript/
+searchIndexName: Crawler-DCV-Docs-New
+searchNeedFilter: true
 
 dcvb_introduction: /capture-vision/docs/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
