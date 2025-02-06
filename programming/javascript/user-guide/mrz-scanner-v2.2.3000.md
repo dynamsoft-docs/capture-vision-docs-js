@@ -207,12 +207,13 @@ await cvRouter.addResultReceiver(resultReceiver);
 
 You can download the SDK from npm and host it yourself.
 
-> Note that you need to get two other assisting packages.
+> Note that you need to get few more assisting packages.
 
 ```cmd
 npm i dynamsoft-capture-vision-bundle@2.2.3000 -E
 npm i dynamsoft-capture-vision-std@1.2.10 -E
 npm i dynamsoft-image-processing@2.2.30 -E
+npm i dynamsoft-capture-vision-dnn@1.0.20 -E
 ```
 
 The resources are located at the path node_modules/<pkg>, without @<version>, so the script in your page would be like:
