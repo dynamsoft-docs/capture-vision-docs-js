@@ -214,6 +214,7 @@ npm i dynamsoft-capture-vision-bundle@2.2.3000 -E
 npm i dynamsoft-capture-vision-std@1.2.10 -E
 npm i dynamsoft-image-processing@2.2.30 -E
 npm i dynamsoft-capture-vision-dnn@1.0.20 -E
+npm i dynamsoft-label-recognizer-data@1.0.11 -E
 ```
 
 The resources are located at the path node_modules/<pkg>, without @<version>, so the script in your page would be like:
