@@ -76,17 +76,17 @@ breadcrumbText: API Reference
 
 ### Interfaces
 
-* [SimplifiedLabelRecognizerSettings]({{ site.dlr_js_api }}interfaces/simplified-label-recognizer-settings.md)
-* [BufferedCharacterItem]({{ site.dlr_js_api }}interfaces/buffered-character-item.md)
-* [BufferedCharacterItemSet]({{ site.dlr_js_api }}interfaces/buffered-character-item-set.md)
-* [CharacterCluster]({{ site.dlr_js_api }}interfaces/character-cluster.md)
-* [CharacterResult]({{ site.dlr_js_api }}interfaces/character-result.md)
-* [LocalizedTextLineElement]({{ site.dlr_js_api }}interfaces/localized-textline-element.md)
-* [RecognizedTextLineElement]({{ site.dlr_js_api }}interfaces/recognized-textline-element.md)
-* [LocalizedTextLinesUnit]({{ site.dlr_js_api }}interfaces/localized-textlines-unit.md)
-* [RecognizedTextLinesUnit]({{ site.dlr_js_api }}interfaces/recognized-textlines-unit.md)
-* [TextLineResultItem]({{ site.dlr_js_api }}interfaces/textline-result-item.md)
-* [RecognizedTextLinesResult]({{ site.dlr_js_api }}interfaces/recognized-textlines-result.md)
+* [SimplifiedLabelRecognizerSettings]({{ site.dlr_js_api }}interfaces/simplified-label-recognizer-settings.html)
+* [BufferedCharacterItem]({{ site.dlr_js_api }}interfaces/buffered-character-item.html)
+* [BufferedCharacterItemSet]({{ site.dlr_js_api }}interfaces/buffered-character-item-set.html)
+* [CharacterCluster]({{ site.dlr_js_api }}interfaces/character-cluster.html)
+* [CharacterResult]({{ site.dlr_js_api }}interfaces/character-result.html)
+* [LocalizedTextLineElement]({{ site.dlr_js_api }}interfaces/localized-textline-element.html)
+* [RecognizedTextLineElement]({{ site.dlr_js_api }}interfaces/recognized-textline-element.html)
+* [LocalizedTextLinesUnit]({{ site.dlr_js_api }}interfaces/localized-textlines-unit.html)
+* [RecognizedTextLinesUnit]({{ site.dlr_js_api }}interfaces/recognized-textlines-unit.html)
+* [TextLineResultItem]({{ site.dlr_js_api }}interfaces/textline-result-item.html)
+* [RecognizedTextLinesResult]({{ site.dlr_js_api }}interfaces/recognized-textlines-result.html)
 
 ## [DynamsoftDocumentNormalizer]({{ site.ddn_js_api }}document-normalizer-module.html)
 
@@ -96,18 +96,18 @@ breadcrumbText: API Reference
 
 ### Interfaces
 
-* [CandidateQuadEdgesUnit]({{ site.ddn_js_api }}interfaces/candidate-quad-edges-unit.md)
-* [CornersUnit]({{ site.ddn_js_api }}interfaces/corners-unit.md)
-* [DetectedQuadElement]({{ site.ddn_js_api }}interfaces/detected-quad-element.md)
-* [DetectedQuadResultItem]({{ site.ddn_js_api }}interfaces/detected-quad-result-item.md)
-* [DetectedQuadsResult]({{ site.ddn_js_api }}interfaces/detected-quads-result.md)
-* [DetectedQuadsUnit]({{ site.ddn_js_api }}interfaces/detected-quads-unit.md)
-* [LongLinesUnit]({{ site.ddn_js_api }}interfaces/long-lines-unit.md)
-* [NormalizedImageElement]({{ site.ddn_js_api }}interfaces/normalized-image-element.md)
-* [NormalizedImageResultItem]({{ site.ddn_js_api }}interfaces/normalized-image-result-item.md)
-* [NormalizedImagesResult]({{ site.ddn_js_api }}interfaces/normalized-images-result.md)
-* [NormalizedImagesUnit]({{ site.ddn_js_api }}interfaces/normalized-images-unit.md)
-* [SimplifiedDocumentNormalizerSettings]({{ site.ddn_js_api }}interfaces/simplified-document-normalizer-settings.md)
+* [CandidateQuadEdgesUnit]({{ site.ddn_js_api }}interfaces/candidate-quad-edges-unit.html)
+* [CornersUnit]({{ site.ddn_js_api }}interfaces/corners-unit.html)
+* [DetectedQuadElement]({{ site.ddn_js_api }}interfaces/detected-quad-element.html)
+* [DetectedQuadResultItem]({{ site.ddn_js_api }}interfaces/detected-quad-result-item.html)
+* [DetectedQuadsResult]({{ site.ddn_js_api }}interfaces/detected-quads-result.html)
+* [DetectedQuadsUnit]({{ site.ddn_js_api }}interfaces/detected-quads-unit.html)
+* [LongLinesUnit]({{ site.ddn_js_api }}interfaces/long-lines-unit.html)
+* [NormalizedImageElement]({{ site.ddn_js_api }}interfaces/normalized-image-element.html)
+* [NormalizedImageResultItem]({{ site.ddn_js_api }}interfaces/normalized-image-result-item.html)
+* [NormalizedImagesResult]({{ site.ddn_js_api }}interfaces/normalized-images-result.html)
+* [NormalizedImagesUnit]({{ site.ddn_js_api }}interfaces/normalized-images-unit.html)
+* [SimplifiedDocumentNormalizerSettings]({{ site.ddn_js_api }}interfaces/simplified-document-normalizer-settings.html)
 
 ### Enums
 
@@ -154,8 +154,8 @@ breadcrumbText: API Reference
 
 ### Interfaces
 
-* [ParsedResult]({{ site.dcp_js_api }}interfaces/parsed-result.md)
-* [ParsedResultItem]({{ site.dcp_js_api }}interfaces/parsed-result-item.md)
+* [ParsedResult]({{ site.dcp_js_api }}interfaces/parsed-result.html)
+* [ParsedResultItem]({{ site.dcp_js_api }}interfaces/parsed-result-item.html)
 
 ### Enumerations
 
