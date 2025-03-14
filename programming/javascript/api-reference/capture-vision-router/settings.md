@@ -103,7 +103,7 @@ Generates a Blob object or initiates a JSON file download containing the setting
 **Syntax**
 
 ```typescript
-outputSettingsToFile(templateName: string, fileName?: string, download?: boolean): Promise<Blob>;
+outputSettingsToFile(templateName: string, fileName: string, download?: boolean): Promise<Blob>;
 ```
 
 **Parameters**
