@@ -15,6 +15,6 @@ The best way to begin with Dynamsoft Capture Vision JavaScript Edition is to fol
 
 - [User Guide for Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/user-guide/index.html){:target="_blank"}
 
-- [User Guide for MRZ Scanner](./mrz-scanner.html)
+- [User Guide for MRZ Scanner](https://www.dynamsoft.com/mrz-scanner/docs/web/guides/mrz-scanner.html){:target="_blank"}
 
 - [User Guide for Document Scanner](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html)
