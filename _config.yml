@@ -28,6 +28,7 @@ dcp_js_api: /code-parser/docs/web/programming/javascript/api-reference/
 dce_js_api: /camera-enhancer/docs/web/programming/javascript/api-reference/
 code_types: /code-parser/docs/core/code-types/
 dcvb_root: /capture-vision/docs/core/
+mrz_js: /mrz-scanner/docs/web/
 
 assets: /capture-vision/docs/web/assets/
 edit_icon: /capture-vision/docs/web/assets/img-icon/edit-icon.png
