@@ -64,6 +64,9 @@ const settings = {
   ]
 };
 await router.initSettings(settings);
+
+// Later in the code, specify the name of the template to use (e.g., "ReadSingleBarcode" in the sample template). 
+router.startCapturing("NAME-OF-TEMPLATE-TO-USE"); 
 ```
 
 **See Also**
