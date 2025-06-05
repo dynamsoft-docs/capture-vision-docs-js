@@ -24,12 +24,15 @@ Initializes a new instance of the `CaptureVisionRouter` class.
 **Syntax**
 
 ```typescript
-createInstance(): Promise<CaptureVisionRouter>;
+createInstance(loadPresetTemplates?: boolean): Promise<CaptureVisionRouter>;
 ```
 
 **Parameter**
 
-None.
+`loadPresetTemplates`(optional): Determines whether to load the default preset templates.
+
+- true (default): Loads the default templates.
+- false: Skips loading the default templates.
 
 **Return value**
 

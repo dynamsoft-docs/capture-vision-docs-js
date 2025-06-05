@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Interface SimplifiedCaptureVisionSettings - Dynamsoft CaptureVisionRouter Module JS Edition API Reference v2.0.30
-description: This page introduces the SimplifiedCaptureVisionSettings interface in Dynamsoft CaptureVisionRouter Module JS Edition v2.0.30.
+title: Interface SimplifiedCaptureVisionSettings - Dynamsoft CaptureVisionRouter Module JS Edition API Reference
+description: This page introduces the SimplifiedCaptureVisionSettings interface in Dynamsoft CaptureVisionRouter Module JS Edition.
 keywords: capture vision, router, Intermediate-result, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -14,14 +14,22 @@ The `SimplifiedCaptureVisionSettings` interface provides a standardized way to a
 
 ```typescript
 interface SimplifiedCaptureVisionSettings {
+    outputOriginalImage: boolean;
     barcodeSettings: SimplifiedBarcodeReaderSettings;
-    capturedResultItemTypes: EnumCapturedResultItemType;
     documentSettings: SimplifiedDocumentNormalizerSettings;
     labelSettings: SimplifiedLabelRecognizerSettings;
     minImageCaptureInterval: number;
     roi: Quadrilateral;
     roiMeasuredInPercentage: boolean;
 }
+```
+
+## outputOriginalImage
+
+Specifies whether to output the original image.
+
+```typescript
+outputOriginalImage: boolean;
 ```
 
 ## barcodeSettings
@@ -35,18 +43,6 @@ barcodeSettings: SimplifiedBarcodeReaderSettings;
 **See Also**
 
 [SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html)
-
-## capturedResultItemTypes
-
-Specifies the types of result items that are expected to be returned. It is of type `EnumCapturedResultItemType`.
-
-```typescript
-capturedResultItemTypes: EnumCapturedResultItemType;
-```
-
-**See Also**
-
-[EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
 
 ## documentSettings
 

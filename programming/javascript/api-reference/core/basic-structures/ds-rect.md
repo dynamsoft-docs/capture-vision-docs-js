@@ -20,7 +20,7 @@ interface DSRect {
     right: number;
     top: number;
     bottom: number;
-    isMeasuredInPercentage: boolean;
+    isMeasuredInPercentage?: boolean;
 }
 ```
 

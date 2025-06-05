@@ -27,4 +27,4 @@ The unique identifier of the image.
 
 The type of the image.
 
-[EnumImageTagType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/image-tag-type.html?lang=js)
+[EnumImageTagType]({{ site.dcvb_js_api }}enums-image-tag-type.html?lang=js)

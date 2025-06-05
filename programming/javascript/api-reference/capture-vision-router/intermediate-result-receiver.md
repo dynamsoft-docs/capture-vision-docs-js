@@ -22,9 +22,9 @@ class IntermediateResultReceiver {
     onLocalizedTextLinesReceived?(result: LocalizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
     onRecognizedTextLinesReceived?(result: RecognizedTextLinesUnit, info: IntermediateResultExtraInfo): void;
     onDetectedQuadsReceived?(result: DetectedQuadsUnit, info: IntermediateResultExtraInfo): void;
-    onNormalizedImagesReceived?(result: NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
+    onDeskewedImageReceived?(result: DeskewedImageUnit, info: IntermediateResultExtraInfo): void;
     onColourImageUnitReceived?(result: ColourImageUnit, info: IntermediateResultExtraInfo): void;
-    onScaledDownColourImageUnitReceived?(result: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo): void;
+    onScaledColourImageUnitReceived?(result: ScaledColourImageUnit, info: IntermediateResultExtraInfo): void;
     onGrayscaleImageUnitReceived?(result: GrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
     onTransformedGrayscaleImageUnitReceived?(result: TransformedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
     onEnhancedGrayscaleImageUnitReceived?(result: EnhancedGrayscaleImageUnit, info: IntermediateResultExtraInfo): void;
@@ -41,11 +41,13 @@ class IntermediateResultReceiver {
     onCornersUnitReceived?(result: CornersUnit, info: IntermediateResultExtraInfo): void;
     onCandidateQuadEdgesUnitReceived?(result: CandidateQuadEdgesUnit, info: IntermediateResultExtraInfo): void;
     onCandidateBarcodeZonesUnitReceived?(result: LocalizedBarcodesUnit, info: IntermediateResultExtraInfo): void;
-    onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+    onScaledBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
     onDeformationResistedBarcodeImageUnitReceived?(result: DeformationResistedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
     onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
-    onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraInfo): void;
-    onLogicLinesReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo): void;
+    OnRawTextLinesUnitReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraInfo): void;
+    onLogicLinesUnitReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo): void;
+    onEnhancedImageReceived?(result: EnhancedImageUnit, info: IntermediateResultExtraInfo): void;
+    OnTargetROIResultsReceived?(result: IntermediateResultUnit, info: IntermediateResultExtraInfo): void;
 }
 ```
 
@@ -59,9 +61,9 @@ class IntermediateResultReceiver {
 | [onLocalizedTextLinesReceived()](#onlocalizedtextlinesreceived)                                   | Event triggered when localized text lines are received.                     |
 | [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived)                                 | Event triggered when recognized text lines are received.                    |
 | [onDetectedQuadsReceived()](#ondetectedquadsreceived)                                             | Event triggered when detected quads are received.                           |
-| [onNormalizedImagesReceived()](#onnormalizedimagesreceived)                                       | Event triggered when normalized images are received.                        |
+| [onDeskewedImageReceived()](#ondeskewedimagereceived)                                             | Event triggered when deskewed image is received.                          |
 | [onColourImageUnitReceived()](#oncolourimageunitreceived)                                         | Event triggered when a colour image unit is received.                       |
-| [onScaledDownColourImageUnitReceived()](#onscaleddowncolourimageunitreceived)                     | Event triggered when a scaled-down colour image unit is received.           |
+| [onScaledColourImageUnitReceived()](#onscaledcolourimageunitreceived)                             | Event triggered when a scaled colour image unit is received.           |
 | [onGrayscaleImageUnitReceived()](#ongrayscaleimageunitreceived)                                   | Event triggered when a grayscale image unit is received.                    |
 | [onTransformedGrayscaleImageUnitReceived()](#ontransformedgrayscaleimageunitreceived)             | Event triggered when a transformed grayscale image unit is received.        |
 | [onEnhancedGrayscaleImageUnitReceived()](#onenhancedgrayscaleimageunitreceived)                   | Event triggered when an enhanced grayscale image unit is received.          |
@@ -78,11 +80,13 @@ class IntermediateResultReceiver {
 | [onCornersUnitReceived()](#oncornersunitreceived)                                                 | Event triggered when a corners unit is received.                            |
 | [onCandidateQuadEdgesUnitReceived()](#oncandidatequadedgesunitreceived)                           | Event triggered when a candidate quad edges unit are detected.              |
 | [onCandidateBarcodeZonesUnitReceived()](#oncandidatebarcodezonesunitreceived)                     | Event triggered when a candidate barcode zones unit are detected.           |
-| [onScaledUpBarcodeImageUnitReceived()](#onscaledupbarcodeimageunitreceived)                       | Event triggered when a scaled-up barcode image unit is received.            |
+| [onScaledBarcodeImageUnitReceived()](#onscaledbarcodeimageunitreceived)                           | Event triggered when a scaled-up barcode image unit is received.            |
 | [onDeformationResistedBarcodeImageUnitReceived()](#ondeformationresistedbarcodeimageunitreceived) | Event triggered when a deformation-resisted barcode image unit is received. |
 | [onComplementedBarcodeImageUnitReceived()](#oncomplementedbarcodeimageunitreceived)               | Event triggered when a complemented barcode image unit is received.         |
-| [onRawTextLinesReceived()](#onrawtextlinesreceived)                                               | Event triggered when a raw text line unit is received.                      |
-| [onLogicLinesReceived()](#onlogiclinesreceived)                                                   | Event triggered when a logic line unit is received.                      |
+| [OnRawTextLinesUnitReceived()](#onrawtextlinesunitreceived)                                       | Event triggered when a raw text line unit is received.                      |
+| [onLogicLinesUnitReceived()](#onlogiclinesunitreceived)                                           | Event triggered when a logic line unit is received.                         |
+| [onEnhancedImageReceived()](#onenhancedimagereceived)                                             | Event triggered when enhanced image is received.                          |
+| [OnTargetROIResultsReceived()](#ontargetroiresultsreceived)                                       | Event triggered when all tasks for the target ROI are completed and the results are deduplicated.         |
 
 ## getObservationParameters
 
@@ -242,23 +246,23 @@ onDetectedQuadsReceived?(result: DetectedQuadsUnit, info: IntermediateResultExtr
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
-## onNormalizedImagesReceived
+## onDeskewedImageReceived
 
-Event triggered when normalized images are received.
+Event triggered when deskewed image is received.
 
 ```typescript
-onNormalizedImagesReceived?(result: NormalizedImagesUnit, info: IntermediateResultExtraInfo): void;
+onDeskewedImageReceived?(result: DeskewedImageUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
 
-`result`: The result unit that contains the normalized images, of type `NormalizedImagesUnit`.
+`result`: The result unit that contains the deskewed image, of type `DeskewedImageUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 **See Also**
 
-[NormalizedImagesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-unit.html)
+[DeskewedImageUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/deskewed-image-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -282,23 +286,23 @@ onColourImageUnitReceived?(result: ColourImageUnit, info: IntermediateResultExtr
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
-## onScaledDownColourImageUnitReceived
+## onScaledColourImageUnitReceived
 
-Event triggered when a scaled-down colour image unit is received.
+Event triggered when a scaled colour image unit is received.
 
 ```typescript
-onScaledDownColourImageUnitReceived?(result: ScaledDownColourImageUnit, info: IntermediateResultExtraInfo): void;
+onScaledColourImageUnitReceived?(result: ScaledColourImageUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
 
-`result`: The result unit that contains the scaled-down colour image, of type `ScaledDownColourImageUnit`.
+`result`: The result unit that contains the scaled colour image, of type `ScaledColourImageUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 **See Also**
 
-[ScaledDownColourImageUnit](../core/intermediate-results/scaled-down-colour-image-unit.md)
+[ScaledDownColourImageUnit](../core/intermediate-results/scaled-colour-image-unit.md)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -622,23 +626,23 @@ onCandidateBarcodeZonesUnitReceived?(result: CandidateBarcodeZonesUnit, info: In
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
-## onScaledUpBarcodeImageUnitReceived
+## onScaledBarcodeImageUnitReceived
 
-Called when a scaled up barcode image unit is received.
+Called when a scaled barcode image unit is received.
 
 ```typescript
-onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
+onScaledBarcodeImageUnitReceived?(result: ScaledBarcodeImageUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
 
-`result`: The result unit that contains the scaled up barcode image, of type `ScaledUpBarcodeImageUnit`.
+`result`: The result unit that contains the scaled barcode image, of type `ScaledBarcodeImageUnit`.
 
 `info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
 
 **See Also**
 
-[ScaledUpBarcodeImageUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/scaled-up-barcode-image-unit.html)
+[ScaledUpBarcodeImageUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/scaled-barcode-image-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -682,12 +686,12 @@ onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, in
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
-## onRawTextLinesReceived
+## OnRawTextLinesUnitReceived
 
 Called when a raw text line unit is received.
 
 ```typescript
-onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraInfo): void;
+OnRawTextLinesUnitReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -702,12 +706,12 @@ onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraI
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
-## onLogicLinesReceived
+## onLogicLinesUnitReceived
 
 Called when a logic line unit is received.
 
 ```typescript
-onLogicLinesReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo): void;
+onLogicLinesUnitReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo): void;
 ```
 
 **Parameters**
@@ -719,5 +723,45 @@ onLogicLinesReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo)
 **See Also**
 
 [LogicLinesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/logic-lines-unit.html?lang=js)
+
+[IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
+
+## onEnhancedImageReceived
+
+Called when enhanced image is received.
+
+```typescript
+onEnhancedImageReceived?(result: EnhancedImageUnit, info: IntermediateResultExtraInfo): void;
+```
+
+**Parameters**
+
+`result`: The result unit that contains enhanced image, of type `EnhancedImageUnit`.
+
+`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
+
+**See Also**
+
+[EnhancedImageUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/enhanced-image-unit.html?lang=js)
+
+[IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
+
+## OnTargetROIResultsReceived
+
+Called when all tasks for the target ROI are completed and the results are deduplicated.
+
+```typescript
+OnTargetROIResultsReceived?(result: IntermediateResultUnit, info: IntermediateResultExtraInfo): void;
+```
+
+**Parameters**
+
+`result`: The `IntermediateResult` object that contains the result.
+
+`info`: Additional information about the result, of type `IntermediateResultExtraInfo`.
+
+**See Also**
+
+[IntermediateResultUnit](../core/intermediate-results/intermediate-result-unit.md)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)

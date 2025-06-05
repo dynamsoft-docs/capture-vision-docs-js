@@ -31,7 +31,7 @@ The type of section, if applicable, as defined by an enumeration.
 
 **See Also**
 
-[EnumSectionType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/section-type.html?lang=js)
+[EnumSectionType]({{ site.dcvb_js_api }}enums-section-type.html?lang=js)
 
 ## targetROIDefName
 
