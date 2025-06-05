@@ -29,7 +29,9 @@ breadcrumbText: API Reference
 
 ### Enums
 
-* [EnumImageSourceState]({{ site.dcvb_enums }}core/image-source-state.html?lang=js)
+* [EnumCaptureState]({{ site.dcvb_js_api }}capture-vision-router/enum-capture-state.html?lang=js)
+* [EnumImageSourceState]({{ site.dcvb_js_api }}capture-vision-router/enum-image-source-state.html?lang=js)
+* [EnumPresetTemplate]({{ site.dcvb_js_api }}capture-vision-router/enum-preset-template.html?lang=js)
 
 ## [DynamsoftBarcodeReader]({{ site.dbr_js_api }}barcode-reader-module.html)
 
@@ -57,16 +59,16 @@ breadcrumbText: API Reference
 * [OneDCodeDetails]({{ site.dbr_js_api }}interfaces/oned-code-details.html)
 * [PDF417Details]({{ site.dbr_js_api }}interfaces/pdf417-details.html)
 * [QRCodeDetails]({{ site.dbr_js_api }}interfaces/qr-code-details.html)
-* [ScaledUpBarcodeImageUnit]({{ site.dbr_js_api }}interfaces/scaled-up-barcode-image-unit.html)
+* [ScaledBarcodeImageUnit]({{ site.dbr_js_api }}interfaces/scaled-barcode-image-unit.html)
 * [SimplifiedBarcodeReaderSettings]({{ site.dbr_js_api }}interfaces/simplified-barcode-reader-settings.html)
 
 ### Enums
 
-* [EnumBarcodeFormat]({{ site.dcvb_enums }}barcode-reader/barcode-format.html?lang=js)
-* [EnumDeblurMode]({{ site.dcvb_enums }}barcode-reader/deblur-mode.html?lang=js)
-* [EnumExtendedBarcodeResultType]({{ site.dcvb_enums }}barcode-reader/extended-barcode-result-type.html?lang=js)
-* [EnumLocalizationMode]({{ site.dcvb_enums }}barcode-reader/localization-mode.html?lang=js)
-* [EnumQRCodeErrorCorrectionLevel]({{ site.dcvb_enums }}barcode-reader/qr-code-error-correction-level.html?lang=js)
+* [EnumBarcodeFormat]({{ site.dbr_js_api }}enum-barcode-format.html?lang=js)
+* [EnumDeblurMode]({{ site.dbr_js_api }}enum-deblur-mode.html?lang=js)
+* [EnumExtendedBarcodeResultType]({{ site.dbr_js_api }}enum-extended-barcode-result-type.html?lang=js)
+* [EnumLocalizationMode]({{ site.dbr_js_api }}enum-localization-mode.html?lang=js)
+* [EnumQRCodeErrorCorrectionLevel]({{ site.dbr_js_api }}enum-qr-code-error-correction-level.html?lang=js)
 
 ## [DynamsoftLabelRecognizer]({{ site.dlr_js_api }}label-recognizer-module.html)
 
@@ -88,6 +90,10 @@ breadcrumbText: API Reference
 * [TextLineResultItem]({{ site.dlr_js_api }}interfaces/textline-result-item.html)
 * [RecognizedTextLinesResult]({{ site.dlr_js_api }}interfaces/recognized-textlines-result.html)
 
+### Enums
+
+* [EnumRawTextLineStatus]({{ site.dlr_js_api }}enum-raw-text-line-status.html?lang=js)
+
 ## [DynamsoftDocumentNormalizer]({{ site.ddn_js_api }}document-normalizer-module.html)
 
 ### Classes
@@ -98,20 +104,24 @@ breadcrumbText: API Reference
 
 * [CandidateQuadEdgesUnit]({{ site.ddn_js_api }}interfaces/candidate-quad-edges-unit.html)
 * [CornersUnit]({{ site.ddn_js_api }}interfaces/corners-unit.html)
+* [DeskewedImageElement]({{ site.ddn_js_api }}interfaces/deskewed-image-element.html)
+* [DeskewedImageResultItem]({{ site.ddn_js_api }}interfaces/deskewed-image-result-item.html)
+* [DeskewedImagesUnit]({{ site.ddn_js_api }}interfaces/deskewed-images-unit.html)
 * [DetectedQuadElement]({{ site.ddn_js_api }}interfaces/detected-quad-element.html)
 * [DetectedQuadResultItem]({{ site.ddn_js_api }}interfaces/detected-quad-result-item.html)
-* [DetectedQuadsResult]({{ site.ddn_js_api }}interfaces/detected-quads-result.html)
 * [DetectedQuadsUnit]({{ site.ddn_js_api }}interfaces/detected-quads-unit.html)
+* [EnhancedImageElement]({{ site.ddn_js_api }}interfaces/enhanced-image-element.html)
+* [EnhancedImageResultItem]({{ site.ddn_js_api }}interfaces/enhanced-image-result-item.html)
+* [EnhancedImagesUnit]({{ site.ddn_js_api }}interfaces/enhanced-images-unit.html)
+* [LogicLinesUnit]({{ site.ddn_js_api }}interfaces/logic-lines-unit.html)
 * [LongLinesUnit]({{ site.ddn_js_api }}interfaces/long-lines-unit.html)
-* [NormalizedImageElement]({{ site.ddn_js_api }}interfaces/normalized-image-element.html)
-* [NormalizedImageResultItem]({{ site.ddn_js_api }}interfaces/normalized-image-result-item.html)
-* [NormalizedImagesResult]({{ site.ddn_js_api }}interfaces/normalized-images-result.html)
-* [NormalizedImagesUnit]({{ site.ddn_js_api }}interfaces/normalized-images-unit.html)
+* [ProcessedDocumentResult]({{ site.ddn_js_api }}interfaces/processed-document-result.html)
+* [ShortLinesUnit]({{ site.ddn_js_api }}interfaces/short-lines-unit.html)
 * [SimplifiedDocumentNormalizerSettings]({{ site.ddn_js_api }}interfaces/simplified-document-normalizer-settings.html)
 
 ### Enums
 
-* [EnumImageColourMode]({{ site.dcvb_enums }}document-normalizer/image-colour-mode.html?lang=js)
+* [EnumImageColourMode]({{ site.ddn_js_api }}enum-image-colour-mode.html?lang=js)
 
 ## [DynamsoftCameraEnhancer]({{ site.dce_js_api }}index.html)
 
@@ -159,8 +169,8 @@ breadcrumbText: API Reference
 
 ### Enumerations
 
-* [EnumMappingStatus]({{ site.dcvb_enums }}code-parser/mapping-status.html)
-* [EnumValidationStatus]({{ site.dcvb_enums }}code-parser/validation-status.html)
+* [EnumMappingStatus]({{ site.dcp_js_api }}enum-mapping-status.html)
+* [EnumValidationStatus]({{ site.dcp_js_api }}enum-validation-status.html)
 
 ## [DynamsoftCore]({{ site.dcvb_js_api }}core/core-module.html)
 
@@ -172,6 +182,7 @@ breadcrumbText: API Reference
 ### Interfaces
 
 * [Arc]({{ site.dcvb_js_api }}core/basic-structures/arc.html)
+* [CapturedResultBase]({{ site.dcvb_js_api }}core/basic-structures/captured-result-base.html)
 * [Contour]({{ site.dcvb_js_api }}core/basic-structures/contour.html)
 * [Corner]({{ site.dcvb_js_api }}core/basic-structures/corner.html)
 * [DSRect]({{ site.dcvb_js_api }}core/basic-structures/ds-rect.html)
@@ -202,7 +213,7 @@ breadcrumbText: API Reference
 * [PredetectedRegionElement]({{ site.dcvb_js_api }}core/intermediate-results/predetected-region-element.html)
 * [PredetectedRegionsUnit]({{ site.dcvb_js_api }}core/intermediate-results/predetected-regions-unit.html)
 * [RegionObjectElement]({{ site.dcvb_js_api }}core/intermediate-results/region-object-element.html)
-* [ScaledDownColourImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
+* [ScaledColourImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/scaled-colour-image-unit.html)
 * [TextRemovedBinaryImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/text-removed-binary-image-unit.html)
 * [TextureDetectionResultUnit]({{ site.dcvb_js_api }}core/intermediate-results/texture-detection-result-unit.html)
 * [TextureRemovedBinaryImageUnit]({{ site.dcvb_js_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
@@ -212,18 +223,19 @@ breadcrumbText: API Reference
 
 ### Enums
 
-* [EnumBufferOverflowProtectionMode]({{ site.dcvb_enums }}core/buffer-overflow-protection-mode.html?lang=js)
-* [EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
-* [EnumColourChannelUsageType]({{ site.dcvb_enums }}core/colour-channel-usage-type.html?lang=js)
-* [EnumCornerType]({{ site.dcvb_enums }}core/corner-type.html?lang=js)
-* [EnumErrorCode]({{ site.dcvb_enums }}core/error-code.html?lang=js)
-* [EnumGrayscaleEnhancementMode]({{ site.dcvb_enums }}core/grayscale-enhancement-mode.html?lang=js)
-* [EnumGrayscaleTransformationMode]({{ site.dcvb_enums }}core/grayscale-transformation-mode.html?lang=js)
-* [EnumImagePixelFormat]({{ site.dcvb_enums }}core/image-pixel-format.html?lang=js)
-* [EnumImageTagType]({{ site.dcvb_enums }}core/image-tag-type.html?lang=js)
-* [EnumIntermediateResultUnitType]({{ site.dcvb_enums }}core/intermediate-result-unit-type.html?lang=js)
-* [EnumRegionObjectElementType]({{ site.dcvb_enums }}core/region-object-element-type.html?lang=js)
-* [EnumSectionType]({{ site.dcvb_enums }}core/section-type.html?lang=js)
+* [EnumBufferOverflowProtectionMode]({{ site.dcvb_js_api }}core/enum-buffer-overflow-protection-mode.html?lang=js)
+* [EnumCapturedResultItemType]({{ site.dcvb_js_api }}core/enum-captured-result-item-type.html?lang=js)
+* [EnumColourChannelUsageType]({{ site.dcvb_js_api }}core/enum-colour-channel-usage-type.html?lang=js)
+* [EnumCornerType]({{ site.dcvb_js_api }}core/enum-corner-type.html?lang=js)
+* [EnumErrorCode]({{ site.dcvb_js_api }}core/enum-error-code.html?lang=js)
+* [EnumGrayscaleEnhancementMode]({{ site.dcvb_js_api }}core/enum-grayscale-enhancement-mode.html?lang=js)
+* [EnumGrayscaleTransformationMode]({{ site.dcvb_js_api }}core/enum-grayscale-transformation-mode.html?lang=js)
+* [EnumImagePixelFormat]({{ site.dcvb_js_api }}core/enum-image-pixel-format.html?lang=js)
+* [EnumImageTagType]({{ site.dcvb_js_api }}core/enum-image-tag-type.html?lang=js)
+* [EnumIntermediateResultUnitType]({{ site.dcvb_js_api }}core/enum-intermediate-result-unit-type.html?lang=js)
+* [EnumModuleName]({{ site.dcvb_js_api }}core/enum-module-name.html?lang=js)
+* [EnumRegionObjectElementType]({{ site.dcvb_js_api }}core/enum-region-object-element-type.html?lang=js)
+* [EnumSectionType]({{ site.dcvb_js_api }}core/enum-section-type.html?lang=js)
 
 ## [DynamsoftLicense]({{ site.dcvb_js_api }}license/license-module.html)
 
@@ -237,5 +249,11 @@ breadcrumbText: API Reference
 ### Classes
 
 * [UtilityModule]({{ site.dcvb_js_api }}utility/utility-module-class.html)
-* [ImageManager]({{ site.dcvb_js_api }}utility/image-manager.html)
+* [ImageDrawer]({{ site.dcvb_js_api }}utility/image-drawer.html)
+* [ImageIO]({{ site.dcvb_js_api }}utility/image-io.html)
+* [ImageProcessor]({{ site.dcvb_js_api }}utility/image-processor.html)
 * [MultiFrameResultCrossFilter]({{ site.dcvb_js_api }}utility//multi-frame-result-cross-filter.html)
+
+### Enums
+
+* [EnumFilterType]({{ site.dcvb_js_api }}utility/enum-filter-type.html?lang=js)

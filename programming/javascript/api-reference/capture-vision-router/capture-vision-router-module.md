@@ -70,6 +70,15 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | [getIntermediateResultManager()](./intermediate-result.md#getintermediateresultmanager) | Returns an object, of type `IntermediateResultManager`, that manages intermediate results. |
 
+### Auxiliaries
+
+| Name                                                                                    | Description                                                                                |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [maxImageSideLength](./auxiliary.md#maximagesidelength)                        | Limits the maximum pixel value of the longest side of an image during the processing workflow.       |
+| [appendModelBuffer()](./auxiliary.md#appendmodelbuffer)                        | Loads a specific data file containing recognition information.       |
+| [onDataLoadProgressChanged()](./auxiliary.md#ondataloadprogresschanged)                        | An event that fires during the loading of a recognition data file (.data). |
+| [onCaptureError()](./auxiliary.md#oncaptureerror)                        | An event that fires when an error occurs from the start of capturing process. |
+
 ## CaptureVisionRouterModule Class
 
 The `CaptureVisionRouterModule` class defines common functionality in the `CaptureVisionRouter` module.

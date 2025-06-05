@@ -11,7 +11,7 @@ breadcrumbText: JS CapturedResultReceiver Class
 
 # CapturedResultReceiver
 
-The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results, etc.
+The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, processed documents, and parsed results, etc.
 
 ```typescript
 class CapturedResultReceiver {
@@ -19,8 +19,7 @@ class CapturedResultReceiver {
     onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
     onDecodedBarcodesReceived?(result: DecodedBarcodesResult): void;
     onRecognizedTextLinesReceived?(result: RecognizedTextLinesResult):void;
-    onDetectedQuadsReceived?(result: DetectedQuadsResult): void;
-    onNormalizedImagesReceived?(result: NormalizedImagesResult): void;
+    onProcessedDocumentResultReceived?(result: ProcessedDocumentResult): void;
     onParsedResultsReceived?(result: ParsedResult): void;
 } 
 ```
@@ -31,8 +30,7 @@ class CapturedResultReceiver {
 | [onOriginalImageResultReceived()](#onoriginalimageresultreceived) | Event triggered when the original image result is available. |
 | [onDecodedBarcodesReceived()](#ondecodedbarcodesreceived)         | Event triggered when decoded barcodes are available.         |
 | [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived) | Event triggered when recognized text lines are available.    |
-| [onDetectedQuadsReceived()](#ondetectedquadsreceived)             | Event triggered when detected quads are available.           |
-| [onNormalizedImagesReceived()](#onnormalizedimagesreceived)       | Event triggered when normalized images are available.        |
+| [onProcessedDocumentResultReceived()](#onprocesseddocumentresultreceived)             | Event triggered when processed documents are available.           |
 | [onParsedResultsReceived()](#onparsedresultsreceived)             | Event triggered when parsed results are available.           |
 
 ## onCapturedResultReceived
@@ -97,37 +95,21 @@ onRecognizedTextLinesReceived(result: RecognizedTextLinesResult): void;
 
 [RecognizedTextLinesResult](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/recognized-textlines-result.html)
 
-## onDetectedQuadsReceived
+## onProcessedDocumentResultReceived
 
-Event triggered when detected quads are available. This event is used to handle the detection of quadrilateral shapes, typically used as document boundaries, by Dynamsoft Document Normalizer.
+Event triggered when processed documents are available, occurring each time an image finishes its processing. This event is used to handle the results from document normalizer task, including DetectedQuadItem、DeskewedImageItem、EnhancedImageItem.
 
 ```typescript
-onDetectedQuadsReceived(result: DetectedQuadsResult): void;
+onProcessedDocumentResultReceived(result: ProcessedDocumentResult): void;
 ```
 
 **Parameters**
 
-`result`: The detected quads result, an instance of `DetectedQuadsResult`.
+`result`: The processed document result, an instance of `ProcessedDocumentResult`.
 
 **See Also**
 
-[DetectedQuadsResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-result.html)
-
-## onNormalizedImagesReceived
-
-Event triggered when normalized images are available. This event is used for handling images that have been processed or normalized (e.g., corrected for skew or perspective), by Dynamsoft Document Normalizer.
-
-```typescript
-onNormalizedImagesReceived(result: NormalizedImagesResult): void;
-```
-
-**Parameters**
-
-`result`: The normalized images result, an instance of `NormalizedImagesResult`.
-
-**See Also**
-
-[NormalizedImagesResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-result.html)
+[ProcessedDocumentResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/processed-document-result.html)
 
 ## onParsedResultsReceived
 

@@ -27,8 +27,7 @@ The `MultiFrameResultCrossFilter` class offers a set of API functions designed f
 | [onOriginalImageResultReceived()](#onoriginalimageresultreceived)       | Event triggered when the original images are received.                                       |
 | [onDecodedBarcodesReceived()](#ondecodedbarcodesreceived)               | Event triggered when the decoded barcodes are received.                                      |
 | [onRecognizedTextLinesReceived()](#onrecognizedtextlinesreceived)       | Event triggered when the recognized text lines are received.                                 |
-| [onDetectedQuadsReceived()](#ondetectedquadsreceived)                   | Event triggered when the detected quadrilaterals are received.                               |
-| [onNormalizedImagesReceived()](#onnormalizedimagesreceived)             | Event triggered when the normalized images are received.                                     |
+| [onProcessedDocumentResultReceived()](#onprocesseddocumentresultreceived)                   | Event triggered when the processed documents are received.                               |
 
 ### enableLatestOverlapping
 
@@ -290,33 +289,17 @@ onRecognizedTextLinesReceived?: (result: any) => void;
 
 None.
 
-### onDetectedQuadsReceived
+### onProcessedDocumentResultReceived
 
-Event triggered when the detected quadrilaterals are received.
+Event triggered when the processed documents are received.
 
 ```typescript
-onDetectedQuadsReceived?: (result: any) => void;
+onProcessedDocumentResultReceived?: (result: any) => void;
 ```
 
 **Parameters**
 
-`result`: The result item that contains the detected quadrilaterals, of type `any`.
-
-**Return Value**
-
-None.
-
-### onNormalizedImagesReceived
-
-Event triggered when the normalized images are received.
-
-```typescript
-onNormalizedImagesReceived?: (result: any) => void;
-```
-
-**Parameters**
-
-`result`: The result item that contains the normalized images, of type `any`.
+`result`: The result item that contains the processed documents, of type `any`.
 
 **Return Value**
 
