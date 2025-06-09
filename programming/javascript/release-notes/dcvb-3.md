@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.0.3001(06/09/2025)
+
+### Fixed
+
+- Fixed an issue where the results from the last unprocessed frame were still rendered on the page after calling the `captureVisionRouter.stopCapturing()` method.
+
 ## 3.0.3000(06/05/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dcv3.0)
