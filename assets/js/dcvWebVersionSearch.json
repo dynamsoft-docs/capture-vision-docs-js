@@ -1,5 +1,11 @@
 [
   {
+    "version": "2.6.1000",
+    "matchVersion": {
+      "javascript": "10.5.3000"
+    }
+  },
+  {
     "version": "2.4.2200",
     "matchVersion": {
       "javascript": "10.4.2002"
