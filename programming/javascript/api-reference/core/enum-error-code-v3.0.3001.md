@@ -145,8 +145,6 @@ enum EnumErrorCode {
     EC_PDF_LICENSE_NOT_FOUND = -10079,
     /**The rectangle is invalid.*/
     EC_RECT_INVALID = -10080,
-    /*The template version is incompatible. Please use a compatible template.*/
-    EC_TEMPLATE_VERSION_INCOMPATIBLE = -10081
 
     // DLS license error codes range from -20000 to -29999
     /** Indicates no license is available or the license is not set. */
@@ -171,10 +169,6 @@ enum EnumErrorCode {
     EC_FAILED_TO_REACH_DLS = -20200,
     /** Online license validation failed due to network issues. Using cached license information for validation.*/
     EC_LICENSE_CACHE_USED = -20012,
-    /*License authentication failed: quota exceeded.*/
-    EC_LICENSE_AUTH_QUOTA_EXCEEDED = -20013,
-    /**License restriction: the number of results has exceeded the allowed limit.*/
-    EC_LICENSE_RESULTS_LIMIT_EXCEEDED = -20014,
 
     // DBR error codes range from -30000 to -39999
     /** The specified barcode format is invalid or unsupported. */

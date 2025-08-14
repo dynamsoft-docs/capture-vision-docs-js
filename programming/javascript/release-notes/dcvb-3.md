@@ -9,6 +9,27 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.0.6000(08/14/2025)
+
+### New
+
+- **Base64 String Conversion**: Enabled bidirectional conversion between `ImageData` and Base64 strings.
+
+- **Template Version Validation**: Introduced version checking for templates to prevent compatibility issues and mismatches.
+
+### Improved
+
+- **White-on-White Document Recognition**: Optimized accuracy for document detection in scenarios where white paper is placed on a white background.
+
+### Changed
+
+- **License Validation Behavior**: Instead of stopping execution immediately on an invalid license module, the library now continues processing and returns results from modules with valid licenses. An error is still reported to indicate the license issue.
+- `StartCapturing` now stops immediately and returns a license-related error code if none of the tasks have a valid license, instead of proceeding and returning an empty result.
+
+### Fixed
+
+- Fixed various minor bugs and improved overall stability.
+
 ## 3.0.3001(06/09/2025)
 
 ### Fixed

@@ -30,6 +30,7 @@ class ImageDrawer {
      * @param type The type of drawing shapes.
      * @param color The color to use for drawing. Defaults to 0xFFFF0000 (red).
      * @param thickness The thickness of the lines to draw. Defaults to 1.
+     * @param name The name of the file, as a string, under which the image will be saved.
      * @param download An optional boolean flag that, when set to true, triggers the download of the file.
      *
      * @returns A promise that resolves with the saved File object.
@@ -40,6 +41,7 @@ class ImageDrawer {
         type: "quads" | "lines" | "contours" | "corners" | "edges", 
         color?: number, 
         thickness?: number, 
+        name: string,
         download?: boolean): Promise<DSImageData>;
 }
 ```
@@ -55,6 +57,8 @@ class ImageDrawer {
 `color`: The color to use for drawing. Defaults to 0xFFFF0000 (red).
 
 `thickness`: The thickness of the lines to draw. Defaults to 1.
+
+`name`: The name of the file, as a string, under which the image will be saved.
 
 `download`: An optional boolean flag that, when set to true, triggers the download of the file.
 

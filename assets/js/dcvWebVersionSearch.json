@@ -1,5 +1,17 @@
 [
   {
+    "version": "3.0.6000",
+    "matchVersion": {
+      "javascript": "11.0.6000"
+    }
+  },
+  {
+    "version": "3.0.3001",
+    "matchVersion": {
+      "javascript": "11.0.3000"
+    }
+  },
+  {
     "version": "2.6.1000",
     "matchVersion": {
       "javascript": "10.5.3000"

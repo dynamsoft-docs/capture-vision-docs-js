@@ -24,7 +24,7 @@ The `CapturedResultItem` interface provides a common structure for representing 
 ```typescript
 interface CapturedResultItem {
     readonly type: EnumCapturedResultItemType;
-    readonly referenceItem: CapturedResultItem | null;
+    readonly referencedItem: CapturedResultItem | null;
     readonly targetROIDefName: string;
     readonly taskName: string;
 }
@@ -38,7 +38,7 @@ The type of the captured result item, indicating what kind of data it represents
 
 [EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
 
-## referenceItem
+## referencedItem
 
 A property of type `CapturedResultItem` that represents a reference to another captured result item.
 
