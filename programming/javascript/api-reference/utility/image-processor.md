@@ -14,7 +14,8 @@ The `ImageProcessor` class provides APIs for processing images.
 
 | Name                                              | Description                                                                        |
 | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [cropImage()](#cropimage)                         |  Crops an image using a rectangle or quadrilateral.                                |
+| [cropImage()](#cropimage)                         |  Crops an image using a rectangle.                                |
+| [cropAndDeskewImage()](#cropanddeskewimage)       |  Crops and deskew an image using a quadrilateral.                                |
 | [adjustBrightness()](#adjustbrightness)           |  Adjusts the brightness of the image.                                              |
 | [adjustContrast()](#adjustcontrast)               |  Adjusts the contrast of the image.                                                |
 | [filterImage()](#filterimage)                     |  Applies a specified image filter to an input image.                               |
@@ -24,21 +25,39 @@ The `ImageProcessor` class provides APIs for processing images.
 
 ## cropImage
 
-Crops an image using a rectangle or quadrilateral.
+Crops an image using a rectangle.
 
 ```typescript
-cropImage(image: Blob, roi: DSRect | Quadrilateral): Promise<DSImageData>;
+cropImage(image: Blob, roi: DSRect): Promise<DSImageData>;
 ```
 
 **Parameters**
 
 `image`: The image to be saved, of type `Blob`.
 
-`roi`: The rectangle or quadrilateral to be cropped.
+`roi`: The rectangle to be cropped.
 
 **Return Value**
 
 A promise that resolves with the cropped image data.
+
+## cropAndDeskewImage
+
+Crops and deskews an image using a quadrilateral.
+
+```typescript
+cropAndDeskewImage:(image: Blob, roi:Core.Quadrilateral) => Promise<Core.DSImageData>;
+```
+
+**Parameters**
+
+`image`: The image to be saved, of type `Blob`.
+
+`roi`: The quadrilateral defining the region of interest to be cropped and deskewed.
+
+**Return Value**
+
+A promise that resolves with the cropped and deskewed image data.
 
 ## adjustBrightness
 

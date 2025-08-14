@@ -187,6 +187,7 @@ breadcrumbText: API Reference
 * [Corner]({{ site.dcvb_js_api }}core/basic-structures/corner.html)
 * [DSRect]({{ site.dcvb_js_api }}core/basic-structures/ds-rect.html)
 * [Edge]({{ site.dcvb_js_api }}core/basic-structures/edge.html)
+* [ErrorInfo]({{ site.dcvb_js_api }}core/basic-structures/error-info.html)
 * [LineSegment]({{ site.dcvb_js_api }}core/basic-structures/line-segment.html)
 * [Point]({{ site.dcvb_js_api }}core/basic-structures/point.html)
 * [Polygon]({{ site.dcvb_js_api }}core/basic-structures/polygon.html)
