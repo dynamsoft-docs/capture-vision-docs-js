@@ -9,6 +9,13 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.0.6001(08/28/2025)
+
+### Fixed
+
+- Rebuilt the WASM file to resolve a performance degradation issue.
+- Added back missing type definitions for `documentSettings` and `labelSettings`.
+
 ## 3.0.6000(08/14/2025)
 
 ### New
