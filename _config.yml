@@ -39,6 +39,7 @@ dwt_icon: /capture-vision/docs/web/assets/img-icon/icon-dwt.svg
 dnt_icon: /capture-vision/docs/web/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
+useJSVersionV3: true
 
 baseurl: "/capture-vision/docs/web"
 plugins:
