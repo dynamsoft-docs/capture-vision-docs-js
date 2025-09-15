@@ -35,9 +35,7 @@ enum EnumSectionType {
     ST_TEXT_LINE_RECOGNITION = 5,
     /** Corresponds to results generated in the "document detection" section. */
     ST_DOCUMENT_DETECTION = 6,
-    /** Corresponds to results generated in the "document deskewing" section. */
-    ST_DOCUMENT_DESKEWING = 7,
-    /** Corresponds to results generated in the "document enhancement" section. */
-    ST_IMAGE_ENHANCEMENT = 8
+    /** Corresponds to results generated in the "document normalization" section. */
+    ST_DOCUMENT_NORMALIZATION = 7
 }
 ```

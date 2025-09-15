@@ -71,7 +71,6 @@ The following are the basic interfaces often shared by more than one module:
 ### Basic Structures
 
 <!--* [CapturedResult](./basic-structures/captured-result.md)-->
-* [CapturedResultBase](./basic-structures/captured-result-base.md)
 * [CapturedResultItem](./basic-structures/captured-result-item.md)
 * [DSFile](./basic-structures/ds-file.md)
 * [DSImageData](./basic-structures/ds-image-data.md)
@@ -99,7 +98,7 @@ The following are the basic interfaces often shared by more than one module:
 * [PredetectedRegionElement](./intermediate-results/predetected-region-element.md)
 * [PredetectedRegionsUnit](./intermediate-results/predetected-regions-unit.md)
 * [RegionObjectElement](./intermediate-results/region-object-element.md)
-* [ScaledColourImageUnit](./intermediate-results/scaled-colour-image-unit.md)
+* [ScaledDownColourImageUnit](./intermediate-results/scaled-down-colour-image-unit.md)
 * [TextRemovedBinaryImageUnit](./intermediate-results/text-removed-binary-image-unit.md)
 * [TextureDetectionResultUnit](./intermediate-results/texture-detection-result-unit.md)
 * [TextureRemovedBinaryImageUnit](./intermediate-results/texture-removed-binary-image-unit.md)
@@ -119,11 +118,9 @@ The following are the basic enumerations often shared by more than one module:
 * [EnumErrorCode](./enum-error-code.md)
 * [EnumGrayscaleEnhancementMode](./enum-grayscale-enhancement-mode.md)
 * [EnumGrayscaleTransformationMode](./enum-grayscale-transformation-mode.md)
-* [EnumImageFileFormat](./enum-image-file-format.md)
 * [EnumImagePixelFormat](./enum-image-pixel-format.md)
 * [EnumImageTagType](./enum-image-tag-type.md)
 * [EnumIntermediateResultUnitType](./enum-intermediate-result-unit-type.md)
-* [EnumModuleName](./enum-module-name.md)
 * [EnumRegionObjectElementType](./enum-region-object-element-type.md)
 * [EnumSectionType](./enum-section-type.md)
 

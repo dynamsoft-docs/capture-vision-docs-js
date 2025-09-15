@@ -80,14 +80,12 @@ Returns an object that contains settings for the specified `CaptureVisionTemplat
 **Syntax**
 
 ```typescript
-outputSettings(templateName: string, includeDefaultValues?: boolean): Promise<string>;
+outputSettings(templateName: string): Promise<string>;
 ```
 
 **Parameters**
 
 `templateName`: specifies a `CaptureVisionTemplate` by its name. If passed "*", the returned object will contain all templates.
-
-`includeDefaultValues` (optional): Boolean that specifies whether to include default values the output. Default to False.
 
 **Return value**
 
@@ -108,7 +106,7 @@ Generates a Blob object or initiates a JSON file download containing the setting
 **Syntax**
 
 ```typescript
-outputSettingsToFile(templateName: string, fileName: string, download?: boolean, includeDefaultValues?: boolean): Promise<Blob>;
+outputSettingsToFile(templateName: string, fileName: string, download?: boolean): Promise<Blob>;
 ```
 
 **Parameters**
@@ -117,9 +115,7 @@ outputSettingsToFile(templateName: string, fileName: string, download?: boolean,
 
 `fileName`: specifies the name of the file.
 
-`download` (optional): boolean that specifies whether to initiates a JSON file download.
-
-`includeDefaultValues` (optional): Boolean that specifies whether to include default values the output. Default to False.
+`download`: boolean that specifies whether to initiates a JSON file download.
 
 **Return value**
 
@@ -129,7 +125,7 @@ A promise that resolves with the Blob object that contains settings for the spec
 
 ```javascript
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-const settings = await router.outputSettingsToFile("ReadSingleBarcode", "read-single-file", true, true);
+const settings = await router.outputSettingsToFile("ReadSingleBarcode", "read-single-file", true);
 console.log(settings);
 ```
 

@@ -22,38 +22,13 @@ This class defines common functionality in the Utility module. At present, it ha
 | ------------------------------------------------------------- | ------------------------------------------ |
 | `static` [getVersion()](./utility-module-class.md#getversion) | Returns the version of the Utility module. |
 
-## ImageDrawer Class
+## ImageManager Class
 
-The `ImageDrawer` class provides APIs for  for drawing shapes on images.
-
-| Name                                           | Description                                            |
-| ---------------------------------------------- | ------------------------------------------------------ |
-| [drawOnImage()](./image-drawer.md#drawonimage) | Draws various shapes on an image, and save it in PNG format. |
-
-## ImageIO Class
-
-The `ImageIO` class provides APIs for images reading and saving.
+The `ImageManager` class provides APIs for managing images. At present, it has only one API to save an image as a file.
 
 | Name                                        | Description                                            |
 | ------------------------------------------- | ------------------------------------------------------ |
-| [saveToFile()](./image-io.md#savetofile)         | Saves the specified image in either PNG or JPG format.         |
-| [readFromFile()](./image-io.md#readfromfile)     | Reads an image from a file                                     |
-| [saveToMemory()](./image-io.md#savetomemory)     | Saves an image to memory.                                      |
-| [readFromMemory()](./image-io.md#readfrommemory) | Reads image data from memory using the specified ID.           |
-
-## ImageProcessor Class
-
-The `ImageProcessor` class provides APIs for processing images.
-
-| Name                                        | Description                                            |
-| ------------------------------------------- | ------------------------------------------------------ |
-| [cropImage()](./image-processor.md#cropimage)                         |  Crops an image using a rectangle or quadrilateral.                                |
-| [adjustBrightness()](./image-processor.md#adjustbrightness)           |  Adjusts the brightness of the image.                                              |
-| [adjustContrast()](./image-processor.md#adjustcontrast)               |  Adjusts the contrast of the image.                                                |
-| [filterImage()](./image-processor.md#filterimage)                     |  Applies a specified image filter to an input image.                               |
-| [convertToGray()](./image-processor.md#converttogray)                 |  Converts a colour image to grayscale.                                             |
-| [convertToBinaryGlobal()](./image-processor.md#converttobinaryglobal) |  Converts a grayscale image to a binary image using a global threshold.            |
-| [convertToBinaryLocal()](./image-processor.md#converttobinarylocal)   |  Converts a grayscale image to a binary image using local (adaptive) binarization. |
+| [saveToFile](./image-manager.md#savetofile) | Saves the specified image in either PNG or JPG format. |
 
 ## MultiFrameResultCrossFilter Class
 

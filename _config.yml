@@ -1,46 +1,47 @@
-repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-js/blob/main
+repositoryUrl: https://github.com/dynamsoft-docs/capture-vision-docs-js/blob/v2
 repository: dynamsoft-docs/capture-vision-docs-js
-docFullPath: https://www.dynamsoft.com/capture-vision/docs/web/
-firstLevelUrl: /capture-vision/docs/web/
+docFullPath: https://www.dynamsoft.com/capture-vision/docs/v2/web/
+firstLevelUrl: /capture-vision/docs/v2/web/
 docRootName: "Dynamsoft Capture Vision JS Edition" 
-docHomePage: /capture-vision/docs/web/programming/javascript/
+docHomePage: /capture-vision/docs/v2/web/programming/javascript/
 searchIndexName: Crawler-DCV-Docs-New
 searchNeedFilter: true
 
-dcvb_introduction: /capture-vision/docs/core/introduction/
-dcvb_architecture: /capture-vision/docs/core/architecture/
-dcvb_parameters: /capture-vision/docs/core/parameters/reference/
-dcvb_parameter_file: /capture-vision/docs/core/parameters/file/
-dcvb_enums: /capture-vision/docs/core/enums/
-license_activation: /capture-vision/docs/core/license/
+dcvb_introduction: /capture-vision/docs/v2/core/introduction/
+dcvb_architecture: /capture-vision/docs/v2/core/architecture/
+dcvb_parameters: /capture-vision/docs/v2/core/parameters/reference/
+dcvb_parameter_file: /capture-vision/docs/v2/core/parameters/file/
+dcvb_enums: /capture-vision/docs/v2/core/enums/
+license_activation: /capture-vision/docs/v2/core/license/
 
-dcvb_js: /capture-vision/docs/web/programming/javascript/
-dcvb_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
-dbr_js: /barcode-reader/docs/web/programming/javascript/
-dlr_js: /label-recognition/docs/web/programming/javascript/
-ddn_js: /document-normalizer/docs/web/programming/javascript/
-dcp_js: /code-parser/docs/web/programming/javascript/
-dce_js: /camera-enhancer/docs/web/programming/javascript/
-dbr_js_api: /barcode-reader/docs/web/programming/javascript/api-reference/
-dlr_js_api: /label-recognition/docs/web/programming/javascript/api-reference/
-ddn_js_api: /document-normalizer/docs/web/programming/javascript/api-reference/
-dcp_js_api: /code-parser/docs/web/programming/javascript/api-reference/
-dce_js_api: /camera-enhancer/docs/web/programming/javascript/api-reference/
-code_types: /code-parser/docs/core/code-types/
-dcvb_root: /capture-vision/docs/core/
-mrz_js: /mrz-scanner/docs/web/
+dcvb_js: /capture-vision/docs/v2/web/programming/javascript/
+dcvb_js_api: /capture-vision/docs/v2/web/programming/javascript/api-reference/
+dbr_js: /barcode-reader/docs/v10/web/programming/javascript/
+dlr_js: /label-recognition/docs/v2/web/programming/javascript/
+ddn_js: /document-normalizer/docs/v2/web/programming/javascript/
+dcp_js: /code-parser/docs/v2/web/programming/javascript/
+dce_js: /camera-enhancer/docs/v2/web/programming/javascript/
+dbr_js_api: /barcode-reader/docs/v10/web/programming/javascript/api-reference/
+dlr_js_api: /label-recognition/docs/v2/web/programming/javascript/api-reference/
+ddn_js_api: /document-normalizer/docs/v2/web/programming/javascript/api-reference/
+dcp_js_api: /code-parser/docs/v2/web/programming/javascript/api-reference/
+dce_js_api: /camera-enhancer/docs/v2/web/programming/javascript/api-reference/
+code_types: /code-parser/docs/v2/core/code-types/
+dcvb_root: /capture-vision/docs/v2/core/
+mrz_js: /mrz-scanner/docs/v2/web/
 
-assets: /capture-vision/docs/web/assets/
-edit_icon: /capture-vision/docs/web/assets/img-icon/edit-icon.png
-smile_icon: /capture-vision/docs/web/assets/img-icon/icon-smile.png
-sad_icon: /capture-vision/docs/web/assets/img-icon/icon-sad.png
-dbr_icon: /capture-vision/docs/web/assets/img-icon/icon-dbr.svg
-dwt_icon: /capture-vision/docs/web/assets/img-icon/icon-dwt.svg
-dnt_icon: /capture-vision/docs/web/assets/img-icon/icon-dnt.svg
+assets: /capture-vision/docs/v2/web/assets/
+edit_icon: /capture-vision/docs/v2/web/assets/img-icon/edit-icon.png
+smile_icon: /capture-vision/docs/v2/web/assets/img-icon/icon-smile.png
+sad_icon: /capture-vision/docs/v2/web/assets/img-icon/icon-sad.png
+dbr_icon: /capture-vision/docs/v2/web/assets/img-icon/icon-dbr.svg
+dwt_icon: /capture-vision/docs/v2/web/assets/img-icon/icon-dwt.svg
+dnt_icon: /capture-vision/docs/v2/web/assets/img-icon/icon-dnt.svg
 
 useVersionTree: true
+useJSVersionV3: true
 
-baseurl: "/capture-vision/docs/web"
+baseurl: "/capture-vision/docs/v2/web"
 plugins:
   - jemoji
   - jekyll-webp

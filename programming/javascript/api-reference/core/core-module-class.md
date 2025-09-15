@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
+<!--v3.0.20--Updated on 11/23/2023-->
 
 # CoreModule Class
 
@@ -55,6 +56,21 @@ For resources loaded from popular CDNs like jsDelivr or UNPKG, the paths are aut
 2. If you opt for a CDN different from the default choices.
 3. When you are serving the files on your own.
 
+<!-- 
+> Specifying only the "rootDirectory" configures all paths to align with this directory automatically. However, if you provide both "rootDirectory" and specific paths for individual modules, the specific module paths will override the root directory setting.
+    /** NOT WORKING AS EXPECTED YET
+     * Specifies the root directory in which all the modules are located
+     */ 
+    "rootDirectory"?: string;
+    /** WILL BE RENAMED TO dlrData LATER
+     * Specifies the resource path for the dynamsoft-capture-vision-dnn module.
+     */ 
+    "dcm"?: string;
+    /** NOT AVAILABLE NOW
+     * Specifies the resource path for the dynamsoft-capture-vision-dnn module.
+     */ 
+    "dnn"?: string;
+-->
 ```typescript
 static engineResourcePaths: {
     /**
@@ -105,18 +121,6 @@ static engineResourcePaths: {
      * Specifies the resource path for the dynamsoft-camera-enhancer module.
      */
     "dce"?: string;
-        /** 
-    * Specifies the resource path for the dynamsoft-capture-vision-data module.
-    */
-    "dcvData"?: string;
-    /**
-     * Specifies the resource path for the dynamsoft-capture-vision-bundle module.
-     */
-    "dcvBundle"?: string;
-    /**
-     * Specifies the resource path for the dynamsoft-barcode-reader-bundle module.
-     */
-    "dbrBundle"?: string;
 };
 ```
 
@@ -127,11 +131,19 @@ static engineResourcePaths: {
 Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 // To specify the paths for multiple modules:
 Dynamsoft.Core.CoreModule.engineResourcePaths = {
-    "dbrBundle": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader-bundle@11.0.3000/dist/",
-    "dcvData": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-data@1.0.0/dist/"
+    "std": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-std@1.0.0/dist/",
+    "dip": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-image-processing@2.0.20/dist/",
+    "core": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-core@3.0.20/dist/",
+    "license": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-license@3.0.20/dist/",
+    "cvr": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-router@2.0.20/dist/",
+    "utility": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-utility@1.0.20/dist/",
+    "dbr": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader@10.0.20/dist/"
+    "dlr": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-label-recognizer@3.0.20/dist/",
+    "ddn": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-document-normalizer@2.0.20/dist/"
+    "dcp": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-code-parser@2.0.20/dist/"
 };
 // To specify the path for only one module:
-Dynamsoft.Core.CoreModule.engineResourcePaths.dbrBundle = "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader-bundle@11.0.3000/dist/";
+Dynamsoft.Core.CoreModule.engineResourcePaths.dbr = "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader@10.0.20/dist/";
 ```
 
 ## getVersion
@@ -179,15 +191,15 @@ if(Dynamsoft.Core.CoreModule.isModuleLoaded("cvr")){
 
 ## loadWasm
 
-Initiates the loading process for the .wasm file(s).
+Initiates the loading process for the .wasm file(s) corresponding to the specified module(s). If a module relies on other modules, the other modules will be loaded as well.
 
 ```typescript
-static loadWasm(): Promise<void>;
+static loadWasm(moduleNames: Array<string> | string): Promise<void>;
 ```
 
 **Parameters**
 
-None.
+`moduleNames`: specifies one or multiple modules. Supported module names are "cvr", "core", "license", "std", "dip", "dbr", "dlr", "ddn".
 
 **Return Value**
 
@@ -196,7 +208,7 @@ A promise that resolves when the resources have been successfully released. It d
 **Code snippet**
 
 ```javascript
-await Dynamsoft.Core.CoreModule.loadWasm();
+await Dynamsoft.Core.CoreModule.loadWasm("cvr");
 ```
 
 <!-- 
