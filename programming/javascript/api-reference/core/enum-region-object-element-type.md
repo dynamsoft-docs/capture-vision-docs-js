@@ -35,9 +35,7 @@ enum EnumRegionObjectElementType {
     ROET_RECOGNIZED_TEXT_LINE = 4,
     /** Corresponds to the `DetectedQuadElement` subclass, representing quadrilateral shapes detected within the image. */
     ROET_DETECTED_QUAD = 5,
-    /** Corresponds to the `DeskewedImageElement` subclass, referring to images that have been deskewed. */
-    ROET_DESKEWED_IMAGE = 6,
-    /** Corresponds to the `EnhancedImageElement` subclass, referring to images that have been enhanced. */
-    ROET_ENHANCED_IMAGE = 7
+    /** Corresponds to the `NormalizedImageElement` subclass, referring to images that have been normalized. */
+    ROET_NORMALIZED_IMAGE = 6
 }
 ```

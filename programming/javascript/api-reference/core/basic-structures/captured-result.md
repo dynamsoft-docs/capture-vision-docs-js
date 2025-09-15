@@ -6,48 +6,47 @@ keywords: captured result, JS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-ignore: true
+permalink: /programming/javascript/api-reference/core/basic-structures/captured-result-v3.0.10.html
 ---
 
 # CapturedResult
 
-The `CapturedResult` interface describes the basic structure of a result object returned by Dynamsoft Capture Vision Router.
-
-> NOTE: 
-> 
-> Depending on the functional module that generated the result item, the interface may vary:
-> 
-> * dynamsoft-barcode-reader: [DecodedBarcodesResult](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/decoded-barcodes-result.html)
-> * dynamsoft-label-recognizer: [RecognizedTextLinesResult](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/recognized-textlines-result.html)
-> * dynamsoft-document-normalizer: [DetectedQuadsResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-result.html) or [NormalizedImagesResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-result.html)
-> * dynamsoft-code-parser: [ParsedResult](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/api-reference/interfaces/parsed-result.html)
+The [CapturedResult]({{ site.dcv_js_api }}core/basic-structures/captured-result.html) interface describes the basic structure of a result item returned by Dynamsoft Capture Vision Router.
 
 ```typescript
 interface CapturedResult {
     readonly originalImageHashId: string;
     readonly originalImageTag: ImageTag;
     readonly items: Array<CapturedResultItem>;
-    readonly errorCode: number;
-    readonly errorString: string;
 }
 ```
 
+| Properties                                  | Type       |
+| ------------------------------------------- | ---------- |
+| [originalImageHashId](#originalimagehashid) | *String*   |
+| [originalImageTag](#originalimagetag)       | *ImageTag* |
+| [items](#items)                             | *Array*    |
+
 ## originalImageHashId
 
-The hash ID of the original image.
+A string representing the hash ID of the original image.
+
+```typescript
+readonly originalImageHashId: string;
+```
 
 ## originalImageTag
 
-The tag associated with the original image.
+An `ImageTag` object representing the tag associated with the original image.
+
+```typescript
+readonly originalImageTag: ImageTag;
+```
 
 ## items
 
 An array of [CapturedResultItem](./captured-result-item.md) objects representing the captured result items.
 
-## errorCode
-
-Error code associated with the capture result.
-
-## errorString
-
-Error string providing details about the error.
+```typescript
+readonly items: Array<CapturedResultItem>;
+```

@@ -15,19 +15,9 @@ The `PredetectedRegionElement` interface extends the `RegionObjectElement` inter
 ```typescript
 interface PredetectedRegionElement extends RegionObjectElement {
     modeName: string;
-    labelID: number;
-    labelName: string;
 }
 ```
 
 ## modeName
 
-The name of the detection mode used to detect this region element.
-
-## labelID
-
-The label id of the predetected region element.
-
-## labelName
-
-The label name of the predetected region element.
+Gets the name of the detection mode used to detect this region element.

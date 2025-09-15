@@ -18,15 +18,13 @@ The `CapturedResultItem` interface provides a common structure for representing 
 > 
 > * dynamsoft-barcode-reader: [BarcodeResultItem](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/barcode-result-item.html)
 > * dynamsoft-label-recognizer: [TextLineResultItem](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/textline-result-item.html)
-> * dynamsoft-document-normalizer: [DetectedQuadResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quad-result-item.html), [DeskewedImageResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/deksewed-image-result-item.html) or [EnhancedImageResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/enhanced-image-result-item.html)
+> * dynamsoft-document-normalizer: [DetectedQuadResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quad-result-item.html) or [NormalizedImageResultItem](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-image-result-item.html)
 > * dynamsoft-code-parser: [ParsedResultItem](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/api-reference/interfaces/parsed-result-item.html)
 
 ```typescript
 interface CapturedResultItem {
     readonly type: EnumCapturedResultItemType;
-    readonly referenceItem: CapturedResultItem | null;
-    readonly targetROIDefName: string;
-    readonly taskName: string;
+    readonly referencedItem: CapturedResultItem;
 }
 ```
 
@@ -38,14 +36,6 @@ The type of the captured result item, indicating what kind of data it represents
 
 [EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
 
-## referenceItem
+## referencedItem
 
 A property of type `CapturedResultItem` that represents a reference to another captured result item.
-
-## targetROIDefName
-
-The name of the target ROI definition which includes a task that generated the result.
-
-## taskName
-
-The name of the task that generated the result.

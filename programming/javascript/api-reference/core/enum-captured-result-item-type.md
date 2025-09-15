@@ -41,19 +41,14 @@ enum EnumCapturedResultItemType {
      */
     CRIT_DETECTED_QUAD = 8,
     /**
-     * Represents an image that has been processed and deskewed based on the original image.
-     * Deskewing may include adjustments such as perspective correction, etc. to standardize the image presentation.
+     * Represents an image that has been processed and normalized based on the original image.
+     * Normalization may include adjustments such as deskewing, perspective correction, etc. to standardize the image presentation.
      */
-    CRIT_DESKEWED_IMAGE = 16,
+    CRIT_NORMALIZED_IMAGE = 16,
     /**
      * Indicates a parsed result item.
      * This type is used for items that have undergone further interpretation by Dynamsoft Code Parser, transforming raw data into a structured format.
      */
-    CRIT_PARSE_RESULT = 32,
-    /**
-     * Indicates a enhanced image item.
-     * This type is used for items that have undergone post-processing, such as adjustments to brightness, contrast, color mode, etc.
-     */
-    CRIT_ENHANCED_IMAGE = 64
+    CRIT_PARSE_RESULT = 32
 }
 ```

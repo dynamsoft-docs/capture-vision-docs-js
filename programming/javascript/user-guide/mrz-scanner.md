@@ -169,8 +169,6 @@ Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMD
 
 The key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this solution (found in the js/init.js file) is a test license valid for 24 hours for any newly authorized browser. If you wish to test the SDK further, you can request a 30-day free trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=js" target="_blank">Request a Trial License</a> link.
 
-If you have already requested a trial license, please check your email for a message with the subject line "Your MRZ Scanner trial licenses."
-
 #### Load resources in advance
 
 To optimize image processing in a web environment, the algorithms are compiled into WebAssembly modules (files with a .wasm extension). These modules can be quite large, but the SDK can preload them asynchronously to enhance the user experience. For better performance, we recommend using [`loadWasm()`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html#loadwasm) to preload the necessary libraries. Since this solution uses DCE, DLR, and DCP, only the relevant resources need to be preloaded (no need to preload .wasm resources for DCE).

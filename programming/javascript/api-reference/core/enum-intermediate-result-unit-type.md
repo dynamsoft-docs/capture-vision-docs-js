@@ -25,7 +25,7 @@ enum EnumIntermediateResultUnitType {
     /** A full-color image. */
     IRUT_COLOUR_IMAGE = 1,
     /** A color image that has been scaled down for efficiency. */
-    IRUT_SCALED_COLOUR_IMAGE = 1 << 1,
+    IRUT_SCALED_DOWN_COLOUR_IMAGE = 1 << 1,
     /** A grayscale image derived from the original input. */
     IRUT_GRAYSCALE_IMAGE = 1 << 2,
     /** A grayscale image that has undergone transformation. */
@@ -55,7 +55,7 @@ enum EnumIntermediateResultUnitType {
     /** Barcodes that have been localized but not yet decoded. */
     IRUT_LOCALIZED_BARCODES = 1 << 15,
     /** Barcode images scaled up for improved readability or decoding accuracy. */
-    IRUT_SCALED_BARCODE_IMAGE = 1 << 16,
+    IRUT_SCALED_UP_BARCODE_IMAGE = 1 << 16,
     /** Images of barcodes processed to resist deformation and improve decoding success. */
     IRUT_DEFORMATION_RESISTED_BARCODE_IMAGE = 1 << 17,
     /** Barcode images that have been complemented. */
@@ -74,16 +74,14 @@ enum EnumIntermediateResultUnitType {
     IRUT_LOCALIZED_TEXT_LINES = 1 << 24,
     /** Successfully recognized text lines. */
     IRUT_RECOGNIZED_TEXT_LINES = 1 << 25,
-    /** Successfully deskewed images. */
-    IRUT_DESKEWED_IMAGE = 1 << 26,
+    /** Successfully normalized images. */
+    IRUT_NORMALIZED_IMAGES = 1 << 26,
     /**Detected short lines.*/
     IRUT_SHORT_LINES = 1 << 27,
     /**grouped lines of text.*/
     IRUT_TEXT_LINE_GROUPS = 1 << 28,
     /** Detected logic lines. */
     IRUT_LOGIC_LINES = 1 << 29,
-    /** Enhanced images. */
-    IRUT_ENHANCED_IMAGE = 1LL << 30,
     /** A mask to select all types of intermediate results. */
     IRUT_ALL = 0xFFFFFFFFFFFFFFFF
 }

@@ -16,7 +16,6 @@ The `Quadrilateral` interface represents a quadrilateral defined by four [Points
 interface Quadrilateral {
     points: [Point, Point, Point, Point];
     area?: number;
-    boundingRect?: DSRect;
 }
 ```
 
@@ -27,7 +26,3 @@ An array of four `Point` objects defining the vertices of the quadrilateral.
 ## area
 
 The area of the quadrilateral.
-
-## boundingRect
-
-The bounding rectangle of the quadrilateral, in type of [DSRect](./ds-rect.md).

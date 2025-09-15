@@ -19,7 +19,8 @@ codeAutoHeight: true
    >
 >
 ```javascript
-enum EnumErrorCode {
+enum EnumErrorCode
+{
     /** Operation completed successfully. */
     EC_OK = 0,
     // Common error codes range from -10000 to -19999
@@ -115,7 +116,7 @@ enum EnumErrorCode {
     EC_READ_DIRECTORY_FAILED = -10064,
     /** A required module (e.g., DynamsoftBarcodeReader, DynamsoftLabelRecognizer) was not found. */
     EC_MODULE_NOT_FOUND = -10065,
-    /** The api does not support multi-page files. Please use CaptureMultiPages instead. */
+    /** The operation does not support multi-page files; use FileFetcher for processing such files. */
     EC_MULTI_PAGES_NOT_SUPPORTED = -10066,
     /** Indicates an attempt to write to a file that already exists, with overwriting explicitly disabled. This error suggests the need for either enabling overwriting or ensuring unique file names to avoid conflicts. */
     EC_FILE_ALREADY_EXISTS = -10067,
@@ -123,30 +124,7 @@ enum EnumErrorCode {
     EC_CREATE_FILE_FAILED = -10068,
     /** The input ImageData object contains invalid parameters. This could be due to incorrect data types, out-of-range values, or improperly formatted data being passed to a function expecting ImageData. */
     EC_IMGAE_DATA_INVALID = -10069,
-    /** The size of the input image does not meet the requirements. */
-    EC_IMAGE_SIZE_NOT_MATCH = -10070,
-    /** The pixel format of the input image does not meet the requirements. */
-    EC_IMAGE_PIXEL_FORMAT_NOT_MATCH = -10071,
-    /** The section level result is irreplaceable. */
-    EC_SECTION_LEVEL_RESULT_IRREPLACEABLE = -10072,
-    /** Incorrect axis definition. */
-    EC_AXIS_DEFINITION_INCORRECT = -10073,
-    /** The result is not replaceable due to type mismatch*/
-    EC_RESULT_TYPE_MISMATCH_IRREPLACEABLE = -10074,
-    /** Failed to load the PDF library.*/
-    EC_PDF_LIBRARY_LOAD_FAILED = -10075,
-    /** The license is initialized successfully but detected invalid content in your key.*/
-    EC_LICENSE_WARNING = -10076,
-    /** One or more unsupported JSON keys were encountered and ignored from the template.*/
-    EC_UNSUPPORTED_JSON_KEY_WARNING = -10077,
-    /** Model file is not found*/
-    EC_MODEL_FILE_NOT_FOUND = -10078,
-    /** [PDF] No license found.*/
-    EC_PDF_LICENSE_NOT_FOUND = -10079,
-    /** The rectangle is invalid.*/
-    EC_RECT_INVALID = -10080,
-    /** The template version is incompatible. Please use a compatible template.*/
-    EC_TEMPLATE_VERSION_INCOMPATIBLE = -10081,
+    // DLS license error codes range from -20000 to -29999
     /** Indicates no license is available or the license is not set. */
     EC_NO_LICENSE = -20000,
     /** The provided Handshake Code is invalid or does not match expected format. */
@@ -167,12 +145,7 @@ enum EnumErrorCode {
     EC_TRIAL_LICENSE = -20010,
     /** The system failed to reach the License Server, likely due to network connectivity issues. */
     EC_FAILED_TO_REACH_DLS = -20200,
-    /** Online license validation failed due to network issues. Using cached license information for validation.*/
-    EC_LICENSE_CACHE_USED = -20012,
-    /** License authentication failed: quota exceeded.*/
-    EC_LICENSE_AUTH_QUOTA_EXCEEDED = -20013,
-    /** License restriction: the number of results has exceeded the allowed limit.*/
-    EC_LICENSE_RESULTS_LIMIT_EXCEEDED = -20014,
+    // DBR error codes range from -30000 to -39999
     /** The specified barcode format is invalid or unsupported. */
     EC_BARCODE_FORMAT_INVALID = -30009,
     /** The license for decoding QR Codes is invalid or not present. */
@@ -207,22 +180,17 @@ enum EnumErrorCode {
     EC_DOTCODE_LICENSE_INVALID = -30061,
     /** The license for decoding Pharmacode barcodes is invalid or not present. */
     EC_PHARMACODE_LICENSE_INVALID = -30062,
-    /** [Barcode Reader] No license found.*/
-    EC_BARCODE_READER_LICENSE_NOT_FOUND = -30063,
+    // DLR error codes range from -40000 to -49999
     /** Indicates that the required character model file was not found, possibly due to incorrect paths or missing files. */
     EC_CHARACTER_MODEL_FILE_NOT_FOUND = -40100,
-    /** There is a conflict in the layout of TextLineGroup. */
-    EC_TEXT_LINE_GROUP_LAYOUT_CONFLICT = -40101,
-    /** There is a conflict in the regex of TextLineGroup. */
-    EC_TEXT_LINE_GROUP_REGEX_CONFLICT = -40102,
-    /** [Label Recognizer] No license found.*/
-    EC_LABEL_RECOGNIZER_LICENSE_NOT_FOUND = -40103,
+    // DDN error codes range from -50000 to -59999
     /** The specified quadrilateral is invalid, potentially due to incorrect points or an unprocessable shape. */
     EC_QUADRILATERAL_INVALID = -50057,
-    /** [Document Normalizer] No license found.*/
-    EC_DOCUMENT_NORMALIZER_LICENSE_NOT_FOUND = -50058,
+    // Panorama error codes range from -70000 to -79999
     /** The license for generating or processing panoramas is invalid or missing. */
     EC_PANORAMA_LICENSE_INVALID = -70060,
+    // Reserved error codes range from -80000 to -89999
+    // DCP error codes range from -90000 to -99999
     /** The specified resource path does not exist, indicating a missing directory or incorrect path specification. */
     EC_RESOURCE_PATH_NOT_EXIST = -90001,
     /** Failed to load the specified resource, which might be due to missing files, access rights, or other issues preventing loading. */
@@ -244,8 +212,6 @@ enum EnumErrorCode {
     /** The license required for parsing Vehicle Identification Number (VIN) data is invalid or not present. */
     EC_VIN_LICENSE_INVALID = -90010,
     /** The license required for parsing customized code types is invalid or not present. */
-    EC_CUSTOMIZED_CODE_TYPE_LICENSE_INVALID = -90011,
-    /** [Code Parser] No license found.*/
-    EC_CODE_PARSER_LICENSE_NOT_FOUND = -90012
+    EC_CUSTOMIZED_CODE_TYPE_LICENSE_INVALID = -90011
 }
 ```

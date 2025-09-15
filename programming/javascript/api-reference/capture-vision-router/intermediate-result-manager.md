@@ -93,7 +93,7 @@ intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
 Retrieves the original image data.
 
 ```typescript
-getOriginalImage(): DSImageData;
+getOriginalImage(): Promise<DSImageData>;
 ```
 
 **Parameters**
@@ -102,7 +102,7 @@ None.
 
 **Return value**
 
-The original image on native resolution.
+A promise that resolves when the operation has successfully completed. It provides the original image upon resolution.
 
 **See Also**
 
