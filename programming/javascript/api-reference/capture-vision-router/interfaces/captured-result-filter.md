@@ -21,7 +21,7 @@ class CapturedResultReceiver {
     onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
     onDecodedBarcodesReceived?(result: DecodedBarcodesResult): void;
     onRecognizedTextLinesReceived?(result: RecognizedTextLinesResult):void;
-    onProcessedDocumentResultReceived?(result: DetectedQuadsResult): void;
+    onProcessedDocumentResultReceived?(result: ProcessedDocumentResult): void;
     onParsedResultsReceived?(result: ParsedResult): void;
 } 
 ```
