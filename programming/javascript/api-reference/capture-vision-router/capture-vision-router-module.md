@@ -89,17 +89,16 @@ The `CaptureVisionRouterModule` class defines common functionality in the `Captu
 
 ## CapturedResultReceiver Class
 
-The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results, etc.
+The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, processed documents, and parsed results, etc.
 
-| Name                                                                                           | Description                                                  |
-| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [onCapturedResultReceived()](./captured-result-receiver.md#oncapturedresultreceived)           | Event triggered when a generic captured result is available. |
-| [onOriginalImageResultReceived()](./captured-result-receiver.md#onoriginalimageresultreceived) | Event triggered when the original image result is available. |
-| [onDecodedBarcodesReceived()](./captured-result-receiver.md#ondecodedbarcodesreceived)         | Event triggered when decoded barcodes are available.         |
-| [onRecognizedTextLinesReceived()](./captured-result-receiver.md#onrecognizedtextlinesreceived) | Event triggered when recognized text lines are available.    |
-| [onDetectedQuadsReceived()](./captured-result-receiver.md#ondetectedquadsreceived)             | Event triggered when detected quads are available.           |
-| [onNormalizedImagesReceived()](./captured-result-receiver.md#onnormalizedimagesreceived)       | Event triggered when normalized images are available.        |
-| [onParsedResultsReceived()](./captured-result-receiver.md#onparsedresultsreceived)             | Event triggered when parsed results are available.           |
+| Name                                                                                                     | Description                                                  |
+| -------------------------------------------------------------------------------------------------------  | ------------------------------------------------------------ |
+| [onCapturedResultReceived()](./captured-result-receiver.md#oncapturedresultreceived)                     | Event triggered when a generic captured result is available. |
+| [onOriginalImageResultReceived()](./captured-result-receiver.md#onoriginalimageresultreceived)           | Event triggered when the original image result is available. |
+| [onDecodedBarcodesReceived()](./captured-result-receiver.md#ondecodedbarcodesreceived)                   | Event triggered when decoded barcodes are available.         |
+| [onRecognizedTextLinesReceived()](./captured-result-receiver.md#onrecognizedtextlinesreceived)           | Event triggered when recognized text lines are available.    |
+| [onProcessedDocumentResultReceived()](./captured-result-receiver.md#onprocesseddocumentresultreceived)   | Event triggered when processed documents are available.      |
+| [onParsedResultsReceived()](./captured-result-receiver.md#onparsedresultsreceived)                       | Event triggered when parsed results are available.           |
 
 ## IntermediateResultManager Class
 
@@ -124,7 +123,6 @@ The `IntermediateResultReceiver` class is designed as a standardized way for ret
 | [onLocalizedTextLinesReceived()](./intermediate-result-receiver.md#onlocalizedtextlinesreceived)                                   | Event triggered when localized text lines are received.                     |
 | [onRecognizedTextLinesReceived()](./intermediate-result-receiver.md#onrecognizedtextlinesreceived)                                 | Event triggered when recognized text lines are received.                    |
 | [onDetectedQuadsReceived()](./intermediate-result-receiver.md#ondetectedquadsreceived)                                             | Event triggered when detected quads are received.                           |
-| [onNormalizedImagesReceived()](./intermediate-result-receiver.md#onnormalizedimagesreceived)                                       | Event triggered when normalized images are received.                        |
 | [onColourImageUnitReceived()](./intermediate-result-receiver.md#oncolourimageunitreceived)                                         | Event triggered when a colour image unit is received.                       |
 | [onScaledDownColourImageUnitReceived()](./intermediate-result-receiver.md#onscaleddowncolourimageunitreceived)                     | Event triggered when a scaled-down colour image unit is received.           |
 | [onGrayscaleImageUnitReceived()](./intermediate-result-receiver.md#ongrayscaleimageunitreceived)                                   | Event triggered when a grayscale image unit is received.                    |

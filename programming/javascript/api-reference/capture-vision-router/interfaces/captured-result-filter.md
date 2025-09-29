@@ -13,7 +13,7 @@ breadcrumbText: JS CapturedResultFilter Interface
 
 # CapturedResultFilter
 
-The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results, etc.
+The `CapturedResultReceiver` class is designed as a standardized way for retrieving captured results in the Dynamsoft Capture Vision architecture. It adopts an event-driven approach, with events dedicated to various result types, such as the original image, decoded barcodes, recognized text lines, processed documents, and parsed results, etc.
 
 ```typescript
 class CapturedResultReceiver {
@@ -21,15 +21,12 @@ class CapturedResultReceiver {
     onOriginalImageResultReceived?(result: OriginalImageResultItem): void;
     onDecodedBarcodesReceived?(result: DecodedBarcodesResult): void;
     onRecognizedTextLinesReceived?(result: RecognizedTextLinesResult):void;
-    onDetectedQuadsReceived?(result: DetectedQuadsResult): void;
-    onNormalizedImagesReceived?(result: NormalizedImagesResult): void;
+    onProcessedDocumentResultReceived?(result: ProcessedDocumentResult): void;
     onParsedResultsReceived?(result: ParsedResult): void;
 } 
 ```
 
-
-
-The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, detected quads, normalized images, and parsed results.
+The `CapturedResultFilter` interface defines the standard way to get processing results. It contains several callback functions for different types of results, including original image, decoded barcodes, recognized text lines, processed documents, and parsed results.
 
 
 ## OnOriginalImageResultReceived
@@ -68,29 +65,17 @@ onRecognizedTextLinesReceived(result: DLR.RecognizedTextLinesResult): void;
 
 `result`: The recognized text lines result.
 
-## OnDetectedQuadsReceived
+## onProcessedDocumentResultReceived
 
-Callback function for detected quads results. It will be called once for each detected quads result.
+Callback function for processed document results. It will be called once for each processed documents result.
 
 ```typescript
-onDetectedQuadsReceived(result: DDN.DetectedQuadsResult): void;
+onProcessedDocumentResultReceived(result: DDN.ProcessedDocumentResult): void;
 ```
 
 **Parameters**
 
-`result`: The detected quads result.
-
-## OnNormalizedImagesReceived
-
-Callback function for normalized images results. It will be called once for each normalized images result.
-
-```typescript
-onNormalizedImagesReceived(result: DDN.NormalizedImagesResult): void;
-```
-
-**Parameters**
-
-`result`: The normalized images result.
+`result`: The processed documents result.
 
 ## OnParsedResultsReceived
 
