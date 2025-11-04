@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
-## 3.2.2000 (10/30/2025)
+## 3.2.2000 (11/04/2025)
 
 ### 🎉Milestone Release
 Version 3.2.2000 introduces a series of AI-driven improvements designed to enhance barcode and MRZ detection accuracy, processing speed, and configuration flexibility.
