@@ -14,9 +14,11 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 | Name                                         | Description                                                              |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
 | [maxImageSideLength](#maximagesidelength)                        | Limits the maximum pixel value of the longest side of an image during the processing workflow.       |
-| [appendModelBuffer()](#appendmodelbuffer)                        | Loads a specific data file containing recognition information.       |
+| [appendDLModelBuffer()](#appenddlmodelbuffer)                        | Loads a specific data file containing recognition information.       |
 | [onDataLoadProgressChanged](#ondataloadprogresschanged)                        | An event that fires during the loading of a recognition data file (.data). |
 | [onCaptureError](#oncaptureerror)                        | An event that fires when an error occurs from the start of capturing process. |
+| `static`[setGlobalIntraOpNumThreads](#setglobalintraopnumthreads)                        | Sets the global number of threads used internally for model execution. |
+| `static`[clearDLModelBuffers](#cleardlmodelbuffers)                        | Clears all deep learning models from buffer to free up memory. |
 
 ## maxImageSideLength
 
@@ -28,14 +30,14 @@ The `maxImageSideLength` property limits the maximum pixel value of the longest 
 maxImageSideLength: number;
 ```
 
-## appendModelBuffer
+## appendDLModelBuffer
 
 Loads a specific data file containing recognition information. This file typically comprises a Convolutional Neural Networks (CNN) model.
 
 **Syntax**
 
 ```typescript
-static appendModelBuffer(dataName: string, dataPath?: string) : Promise<void>;
+static appendDLModelBuffer(dataName: string, dataPath?: string) : Promise<void>;
 ```
 
 **Parameter**
@@ -51,7 +53,7 @@ None.
 **Code snippet**
 
 ```javascript
-CaptureVisionRouter.appendModelBuffer("sample-model.data")
+CaptureVisionRouter.appendDLModelBuffer("sample-model.data")
     .then(() => {
         console.log("Model appended successfully.");
     })
@@ -59,6 +61,10 @@ CaptureVisionRouter.appendModelBuffer("sample-model.data")
         console.error("Error loading model data:", error);
     });
 ```
+
+**Remarks**
+
+This method was renamed from `appendModelBuffer()` in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
 
 ## onDataLoadProgressChanged
 
@@ -123,3 +129,47 @@ CaptureVisionRouter.onCaptureError = function(error) {
     alert("An error occurred during capture: " + error.message);
 };
 ```
+
+## setGlobalIntraOpNumThreads
+
+Sets the global number of threads used internally for model execution.
+
+**Syntax**
+
+```typescript
+static setGlobalIntraOpNumThreads(intraOpNumThreads?: number): Promise<void>;
+```
+
+**Parameter**
+
+`intraOpNumThreads`(optional) : Number of threads used internally for model execution.
+
+**Code snippet**
+
+```javascript
+await CaptureVisionRouter.setGlobalIntraOpNumThreads(4);
+```
+
+**Remarks**
+
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+
+## clearDLModelBuffers
+
+Clears all deep learning models from buffer to free up memory.
+
+**Syntax**
+
+```typescript
+static clearDLModelBuffers(): Promise<void>;
+```
+
+**Code snippet**
+
+```javascript
+await CaptureVisionRouter.clearDLModelBuffers();
+```
+
+**Remarks**
+
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.

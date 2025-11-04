@@ -9,6 +9,68 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.2.2000 (10/30/2025)
+
+### 🎉Milestone Release
+Version 3.2.2000 introduces a series of AI-driven improvements designed to enhance barcode and MRZ detection accuracy, processing speed, and configuration flexibility.
+
+This release focuses on practical performance gains for production environments across retail, logistics, manufacturing, and identity verification workflows.
+
+### ✨ Key Highlights
+#### AI-Powered Barcode Detection and Decoding
+
+- New Localization Models – Introduces [`OneDLocalization`]({{ site.dcvb_parameters }}barcode-reader-task-settings/localization-modes.html#modelnamearray) and [`DataMatrixQRCodeLocalization`]({{ site.dcvb_parameters }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network models for improved detection of **blurred / low-resolution 1D codes**, or **partially damaged DataMatrix/QR codes**.
+- Specialized Decoders – Adds [`EAN13Decoder`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`Code128Decoder`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models optimized for **long-distance** and **motion-blurred** decoding scenarios.
+- Redesigned Deblur Model – The [`OneDDeblur`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model now provides more effective recovery from **motion and focus blur**.
+- Configurable Model Selection – The new `ModelNameArray` parameter supports flexible model loading and fine-grained control for specific barcode types.
+
+#### Precision and Processing Control
+
+- Enhanced Deblur Methods – [`DM_DEEP_ANALYSIS`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#dm_deep_analysis) now includes sub-level control with `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` options.
+- Barcode Count Expectation – The new [`ExpectedBarcodesCount`]({{ site.dcvb_parameters }}barcode-format-specification/expected-barcodes-count.html) parameter enables **format-specific quantity control** and **early termination** in fixed-count workflows.
+- Improved Region Detection – The new [`RPM_GRAY_CONSISTENCY`]({{ site.dcvb_parameters }}image-parameter/region-predetection-modes.html#rpm_gray_consistency) mode provides more precise region extraction based on **grayscale uniformity** and **local consistency** for document and label processing.
+
+#### AI-Powered MRZ Detection
+
+- Neural MRZ Localization – The new [`MRZLocalization`]({{ site.dcvb_parameters }}label-recognizer-task-settings/localization-modes.html#modelnamearray) model improves region detection accuracy and delivers up to **42.7%** faster processing for MRZ-based document workflows.
+- Configurable Localization Control – The new [`LocalizationModes`]({{ site.dcvb_parameters }}label-recognizer-task-settings/localization-modes.html) parameter allows configuration for text line detection.
+
+### Performance Highlights
+
+#### Barcode Workflows
+
+- Up to **26.5%** higher read rates under blur conditions with as much as **44%** faster processing.
+- Reliable decoding of DataMatrix and QR codes with missing or damaged finder patterns.
+- Extended operational range beyond 75 cm for long-distance barcode scanning.
+
+### Developer Notes
+
+- Backward Compatibility – Fully compatible with existing integrations; no code-level changes required for upgrade.
+- Configuration Flexibility – Expanded parameter set allows comprehensive model configuration for scenario-specific tuning.
+- Production Stability – All new models validated in enterprise environments.
+
+## API Changes
+
+### New
+
+- Added the `switchCapturingTemplate()` method to the `CaptureVisionRouter` class to enable switching the active capturing template during the image processing workflow. 
+- Added methods `toBlob()`, `toImage()`, and `toCanvas()` to the `originalImageResultItem` interface for flexible image data conversion.
+- Added the `SetGlobalIntraOpNumThreads()` method to the `CaptureVisionRouter` class to configure the global thread count for model inference.  
+- Added the `clearDLModelBuffers()` method to the `CaptureVisionRouter` class to manually release memory occupied by loaded models.  
+- Added callback functions `onSpecLoadProgressChanged()` and `onWasmLoadProgressChanged()` to monitor resource loading progress.  
+- Added the `convertToContainCoordinates()` method to the `CameraEnhancer` class to convert coordinates from `fit: cover` to `fit: contain` mode.  
+- Added the `LM_NEURAL_NETWORK` enumeration to `EnumLocalizationMode`.  
+
+### Updated
+
+- Changed the default value of `MaxThreadsInOneTask` from **4** to **0**.  
+- Changed the default value of `IncludeTrailingCheckDigit` from **1** to **0**.  
+
+### Deprecated
+
+- Deprecated the `DeblurModelNameArray` argument in the `DeblurModes` parameter. Use `ModelNameArray` instead.  
+- Deprecated the `appendModelBuffer()` method in the `CaptureVisionRouter` class. Use `appendDLModelBuffer()` instead.  
+
 ## 3.0.6001(08/28/2025)
 
 ### Fixed
