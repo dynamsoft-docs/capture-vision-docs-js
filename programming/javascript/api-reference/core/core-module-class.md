@@ -12,13 +12,14 @@ noTitleIndex: true
 
 The CoreModule class defines common functionality in the Core module.
 
-| Name                                                 | Description                                                                                       |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `static` [detectEnvironment()](#detectenvironment)   | Detects and returns information about the current runtime environment.                            |
-| `static` [engineResourcePaths](#engineresourcepaths) | Configures the paths where the .wasm files and other necessary resources for modules are located. |
-| `static` [getVersion()](#getversion)                 | Returns the version of the Core module.                                                           |
-| `static` [isModuleLoaded()](#ismoduleloaded)         | Returns whether the WebAssembly (.wasm) file for the specified module is successfully loaded.     |
-| `static` [loadWasm()](#loadwasm)                     | Initiates the loading process for the .wasm file(s) corresponding to the specified module(s).     |
+| Name                                                                   | Description                                                                                       |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `static` [detectEnvironment()](#detectenvironment)                     | Detects and returns information about the current runtime environment.                            |
+| `static` [engineResourcePaths](#engineresourcepaths)                   | Configures the paths where the .wasm files and other necessary resources for modules are located. |
+| `static` [getVersion()](#getversion)                                   | Returns the version of the Core module.                                                           |
+| `static` [isModuleLoaded()](#ismoduleloaded)                           | Returns whether the WebAssembly (.wasm) file for the specified module is successfully loaded.     |
+| `static` [loadWasm()](#loadwasm)                                       | Initiates the loading process for the .wasm file(s) corresponding to the specified module(s).     |
+| `static` [onWasmLoadProgressChanged()](#onwasmloadprogresschanged)     | An event that fires during the loading of a WebAssembly module (.wasm).                           |
 
 <!-- 
 | `static` [onLog](#onlog)                             | Event triggered whenever a log message is ready to be dispatched.                           |
@@ -199,6 +200,45 @@ A promise that resolves when the resources have been successfully released. It d
 await Dynamsoft.Core.CoreModule.loadWasm();
 ```
 
+## onWasmLoadProgressChanged
+
+An event that fires during the loading of a WebAssembly module (.wasm).
+
+**Syntax**
+
+```typescript
+static onWasmLoadProgressChanged (filePath: string, tag: "starting"| "in progress" | "completed", progress: { loaded: number, total: number }) : void;
+```
+
+**Parameter**
+
+`filePath` : The path of the wasm file.
+
+`tag`(Optional) : Indicates the ongoing status of the file download ("starting", "in progress", "completed").
+
+`progress` : An object indicating the progress of the download, with `loaded` and `total` bytes.
+
+**Return value**
+
+None.
+
+**Code snippet**
+
+```javascript
+Dynamsoft.Core.Coremodule.onWasmLoadProgressChanged = function(filePath, tag, progress) {
+    console.log(`Status: ${tag} - File: ${filePath}`);
+    if (tag === "in progress") {
+        let percent = ((progress.loaded / progress.total) * 100).toFixed(1);
+        console.log(`Progress: ${percent}%`);
+    } else if (tag === "completed") {
+        console.log("wasm loading completed!");
+    }
+};
+```
+
+**Remarks**
+
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
 <!-- 
 ## onLog
 

@@ -22,7 +22,7 @@ codeAutoHeight: true
 enum EnumImagePixelFormat {
    /** 0:Black, 1:White. */
    IPF_BINARY = 0,
-   /** 0:White, 1:Black. */
+   /** 0: black, 255: white. foreground (bars) are white, background (spaces) are black. */
    IPF_BINARYINVERTED = 1,
    /** 8bit gray. */
    IPF_GRAYSCALED = 2,
@@ -46,7 +46,7 @@ enum EnumImagePixelFormat {
    IPF_ABGR_16161616 = 11,
    /** 24bit with BGR channel order stored in memory from high to low address. */
    IPF_BGR_888 = 12,
-   /** 0:Black, 255:White. */
+   /** 0: black, 255: white.  foreground (bars) are black, background (spaces) are white. */
    IPF_BINARY_8 = 13,
    /**NV12 */
    IPF_NV12 = 14
