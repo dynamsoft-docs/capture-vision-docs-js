@@ -64,7 +64,7 @@ CaptureVisionRouter.appendDLModelBuffer("sample-model.data")
 
 **Remarks**
 
-This method was renamed from `appendModelBuffer()` in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+This method was renamed from `appendModelBuffer()` in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
 
 ## onDataLoadProgressChanged
 
@@ -152,7 +152,7 @@ await CaptureVisionRouter.setGlobalIntraOpNumThreads(4);
 
 **Remarks**
 
-Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
 
 ## clearDLModelBuffers
 
@@ -172,4 +172,4 @@ await CaptureVisionRouter.clearDLModelBuffers();
 
 **Remarks**
 
-Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.

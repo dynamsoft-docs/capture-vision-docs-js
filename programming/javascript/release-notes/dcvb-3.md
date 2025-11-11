@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.2.4000 (11/11/2025)
+
+### Fixed
+
+- Fixed a bug that could cause a crash when using model localization with a 2D barcode.
+
 ## 3.2.2000 (11/04/2025)
 
 ### 🎉Milestone Release

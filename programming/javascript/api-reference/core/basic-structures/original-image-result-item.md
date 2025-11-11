@@ -35,7 +35,7 @@ Converts the image data into an HTMLCanvasElement for display or further manipul
 
 **Remarks**
 
-Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
 
 ## toImage
 
@@ -47,7 +47,7 @@ Converts the image data into an HTMLImageElement of a specified MIME type ('imag
 
 **Remarks**
 
-Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
 
 ## toBlob
 
@@ -59,4 +59,4 @@ Converts the image data into a Blob object of a specified MIME type ('image/png'
 
 **Remarks**
 
-Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.1000.
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
