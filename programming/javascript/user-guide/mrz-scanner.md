@@ -6,6 +6,7 @@ keywords: JavaScript, scan mrz, read mrz, scan passport, read passport, scan id 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+ignore: true
 ---
 
 # MRZ Scanner Solution for Your Website - User Guide
