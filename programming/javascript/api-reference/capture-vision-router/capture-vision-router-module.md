@@ -35,16 +35,17 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 
 ### Multiple-Image Processing
 
-| Name                                                                          | Description                                                                  |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [setInput()](./multiple-image-processing.md#setinput)                         | Sets up an image source to provide images for continuous processing.         |
-| [getInput()](./multiple-image-processing.md#getinput)                         | Returns the image source object.                                             |
-| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)       | Adds a `CapturedResultReceiver` object as the receiver of captured results.  |
-| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver) | Removes the specified `CapturedResultReceiver` object.                       |
-| [addResultFilter()](./multiple-image-processing.md#addresultfilter)           | Adds a `MultiFrameResultCrossFilter` object to filter non-essential results. |
-| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)     | Removes the specified `MultiFrameResultCrossFilter` object.                  |
-| [startCapturing()](./multiple-image-processing.md#startcapturing)             | Initiates a capturing process based on a specified template.                 |
-| [stopCapturing()](./multiple-image-processing.md#stopcapturing)               | Stops the capturing process.                                                 |
+| Name                                                                                | Description                                                                            |
+| ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [setInput()](./multiple-image-processing.md#setinput)                               | Sets up an image source to provide images for continuous processing.                   |
+| [getInput()](./multiple-image-processing.md#getinput)                               | Returns the image source object.                                                       |
+| [addResultReceiver()](./multiple-image-processing.md#addresultreceiver)             | Adds a `CapturedResultReceiver` object as the receiver of captured results.            |
+| [removeResultReceiver()](./multiple-image-processing.md#removeresultreceiver)       | Removes the specified `CapturedResultReceiver` object.                                 |
+| [addResultFilter()](./multiple-image-processing.md#addresultfilter)                 | Adds a `MultiFrameResultCrossFilter` object to filter non-essential results.           |
+| [removeResultFilter()](./multiple-image-processing.md#removeresultfilter)           | Removes the specified `MultiFrameResultCrossFilter` object.                            |
+| [startCapturing()](./multiple-image-processing.md#startcapturing)                   | Initiates a capturing process based on a specified template.                           |
+| [stopCapturing()](./multiple-image-processing.md#stopcapturing)                     | Stops the capturing process.                                                           |
+| [switchCapturingTemplate()](./multiple-image-processing.md#switchcapturingtemplate) | Switches the currently active capturing template during the image processing workflow. |
 
 <!-- | [addImageSourceStateListener()](./multiple-image-processing.md#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that monitors changes in the state of an image source. |
 | [removeImageSourceStateListener()](./multiple-image-processing.md#removeimagesourcestatelistener) | Removes the specified `ImageSourceStateListener` object.                                     | -->

@@ -11,16 +11,17 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 
 # CaptureVisionRouter Multiple Image Processing
 
-| Name                                            | Description                                                                  |
-| ----------------------------------------------- | ---------------------------------------------------------------------------- |
-| [setInput()](#setinput)                         | Sets up an image source to provide images for continuous processing.         |
-| [getInput()](#getinput)                         | Returns the image source object.                                             |
-| [addResultReceiver()](#addresultreceiver)       | Adds a `CapturedResultReceiver` object as the receiver of captured results.  |
-| [removeResultReceiver()](#removeresultreceiver) | Removes the specified `CapturedResultReceiver` object.                       |
-| [addResultFilter()](#addresultfilter)           | Adds a `MultiFrameResultCrossFilter` object to filter non-essential results. |
-| [removeResultFilter()](#removeresultfilter)     | Removes the specified `MultiFrameResultCrossFilter` object.                  |
-| [startCapturing()](#startcapturing)             | Initiates a capturing process based on a specified template.                 |
-| [stopCapturing()](#stopcapturing)               | Stops the capturing process.                                               |
+| Name                                                  | Description                                                                            |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [setInput()](#setinput)                               | Sets up an image source to provide images for continuous processing.                   |
+| [getInput()](#getinput)                               | Returns the image source object.                                                       |
+| [addResultReceiver()](#addresultreceiver)             | Adds a `CapturedResultReceiver` object as the receiver of captured results.            |
+| [removeResultReceiver()](#removeresultreceiver)       | Removes the specified `CapturedResultReceiver` object.                                 |
+| [addResultFilter()](#addresultfilter)                 | Adds a `MultiFrameResultCrossFilter` object to filter non-essential results.           |
+| [removeResultFilter()](#removeresultfilter)           | Removes the specified `MultiFrameResultCrossFilter` object.                            |
+| [startCapturing()](#startcapturing)                   | Initiates a capturing process based on a specified template.                           |
+| [stopCapturing()](#stopcapturing)                     | Stops the capturing process.                                                           |
+| [switchCapturingTemplate()](#switchcapturingtemplate) | Switches the currently active capturing template during the image processing workflow. |
 
 <!-- 
 | [addImageSourceStateListener()](#addimagesourcestatelistener)       | Adds an `ImageSourceStateListener` object that monitors changes in the state of an image source. |
@@ -381,3 +382,34 @@ await router.startCapturing("ReadSingleBarcode");
 // ...
 router.stopCapturing();
 ```
+
+## switchCapturingTemplate
+
+Switches the currently active capturing template during the image processing workflow. This allows dynamic reconfiguration of the capture process without restarting or reinitializing the system, enabling different settings or rules to be applied on the fly.
+
+**Syntax**
+
+```typescript
+switchCapturingTemplate(templateName: string): Promise<void>;
+```
+
+**Parameters**
+
+`templateName`: The name of the new capturing template to apply.
+
+**Return Value**
+
+A promise that resolves when the operation has completed.
+
+**Code snippet**
+
+```javascript
+let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+await router.startCapturing("ReadSingleBarcode");
+// Switching to ReadRateFirst template
+await router.switchCapturingTemplate("ReadBarcodes_ReadRateFirst");
+```
+
+**Remarks**
+
+Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.

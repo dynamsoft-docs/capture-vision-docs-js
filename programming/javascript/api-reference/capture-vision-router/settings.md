@@ -20,8 +20,6 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 | [getTemplateNames()](#gettemplatenames)               | Retrieves the names of all the currently available templates.                                                                                                          |
 | [updateSettings()](#updatesettings)                   | Updates the specified `CaptureVisionTemplate` with an updated `SimplifiedCaptureVisionSettings` object.                                                                |
 | [resetSettings()](#resetsettings)                     | Restores all runtime settings to their original default values.                                                                                                        |
-| [switchCapturingTemplate()](#switchcapturingtemplate) | Switches the currently active capturing template during the image processing workflow.                                                                                 |
-
 
 ## initSettings
 
@@ -236,34 +234,3 @@ A promise that resolves when the operation has completed. It provides an object 
 let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 await router.resetSettings();
 ```
-
-## switchCapturingTemplate
-
-Switches the currently active capturing template during the image processing workflow. This allows dynamic reconfiguration of the capture process without restarting or reinitializing the system, enabling different settings or rules to be applied on the fly.
-
-**Syntax**
-
-```typescript
-switchCapturingTemplate(templateName: string): Promise<void>;
-```
-
-**Parameters**
-
-`templateName`: The name of the new capturing template to apply.
-
-**Return Value**
-
-A promise that resolves when the operation has completed.
-
-**Code snippet**
-
-```javascript
-let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
-await router.startCapturing("ReadSingleBarcode");
-// Switching to ReadRateFirst template
-await router.switchCapturingTemplate("ReadBarcodes_ReadRateFirst");
-```
-
-**Remarks**
-
-Introduced in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
