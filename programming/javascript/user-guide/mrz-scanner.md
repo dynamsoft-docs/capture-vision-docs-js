@@ -135,7 +135,7 @@ MRZ Scanner
 
 ## Building your own page
 
-In this section, we’ll walk through the key steps needed to build a web page that reads the machine-readable zone (MRZ) on a passport or ID.
+In this section, we'll walk through the key steps needed to build a web page that reads the machine-readable zone (MRZ) on a passport or ID.
 
 ### Include the SDK
 

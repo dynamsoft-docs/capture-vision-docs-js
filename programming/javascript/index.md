@@ -25,7 +25,7 @@ Implementing DCV, regardless of platform or language, involves three stages: inp
 
 - `Image Processing`: DCV processes the images to derive information, powered by Dynamsoft's cutting-edge algorithms. To ensure efficient operation in web environments like browsers, these algorithms are compiled into [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) modules (.wasm files). These modules are large in size, and DCV can asynchronously preload them into the web page to enhance user experience.
 
-- `Output`: The derived information is made available to other business logic through the [Captured Result Receiver (CRR)](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver) interface. In web applications, real-time interaction is crucial. DCV leverages Dynamsoft Camera Enhancer’s UI functionality to display results at runtime and, in some cases, allows user intervention to improve results.
+- `Output`: The derived information is made available to other business logic through the [Captured Result Receiver (CRR)](https://www.dynamsoft.com/capture-vision/docs/core/architecture/output.html#captured-result-receiver) interface. In web applications, real-time interaction is crucial. DCV leverages Dynamsoft Camera Enhancer's UI functionality to display results at runtime and, in some cases, allows user intervention to improve results.
 
 ## Using the SDK
 
