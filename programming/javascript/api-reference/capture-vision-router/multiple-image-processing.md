@@ -236,6 +236,10 @@ resultReceiver.onCapturedResultReceived = (result) => {
 router.addResultReceiver(resultReceiver);
 ```
 
+**See also**
+
+[CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
 ## removeResultReceiver
 
 Removes the specified `CapturedResultReceiver` object.
@@ -267,6 +271,10 @@ router.addResultReceiver(resultReceiver);
 router.removeResultReceiver(resultReceiver);
 ```
 
+**See also**
+
+[CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
 ## addResultFilter
 
 Adds a `MultiFrameResultCrossFilter` object to filter non-essential results.
@@ -297,7 +305,7 @@ router.addResultFilter(filter);
 
 **See also**
 
-[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
+[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html)
 
 ## removeResultFilter
 
