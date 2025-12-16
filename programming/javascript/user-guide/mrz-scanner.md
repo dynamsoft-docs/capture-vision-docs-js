@@ -6,6 +6,7 @@ keywords: JavaScript, scan mrz, read mrz, scan passport, read passport, scan id 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+ignore: true
 ---
 
 # MRZ Scanner Solution for Your Website - User Guide
@@ -168,6 +169,8 @@ Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMD
 ```
 
 The key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this solution (found in the js/init.js file) is a test license valid for 24 hours for any newly authorized browser. If you wish to test the SDK further, you can request a 30-day free trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mrz&utm_source=docs&package=js" target="_blank">Request a Trial License</a> link.
+
+If you have already requested a trial license, please check your email for a message with the subject line "Your MRZ Scanner trial licenses."
 
 #### Load resources in advance
 
