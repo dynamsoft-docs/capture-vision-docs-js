@@ -9,6 +9,7 @@ noTitleIndex: true
 
 # Release Notes - Dynamsoft Capture Vision Bundle JavaScript
 
+- [3.2.5000 (12/16/2025)](dcvb-3.md#325000-12162025)
 - [3.2.4000 (11/11/2025)](dcvb-3.md#324000-11112025)
 - [3.2.2000 (11/04/2025)](dcvb-3.md#322000-11042025)
 - [3.0.6001 (08/28/2025)](dcvb-3.md#306001-08282025)

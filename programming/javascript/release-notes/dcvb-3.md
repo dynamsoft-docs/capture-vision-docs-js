@@ -9,6 +9,14 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.2.5000 (12/16/2025)
+
+This release includes security maintenance updates to ensure continued protection of the product.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.2.4000 (11/11/2025)
 
 ### Fixed
