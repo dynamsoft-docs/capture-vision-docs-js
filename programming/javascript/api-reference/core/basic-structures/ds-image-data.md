@@ -37,7 +37,7 @@ The pixel format of the image.
 
 **See Also**
 
-[EnumImagePixelFormat]({{ site.dcvb_js_api }}enum-image-pixel-format.html?lang=js)
+[EnumImagePixelFormat]({{ site.dcvb_js_api }}core/enum-image-pixel-format.html?lang=js)
 
 ## height
 
