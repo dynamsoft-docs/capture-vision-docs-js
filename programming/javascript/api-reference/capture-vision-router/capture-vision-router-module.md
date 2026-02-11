@@ -169,7 +169,7 @@ The `BufferedItemsManager` class is responsible for storing sample data generate
 
 ## Enums
 
-* [EnumImageSourceState]({{ site.dcvb_enums }}core/image-source-state.html?lang=js)
+* [EnumImageSourceState](./enum-image-source-state.html?lang=js)
 
 <!-- 
 * [EnumPresetTemplate]({{ site.enums }}capture-vision-router/preset-template.html?lang=js)
