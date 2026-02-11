@@ -24,7 +24,7 @@ interface ErrorInfo {
 A predefined enumerated code that categorizes the type of error. This code is used programmatically to identify specific error conditions.
 
 **See Also**
-[EnumErrorCode]({{ site.dcvb_js_api }}enums-error-code.html?lang=js)
+[EnumErrorCode](../enum-error-code.html?lang=js)
 
 ## errorString
 
