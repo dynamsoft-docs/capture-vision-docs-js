@@ -26,7 +26,7 @@ The type of the region object element, defined by the enumeration `EnumRegionObj
 
 **See Also**
 
-[EnumRegionObjectElementType]({{ site.dcvb_js_api }}enums-region-object-element-type.html?lang=js)
+[EnumRegionObjectElementType](../enum-region-object-element-type.html?lang=js)
 
 ## location
 

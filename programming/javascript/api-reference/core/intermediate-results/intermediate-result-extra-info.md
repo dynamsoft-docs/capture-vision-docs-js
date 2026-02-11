@@ -31,7 +31,7 @@ The type of section, if applicable, as defined by an enumeration.
 
 **See Also**
 
-[EnumSectionType]({{ site.dcvb_js_api }}enums-section-type.html?lang=js)
+[EnumSectionType](../enum-section-type.html?lang=js)
 
 ## targetROIDefName
 

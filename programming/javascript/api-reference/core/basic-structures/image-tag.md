@@ -27,4 +27,4 @@ The unique identifier of the image.
 
 The type of the image.
 
-[EnumImageTagType]({{ site.dcvb_js_api }}enums-image-tag-type.html?lang=js)
+[EnumImageTagType](../enum-image-tag-type.html?lang=js)
