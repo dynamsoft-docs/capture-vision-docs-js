@@ -16,19 +16,19 @@ license_activation: /capture-vision/docs-v2/core/license/
 
 dcvb_js: /capture-vision/docs-v2/web/programming/javascript/
 dcvb_js_api: /capture-vision/docs-v2/web/programming/javascript/api-reference/
-dbr_js: /barcode-reader/docs/v10/web/programming/javascript/
+dbr_js: /barcode-reader/docs-v10/web/programming/javascript/
 dlr_js: /label-recognition/docs-v2/web/programming/javascript/
 ddn_js: /document-normalizer/docs-v2/web/programming/javascript/
 dcp_js: /code-parser/docs-v2/web/programming/javascript/
 dce_js: /camera-enhancer/docs-v2/web/programming/javascript/
-dbr_js_api: /barcode-reader/docs/v10/web/programming/javascript/api-reference/
+dbr_js_api: /barcode-reader/docs-v10/web/programming/javascript/api-reference/
 dlr_js_api: /label-recognition/docs-v2/web/programming/javascript/api-reference/
 ddn_js_api: /document-normalizer/docs-v2/web/programming/javascript/api-reference/
 dcp_js_api: /code-parser/docs-v2/web/programming/javascript/api-reference/
 dce_js_api: /camera-enhancer/docs-v2/web/programming/javascript/api-reference/
 code_types: /code-parser/docs-v2/core/code-types/
 dcvb_root: /capture-vision/docs-v2/core/
-mrz_js: /mrz-scanner/docs-v2/web/
+mrz_js: /mrz-scanner/docs/web/
 
 assets: /capture-vision/docs-v2/web/assets/
 edit_icon: /capture-vision/docs-v2/web/assets/img-icon/edit-icon.png
