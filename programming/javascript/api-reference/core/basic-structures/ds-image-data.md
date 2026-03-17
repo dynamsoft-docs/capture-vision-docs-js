@@ -49,7 +49,7 @@ An optional tag associated with the image data.
 
 **See Also**
 
-[ImageTag](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/basic-structures/image-tag.html?lang=js)
+[ImageTag]({{ site.dcvb_js}}api-reference/core/basic-structures/image-tag.html?lang=js)
 
 ## stride
 

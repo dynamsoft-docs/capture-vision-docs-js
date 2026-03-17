@@ -16,10 +16,10 @@ The `CapturedResult` interface describes the basic structure of a result object 
 > 
 > Depending on the functional module that generated the result item, the interface may vary:
 > 
-> * dynamsoft-barcode-reader: [DecodedBarcodesResult](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/decoded-barcodes-result.html)
-> * dynamsoft-label-recognizer: [RecognizedTextLinesResult](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/recognized-textlines-result.html)
-> * dynamsoft-document-normalizer: [DetectedQuadsResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-result.html) or [NormalizedImagesResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-result.html)
-> * dynamsoft-code-parser: [ParsedResult](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/api-reference/interfaces/parsed-result.html)
+> * dynamsoft-barcode-reader: [DecodedBarcodesResult]({{ site.dbr_js_api }}interfaces/decoded-barcodes-result.html)
+> * dynamsoft-label-recognizer: [RecognizedTextLinesResult]({{ site.dlr_js_api }}interfaces/recognized-textlines-result.html)
+> * dynamsoft-document-normalizer: [DetectedQuadsResult]({{ site.ddn_js_api }}interfaces/detected-quads-result.html) or [NormalizedImagesResult]({{ site.ddn_js_api }}interfaces/normalized-images-result.html)
+> * dynamsoft-code-parser: [ParsedResult]({{ site.dcp_js_api }}interfaces/parsed-result.html)
 
 ```typescript
 interface CapturedResult {

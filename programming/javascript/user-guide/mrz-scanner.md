@@ -171,14 +171,14 @@ The key "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this solution (found 
 
 #### Load resources in advance
 
-To optimize image processing in a web environment, the algorithms are compiled into WebAssembly modules (files with a .wasm extension). These modules can be quite large, but the SDK can preload them asynchronously to enhance the user experience. For better performance, we recommend using [`loadWasm()`](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/core-module-class.html#loadwasm) to preload the necessary libraries. Since this solution uses DCE, DLR, and DCP, only the relevant resources need to be preloaded (no need to preload .wasm resources for DCE).
+To optimize image processing in a web environment, the algorithms are compiled into WebAssembly modules (files with a .wasm extension). These modules can be quite large, but the SDK can preload them asynchronously to enhance the user experience. For better performance, we recommend using [`loadWasm()`]({{ site.dcvb_js}}api-reference/core/core-module-class.html#loadwasm) to preload the necessary libraries. Since this solution uses DCE, DLR, and DCP, only the relevant resources need to be preloaded (no need to preload .wasm resources for DCE).
 
 
 ```javascript
 Dynamsoft.Core.CoreModule.loadWasm(["DLR", "DCP"]);
 ```
 
-In addition to the .wasm files, performance can be further enhanced by preloading the parsing standards and inference models (referred to as .data files) using the methods [`loadSpec()`](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/api-reference/code-parser-module-class.html#loadspec) and [`loadRecognitionData()`](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/label-recognizer-module-class.html#loadrecognitiondata), respectively.
+In addition to the .wasm files, performance can be further enhanced by preloading the parsing standards and inference models (referred to as .data files) using the methods [`loadSpec()`]({{ site.dcp_js_api }}code-parser-module-class.html#loadspec) and [`loadRecognitionData()`]({{ site.dlr_js_api }}label-recognizer-module-class.html#loadrecognitiondata), respectively.
 
 In our solution, we preload the parsing standards for `MRTD_TD3_PASSPORT`, `MRTD_TD1_ID`, and `MRTD_TD2_ID`, along with the .data file for `MRZ` recognition.
 
@@ -206,7 +206,7 @@ await cvRouter.initSettings("./template.json");
 
 `cvRouter` connects to the image source using the [ImageSourceAdapter](https://www.dynamsoft.com/capture-vision/docs/core/architecture/input.html#image-source-adapter?lang=js){:target="_blank"} interface via the `setInput()` method.
 
-> In our case, the image source is a [CameraEnhancer](https://www.dynamsoft.com/camera-enhancer/docs/web/programming/javascript/user-guide/index.html) object, created using `Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView)`.
+> In our case, the image source is a [CameraEnhancer]({{ site.dce_js }}user-guide/index.html) object, created using `Dynamsoft.DCE.CameraEnhancer.createInstance(cameraView)`.
 
 ```javascript
 cameraView = await Dynamsoft.DCE.CameraView.createInstance(cameraViewContainer);

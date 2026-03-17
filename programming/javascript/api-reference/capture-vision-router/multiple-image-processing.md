@@ -296,7 +296,7 @@ router.addResultFilter(filter);
 
 **See also**
 
-[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
+[MultiFrameResultCrossFilter]({{ site.dcvb_js}}api-reference/utility/multi-frame-result-cross-filter.html?product=ddn&repoType=web)
 
 ## removeResultFilter
 

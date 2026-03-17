@@ -49,7 +49,7 @@ The captured result, an instance of `CapturedResult`.
 
 **See Also**
 
-[CapturedResult](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/captured-result.html?product=dbr&lang=javascript)
+[CapturedResult]({{ site.dcvb_js}}api-reference/capture-vision-router/interfaces/captured-result.html?product=dbr&lang=javascript)
 
 ## onOriginalImageResultReceived
 
@@ -65,7 +65,7 @@ onOriginalImageResultReceived(result: OriginalImageResultItem): void;
 
 **See Also**
 
-[OriginalImageResultItem](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/core/basic-structures/original-image-result-item.html?product=dbr&lang=javascript)
+[OriginalImageResultItem]({{ site.dcvb_js}}api-reference/core/basic-structures/original-image-result-item.html?product=dbr&lang=javascript)
 
 ## onDecodedBarcodesReceived
 
@@ -81,7 +81,7 @@ onDecodedBarcodesReceived(result: DecodedBarcodesResult): void;
 
 **See Also**
 
-[DecodedBarcodesResult](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/decoded-barcodes-result.html)
+[DecodedBarcodesResult]({{ site.dbr_js_api }}interfaces/decoded-barcodes-result.html)
 
 ## onRecognizedTextLinesReceived
 
@@ -95,7 +95,7 @@ onRecognizedTextLinesReceived(result: RecognizedTextLinesResult): void;
 
 `result`: The recognized text lines result, an instance of `RecognizedTextLinesResult`.
 
-[RecognizedTextLinesResult](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/recognized-textlines-result.html)
+[RecognizedTextLinesResult]({{ site.dlr_js_api }}interfaces/recognized-textlines-result.html)
 
 ## onDetectedQuadsReceived
 
@@ -111,7 +111,7 @@ onDetectedQuadsReceived(result: DetectedQuadsResult): void;
 
 **See Also**
 
-[DetectedQuadsResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-result.html)
+[DetectedQuadsResult]({{ site.ddn_js_api }}interfaces/detected-quads-result.html)
 
 ## onNormalizedImagesReceived
 
@@ -127,7 +127,7 @@ onNormalizedImagesReceived(result: NormalizedImagesResult): void;
 
 **See Also**
 
-[NormalizedImagesResult](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-result.html)
+[NormalizedImagesResult]({{ site.ddn_js_api }}interfaces/normalized-images-result.html)
 
 ## onParsedResultsReceived
 
@@ -143,4 +143,4 @@ onParsedResultsReceived(result: ParsedResult): void;
 
 **See Also**
 
-[ParsedResult](https://www.dynamsoft.com/code-parser/docs/web/programming/javascript/api-reference/interfaces/parsed-result.html)
+[ParsedResult]({{ site.dcp_js_api }}interfaces/parsed-result.html)

@@ -10,4 +10,4 @@ noTitleIndex: true
 
 # Dynamsoft Capture Vision STD Module 
 
-The Dynamsoft Capture Vision STD module is a collection of classes and functions that facilitate the execution of other modules within the [Dynamsoft Capture Vision architecture](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/). This foundational module plays a crucial role in initializing the WebAssembly (Wasm) runtime environment, which allows for the high-efficiency execution of applications developed utilizing the DCV architecture.
+The Dynamsoft Capture Vision STD module is a collection of classes and functions that facilitate the execution of other modules within the [Dynamsoft Capture Vision architecture]({{ site.dcvb_js}}). This foundational module plays a crucial role in initializing the WebAssembly (Wasm) runtime environment, which allows for the high-efficiency execution of applications developed utilizing the DCV architecture.

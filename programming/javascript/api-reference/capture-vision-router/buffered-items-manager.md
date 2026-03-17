@@ -90,4 +90,4 @@ The `BufferedCharacterItemSet`.
 
 **See Also**
 
-[BufferedCharacterItemSet](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/buffered-character-item-set.html)
+[BufferedCharacterItemSet]({{ site.dlr_js_api }}interfaces/buffered-character-item-set.html)

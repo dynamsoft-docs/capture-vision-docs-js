@@ -34,7 +34,7 @@ barcodeSettings: SimplifiedBarcodeReaderSettings;
 
 **See Also**
 
-[SimplifiedBarcodeReaderSettings](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/simplified-barcode-reader-settings.html)
+[SimplifiedBarcodeReaderSettings]({{ site.dbr_js_api }}interfaces/simplified-barcode-reader-settings.html)
 
 ## capturedResultItemTypes
 
@@ -58,7 +58,7 @@ documentSettings: SimplifiedDocumentNormalizerSettings;
 
 **See Also**
 
-[SimplifiedDocumentNormalizerSettings](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/simplified-document-normalizer-settings.html)
+[SimplifiedDocumentNormalizerSettings]({{ site.ddn_js_api }}interfaces/simplified-document-normalizer-settings.html)
 
 ## labelSettings
 
@@ -70,7 +70,7 @@ labelSettings: Dynamsoft.DLR.SimplifiedLabelRecognizerSettings;
 
 **See Also**
 
-[SimplifiedLabelRecognizerSettings](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/simplified-label-recognizer-settings.html?lang=js)
+[SimplifiedLabelRecognizerSettings]({{ site.dlr_js_api }}interfaces/simplified-label-recognizer-settings.html?lang=js)
 
 ## minImageCaptureInterval
 

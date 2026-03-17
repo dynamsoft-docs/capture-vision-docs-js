@@ -158,7 +158,7 @@ onLocalizedBarcodesReceived?(result: LocalizedBarcodesUnit, info: IntermediateRe
 
 **See Also**
 
-[LocalizedBarcodesUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/localized-barcodes-unit.html)
+[LocalizedBarcodesUnit]({{ site.dbr_js_api }}interfaces/localized-barcodes-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -178,7 +178,7 @@ onDecodedBarcodesReceived?(result: DecodedBarcodesUnit, info: IntermediateResult
 
 **See Also**
 
-[DecodedBarcodesUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/decoded-barcodes-unit.html)
+[DecodedBarcodesUnit]({{ site.dbr_js_api }}interfaces/decoded-barcodes-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -198,7 +198,7 @@ onLocalizedTextLinesReceived?(result: LocalizedTextLinesUnit, info: Intermediate
 
 **See Also**
 
-[LocalizedTextLinesUnit](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/localized-textlines-unit.html?lang=js)
+[LocalizedTextLinesUnit]({{ site.dlr_js_api }}interfaces/localized-textlines-unit.html?lang=js)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -218,7 +218,7 @@ onRecognizedTextLinesReceived?(result: RecognizedTextLinesUnit, info: Intermedia
 
 **See Also**
 
-[RecognizedTextLinesUnit](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/recognized-textlines-unit.html?lang=js)
+[RecognizedTextLinesUnit]({{ site.dlr_js_api }}interfaces/recognized-textlines-unit.html?lang=js)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -238,7 +238,7 @@ onDetectedQuadsReceived?(result: DetectedQuadsUnit, info: IntermediateResultExtr
 
 **See Also**
 
-[DetectedQuadsUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/detected-quads-unit.html)
+[DetectedQuadsUnit]({{ site.ddn_js_api }}interfaces/detected-quads-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -258,7 +258,7 @@ onNormalizedImagesReceived?(result: NormalizedImagesUnit, info: IntermediateResu
 
 **See Also**
 
-[NormalizedImagesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/normalized-images-unit.html)
+[NormalizedImagesUnit]({{ site.ddn_js_api }}interfaces/normalized-images-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -538,7 +538,7 @@ onShortLinesUnitReceived?(result: ShortLinesUnit, info: IntermediateResultExtraI
 
 **See Also**
 
-[ShortLinesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/short-lines-unit.html)
+[ShortLinesUnit]({{ site.ddn_js_api }}interfaces/short-lines-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -558,7 +558,7 @@ onLongLinesUnitReceived?(result: LongLinesUnit, info: IntermediateResultExtraInf
 
 **See Also**
 
-[LongLinesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/long-lines-unit.html)
+[LongLinesUnit]({{ site.ddn_js_api }}interfaces/long-lines-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -578,7 +578,7 @@ onCornersUnitReceived?(result: CornersUnit, info: IntermediateResultExtraInfo): 
 
 **See Also**
 
-[CornersUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/corners-unit.html)
+[CornersUnit]({{ site.ddn_js_api }}interfaces/corners-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -598,7 +598,7 @@ onCandidateQuadEdgesUnitReceived?(result: CandidateQuadEdgesUnit, info: Intermed
 
 **See Also**
 
-[CandidateQuadEdgesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/candidate-quad-edges-unit.html)
+[CandidateQuadEdgesUnit]({{ site.ddn_js_api }}interfaces/candidate-quad-edges-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -618,7 +618,7 @@ onCandidateBarcodeZonesUnitReceived?(result: CandidateBarcodeZonesUnit, info: In
 
 **See Also**
 
-[CandidateBarcodeZonesUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/candidate-barcode-zones-unit.html)
+[CandidateBarcodeZonesUnit]({{ site.dbr_js_api }}interfaces/candidate-barcode-zones-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -638,7 +638,7 @@ onScaledUpBarcodeImageUnitReceived?(result: ScaledUpBarcodeImageUnit, info: Inte
 
 **See Also**
 
-[ScaledUpBarcodeImageUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/scaled-up-barcode-image-unit.html)
+[ScaledUpBarcodeImageUnit]({{ site.dbr_js_api }}interfaces/scaled-up-barcode-image-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -658,7 +658,7 @@ onDeformationResistedBarcodeImageUnitReceived?(result: DeformationResistedBarcod
 
 **See Also**
 
-[DeformationResistedBarcodeImageUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/deformation-resisted-barcode-image-unit.html)
+[DeformationResistedBarcodeImageUnit]({{ site.dbr_js_api }}interfaces/deformation-resisted-barcode-image-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -678,7 +678,7 @@ onComplementedBarcodeImageUnitReceived?(result: ComplementedBarcodeImageUnit, in
 
 **See Also**
 
-[ComplementedBarcodeImageUnit](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interfaces/complemented-barcode-image-unit.html)
+[ComplementedBarcodeImageUnit]({{ site.dbr_js_api }}interfaces/complemented-barcode-image-unit.html)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -698,7 +698,7 @@ onRawTextLinesReceived?(result: RawTextLinesUnit, info: IntermediateResultExtraI
 
 **See Also**
 
-[RawTextLinesUnit](https://www.dynamsoft.com/label-recognition/docs/web/programming/javascript/api-reference/interfaces/raw-textlines-unit.html?lang=js)
+[RawTextLinesUnit]({{ site.dlr_js_api }}interfaces/raw-textlines-unit.html?lang=js)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
 
@@ -718,6 +718,6 @@ onLogicLinesReceived?(result: LogicLinesUnit, info: IntermediateResultExtraInfo)
 
 **See Also**
 
-[LogicLinesUnit](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/api-reference/interfaces/logic-lines-unit.html?lang=js)
+[LogicLinesUnit]({{ site.ddn_js_api }}interfaces/logic-lines-unit.html?lang=js)
 
 [IntermediateResultExtraInfo](../core/intermediate-results/intermediate-result-extra-info.md)
