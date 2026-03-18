@@ -128,11 +128,17 @@ static engineResourcePaths: {
 Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 // To specify the paths for multiple modules:
 Dynamsoft.Core.CoreModule.engineResourcePaths = {
-    "dbrBundle": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader-bundle@11.0.3000/dist/",
+    "dcvBundle": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-bundle@11.0.3000/dist/",
     "dcvData": "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-capture-vision-data@1.0.0/dist/"
 };
 // To specify the path for only one module:
 Dynamsoft.Core.CoreModule.engineResourcePaths.dbrBundle = "https://[SPECIFY-THE-ROOT-DIRECTORY]/dynamsoft-barcode-reader-bundle@11.0.3000/dist/";
+// To specify the path for both rootDirectory and sub-modules:
+Dynamsoft.Core.CoreModule.engineResourcePaths.dbrBundle = {
+    "rootDirectory":"https://[SPECIFY-THE-ROOT-DIRECTORY]",
+    "dcvBundle": "@engineRootDirectory/dynamsoft-capture-vision-bundle@11.0.3000/dist/",
+    "dcvData": "@engineRootDirectory/dynamsoft-capture-vision-data@1.0.0/dist/"
+};
 ```
 
 ## getVersion
