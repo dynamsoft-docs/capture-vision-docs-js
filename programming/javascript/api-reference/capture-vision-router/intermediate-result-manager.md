@@ -16,6 +16,7 @@ The `IntermediateResultManager` class is responsible for handling intermediate r
 | ----------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [addResultReceiver()](#addresultreceiver)       | Adds a `IntermediateResultReceiver` object as the receiver of intermediate results. |
 | [removeResultReceiver()](#removeresultreceiver) | Removes the specified `IntermediateResultReceiver` object.                          |
+| [removeAllResultReceivers()](#removeallresultreceivers) | Removes all `CapturedResultReceiver` objects.                             |
 | [getOriginalImage()](#getoriginalimage)         | Retrieves the original image data.                                                  |
 
 ## addResultReceiver
@@ -87,6 +88,45 @@ intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
 **See Also**
 
 [IntermediateResultReceiver](../capture-vision-router/intermediate-result-receiver.md)
+
+## removeAllResultReceivers
+
+Removes all `CapturedResultReceiver` objects.
+
+**Syntax**
+
+```typescript
+removeAllResultReceivers(): void;
+```
+
+**Parameters**
+
+None.
+
+**Return Value**
+
+None.
+
+**Code snippet**
+
+```javascript
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const receiver1 = new Dynamsoft.CVR.CapturedResultReceiver();
+const receiver2 = new Dynamsoft.CVR.CapturedResultReceiver();
+// ...
+router.addResultReceiver(receiver1);
+router.addResultReceiver(receiver2);
+// ...
+router.removeAllResultReceivers();
+```
+
+**See also**
+
+[CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ### getOriginalImage
 

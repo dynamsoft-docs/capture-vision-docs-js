@@ -82,6 +82,10 @@ Specifies the shortest time span, in milliseconds, that must elapse between two 
 minImageCaptureInterval: number;
 ```
 
+**Remarks**
+
+The logic for `minImageCaptureInterval` = -1 is no longer available in CaptureVisionBundle version 3.4.2000.
+
 ## roi
 
 Designates the region of interest (ROI) within an image, limiting the image processing activities exclusively to this specified area. It is of type `Quadrilateral`.

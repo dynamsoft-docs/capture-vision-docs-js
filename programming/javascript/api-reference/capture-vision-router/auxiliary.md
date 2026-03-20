@@ -32,23 +32,23 @@ maxImageSideLength: number;
 
 ## appendDLModelBuffer
 
-Loads a specific data file containing recognition information. This file typically comprises a Convolutional Neural Networks (CNN) model.
+Appends deep learning models to the memory buffer.
 
 **Syntax**
 
 ```typescript
-static appendDLModelBuffer(dataName: string, dataPath?: string) : Promise<void>;
+static appendDLModelBuffer(dataName: string | Array<string>, dataPath?: string) : Promise<ErrorInfo>;
 ```
 
 **Parameter**
 
-`dataName` : Specifies the name of the data.
+`dataName` : Specifies the names of the model files.
 
 `dataPath`(Optional) : Specifies the path to find the data file. If not specified, the default path points to the package "dynamsoft-capture-vision-data" which has the same root path as the packag"dynamsoft-capture-vision-bundle".
 
 **Return value**
 
-None.
+A promise that resolves when the operation has completed. It provides an object that describes the result.
 
 **Code snippet**
 
@@ -64,7 +64,8 @@ CaptureVisionRouter.appendDLModelBuffer("sample-model.data")
 
 **Remarks**
 
-This method was renamed from `appendModelBuffer()` in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
+- This method was renamed from `appendModelBuffer()` in Dynamsoft Barcode Reader Bundle version 11.2.2000 and Dynamsoft Capture Vision Bundle version 3.2.2000.
+- This method support pass an `Array<string>` in Dynamsoft Barcode Reader Bundle version 11.4.2000 and Dynamsoft Capture Vision Bundle version 3.4.2000.
 
 ## onDataLoadProgressChanged
 

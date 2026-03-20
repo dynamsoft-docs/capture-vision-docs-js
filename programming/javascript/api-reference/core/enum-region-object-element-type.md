@@ -20,10 +20,7 @@ codeAutoHeight: true
 >
 ```javascript
 enum EnumRegionObjectElementType {
-    /** 
-     * Corresponds to the `PredetectedRegionElement` subclass, representing areas within the image identified as potentially significant
-     * for further analysis before detailed processing.
-     */
+    /** Corresponds to the `PredetectedRegionElement` subclass, representing areas within the image identified as potentially significant for further analysis before detailed processing. */
     ROET_PREDETECTED_REGION = 0,
     /** Corresponds to the `LocalizedBarcodeElement` subclass, indicating areas where barcodes have been localized within the image.*/
     ROET_LOCALIZED_BARCODE = 1,
@@ -37,7 +34,13 @@ enum EnumRegionObjectElementType {
     ROET_DETECTED_QUAD = 5,
     /** Corresponds to the `DeskewedImageElement` subclass, referring to images that have been deskewed. */
     ROET_DESKEWED_IMAGE = 6,
-    /** Corresponds to the `EnhancedImageElement` subclass, referring to images that have been enhanced. */
-    ROET_ENHANCED_IMAGE = 7
+    /** Corresponds to the `SourceImageElement` subclass. */
+    ROET_SOURCE_IMAGE = 7,
+    /** Corresponds to the `TargetROIElement` subclass. */
+    ROET_TARGET_ROI = 8,
+    /** Corresponds to the `EnhancedImageElement` subclass, indicating images that have undergone enhancement for better clarity or detail, specifically in the context of enhanced image processing. */
+    ROET_ENHANCED_IMAGE = 9,
+    /** Corresponds to the `AuxiliaryRegionElement` subclass, representing auxiliary regions detected within the image. */
+    ROET_AUXILIARY_REGION = 10
 }
 ```

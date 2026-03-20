@@ -48,12 +48,12 @@ A Promise that resolves with the saved File object.
 This method reads an image from a file. The file format is automatically detected based on the file extension content.
 
 ```typescript
-readFromFile(file: File): Promise<DSImageData>;
+readFromFile(file: Blob | string): Promise<DSImageData>;
 ```
 
 **Parameters**
 
-`file`: The file to read, as a `File` object.
+`file`: The file to read，as a `Blob` or a `string`.
 
 **Return Value**
 
@@ -66,7 +66,7 @@ This method saves an image to memory. The desired file format is inferred from t
 > Should the specified file format be omitted or unsupported, the data will default to being exported in PNG format.
 
 ```typescript
-saveToMemory(image: Blob, format: Core.EnumImageFileFormat) : Promise<number>;
+saveToMemory(image: Blob, format: Core.EnumImageFileFormat): Promise<number>;
 ```
 
 **Parameters**
@@ -100,12 +100,12 @@ A Promise that resolves to the `DSImageData` object.
 This method saves an image to a Base64-encoded string. The desired file format is inferred from the 'format' parameter. Should the specified file format be omitted or unsupported, the data will default to being exported in PNG format.
 
 ```typescript
-SaveToBase64String: (image: Blob, format: Core.EnumImageFileFormat) => Promise<string>;
+SaveToBase64String(image: Blob | DSImageData, format: Core.EnumImageFileFormat): Promise<string>;
 ```
 
 **Parameters**
 
-`image`: The image to be saved, of type `Blob`.
+`image`: The image to be saved, of type `Blob`, `DSImageData`.
 
 `format`: The desired image format.
 
@@ -118,7 +118,7 @@ A promise that resolves with a Base64-encoded string representing the image.
 This method reads an image from a Base64-encoded string. The image format is automatically detected based on the content of the string.
 
 ```typescript
-ReadFromBase64String: (base64String: string) => Promise<Core.DSImageData>;
+ReadFromBase64String(base64String: string): Promise<Core.DSImageData>;
 ```
 
 **Parameters**
