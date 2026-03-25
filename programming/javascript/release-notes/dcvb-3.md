@@ -61,6 +61,12 @@ noTitleIndex: true
 
 - Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
 
+- All methods under the [`ImageProcessor`]({{ site.dcvb_js_api }}utility/image-processor.html) class now additionally accept [`DSImageData`]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html) as an image input type.
+
+- All methods under the [`ImageIO`]({{ site.dcvb_js_api }}utility/image-io.html), [`ImageProcessor`]({{ site.dcvb_js_api }}utility/image-processor.html), and [`ImageDrawer`]({{ site.dcvb_js_api }}utility/image-drawer.html) classes have been changed to static methods.
+
+- [`CodeParserModule.loadSpec()`]({{ site.dcp_js_api }}code-parser-module-class.html#loadspec) now returns a `Promise<ErrorInfo>` instead of `void`.
+
 - Updated default value of `compensation` parameter in [`convertToBinaryLocal()`]({{ site.dcvb_js_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
 
 - [`convertToBinaryGlobal()`]({{ site.dcvb_js_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal()`]({{ site.dcvb_js_api }}utility/image-processor.html#converttobinarylocal) of `ImageProcessor` class now support color, binary and grayscale images as input.
