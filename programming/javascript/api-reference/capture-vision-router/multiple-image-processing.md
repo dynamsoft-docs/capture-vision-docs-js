@@ -235,12 +235,16 @@ const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onCapturedResultReceived = (result) => {
     /* Do something with the result */
 };
-router.addResultReceiver(resultReceiver);
+await router.addResultReceiver(resultReceiver);
 ```
 
 **See also**
 
 [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+This method was updated to an asynchronous method in in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ## removeResultReceiver
 
@@ -268,14 +272,18 @@ const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onCapturedResultReceived = (result) => {
     /* Do something with the result */
 };
-router.addResultReceiver(resultReceiver);
+await router.addResultReceiver(resultReceiver);
 //...
-router.removeResultReceiver(resultReceiver);
+await router.removeResultReceiver(resultReceiver);
 ```
 
 **See also**
 
 [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+This method was updated to an asynchronous method in in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ## removeAllResultReceivers
 
@@ -302,8 +310,8 @@ router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const receiver1 = new Dynamsoft.CVR.CapturedResultReceiver();
 const receiver2 = new Dynamsoft.CVR.CapturedResultReceiver();
 // ...
-router.addResultReceiver(receiver1);
-router.addResultReceiver(receiver2);
+await router.addResultReceiver(receiver1);
+await router.addResultReceiver(receiver2);
 // ...
 router.removeAllResultReceivers();
 ```

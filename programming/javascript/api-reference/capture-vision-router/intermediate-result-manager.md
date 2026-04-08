@@ -46,7 +46,7 @@ intermediateResultReceiver.onDecodedBarcodesReceived = (result, info) => {
     /* Do something with the result */
 };
 const intermediateResultManager = router.getIntermediateResultManager();
-intermediateResultManager.addResultReceiver(intermediateResultReceiver);
+await intermediateResultManager.addResultReceiver(intermediateResultReceiver);
 ```
 
 **See Also**
@@ -80,9 +80,9 @@ intermediateResultReceiver.onDecodedBarcodesReceived = (result, info) => {
     /* Do something with the result */
 };
 const intermediateResultManager = router.getIntermediateResultManager();
-intermediateResultManager.addResultReceiver(intermediateResultReceiver);
+await intermediateResultManager.addResultReceiver(intermediateResultReceiver);
 // ...
-intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
+await intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
 ```
 
 **See Also**
@@ -114,10 +114,10 @@ router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 const receiver1 = new Dynamsoft.CVR.CapturedResultReceiver();
 const receiver2 = new Dynamsoft.CVR.CapturedResultReceiver();
 // ...
-router.addResultReceiver(receiver1);
-router.addResultReceiver(receiver2);
+await router.addResultReceiver(receiver1);
+await router.addResultReceiver(receiver2);
 // ...
-router.removeAllResultReceivers();
+await router.removeAllResultReceivers();
 ```
 
 **See also**
