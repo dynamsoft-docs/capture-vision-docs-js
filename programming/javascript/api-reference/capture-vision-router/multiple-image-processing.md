@@ -216,7 +216,7 @@ Adds a `CapturedResultReceiver` object as the receiver of captured results.
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: CapturedResultReceiver): void;
+addResultReceiver(receiver: CapturedResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -249,7 +249,7 @@ Removes the specified `CapturedResultReceiver` object.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: CapturedResultReceiver): void;
+removeResultReceiver(receiver: CapturedResultReceiver): Promise<void>;
 ```
 
 **Parameters**

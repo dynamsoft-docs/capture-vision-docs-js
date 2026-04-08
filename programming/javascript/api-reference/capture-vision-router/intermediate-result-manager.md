@@ -26,7 +26,7 @@ Adds a `IntermediateResultReceiver` object as the receiver of intermediate resul
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: IntermediateResultReceiver): void;
+addResultReceiver(receiver: IntermediateResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -60,7 +60,7 @@ Removes the specified `IntermediateResultReceiver` object.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: IntermediateResultReceiver): void;
+removeResultReceiver(receiver: IntermediateResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -96,7 +96,7 @@ Removes all `CapturedResultReceiver` objects.
 **Syntax**
 
 ```typescript
-removeAllResultReceivers(): void;
+removeAllResultReceivers(): Promise<void>;
 ```
 
 **Parameters**
