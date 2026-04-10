@@ -169,6 +169,7 @@ breadcrumbText: API Reference
 
 ### Enumerations
 
+* [EnumCodeType]({{ site.dcp_js_api }}enum-code-type.html)
 * [EnumMappingStatus]({{ site.dcp_js_api }}enum-mapping-status.html)
 * [EnumValidationStatus]({{ site.dcp_js_api }}enum-validation-status.html)
 
