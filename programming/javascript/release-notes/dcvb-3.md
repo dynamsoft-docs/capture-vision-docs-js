@@ -9,6 +9,87 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.4.2000 (00/00/2026)
+
+### Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- **PDF417 Localization Model** – Introduces the [`PDF417Localization`]({{ site.dcvb_parameters }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network model for improved detection of PDF417 barcodes, especially under challenging conditions.
+
+- **Code39/ITF Decoding Model** – Adds the [`Code39ITFDecoder`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model for enhanced decoding of Code 39 and ITF barcodes under blurred or low-resolution conditions.
+
+- **Deblur Models for 2D Barcodes** – Adds the [`DataMatrixQRCodeDeblur`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`PDF417Deblur`]({{ site.dcvb_parameters }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models to provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+
+#### ECI (Extended Channel Interpretation) Support
+
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_js_api }}eci-segment.html) interface, along with the `eciSegments` property in the [`BarcodeResultItem`]({{ site.dbr_js_api }}barcode-result-item.html#ecisegments) and [`DecodedBarcodeElement`]({{ site.dbr_js_api }}decoded-barcode-element.html#ecisegments) interfaces, enables access to character encoding information embedded in barcodes.
+
+- **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
+
+#### Performance Improvements
+
+- **On-Demand Model Loading** – Implements lazy loading for AI models, reducing initialization time by loading models only when first needed.
+
+- **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
+
+- **Improved Confidence Scoring** – Enhances confidence score calculation for results from neural network models, providing more accurate quality indicators.
+
+- **DPM Barcode Optimization** – Improves recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+
+#### Identity Document Processing
+
+- **Enhanced Passport Processing** – Improves document edge detection accuracy for passport documents through optimized processing workflows.
+
+- **Portrait Zone Detection** – The `MRZLocalization` model now supports detecting portrait zone on identity documents, enabling automatic extraction of photo regions.
+
+- **New DynamsoftIdentityUtility Module** – Introduces a dedicated module for identity document processing, including the [`IdentityProcessor`]({{ site.dcvb_js_api }}identity-utility/identity-processor.html) class with [`FindPortraitZone()`]({{ site.dcvb_js_api }}identity-utility/identity-processor.html#findportraitzone) method for precise portrait positioning from passports and ID cards.
+
+### New
+
+- Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
+
+- Added [`SetResultCrossVerificationCriteria()`]({{ site.dcvb_js_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`GetResultCrossVerificationCriteria()`]({{ site.dcvb_js_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to `MultiFrameResultCrossFilter` for configurable multi-frame result verification.
+
+- Added [`AuxiliaryRegionElement`]({{ site.dcvb_js_api }}core/intermediate-results/auxiliary-region-element.html) class for representing additional region information detected during processing (e.g., MRZ (Machine Readable Zone), portrait zones).
+
+- Added `ROET_AUXILIARY_REGION` to [`RegionObjectElementType`]({{ site.dcvb_js_api }}core/enum-region-object-element-type.html) enumeration for the new `AuxiliaryRegionElement` class.
+
+- Added auxiliary region element to `LocalizedTextLinesUnit` interface: [`auxiliaryRegionElements()`]({{ site.dlr_js_api }}localized-text-lines-unit.html#auxiliaryregionelements).
+
+### Changed
+
+- Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
+
+- All methods under the [`ImageProcessor`]({{ site.dcvb_js_api }}utility/image-processor.html) class now additionally accept [`DSImageData`]({{ site.dcvb_js_api }}core/basic-structures/ds-image-data.html) as an image input type.
+
+- All methods under the [`ImageIO`]({{ site.dcvb_js_api }}utility/image-io.html), [`ImageProcessor`]({{ site.dcvb_js_api }}utility/image-processor.html), and [`ImageDrawer`]({{ site.dcvb_js_api }}utility/image-drawer.html) classes have been changed to static methods.
+
+- [`CodeParserModule.loadSpec()`]({{ site.dcp_js_api }}code-parser-module-class.html#loadspec) now returns a `Promise<ErrorInfo>` instead of `void`.
+
+- Updated default value of `compensation` parameter in [`convertToBinaryLocal()`]({{ site.dcvb_js_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
+
+- [`convertToBinaryGlobal()`]({{ site.dcvb_js_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal()`]({{ site.dcvb_js_api }}utility/image-processor.html#converttobinarylocal) of `ImageProcessor` class now support color, binary and grayscale images as input.
+
+- Parser resource files (.json) have been consolidated into encrypted .data files for improved security and simplified distribution:
+  - `AADHAAR.data`, `AAMVA_DL_ID.data`, `GS1_AI.data`, `MRTD.data`, `SOUTH_AFRICA_DL.data`, `VIN.data`
+
+- `CameraEnhancer.open()` now returns `Promise<void>` when operating in `singleFrameMode`.
+
+### Removed
+
+- Removed `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+
+- Removed `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+
+### Fixed
+
+- Fixed incorrect coordinate in barcode result when using neural network models with a specified region.
+
+- Fixed crash and hang issues that could occur in certain scenarios.
+
+- Fixed various minor bugs and improved overall stability.
+
 ## 3.2.5000 (12/16/2025)
 
 This release includes security maintenance updates to ensure continued protection of the product.

@@ -17,8 +17,10 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 | [getInput()](#getinput)                               | Returns the image source object.                                                       |
 | [addResultReceiver()](#addresultreceiver)             | Adds a `CapturedResultReceiver` object as the receiver of captured results.            |
 | [removeResultReceiver()](#removeresultreceiver)       | Removes the specified `CapturedResultReceiver` object.                                 |
+| [removeAllResultReceivers()](#removeallresultreceivers) | Removes all `CapturedResultReceiver` objects.                                        |
 | [addResultFilter()](#addresultfilter)                 | Adds a `MultiFrameResultCrossFilter` object to filter non-essential results.           |
 | [removeResultFilter()](#removeresultfilter)           | Removes the specified `MultiFrameResultCrossFilter` object.                            |
+| [removeAllResultFilters()](#removeallresultfilters)   | Removes all `MultiFrameResultCrossFilter` objects.                                     |
 | [startCapturing()](#startcapturing)                   | Initiates a capturing process based on a specified template.                           |
 | [stopCapturing()](#stopcapturing)                     | Stops the capturing process.                                                           |
 | [switchCapturingTemplate()](#switchcapturingtemplate) | Switches the currently active capturing template during the image processing workflow. |
@@ -214,7 +216,7 @@ Adds a `CapturedResultReceiver` object as the receiver of captured results.
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: CapturedResultReceiver): void;
+addResultReceiver(receiver: CapturedResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -233,12 +235,16 @@ const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onCapturedResultReceived = (result) => {
     /* Do something with the result */
 };
-router.addResultReceiver(resultReceiver);
+await router.addResultReceiver(resultReceiver);
 ```
 
 **See also**
 
 [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+This method was updated to an asynchronous method in in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ## removeResultReceiver
 
@@ -247,7 +253,7 @@ Removes the specified `CapturedResultReceiver` object.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: CapturedResultReceiver): void;
+removeResultReceiver(receiver: CapturedResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -266,14 +272,57 @@ const resultReceiver = new Dynamsoft.CVR.CapturedResultReceiver();
 resultReceiver.onCapturedResultReceived = (result) => {
     /* Do something with the result */
 };
-router.addResultReceiver(resultReceiver);
+await router.addResultReceiver(resultReceiver);
 //...
-router.removeResultReceiver(resultReceiver);
+await router.removeResultReceiver(resultReceiver);
 ```
 
 **See also**
 
 [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+This method was updated to an asynchronous method in in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
+
+## removeAllResultReceivers
+
+Removes all `CapturedResultReceiver` objects.
+
+**Syntax**
+
+```typescript
+removeAllResultReceivers(): void;
+```
+
+**Parameters**
+
+None.
+
+**Return Value**
+
+None.
+
+**Code snippet**
+
+```javascript
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const receiver1 = new Dynamsoft.CVR.CapturedResultReceiver();
+const receiver2 = new Dynamsoft.CVR.CapturedResultReceiver();
+// ...
+await router.addResultReceiver(receiver1);
+await router.addResultReceiver(receiver2);
+// ...
+router.removeAllResultReceivers();
+```
+
+**See also**
+
+[CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ## addResultFilter
 
@@ -334,6 +383,44 @@ router.addResultFilter(filter);
 // ...
 router.removeResultFilter(filter);
 ```
+
+## removeAllResultFilters
+
+Removes all `MultiFrameResultCrossFilter` objects.
+
+**Syntax**
+
+```typescript
+removeAllResultFilters(): Promise<void>;
+```
+
+**Parameters**
+
+None.
+
+**Return Value**
+
+A promise that resolves when the operation has successfully completed. It does not provide any value upon resolution.
+
+**Code snippet**
+
+```javascript
+filter1 = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+filter2 = new Dynamsoft.Utility.MultiFrameResultCrossFilter();
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+await router.addResultFilter(filter1);
+await router.addResultFilter(filter2);
+// ...
+await router.removeAllResultFilters();
+```
+
+**See also**
+
+[MultiFrameResultCrossFilter](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/utility/multi-frame-result-cross-filter.html)
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ## startCapturing
 

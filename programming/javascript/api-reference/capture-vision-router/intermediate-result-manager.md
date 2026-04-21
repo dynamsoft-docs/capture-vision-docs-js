@@ -16,6 +16,7 @@ The `IntermediateResultManager` class is responsible for handling intermediate r
 | ----------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [addResultReceiver()](#addresultreceiver)       | Adds a `IntermediateResultReceiver` object as the receiver of intermediate results. |
 | [removeResultReceiver()](#removeresultreceiver) | Removes the specified `IntermediateResultReceiver` object.                          |
+| [removeAllResultReceivers()](#removeallresultreceivers) | Removes all `CapturedResultReceiver` objects.                             |
 | [getOriginalImage()](#getoriginalimage)         | Retrieves the original image data.                                                  |
 
 ## addResultReceiver
@@ -25,7 +26,7 @@ Adds a `IntermediateResultReceiver` object as the receiver of intermediate resul
 **Syntax**
 
 ```typescript
-addResultReceiver(receiver: IntermediateResultReceiver): void;
+addResultReceiver(receiver: IntermediateResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -45,7 +46,7 @@ intermediateResultReceiver.onDecodedBarcodesReceived = (result, info) => {
     /* Do something with the result */
 };
 const intermediateResultManager = router.getIntermediateResultManager();
-intermediateResultManager.addResultReceiver(intermediateResultReceiver);
+await intermediateResultManager.addResultReceiver(intermediateResultReceiver);
 ```
 
 **See Also**
@@ -59,7 +60,7 @@ Removes the specified `IntermediateResultReceiver` object.
 **Syntax**
 
 ```typescript
-removeResultReceiver(receiver: IntermediateResultReceiver): void;
+removeResultReceiver(receiver: IntermediateResultReceiver): Promise<void>;
 ```
 
 **Parameters**
@@ -79,14 +80,53 @@ intermediateResultReceiver.onDecodedBarcodesReceived = (result, info) => {
     /* Do something with the result */
 };
 const intermediateResultManager = router.getIntermediateResultManager();
-intermediateResultManager.addResultReceiver(intermediateResultReceiver);
+await intermediateResultManager.addResultReceiver(intermediateResultReceiver);
 // ...
-intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
+await intermediateResultManager.removeResultReceiver(intermediateResultReceiver);
 ```
 
 **See Also**
 
 [IntermediateResultReceiver](../capture-vision-router/intermediate-result-receiver.md)
+
+## removeAllResultReceivers
+
+Removes all `CapturedResultReceiver` objects.
+
+**Syntax**
+
+```typescript
+removeAllResultReceivers(): Promise<void>;
+```
+
+**Parameters**
+
+None.
+
+**Return Value**
+
+None.
+
+**Code snippet**
+
+```javascript
+router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const receiver1 = new Dynamsoft.CVR.CapturedResultReceiver();
+const receiver2 = new Dynamsoft.CVR.CapturedResultReceiver();
+// ...
+await router.addResultReceiver(receiver1);
+await router.addResultReceiver(receiver2);
+// ...
+await router.removeAllResultReceivers();
+```
+
+**See also**
+
+[CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html)
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
 ### getOriginalImage
 
