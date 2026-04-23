@@ -36,7 +36,7 @@ The type of the captured result item, indicating what kind of data it represents
 
 **See Also**
 
-[EnumCapturedResultItemType]({{ site.dcvb_enums }}core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../enum-captured-result-item-type.md)
 
 ## referenceItem
 
