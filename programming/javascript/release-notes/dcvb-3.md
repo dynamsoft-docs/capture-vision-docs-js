@@ -9,7 +9,18 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
-## 3.4.2000 (00/00/2026)
+## 3.4.2001 (04/24/2026)
+
+### Fixed
+
+- Fixed an issue where coordinate conversion could behave abnormally after large images were compressed.
+- Fixed an issue where abnormal DCEFrame `imageData` could cause errors in the `toCanvas()` method.
+
+### improved
+
+- Optimized the behavior of the Dynamsoft Camera Enhancer torch and other camera-related features.
+
+## 3.4.2000 (04/21/2026)
 
 ### Highlights
 
