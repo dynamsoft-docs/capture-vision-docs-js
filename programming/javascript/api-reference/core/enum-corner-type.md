@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CornerType - Dynamsoft Core Enumerations
+title: CornerType Enum – Dynamsoft Capture Vision JavaScript API
 description: The enumeration CornerType of Dynamsoft Core describes how the corner is formed by its sides.
 keywords: Corner type
 needGenerateH3Content: true

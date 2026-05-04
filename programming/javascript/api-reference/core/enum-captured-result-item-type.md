@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CapturedResultItemType - Dynamsoft Core Enumerations
+title: CapturedResultItemType Enum – Capture Vision  Core Enumerations
 description: The enumeration CapturedResultItemType of Dynamsoft Core describes all types of captured result item.
 keywords: Captured result types
 needGenerateH3Content: true

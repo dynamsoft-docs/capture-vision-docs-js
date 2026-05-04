@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ErrorCode - Dynamsoft Core Enumerations
+title: ErrorCode Enum – Dynamsoft Capture Vision JavaScript API Ref
 description: The enumeration ErrorCode of Dynamsoft Core describes all error codes.
 keywords: Error code
 needGenerateH3Content: true
