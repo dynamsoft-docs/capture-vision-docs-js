@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CrossVerificationStatus - Dynamsoft Core Enumerations
+title: CrossVerificationStatus Enum – Capture Vision JavaScript API
 description: The enumeration CrossVerificationStatus of Dynamsoft Core describes the status of the captured results.
 keywords: cross verification status
 needGenerateH3Content: true

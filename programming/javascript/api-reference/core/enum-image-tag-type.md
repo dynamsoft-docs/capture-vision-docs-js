@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageTagType - Dynamsoft Core Enumerations
+title: ImageTagType Enum – Dynamsoft Capture Vision JavaScript SDK
 description: The enumeration ImageTagType of Dynamsoft Core describes the types of image tags.
 keywords: Image tag type
 needGenerateH3Content: true

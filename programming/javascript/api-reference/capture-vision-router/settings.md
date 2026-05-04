@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Settings - Dynamsoft Capture Vision JavaScript Edition API
+title: CaptureVisionRouter Settings – Capture Vision JavaScript API
 description: This page introduces APIs related to the Settings of CaptureVisionRouter of Dynamsoft Capture Vision JavaScript Edition.
 keywords: capture vision, router, Settings, api reference, javascript, js
 needAutoGenerateSidebar: true

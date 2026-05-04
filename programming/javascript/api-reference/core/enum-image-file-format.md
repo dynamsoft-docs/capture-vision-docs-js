@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageFileFormat - Dynamsoft Core Enumerations
+title: ImageFileFormat Enum – Dynamsoft Capture Vision JavaScript
 description: The enumeration ImageFileFormat of Dynamsoft Core describes the format of image files.
 keywords: Image pixel format
 needGenerateH3Content: true
