@@ -31,7 +31,7 @@ A string representing the version of the Identity Utility module.
 **Code snippet**
 
 ```javascript
-const version = Dynamsoft.DBR.IdentityUtilityModule.getVersion();
+const version = Dynamsoft.IdentityUtility.IdentityUtilityModule.getVersion();
 console.log(version);
 ```
 

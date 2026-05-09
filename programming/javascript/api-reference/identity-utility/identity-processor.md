@@ -35,7 +35,7 @@ A promise that resolves with a `Quadrilateral` object defining the precise locat
 **Code snippet**
 
 ```javascript
-const quad = await Dynamsoft.DBR.IdentityProcessor.findPortraitZone();
+const quad = await Dynamsoft.IdentityUtility.IdentityProcessor.findPortraitZone();
 if (quad) {
     console.log("Portrait zone found:", quad);
 } else {
