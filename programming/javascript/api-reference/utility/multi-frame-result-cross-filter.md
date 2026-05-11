@@ -41,7 +41,7 @@ Enables or disables the latest overlapping of specific result item types.
 > Please note that this feature is currently only available for barcodes reading.
 
 ```typescript
-enableLatestOverlapping(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", enabled: boolean): void;
+enableLatestOverlapping(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", enabled: boolean): void;
 ```
 
 **Parameters**
@@ -63,7 +63,7 @@ None.
 Checks if latest overlapping is active for a given result item type.
 
 ```typescript
-isLatestOverlappingEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): boolean;
+isLatestOverlappingEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): boolean;
 ```
 
 **Parameters**
@@ -83,7 +83,7 @@ Boolean indicating the status of the latest overlapping for the specified type.
 Enables or disables the verification of specific result item types.
 
 ```typescript
-enableResultCrossVerification(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", enabled: boolean): void;
+enableResultCrossVerification(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", enabled: boolean): void;
 ```
 
 **Parameters**
@@ -105,7 +105,7 @@ None.
 Checks if verification is active for a given result item type.
 
 ```typescript
-isResultCrossVerificationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): boolean;
+isResultCrossVerificationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): boolean;
 ```
 
 **Parameters**
@@ -148,6 +148,14 @@ None.
 
 Added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
 
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| `"barcode"` (DBR) | 5 | 2 |
+| `"text_line"` (DLR) | 5 | 2 |
+| `"detected_quad"` / `"deskewed_image"` (DDN) | 6 | 4 |
+
 ### getResultCrossVerificationCriteria
 
 Retrieves the cross-verification criteria for a specified result item type, including the configured frame window and minimum consistency requirement.
@@ -180,7 +188,7 @@ Added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4
 Enables or disables the deduplication process for specific result item types.
 
 ```typescript
-enableResultDeduplication(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", enabled: boolean): void;
+enableResultDeduplication(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", enabled: boolean): void;
 ```
 
 **Parameters**
@@ -202,7 +210,7 @@ None.
 Checks if deduplication is active for a given result item type.
 
 ```typescript
-isResultDeduplicationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): boolean;
+isResultDeduplicationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): boolean;
 ```
 
 **Parameters**
@@ -222,7 +230,7 @@ Boolean indicating the deduplication status for the specified type.
 Sets the interval during which duplicates are disregarded for specific result item types.
 
 ```typescript
-setDuplicateForgetTime(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", time: number): void;
+setDuplicateForgetTime(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", time: number): void;
 ```
 
 **Parameters**
@@ -239,12 +247,16 @@ None.
 
 [EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
+
 ### getDuplicateForgetTime
 
 Retrieves the interval during which duplicates are disregarded for a given result item type.
 
 ```typescript
-getDuplicateForgetTime(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): number;
+getDuplicateForgetTime(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): number;
 ```
 
 **Parameters**
@@ -264,7 +276,7 @@ The set interval for the specified item type.
 Set the maximum overlapping frames count for a given result item type.
 
 ```typescript
-setMaxOverlappingFrames(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", maxOverlappingFrames: number): void;
+setMaxOverlappingFrames(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", maxOverlappingFrames: number): void;
 ```
 
 **Parameters**
@@ -286,7 +298,7 @@ None.
 Get the maximum overlapping frames count for a given result item type.
 
 ```typescript
-getMaxOverlappingFrames(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): number;
+getMaxOverlappingFrames(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): number;
 ```
 
 **Parameters**
