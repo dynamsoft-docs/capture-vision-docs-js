@@ -56,7 +56,7 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### isLatestOverlappingEnabled
 
@@ -76,7 +76,7 @@ Boolean indicating the status of the latest overlapping for the specified type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### enableResultCrossVerification
 
@@ -98,7 +98,7 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### isResultCrossVerificationEnabled
 
@@ -118,7 +118,7 @@ Boolean indicating the status of verification for the specified type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### setResultCrossVerificationCriteria
 
@@ -142,7 +142,7 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 **Remarks**
 
@@ -169,7 +169,7 @@ An object containing:
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 **Remarks**
 
@@ -195,7 +195,7 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### isResultDeduplicationEnabled
 
@@ -215,7 +215,7 @@ Boolean indicating the deduplication status for the specified type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### setDuplicateForgetTime
 
@@ -237,7 +237,7 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### getDuplicateForgetTime
 
@@ -257,7 +257,7 @@ The set interval for the specified item type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### setMaxOverlappingFrames
 
@@ -279,7 +279,7 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### getMaxOverlappingFrames
 
@@ -299,7 +299,7 @@ The maximum overlapping frame count for the overlapping.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### onOriginalImageResultReceived
 
