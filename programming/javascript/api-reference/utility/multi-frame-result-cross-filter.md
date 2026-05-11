@@ -41,7 +41,7 @@ Enables or disables the latest overlapping of specific result item types.
 > Please note that this feature is currently only available for barcodes reading.
 
 ```typescript
-enableLatestOverlapping(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", enabled: boolean): void;
+enableLatestOverlapping(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", enabled: boolean): void;
 ```
 
 **Parameters**
@@ -56,14 +56,14 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### isLatestOverlappingEnabled
 
 Checks if latest overlapping is active for a given result item type.
 
 ```typescript
-isLatestOverlappingEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): boolean;
+isLatestOverlappingEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): boolean;
 ```
 
 **Parameters**
@@ -76,14 +76,14 @@ Boolean indicating the status of the latest overlapping for the specified type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### enableResultCrossVerification
 
 Enables or disables the verification of specific result item types.
 
 ```typescript
-enableResultCrossVerification(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", enabled: boolean): void;
+enableResultCrossVerification(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", enabled: boolean): void;
 ```
 
 **Parameters**
@@ -98,14 +98,14 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### isResultCrossVerificationEnabled
 
 Checks if verification is active for a given result item type.
 
 ```typescript
-isResultCrossVerificationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): boolean;
+isResultCrossVerificationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): boolean;
 ```
 
 **Parameters**
@@ -118,7 +118,7 @@ Boolean indicating the status of verification for the specified type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### setResultCrossVerificationCriteria
 
@@ -142,11 +142,19 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 **Remarks**
 
 Added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4.2000.
+
+The default criteria per result type are:
+
+| Result Type | `frameWindow` | `minConsistentFrames` |
+| --- | --- | --- |
+| `"barcode"` (DBR) | 5 | 2 |
+| `"text_line"` (DLR) | 5 | 2 |
+| `"detected_quad"` / `"deskewed_image"` (DDN) | 6 | 4 |
 
 ### getResultCrossVerificationCriteria
 
@@ -169,7 +177,7 @@ An object containing:
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 **Remarks**
 
@@ -180,7 +188,7 @@ Added in CaptureVisionBundle version 3.4.2000 & BarcodeReaderBundle version 11.4
 Enables or disables the deduplication process for specific result item types.
 
 ```typescript
-enableResultDeduplication(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", enabled: boolean): void;
+enableResultDeduplication(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", enabled: boolean): void;
 ```
 
 **Parameters**
@@ -195,14 +203,14 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### isResultDeduplicationEnabled
 
 Checks if deduplication is active for a given result item type.
 
 ```typescript
-isResultDeduplicationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): boolean;
+isResultDeduplicationEnabled(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): boolean;
 ```
 
 **Parameters**
@@ -215,14 +223,14 @@ Boolean indicating the deduplication status for the specified type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### setDuplicateForgetTime
 
 Sets the interval during which duplicates are disregarded for specific result item types.
 
 ```typescript
-setDuplicateForgetTime(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", time: number): void;
+setDuplicateForgetTime(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", time: number): void;
 ```
 
 **Parameters**
@@ -237,14 +245,18 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
+
+**Remarks**
+
+The default value is 3,000 milliseconds. This means that when result deduplication is enabled, identical results appearing within 3 seconds of each other will be filtered out by default.
 
 ### getDuplicateForgetTime
 
 Retrieves the interval during which duplicates are disregarded for a given result item type.
 
 ```typescript
-getDuplicateForgetTime(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): number;
+getDuplicateForgetTime(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): number;
 ```
 
 **Parameters**
@@ -257,14 +269,14 @@ The set interval for the specified item type.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### setMaxOverlappingFrames
 
 Set the maximum overlapping frames count for a given result item type.
 
 ```typescript
-setMaxOverlappingFrames(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image", maxOverlappingFrames: number): void;
+setMaxOverlappingFrames(resultItemTypes: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image", maxOverlappingFrames: number): void;
 ```
 
 **Parameters**
@@ -279,14 +291,14 @@ None.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### getMaxOverlappingFrames
 
 Get the maximum overlapping frames count for a given result item type.
 
 ```typescript
-getMaxOverlappingFrames(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image" | "enhanced_image"): number;
+getMaxOverlappingFrames(resultItemType: Core.EnumCapturedResultItemType | "barcode" | "text_line" | "detected_quad" | "deskewed_image"): number;
 ```
 
 **Parameters**
@@ -299,7 +311,7 @@ The maximum overlapping frame count for the overlapping.
 
 **See Also**
 
-[EnumCapturedResultItemType](https://www.dynamsoft.com/capture-vision/docs/core/enums/core/captured-result-item-type.html?lang=js)
+[EnumCapturedResultItemType](../core/enum-captured-result-item-type.html?lang=js)
 
 ### onOriginalImageResultReceived
 
