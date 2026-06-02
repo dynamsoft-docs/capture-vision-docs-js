@@ -100,14 +100,14 @@ A Promise that resolves to the `DSImageData` object.
 This method saves an image to a Base64-encoded string. The desired file format is inferred from the 'format' parameter. Should the specified file format be omitted or unsupported, the data will default to being exported in PNG format.
 
 ```typescript
-SaveToBase64String(image: Blob | DSImageData, format: Core.EnumImageFileFormat): Promise<string>;
+saveToBase64String(image: Blob | DSImageData, fileFormat: string): Promise<string>;
 ```
 
 **Parameters**
 
 `image`: The image to be saved, of type `Blob`, `DSImageData`.
 
-`format`: The desired image format.
+`fileFormat`: The desired image format.
 
 **Return Value**
 
