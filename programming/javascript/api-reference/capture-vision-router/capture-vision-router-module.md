@@ -27,11 +27,11 @@ The `CaptureVisionRouter` class defines how a user interacts with image-processi
 | [dispose()](./instantiate.md#dispose)                        | Releases all resources used by the `CaptureVisionRouter` instance.       |
 | [disposed](./instantiate.md#disposed)                        | Returns whether the `CaptureVisionRouter` instance has been disposed of. |
 
-### Single-Image Processing
+### Single-File Processing
 
 | Name                                              | Description                                                                                   |
 | ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [capture()](./single-image-processing.md#capture) | Processes a single image or a file containing a single image to derive important information. |
+| [capture()](./single-image-processing.md#capture) | Processes a single image or file to derive important information. |
 
 ### Multiple-Image Processing
 
