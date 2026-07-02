@@ -1,23 +1,23 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter Single Process - Dynamsoft Capture Vision JavaScript Edition API
-description: This page introduces APIs related to Single Process with Dynamsoft Capture Vision JavaScript Edition.
-keywords: capture vision, caputre, image processing, api reference, javascript, js
+title: CaptureVisionRouter Single File Processing - Dynamsoft Capture Vision JavaScript Edition API
+description: This page introduces APIs related to processing single files, including images and multi-page PDF documents.
+keywords: capture vision, file processing, api reference, javascript, js
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 breadcrumbText: CVR JavaScript CaptureVisionRouter
 ---
 
-# CaptureVisionRouter Single Image Processing
+# CaptureVisionRouter Single File Processing
 
 | Name                  | Description                                                                                   |
 | --------------------- | --------------------------------------------------------------------------------------------- |
-| [capture()](#capture) | Processes a single image or a file containing a single image to derive important information. |
+| [capture()](#capture) | Processes a single image or file to derive important information. |
 
 ## capture
 
-Processes a single image or a file containing a single image to derive important information.
+Processes a single image or file to derive important information.
 
 **Syntax**
 
@@ -31,7 +31,7 @@ capture(imageOrFile: Blob | HTMLImageElement | HTMLCanvasElement | HTMLVideoElem
 
   >The following data types are accepted: `Blob`, `HTMLImageElement`, `HTMLCanvasElement`, `HTMLVideoElement`, `DSImageData`, `string`.
   >
-  >The supported image formats include: `.jpg`,`.jpeg`,`.icon`,`.gif`,`.svg`,`.webp`,`.png`,`.bmp`.
+  >The supported image formats include: `.jpg`, `.jpeg`, `.icon`, `.gif`, `.svg`, `.webp`, `.png`, `.bmp`.
 
 `templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, the preset template named 'Default' will be used.
 
@@ -41,7 +41,7 @@ Please be aware that the [preset CaptureVisionTemplates](./preset-templates.md) 
 
 **Return value**
 
-A promise that resolves with a [CapturedResult]({{ site.dcv_js_api }}interfaces/captured-result.html) object which contains the derived information from the image processed.
+A promise that resolves with a [CapturedResult]({{ site.dcv_js_api }}interfaces/captured-result.html) object which contains the derived information from the file processed.
 
 **Code snippet**
 
