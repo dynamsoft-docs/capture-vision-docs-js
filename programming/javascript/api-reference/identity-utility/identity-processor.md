@@ -45,4 +45,4 @@ if (quad) {
 
 **Remarks**
 
-New added in CaptureVisionBundle version 3.4.2000.
+Added in CaptureVisionBundle version 3.4.2000.

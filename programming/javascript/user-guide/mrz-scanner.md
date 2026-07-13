@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Scan & Parse MRZ  - Dynamsoft Capture Vision JavaScript Edition
-description: This page introduce how to use Dynamsoft Capture Vision JS edition to recognize the Machine-Readable Zone (MRZ) on a passport or ID card and converts the encoded strings into human-readable fields.
+description: This page introduces how to use Dynamsoft Capture Vision JS edition to recognize the Machine-Readable Zone (MRZ) on a passport or ID card and converts the encoded strings into human-readable fields.
 keywords: JavaScript, scan mrz, read mrz, scan passport, read passport, scan id mrz, read id mrz
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -272,9 +272,9 @@ Dynamsoft.Core.CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdel
 
 *Note*:
 
-* Certain legacy web application servers may lack support for the `application/wasm` mimetype for .wasm files. To address this, you have two options:
-  1. Upgrade your web application server to one that supports the `application/wasm` mimetype.
-  2. Manually define the mimetype on your server. You can refer to the following resources for guidance:
+* Certain legacy web application servers may lack support for the `application/wasm` MIME type for .wasm files. To address this, you have two options:
+  1. Upgrade your web application server to one that supports the `application/wasm` MIME type.
+  2. Manually define the MIME type on your server. You can refer to the following resources for guidance:
      1. [Apache](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess#media_types_and_character_encodings){:target="_blank"}
      2. [IIS](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/staticcontent/mimemap){:target="_blank"}
      3. [Nginx](https://www.nginx.com/resources/wiki/start/topics/examples/full/#mime-types){:target="_blank"}
