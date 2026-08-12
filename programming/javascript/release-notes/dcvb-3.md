@@ -15,7 +15,7 @@ noTitleIndex: true
 
 #### DataMatrix Color Inversion Detection
 
-- **Handle normal and inverted DataMatrix more efficiently** - Added [`AutoDetectColorInversion`]({{ site.dcvb_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) to automatically handle both normal and inverted DataMatrix barcodes. Instead of processing the whole image twice, the SDK applies dual-polarity handling only to localized DataMatrix regions, which makes processing faster in dual-polarity scenarios.
+- **Handle normal and inverted DataMatrix more efficiently** - Added [`AutoDetectColorInversion`]({{ site.dcvb_parameters }}barcode-format-specification/auto-detect-color-inversion.html) to automatically handle both normal and inverted DataMatrix barcodes. Instead of processing the whole image twice, the SDK applies dual-polarity handling only to localized DataMatrix regions, which makes processing faster in dual-polarity scenarios.
 
 #### Barcode Layout Analysis
 
@@ -27,14 +27,14 @@ noTitleIndex: true
 
 #### Text Line Orientation Detection
 
-- **Improved handling of rotated text lines** - Added [`OrientationDetectionModes`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/orientation-detection-modes.html) to detect text line orientation and correct it for further processing. Two modes are available: `ODM_SPATIAL_REFERENCES` and `ODM_CHARS_ORIENTATION_NEURAL_NETWORK`.
+- **Improved handling of rotated text lines** - Added [`OrientationDetectionModes`]({{ site.dcvb_parameters }}label-recognizer-task-settings/orientation-detection-modes.html) to detect text line orientation and correct it for further processing. Two modes are available: `ODM_SPATIAL_REFERENCES` and `ODM_CHARS_ORIENTATION_NEURAL_NETWORK`.
 - **Current limitations** - This capability is currently effective only in MRZ scenarios and supports only upright and upside-down text lines (0 degrees and 180 degrees). It does not yet handle 90 degrees, 270 degrees, or arbitrary rotation angles.
 
 ### New
 
 - Added support for Micro PDF417-specific decoding mode.
 
-- Added [`AutoDetectColorInversion`]({{ site.dcvb_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) parameter for `BarcodeFormatSpecification` to support automatic color-inversion detection for DataMatrix barcodes.
+- Added [`AutoDetectColorInversion`]({{ site.dcvb_parameters }}barcode-format-specification/auto-detect-color-inversion.html) parameter for `BarcodeFormatSpecification` to support automatic color-inversion detection for DataMatrix barcodes.
 
 - Added [`LayoutAnalyzer`]({{ site.dcvb_js_api }}utility/layout-analyzer.html) class with [`analyze()`]({{ site.dcvb_js_api }}utility/layout-analyzer.html#analyze) static method for quadrilateral layout analysis.
 
@@ -48,13 +48,13 @@ noTitleIndex: true
 
 - Added a new `GridBarcodeScanner` sample (with `sample_grid.png`) to demonstrate how to use [`LayoutAnalyzer`]({{ site.dcvb_js_api }}utility/layout-analyzer.html) for barcode grid layout detection and logical row/column mapping.
 
-- Added [`OrientationDetectionModes`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/orientation-detection-modes.html) parameter for the [`SST_LOCALIZE_TEXT_LINES`]({{ site.dcvb_parameters_reference }}label-recognizer-task-settings/stage-localize-text-lines.html) stage with two supported modes: `ODM_SPATIAL_REFERENCES` and `ODM_CHARS_ORIENTATION_NEURAL_NETWORK`.
+- Added [`OrientationDetectionModes`]({{ site.dcvb_parameters }}label-recognizer-task-settings/orientation-detection-modes.html) parameter for the [`SST_LOCALIZE_TEXT_LINES`]({{ site.dcvb_parameters }}label-recognizer-task-settings/stage-localize-text-lines.html) stage with two supported modes: `ODM_SPATIAL_REFERENCES` and `ODM_CHARS_ORIENTATION_NEURAL_NETWORK`.
 
 - Added `TextLineOrientationCls.data` model file for text line orientation classification.
 
 ### Changed
 
-- [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html) now controls the total number of Work-level threads in the CVR thread pool. For DBR tasks, each Localization Work and Decoding Work occupies one thread slot. DLR and DDN tasks continue to occupy one thread per task.
+- [`MaxParallelTasks`]({{ site.dcvb_parameters }}capture-vision-template/max-parallel-tasks.html) now controls the total number of Work-level threads in the CVR thread pool. For DBR tasks, each Localization Work and Decoding Work occupies one thread slot. DLR and DDN tasks continue to occupy one thread per task.
 
 - [`set_device_friendly_name()`]({{ site.dcvb_js_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcvb_js_api }}core/enum-error-code.html) if constraints are not met.
 
