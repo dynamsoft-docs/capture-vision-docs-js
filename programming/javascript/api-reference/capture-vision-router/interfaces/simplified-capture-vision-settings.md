@@ -21,6 +21,8 @@ interface SimplifiedCaptureVisionSettings {
     minImageCaptureInterval: number;
     roi: Quadrilateral;
     roiMeasuredInPercentage: boolean;
+    timeout: number;
+    maxParallelTasks: number;
 }
 ```
 
@@ -105,3 +107,23 @@ Determines if the coordinates for the region of interest (ROI) are expressed in 
 ```typescript
 roiMeasuredInPercentage: boolean;
 ```
+
+## timeout
+
+Specifies the timeout duration for processing an image, in milliseconds.
+
+```typescript
+timeout: number;
+```
+
+## maxParallelTasks
+
+Specifies the maximum number of parallel tasks for image processing.
+
+```typescript
+maxParallelTasks: number;
+```
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.6.2000 & BarcodeReaderBundle version 11.6.2000.

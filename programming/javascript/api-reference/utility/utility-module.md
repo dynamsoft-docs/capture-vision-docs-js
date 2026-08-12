@@ -12,7 +12,7 @@ breadcrumbText: Utility Module
 
 # DynamsoftUtility Module
 
-The Utility module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager` and `MultiFrameResultCrossFilter`.
+The Utility module is defined in the namespace `Dynamsoft.Utility`. At present, it consists of the classes `UtilityModule`, `ImageManager`, `MultiFrameResultCrossFilter` and `LayoutAnalyzer`.
 
 ## UtilityModule Class
 
@@ -71,3 +71,27 @@ The `MultiFrameResultCrossFilter` class provides APIs to configure the filtering
 | [getDuplicateForgetTime()](./multi-frame-result-cross-filter.md#getduplicateforgettime)                     | Retrieves the interval during which duplicates are disregarded for a given result item type. |
 | [setMaxOverlappingFrames()](./multi-frame-result-cross-filter.md#setmaxoverlappingframes)                   | Set the maximum overlapping frames count for a given result item type.                       |
 | [getMaxOverlappingFrames()](./multi-frame-result-cross-filter.md#getmaxoverlappingframes)                   | Get the maximum overlapping frames count for a given result item type.                       |
+
+## LayoutAnalyzer Class
+
+The `LayoutAnalyzer` class provides APIs for analyzing the spatial distribution of quadrilaterals.
+
+| Name                                                          | Description                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `static` [analyze()](./layout-analyzer.md#analyze)            | Analyzes the spatial distribution of quadrilaterals.                |
+
+## Interfaces
+
+The following are the interfaces used by the layout analysis feature:
+
+* [LayoutAxis](./layout-axis.md)
+* [LayoutAnalysisParameter](./layout-analysis-parameter.md)
+* [LayoutElement](./layout-element.md)
+* [LayoutAnalysisResult](./layout-analysis-result.md)
+
+## Enumerations
+
+The following are the enumerations used by the layout analysis feature:
+
+* [EnumLayoutPattern](./enum-layout-pattern.md)
+* [EnumLayoutElementSource](./enum-layout-element-source.md)
