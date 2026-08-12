@@ -58,8 +58,6 @@ noTitleIndex: true
 
 - [`set_device_friendly_name()`]({{ site.dcvb_js_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcvb_js_api }}core/enum-error-code.html) if constraints are not met.
 
-- Improved the default display behavior of corner adjustment points in `ImageEditorView`. Previously, users had to tap the view before the corner adjustment points became visible.
-
 ### Fixed
 
 - Fixed an issue in GS1-Databar AI `17` (YYMMDD) results where the month field could be missing a leading zero.
