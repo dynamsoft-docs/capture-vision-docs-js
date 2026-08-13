@@ -21,8 +21,12 @@ The `IdentityProcessor` class provides utility APIs for processing identity docu
 Finds the precise location of the portrait zone on an identity document.
 
 ```typescript
-static findPortraitZone(): Promise<Quadrilateral | null>;
+static findPortraitZone(cvRouter: CaptureVisionRouter): Promise<Quadrilateral | null>;
 ```
+
+**Parameters**
+
+`cvRouter`: A `CaptureVisionRouter` instance used to perform the detection.
 
 **Return Value**
 
@@ -35,7 +39,8 @@ A promise that resolves with a `Quadrilateral` object defining the precise locat
 **Code snippet**
 
 ```javascript
-const quad = await Dynamsoft.IdentityUtility.IdentityProcessor.findPortraitZone();
+let router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
+const quad = await Dynamsoft.IdentityUtility.IdentityProcessor.findPortraitZone(router);
 if (quad) {
     console.log("Portrait zone found:", quad);
 } else {
@@ -45,4 +50,4 @@ if (quad) {
 
 **Remarks**
 
-Added in CaptureVisionBundle version 3.4.2000.
+Added in CaptureVisionBundle version 3.4.2000. Starting from version 3.6.2000, a `CaptureVisionRouter` instance is required as a parameter.

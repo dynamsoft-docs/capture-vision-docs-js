@@ -18,8 +18,8 @@ The `ImageIO` class provides APIs for images reading and saving.
 | [readFromFile()](#readfromfile)     | Reads an image from a file                                     |
 | [saveToMemory()](#savetomemory)     | Saves an image to memory.                                      |
 | [readFromMemory()](#readfrommemory) | Reads image data from memory using the specified ID.           |
-| [SaveToBase64String()](#savetobase64string)         | Saves the specified image to a Base64-encoded string.         |
-| [ReadFromBase64String()](#readfrombase64string)     | Reads an image from a Base64-encoded string                                     |
+| [saveToBase64String()](#savetobase64string)         | Saves the specified image to a Base64-encoded string.         |
+| [readFromBase64String()](#readfrombase64string)     | Reads an image from a Base64-encoded string                                     |
 
 ## saveToFile
 
@@ -95,7 +95,7 @@ readFromMemory(id: number) : Promise<Core.DSImageData>;
 
 A Promise that resolves to the `DSImageData` object.
 
-## SaveToBase64String
+## saveToBase64String
 
 This method saves an image to a Base64-encoded string. The desired file format is inferred from the 'format' parameter. Should the specified file format be omitted or unsupported, the data will default to being exported in PNG format.
 
@@ -113,12 +113,12 @@ saveToBase64String(image: Blob | DSImageData, fileFormat: string): Promise<strin
 
 A promise that resolves with a Base64-encoded string representing the image.
 
-## ReadFromBase64String
+## readFromBase64String
 
 This method reads an image from a Base64-encoded string. The image format is automatically detected based on the content of the string.
 
 ```typescript
-ReadFromBase64String(base64String: string): Promise<Core.DSImageData>;
+readFromBase64String(base64String: string): Promise<Core.DSImageData>;
 ```
 
 **Parameters**

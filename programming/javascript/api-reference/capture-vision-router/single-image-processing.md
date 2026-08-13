@@ -14,6 +14,7 @@ breadcrumbText: CVR JavaScript CaptureVisionRouter
 | Name                  | Description                                                                                   |
 | --------------------- | --------------------------------------------------------------------------------------------- |
 | [capture()](#capture) | Processes a single image or file to derive important information. |
+| [captureMultiPages()](#capturemultipages) | Processes a multi-page PDF file and returns the extracted content for each page. |
 
 ## capture
 
@@ -53,3 +54,32 @@ for(let i = 0; i < count; i++) {
     //...
 }
 ```
+
+## captureMultiPages
+
+Captures multiple pages from a PDF file and returns the extracted content for each specified page.
+
+**Syntax**
+
+```typescript
+captureMultiPages(file: Blob | string, templateName?: string, options?: PDFOptions): Promise<CapturedResult[]>;
+```
+
+**Parameters**
+
+`file`: the PDF file to process. Can be provided as a `Blob` object or a file path string.
+
+`templateName`: specifies a "CaptureVisionTemplate" to use. If not specified, the preset template named 'Default' will be used.
+
+`options`: optional configuration parameters for the capture operation.
+
+- `pages`: an array of page numbers (0-indexed) to extract. If empty or omitted, all pages in the document will be processed.
+- `dpi`: the DPI (dots per inch) resolution for rendering. Defaults to 300.
+
+**Return value**
+
+A promise that resolves to an array of [CapturedResult]({{ site.dcv_js_api }}interfaces/captured-result.html) objects, where each object corresponds to the extracted data from a single page in the order specified.
+
+**Remarks**
+
+New added in CaptureVisionBundle version 3.6.2000 & BarcodeReaderBundle version 11.6.2000.
