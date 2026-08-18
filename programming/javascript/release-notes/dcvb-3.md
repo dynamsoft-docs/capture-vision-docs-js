@@ -9,6 +9,12 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.6.2100（08/18/2026）
+
+### Fixed
+
+- Fixed an issue where `getSimplifiedSettings()` returned inaccurate results due to precision loss when the configured `barcodeFormatId` value exceeded `MAX_SAFE_INTEGER` in a Capture Vision templates.
+
 ## 3.6.2000 (08/13/2026)
 
 ### Highlights
