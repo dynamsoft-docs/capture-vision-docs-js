@@ -9,6 +9,17 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.6.3000（08/25/2026）
+
+### Improved
+
+- Improved localization stability for GS1 DataBar Stacked barcodes when the bars are short.
+
+### Fixed
+
+- Fixed hangs and crashes that could occur with certain input images and templates.
+- Fixed a crash in code parsing when the input string contained empty fields.
+
 ## 3.6.2100（08/18/2026）
 
 ### Fixed
