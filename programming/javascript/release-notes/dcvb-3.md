@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
-## 3.6.3100（09/04/2026）
+## 3.6.3200（09/04/2026）
 
 ### Fixed
 
