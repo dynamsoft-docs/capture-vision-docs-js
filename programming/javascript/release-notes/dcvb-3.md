@@ -9,6 +9,13 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.6.3200（09/04/2026）
+
+### Fixed
+
+- Fixed an issue where automatic trial license application would fail in certain scenarios.
+- Fixed known browser compatibility issues with specific iOS versions.
+
 ## 3.6.3000（08/25/2026）
 
 ### Improved
