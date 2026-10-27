@@ -52,3 +52,9 @@ plugins:
 
 url: "https://www.dynamsoft.com" # sitemap root
 
+
+# Link variables used in pages/sidebars but previously undefined (rendered as broken relative links; GSC 404s, Oct 2026)
+dcvb_parameters_file: /capture-vision/docs/core/parameters/file/
+enums: /capture-vision/docs/core/enums/
+performance: /barcode-reader/docs/core/performance/
+dcv_js_api: /capture-vision/docs/web/programming/javascript/api-reference/
