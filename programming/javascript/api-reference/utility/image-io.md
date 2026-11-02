@@ -107,7 +107,7 @@ saveToBase64String(image: Blob | DSImageData, fileFormat: string): Promise<strin
 
 `image`: The image to be saved, of type `Blob`, `DSImageData`.
 
-`fileFormat`: The desired image format.
+`fileFormat`: The desired image format. Formats supported by common browsers are image/jpeg, image/png, webp, and bmp.
 
 **Return Value**
 
