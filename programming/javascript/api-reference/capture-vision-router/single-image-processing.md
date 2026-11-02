@@ -55,6 +55,9 @@ for(let i = 0; i < count; i++) {
 }
 ```
 
+>[!NOTE]
+> The `capture()` method does not trigger the callback functions in the [CapturedResultReceiver](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/captured-result-receiver.html) class.
+
 ## captureMultiPages
 
 Captures multiple pages from a PDF file and returns the extracted content for each specified page.

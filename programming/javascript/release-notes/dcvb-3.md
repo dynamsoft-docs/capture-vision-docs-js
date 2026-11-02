@@ -9,6 +9,21 @@ noTitleIndex: true
 
 # Release Notes - DynamsoftCaptureVisionBundle
 
+## 3.6.5000（11/02/2026）
+
+### Fixed
+
+- Fixed an issue where the license could expire if a web page was left open for a long time.
+- Fixed known browser compatibility issues with specific iOS versions.
+
+### Improved
+
+- Improved the Camera Enhancer's auto-flash and the video window resize function, among other features.
+
+### Security
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 3.6.3200（09/07/2026）
 
 ### Fixed

@@ -45,7 +45,7 @@ An array of [TextLineResultItem]({{ site.dlr_js_api }}interfaces/textline-result
 
 ## processedDocumentResult
 
-An array of [ProcessedDocumentResultItem]({{ site.ddn_js_api }}interfaces/processed-document-result-item.html) objects representing the processed document result related items.
+An array of [ProcessedDocumentResultItem]({{ site.ddn_js_api }}interfaces/processed-document-result.html) objects representing the processed document result related items.
 
 ## parsedResultItems
 
