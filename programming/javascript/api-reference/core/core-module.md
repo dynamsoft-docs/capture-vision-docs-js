@@ -21,6 +21,7 @@ This class defines common functionality in the Core module.
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `static` [detectEnvironment()](./core-module-class.md#detectenvironment)   | Detects and returns information about the current runtime environment.                            |
 | `static` [engineResourcePaths](./core-module-class.md#engineresourcepaths) | Configures the paths where the .wasm files and other necessary resources for modules are located. |
+| `static` [wasmLoadOptions](./core-module-class.md#wasmloadoptions)         | Configures the type of WebAssembly (.wasm) files to load.                                         |
 | `static` [getVersion()](./core-module-class.md#getversion)                 | Returns the version of the Core module.                                                           |
 | `static` [isModuleLoaded()](./core-module-class.md#ismoduleloaded)         | Returns whether the WebAssembly (.wasm) file for the specified module is successfully loaded.     |
 | `static` [loadWasm()](./core-module-class.md#loadwasm)                     | Initiates the loading process for the .wasm file(s) corresponding to the specified module(s).     |
@@ -126,6 +127,7 @@ The following are the basic enumerations often shared by more than one module:
 * [EnumModuleName](./enum-module-name.md)
 * [EnumRegionObjectElementType](./enum-region-object-element-type.md)
 * [EnumSectionType](./enum-section-type.md)
+* [EnumWasmType](./enum-wasm-type.md)
 
 <!-- * [EnumTransformMatrixType](./enum-transform-matrix-type.md) -->
 <!-- * [EnumPDFReadingMode](./enum-pdf-reading-mode.md) -->

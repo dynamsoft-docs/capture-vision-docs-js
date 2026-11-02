@@ -16,6 +16,7 @@ The CoreModule class defines common functionality in the Core module.
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `static` [detectEnvironment()](#detectenvironment)                     | Detects and returns information about the current runtime environment.                            |
 | `static` [engineResourcePaths](#engineresourcepaths)                   | Configures the paths where the .wasm files and other necessary resources for modules are located. |
+| `static` [wasmLoadOptions](#wasmloadoptions)                           | Configures the type of WebAssembly (.wasm) files to load.                                         |
 | `static` [getVersion()](#getversion)                                   | Returns the version of the Core module.                                                           |
 | `static` [isModuleLoaded()](#ismoduleloaded)                           | Returns whether the WebAssembly (.wasm) file for the specified module is successfully loaded.     |
 | `static` [loadWasm()](#loadwasm)                                       | Initiates the loading process for the .wasm file(s) corresponding to the specified module(s).     |
@@ -140,6 +141,36 @@ Dynamsoft.Core.CoreModule.engineResourcePaths.dbrBundle = {
     "dcvData": "@engineRootDirectory/dynamsoft-capture-vision-data@1.0.0/dist/"
 };
 ```
+
+## wasmLoadOptions
+
+Configures the type of WebAssembly (.wasm) files to load. Set this property before the .wasm files are loaded (for example, before calling `loadWasm()`) so that the selected build is used.
+
+```typescript
+static wasmLoadOptions: {
+    /**
+     * Specifies the type of the .wasm files to load. See EnumWasmType.
+     */
+    "wasmType"?: EnumWasmType;
+};
+```
+
+**Properties**
+
+`wasmType` (Optional): The WebAssembly build to load. The value must be one of the members of [EnumWasmType](./enum-wasm-type.md), for example `"ml-simd-with-pdf"`.
+
+**Code snippet**
+
+```javascript
+Dynamsoft.Core.CoreModule.wasmLoadOptions = {
+    wasmType: "ml-simd-with-pdf"
+};
+await Dynamsoft.Core.CoreModule.loadWasm();
+```
+
+**Remarks**
+
+See [EnumWasmType](./enum-wasm-type.md) for the available build types. Builds with pthread (multi-threading) support require a cross-origin isolated page.
 
 ## getVersion
 
