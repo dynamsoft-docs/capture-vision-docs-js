@@ -42,7 +42,7 @@ Please be aware that the [preset CaptureVisionTemplates](./preset-templates.md) 
 
 **Return value**
 
-A promise that resolves with a [CapturedResult]({{ site.dcv_js_api }}interfaces/captured-result.html) object which contains the derived information from the file processed.
+A promise that resolves with a [CapturedResult](./interfaces/captured-result.html) object which contains the derived information from the file processed.
 
 **Code snippet**
 
@@ -81,7 +81,7 @@ captureMultiPages(file: Blob | string, templateName?: string, options?: PDFOptio
 
 **Return value**
 
-A promise that resolves to an array of [CapturedResult]({{ site.dcv_js_api }}interfaces/captured-result.html) objects, where each object corresponds to the extracted data from a single page in the order specified.
+A promise that resolves to an array of [CapturedResult](./interfaces/captured-result.html) objects, where each object corresponds to the extracted data from a single page in the order specified.
 
 **Remarks**
 
