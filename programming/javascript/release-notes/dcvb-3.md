@@ -252,9 +252,9 @@ This release focuses on practical performance gains for production environments 
 - Configuration Flexibility – Expanded parameter set allows comprehensive model configuration for scenario-specific tuning.
 - Production Stability – All new models validated in enterprise environments.
 
-## API Changes
+### API Changes
 
-### New
+#### New
 
 - Added the `switchCapturingTemplate()` method to the `CaptureVisionRouter` class to enable switching the active capturing template during the image processing workflow. 
 - Added methods `toBlob()`, `toImage()`, and `toCanvas()` to the `originalImageResultItem` interface for flexible image data conversion.
@@ -264,12 +264,12 @@ This release focuses on practical performance gains for production environments 
 - Added the `convertToContainCoordinates()` method to the `CameraEnhancer` class to convert coordinates from `fit: cover` to `fit: contain` mode.  
 - Added the `LM_NEURAL_NETWORK` enumeration to `EnumLocalizationMode`.  
 
-### Updated
+#### Updated
 
 - Changed the default value of `MaxThreadsInOneTask` from **4** to **0**.  
 - Changed the default value of `IncludeTrailingCheckDigit` from **1** to **0**.  
 
-### Deprecated
+#### Deprecated
 
 - Deprecated the `DeblurModelNameArray` argument in the `DeblurModes` parameter. Use `ModelNameArray` instead.  
 - Deprecated the `appendModelBuffer()` method in the `CaptureVisionRouter` class. Use `appendDLModelBuffer()` instead.  
